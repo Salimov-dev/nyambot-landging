@@ -1,0 +1,71 @@
+.section {
+  padding: 100px 0;
+  background: var(--bg-section);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steps {
+  position: relative;
+}
+
+.stepCard {
+  position: relative;
+  padding: 28px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  height: 100%;
+  transition: border-color 0.25s ease;
+}
+
+.stepCard:hover {
+  border-color: var(--accent-border);
+}
+
+.stepNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.connector {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .connector {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: -28px;
+    width: 28px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-border), transparent);
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .inner { padding: 0 16px; }
+  .header { margin-bottom: 40px; }
+}

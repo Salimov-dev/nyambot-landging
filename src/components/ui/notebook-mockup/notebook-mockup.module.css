@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.notebook {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  /* Соотношение стандартного ноутбука ≈ 16:10 с рамкой */
+  aspect-ratio: 16 / 10.4;
+  filter:
+    drop-shadow(0 24px 60px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 4px 16px rgba(255, 140, 0, 0.08));
+}
+
+.frame {
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.screen {
+  position: absolute;
+  /* Процентные отступы — подбираются под реальный notebook_body.png */
+  top: 6.5%;
+  left: 12%;
+  right: 12%;
+  bottom: 14%;
+  z-index: 1;
+  background: #0f0f14;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .notebook { max-width: 500px; }
+}
+
+@media (max-width: 600px) {
+  .notebook { max-width: 100%; }
+}

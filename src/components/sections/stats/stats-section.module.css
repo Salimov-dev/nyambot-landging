@@ -1,0 +1,31 @@
+.section {
+  padding: 48px 0;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.statCard {
+  padding: 28px 16px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.statCard:hover {
+  border-color: var(--accent-border);
+  background: var(--gradient-card-accent);
+}
+
+@media (max-width: 480px) {
+  .section { padding: 32px 0; }
+  .inner { padding: 0 16px; }
+}

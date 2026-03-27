@@ -1,0 +1,153 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { Badge, Button, Card, Col, Flex, Row, Tag, Typography } from "antd";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
+import { PRICING_PLANS, LICENSE_LIMITS } from "@/config/pricing.config";
+import { LINKS } from "@/config/links.config";
+import { theme } from "@/config/theme";
+import styles from "./pricing-section.module.css";
+
+const { Title, Text } = Typography;
+
+const MONTH_LABELS: Record<number, string> = { 1: "mo1", 3: "mo3", 6: "mo6", 12: "mo12" };
+
+export function PricingSection() {
+  const { t } = useTranslation("landing");
+  const { ref, isInView } = useScrollAnimation();
+
+  return (
+    <section id="pricing" className={styles.section}>
+      <div className={styles.inner}>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 32 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className={styles.header}
+        >
+          <Text style={{ color: theme.colors.accent, fontSize: 14, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+            {t("pricing.label")}
+          </Text>
+          <Title level={2} style={{ color: theme.colors.textPrimary, fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 800, margin: "12px 0 16px" }}>
+            {t("pricing.title")}
+          </Title>
+          <Text style={{ color: theme.colors.textSecondary, fontSize: 17, lineHeight: 1.6 }}>
+            {t("pricing.subtitle")}
+          </Text>
+        </motion.div>
+
+        <Row gutter={[20, 20]} justify="center">
+          {PRICING_PLANS.map((plan, i) => (
+            <Col key={plan.code} xs={24} sm={12} lg={6}>
+              <motion.div
+                initial={{ opacity: 0, y: 32 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.55, delay: i * 0.1 }}
+                style={{ height: "100%" }}
+              >
+                {plan.isPopular ? (
+                  <Badge.Ribbon
+                    text={t("pricing.popular")}
+                    color={theme.colors.accent}
+                  >
+                    <PricingCard plan={plan} t={t} />
+                  </Badge.Ribbon>
+                ) : (
+                  <PricingCard plan={plan} t={t} />
+                )}
+              </motion.div>
+            </Col>
+          ))}
+        </Row>
+
+        {/* License features list */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className={styles.includes}
+        >
+          <Text style={{ color: theme.colors.textTertiary, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 600 }}>
+            {t("pricing.included")}
+          </Text>
+          <Flex gap={12} wrap justify="center" style={{ marginTop: 20 }}>
+            {(t("pricing.includedItems", { returnObjects: true }) as string[]).map((item, i) => (
+              <Tag key={i} className={styles.includeTag}>✓ {item}</Tag>
+            ))}
+          </Flex>
+          <Text style={{ color: theme.colors.textTertiary, fontSize: 13, marginTop: 16, display: "block", textAlign: "center" }}>
+            {t("pricing.limits", {
+              bots: LICENSE_LIMITS.maxBotsCount,
+              stores: LICENSE_LIMITS.maxStoreCount,
+              items: LICENSE_LIMITS.maxMenuItemCount,
+            })}
+          </Text>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function PricingCard({
+  plan,
+  t,
+}: {
+  plan: (typeof PRICING_PLANS)[number];
+  t: (key: string, opts?: Record<string, unknown>) => string;
+}) {
+  const isPopular = plan.isPopular;
+
+  return (
+    <Card
+      className={`${styles.card} ${isPopular ? styles.cardPopular : ""}`}
+      styles={{ body: { padding: 28 } }}
+    >
+      <Flex vertical gap={20} style={{ height: "100%" }}>
+        {/* Duration */}
+        <Flex align="center" justify="space-between">
+          <Text style={{ color: isPopular ? theme.colors.accent : theme.colors.textSecondary, fontWeight: 700, fontSize: 15 }}>
+            {t(`pricing.months.${plan.months}`)}
+          </Text>
+          {plan.discountPercent > 0 && (
+            <Tag style={{ background: theme.colors.successBg, border: `1px solid ${theme.colors.success}44`, color: theme.colors.success, borderRadius: "var(--radius-pill)", fontSize: 12, fontWeight: 700 }}>
+              −{plan.discountPercent}%
+            </Tag>
+          )}
+        </Flex>
+
+        {/* Price */}
+        <Flex vertical gap={4}>
+          <Flex align="baseline" gap={4}>
+            <Title level={2} style={{ color: isPopular ? theme.colors.accent : theme.colors.textPrimary, margin: 0, fontSize: 36, fontWeight: 800, lineHeight: 1 }}>
+              {plan.pricePerMonth.toLocaleString("ru-RU")} ₽
+            </Title>
+          </Flex>
+          <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
+            {t("pricing.perMonth")}
+          </Text>
+          {plan.months > 1 && (
+            <Text style={{ color: theme.colors.textTertiary, fontSize: 12 }}>
+              {t("pricing.totalBilled", {
+                total: plan.priceRub.toLocaleString("ru-RU"),
+              })} ₽
+            </Text>
+          )}
+        </Flex>
+
+        {/* CTA */}
+        <Button
+          type={isPopular ? "primary" : "default"}
+          block
+          size="large"
+          href={LINKS.crm}
+          target="_blank"
+          className={isPopular ? styles.primaryBtn : styles.defaultBtn}
+        >
+          {t("pricing.cta")}
+        </Button>
+      </Flex>
+    </Card>
+  );
+}

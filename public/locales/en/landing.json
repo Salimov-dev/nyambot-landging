@@ -1,0 +1,283 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "docs": "Documentation",
+    "openCrm": "Open CRM"
+  },
+  "hero": {
+    "badge": "🔥 Telegram + MAX · 7 languages",
+    "title": "Your restaurant in <em>Telegram and MAX</em>. No aggregators",
+    "subtitle": "Accept orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
+    "cta": "Try for free",
+    "ctaSecondary": "How does it work?",
+    "trial": "14 days free, no card required"
+  },
+  "stats": {
+    "commission": { "value": "0%", "label": "Commission per order" },
+    "messengers": { "value": "2", "label": "Messengers: Telegram and MAX" },
+    "trial": { "value": "14", "label": "Days of free trial" },
+    "savings": { "value": "up to 45%", "label": "Savings vs aggregators" }
+  },
+  "features": {
+    "label": "Features",
+    "title": "Everything a restaurant needs — in one tool",
+    "items": {
+      "messengers": {
+        "tag": "Telegram + MAX",
+        "title": "First service supporting Telegram and MAX simultaneously",
+        "description": "Customers open the mini-app right in their familiar messenger. One client in both channels — shared history, points and promotions",
+        "points": [
+          "Telegram bot and MAX bot — one setup",
+          "Unified customer base across messengers",
+          "Login without SMS or passwords",
+          "Real-time order status notifications"
+        ]
+      },
+      "noCommission": {
+        "tag": "Zero commissions",
+        "title": "Stop paying up to 45% to aggregators",
+        "description": "Yandex.Eda charges 20–45% per order. Nyambot — fixed tariff. With 500 orders per month, savings exceed 100,000 ₽",
+        "points": [
+          "0% commission per order",
+          "Fixed monthly payment",
+          "Your customers — your database",
+          "Full control over pricing and promotions"
+        ]
+      },
+      "crm": {
+        "tag": "CRM and analytics",
+        "title": "Manage everything from one dashboard",
+        "description": "Menu, orders, customers, marketing — all in one CRM. Real-time analytics helps make data-driven decisions",
+        "points": [
+          "Revenue and orders dashboard",
+          "Menu, stop-lists, modifier management",
+          "Customer base with history and segmentation",
+          "Marketing: discounts, promo codes, loyalty"
+        ]
+      },
+      "crew": {
+        "tag": "Crew — staff app",
+        "title": "Courier app included in your plan",
+        "description": "Crew is a separate app for admins and couriers. Admin assigns deliveries, courier sees tasks and builds a route",
+        "points": [
+          "Order queue for admin",
+          "In-app navigation for courier",
+          "Call customer in one tap",
+          "Real-time delivery status updates"
+        ]
+      },
+      "marketing": {
+        "tag": "Marketing",
+        "title": "Tools to grow your sales",
+        "description": "Retain customers with flexible promotions, promo codes and loyalty program. Applied to one or multiple locations",
+        "points": [
+          "Discounts and gifts with conditions",
+          "Promo codes with any restrictions",
+          "Loyalty points: earn and redeem",
+          "Works across all messengers simultaneously"
+        ]
+      },
+      "languages": {
+        "tag": "7 interface languages",
+        "title": "The entire service speaks your language",
+        "description": "Nyambot is the only service in the niche with 7 languages at every level: the customer sees the mini-app menu, the owner works in CRM, the admin manages orders, the courier receives tasks — each in their own language",
+        "points": [
+          "Mini-app: menu and orders in the customer's language",
+          "CRM: interface for owner and admin",
+          "Crew: tasks and navigation for couriers",
+          "7 languages: RU, EN, UZ, BE, TG, KY, AZ"
+        ]
+      },
+      "selfService": {
+        "tag": "Full self-service",
+        "title": "Launch and manage without managers",
+        "description": "Everything is configured in CRM on your own — from launch and at any time. No need to contact support to add a dish, change a price, or configure delivery zones",
+        "points": [
+          "Menu: add, edit, hide items yourself",
+          "Delivery zones — draw on the map yourself",
+          "Promotions, promo codes, stop-lists — no developers needed",
+          "Connect a new bot in 10 minutes"
+        ]
+      },
+      "ai": {
+        "tag": "AI tools",
+        "title": "AI assistant in CRM and smart search in the mini-app",
+        "description": "AI assistant in CRM helps process orders, answer questions and analyze data. Customers in the mini-app find dishes by description through smart AI menu search",
+        "points": [
+          "AI assistant in CRM for operators",
+          "Smart menu search in the mini-app",
+          "Search by description, ingredients, taste",
+          "Works in 7 languages simultaneously"
+        ]
+      }
+    }
+  },
+  "crmDemo": {
+    "tag": "In-house CRM",
+    "title": "Manage your restaurant from a single dashboard",
+    "description": "Full-featured in-house CRM — not a third-party service. Menu with modifiers, order management, revenue analytics, marketing campaigns and customer database — all in one place, no extra integrations",
+    "ownDev": "CRM built from scratch by our team — full control over features and reliability. No third-party platforms",
+    "pricing": "Transparent pricing: fixed tariff, no hidden commissions or surcharges",
+    "cta": "Open CRM — 7 days free",
+    "ctaHint": "Full access · No card required · Cancel anytime",
+    "screenPlaceholder": "Nyambot CRM screenshot coming soon",
+    "features": {
+      "dashboard": "Revenue and metrics dashboard",
+      "orders": "Real-time order management",
+      "clients": "Customer base and segments",
+      "marketing": "Promotions, discounts, promo codes",
+      "menu": "Menu with modifiers and stop-lists",
+      "analytics": "Sales analytics by period"
+    }
+  },
+  "tryDemo": {
+    "tag": "Demo",
+    "title": "Try it right now",
+    "subtitle": "Open the demo bot in Telegram or MAX and experience how your customers order — no registration required",
+    "tgDesc": "Mini-app demo in Telegram",
+    "tgCta": "Open in Telegram",
+    "maxDesc": "Mini-app demo in MAX",
+    "maxCta": "Open in MAX",
+    "crmHint": "Want to evaluate CRM from the owner's side?",
+    "crmCta": "Register in CRM",
+    "crmTrial": "7 days free · Full access · No card required"
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "title": "From bot creation to first order — one day",
+    "subtitle": "No lengthy development. Everything is configured through CRM without developers",
+    "steps": [
+      {
+        "title": "Create a bot",
+        "description": "Create a Telegram bot via @BotFather or a MAX bot in the partner panel. Takes 10 minutes"
+      },
+      {
+        "title": "Set up in CRM",
+        "description": "Add your bot token to CRM, add menu, set delivery zones and configure payment via YooKassa"
+      },
+      {
+        "title": "Share the link",
+        "description": "Post the bot link on social media, website, or QR code in your venue — customers start ordering"
+      },
+      {
+        "title": "Receive orders",
+        "description": "Orders come into CRM and Crew app. Courier gets the task, customer gets a notification at every status"
+      }
+    ]
+  },
+  "comparison": {
+    "label": "Comparison",
+    "title": "Nyambot vs aggregators",
+    "subtitle": "Take back 20–45% from every order into your business",
+    "featureCol": "Parameter",
+    "othersCol": "Delivery Club",
+    "ourChoice": "Best choice",
+    "full": "Full",
+    "partial": "Partial",
+    "fixed": "Fixed",
+    "fromRevenue": "% of order",
+    "rows": {
+      "commission": "Commission",
+      "messengers": "Messengers",
+      "clients": "Your customer database",
+      "crm": "CRM and analytics",
+      "crew": "Courier app",
+      "loyalty": "Loyalty program",
+      "marketing": "Promotions and promo codes",
+      "languages": "Interface languages",
+      "branding": "Branding",
+      "price": "Pricing model"
+    }
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Transparent prices with no hidden fees",
+    "subtitle": "Fixed payment. One plan — all features without functional limits",
+    "popular": "Best value",
+    "perMonth": "per month",
+    "totalBilled": "Billed {{total}}",
+    "months": {
+      "1": "1 month",
+      "3": "3 months",
+      "6": "6 months",
+      "12": "12 months"
+    },
+    "cta": "Get started",
+    "included": "What's included in any plan",
+    "includedItems": [
+      "Telegram + MAX bots",
+      "CRM and analytics",
+      "Crew app",
+      "Loyalty program",
+      "Promo codes and discounts",
+      "YooKassa",
+      "Support"
+    ],
+    "limits": "Up to {{bots}} bots · Up to {{stores}} locations · Up to {{items}} menu items"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Still have questions?",
+    "notFound": "Didn't find an answer?",
+    "askSupport": "Ask support",
+    "items": [
+      {
+        "question": "Do customers need to install an app?",
+        "answer": "No. The mini-app opens directly in Telegram or MAX — messengers already installed on most users' phones. No additional installation required"
+      },
+      {
+        "question": "Is there integration with iiko or R-Keeper?",
+        "answer": "Currently there is no direct integration with POS systems. Nyambot works as a standalone platform: menu, orders, customers and delivery are managed through our CRM"
+      },
+      {
+        "question": "Can I connect multiple locations?",
+        "answer": "Yes. You can connect up to 22 locations in one account. Each location is configured independently: its own menu, hours, delivery zones and payment settings"
+      },
+      {
+        "question": "How does order payment work?",
+        "answer": "Online card payment via YooKassa is configured separately for each location. Customers pay directly in the messenger. Cash on delivery is also supported"
+      },
+      {
+        "question": "What is a MAX bot and do I need it?",
+        "answer": "MAX is a Russian messenger from Mail.ru with a growing audience. Nyambot is one of the first services with full MAX support. Connection is optional but allows reaching additional audience at no extra cost"
+      },
+      {
+        "question": "How does the trial period work?",
+        "answer": "After registration, a 14-day free trial with all features is available. No card required. After the trial, choose a suitable plan"
+      },
+      {
+        "question": "Can Nyambot be used without couriers?",
+        "answer": "Yes. You can set up pickup only or dine-in service. The Crew app and courier module are included in the plan but optional"
+      },
+      {
+        "question": "How quickly can I start accepting orders?",
+        "answer": "With a bot ready — within one day. You need to create a bot, connect it in CRM, add the menu and share the link with customers. Average setup takes 2–4 hours"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Start accepting orders today",
+    "subtitle": "14 days free. Telegram and MAX. No aggregators and no commissions",
+    "button": "Try for free",
+    "docs": "Read documentation",
+    "hint": "No card required · Cancel anytime"
+  },
+  "footer": {
+    "description": "Platform for restaurants and cafes. Orders via Telegram and MAX without aggregators",
+    "product": "Product",
+    "crm": "Open CRM",
+    "docs": "Documentation",
+    "pricing": "Pricing",
+    "support": "Support",
+    "telegram": "Message on Telegram",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "offer": "Public Offer",
+    "cookies": "Cookie Policy",
+    "allRights": "All rights reserved"
+  }
+}

@@ -1,0 +1,113 @@
+.section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  border-top: 1px solid var(--border-light);
+}
+
+.glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(255, 140, 0, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+}
+
+.demoCard {
+  padding: 32px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg, 20px);
+  transition: border-color 0.25s ease;
+  position: relative;
+}
+
+.demoCard:hover {
+  border-color: rgba(255, 140, 0, 0.25);
+}
+
+.phoneWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.phoneGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+}
+
+.tgBtn {
+  background: #27a1e8 !important;
+  border-color: #27a1e8 !important;
+  font-weight: 600;
+}
+
+.tgBtn:hover {
+  background: #1d8cc7 !important;
+  border-color: #1d8cc7 !important;
+}
+
+.maxBtn {
+  background: var(--gradient-primary) !important;
+  border-color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.crmCta {
+  margin-top: 56px;
+  padding: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg, 20px);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crmBtn {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  font-weight: 600;
+  padding: 0 32px;
+}
+
+.crmBtn:hover {
+  background: var(--accent-bg) !important;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .inner { padding: 0 16px; }
+  .demoCard { padding: 24px 16px; }
+  .crmCta { padding: 24px 16px; margin-top: 40px; }
+}
