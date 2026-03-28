@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Col, Flex, Row, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
+import { NotebookMockup } from "@/components/ui/notebook-mockup/notebook-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { theme } from "@/config/theme";
 import styles from "./features-section.module.css";
@@ -19,6 +20,7 @@ const FEATURES = [
     pointsKey: "features.items.messengers.points",
     icon: "💬",
     accentColor: theme.colors.accent,
+    mockupType: "phone" as "phone" | "notebook",
   },
   {
     id: "noCommission",
@@ -28,6 +30,7 @@ const FEATURES = [
     pointsKey: "features.items.noCommission.points",
     icon: "💸",
     accentColor: theme.colors.success,
+    mockupType: "phone" as "phone" | "notebook",
   },
   {
     id: "crm",
@@ -37,6 +40,17 @@ const FEATURES = [
     pointsKey: "features.items.crm.points",
     icon: "📊",
     accentColor: "#1677ff",
+    mockupType: "notebook" as "phone" | "notebook",
+  },
+  {
+    id: "crewAdmin",
+    tagKey: "features.items.crewAdmin.tag",
+    titleKey: "features.items.crewAdmin.title",
+    descriptionKey: "features.items.crewAdmin.description",
+    pointsKey: "features.items.crewAdmin.points",
+    icon: "👨‍💼",
+    accentColor: "#9254de",
+    mockupType: "phone" as "phone" | "notebook",
   },
   {
     id: "crew",
@@ -46,6 +60,17 @@ const FEATURES = [
     pointsKey: "features.items.crew.points",
     icon: "🛵",
     accentColor: "#b652ff",
+    mockupType: "phone" as "phone" | "notebook",
+  },
+  {
+    id: "payment",
+    tagKey: "features.items.payment.tag",
+    titleKey: "features.items.payment.title",
+    descriptionKey: "features.items.payment.description",
+    pointsKey: "features.items.payment.points",
+    icon: "💳",
+    accentColor: "#1677ff",
+    mockupType: "phone" as "phone" | "notebook",
   },
   {
     id: "marketing",
@@ -55,6 +80,17 @@ const FEATURES = [
     pointsKey: "features.items.marketing.points",
     icon: "🎯",
     accentColor: "#14c4a2",
+    mockupType: "phone" as "phone" | "notebook",
+  },
+  {
+    id: "scheduledSending",
+    tagKey: "features.items.scheduledSending.tag",
+    titleKey: "features.items.scheduledSending.title",
+    descriptionKey: "features.items.scheduledSending.description",
+    pointsKey: "features.items.scheduledSending.points",
+    icon: "📅",
+    accentColor: "#fa541c",
+    mockupType: "notebook" as "phone" | "notebook",
   },
   {
     id: "languages",
@@ -64,6 +100,7 @@ const FEATURES = [
     pointsKey: "features.items.languages.points",
     icon: "🌍",
     accentColor: "#f5a623",
+    mockupType: "phone" as "phone" | "notebook",
   },
   {
     id: "selfService",
@@ -73,15 +110,27 @@ const FEATURES = [
     pointsKey: "features.items.selfService.points",
     icon: "🛠️",
     accentColor: "#52c41a",
+    mockupType: "notebook" as "phone" | "notebook",
   },
   {
-    id: "ai",
-    tagKey: "features.items.ai.tag",
-    titleKey: "features.items.ai.title",
-    descriptionKey: "features.items.ai.description",
-    pointsKey: "features.items.ai.points",
+    id: "aiCrm",
+    tagKey: "features.items.aiCrm.tag",
+    titleKey: "features.items.aiCrm.title",
+    descriptionKey: "features.items.aiCrm.description",
+    pointsKey: "features.items.aiCrm.points",
     icon: "🤖",
     accentColor: "#722ed1",
+    mockupType: "notebook" as "phone" | "notebook",
+  },
+  {
+    id: "aiSearch",
+    tagKey: "features.items.aiSearch.tag",
+    titleKey: "features.items.aiSearch.title",
+    descriptionKey: "features.items.aiSearch.description",
+    pointsKey: "features.items.aiSearch.points",
+    icon: "🔍",
+    accentColor: "#13c2c2",
+    mockupType: "phone" as "phone" | "notebook",
   },
 ] as const;
 
@@ -95,6 +144,9 @@ function FeatureBlock({
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
   const points = t(feature.pointsKey, { returnObjects: true }) as string[];
+  const isNotebook = feature.mockupType === "notebook";
+  const textSpan = isNotebook ? 10 : 12;
+  const mockupSpan = isNotebook ? 14 : 12;
 
   return (
     <div ref={ref} className={styles.featureBlock}>
@@ -104,7 +156,7 @@ function FeatureBlock({
         style={{ flexDirection: reversed ? "row-reverse" : "row" }}
       >
         {/* Text column */}
-        <Col xs={24} md={12}>
+        <Col xs={24} md={textSpan}>
           <motion.div
             initial={{ opacity: 0, x: reversed ? 40 : -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -176,8 +228,8 @@ function FeatureBlock({
           </motion.div>
         </Col>
 
-        {/* Phone column */}
-        <Col xs={24} md={12}>
+        {/* Mockup column */}
+        <Col xs={24} md={mockupSpan}>
           <motion.div
             initial={{ opacity: 0, x: reversed ? -40 : 40, scale: 0.94 }}
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
@@ -188,9 +240,15 @@ function FeatureBlock({
                 className={styles.phoneGlow}
                 style={{ background: `radial-gradient(circle, ${feature.accentColor}22 0%, transparent 65%)` }}
               />
-              <PhoneMockup>
-                <div className={styles.phoneScreen} />
-              </PhoneMockup>
+              {isNotebook ? (
+                <NotebookMockup>
+                  <div className={styles.phoneScreen} />
+                </NotebookMockup>
+              ) : (
+                <PhoneMockup>
+                  <div className={styles.phoneScreen} />
+                </PhoneMockup>
+              )}
             </Flex>
           </motion.div>
         </Col>

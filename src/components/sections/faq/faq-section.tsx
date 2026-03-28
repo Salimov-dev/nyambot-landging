@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Collapse, Flex, Typography } from "antd";
 import type { CollapseProps } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
+import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
 import styles from "./faq-section.module.css";
 
@@ -67,7 +68,7 @@ export function FaqSection() {
             items={items}
             accordion
             ghost
-            expandIconPosition="end"
+            expandIconPlacement="end"
             className={styles.collapse}
           />
         </motion.div>
@@ -83,7 +84,7 @@ export function FaqSection() {
               {t("faq.notFound")}
             </Text>
             <a
-              href="https://t.me/nyambot_support"
+              href={LINKS.support}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: theme.colors.accent, fontSize: 14, fontWeight: 600 }}

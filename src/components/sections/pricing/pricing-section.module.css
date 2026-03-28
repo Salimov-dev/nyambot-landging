@@ -41,6 +41,10 @@
   box-shadow: 0 0 80px rgba(255, 140, 0, 0.2) !important;
 }
 
+.popularBadge {
+  top: -4px !important;
+}
+
 .primaryBtn {
   background: var(--gradient-primary) !important;
   border: none !important;

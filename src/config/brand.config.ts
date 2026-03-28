@@ -5,6 +5,6 @@ export const BRAND_CONFIG = {
   siteName: "nyambot.ru",
   siteUrl: "https://nyambot.ru",
   logoFile: "/images/nyambot_logo.png",
-  supportEmail: "support@nyambot.ru",
+  supportEmail: "help_nyambot@mail.ru",
   supportTelegram: "https://t.me/nyambot_support",
 } as const;

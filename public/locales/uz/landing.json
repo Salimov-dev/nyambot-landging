@@ -13,12 +13,12 @@
     "subtitle": "Buyurtmalarni messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
     "ctaSecondary": "Bu qanday ishlaydi?",
-    "trial": "14 kun bepul, karta bog'lashsiz"
+    "trial": "7 kun bepul, karta bog'lashsiz"
   },
   "stats": {
     "commission": { "value": "0%", "label": "Har bir buyurtmadan komissiya" },
     "messengers": { "value": "2", "label": "Messenjer: Telegram va MAX" },
-    "trial": { "value": "14", "label": "Bepul davr kunlari" },
+    "trial": { "value": "7", "label": "Bepul davr kunlari" },
     "savings": { "value": "45% gacha", "label": "Agregatorlarga nisbatan tejash" }
   },
   "features": {
@@ -43,11 +43,23 @@
         "description": "Menyu, buyurtmalar, mijozlar, marketing — hammasi yagona CRM da",
         "points": ["Daromad va buyurtmalar bilan dashboard","Menyu, stop-ro'yxatlar, modifikatorlarni boshqarish","Tarix va segmentatsiyali mijozlar bazasi","Marketing: chegirmalar, promokodlar, sodiqlik"]
       },
+      "crewAdmin": {
+        "tag": "Crew — administrator uchun",
+        "title": "Administrator birorta buyurtmani o'tkazib yubormasin",
+        "description": "Administrator uchun Crew ilovasi — smartfondan to'liq buyurtmalarni boshqarish. CRM ochmasdan qabul qiling, bekor qiling, kuryerlarni tayinlang",
+        "points": ["Buyurtmani qabul qilish, bekor qilish va xaridorga pul qaytarish","Kuryerni buyurtmaga tayinlaydi — u qo'shimcha harakatlarsiz qabul qiladi","Xaridor botda avtomatik bildirishnoma oladi","Buyurtma va yetkazib berish manzilini xaritada ko'radi","So'nggi 24 soat uchun buyurtmalar tarixi","Xaridorga bir bosish bilan qo'ng'iroq","Yangi buyurtmalar haqida tovushli bildirishnomalar va tebranish"]
+      },
       "crew": {
-        "tag": "Crew — xodimlar ilovasi",
-        "title": "Kuryer ilovasi tarifga kiritilgan",
-        "description": "Crew — ma'murlar va kuryerlar uchun alohida ilova",
-        "points": ["Administrator uchun buyurtmalar navbati","Ilovadan kuryer uchun navigatsiya","Xaridorga bir bosish bilan qo'ng'iroq","Real vaqtda yetkazib berish holatlari"]
+        "tag": "Crew — kuryer uchun",
+        "title": "Kuryer buyurtmani oladi va qayerga borishini biladi",
+        "description": "Kuryer uchun Crew ilovasi — yetkazib berish uchun hamma narsa bir ekranda: topshiriqlar, xaritadagi manzil, xaridor kontakti va bildirishnomalar",
+        "points": ["Administrator tomonidan tayinlangan buyurtmani oladi","Buyurtma va yetkazib berish manzilini xaritada ko'radi","Ilovadan xaridorga kechikish haqida xabar berish","Xaridorga bir bosish bilan qo'ng'iroq","Buyurtmani yetkazilgan deb belgilash","Yangi buyurtmalar haqida tovushli bildirishnomalar va tebranish"]
+      },
+      "payment": {
+        "tag": "To'lov",
+        "title": "Har qanday qulay usulda moslashuvchan to'lov",
+        "description": "Naqd pul, yetkazib berishda karta yoki ЮКасса orqali onlayn to'lovni qabul qiling — xaridor o'zi tanlaydi",
+        "points": ["Naqd pul — kuryer tayyor bo'lishi uchun buyurtmada qaytim miqdorini ko'rsating","Yetkazib berishda kuryerga karta bilan","Onlayn: ЮMoney, Mir Pay, SberPay, T-Pay, СБП"]
       },
       "marketing": {
         "tag": "Marketing",
@@ -55,23 +67,35 @@
         "description": "Moslashuvchan aksiyalar, promokodlar va sodiqlik dasturi yordamida mijozlarni ushlab turing",
         "points": ["Shartlarga ko'ra chegirmalar va sovg'alar","Har qanday cheklovli promokodlar","Sodiqlik ballari: to'plash va sarflash","Barcha messenjerda bir vaqtda ishlaydi"]
       },
+      "scheduledSending": {
+        "tag": "Tarqatmalar va kunlik takliflar",
+        "title": "Rejalashtirilgan kunlik takliflar Telegram va MAX da",
+        "description": "Marketing tarqatmalarini oldindan rejalashtiring. Kunlik taklif avtomatik ravishda Telegram va MAX abonentlariga to'g'ri vaqtda yuboriladi — qo'lda ishlashsiz",
+        "points": ["Kunlik taklif: Telegram va MAX ga avtoyuborish","CRM dagi aksiyalar vizual kalendari","Tarqatmalarni haftalar oldin rejalashtiring","Barcha abonentlarga qo'lda harakat qilmasdan yetib boring"]
+      },
       "languages": {
         "tag": "7 ta interfeys tili",
         "title": "Butun xizmat sizning tilingizda gaplashadi",
         "description": "Nyambot — bu sohada har darajada 7 tilni qo'llab-quvvatlaydigan yagona xizmat: xaridor mini-ilovada menyuni ko'radi, egasi CRM'da ishlaydi, administrator buyurtmalarni boshqaradi, kuryer topshiriq oladi — har biri o'z tilida",
-        "points": ["Mini-ilova: xaridorning tilida menyu va buyurtmalar","CRM: egasi va administrator interfeysi","Crew: kuryer uchun topshiriqlar va navigatsiya","7 til: RU, EN, UZ, BE, TG, KY, AZ"]
+        "points": ["Mini-ilova: xaridorning tilida menyu va buyurtmalar","CRM: egasi va administrator interfeysi","Crew: kuryer uchun topshiriqlar","7 til: RU, EN, UZ, BE, TG, KY, AZ"]
       },
       "selfService": {
         "tag": "To'liq mustaqillik",
         "title": "Menejerlar yordamisiz ishga tushiring va boshqaring",
         "description": "Hamma narsa CRM orqali mustaqil sozlanadi — ishga tushirishdan boshlab istalgan vaqtda. Ovqat qo'shish, narx o'zgartirish yoki yetkazib berish zonalarini sozlash uchun qo'llab-quvvatlashga yozish shart emas",
-        "points": ["Menyu: pozitsiyalarni o'zingiz qo'shing, tahrirlang, yashiring","Yetkazib berish zonalari — xaritada o'zingiz chizing","Aksiyalar, promokodlar, stop-ro'yxatlar — dasturchilarsiz","Yangi botni 10 daqiqada ulang"]
+        "points": ["Menyu: pozitsiyalarni o'zingiz qo'shing, tahrirlang, yashiring","Yetkazib berish zonalari — xaritada o'zingiz chizing","Aksiyalar, promokodlar, stop-ro'yxatlar — dasturchilarsiz","Yangi botni 10 daqiqada ulang","Hujjatlar: noldan birinchi buyurtmaga qadar bosqichma-bosqich yo'riqnoma"]
       },
-      "ai": {
-        "tag": "AI vositalar",
-        "title": "CRM'da AI-assistent va mini-ilovada aqlli qidiruv",
-        "description": "CRM'dagi AI-assistent buyurtmalarni qayta ishlash, savollarga javob berish va ma'lumotlarni tahlil qilishda yordam beradi. Mini-ilovadagi mijozlar aqlli AI-qidiruv orqali tavsif bo'yicha taomlarni topishadi",
-        "points": ["Operatorlar uchun CRM'da AI-assistent","Mini-ilovada aqlli menyu qidiruvi","Tavsif, tarkib, ta'm bo'yicha qidiruv","7 tilda bir vaqtda ishlaydi"]
+      "aiCrm": {
+        "tag": "AI CRM da",
+        "title": "Restoran egasi uchun AI-yordamchi",
+        "description": "CRM'dagi AI-yordamchi egaga tizimni tushunishga va hamma narsani mustaqil sozlashga yordam beradi — menejerlar va texnik qo'llabsiz",
+        "points": ["Menyu, aksiyalar va yetkazib berishni sozlashni tushuntiradi","Analitika va hisobotlarni tushunishga yordam beradi","CRM da ishlash bo'yicha har qanday savollarga javob beradi","7 tilda ishlaydi"]
+      },
+      "aiSearch": {
+        "tag": "AI qidiruv",
+        "title": "Xaridorlar uchun aqlli AI-menyu qidiruvi",
+        "description": "Sun'iy intellekt tabiiy til so'rovlarini tushunadi — xaridorlar taom, tarkib yoki tavsif bo'yicha taomlarni topadilar, uzun menyu bo'ylab aylantirmasdan",
+        "points": ["AI tabiiy til so'rovlarini tushunadi","Ta'm, tarkib va tavsif bo'yicha qidiruv","Aniq so'z mosligisiz ishlaydi","7 ta interfeys tilini qo'llab-quvvatlaydi"]
       }
     }
   },
@@ -117,10 +141,10 @@
     ]
   },
   "comparison": {
-    "label": "Taqqoslash","title": "Nyambot va agregatorlar","subtitle": "Har bir buyurtmadan 20–45% ni biznesingizga qaytaring",
-    "featureCol": "Parametr","othersCol": "Delivery Club","ourChoice": "Bizning tanlov",
-    "full": "To'liq","partial": "Qisman","fixed": "Belgilangan","fromRevenue": "% buyurtmadan",
-    "rows": {"commission": "Komissiya","messengers": "Messenjerlar","clients": "Sizning mijozlar bazasi","crm": "CRM va analitika","crew": "Kuryer ilovasi","loyalty": "Sodiqlik dasturi","marketing": "Aksiyalar va promokodlar","languages": "Interfeys tillari","branding": "Brending","price": "To'lov modeli"}
+    "label": "Taqqoslash","title": "Nyambot vs raqobatchilar","subtitle": "Bot xizmatlari va agregatorlar bilan solishtiring — va har bir buyurtmadan 45% gacha qaytaring",
+    "featureCol": "Parametr","botServicesCol": "Boshqa bot xizmatlar","othersCol": "Delivery Club","ourChoice": "Bizning tanlov",
+    "full": "To'liq","partial": "Qisman","fixed": "Belgilangan","fixedOrPercent": "Belg. yoki %","fromRevenue": "% buyurtmadan",
+    "rows": {"commission": "Komissiya","messengers": "Messenjerlar","clients": "Sizning mijozlar bazasi","crm": "CRM va analitika","crew": "Kuryer ilovasi","adminApp": "Administrator ilovasi","loyalty": "Sodiqlik dasturi","marketing": "Aksiyalar va promokodlar","marketingAuto": "Marketing avtomatizatsiyasi","aiAssistant": "AI yordamchilar","languages": "Interfeys tillari","branding": "Brending","price": "To'lov modeli"}
   },
   "pricing": {
     "label": "Tariflar","title": "Yashirin komissiyalarsiz shaffof narxlar","subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
@@ -128,7 +152,8 @@
     "months": {"1": "1 oy","3": "3 oy","6": "6 oy","12": "12 oy"},
     "cta": "Ulash","included": "Har qanday tarifga nima kiradi",
     "includedItems": ["Telegram + MAX botlar","CRM va analitika","Crew-ilova","Sodiqlik dasturi","Promokodlar va chegirmalar","YuKassa","Qo'llab-quvvatlash"],
-    "limits": "{{bots}} tagacha bot · {{stores}} tagacha savdo nuqtasi · {{items}} tagacha menyu pozitsiyasi"
+    "limits": "{{bots}} tagacha bot · {{stores}} tagacha savdo nuqtasi · {{items}} tagacha menyu pozitsiyasi",
+    "registrationHint": "«Ulash» tugmasini bosganingizdan so'ng CRM ochiladi. Ro'yxatdan o'ting, «Litsenziya» bo'limiga o'ting va tanlangan tarifni to'lang — shundan keyin ishni boshlashingiz mumkin"
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar","title": "Savollar qoldimi?","notFound": "Javob topolmadingizmi?","askSupport": "Qo'llab-quvvatlashga so'rang",
@@ -136,15 +161,15 @@
       {"question": "Xaridorlar ilova o'rnatishi kerakmi?","answer": "Yo'q. Mini-ilova to'g'ridan-to'g'ri Telegram yoki MAX da ochiladi"},
       {"question": "iiko yoki R-Keeper bilan integratsiya bormi?","answer": "Hozircha POS-tizimlar bilan to'g'ridan-to'g'ri integratsiya yo'q"},
       {"question": "Bir nechta savdo nuqtasini ulash mumkinmi?","answer": "Ha. Bitta akkauntda 22 tagacha savdo nuqtasini ulash mumkin"},
-      {"question": "Buyurtmalar uchun to'lov qanday ishlaydi?","answer": "YuKassa orqali onlayn to'lov. Xaridor to'g'ridan-to'g'ri messenjerda to'laydi"},
+      {"question": "Buyurtmalar uchun to'lov qanday ishlaydi?","answer": "YuKassa orqali onlayn to'lov barcha savdo nuqtalariga yoki tanlab ulash mumkin. Xaridor to'g'ridan-to'g'ri messenjerda to'laydi. Yetkazib berishda to'lash ham qo'llab-quvvatlanadi"},
       {"question": "MAX-bot nima va u kerakmi?","answer": "MAX — rus messenjeri. Ulanish majburiy emas, lekin auditoriyani kengaytiradi"},
-      {"question": "Sinov davri qanday ishlaydi?","answer": "14 kun barcha funksiyalar bilan cheklovsiz bepul. Karta talab qilinmaydi"},
+      {"question": "Sinov davri qanday ishlaydi?","answer": "7 kun barcha funksiyalar bilan cheklovsiz bepul. Karta talab qilinmaydi"},
       {"question": "Kuryerlarsiz foydalanish mumkinmi?","answer": "Ha. O'z-o'zidan olib ketish yoki zalda xizmat ko'rsatish — kuryer modulisiz"},
-      {"question": "Buyurtmalarni qabul qilishni qancha tez boshlash mumkin?","answer": "Tayyor bot mavjud bo'lsa — bir kun ichida. O'rtacha ishga tushirish 2–4 soat"}
+      {"question": "Buyurtmalarni qabul qilishni qancha tez boshlash mumkin?","answer": "Tayyor bot mavjud bo'lsa — bir kun ichida"}
     ]
   },
   "cta": {
-    "title": "Bugun buyurtmalar qabul qilishni boshlang","subtitle": "14 kun bepul. Telegram va MAX. Agregatorlarsiz","button": "Bepul sinab ko'rish","docs": "Hujjatlarni o'qish","hint": "Karta bog'lashsiz · Istalgan vaqtda bekor qilish"
+    "title": "Bugun buyurtmalar qabul qilishni boshlang","subtitle": "7 kun bepul. Telegram va MAX. Agregatorlarsiz","button": "Bepul sinab ko'rish","docs": "Hujjatlarni o'qish","hint": "Karta bog'lashsiz · Istalgan vaqtda bekor qilish"
   },
   "footer": {
     "description": "Restoranlar va kafe uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",

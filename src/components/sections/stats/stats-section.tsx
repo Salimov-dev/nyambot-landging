@@ -21,7 +21,7 @@ export function StatsSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className={styles.section} ref={ref}>
+    <section id="stats" className={styles.section} ref={ref}>
       <div className={styles.inner}>
         <Row gutter={[24, 24]}>
           {STATS.map((stat, i) => (

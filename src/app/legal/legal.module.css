@@ -1,0 +1,90 @@
+.page {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+
+.back {
+  color: #1677ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.content :global(h1) {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #141414;
+}
+
+.content :global(h2) {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: #141414;
+}
+
+.content :global(h3) {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #141414;
+}
+
+.content :global(p) {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #595959;
+  margin-bottom: 12px;
+}
+
+.content :global(ul),
+.content :global(ol) {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.content :global(li) {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #595959;
+  margin-bottom: 4px;
+}
+
+.content :global(strong) {
+  color: #262626;
+  font-weight: 600;
+}
+
+.content :global(a) {
+  color: #1677ff;
+}
+
+.footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #8c8c8c;
+}

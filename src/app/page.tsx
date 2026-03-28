@@ -1,5 +1,6 @@
 import { Header } from "@/components/ui/header/header";
 import { Footer } from "@/components/ui/footer/footer";
+import { DotNav } from "@/components/ui/dot-nav/dot-nav";
 import { HeroSection } from "@/components/sections/hero/hero-section";
 import { StatsSection } from "@/components/sections/stats/stats-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
@@ -15,6 +16,7 @@ export default function LandingPage() {
   return (
     <>
       <Header />
+      <DotNav />
       <main>
         <HeroSection />
         <StatsSection />

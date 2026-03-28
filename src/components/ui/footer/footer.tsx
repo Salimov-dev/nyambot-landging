@@ -68,9 +68,14 @@ export function Footer() {
         <Divider style={{ margin: "40px 0 24px" }} />
 
         <Flex justify="space-between" align="center" wrap gap={8} className={styles.bottom}>
-          <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
-            © {year} {BRAND_CONFIG.name}. {t("footer.allRights")}
-          </Text>
+          <Flex vertical gap={4}>
+            <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
+              © {year} {BRAND_CONFIG.name}. {t("footer.allRights")}
+            </Text>
+            <Text style={{ color: theme.colors.textMuted, fontSize: 12 }}>
+              ИП Салимов Р.А., ИНН 183401217970
+            </Text>
+          </Flex>
           <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
             {BRAND_CONFIG.siteName}
           </Text>

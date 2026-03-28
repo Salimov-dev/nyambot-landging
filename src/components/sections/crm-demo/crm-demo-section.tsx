@@ -25,7 +25,7 @@ export function CrmDemoSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className={styles.section}>
+    <section id="crm-demo" className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.inner}>
         <Row gutter={[64, 48]} align="middle">

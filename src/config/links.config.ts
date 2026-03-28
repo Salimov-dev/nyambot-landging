@@ -1,6 +1,6 @@
 export const LINKS = {
-  crm: "https://app.nyambot.ru",
-  docs: "https://docs.nyambot.ru",
+  crm: "https://crm.nyambot.ru",
+  docs: "https://user-guide.nyambot.ru",
   support: "https://t.me/nyambot_support",
 
   demo: {

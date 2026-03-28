@@ -14,6 +14,7 @@ interface ComparisonRow {
   key: string;
   feature: string;
   nyambot: boolean | string;
+  botServices: boolean | string;
   yandexEda: boolean | string;
   others: boolean | string;
 }
@@ -34,22 +35,18 @@ export function ComparisonSection() {
   const { ref, isInView } = useScrollAnimation();
 
   const ROWS: ComparisonRow[] = [
-    {
-      key: "commission",
-      feature: t("comparison.rows.commission"),
-      nyambot: "0%",
-      yandexEda: "20–45%",
-      others: "20–35%",
-    },
-    { key: "messengers", feature: t("comparison.rows.messengers"), nyambot: "TG + MAX", yandexEda: false, others: false },
-    { key: "clients", feature: t("comparison.rows.clients"), nyambot: true, yandexEda: false, others: false },
-    { key: "crm", feature: t("comparison.rows.crm"), nyambot: true, yandexEda: false, others: false },
-    { key: "crew", feature: t("comparison.rows.crew"), nyambot: true, yandexEda: false, others: false },
-    { key: "loyalty", feature: t("comparison.rows.loyalty"), nyambot: true, yandexEda: false, others: false },
-    { key: "marketing", feature: t("comparison.rows.marketing"), nyambot: true, yandexEda: false, others: false },
-    { key: "languages", feature: t("comparison.rows.languages"), nyambot: "7", yandexEda: "1", others: "1–2" },
-    { key: "branding", feature: t("comparison.rows.branding"), nyambot: t("comparison.full"), yandexEda: t("comparison.partial"), others: t("comparison.partial") },
-    { key: "price", feature: t("comparison.rows.price"), nyambot: t("comparison.fixed"), yandexEda: t("comparison.fromRevenue"), others: t("comparison.fromRevenue") },
+    { key: "commission", feature: t("comparison.rows.commission"), nyambot: "0%", botServices: "5–15%", yandexEda: "20–45%", others: "20–35%" },
+    { key: "messengers", feature: t("comparison.rows.messengers"), nyambot: "TG + MAX", botServices: "TG", yandexEda: false, others: false },
+    { key: "clients", feature: t("comparison.rows.clients"), nyambot: true, botServices: t("comparison.partial"), yandexEda: false, others: false },
+    { key: "crm", feature: t("comparison.rows.crm"), nyambot: true, botServices: t("comparison.partial"), yandexEda: false, others: false },
+    { key: "crew", feature: t("comparison.rows.crew"), nyambot: true, botServices: false, yandexEda: false, others: false },
+    { key: "adminApp", feature: t("comparison.rows.adminApp"), nyambot: true, botServices: false, yandexEda: false, others: false },
+    { key: "loyalty", feature: t("comparison.rows.loyalty"), nyambot: true, botServices: t("comparison.partial"), yandexEda: false, others: false },
+    { key: "marketing", feature: t("comparison.rows.marketing"), nyambot: true, botServices: t("comparison.partial"), yandexEda: false, others: false },
+    { key: "marketingAuto", feature: t("comparison.rows.marketingAuto"), nyambot: true, botServices: false, yandexEda: false, others: false },
+    { key: "aiAssistant", feature: t("comparison.rows.aiAssistant"), nyambot: true, botServices: false, yandexEda: false, others: false },
+    { key: "languages", feature: t("comparison.rows.languages"), nyambot: "7", botServices: "1–2", yandexEda: "1", others: "1–2" },
+    { key: "price", feature: t("comparison.rows.price"), nyambot: t("comparison.fixed"), botServices: t("comparison.fixedOrPercent"), yandexEda: t("comparison.fromRevenue"), others: t("comparison.fromRevenue") },
   ];
 
   const columns: ColumnsType<ComparisonRow> = [
@@ -61,7 +58,7 @@ export function ComparisonSection() {
     },
     {
       title: () => (
-        <Flex align="center" gap={8}>
+        <Flex align="center" justify="center" gap={8}>
           <Text style={{ color: theme.colors.accent, fontWeight: 700, fontSize: 15 }}>Нямбот</Text>
           <Tag style={{ background: theme.colors.accentBg, border: `1px solid ${theme.colors.accentBorder}`, color: theme.colors.accent, borderRadius: "var(--radius-pill)", fontSize: 11 }}>
             {t("comparison.ourChoice")}
@@ -74,6 +71,13 @@ export function ComparisonSection() {
       render: (v: boolean | string) => <Check value={v} />,
       onCell: () => ({ style: { background: "rgba(255,140,0,0.04)", borderLeft: `2px solid ${theme.colors.accentBorder}`, borderRight: `2px solid ${theme.colors.accentBorder}` } }),
       onHeaderCell: () => ({ style: { background: "rgba(255,140,0,0.06)", borderLeft: `2px solid ${theme.colors.accentBorder}`, borderRight: `2px solid ${theme.colors.accentBorder}` } }),
+    },
+    {
+      title: () => <Text style={{ color: theme.colors.textTertiary, fontWeight: 600 }}>{t("comparison.botServicesCol")}</Text>,
+      dataIndex: "botServices",
+      key: "botServices",
+      align: "center" as const,
+      render: (v: boolean | string) => <Check value={v} />,
     },
     {
       title: () => <Text style={{ color: theme.colors.textTertiary, fontWeight: 600 }}>Яндекс.Еда</Text>,
@@ -92,7 +96,7 @@ export function ComparisonSection() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section id="comparison" className={styles.section}>
       <div className={styles.inner}>
         <motion.div
           ref={ref}

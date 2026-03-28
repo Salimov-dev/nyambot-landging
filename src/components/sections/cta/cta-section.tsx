@@ -15,7 +15,7 @@ export function CtaSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className={styles.section}>
+    <section id="cta" className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.inner}>
         <motion.div

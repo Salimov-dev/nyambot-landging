@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Button, Col, Flex, Row, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
+import { TelegramIcon } from "@/components/ui/messenger-icons/telegram-icon";
+import { MaxIcon } from "@/components/ui/messenger-icons/max-icon";
 import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
 import styles from "./try-demo-section.module.css";
@@ -16,7 +18,7 @@ export function TryDemoSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className={styles.section}>
+    <section id="try-demo" className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.inner}>
         <motion.div
@@ -76,7 +78,7 @@ export function TryDemoSection() {
             >
               <Flex vertical align="center" gap={24} className={styles.demoCard}>
                 <Flex vertical align="center" gap={8}>
-                  <Text style={{ fontSize: 36 }}>✈️</Text>
+                  <TelegramIcon size={48} />
                   <Text style={{ color: theme.colors.textPrimary, fontSize: 18, fontWeight: 700 }}>
                     Telegram
                   </Text>
@@ -118,7 +120,7 @@ export function TryDemoSection() {
             >
               <Flex vertical align="center" gap={24} className={styles.demoCard}>
                 <Flex vertical align="center" gap={8}>
-                  <Text style={{ fontSize: 36 }}>⚡</Text>
+                  <MaxIcon size={48} />
                   <Text style={{ color: theme.colors.textPrimary, fontSize: 18, fontWeight: 700 }}>
                     MAX
                   </Text>

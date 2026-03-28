@@ -29,7 +29,7 @@ export function HeroSection() {
   const { t } = useTranslation("landing");
 
   return (
-    <section className={styles.section}>
+    <section id="hero" className={styles.section}>
       {/* Glow фон */}
       <div className={styles.glow} />
 
@@ -48,7 +48,7 @@ export function HeroSection() {
 
             <motion.div variants={itemVariants}>
               <Title level={1} className={styles.title}>
-                {t("hero.title")}
+                <span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
               </Title>
             </motion.div>
 
@@ -70,7 +70,7 @@ export function HeroSection() {
                 <Button
                   type="default"
                   size="large"
-                  href="#how-it-works"
+                  href="#features"
                   className={styles.secondaryBtn}
                 >
                   {t("hero.ctaSecondary")}

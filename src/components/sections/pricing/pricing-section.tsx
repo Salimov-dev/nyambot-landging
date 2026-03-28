@@ -51,6 +51,7 @@ export function PricingSection() {
                   <Badge.Ribbon
                     text={t("pricing.popular")}
                     color={theme.colors.accent}
+                    className={styles.popularBadge}
                   >
                     <PricingCard plan={plan} t={t} />
                   </Badge.Ribbon>
@@ -61,6 +62,18 @@ export function PricingSection() {
             </Col>
           ))}
         </Row>
+
+        {/* Registration hint */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.45 }}
+          style={{ textAlign: "center", marginTop: 20 }}
+        >
+          <Text style={{ color: theme.colors.textTertiary, fontSize: 13, lineHeight: 1.6 }}>
+            💡 {t("pricing.registrationHint")}
+          </Text>
+        </motion.div>
 
         {/* License features list */}
         <motion.div
@@ -102,7 +115,7 @@ function PricingCard({
   return (
     <Card
       className={`${styles.card} ${isPopular ? styles.cardPopular : ""}`}
-      styles={{ body: { padding: 28 } }}
+      styles={{ body: { padding: 28, height: "100%" } }}
     >
       <Flex vertical gap={20} style={{ height: "100%" }}>
         {/* Duration */}
@@ -144,6 +157,7 @@ function PricingCard({
           href={LINKS.crm}
           target="_blank"
           className={isPopular ? styles.primaryBtn : styles.defaultBtn}
+          style={{ marginTop: "auto" }}
         >
           {t("pricing.cta")}
         </Button>
