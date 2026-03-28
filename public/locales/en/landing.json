@@ -232,6 +232,7 @@
     "fromRevenue": "% of order",
     "rows": {
       "commission": "Commission",
+      "markup": "Price markup on goods",
       "messengers": "Messengers",
       "clients": "Your customer database",
       "crm": "CRM and analytics",
@@ -271,7 +272,14 @@
       "Support"
     ],
     "limits": "Up to {{bots}} bots · Up to {{stores}} locations · Up to {{items}} menu items",
-    "registrationHint": "Clicking «Connect» will open the CRM. Complete registration, go to «License» section and pay for the selected plan — then you are ready to start"
+    "registrationHint": "Clicking «Connect» will open the CRM. Complete registration, go to «License» section and pay for the selected plan — then you are ready to start",
+    "limitsTitle": "What's included in every plan",
+    "limitBots": "Up to {{count}} bots",
+    "limitStores": "Up to {{count}} stores",
+    "limitMenuItems": "Up to {{count}} menu items",
+    "customTitle": "Need more?",
+    "customSubtitle": "If standard limits aren't enough — contact us and we'll find the perfect solution for your business",
+    "customCta": "Discuss a custom plan"
   },
   "faq": {
     "label": "FAQ",
@@ -328,6 +336,7 @@
     "pricing": "Pricing",
     "support": "Support",
     "telegram": "Message on Telegram",
+    "max": "Write to MAX",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",

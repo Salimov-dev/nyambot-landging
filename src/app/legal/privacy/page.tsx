@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   const content = readFileSync(
     join(process.cwd(), "src/content/legal/privacy.md"),
-    "utf-8"
+    "utf-8",
   );
 
   return <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>;

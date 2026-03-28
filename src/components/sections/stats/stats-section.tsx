@@ -10,10 +10,22 @@ import styles from "./stats-section.module.css";
 const { Text, Title } = Typography;
 
 const STATS = [
-  { valueKey: "stats.commission.value", labelKey: "stats.commission.label", icon: "🚀" },
-  { valueKey: "stats.messengers.value", labelKey: "stats.messengers.label", icon: "💬" },
+  {
+    valueKey: "stats.commission.value",
+    labelKey: "stats.commission.label",
+    icon: "🚀",
+  },
+  {
+    valueKey: "stats.messengers.value",
+    labelKey: "stats.messengers.label",
+    icon: "💬",
+  },
   { valueKey: "stats.trial.value", labelKey: "stats.trial.label", icon: "🎁" },
-  { valueKey: "stats.savings.value", labelKey: "stats.savings.label", icon: "💰" },
+  {
+    valueKey: "stats.savings.value",
+    labelKey: "stats.savings.label",
+    icon: "💰",
+  },
 ] as const;
 
 export function StatsSection() {
@@ -31,12 +43,32 @@ export function StatsSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Flex vertical align="center" gap={8} className={styles.statCard}>
+                <Flex
+                  vertical
+                  align="center"
+                  gap={8}
+                  className={styles.statCard}
+                >
                   <Text style={{ fontSize: 28 }}>{stat.icon}</Text>
-                  <Title level={3} style={{ color: theme.colors.accent, margin: 0, fontSize: 32, fontWeight: 800 }}>
+                  <Title
+                    level={3}
+                    style={{
+                      color: theme.colors.accent,
+                      margin: 0,
+                      fontSize: 32,
+                      fontWeight: 800,
+                    }}
+                  >
                     {t(stat.valueKey)}
                   </Title>
-                  <Text style={{ color: theme.colors.textSecondary, fontSize: 14, textAlign: "center", lineHeight: 1.4 }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textSecondary,
+                      fontSize: 14,
+                      textAlign: "center",
+                      lineHeight: 1.4,
+                    }}
+                  >
                     {t(stat.labelKey)}
                   </Text>
                 </Flex>

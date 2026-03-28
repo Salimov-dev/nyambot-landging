@@ -33,7 +33,14 @@ export function LanguageSwitcher() {
       >
         <Flex align="center" gap={4}>
           <Text style={{ fontSize: 14 }}>🌐</Text>
-          <Text style={{ fontSize: 13, fontWeight: 500, letterSpacing: "0.05em", color: theme.colors.textSecondary }}>
+          <Text
+            style={{
+              fontSize: 13,
+              fontWeight: 500,
+              letterSpacing: "0.05em",
+              color: theme.colors.textSecondary,
+            }}
+          >
             {currentLanguage.toUpperCase()}
           </Text>
           <Text
@@ -57,14 +64,19 @@ export function LanguageSwitcher() {
               key={lang.code}
               className={`${styles.option} ${lang.code === currentLanguage ? styles.active : ""}`}
               onClick={() => {
-                changeLanguage(lang.code as Parameters<typeof changeLanguage>[0]);
+                changeLanguage(
+                  lang.code as Parameters<typeof changeLanguage>[0],
+                );
                 setIsOpen(false);
               }}
             >
               <Text
                 style={{
                   fontSize: 14,
-                  color: lang.code === currentLanguage ? theme.colors.accent : theme.colors.textSecondary,
+                  color:
+                    lang.code === currentLanguage
+                      ? theme.colors.accent
+                      : theme.colors.textSecondary,
                   fontWeight: lang.code === currentLanguage ? 600 : 400,
                 }}
               >

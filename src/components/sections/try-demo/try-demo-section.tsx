@@ -76,13 +76,30 @@ export function TryDemoSection() {
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ duration: 0.65, ease: "easeOut", delay: 0.1 }}
             >
-              <Flex vertical align="center" gap={24} className={styles.demoCard}>
+              <Flex
+                vertical
+                align="center"
+                gap={24}
+                className={styles.demoCard}
+              >
                 <Flex vertical align="center" gap={8}>
                   <TelegramIcon size={48} />
-                  <Text style={{ color: theme.colors.textPrimary, fontSize: 18, fontWeight: 700 }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textPrimary,
+                      fontSize: 18,
+                      fontWeight: 700,
+                    }}
+                  >
                     Telegram
                   </Text>
-                  <Text style={{ color: theme.colors.textSecondary, fontSize: 14, textAlign: "center" }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textSecondary,
+                      fontSize: 14,
+                      textAlign: "center",
+                    }}
+                  >
                     {t("tryDemo.tgDesc")}
                   </Text>
                 </Flex>
@@ -90,7 +107,10 @@ export function TryDemoSection() {
                 <div className={styles.phoneWrap}>
                   <div
                     className={styles.phoneGlow}
-                    style={{ background: "radial-gradient(circle, rgba(39,161,232,0.2) 0%, transparent 65%)" }}
+                    style={{
+                      background:
+                        "radial-gradient(circle, rgba(39,161,232,0.2) 0%, transparent 65%)",
+                    }}
                   />
                   <PhoneMockup>
                     <div className={styles.phoneScreen} />
@@ -118,13 +138,30 @@ export function TryDemoSection() {
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ duration: 0.65, ease: "easeOut", delay: 0.2 }}
             >
-              <Flex vertical align="center" gap={24} className={styles.demoCard}>
+              <Flex
+                vertical
+                align="center"
+                gap={24}
+                className={styles.demoCard}
+              >
                 <Flex vertical align="center" gap={8}>
                   <MaxIcon size={48} />
-                  <Text style={{ color: theme.colors.textPrimary, fontSize: 18, fontWeight: 700 }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textPrimary,
+                      fontSize: 18,
+                      fontWeight: 700,
+                    }}
+                  >
                     MAX
                   </Text>
-                  <Text style={{ color: theme.colors.textSecondary, fontSize: 14, textAlign: "center" }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textSecondary,
+                      fontSize: 14,
+                      textAlign: "center",
+                    }}
+                  >
                     {t("tryDemo.maxDesc")}
                   </Text>
                 </Flex>
@@ -132,7 +169,10 @@ export function TryDemoSection() {
                 <div className={styles.phoneWrap}>
                   <div
                     className={styles.phoneGlow}
-                    style={{ background: "radial-gradient(circle, rgba(255,140,0,0.2) 0%, transparent 65%)" }}
+                    style={{
+                      background:
+                        "radial-gradient(circle, rgba(255,140,0,0.2) 0%, transparent 65%)",
+                    }}
                   />
                   <PhoneMockup>
                     <div className={styles.phoneScreen} />

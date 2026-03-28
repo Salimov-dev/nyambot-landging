@@ -31,7 +31,7 @@ export function DotNav() {
         ([entry]) => {
           if (entry.isIntersecting) setActive(id);
         },
-        { threshold: 0.4 }
+        { threshold: 0.4 },
       );
       observer.observe(el);
       observers.push(observer);

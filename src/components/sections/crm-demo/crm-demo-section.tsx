@@ -78,22 +78,35 @@ export function CrmDemoSection() {
                 </Text>
 
                 {/* Own development badge */}
-                <Flex
-                  align="center"
-                  gap={10}
-                  className={styles.ownDevBadge}
-                >
+                <Flex align="center" gap={10} className={styles.ownDevBadge}>
                   <Text style={{ fontSize: 18 }}>🏗️</Text>
-                  <Text style={{ color: theme.colors.textSecondary, fontSize: 14, lineHeight: 1.5 }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textSecondary,
+                      fontSize: 14,
+                      lineHeight: 1.5,
+                    }}
+                  >
                     {t("crmDemo.ownDev")}
                   </Text>
                 </Flex>
 
                 <div className={styles.featureGrid}>
                   {CRM_FEATURES.map((f) => (
-                    <Flex key={f.key} align="center" gap={10} className={styles.featureItem}>
+                    <Flex
+                      key={f.key}
+                      align="center"
+                      gap={10}
+                      className={styles.featureItem}
+                    >
                       <Text style={{ fontSize: 20 }}>{f.icon}</Text>
-                      <Text style={{ color: theme.colors.textSecondary, fontSize: 14, fontWeight: 500 }}>
+                      <Text
+                        style={{
+                          color: theme.colors.textSecondary,
+                          fontSize: 14,
+                          fontWeight: 500,
+                        }}
+                      >
                         {t(f.key)}
                       </Text>
                     </Flex>
@@ -103,7 +116,13 @@ export function CrmDemoSection() {
                 {/* Transparent pricing */}
                 <Flex align="center" gap={10} className={styles.pricingBadge}>
                   <Text style={{ fontSize: 18 }}>💳</Text>
-                  <Text style={{ color: theme.colors.textSecondary, fontSize: 14, lineHeight: 1.5 }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textSecondary,
+                      fontSize: 14,
+                      lineHeight: 1.5,
+                    }}
+                  >
                     {t("crmDemo.pricing")}
                   </Text>
                 </Flex>
@@ -114,13 +133,19 @@ export function CrmDemoSection() {
                     size="large"
                     href={LINKS.crm}
                     target="_blank"
-                    style={{ background: theme.gradients.primary, border: "none", fontWeight: 600 }}
+                    style={{
+                      background: theme.gradients.primary,
+                      border: "none",
+                      fontWeight: 600,
+                    }}
                   >
                     {t("crmDemo.cta")}
                   </Button>
                 </Flex>
 
-                <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
+                <Text
+                  style={{ color: theme.colors.textTertiary, fontSize: 13 }}
+                >
                   {t("crmDemo.ctaHint")}
                 </Text>
               </Flex>

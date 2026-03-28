@@ -3,6 +3,7 @@
 import { useTranslation } from "react-i18next";
 import { motion, type Variants } from "framer-motion";
 import { Button, Flex, Tag, Typography } from "antd";
+import Image from "next/image";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
@@ -22,7 +23,12 @@ const itemVariants: Variants = {
 
 const phoneVariants: Variants = {
   hidden: { opacity: 0, x: 60, scale: 0.92 },
-  visible: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+  },
 };
 
 export function HeroSection() {
@@ -34,7 +40,12 @@ export function HeroSection() {
       <div className={styles.glow} />
 
       <div className={styles.inner}>
-        <Flex align="center" justify="space-between" gap={48} className={styles.content}>
+        <Flex
+          align="center"
+          justify="space-between"
+          gap={48}
+          className={styles.content}
+        >
           {/* Левая колонка — текст */}
           <motion.div
             className={styles.textCol}
@@ -95,7 +106,16 @@ export function HeroSection() {
             <div className={styles.phoneWrapper}>
               <div className={styles.phoneGlow} />
               <PhoneMockup>
-                <div className={styles.phoneScreen} />
+                <div className={styles.phoneScreen}>
+                  {/* Заглушка — логотип. Заменить на <video> когда будет готово */}
+                  <Image
+                    src="/images/nyambot_logo.png"
+                    alt="Нямбот"
+                    width={80}
+                    height={80}
+                    className={styles.phoneLogo}
+                  />
+                </div>
               </PhoneMockup>
             </div>
           </motion.div>

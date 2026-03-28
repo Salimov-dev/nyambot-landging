@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   const content = readFileSync(
     join(process.cwd(), "src/content/legal/terms.md"),
-    "utf-8"
+    "utf-8",
   );
 
   return <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>;

@@ -38,9 +38,11 @@ export const theme = {
     hero: "linear-gradient(160deg, #050505 0%, #0f0f1a 40%, #1a1a2e 100%)",
     section: "linear-gradient(180deg, #0a0a10 0%, #0f0f14 100%)",
     glow: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,140,0,0.12) 0%, transparent 60%)",
-    glowStrong: "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255,140,0,0.2) 0%, transparent 50%)",
+    glowStrong:
+      "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255,140,0,0.2) 0%, transparent 50%)",
     card: "linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)",
-    cardAccent: "linear-gradient(135deg, rgba(255,140,0,0.12) 0%, rgba(255,140,0,0.04) 100%)",
+    cardAccent:
+      "linear-gradient(135deg, rgba(255,140,0,0.12) 0%, rgba(255,140,0,0.04) 100%)",
     footer: "linear-gradient(180deg, #0a0a10 0%, #050505 100%)",
   },
 

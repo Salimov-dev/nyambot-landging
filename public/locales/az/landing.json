@@ -144,7 +144,7 @@
     "label": "Müqayisə","title": "Nyambot vs rəqiblər","subtitle": "Bot xidmətləri və aqreqatorlarla müqayisə edin — və hər sifarişdən 45%-ə qədər geri qaytarın",
     "featureCol": "Parametr","botServicesCol": "Digər bot xidmətlər","othersCol": "Delivery Club","ourChoice": "Bizim seçim",
     "full": "Tam","partial": "Qismən","fixed": "Sabit","fixedOrPercent": "Sabit və ya %","fromRevenue": "% sifarişdən",
-    "rows": {"commission": "Komissiya","messengers": "Messencerlər","clients": "Sizin müştəri bazanız","crm": "CRM və analitika","crew": "Kuryer tətbiqi","adminApp": "Administrator tətbiqi","loyalty": "Loyallıq proqramı","marketing": "Aksiyalar və promokodlar","marketingAuto": "Marketinq avtomatlaşdırması","aiAssistant": "AI köməkçilər","languages": "İnterfeys dilləri","branding": "Brendinq","price": "Ödəniş modeli"}
+    "rows": {"commission": "Komissiya","markup": "Mallara qiymət əlavəsi","messengers": "Messencerlər","clients": "Sizin müştəri bazanız","crm": "CRM və analitika","crew": "Kuryer tətbiqi","adminApp": "Administrator tətbiqi","loyalty": "Loyallıq proqramı","marketing": "Aksiyalar və promokodlar","marketingAuto": "Marketinq avtomatlaşdırması","aiAssistant": "AI köməkçilər","languages": "İnterfeys dilləri","branding": "Brendinq","price": "Ödəniş modeli"}
   },
   "pricing": {
     "label": "Tariflər","title": "Gizli komissiyasız şəffaf qiymətlər","subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
@@ -153,7 +153,14 @@
     "cta": "Qoşul","included": "İstənilən tarifə nə daxildir",
     "includedItems": ["Telegram + MAX botlar","CRM və analitika","Crew-tətbiqi","Loyallıq proqramı","Promokodlar və endirimlər","YuKassa","Dəstək"],
     "limits": "{{bots}} bota qədər · {{stores}} ticarət nöqtəsinə qədər · {{items}} menyu mövqeyinə qədər",
-    "registrationHint": "«Qoşul» düyməsini basdıqdan sonra CRM açılacaq. Qeydiyyatdan keçin, «Lisenziya» bölməsinə keçin və seçilmiş tarifi ödəyin — bundan sonra işə başlaya bilərsiniz"
+    "registrationHint": "«Qoşul» düyməsini basdıqdan sonra CRM açılacaq. Qeydiyyatdan keçin, «Lisenziya» bölməsinə keçin və seçilmiş tarifi ödəyin — bundan sonra işə başlaya bilərsiniz",
+    "limitsTitle": "Hər tarifə nə daxildir",
+    "limitBots": "{{count}} bota qədər",
+    "limitStores": "{{count}} satış nöqtəsinə qədər",
+    "limitMenuItems": "{{count}} menyu elementinə qədər",
+    "customTitle": "Daha çox lazımdır?",
+    "customSubtitle": "Standart limitlər kifayət etmirsə — bizə yazın, biznesiniz üçün həll tapaq",
+    "customCta": "Fərdi tarifi müzakirə edin"
   },
   "faq": {
     "label": "Tez-tez verilən suallar","title": "Suallarınız qaldı?","notFound": "Cavab tapmadınız?","askSupport": "Dəstəkdən soruşun",
@@ -174,7 +181,7 @@
   "footer": {
     "description": "Restoranlar və kafelər üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
     "product": "Məhsul","crm": "CRM-i aç","docs": "Sənədlər","pricing": "Tariflər",
-    "support": "Dəstək","telegram": "Teleqrama yaz","legal": "Hüquqi",
+    "support": "Dəstək","telegram": "Teleqrama yaz","max": "MAX-a yazın","legal": "Hüquqi",
     "privacy": "Məxfilik siyasəti","terms": "İstifadə şərtləri","offer": "İctimai oferta","cookies": "Cookies siyasəti","allRights": "Bütün hüquqlar qorunur"
   }
 }

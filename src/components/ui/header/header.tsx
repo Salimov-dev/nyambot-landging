@@ -21,7 +21,8 @@ const NAV_ITEMS = [
 
 export function Header() {
   const { t } = useTranslation("landing");
-  const { isMobileMenuOpen, openMobileMenu, closeMobileMenu } = useLandingStore();
+  const { isMobileMenuOpen, openMobileMenu, closeMobileMenu } =
+    useLandingStore();
 
   return (
     <header className={styles.header}>
@@ -34,7 +35,9 @@ export function Header() {
         <Flex align="center" gap={4} className={styles.nav}>
           {NAV_ITEMS.map((item) => (
             <a key={item.href} href={item.href} className={styles.navLink}>
-              <Text style={{ fontSize: 14, fontWeight: 500 }}>{t(item.labelKey)}</Text>
+              <Text style={{ fontSize: 14, fontWeight: 500 }}>
+                {t(item.labelKey)}
+              </Text>
             </a>
           ))}
         </Flex>
@@ -68,9 +71,15 @@ export function Header() {
           onClick={isMobileMenuOpen ? closeMobileMenu : openMobileMenu}
           aria-label="Меню"
         >
-          <span className={`${styles.burgerLine} ${isMobileMenuOpen ? styles.open : ""}`} />
-          <span className={`${styles.burgerLine} ${isMobileMenuOpen ? styles.open : ""}`} />
-          <span className={`${styles.burgerLine} ${isMobileMenuOpen ? styles.open : ""}`} />
+          <span
+            className={`${styles.burgerLine} ${isMobileMenuOpen ? styles.open : ""}`}
+          />
+          <span
+            className={`${styles.burgerLine} ${isMobileMenuOpen ? styles.open : ""}`}
+          />
+          <span
+            className={`${styles.burgerLine} ${isMobileMenuOpen ? styles.open : ""}`}
+          />
         </button>
       </Flex>
 
@@ -91,7 +100,9 @@ export function Header() {
                 className={styles.mobileNavLink}
                 onClick={closeMobileMenu}
               >
-                <Text style={{ fontSize: 16, fontWeight: 500 }}>{t(item.labelKey)}</Text>
+                <Text style={{ fontSize: 16, fontWeight: 500 }}>
+                  {t(item.labelKey)}
+                </Text>
               </a>
             ))}
             <a
@@ -101,7 +112,9 @@ export function Header() {
               className={styles.mobileNavLink}
               onClick={closeMobileMenu}
             >
-              <Text style={{ fontSize: 16, fontWeight: 500 }}>{t("nav.docs")}</Text>
+              <Text style={{ fontSize: 16, fontWeight: 500 }}>
+                {t("nav.docs")}
+              </Text>
             </a>
             <Button
               type="primary"

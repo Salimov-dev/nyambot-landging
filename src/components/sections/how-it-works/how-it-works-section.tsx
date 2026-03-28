@@ -10,10 +10,30 @@ import styles from "./how-it-works-section.module.css";
 const { Title, Text } = Typography;
 
 const STEPS = [
-  { step: 1, icon: "🤖", titleKey: "howItWorks.steps.0.title", descKey: "howItWorks.steps.0.description" },
-  { step: 2, icon: "📋", titleKey: "howItWorks.steps.1.title", descKey: "howItWorks.steps.1.description" },
-  { step: 3, icon: "📣", titleKey: "howItWorks.steps.2.title", descKey: "howItWorks.steps.2.description" },
-  { step: 4, icon: "💳", titleKey: "howItWorks.steps.3.title", descKey: "howItWorks.steps.3.description" },
+  {
+    step: 1,
+    icon: "🤖",
+    titleKey: "howItWorks.steps.0.title",
+    descKey: "howItWorks.steps.0.description",
+  },
+  {
+    step: 2,
+    icon: "📋",
+    titleKey: "howItWorks.steps.1.title",
+    descKey: "howItWorks.steps.1.description",
+  },
+  {
+    step: 3,
+    icon: "📣",
+    titleKey: "howItWorks.steps.2.title",
+    descKey: "howItWorks.steps.2.description",
+  },
+  {
+    step: 4,
+    icon: "💳",
+    titleKey: "howItWorks.steps.3.title",
+    descKey: "howItWorks.steps.3.description",
+  },
 ] as const;
 
 export function HowItWorksSection() {
@@ -52,7 +72,13 @@ export function HowItWorksSection() {
           >
             {t("howItWorks.title")}
           </Title>
-          <Text style={{ color: theme.colors.textSecondary, fontSize: 17, lineHeight: 1.6 }}>
+          <Text
+            style={{
+              color: theme.colors.textSecondary,
+              fontSize: 17,
+              lineHeight: 1.6,
+            }}
+          >
             {t("howItWorks.subtitle")}
           </Text>
         </motion.div>
@@ -69,7 +95,13 @@ export function HowItWorksSection() {
                 <Flex vertical gap={16}>
                   <Flex align="center" gap={12}>
                     <div className={styles.stepNumber}>
-                      <Text style={{ color: theme.colors.accent, fontSize: 14, fontWeight: 800 }}>
+                      <Text
+                        style={{
+                          color: theme.colors.accent,
+                          fontSize: 14,
+                          fontWeight: 800,
+                        }}
+                      >
                         {step.step}
                       </Text>
                     </div>
@@ -77,11 +109,22 @@ export function HowItWorksSection() {
                   </Flex>
                   <Title
                     level={4}
-                    style={{ color: theme.colors.textPrimary, margin: 0, fontWeight: 700, fontSize: 17 }}
+                    style={{
+                      color: theme.colors.textPrimary,
+                      margin: 0,
+                      fontWeight: 700,
+                      fontSize: 17,
+                    }}
                   >
                     {t(step.titleKey)}
                   </Title>
-                  <Text style={{ color: theme.colors.textSecondary, fontSize: 14, lineHeight: 1.6 }}>
+                  <Text
+                    style={{
+                      color: theme.colors.textSecondary,
+                      fontSize: 14,
+                      lineHeight: 1.6,
+                    }}
+                  >
                     {t(step.descKey)}
                   </Text>
                 </Flex>

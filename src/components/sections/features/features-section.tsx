@@ -217,7 +217,13 @@ function FeatureBlock({
                       >
                         ✓
                       </Text>
-                      <Text style={{ color: theme.colors.textSecondary, fontSize: 15, lineHeight: 1.5 }}>
+                      <Text
+                        style={{
+                          color: theme.colors.textSecondary,
+                          fontSize: 15,
+                          lineHeight: 1.5,
+                        }}
+                      >
                         {point}
                       </Text>
                     </Flex>
@@ -238,7 +244,9 @@ function FeatureBlock({
             <Flex justify="center" className={styles.phoneContainer}>
               <div
                 className={styles.phoneGlow}
-                style={{ background: `radial-gradient(circle, ${feature.accentColor}22 0%, transparent 65%)` }}
+                style={{
+                  background: `radial-gradient(circle, ${feature.accentColor}22 0%, transparent 65%)`,
+                }}
               />
               {isNotebook ? (
                 <NotebookMockup>
@@ -271,19 +279,36 @@ export function FeaturesSection() {
           transition={{ duration: 0.6 }}
           className={styles.header}
         >
-          <Text style={{ color: theme.colors.accent, fontSize: 14, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+          <Text
+            style={{
+              color: theme.colors.accent,
+              fontSize: 14,
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+            }}
+          >
             {t("features.label")}
           </Text>
           <Title
             level={2}
-            style={{ color: theme.colors.textPrimary, fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 800, margin: "12px 0 0" }}
+            style={{
+              color: theme.colors.textPrimary,
+              fontSize: "clamp(28px, 4vw, 44px)",
+              fontWeight: 800,
+              margin: "12px 0 0",
+            }}
           >
             {t("features.title")}
           </Title>
         </motion.div>
 
         {FEATURES.map((feature, i) => (
-          <FeatureBlock key={feature.id} feature={feature} reversed={i % 2 !== 0} />
+          <FeatureBlock
+            key={feature.id}
+            feature={feature}
+            reversed={i % 2 !== 0}
+          />
         ))}
       </div>
     </section>

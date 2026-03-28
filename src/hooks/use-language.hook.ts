@@ -1,9 +1,15 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { SUPPORTED_LANGUAGES, type SupportedLanguage } from "@/config/i18n.config";
+import {
+  SUPPORTED_LANGUAGES,
+  type SupportedLanguage,
+} from "@/config/i18n.config";
 
-const LANGUAGE_LABELS: Record<SupportedLanguage, { label: string; nativeLabel: string }> = {
+const LANGUAGE_LABELS: Record<
+  SupportedLanguage,
+  { label: string; nativeLabel: string }
+> = {
   ru: { label: "Русский", nativeLabel: "Русский" },
   en: { label: "English", nativeLabel: "English" },
   uz: { label: "Uzbek", nativeLabel: "O'zbek" },

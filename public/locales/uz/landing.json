@@ -144,7 +144,7 @@
     "label": "Taqqoslash","title": "Nyambot vs raqobatchilar","subtitle": "Bot xizmatlari va agregatorlar bilan solishtiring — va har bir buyurtmadan 45% gacha qaytaring",
     "featureCol": "Parametr","botServicesCol": "Boshqa bot xizmatlar","othersCol": "Delivery Club","ourChoice": "Bizning tanlov",
     "full": "To'liq","partial": "Qisman","fixed": "Belgilangan","fixedOrPercent": "Belg. yoki %","fromRevenue": "% buyurtmadan",
-    "rows": {"commission": "Komissiya","messengers": "Messenjerlar","clients": "Sizning mijozlar bazasi","crm": "CRM va analitika","crew": "Kuryer ilovasi","adminApp": "Administrator ilovasi","loyalty": "Sodiqlik dasturi","marketing": "Aksiyalar va promokodlar","marketingAuto": "Marketing avtomatizatsiyasi","aiAssistant": "AI yordamchilar","languages": "Interfeys tillari","branding": "Brending","price": "To'lov modeli"}
+    "rows": {"commission": "Komissiya","markup": "Tovarlar narxiga ustama","messengers": "Messenjerlar","clients": "Sizning mijozlar bazasi","crm": "CRM va analitika","crew": "Kuryer ilovasi","adminApp": "Administrator ilovasi","loyalty": "Sodiqlik dasturi","marketing": "Aksiyalar va promokodlar","marketingAuto": "Marketing avtomatizatsiyasi","aiAssistant": "AI yordamchilar","languages": "Interfeys tillari","branding": "Brending","price": "To'lov modeli"}
   },
   "pricing": {
     "label": "Tariflar","title": "Yashirin komissiyalarsiz shaffof narxlar","subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
@@ -153,7 +153,14 @@
     "cta": "Ulash","included": "Har qanday tarifga nima kiradi",
     "includedItems": ["Telegram + MAX botlar","CRM va analitika","Crew-ilova","Sodiqlik dasturi","Promokodlar va chegirmalar","YuKassa","Qo'llab-quvvatlash"],
     "limits": "{{bots}} tagacha bot · {{stores}} tagacha savdo nuqtasi · {{items}} tagacha menyu pozitsiyasi",
-    "registrationHint": "«Ulash» tugmasini bosganingizdan so'ng CRM ochiladi. Ro'yxatdan o'ting, «Litsenziya» bo'limiga o'ting va tanlangan tarifni to'lang — shundan keyin ishni boshlashingiz mumkin"
+    "registrationHint": "«Ulash» tugmasini bosganingizdan so'ng CRM ochiladi. Ro'yxatdan o'ting, «Litsenziya» bo'limiga o'ting va tanlangan tarifni to'lang — shundan keyin ishni boshlashingiz mumkin",
+    "limitsTitle": "Har tarifga nima kiradi",
+    "limitBots": "{{count}} tagacha bot",
+    "limitStores": "{{count}} tagacha savdo nuqtasi",
+    "limitMenuItems": "{{count}} tagacha menyu elementi",
+    "customTitle": "Ko'proq kerakmi?",
+    "customSubtitle": "Standart limitlar yetarli bo'lmasa — bizga yozing, biznesingiz uchun yechim topamiz",
+    "customCta": "Individual tarifni muhokama qilish"
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar","title": "Savollar qoldimi?","notFound": "Javob topolmadingizmi?","askSupport": "Qo'llab-quvvatlashga so'rang",
@@ -174,7 +181,7 @@
   "footer": {
     "description": "Restoranlar va kafe uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",
     "product": "Mahsulot","crm": "CRM ochish","docs": "Hujjatlar","pricing": "Tariflar",
-    "support": "Qo'llab-quvvatlash","telegram": "Telegramga yozish","legal": "Huquqiy",
+    "support": "Qo'llab-quvvatlash","telegram": "Telegramga yozish","max": "MAX-ga yozish","legal": "Huquqiy",
     "privacy": "Maxfiylik siyosati","terms": "Foydalanish shartlari","offer": "Ommaviy oferta","cookies": "Cookies siyosati","allRights": "Barcha huquqlar himoyalangan"
   }
 }

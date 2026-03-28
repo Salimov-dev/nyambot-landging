@@ -1,7 +1,10 @@
 export const LINKS = {
   crm: "https://crm.nyambot.ru",
   docs: "https://user-guide.nyambot.ru",
-  support: "https://t.me/nyambot_support",
+  support: {
+    telegram: "https://t.me/nyambot_support",
+    max: "https://max.ru/u/f9LHodD0cOJ4W-Xs57n_VPLk1nSzl--ahlQ-FN2rdXf38_vqSiDlakTSqCk",
+  },
 
   demo: {
     telegram: "https://t.me/nyambot_demo_bot",
@@ -17,6 +20,5 @@ export const LINKS = {
 
   social: {
     telegram: "https://t.me/nyambot",
-    vk: "https://vk.com/nyambot",
   },
 } as const;

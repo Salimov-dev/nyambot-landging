@@ -13,7 +13,9 @@ export default function LegalLayout({ children }: { children: ReactNode }) {
       </header>
       <main className={styles.content}>{children}</main>
       <footer className={styles.footer}>
-        <span>© {new Date().getFullYear()} {BRAND_CONFIG.name}</span>
+        <span>
+          © {new Date().getFullYear()} {BRAND_CONFIG.name}
+        </span>
       </footer>
     </div>
   );

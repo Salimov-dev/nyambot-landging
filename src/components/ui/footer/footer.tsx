@@ -21,34 +21,67 @@ export function Footer() {
           <Col xs={24} sm={24} md={8}>
             <Flex vertical gap={16}>
               <Logo size="md" />
-              <Text style={{ color: theme.colors.textSecondary, fontSize: 14, lineHeight: 1.6, maxWidth: 260 }}>
+              <Text
+                style={{
+                  color: theme.colors.textSecondary,
+                  fontSize: 14,
+                  lineHeight: 1.6,
+                  maxWidth: 260,
+                }}
+              >
                 {t("footer.description")}
               </Text>
-              <Flex gap={12}>
-                <Link href={LINKS.social.telegram} target="_blank" className={styles.socialLink}>
-                  Telegram
-                </Link>
-                <Link href={LINKS.social.vk} target="_blank" className={styles.socialLink}>
-                  VK
-                </Link>
-              </Flex>
             </Flex>
           </Col>
 
           <Col xs={12} sm={8} md={4}>
             <Flex vertical gap={12}>
-              <Text strong className={styles.colTitle}>{t("footer.product")}</Text>
-              <Link href={LINKS.crm} target="_blank" className={styles.footerLink}>{t("footer.crm")}</Link>
-              <Link href={LINKS.docs} target="_blank" className={styles.footerLink}>{t("footer.docs")}</Link>
-              <Link href="#pricing" className={styles.footerLink}>{t("footer.pricing")}</Link>
+              <Text strong className={styles.colTitle}>
+                {t("footer.product")}
+              </Text>
+              <Link
+                href={LINKS.crm}
+                target="_blank"
+                className={styles.footerLink}
+              >
+                {t("footer.crm")}
+              </Link>
+              <Link
+                href={LINKS.docs}
+                target="_blank"
+                className={styles.footerLink}
+              >
+                {t("footer.docs")}
+              </Link>
+              <Link href="#pricing" className={styles.footerLink}>
+                {t("footer.pricing")}
+              </Link>
             </Flex>
           </Col>
 
           <Col xs={12} sm={8} md={4}>
             <Flex vertical gap={12}>
-              <Text strong className={styles.colTitle}>{t("footer.support")}</Text>
-              <Link href={LINKS.support} target="_blank" className={styles.footerLink}>{t("footer.telegram")}</Link>
-              <Link href={`mailto:${BRAND_CONFIG.supportEmail}`} className={styles.footerLink}>
+              <Text strong className={styles.colTitle}>
+                {t("footer.support")}
+              </Text>
+              <Link
+                href={LINKS.support.telegram}
+                target="_blank"
+                className={styles.footerLink}
+              >
+                {t("footer.telegram")}
+              </Link>
+              <Link
+                href={LINKS.support.max}
+                target="_blank"
+                className={styles.footerLink}
+              >
+                {t("footer.max")}
+              </Link>
+              <Link
+                href={`mailto:${BRAND_CONFIG.supportEmail}`}
+                className={styles.footerLink}
+              >
                 {BRAND_CONFIG.supportEmail}
               </Link>
             </Flex>
@@ -56,18 +89,34 @@ export function Footer() {
 
           <Col xs={24} sm={8} md={4}>
             <Flex vertical gap={12}>
-              <Text strong className={styles.colTitle}>{t("footer.legal")}</Text>
-              <Link href={LINKS.legal.privacy} className={styles.footerLink}>{t("footer.privacy")}</Link>
-              <Link href={LINKS.legal.terms} className={styles.footerLink}>{t("footer.terms")}</Link>
-              <Link href={LINKS.legal.offer} className={styles.footerLink}>{t("footer.offer")}</Link>
-              <Link href={LINKS.legal.cookies} className={styles.footerLink}>{t("footer.cookies")}</Link>
+              <Text strong className={styles.colTitle}>
+                {t("footer.legal")}
+              </Text>
+              <Link href={LINKS.legal.privacy} className={styles.footerLink}>
+                {t("footer.privacy")}
+              </Link>
+              <Link href={LINKS.legal.terms} className={styles.footerLink}>
+                {t("footer.terms")}
+              </Link>
+              <Link href={LINKS.legal.offer} className={styles.footerLink}>
+                {t("footer.offer")}
+              </Link>
+              <Link href={LINKS.legal.cookies} className={styles.footerLink}>
+                {t("footer.cookies")}
+              </Link>
             </Flex>
           </Col>
         </Row>
 
         <Divider style={{ margin: "40px 0 24px" }} />
 
-        <Flex justify="space-between" align="center" wrap gap={8} className={styles.bottom}>
+        <Flex
+          justify="space-between"
+          align="center"
+          wrap
+          gap={8}
+          className={styles.bottom}
+        >
           <Flex vertical gap={4}>
             <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
               © {year} {BRAND_CONFIG.name}. {t("footer.allRights")}

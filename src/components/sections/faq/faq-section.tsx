@@ -29,12 +29,24 @@ export function FaqSection() {
   const items: CollapseProps["items"] = FAQ_KEYS.map((key, i) => ({
     key: String(i),
     label: (
-      <Text style={{ color: theme.colors.textPrimary, fontSize: 16, fontWeight: 600 }}>
+      <Text
+        style={{
+          color: theme.colors.textPrimary,
+          fontSize: 16,
+          fontWeight: 600,
+        }}
+      >
         {t(`${key}.question`)}
       </Text>
     ),
     children: (
-      <Text style={{ color: theme.colors.textSecondary, fontSize: 15, lineHeight: 1.7 }}>
+      <Text
+        style={{
+          color: theme.colors.textSecondary,
+          fontSize: 15,
+          lineHeight: 1.7,
+        }}
+      >
         {t(`${key}.answer`)}
       </Text>
     ),
@@ -50,10 +62,26 @@ export function FaqSection() {
           transition={{ duration: 0.6 }}
           className={styles.header}
         >
-          <Text style={{ color: theme.colors.accent, fontSize: 14, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+          <Text
+            style={{
+              color: theme.colors.accent,
+              fontSize: 14,
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+            }}
+          >
             {t("faq.label")}
           </Text>
-          <Title level={2} style={{ color: theme.colors.textPrimary, fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 800, margin: "12px 0 0" }}>
+          <Title
+            level={2}
+            style={{
+              color: theme.colors.textPrimary,
+              fontSize: "clamp(28px, 4vw, 44px)",
+              fontWeight: 800,
+              margin: "12px 0 0",
+            }}
+          >
             {t("faq.title")}
           </Title>
         </motion.div>
@@ -79,15 +107,24 @@ export function FaqSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <Flex justify="center" align="center" gap={8} className={styles.supportHint}>
+          <Flex
+            justify="center"
+            align="center"
+            gap={8}
+            className={styles.supportHint}
+          >
             <Text style={{ color: theme.colors.textTertiary, fontSize: 14 }}>
               {t("faq.notFound")}
             </Text>
             <a
-              href={LINKS.support}
+              href={LINKS.support.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: theme.colors.accent, fontSize: 14, fontWeight: 600 }}
+              style={{
+                color: theme.colors.accent,
+                fontSize: 14,
+                fontWeight: 600,
+              }}
             >
               {t("faq.askSupport")}
             </a>

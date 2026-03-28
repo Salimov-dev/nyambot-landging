@@ -11,7 +11,12 @@ import styles from "./pricing-section.module.css";
 
 const { Title, Text } = Typography;
 
-const MONTH_LABELS: Record<number, string> = { 1: "mo1", 3: "mo3", 6: "mo6", 12: "mo12" };
+const MONTH_LABELS: Record<number, string> = {
+  1: "mo1",
+  3: "mo3",
+  6: "mo6",
+  12: "mo12",
+};
 
 export function PricingSection() {
   const { t } = useTranslation("landing");
@@ -27,13 +32,35 @@ export function PricingSection() {
           transition={{ duration: 0.6 }}
           className={styles.header}
         >
-          <Text style={{ color: theme.colors.accent, fontSize: 14, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+          <Text
+            style={{
+              color: theme.colors.accent,
+              fontSize: 14,
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+            }}
+          >
             {t("pricing.label")}
           </Text>
-          <Title level={2} style={{ color: theme.colors.textPrimary, fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 800, margin: "12px 0 16px" }}>
+          <Title
+            level={2}
+            style={{
+              color: theme.colors.textPrimary,
+              fontSize: "clamp(28px, 4vw, 44px)",
+              fontWeight: 800,
+              margin: "12px 0 16px",
+            }}
+          >
             {t("pricing.title")}
           </Title>
-          <Text style={{ color: theme.colors.textSecondary, fontSize: 17, lineHeight: 1.6 }}>
+          <Text
+            style={{
+              color: theme.colors.textSecondary,
+              fontSize: 17,
+              lineHeight: 1.6,
+            }}
+          >
             {t("pricing.subtitle")}
           </Text>
         </motion.div>
@@ -70,33 +97,116 @@ export function PricingSection() {
           transition={{ duration: 0.5, delay: 0.45 }}
           style={{ textAlign: "center", marginTop: 20 }}
         >
-          <Text style={{ color: theme.colors.textTertiary, fontSize: 13, lineHeight: 1.6 }}>
+          <Text
+            style={{
+              color: theme.colors.textTertiary,
+              fontSize: 13,
+              lineHeight: 1.6,
+            }}
+          >
             💡 {t("pricing.registrationHint")}
           </Text>
         </motion.div>
 
-        {/* License features list */}
+        {/* Limits + included features + custom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
           className={styles.includes}
         >
-          <Text style={{ color: theme.colors.textTertiary, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 600 }}>
+          {/* Limits */}
+          <Flex gap={16} wrap justify="center" style={{ marginBottom: 28 }}>
+            <Flex vertical align="center" className={styles.limitCard}>
+              <Text className={styles.limitValue}>
+                {LICENSE_LIMITS.maxBotsCount}
+              </Text>
+              <Text className={styles.limitLabel}>
+                {t("pricing.limitBots", { count: LICENSE_LIMITS.maxBotsCount })}
+              </Text>
+            </Flex>
+            <Flex vertical align="center" className={styles.limitCard}>
+              <Text className={styles.limitValue}>
+                {LICENSE_LIMITS.maxStoreCount}
+              </Text>
+              <Text className={styles.limitLabel}>
+                {t("pricing.limitStores", {
+                  count: LICENSE_LIMITS.maxStoreCount,
+                })}
+              </Text>
+            </Flex>
+            <Flex vertical align="center" className={styles.limitCard}>
+              <Text className={styles.limitValue}>
+                {LICENSE_LIMITS.maxMenuItemCount}
+              </Text>
+              <Text className={styles.limitLabel}>
+                {t("pricing.limitMenuItems", {
+                  count: LICENSE_LIMITS.maxMenuItemCount,
+                })}
+              </Text>
+            </Flex>
+          </Flex>
+
+          {/* Included features */}
+          <Text
+            style={{
+              color: theme.colors.textTertiary,
+              fontSize: 13,
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+              fontWeight: 600,
+            }}
+          >
             {t("pricing.included")}
           </Text>
           <Flex gap={12} wrap justify="center" style={{ marginTop: 20 }}>
-            {(t("pricing.includedItems", { returnObjects: true }) as string[]).map((item, i) => (
-              <Tag key={i} className={styles.includeTag}>✓ {item}</Tag>
+            {(
+              t("pricing.includedItems", { returnObjects: true }) as string[]
+            ).map((item, i) => (
+              <Tag key={i} className={styles.includeTag}>
+                ✓ {item}
+              </Tag>
             ))}
           </Flex>
-          <Text style={{ color: theme.colors.textTertiary, fontSize: 13, marginTop: 16, display: "block", textAlign: "center" }}>
-            {t("pricing.limits", {
-              bots: LICENSE_LIMITS.maxBotsCount,
-              stores: LICENSE_LIMITS.maxStoreCount,
-              items: LICENSE_LIMITS.maxMenuItemCount,
-            })}
-          </Text>
+
+          {/* Custom plan CTA */}
+          <Flex vertical align="center" gap={12} className={styles.customCta}>
+            <Title
+              level={4}
+              style={{ color: theme.colors.accent, margin: 0, fontWeight: 700 }}
+            >
+              {t("pricing.customTitle")}
+            </Title>
+            <Text
+              style={{
+                color: theme.colors.textSecondary,
+                fontSize: 15,
+                textAlign: "center",
+                maxWidth: 480,
+                lineHeight: 1.6,
+              }}
+            >
+              {t("pricing.customSubtitle")}
+            </Text>
+            <Flex gap={12}>
+              <Button
+                size="large"
+                href={LINKS.support.telegram}
+                target="_blank"
+                className={styles.defaultBtn}
+              >
+                Telegram
+              </Button>
+              <Button
+                size="large"
+                href={LINKS.support.max}
+                target="_blank"
+                className={styles.defaultBtn}
+              >
+                MAX
+              </Button>
+            </Flex>
+          </Flex>
         </motion.div>
       </div>
     </section>
@@ -120,11 +230,28 @@ function PricingCard({
       <Flex vertical gap={20} style={{ height: "100%" }}>
         {/* Duration */}
         <Flex align="center" justify="space-between">
-          <Text style={{ color: isPopular ? theme.colors.accent : theme.colors.textSecondary, fontWeight: 700, fontSize: 15 }}>
+          <Text
+            style={{
+              color: isPopular
+                ? theme.colors.accent
+                : theme.colors.textSecondary,
+              fontWeight: 700,
+              fontSize: 15,
+            }}
+          >
             {t(`pricing.months.${plan.months}`)}
           </Text>
           {plan.discountPercent > 0 && (
-            <Tag style={{ background: theme.colors.successBg, border: `1px solid ${theme.colors.success}44`, color: theme.colors.success, borderRadius: "var(--radius-pill)", fontSize: 12, fontWeight: 700 }}>
+            <Tag
+              style={{
+                background: theme.colors.successBg,
+                border: `1px solid ${theme.colors.success}44`,
+                color: theme.colors.success,
+                borderRadius: "var(--radius-pill)",
+                fontSize: 12,
+                fontWeight: 700,
+              }}
+            >
               −{plan.discountPercent}%
             </Tag>
           )}
@@ -133,7 +260,18 @@ function PricingCard({
         {/* Price */}
         <Flex vertical gap={4}>
           <Flex align="baseline" gap={4}>
-            <Title level={2} style={{ color: isPopular ? theme.colors.accent : theme.colors.textPrimary, margin: 0, fontSize: 36, fontWeight: 800, lineHeight: 1 }}>
+            <Title
+              level={2}
+              style={{
+                color: isPopular
+                  ? theme.colors.accent
+                  : theme.colors.textPrimary,
+                margin: 0,
+                fontSize: 36,
+                fontWeight: 800,
+                lineHeight: 1,
+              }}
+            >
               {plan.pricePerMonth.toLocaleString("ru-RU")} ₽
             </Title>
           </Flex>
@@ -144,7 +282,8 @@ function PricingCard({
             <Text style={{ color: theme.colors.textTertiary, fontSize: 12 }}>
               {t("pricing.totalBilled", {
                 total: plan.priceRub.toLocaleString("ru-RU"),
-              })} ₽
+              })}{" "}
+              ₽
             </Text>
           )}
         </Flex>

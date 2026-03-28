@@ -37,7 +37,15 @@ import azLanding from "../../public/locales/az/landing.json";
 import azCommon from "../../public/locales/az/common.json";
 import azLanguages from "../../public/locales/az/languages.json";
 
-export const SUPPORTED_LANGUAGES = ["ru", "en", "uz", "be", "tg", "ky", "az"] as const;
+export const SUPPORTED_LANGUAGES = [
+  "ru",
+  "en",
+  "uz",
+  "be",
+  "tg",
+  "ky",
+  "az",
+] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 export const DEFAULT_LANGUAGE: SupportedLanguage = "ru";
 

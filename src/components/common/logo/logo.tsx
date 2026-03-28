@@ -30,7 +30,12 @@ export function Logo({ size = "md" }: LogoProps) {
       </div>
       <Text
         strong
-        style={{ fontSize, color: theme.colors.textPrimary, lineHeight: 1, letterSpacing: "0.02em" }}
+        style={{
+          fontSize,
+          color: theme.colors.textPrimary,
+          lineHeight: 1,
+          letterSpacing: "0.02em",
+        }}
       >
         {BRAND_CONFIG.name}
       </Text>
