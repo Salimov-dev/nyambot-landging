@@ -174,7 +174,8 @@
           "Delivery zones — draw on the map yourself",
           "Promotions, promo codes, stop-lists — no developers needed",
           "Connect a new bot in 10 minutes",
-          "Documentation: step-by-step launch from zero to first order"
+          "Documentation: step-by-step launch from zero to first order",
+          "AI assistant in CRM — instant help on any question without contacting support"
         ]
       },
       "aiCrm": {
@@ -208,7 +209,7 @@
     "ownDev": "CRM built from scratch by our team — full control over features and reliability. No third-party platforms",
     "pricing": "Transparent pricing: fixed tariff, no hidden commissions or surcharges",
     "cta": "Open CRM — 7 days free",
-    "ctaHint": "Full access · No card required · Cancel anytime",
+    "ctaHint": "Full access · No card required · Free trial, no commitment",
     "screenPlaceholder": "Nyambot CRM screenshot coming soon",
     "features": {
       "dashboard": "Revenue and metrics dashboard",
@@ -363,7 +364,7 @@
     "subtitle": "7 days free. Telegram and MAX. No aggregators and no commissions",
     "button": "Try for free",
     "docs": "Read documentation",
-    "hint": "No card required · Cancel anytime"
+    "hint": "No card required · Free trial, no commitment"
   },
   "footer": {
     "description": "Platform for restaurants and cafes. Orders via Telegram and MAX without aggregators",

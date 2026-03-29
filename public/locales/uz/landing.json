@@ -107,7 +107,7 @@
         "tag": "To'liq mustaqillik",
         "title": "Menejerlar yordamisiz ishga tushiring va boshqaring",
         "description": "Hamma narsa CRM orqali mustaqil sozlanadi — ishga tushirishdan boshlab istalgan vaqtda. Ovqat qo'shish, narx o'zgartirish yoki yetkazib berish zonalarini sozlash uchun qo'llab-quvvatlashga yozish shart emas",
-        "points": ["Menyu: pozitsiyalarni o'zingiz qo'shing, tahrirlang, yashiring","Yetkazib berish zonalari — xaritada o'zingiz chizing","Aksiyalar, promokodlar, stop-ro'yxatlar — dasturchilarsiz","Yangi botni 10 daqiqada ulang","Hujjatlar: noldan birinchi buyurtmaga qadar bosqichma-bosqich yo'riqnoma"]
+        "points": ["Menyu: pozitsiyalarni o'zingiz qo'shing, tahrirlang, yashiring","Yetkazib berish zonalari — xaritada o'zingiz chizing","Aksiyalar, promokodlar, stop-ro'yxatlar — dasturchilarsiz","Yangi botni 10 daqiqada ulang","Hujjatlar: noldan birinchi buyurtmaga qadar bosqichma-bosqich yo'riqnoma","CRM'dagi AI-yordamchi — har qanday savolga tezkor yordam, qo'llab-quvvatlashga murojaat qilmasdan"]
       },
       "aiCrm": {
         "tag": "AI CRM da",
@@ -130,7 +130,7 @@
     "ownDev": "CRM bizning jamoamiz tomonidan noldan yaratilgan — funksionallik va ishonchlilikni to'liq nazorat qilamiz. Uchinchi tomon platformalar yo'q",
     "pricing": "Shaffof narxlash: belgilangan tarif, yashirin komissiyalar va qo'shimcha to'lovlar yo'q",
     "cta": "CRM ni ochish — 7 kun bepul",
-    "ctaHint": "To'liq kirish · Karta talab qilinmaydi · Istalgan vaqtda bekor qilish",
+    "ctaHint": "To'liq kirish · Karta talab qilinmaydi · Demo-kirish majburiyatsiz",
     "screenPlaceholder": "Bu yerda Nyambot CRM skrinshotи bo'ladi",
     "features": {
       "dashboard": "Daromad va ko'rsatkichlar paneli",
@@ -200,7 +200,7 @@
     ]
   },
   "cta": {
-    "title": "Bugun buyurtmalar qabul qilishni boshlang","subtitle": "7 kun bepul. Telegram va MAX. Agregatorlarsiz","button": "Bepul sinab ko'rish","docs": "Hujjatlarni o'qish","hint": "Karta bog'lashsiz · Istalgan vaqtda bekor qilish"
+    "title": "Bugun buyurtmalar qabul qilishni boshlang","subtitle": "7 kun bepul. Telegram va MAX. Agregatorlarsiz","button": "Bepul sinab ko'rish","docs": "Hujjatlarni o'qish","hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz"
   },
   "footer": {
     "description": "Restoranlar va kafe uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",

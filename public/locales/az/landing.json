@@ -107,7 +107,7 @@
         "tag": "Tam müstəqillik",
         "title": "Menecerlər olmadan işə salın və idarə edin",
         "description": "Hər şey CRM vasitəsilə müstəqil şəkildə konfiqurasiya edilir — işə salındığı andan istənilən vaxt. Yemək əlavə etmək, qiymət dəyişdirmək və ya çatdırılma zonalarını qurmaq üçün dəstəyə yazmağa ehtiyac yoxdur",
-        "points": ["Menyu: mövqeləri özünüz əlavə edin, redaktə edin","Çatdırılma zonaları — xəritədə özünüz çəkin","Aksiyalar, promokodlar, stop-siyahılar — proqramçısız","Yeni botu 10 dəqiqədə qoşun","Sənədlər: sıfırdan ilk sifarişə addım-addım bələdçi"]
+        "points": ["Menyu: mövqeləri özünüz əlavə edin, redaktə edin","Çatdırılma zonaları — xəritədə özünüz çəkin","Aksiyalar, promokodlar, stop-siyahılar — proqramçısız","Yeni botu 10 dəqiqədə qoşun","Sənədlər: sıfırdan ilk sifarişə addım-addım bələdçi","CRM-dəki AI-köməkçi — istənilən suala ani kömək, dəstəyə müraciət etmədən"]
       },
       "aiCrm": {
         "tag": "AI CRM-də",
@@ -130,7 +130,7 @@
     "ownDev": "CRM komandamız tərəfindən sıfırdan qurulub — funksionallıq və etibarlılıq üzərində tam nəzarət. Heç bir üçüncü tərəf platforma yoxdur",
     "pricing": "Şəffaf qiymətləndirmə: sabit tarif, gizli komissiyalar və əlavə ödənişlər yoxdur",
     "cta": "CRM açmaq — 7 gün pulsuz",
-    "ctaHint": "Tam giriş · Kart tələb olunmur · İstənilən vaxt ləğv etmək",
+    "ctaHint": "Tam giriş · Kart tələb olunmur · Demo-giriş öhdəliksiz",
     "screenPlaceholder": "Nyambot CRM ekran görüntüsü burada olacaq",
     "features": {
       "dashboard": "Gəlir və metriklər paneli",
@@ -200,7 +200,7 @@
     ]
   },
   "cta": {
-    "title": "Bu gün sifarişlər qəbul etməyə başlayın","subtitle": "7 gün pulsuz. Telegram və MAX. Aqreqatorsuz","button": "Pulsuz sınayın","docs": "Sənədləri oxuyun","hint": "Kart əlavə etmədən · İstənilən vaxt ləğv edin"
+    "title": "Bu gün sifarişlər qəbul etməyə başlayın","subtitle": "7 gün pulsuz. Telegram və MAX. Aqreqatorsuz","button": "Pulsuz sınayın","docs": "Sənədləri oxuyun","hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz"
   },
   "footer": {
     "description": "Restoranlar və kafelər üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
