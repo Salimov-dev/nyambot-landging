@@ -25,6 +25,7 @@ export function useLanguage() {
   const currentLanguage = i18n.language as SupportedLanguage;
 
   const changeLanguage = (code: SupportedLanguage) => {
+    localStorage.setItem("landing_language", code);
     i18n.changeLanguage(code);
   };
 
