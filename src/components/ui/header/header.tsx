@@ -8,15 +8,16 @@ import { Logo } from "@/components/common/logo/logo";
 import { LanguageSwitcher } from "@/components/ui/language-switcher/language-switcher";
 import { useLandingStore } from "@/store/use-landing.store";
 import { LINKS } from "@/config/links.config";
+import { reachGoal, type MetrikaGoal } from "@/config/metrika";
 import styles from "./header.module.css";
 
 const { Text } = Typography;
 
 const NAV_ITEMS = [
-  { labelKey: "nav.features", href: "#features" },
-  { labelKey: "nav.howItWorks", href: "#how-it-works" },
-  { labelKey: "nav.pricing", href: "#pricing" },
-  { labelKey: "nav.faq", href: "#faq" },
+  { labelKey: "nav.features", href: "#features", goal: "scroll_features" as MetrikaGoal },
+  { labelKey: "nav.howItWorks", href: "#how-it-works", goal: null },
+  { labelKey: "nav.pricing", href: "#pricing", goal: "scroll_pricing" as MetrikaGoal },
+  { labelKey: "nav.faq", href: "#faq", goal: null },
 ] as const;
 
 export function Header() {
@@ -34,7 +35,12 @@ export function Header() {
         {/* Desktop nav */}
         <Flex align="center" gap={4} className={styles.nav}>
           {NAV_ITEMS.map((item) => (
-            <a key={item.href} href={item.href} className={styles.navLink}>
+            <a
+              key={item.href}
+              href={item.href}
+              className={styles.navLink}
+              onClick={() => item.goal && reachGoal(item.goal)}
+            >
               <Text style={{ fontSize: 14, fontWeight: 500 }}>
                 {t(item.labelKey)}
               </Text>
@@ -60,6 +66,7 @@ export function Header() {
             rel="noopener noreferrer"
             className={styles.ctaBtn}
             size="middle"
+            onClick={() => reachGoal("click_trial")}
           >
             {t("nav.openCrm")}
           </Button>
@@ -98,7 +105,10 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={styles.mobileNavLink}
-                onClick={closeMobileMenu}
+                onClick={() => {
+                  if (item.goal) reachGoal(item.goal);
+                  closeMobileMenu();
+                }}
               >
                 <Text style={{ fontSize: 16, fontWeight: 500 }}>
                   {t(item.labelKey)}
@@ -124,6 +134,7 @@ export function Header() {
               className={styles.mobileCtaBtn}
               block
               size="large"
+              onClick={() => reachGoal("click_trial")}
             >
               {t("nav.openCrm")}
             </Button>

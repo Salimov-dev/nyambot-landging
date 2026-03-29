@@ -176,6 +176,7 @@ const FEATURES = [
     icon: "🔍",
     accentColor: "#13c2c2",
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/AI_search.png",
   },
 ] as const;
 

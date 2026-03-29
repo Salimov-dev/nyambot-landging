@@ -6,6 +6,7 @@ import { Button, Flex, Tag, Typography } from "antd";
 import Image from "next/image";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./hero-section.module.css";
 
@@ -75,6 +76,7 @@ export function HeroSection() {
                   href={LINKS.crm}
                   target="_blank"
                   className={styles.primaryBtn}
+                  onClick={() => reachGoal("click_trial")}
                 >
                   {t("hero.cta")}
                 </Button>
@@ -83,6 +85,7 @@ export function HeroSection() {
                   size="large"
                   href="#features"
                   className={styles.secondaryBtn}
+                  onClick={() => reachGoal("click_features")}
                 >
                   {t("hero.ctaSecondary")}
                 </Button>

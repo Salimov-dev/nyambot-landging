@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Col, Divider, Flex, Row, Typography } from "antd";
 import { Logo } from "@/components/common/logo/logo";
 import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { theme } from "@/config/theme";
 import styles from "./footer.module.css";
@@ -43,6 +44,7 @@ export function Footer() {
                 href={LINKS.crm}
                 target="_blank"
                 className={styles.footerLink}
+                onClick={() => reachGoal("click_trial")}
               >
                 {t("footer.crm")}
               </Link>
@@ -53,7 +55,11 @@ export function Footer() {
               >
                 {t("footer.docs")}
               </Link>
-              <Link href="#pricing" className={styles.footerLink}>
+              <Link
+                href="#pricing"
+                className={styles.footerLink}
+                onClick={() => reachGoal("scroll_pricing")}
+              >
                 {t("footer.pricing")}
               </Link>
             </Flex>
@@ -68,6 +74,7 @@ export function Footer() {
                 href={LINKS.support.telegram}
                 target="_blank"
                 className={styles.footerLink}
+                onClick={() => reachGoal("click_tg_support")}
               >
                 {t("footer.telegram")}
               </Link>
@@ -75,6 +82,7 @@ export function Footer() {
                 href={LINKS.support.max}
                 target="_blank"
                 className={styles.footerLink}
+                onClick={() => reachGoal("click_max_demo")}
               >
                 {t("footer.max")}
               </Link>

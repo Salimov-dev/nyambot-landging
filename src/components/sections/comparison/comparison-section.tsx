@@ -50,7 +50,7 @@ export function ComparisonSection() {
     {
       key: "messengers",
       feature: t("comparison.rows.messengers"),
-      nyambot: "TG + MAX",
+      nyambot: "MAX + TG",
       botServices: "TG",
       yandexEda: false,
       others: false,

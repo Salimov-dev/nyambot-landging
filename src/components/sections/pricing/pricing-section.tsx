@@ -6,6 +6,7 @@ import { Badge, Button, Card, Col, Flex, Row, Tag, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { PRICING_PLANS, LICENSE_LIMITS } from "@/config/pricing.config";
 import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./pricing-section.module.css";
 
@@ -194,6 +195,7 @@ export function PricingSection() {
                 href={LINKS.support.telegram}
                 target="_blank"
                 className={styles.defaultBtn}
+                onClick={() => reachGoal("click_tg_support")}
               >
                 Telegram
               </Button>
@@ -202,6 +204,7 @@ export function PricingSection() {
                 href={LINKS.support.max}
                 target="_blank"
                 className={styles.defaultBtn}
+                onClick={() => reachGoal("click_max_demo")}
               >
                 MAX
               </Button>
@@ -297,6 +300,7 @@ function PricingCard({
           target="_blank"
           className={isPopular ? styles.primaryBtn : styles.defaultBtn}
           style={{ marginTop: "auto" }}
+          onClick={() => reachGoal("click_trial")}
         >
           {t("pricing.cta")}
         </Button>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button, Flex, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./cta-section.module.css";
 
@@ -62,6 +63,7 @@ export function CtaSection() {
                 href={LINKS.crm}
                 target="_blank"
                 className={styles.primaryBtn}
+                onClick={() => reachGoal("click_trial")}
               >
                 {t("cta.button")}
               </Button>

@@ -1,6 +1,5 @@
 // ============================================
-// Яндекс.Метрика — для подключения в будущем
-// Установить YANDEX_METRIKA_ID в env и здесь
+// Яндекс.Метрика — счётчик 108294011
 // ============================================
 
 export const ANALYTICS_CONFIG = {
@@ -9,9 +8,11 @@ export const ANALYTICS_CONFIG = {
 
   // Параметры счётчика
   yandexMetrikaOptions: {
-    clickmap: true,
-    trackLinks: true,
-    accurateTrackBounce: true,
+    ssr: true,
     webvisor: true,
+    clickmap: true,
+    ecommerce: "dataLayer",
+    accurateTrackBounce: true,
+    trackLinks: true,
   },
 } as const;
