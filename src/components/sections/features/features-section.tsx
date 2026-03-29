@@ -2,6 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Col, Flex, Row, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { NotebookMockup } from "@/components/ui/notebook-mockup/notebook-mockup";
@@ -21,6 +22,18 @@ const FEATURES = [
     icon: "💬",
     accentColor: theme.colors.accent,
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/first_service.png",
+  },
+  {
+    id: "modernUI",
+    tagKey: "features.items.modernUI.tag",
+    titleKey: "features.items.modernUI.title",
+    descriptionKey: "features.items.modernUI.description",
+    pointsKey: "features.items.modernUI.points",
+    icon: "✨",
+    accentColor: "#eb2f96",
+    mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/design.png",
   },
   {
     id: "noCommission",
@@ -31,6 +44,7 @@ const FEATURES = [
     icon: "💸",
     accentColor: theme.colors.success,
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/stop_pay.png",
   },
   {
     id: "crm",
@@ -41,6 +55,29 @@ const FEATURES = [
     icon: "📊",
     accentColor: "#1677ff",
     mockupType: "notebook" as "phone" | "notebook",
+    mockupImage: "/images/sections/monitoring.png",
+  },
+  {
+    id: "menuCustomization",
+    tagKey: "features.items.menuCustomization.tag",
+    titleKey: "features.items.menuCustomization.title",
+    descriptionKey: "features.items.menuCustomization.description",
+    pointsKey: "features.items.menuCustomization.points",
+    icon: "🍕",
+    accentColor: "#fa8c16",
+    mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/sostav-modifiers.png",
+  },
+  {
+    id: "comboBuilder",
+    tagKey: "features.items.comboBuilder.tag",
+    titleKey: "features.items.comboBuilder.title",
+    descriptionKey: "features.items.comboBuilder.description",
+    pointsKey: "features.items.comboBuilder.points",
+    icon: "🍱",
+    accentColor: "#36cfc9",
+    mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/combo.png",
   },
   {
     id: "crewAdmin",
@@ -51,6 +88,7 @@ const FEATURES = [
     icon: "👨‍💼",
     accentColor: "#9254de",
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/crew_admin.png",
   },
   {
     id: "crew",
@@ -61,6 +99,7 @@ const FEATURES = [
     icon: "🛵",
     accentColor: "#b652ff",
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/crew_courier.png",
   },
   {
     id: "payment",
@@ -71,6 +110,7 @@ const FEATURES = [
     icon: "💳",
     accentColor: "#1677ff",
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/payments.png",
   },
   {
     id: "marketing",
@@ -81,6 +121,7 @@ const FEATURES = [
     icon: "🎯",
     accentColor: "#14c4a2",
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/discount.png",
   },
   {
     id: "scheduledSending",
@@ -90,7 +131,8 @@ const FEATURES = [
     pointsKey: "features.items.scheduledSending.points",
     icon: "📅",
     accentColor: "#fa541c",
-    mockupType: "notebook" as "phone" | "notebook",
+    mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/day_offer.png",
   },
   {
     id: "languages",
@@ -101,6 +143,7 @@ const FEATURES = [
     icon: "🌍",
     accentColor: "#f5a623",
     mockupType: "phone" as "phone" | "notebook",
+    mockupImage: "/images/sections/multi_language.png",
   },
   {
     id: "selfService",
@@ -111,6 +154,7 @@ const FEATURES = [
     icon: "🛠️",
     accentColor: "#52c41a",
     mockupType: "notebook" as "phone" | "notebook",
+    mockupImage: "/images/sections/samostoyatelno_crm.png",
   },
   {
     id: "aiCrm",
@@ -121,6 +165,7 @@ const FEATURES = [
     icon: "🤖",
     accentColor: "#722ed1",
     mockupType: "notebook" as "phone" | "notebook",
+    mockupImage: "/images/sections/AI_assistant_crm.png",
   },
   {
     id: "aiSearch",
@@ -250,11 +295,31 @@ function FeatureBlock({
               />
               {isNotebook ? (
                 <NotebookMockup>
-                  <div className={styles.phoneScreen} />
+                  {"mockupImage" in feature && feature.mockupImage ? (
+                    <Image
+                      src={feature.mockupImage}
+                      alt={t(feature.titleKey)}
+                      fill
+                      sizes="640px"
+                      className={styles.phoneScreenImage}
+                    />
+                  ) : (
+                    <div className={styles.phoneScreen} />
+                  )}
                 </NotebookMockup>
               ) : (
                 <PhoneMockup>
-                  <div className={styles.phoneScreen} />
+                  {"mockupImage" in feature && feature.mockupImage ? (
+                    <Image
+                      src={feature.mockupImage}
+                      alt={t(feature.titleKey)}
+                      fill
+                      sizes="280px"
+                      className={styles.phoneScreenImage}
+                    />
+                  ) : (
+                    <div className={styles.phoneScreen} />
+                  )}
                 </PhoneMockup>
               )}
             </Flex>

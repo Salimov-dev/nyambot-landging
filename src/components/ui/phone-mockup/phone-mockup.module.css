@@ -29,13 +29,10 @@
   left: 3.2%;
   right: 3.2%;
   bottom: 1.6%;
-  z-index: 1;
-  background: var(--bg);
-  border-radius: 44px;
+  z-index: 3;
+  background: #0c1524;
+  border-radius: 18px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @keyframes float {
@@ -54,7 +51,7 @@
     height: 468px;
   }
   .screen {
-    border-radius: 36px;
+    border-radius: 16px;
   }
 }
 
@@ -64,6 +61,6 @@
     height: 408px;
   }
   .screen {
-    border-radius: 30px;
+    border-radius: 14px;
   }
 }

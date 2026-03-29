@@ -66,6 +66,11 @@
   background: var(--bg);
 }
 
+.phoneScreenImage {
+  object-fit: cover;
+  object-position: top;
+}
+
 .tgBtn {
   background: #27a1e8 !important;
   border-color: #27a1e8 !important;

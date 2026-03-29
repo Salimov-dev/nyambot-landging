@@ -9,6 +9,7 @@ export function MacBookFrame({ className }: { className?: string }) {
     <svg
       className={className}
       viewBox="0 0 640 390"
+      preserveAspectRatio="none"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
@@ -62,9 +63,14 @@ export function MacBookFrame({ className }: { className?: string }) {
           <stop offset="92%" stopColor="#555558" />
           <stop offset="100%" stopColor="transparent" />
         </linearGradient>
+        {/* Маска: белый = видимый, чёрный = дырка для экрана */}
+        <mask id="nbLidMask">
+          <rect x="40" y="0" width="560" height="350" rx="10" ry="10" fill="white" />
+          <rect x="44" y="4" width="552" height="342" rx="6" ry="6" fill="black" />
+        </mask>
       </defs>
 
-      {/* === КРЫШКА (экран) === */}
+      {/* === КРЫШКА (экран) с дыркой === */}
       <rect
         x="40"
         y="0"
@@ -75,6 +81,7 @@ export function MacBookFrame({ className }: { className?: string }) {
         fill="url(#nb-lidGrad)"
         stroke="url(#nb-lidEdge)"
         strokeWidth="1.2"
+        mask="url(#nbLidMask)"
       />
 
       {/* Подсветка грани */}
@@ -92,13 +99,13 @@ export function MacBookFrame({ className }: { className?: string }) {
 
       {/* Внутренний экран */}
       <rect
-        x="48"
-        y="8"
-        width="544"
-        height="334"
-        rx="5"
-        ry="5"
-        fill="#0f0f14"
+        x="43"
+        y="3"
+        width="554"
+        height="344"
+        rx="7"
+        ry="7"
+        fill="transparent"
         stroke="#333336"
         strokeWidth="0.5"
       />

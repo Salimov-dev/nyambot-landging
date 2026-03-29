@@ -2,6 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Button, Col, Flex, Row, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
@@ -113,7 +114,13 @@ export function TryDemoSection() {
                     }}
                   />
                   <PhoneMockup>
-                    <div className={styles.phoneScreen} />
+                    <Image
+                      src="/images/sections/demo_tg.png"
+                      alt="Telegram демо"
+                      fill
+                      sizes="280px"
+                      className={styles.phoneScreenImage}
+                    />
                   </PhoneMockup>
                 </div>
 
@@ -175,7 +182,13 @@ export function TryDemoSection() {
                     }}
                   />
                   <PhoneMockup>
-                    <div className={styles.phoneScreen} />
+                    <Image
+                      src="/images/sections/demo_max.png"
+                      alt="MAX демо"
+                      fill
+                      sizes="280px"
+                      className={styles.phoneScreenImage}
+                    />
                   </PhoneMockup>
                 </div>
 

@@ -46,6 +46,11 @@
   background: var(--bg);
 }
 
+.phoneScreenImage {
+  object-fit: cover;
+  object-position: top;
+}
+
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
   .inner { padding: 0 16px; }

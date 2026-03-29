@@ -12,7 +12,6 @@ export function IPhoneFrame({ className }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Тень корпуса */}
       <defs>
         <linearGradient
           id="bodyGrad"
@@ -57,8 +56,8 @@ export function IPhoneFrame({ className }: { className?: string }) {
         y="0.5"
         width="279"
         height="571"
-        rx="52"
-        ry="52"
+        rx="24"
+        ry="24"
         fill="url(#bodyGrad)"
         stroke="url(#bezelGrad)"
         strokeWidth="1"
@@ -70,8 +69,8 @@ export function IPhoneFrame({ className }: { className?: string }) {
         y="1.5"
         width="277"
         height="569"
-        rx="51"
-        ry="51"
+        rx="23"
+        ry="23"
         fill="none"
         stroke="url(#sideHighlight)"
         strokeWidth="0.5"
@@ -83,9 +82,9 @@ export function IPhoneFrame({ className }: { className?: string }) {
         y="8"
         width="264"
         height="556"
-        rx="44"
-        ry="44"
-        fill="#111113"
+        rx="18"
+        ry="18"
+        fill="transparent"
         stroke="#333336"
         strokeWidth="0.5"
       />

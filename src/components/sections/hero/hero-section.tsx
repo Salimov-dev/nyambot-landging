@@ -106,16 +106,13 @@ export function HeroSection() {
             <div className={styles.phoneWrapper}>
               <div className={styles.phoneGlow} />
               <PhoneMockup>
-                <div className={styles.phoneScreen}>
-                  {/* Заглушка — логотип. Заменить на <video> когда будет готово */}
-                  <Image
-                    src="/images/nyambot_logo.png"
-                    alt="Нямбот"
-                    width={80}
-                    height={80}
-                    className={styles.phoneLogo}
-                  />
-                </div>
+                <Image
+                  src="/images/sections/main.png"
+                  alt="Нямбот — мини-приложение"
+                  fill
+                  sizes="280px"
+                  className={styles.phoneScreenImage}
+                />
               </PhoneMockup>
             </div>
           </motion.div>

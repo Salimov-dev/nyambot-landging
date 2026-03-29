@@ -31,6 +31,12 @@
         "description": "Alıcılar mini-tətbiqi tanış messencerdə birbaşa açır",
         "points": ["Telegram-bot və MAX-bot — bir quraşdırma","Messencerlər arasında vahid müştəri bazası","SMS və parolsuz avtorizasiya","Statuslar haqqında real vaxtda bildirişlər"]
       },
+      "modernUI": {
+        "tag": "Şık dizayn",
+        "title": "Yenidən daxil olmaq istəyəcəyiniz mini-tətbiq",
+        "description": "Hər bir detala diqqət yetirən müasir interfeys. Alıcılar sadəcə kataloq deyil — güvəndikləri və istifadə etməkdən zövq aldıqları gözəl məhsul görürlər",
+        "points": ["Canlı animasiyalı nişanlar: «Yenilik», «Sərfəli», «Günün təklifi», endirimlər","Hər bir əməliyyatda hamar keçidlər və mikro-animasiyalar","Yarımşəffaf elementlər və glassmorphism effektləri","Adaptiv şəbəkə — istənilən ekranda mükəmməl görünür","Tünd tema — müasir və şık","Kəsmə və optimallaşdırma ilə yemək fotoları"]
+      },
       "noCommission": {
         "tag": "Sıfır komissiyalar",
         "title": "Aqreqatorlara 45%-ə qədər ödəməyi dayandırın",
@@ -43,11 +49,29 @@
         "description": "Menyu, sifarişlər, müştərilər, marketinq — hamısı vahid CRM-də",
         "points": ["Gəlir və sifarişlərlə dashboard","Menyu, stop-siyahılar, modifikatorların idarəsi","Tarix və seqmentasiyalı müştəri bazası","Marketinq: endirimlər, promokodlar, loyallıq"]
       },
+      "menuCustomization": {
+        "tag": "Çevik menyu",
+        "title": "Hər yemək — alıcının zövqünə uyğun",
+        "description": "Modifikatorlar, tərkib və inqrediyentlər — alıcı yeməyi mini-tətbiqdə özünə uyğun yığır. Siz hər şeyi CRM-də proqramçısız qurursunuz",
+        "points": [
+          "Modifikatorlar: diametr, əsas, həcm, kəskinlik — istənilən parametrlər",
+          "Qiymət yenidən hesablanması ilə inqrediyentlərin əlavəsi və silinməsi",
+          "Parlaq inqrediyent şəkillərinin hazır kolleksiyası",
+          "Modifikator qrupları: məcburi seçim və ya istəyə görə",
+          "Alıcı tərkibi görür və allergeni silə bilər"
+        ]
+      },
+      "comboBuilder": {
+        "tag": "Kombo və biznes-lançlar",
+        "title": "Kombo yığ — alıcı seçir, axtarmır",
+        "description": "Biznes-lançlar və kombo dəstləri mini-tətbiqdə çevik yığılma ilə. Alıcı kateqoriyalardan yeməkləri seçir, yekun qiyməti görür və bir neçə kliklə sifariş verir",
+        "points": ["Sabit kombo qiyməti — alıcı hər kateqoriyadan yemək seçir","Hər hansı kombo elementinin kartını açıb tərkibi, fotonu, təsviri görmək","Çevik qaydalar: məcburi və ixtiyari mövqelər","Cədvəl üzrə biznes-lançlar — avtomatik görünür və yox olur","Kombo səbətdə detallarla vahid element kimi görünür"]
+      },
       "crewAdmin": {
         "tag": "Crew — inzibatçı üçün",
         "title": "İnzibatçı heç bir sifarişi qaçırmaz",
         "description": "İnzibatçı üçün Crew tətbiqi — smartfondan sifarişlərin tam idarəsi. CRM açmadan qəbul edin, ləğv edin, kuryerlər təyin edin",
-        "points": ["Sifarişi qəbul etmək, ləğv etmək və müştəriyə pul qaytarmaq","Sifarişə kuryer təyin edir — o əlavə addımlar olmadan qəbul edir","Müştəri botda avtomatik bildiriş alır","Sifarişi və çatdırılma ünvanını xəritədə görür","Son 24 saat üçün sifarişlər tarixi","Alıcıya bir klikdə zəng","Yeni sifarişlər haqqında səs bildirişləri və vibrasiya"]
+        "points": ["Sifarişi qəbul etmək, ləğv etmək və müştəriyə pul qaytarmaq","Sifarişə kuryer təyin edir — o əlavə addımlar olmadan qəbul edir","Müştəri botda avtomatik bildiriş alır","Sifarişi və çatdırılma ünvanını xəritədə görür","Son 24 saat üçün sifarişlər tarixi","Alıcıya bir klikdə zəng","Hər statusun dəqiqəyə qədər qeydə alındığı tam sifariş tarixi — «Qəbul edildi»dən «Çatdırıldı» və ya «Gecikir»ə qədər"]
       },
       "crew": {
         "tag": "Crew — kuryer üçün",

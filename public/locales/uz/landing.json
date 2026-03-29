@@ -31,6 +31,12 @@
         "description": "Xaridorlar mini-ilovani to'g'ridan-to'g'ri tanish messenjerda ochadi",
         "points": ["Telegram-bot va MAX-bot — bitta sozlash","Messenjerlar o'rtasida yagona mijozlar bazasi","SMS va parolsiz avtorizatsiya","Real vaqtda holat haqida bildirishnomalar"]
       },
+      "modernUI": {
+        "tag": "Zamonaviy dizayn",
+        "title": "Qayta kirishni xohlaydigan mini-ilova",
+        "description": "Har bir detalga e'tibor qaratilgan zamonaviy interfeys. Xaridorlar shunchaki katalog emas — ishongan va foydalanishdan zavq oladigan chiroyli mahsulot ko'radilar",
+        "points": ["Yorqin animatsiyali nishonlar: «Yangilik», «Foydali», «Kunning taklifi», chegirmalar","Har bir harakatda silliq o'tishlar va mikro-animatsiyalar","Yarim tiniq elementlar va glassmorphism effektlari","Adaptiv tarmoq — har qanday ekranda mukammal ko'rinadi","Qorong'i tema — zamonaviy va zarafatli","Taomlarning suratlari kesish va optimallashtirish bilan"]
+      },
       "noCommission": {
         "tag": "Nol komissiyalar",
         "title": "Agregatorlarga 45% gacha to'lashni to'xtating",
@@ -43,11 +49,29 @@
         "description": "Menyu, buyurtmalar, mijozlar, marketing — hammasi yagona CRM da",
         "points": ["Daromad va buyurtmalar bilan dashboard","Menyu, stop-ro'yxatlar, modifikatorlarni boshqarish","Tarix va segmentatsiyali mijozlar bazasi","Marketing: chegirmalar, promokodlar, sodiqlik"]
       },
+      "menuCustomization": {
+        "tag": "Moslashuvchan menyu",
+        "title": "Har bir taom — xaridorning didiga",
+        "description": "Modifikatorlar, tarkib va ingredientlar — xaridor taomni mini-ilovada o'ziga moslashtiradi. Barchasini CRM-da dasturchilarsiz sozlaysiz",
+        "points": [
+          "Modifikatorlar: diametr, asos, hajm, achchiqlik — istalgan parametrlar",
+          "Narx qayta hisoblanishi bilan ingredientlarni qo'shish va olib tashlash",
+          "Yorqin ingredient rasmlarining tayyor to'plami",
+          "Modifikator guruhlari: majburiy tanlov yoki ixtiyoriy",
+          "Xaridor tarkibni ko'radi va allergenni olib tashlashi mumkin"
+        ]
+      },
+      "comboBuilder": {
+        "tag": "Kombo va biznes-lanchlar",
+        "title": "Kombo yig' — xaridor tanlaydi, qidirmaydi",
+        "description": "Biznes-lanchlar va kombo to'plamlari mini-ilovada moslashuvchan yig'ish bilan. Xaridor kategoriyalardan taomlarni tanlaydi, yakuniy narxni ko'radi va bir necha klikda buyurtma beradi",
+        "points": ["Kombo uchun belgilangan narx — xaridor har bir kategoriyadan taom tanlaydi","Har qanday kombo elementi kartasini ochib tarkibi, surati, tavsifini ko'rish","Moslashuvchan qoidalar: majburiy va ixtiyoriy pozitsiyalar","Jadval bo'yicha biznes-lanchlar — avtomatik paydo bo'ladi va yo'qoladi","Kombo savatda tafsilotlar bilan yagona element sifatida ko'rsatiladi"]
+      },
       "crewAdmin": {
         "tag": "Crew — administrator uchun",
         "title": "Administrator birorta buyurtmani o'tkazib yubormasin",
         "description": "Administrator uchun Crew ilovasi — smartfondan to'liq buyurtmalarni boshqarish. CRM ochmasdan qabul qiling, bekor qiling, kuryerlarni tayinlang",
-        "points": ["Buyurtmani qabul qilish, bekor qilish va xaridorga pul qaytarish","Kuryerni buyurtmaga tayinlaydi — u qo'shimcha harakatlarsiz qabul qiladi","Xaridor botda avtomatik bildirishnoma oladi","Buyurtma va yetkazib berish manzilini xaritada ko'radi","So'nggi 24 soat uchun buyurtmalar tarixi","Xaridorga bir bosish bilan qo'ng'iroq","Yangi buyurtmalar haqida tovushli bildirishnomalar va tebranish"]
+        "points": ["Buyurtmani qabul qilish, bekor qilish va xaridorga pul qaytarish","Kuryerni buyurtmaga tayinlaydi — u qo'shimcha harakatlarsiz qabul qiladi","Xaridor botda avtomatik bildirishnoma oladi","Buyurtma va yetkazib berish manzilini xaritada ko'radi","So'nggi 24 soat uchun buyurtmalar tarixi","Xaridorga bir bosish bilan qo'ng'iroq","Har bir holat daqiqagacha qayd etilgan to'liq buyurtma tarixi — «Qabul qilindi»dan «Yetkazildi» yoki «Kechikmoqda»gacha"]
       },
       "crew": {
         "tag": "Crew — kuryer uchun",

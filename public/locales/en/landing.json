@@ -36,6 +36,19 @@
           "Real-time order status notifications"
         ]
       },
+      "modernUI": {
+        "tag": "Stylish design",
+        "title": "A mini-app customers want to come back to",
+        "description": "Modern interface with attention to every detail. Customers see not just a catalog — but a beautiful product they trust and enjoy using",
+        "points": [
+          "Vivid animated badges: «New», «Best deal», «Daily offer», discounts",
+          "Smooth transitions and micro-animations on every action",
+          "Semi-transparent elements and glassmorphism effects",
+          "Adaptive grid — looks perfect on any screen",
+          "Dark theme out of the box — modern and sleek",
+          "Dish photos with cropping and optimization"
+        ]
+      },
       "noCommission": {
         "tag": "Zero commissions",
         "title": "Stop paying up to 45% to aggregators",
@@ -58,6 +71,30 @@
           "Marketing: discounts, promo codes, loyalty"
         ]
       },
+      "menuCustomization": {
+        "tag": "Flexible menu",
+        "title": "Every dish — tailored to the customer",
+        "description": "Modifiers, ingredients and composition — customers build their dish right in the mini-app. You configure everything in CRM without developers",
+        "points": [
+          "Modifiers: diameter, base, volume, spiciness — any parameters",
+          "Add and remove ingredients with automatic price recalculation",
+          "Built-in collection of vibrant ingredient images",
+          "Modifier groups: required choice or optional",
+          "Customer sees the composition and can remove allergens"
+        ]
+      },
+      "comboBuilder": {
+        "tag": "Combos & business lunches",
+        "title": "Build a combo — the customer chooses, not searches",
+        "description": "Business lunches and combo sets with flexible assembly right in the mini-app. Customer picks dishes from categories, sees the total price and places an order in a few clicks",
+        "points": [
+          "Fixed combo price — customer picks dishes from each category",
+          "Open any combo item card to see ingredients, photo, description",
+          "Flexible rules: required and optional positions",
+          "Business lunches on schedule — appear and disappear automatically",
+          "Combo shows in cart as a single item with details"
+        ]
+      },
       "crewAdmin": {
         "tag": "Crew — for admin",
         "title": "Admin never misses an order",
@@ -69,7 +106,7 @@
           "Sees order and delivery address on the map",
           "Order history for the last 24 hours",
           "Call customer in one tap",
-          "Sound notifications and vibration for new orders"
+          "Full order history with every status logged to the minute — from «Accepted» to «Delivered» or «Delayed»"
         ]
       },
       "crew": {

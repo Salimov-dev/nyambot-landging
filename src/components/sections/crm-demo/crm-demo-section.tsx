@@ -2,6 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Button, Col, Flex, Row, Tag, Typography } from "antd";
 import { NotebookMockup } from "@/components/ui/notebook-mockup/notebook-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
@@ -160,25 +161,13 @@ export function CrmDemoSection() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
             >
               <NotebookMockup>
-                <div className={styles.notebookScreen}>
-                  <Flex
-                    vertical
-                    align="center"
-                    justify="center"
-                    style={{ height: "100%", gap: 12, padding: 24 }}
-                  >
-                    <Text style={{ fontSize: 48 }}>📊</Text>
-                    <Text
-                      style={{
-                        color: theme.colors.textSecondary,
-                        fontSize: 14,
-                        textAlign: "center",
-                      }}
-                    >
-                      {t("crmDemo.screenPlaceholder")}
-                    </Text>
-                  </Flex>
-                </div>
+                <Image
+                  src="/images/sections/crm_final.png"
+                  alt="CRM Нямбот"
+                  fill
+                  sizes="640px"
+                  className={styles.notebookScreenImage}
+                />
               </NotebookMockup>
             </motion.div>
           </Col>

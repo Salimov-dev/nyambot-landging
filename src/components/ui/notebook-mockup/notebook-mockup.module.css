@@ -9,8 +9,8 @@
   position: relative;
   width: 100%;
   max-width: 640px;
-  /* Соотношение MacBook ≈ 16:10.4 с клавиатурой */
-  aspect-ratio: 640 / 380;
+  /* Соотношение совпадает с viewBox SVG 640×390 */
+  aspect-ratio: 680 / 390;
   filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.65))
     drop-shadow(0 4px 16px rgba(255, 140, 0, 0.08));
 }
@@ -24,20 +24,16 @@
   pointer-events: none;
 }
 
-/* Экран — внутренняя зона для контента / видео */
+/* Экран — внутренняя зона для контента / видео
+   Координаты точно по маске SVG: x=44 y=4 w=552 h=342 из viewBox 640×390 */
 .screen {
   position: absolute;
-  top: 2.3%;
-  left: 7.8%;
-  right: 7.8%;
-  bottom: 8.8%;
+  top: 1.026%;    /* 4/390 */
+  left: 6.875%;   /* 44/640 */
+  right: 6.875%;  /* 44/640 */
+  bottom: 11.282%; /* 44/390 */
   z-index: 1;
-  background: #0f0f14;
-  border-radius: 5px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (max-width: 900px) {
