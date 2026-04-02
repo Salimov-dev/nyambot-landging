@@ -82,7 +82,7 @@ export function Footer() {
                 href={LINKS.support.max}
                 target="_blank"
                 className={styles.footerLink}
-                onClick={() => reachGoal("click_max_demo")}
+                onClick={() => reachGoal("click_max_support")}
               >
                 {t("footer.max")}
               </Link>
@@ -130,7 +130,7 @@ export function Footer() {
               © {year} {BRAND_CONFIG.name}. {t("footer.allRights")}
             </Text>
             <Text style={{ color: theme.colors.textMuted, fontSize: 12 }}>
-              ИП Салимов Р.А., ИНН 183401217970
+              ИП Салимов Р.А., ОГРНИП 326470400046473
             </Text>
           </Flex>
           <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>

@@ -8,6 +8,7 @@ import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { NotebookMockup } from "@/components/ui/notebook-mockup/notebook-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { theme } from "@/config/theme";
+import { LINKS } from "@/config/links.config";
 import styles from "./features-section.module.css";
 
 const { Title, Text } = Typography;
@@ -118,6 +119,8 @@ const FEATURES = [
     titleKey: "features.items.marketing.title",
     descriptionKey: "features.items.marketing.description",
     pointsKey: "features.items.marketing.points",
+    linkUrl: `${LINKS.docs}/promotions-examples`,
+    linkLabelKey: "features.items.marketing.linkLabel",
     icon: "🎯",
     accentColor: "#14c4a2",
     mockupType: "phone" as "phone" | "notebook",
@@ -276,6 +279,34 @@ function FeatureBlock({
                   ))}
                 </Flex>
               )}
+
+              {"linkUrl" in feature &&
+                "linkLabelKey" in feature &&
+                feature.linkUrl &&
+                feature.linkLabelKey && (
+                  <a
+                    href={feature.linkUrl as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      marginTop: 4,
+                      padding: "8px 16px",
+                      borderRadius: 8,
+                      backgroundColor: `${feature.accentColor}14`,
+                      color: feature.accentColor,
+                      fontSize: 14,
+                      fontWeight: 500,
+                      textDecoration: "none",
+                      transition: "background-color 0.2s",
+                      width: "fit-content",
+                    }}
+                  >
+                    {t(feature.linkLabelKey as string)} →
+                  </a>
+                )}
             </Flex>
           </motion.div>
         </Col>

@@ -16,6 +16,7 @@ export type MetrikaGoal =
   | "click_tg_support"
   | "click_tg_bot"
   | "click_max_demo"
+  | "click_max_support"
   | "registration"
   | "first_order"
   | "payment";

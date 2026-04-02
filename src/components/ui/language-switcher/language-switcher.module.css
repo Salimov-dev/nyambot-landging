@@ -10,7 +10,9 @@
   border: 1px solid var(--border) !important;
   border-radius: var(--radius-sm) !important;
   height: auto !important;
-  transition: background 0.2s ease, border-color 0.2s ease !important;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease !important;
 }
 
 .trigger:hover {

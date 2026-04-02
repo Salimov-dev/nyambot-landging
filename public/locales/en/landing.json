@@ -136,10 +136,12 @@
         "tag": "Marketing",
         "title": "Tools to grow your sales",
         "description": "Retain customers with flexible promotions, promo codes and loyalty program. Applied to one or multiple locations",
+        "linkLabel": "35 ready-to-use promotion ideas",
         "points": [
-          "Discounts and gifts with conditions",
+          "Discounts and gifts based on cart conditions",
           "Promo codes with any restrictions",
           "Loyalty points: earn and redeem",
+          "Free item for purchasing N items from a category",
           "Works across all messengers simultaneously"
         ]
       },

@@ -14,9 +14,17 @@ import styles from "./header.module.css";
 const { Text } = Typography;
 
 const NAV_ITEMS = [
-  { labelKey: "nav.features", href: "#features", goal: "scroll_features" as MetrikaGoal },
+  {
+    labelKey: "nav.features",
+    href: "#features",
+    goal: "scroll_features" as MetrikaGoal,
+  },
   { labelKey: "nav.howItWorks", href: "#how-it-works", goal: null },
-  { labelKey: "nav.pricing", href: "#pricing", goal: "scroll_pricing" as MetrikaGoal },
+  {
+    labelKey: "nav.pricing",
+    href: "#pricing",
+    goal: "scroll_pricing" as MetrikaGoal,
+  },
   { labelKey: "nav.faq", href: "#faq", goal: null },
 ] as const;
 

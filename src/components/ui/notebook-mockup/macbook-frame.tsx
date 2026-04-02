@@ -65,8 +65,24 @@ export function MacBookFrame({ className }: { className?: string }) {
         </linearGradient>
         {/* Маска: белый = видимый, чёрный = дырка для экрана */}
         <mask id="nbLidMask">
-          <rect x="40" y="0" width="560" height="350" rx="10" ry="10" fill="white" />
-          <rect x="44" y="4" width="552" height="342" rx="6" ry="6" fill="black" />
+          <rect
+            x="40"
+            y="0"
+            width="560"
+            height="350"
+            rx="10"
+            ry="10"
+            fill="white"
+          />
+          <rect
+            x="44"
+            y="4"
+            width="552"
+            height="342"
+            rx="6"
+            ry="6"
+            fill="black"
+          />
         </mask>
       </defs>
 
@@ -121,7 +137,14 @@ export function MacBookFrame({ className }: { className?: string }) {
         stroke="url(#nb-lidEdge)"
         strokeWidth="0.5"
       />
-      <rect x="298" y="4" width="44" height="8" rx="4" fill="url(#nb-lidGrad)" />
+      <rect
+        x="298"
+        y="4"
+        width="44"
+        height="8"
+        rx="4"
+        fill="url(#nb-lidGrad)"
+      />
       <circle cx="320" cy="4.5" r="2" fill="#1a1a1d" />
       <circle cx="320" cy="4.5" r="1.2" fill="#0d1117" />
       <circle cx="320" cy="4.5" r="0.6" fill="#2d5a3f" opacity="0.5" />

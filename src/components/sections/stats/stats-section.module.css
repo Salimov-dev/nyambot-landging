@@ -17,7 +17,9 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   text-align: center;
-  transition: border-color 0.25s ease, background 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 .statCard:hover {
@@ -26,6 +28,10 @@
 }
 
 @media (max-width: 480px) {
-  .section { padding: 32px 0; }
-  .inner { padding: 0 16px; }
+  .section {
+    padding: 32px 0;
+  }
+  .inner {
+    padding: 0 16px;
+  }
 }

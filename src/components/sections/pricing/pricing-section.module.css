@@ -22,7 +22,9 @@
   border: 1px solid var(--border) !important;
   border-radius: var(--radius-xl) !important;
   height: 100%;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease !important;
 }
 
 .card:hover {
@@ -120,8 +122,16 @@
 }
 
 @media (max-width: 768px) {
-  .section { padding: 64px 0; }
-  .inner { padding: 0 16px; }
-  .header { margin-bottom: 40px; }
-  .includes { padding: 20px 16px; }
+  .section {
+    padding: 64px 0;
+  }
+  .inner {
+    padding: 0 16px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+  .includes {
+    padding: 20px 16px;
+  }
 }

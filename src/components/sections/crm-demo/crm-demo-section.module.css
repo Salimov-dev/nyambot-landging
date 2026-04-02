@@ -12,7 +12,11 @@
   transform: translateY(-50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 140, 0, 0.06) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 140, 0, 0.06) 0%,
+    transparent 70%
+  );
   pointer-events: none;
   border-radius: 50%;
 }
@@ -66,7 +70,14 @@
 }
 
 @media (max-width: 768px) {
-  .section { padding: 64px 0; }
-  .inner { padding: 0 16px; }
-  .featureGrid { grid-template-columns: 1fr; gap: 8px; }
+  .section {
+    padding: 64px 0;
+  }
+  .inner {
+    padding: 0 16px;
+  }
+  .featureGrid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }

@@ -38,18 +38,42 @@
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #ff8c00, #ff6b00);
-  --gradient-page: linear-gradient(160deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-  --gradient-hero: linear-gradient(160deg, #050505 0%, #0f0f1a 40%, #1a1a2e 100%);
-  --gradient-glow: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 140, 0, 0.12) 0%, transparent 60%);
-  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-  --gradient-card-accent: linear-gradient(135deg, rgba(255, 140, 0, 0.12) 0%, rgba(255, 140, 0, 0.04) 100%);
+  --gradient-page: linear-gradient(
+    160deg,
+    #0a0a0a 0%,
+    #1a1a2e 50%,
+    #16213e 100%
+  );
+  --gradient-hero: linear-gradient(
+    160deg,
+    #050505 0%,
+    #0f0f1a 40%,
+    #1a1a2e 100%
+  );
+  --gradient-glow: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(255, 140, 0, 0.12) 0%,
+    transparent 60%
+  );
+  --gradient-card: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  --gradient-card-accent: linear-gradient(
+    135deg,
+    rgba(255, 140, 0, 0.12) 0%,
+    rgba(255, 140, 0, 0.04) 100%
+  );
   --gradient-footer: linear-gradient(180deg, #0a0a10 0%, #050505 100%);
 
   /* Shadows */
   --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.2);
-  --shadow-button: 0 4px 20px rgba(255, 140, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.2);
+  --shadow-button:
+    0 4px 20px rgba(255, 140, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.2);
   --shadow-glow: 0 0 60px rgba(255, 140, 0, 0.15);
-  --shadow-phone: 0 32px 80px rgba(0, 0, 0, 0.6), 0 8px 32px rgba(255, 140, 0, 0.1);
+  --shadow-phone:
+    0 32px 80px rgba(0, 0, 0, 0.6), 0 8px 32px rgba(255, 140, 0, 0.1);
 
   /* Blur */
   --blur-header: blur(20px) saturate(1.4);
@@ -78,7 +102,11 @@ html {
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-geist-sans),
+    system-ui,
+    -apple-system,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -119,7 +147,9 @@ a {
 }
 
 .ant-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease !important;
 }
 
 .ant-card:hover {
@@ -149,7 +179,11 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--accent) 0%,
+    var(--accent-dark) 100%
+  );
   border-radius: var(--radius-pill);
 }
 

@@ -19,7 +19,10 @@
     "commission": { "value": "0%", "label": "Hər sifarişdən komissiya" },
     "messengers": { "value": "2", "label": "Messencer: Telegram və MAX" },
     "trial": { "value": "7", "label": "Pulsuz dövrün günləri" },
-    "savings": { "value": "45%-ə qədər", "label": "Aqreqatorlara nisbətən qənaət" }
+    "savings": {
+      "value": "45%-ə qədər",
+      "label": "Aqreqatorlara nisbətən qənaət"
+    }
   },
   "features": {
     "label": "İmkanlar",
@@ -29,25 +32,47 @@
         "tag": "Telegram + MAX",
         "title": "Telegram və MAX-ı eyni anda dəstəkləyən ilk xidmət",
         "description": "Alıcılar mini-tətbiqi tanış messencerdə birbaşa açır",
-        "points": ["Telegram-bot və MAX-bot — bir quraşdırma","Messencerlər arasında vahid müştəri bazası","SMS və parolsuz avtorizasiya","Statuslar haqqında real vaxtda bildirişlər"]
+        "points": [
+          "Telegram-bot və MAX-bot — bir quraşdırma",
+          "Messencerlər arasında vahid müştəri bazası",
+          "SMS və parolsuz avtorizasiya",
+          "Statuslar haqqında real vaxtda bildirişlər"
+        ]
       },
       "modernUI": {
         "tag": "Şık dizayn",
         "title": "Yenidən daxil olmaq istəyəcəyiniz mini-tətbiq",
         "description": "Hər bir detala diqqət yetirən müasir interfeys. Alıcılar sadəcə kataloq deyil — güvəndikləri və istifadə etməkdən zövq aldıqları gözəl məhsul görürlər",
-        "points": ["Canlı animasiyalı nişanlar: «Yenilik», «Sərfəli», «Günün təklifi», endirimlər","Hər bir əməliyyatda hamar keçidlər və mikro-animasiyalar","Yarımşəffaf elementlər və glassmorphism effektləri","Adaptiv şəbəkə — istənilən ekranda mükəmməl görünür","Tünd tema — müasir və şık","Kəsmə və optimallaşdırma ilə yemək fotoları"]
+        "points": [
+          "Canlı animasiyalı nişanlar: «Yenilik», «Sərfəli», «Günün təklifi», endirimlər",
+          "Hər bir əməliyyatda hamar keçidlər və mikro-animasiyalar",
+          "Yarımşəffaf elementlər və glassmorphism effektləri",
+          "Adaptiv şəbəkə — istənilən ekranda mükəmməl görünür",
+          "Tünd tema — müasir və şık",
+          "Kəsmə və optimallaşdırma ilə yemək fotoları"
+        ]
       },
       "noCommission": {
         "tag": "Sıfır komissiyalar",
         "title": "Aqreqatorlara 45%-ə qədər ödəməyi dayandırın",
         "description": "Yandeks.Yeda hər sifarişdən 20–45% alır. Nyambot — sabit tarif",
-        "points": ["Hər sifarişdən 0% komissiya","Sabit aylıq ödəniş","Müştəriləriniz — sizin verilənlər bazanız","Qiymətlər və aksiyalar üzərində tam nəzarət"]
+        "points": [
+          "Hər sifarişdən 0% komissiya",
+          "Sabit aylıq ödəniş",
+          "Müştəriləriniz — sizin verilənlər bazanız",
+          "Qiymətlər və aksiyalar üzərində tam nəzarət"
+        ]
       },
       "crm": {
         "tag": "CRM və analitika",
         "title": "Hər şeyi bir kabinetdən idarə edin",
         "description": "Menyu, sifarişlər, müştərilər, marketinq — hamısı vahid CRM-də",
-        "points": ["Gəlir və sifarişlərlə dashboard","Menyu, stop-siyahılar, modifikatorların idarəsi","Tarix və seqmentasiyalı müştəri bazası","Marketinq: endirimlər, promokodlar, loyallıq"]
+        "points": [
+          "Gəlir və sifarişlərlə dashboard",
+          "Menyu, stop-siyahılar, modifikatorların idarəsi",
+          "Tarix və seqmentasiyalı müştəri bazası",
+          "Marketinq: endirimlər, promokodlar, loyallıq"
+        ]
       },
       "menuCustomization": {
         "tag": "Çevik menyu",
@@ -65,61 +90,120 @@
         "tag": "Kombo və biznes-lançlar",
         "title": "Kombo yığ — alıcı seçir, axtarmır",
         "description": "Biznes-lançlar və kombo dəstləri mini-tətbiqdə çevik yığılma ilə. Alıcı kateqoriyalardan yeməkləri seçir, yekun qiyməti görür və bir neçə kliklə sifariş verir",
-        "points": ["Sabit kombo qiyməti — alıcı hər kateqoriyadan yemək seçir","Hər hansı kombo elementinin kartını açıb tərkibi, fotonu, təsviri görmək","Çevik qaydalar: məcburi və ixtiyari mövqelər","Cədvəl üzrə biznes-lançlar — avtomatik görünür və yox olur","Kombo səbətdə detallarla vahid element kimi görünür"]
+        "points": [
+          "Sabit kombo qiyməti — alıcı hər kateqoriyadan yemək seçir",
+          "Hər hansı kombo elementinin kartını açıb tərkibi, fotonu, təsviri görmək",
+          "Çevik qaydalar: məcburi və ixtiyari mövqelər",
+          "Cədvəl üzrə biznes-lançlar — avtomatik görünür və yox olur",
+          "Kombo səbətdə detallarla vahid element kimi görünür"
+        ]
       },
       "crewAdmin": {
         "tag": "Crew — inzibatçı üçün",
         "title": "İnzibatçı heç bir sifarişi qaçırmaz",
         "description": "İnzibatçı üçün Crew tətbiqi — smartfondan sifarişlərin tam idarəsi. CRM açmadan qəbul edin, ləğv edin, kuryerlər təyin edin",
-        "points": ["Sifarişi qəbul etmək, ləğv etmək və müştəriyə pul qaytarmaq","Sifarişə kuryer təyin edir — o əlavə addımlar olmadan qəbul edir","Müştəri botda avtomatik bildiriş alır","Sifarişi və çatdırılma ünvanını xəritədə görür","Son 24 saat üçün sifarişlər tarixi","Alıcıya bir klikdə zəng","Hər statusun dəqiqəyə qədər qeydə alındığı tam sifariş tarixi — «Qəbul edildi»dən «Çatdırıldı» və ya «Gecikir»ə qədər"]
+        "points": [
+          "Sifarişi qəbul etmək, ləğv etmək və müştəriyə pul qaytarmaq",
+          "Sifarişə kuryer təyin edir — o əlavə addımlar olmadan qəbul edir",
+          "Müştəri botda avtomatik bildiriş alır",
+          "Sifarişi və çatdırılma ünvanını xəritədə görür",
+          "Son 24 saat üçün sifarişlər tarixi",
+          "Alıcıya bir klikdə zəng",
+          "Hər statusun dəqiqəyə qədər qeydə alındığı tam sifariş tarixi — «Qəbul edildi»dən «Çatdırıldı» və ya «Gecikir»ə qədər"
+        ]
       },
       "crew": {
         "tag": "Crew — kuryer üçün",
         "title": "Kuryer sifarişi alır və hara getməli olduğunu bilir",
         "description": "Kuryer üçün Crew tətbiqi — çatdırılma üçün lazım olan hər şey bir ekranda: tapşırıqlar, xəritədə ünvan, müştəri kontaktı və bildirişlər",
-        "points": ["İnzibatçının təyin etdiyi sifarişi alır","Sifarişi və çatdırılma ünvanını xəritədə görür","Tətbiqdən müştəriyə gecikdirmə barədə xəbər vermək","Alıcıya bir klikdə zəng","Sifarişi çatdırılmış kimi qeyd etmək","Yeni sifarişlər haqqında səs bildirişləri və vibrasiya"]
+        "points": [
+          "İnzibatçının təyin etdiyi sifarişi alır",
+          "Sifarişi və çatdırılma ünvanını xəritədə görür",
+          "Tətbiqdən müştəriyə gecikdirmə barədə xəbər vermək",
+          "Alıcıya bir klikdə zəng",
+          "Sifarişi çatdırılmış kimi qeyd etmək",
+          "Yeni sifarişlər haqqında səs bildirişləri və vibrasiya"
+        ]
       },
       "payment": {
         "tag": "Ödəniş",
         "title": "Hər rahat üsulla çevik ödəniş",
         "description": "Nağd, çatdırılmada kart və ya YuKassa vasitəsilə onlayn ödəniş — müştəri özü seçir",
-        "points": ["Nağd — kuryer hazır olsun deyə sifarişdə üstü göstərin","Çatdırılmada kuryerə kart ilə","Onlayn: YuMoney, Mir Pay, SberPay, T-Pay, СБП"]
+        "points": [
+          "Nağd — kuryer hazır olsun deyə sifarişdə üstü göstərin",
+          "Çatdırılmada kuryerə kart ilə",
+          "Onlayn: YuMoney, Mir Pay, SberPay, T-Pay, СБП"
+        ]
       },
       "marketing": {
         "tag": "Marketinq",
         "title": "Satışları artırmaq üçün alətlər",
-        "description": "Çevik aksiyalar, promokodlar və loyallıq proqramı ilə müştəriləri saxlayın",
-        "points": ["Şərtlərə görə endirimlər və hədiyyələr","İstənilən məhdudiyyətlərlə promokodlar","Loyallıq xalları: yığma və xərcləmə","Bütün messengerlərdə eyni anda işləyir"]
+        "description": "Çevik aksiyalar, promokodlar və loyallıq proqramı ilə müştəriləri saxlayın. Bir və ya bir neçə ticarət nöqtəsinə tətbiq edilir",
+        "linkLabel": "Aksiyalar üçün 35 hazır ideya",
+        "points": [
+          "Səbət şərtlərinə görə endirimlər və hədiyyələr",
+          "İstənilən məhdudiyyətlərlə promokodlar",
+          "Loyallıq xalları: yığma və xərcləmə",
+          "Kateqoriyadan N məhsul aldığına görə hədiyyə",
+          "Bütün messengerlərdə eyni anda işləyir"
+        ]
       },
       "scheduledSending": {
         "tag": "Göndərişlər və günlük təkliflər",
         "title": "Cədvəl üzrə günlük təklif — Telegram və MAX-da",
         "description": "Marketinq göndərişlərini əvvəlcədən planlaşdırın. Günlük təklif Telegram və MAX abunəçilərinə avtomatik olaraq lazımi vaxtda göndərilir — əl ilə iş olmadan",
-        "points": ["Günlük təklif: Telegram və MAX-a avtogöndərmə","CRM-də aksiyaların vizual təqvimi","Göndərişləri həftələr əvvəlcədən planlaşdırın","Bütün abunəçilərə əl ilə müdaxilə olmadan çatın"]
+        "points": [
+          "Günlük təklif: Telegram və MAX-a avtogöndərmə",
+          "CRM-də aksiyaların vizual təqvimi",
+          "Göndərişləri həftələr əvvəlcədən planlaşdırın",
+          "Bütün abunəçilərə əl ilə müdaxilə olmadan çatın"
+        ]
       },
       "languages": {
         "tag": "7 interfeys dili",
         "title": "Bütün xidmət sizin diliниздə danışır",
         "description": "Nyambot — bu sahədə hər səviyyədə 7 dili dəstəkləyən yeganə xidmətdir: alıcı mini-tətbiqdə menyunu görür, sahib CRM-də işləyir, admin sifarişləri idarə edir, kuryer tapşırıq alır — hər biri öz dilində",
-        "points": ["Mini-tətbiq: alıcının dilində menyu və sifarişlər","CRM: sahib və admin interfeysi","Crew: kuryer üçün tapşırıqlar","7 dil: RU, EN, UZ, BE, TG, KY, AZ"]
+        "points": [
+          "Mini-tətbiq: alıcının dilində menyu və sifarişlər",
+          "CRM: sahib və admin interfeysi",
+          "Crew: kuryer üçün tapşırıqlar",
+          "7 dil: RU, EN, UZ, BE, TG, KY, AZ"
+        ]
       },
       "selfService": {
         "tag": "Tam müstəqillik",
         "title": "Menecerlər olmadan işə salın və idarə edin",
         "description": "Hər şey CRM vasitəsilə müstəqil şəkildə konfiqurasiya edilir — işə salındığı andan istənilən vaxt. Yemək əlavə etmək, qiymət dəyişdirmək və ya çatdırılma zonalarını qurmaq üçün dəstəyə yazmağa ehtiyac yoxdur",
-        "points": ["Menyu: mövqeləri özünüz əlavə edin, redaktə edin","Çatdırılma zonaları — xəritədə özünüz çəkin","Aksiyalar, promokodlar, stop-siyahılar — proqramçısız","Yeni botu 10 dəqiqədə qoşun","Sənədlər: sıfırdan ilk sifarişə addım-addım bələdçi","CRM-dəki AI-köməkçi — istənilən suala ani kömək, dəstəyə müraciət etmədən"]
+        "points": [
+          "Menyu: mövqeləri özünüz əlavə edin, redaktə edin",
+          "Çatdırılma zonaları — xəritədə özünüz çəkin",
+          "Aksiyalar, promokodlar, stop-siyahılar — proqramçısız",
+          "Yeni botu 10 dəqiqədə qoşun",
+          "Sənədlər: sıfırdan ilk sifarişə addım-addım bələdçi",
+          "CRM-dəki AI-köməkçi — istənilən suala ani kömək, dəstəyə müraciət etmədən"
+        ]
       },
       "aiCrm": {
         "tag": "AI CRM-də",
         "title": "Restoran sahibi üçün AI-köməkçi",
         "description": "CRM-dəki AI-köməkçi sahibə sistemi başa düşməyə və hər şeyi müstəqil şəkildə qurmağa kömək edir — menecerlər və dəstək xidməti olmadan",
-        "points": ["Menyu, aksiyalar və çatdırılmanı necə quracağını izah edir","Analitika və hesabatları başa düşməyə kömək edir","CRM-də iş haqqında istənilən suallara cavab verir","7 dildə işləyir"]
+        "points": [
+          "Menyu, aksiyalar və çatdırılmanı necə quracağını izah edir",
+          "Analitika və hesabatları başa düşməyə kömək edir",
+          "CRM-də iş haqqında istənilən suallara cavab verir",
+          "7 dildə işləyir"
+        ]
       },
       "aiSearch": {
         "tag": "AI axtarış",
         "title": "Müştərilər üçün ağıllı AI-menyu axtarışı",
         "description": "Süni intellekt təbii dil sorğularını başa düşür — müştərilər yeməkləri dad, tərkib və ya təsvir əsasında uzun menyunu sürüşdürmədən tapır",
-        "points": ["AI təbii dil sorğularını başa düşür","Dad, tərkib və yemək təsvirinə görə axtarış","Sözlərin dəqiq uyğunluğu olmadan işləyir","7 interfeys dilini dəstəkləyir"]
+        "points": [
+          "AI təbii dil sorğularını başa düşür",
+          "Dad, tərkib və yemək təsvirinə görə axtarış",
+          "Sözlərin dəqiq uyğunluğu olmadan işləyir",
+          "7 interfeys dilini dəstəkləyir"
+        ]
       }
     }
   },
@@ -158,24 +242,73 @@
     "title": "Botun yaradılmasından ilk sifarişə qədər — bir gün",
     "subtitle": "Heç bir uzun müddətli işlənmə yoxdur. Hər şey proqramçısız CRM vasitəsilə qurulur",
     "steps": [
-      {"title": "Bot yaradın","description": "@BotFather vasitəsilə Telegram-bot və ya MAX-bot yaradın. 10 dəqiqə vaxt apararır"},
-      {"title": "CRM-də qurun","description": "Bot tokenini daxil edin, menyu əlavə edin və YuKassa vasitəsilə ödənişi qurun"},
-      {"title": "Müştərilərə link verin","description": "Linki sosial şəbəkələrdə və ya müəssisədəki QR-kodda yerləşdirin"},
-      {"title": "Sifarişlər qəbul edin","description": "Sifarişlər CRM-ə gəlir. Kuryer tapşırıq alır, alıcı — bildirişlər"}
+      {
+        "title": "Bot yaradın",
+        "description": "@BotFather vasitəsilə Telegram-bot və ya MAX-bot yaradın. 10 dəqiqə vaxt apararır"
+      },
+      {
+        "title": "CRM-də qurun",
+        "description": "Bot tokenini daxil edin, menyu əlavə edin və YuKassa vasitəsilə ödənişi qurun"
+      },
+      {
+        "title": "Müştərilərə link verin",
+        "description": "Linki sosial şəbəkələrdə və ya müəssisədəki QR-kodda yerləşdirin"
+      },
+      {
+        "title": "Sifarişlər qəbul edin",
+        "description": "Sifarişlər CRM-ə gəlir. Kuryer tapşırıq alır, alıcı — bildirişlər"
+      }
     ]
   },
   "comparison": {
-    "label": "Müqayisə","title": "Nyambot vs rəqiblər","subtitle": "Bot xidmətləri və aqreqatorlarla müqayisə edin — və hər sifarişdən 45%-ə qədər geri qaytarın",
-    "featureCol": "Parametr","botServicesCol": "Digər bot xidmətlər","othersCol": "Delivery Club","ourChoice": "Bizim seçim",
-    "full": "Tam","partial": "Qismən","fixed": "Sabit","fixedOrPercent": "Sabit və ya %","fromRevenue": "% sifarişdən",
-    "rows": {"commission": "Komissiya","markup": "Mallara qiymət əlavəsi","messengers": "Messencerlər","clients": "Sizin müştəri bazanız","crm": "CRM və analitika","crew": "Kuryer tətbiqi","adminApp": "Administrator tətbiqi","loyalty": "Loyallıq proqramı","marketing": "Aksiyalar və promokodlar","marketingAuto": "Marketinq avtomatlaşdırması","aiAssistant": "AI köməkçilər","languages": "İnterfeys dilləri","branding": "Brendinq","price": "Ödəniş modeli"}
+    "label": "Müqayisə",
+    "title": "Nyambot vs rəqiblər",
+    "subtitle": "Bot xidmətləri və aqreqatorlarla müqayisə edin — və hər sifarişdən 45%-ə qədər geri qaytarın",
+    "featureCol": "Parametr",
+    "botServicesCol": "Digər bot xidmətlər",
+    "othersCol": "Delivery Club",
+    "ourChoice": "Bizim seçim",
+    "full": "Tam",
+    "partial": "Qismən",
+    "fixed": "Sabit",
+    "fixedOrPercent": "Sabit və ya %",
+    "fromRevenue": "% sifarişdən",
+    "rows": {
+      "commission": "Komissiya",
+      "markup": "Mallara qiymət əlavəsi",
+      "messengers": "Messencerlər",
+      "clients": "Sizin müştəri bazanız",
+      "crm": "CRM və analitika",
+      "crew": "Kuryer tətbiqi",
+      "adminApp": "Administrator tətbiqi",
+      "loyalty": "Loyallıq proqramı",
+      "marketing": "Aksiyalar və promokodlar",
+      "marketingAuto": "Marketinq avtomatlaşdırması",
+      "aiAssistant": "AI köməkçilər",
+      "languages": "İnterfeys dilləri",
+      "branding": "Brendinq",
+      "price": "Ödəniş modeli"
+    }
   },
   "pricing": {
-    "label": "Tariflər","title": "Gizli komissiyasız şəffaf qiymətlər","subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
-    "popular": "Sərfəli","perMonth": "aylıq","totalBilled": "{{total}} silinir",
-    "months": {"1": "1 ay","3": "3 ay","6": "6 ay","12": "12 ay"},
-    "cta": "Qoşul","included": "İstənilən tarifə nə daxildir",
-    "includedItems": ["Telegram + MAX botlar","CRM və analitika","Crew-tətbiqi","Loyallıq proqramı","Promokodlar və endirimlər","YuKassa","Dəstək"],
+    "label": "Tariflər",
+    "title": "Gizli komissiyasız şəffaf qiymətlər",
+    "subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
+    "popular": "Sərfəli",
+    "perMonth": "aylıq",
+    "totalBilled": "{{total}} silinir",
+    "months": { "1": "1 ay", "3": "3 ay", "6": "6 ay", "12": "12 ay" },
+    "cta": "Qoşul",
+    "included": "İstənilən tarifə nə daxildir",
+    "includedItems": [
+      "Telegram + MAX botlar",
+      "CRM və analitika",
+      "Crew-tətbiqi",
+      "Loyallıq proqramı",
+      "Promokodlar və endirimlər",
+      "YuKassa",
+      "Dəstək"
+    ],
     "limits": "{{bots}} bota qədər · {{stores}} ticarət nöqtəsinə qədər · {{items}} menyu mövqeyinə qədər",
     "registrationHint": "«Qoşul» düyməsini basdıqdan sonra CRM açılacaq. Qeydiyyatdan keçin, «Lisenziya» bölməsinə keçin və seçilmiş tarifi ödəyin — bundan sonra işə başlaya bilərsiniz",
     "limitsTitle": "Hər tarifə nə daxildir",
@@ -187,25 +320,66 @@
     "customCta": "Fərdi tarifi müzakirə edin"
   },
   "faq": {
-    "label": "Tez-tez verilən suallar","title": "Suallarınız qaldı?","notFound": "Cavab tapmadınız?","askSupport": "Dəstəkdən soruşun",
+    "label": "Tez-tez verilən suallar",
+    "title": "Suallarınız qaldı?",
+    "notFound": "Cavab tapmadınız?",
+    "askSupport": "Dəstəkdən soruşun",
     "items": [
-      {"question": "Alıcıların tətbiq quraşdırması lazımdırmı?","answer": "Xeyr. Mini-tətbiq birbaşa Telegram və ya MAX-da açılır"},
-      {"question": "iiko və ya R-Keeper ilə inteqrasiya varmı?","answer": "Hal-hazırda POS-sistemlərlə birbaşa inteqrasiya yoxdur"},
-      {"question": "Bir neçə ticarət nöqtəsini qoşa bilərəmmi?","answer": "Bəli. Bir hesabda 22 ticarət nöqtəsinə qədər qoşmaq olar"},
-      {"question": "Sifarişlər üçün ödəniş necə işləyir?","answer": "YuKassa vasitəsilə onlayn ödəniş bütün ticarət nöqtələrinə birdən və ya seçici şəkildə qoşula bilər. Alıcı birbaşa messencerdə ödəyir. Çatdırılmada ödəniş də dəstəklənir"},
-      {"question": "MAX-bot nədir və ona ehtiyac varmı?","answer": "MAX — rus messengerdir. Qoşulma məcburi deyil, lakin auditoriyani genişləndirir"},
-      {"question": "Sınaq dövrü necə işləyir?","answer": "7 gün bütün funksiyalarla məhdudiyyətsiz pulsuz. Kart tələb olunmur"},
-      {"question": "Kuryersiz istifadə etmək olarmı?","answer": "Bəli. Özü götürmə və ya zalda xidmət — kuryer modulu olmadan"},
-      {"question": "Sifarişlər qəbul etməyə nə qədər tez başlamaq olar?","answer": "Hazır bot varsa — bir gün ərzində"}
+      {
+        "question": "Alıcıların tətbiq quraşdırması lazımdırmı?",
+        "answer": "Xeyr. Mini-tətbiq birbaşa Telegram və ya MAX-da açılır"
+      },
+      {
+        "question": "iiko və ya R-Keeper ilə inteqrasiya varmı?",
+        "answer": "Hal-hazırda POS-sistemlərlə birbaşa inteqrasiya yoxdur"
+      },
+      {
+        "question": "Bir neçə ticarət nöqtəsini qoşa bilərəmmi?",
+        "answer": "Bəli. Bir hesabda 22 ticarət nöqtəsinə qədər qoşmaq olar"
+      },
+      {
+        "question": "Sifarişlər üçün ödəniş necə işləyir?",
+        "answer": "YuKassa vasitəsilə onlayn ödəniş bütün ticarət nöqtələrinə birdən və ya seçici şəkildə qoşula bilər. Alıcı birbaşa messencerdə ödəyir. Çatdırılmada ödəniş də dəstəklənir"
+      },
+      {
+        "question": "MAX-bot nədir və ona ehtiyac varmı?",
+        "answer": "MAX — rus messengerdir. Qoşulma məcburi deyil, lakin auditoriyani genişləndirir"
+      },
+      {
+        "question": "Sınaq dövrü necə işləyir?",
+        "answer": "7 gün bütün funksiyalarla məhdudiyyətsiz pulsuz. Kart tələb olunmur"
+      },
+      {
+        "question": "Kuryersiz istifadə etmək olarmı?",
+        "answer": "Bəli. Özü götürmə və ya zalda xidmət — kuryer modulu olmadan"
+      },
+      {
+        "question": "Sifarişlər qəbul etməyə nə qədər tez başlamaq olar?",
+        "answer": "Hazır bot varsa — bir gün ərzində"
+      }
     ]
   },
   "cta": {
-    "title": "Bu gün sifarişlər qəbul etməyə başlayın","subtitle": "7 gün pulsuz. Telegram və MAX. Aqreqatorsuz","button": "Pulsuz sınayın","docs": "Sənədləri oxuyun","hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz"
+    "title": "Bu gün sifarişlər qəbul etməyə başlayın",
+    "subtitle": "7 gün pulsuz. Telegram və MAX. Aqreqatorsuz",
+    "button": "Pulsuz sınayın",
+    "docs": "Sənədləri oxuyun",
+    "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz"
   },
   "footer": {
     "description": "Restoranlar və kafelər üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
-    "product": "Məhsul","crm": "CRM-i aç","docs": "Sənədlər","pricing": "Tariflər",
-    "support": "Dəstək","telegram": "Teleqrama yaz","max": "MAX-a yazın","legal": "Hüquqi",
-    "privacy": "Məxfilik siyasəti","terms": "İstifadə şərtləri","offer": "İctimai oferta","cookies": "Cookies siyasəti","allRights": "Bütün hüquqlar qorunur"
+    "product": "Məhsul",
+    "crm": "CRM-i aç",
+    "docs": "Sənədlər",
+    "pricing": "Tariflər",
+    "support": "Dəstək",
+    "telegram": "Teleqrama yaz",
+    "max": "MAX-a yazın",
+    "legal": "Hüquqi",
+    "privacy": "Məxfilik siyasəti",
+    "terms": "İstifadə şərtləri",
+    "offer": "İctimai oferta",
+    "cookies": "Cookies siyasəti",
+    "allRights": "Bütün hüquqlar qorunur"
   }
 }

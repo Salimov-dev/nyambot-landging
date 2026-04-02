@@ -19,7 +19,11 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, border-radius 0.25s ease;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    background 0.25s ease,
+    border-radius 0.25s ease;
 }
 
 .dot:hover {

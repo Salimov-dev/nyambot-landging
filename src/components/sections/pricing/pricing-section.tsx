@@ -204,7 +204,7 @@ export function PricingSection() {
                 href={LINKS.support.max}
                 target="_blank"
                 className={styles.defaultBtn}
-                onClick={() => reachGoal("click_max_demo")}
+                onClick={() => reachGoal("click_max_support")}
               >
                 MAX
               </Button>
