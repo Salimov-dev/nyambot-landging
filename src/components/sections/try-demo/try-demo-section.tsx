@@ -71,9 +71,8 @@ export function TryDemoSection() {
         </motion.div>
 
         <Row gutter={[32, 32]} justify="center" style={{ marginTop: 56 }}>
-          {/* TODO: раскомментировать когда MAX добавит поддержку */}
           {/* MAX demo */}
-          {/* <Col xs={24} sm={20} md={10}>
+          <Col xs={24} sm={20} md={10}>
             <motion.div
               initial={{ opacity: 0, y: 32, scale: 0.95 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -139,10 +138,10 @@ export function TryDemoSection() {
                 </Button>
               </Flex>
             </motion.div>
-          </Col> */}
+          </Col>
 
           {/* Telegram demo */}
-          <Col xs={24} sm={20} md={12}>
+          <Col xs={24} sm={20} md={10}>
             <motion.div
               initial={{ opacity: 0, y: 32, scale: 0.95 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
