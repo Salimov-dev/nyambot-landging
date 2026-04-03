@@ -24,4 +24,4 @@
 
 ## 4. Контакты
 
-По вопросам использования cookie: help_nyambot@mail.ru
+По вопросам использования cookie: support@nyambot.ru
