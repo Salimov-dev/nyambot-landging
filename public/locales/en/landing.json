@@ -372,6 +372,7 @@
     "description": "Platform for restaurants and cafes. Orders via Telegram and MAX without aggregators",
     "product": "Product",
     "crm": "Open CRM",
+    "crew": "Staff app",
     "docs": "Documentation",
     "pricing": "Pricing",
     "support": "Support",

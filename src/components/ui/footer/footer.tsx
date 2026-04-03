@@ -49,6 +49,13 @@ export function Footer() {
                 {t("footer.crm")}
               </Link>
               <Link
+                href={LINKS.crew}
+                target="_blank"
+                className={styles.footerLink}
+              >
+                {t("footer.crew")}
+              </Link>
+              <Link
                 href={LINKS.docs}
                 target="_blank"
                 className={styles.footerLink}
@@ -78,14 +85,15 @@ export function Footer() {
               >
                 {t("footer.telegram")}
               </Link>
-              <Link
+              {/* TODO: раскомментировать когда MAX добавит поддержку */}
+              {/* <Link
                 href={LINKS.support.max}
                 target="_blank"
                 className={styles.footerLink}
                 onClick={() => reachGoal("click_max_support")}
               >
                 {t("footer.max")}
-              </Link>
+              </Link> */}
               <Link
                 href={`mailto:${BRAND_CONFIG.supportEmail}`}
                 className={styles.footerLink}
