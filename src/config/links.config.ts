@@ -8,8 +8,8 @@ export const LINKS = {
   },
 
   demo: {
-    telegram: "https://t.me/nyambot_demo_bot",
-    max: "https://max.ru/miniapp/nyambot_demo",
+    telegram: "https://t.me/kusochek_demo_bot",
+    max: "https://max.ru/id183401217970_bot",
   },
 
   legal: {

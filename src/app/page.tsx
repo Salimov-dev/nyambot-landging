@@ -11,8 +11,11 @@ import { ComparisonSection } from "@/components/sections/comparison/comparison-s
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
+import { fetchPricingData } from "@/config/pricing.config";
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  const { plans, limits } = await fetchPricingData();
+
   return (
     <>
       <Header />
@@ -25,7 +28,7 @@ export default function LandingPage() {
         <TryDemoSection />
         <HowItWorksSection />
         <ComparisonSection />
-        <PricingSection />
+        <PricingSection plans={plans} limits={limits} />
         <FaqSection />
         <CtaSection />
       </main>

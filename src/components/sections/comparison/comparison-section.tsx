@@ -150,12 +150,13 @@ export function ComparisonSection() {
     },
     {
       title: () => (
-        <Flex align="center" justify="center" gap={8}>
+        <Flex align="center" justify="center" gap={8} wrap="nowrap">
           <Text
             style={{
               color: theme.colors.accent,
               fontWeight: 700,
               fontSize: 15,
+              whiteSpace: "nowrap",
             }}
           >
             Нямбот
@@ -167,6 +168,7 @@ export function ComparisonSection() {
               color: theme.colors.accent,
               borderRadius: "var(--radius-pill)",
               fontSize: 11,
+              whiteSpace: "nowrap",
             }}
           >
             {t("comparison.ourChoice")}
@@ -175,6 +177,7 @@ export function ComparisonSection() {
       ),
       dataIndex: "nyambot",
       key: "nyambot",
+      width: 150,
       align: "center" as const,
       render: (v: boolean | string) => <Check value={v} />,
       onCell: () => ({
@@ -194,34 +197,37 @@ export function ComparisonSection() {
     },
     {
       title: () => (
-        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600 }}>
+        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600, whiteSpace: "nowrap" }}>
           {t("comparison.botServicesCol")}
         </Text>
       ),
       dataIndex: "botServices",
       key: "botServices",
+      width: 130,
       align: "center" as const,
       render: (v: boolean | string) => <Check value={v} />,
     },
     {
       title: () => (
-        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600 }}>
+        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600, whiteSpace: "nowrap" }}>
           Яндекс.Еда
         </Text>
       ),
       dataIndex: "yandexEda",
       key: "yandexEda",
+      width: 120,
       align: "center" as const,
       render: (v: boolean | string) => <Check value={v} />,
     },
     {
       title: () => (
-        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600 }}>
+        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600, whiteSpace: "nowrap" }}>
           {t("comparison.othersCol")}
         </Text>
       ),
       dataIndex: "others",
       key: "others",
+      width: 120,
       align: "center" as const,
       render: (v: boolean | string) => <Check value={v} />,
     },
@@ -280,7 +286,7 @@ export function ComparisonSection() {
             columns={columns}
             pagination={false}
             className={styles.table}
-            scroll={{ x: 600 }}
+            scroll={{ x: 700 }}
           />
         </motion.div>
       </div>

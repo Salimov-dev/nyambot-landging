@@ -113,6 +113,7 @@ export function HeroSection() {
                   src="/images/sections/main.png"
                   alt="Нямбот — мини-приложение"
                   fill
+                  priority
                   sizes="280px"
                   className={styles.phoneScreenImage}
                 />

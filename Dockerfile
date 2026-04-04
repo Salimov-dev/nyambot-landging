@@ -13,6 +13,10 @@ RUN npm ci
 FROM node:20-alpine AS builder
 WORKDIR /app
 
+# NEXT_PUBLIC_* переменные вкомпилируются при сборке
+ARG NEXT_PUBLIC_YANDEX_METRIKA_ID
+ENV NEXT_PUBLIC_YANDEX_METRIKA_ID=$NEXT_PUBLIC_YANDEX_METRIKA_ID
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
@@ -41,6 +45,6 @@ ENV PORT=3200
 EXPOSE 3200
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:3200/ || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3200/ || exit 1
 
 CMD ["node", "server.js"]

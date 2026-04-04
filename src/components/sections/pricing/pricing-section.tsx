@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Badge, Button, Card, Col, Flex, Row, Tag, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
-import { PRICING_PLANS, LICENSE_LIMITS } from "@/config/pricing.config";
+import type { PricingPlan } from "@/types/landing.types";
+import type { LicenseLimits } from "@/config/pricing.config";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
@@ -19,7 +20,12 @@ const MONTH_LABELS: Record<number, string> = {
   12: "mo12",
 };
 
-export function PricingSection() {
+interface PricingSectionProps {
+  plans: PricingPlan[];
+  limits: LicenseLimits;
+}
+
+export function PricingSection({ plans, limits }: PricingSectionProps) {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
 
@@ -67,7 +73,7 @@ export function PricingSection() {
         </motion.div>
 
         <Row gutter={[20, 20]} justify="center">
-          {PRICING_PLANS.map((plan, i) => (
+          {plans.map((plan, i) => (
             <Col key={plan.code} xs={24} sm={12} lg={6}>
               <motion.div
                 initial={{ opacity: 0, y: 32 }}
@@ -120,29 +126,29 @@ export function PricingSection() {
           <Flex gap={16} wrap justify="center" style={{ marginBottom: 28 }}>
             <Flex vertical align="center" className={styles.limitCard}>
               <Text className={styles.limitValue}>
-                {LICENSE_LIMITS.maxBotsCount}
+                {limits.maxBotsCount}
               </Text>
               <Text className={styles.limitLabel}>
-                {t("pricing.limitBots", { count: LICENSE_LIMITS.maxBotsCount })}
+                {t("pricing.limitBots", { count: limits.maxBotsCount })}
               </Text>
             </Flex>
             <Flex vertical align="center" className={styles.limitCard}>
               <Text className={styles.limitValue}>
-                {LICENSE_LIMITS.maxStoreCount}
+                {limits.maxStoreCount}
               </Text>
               <Text className={styles.limitLabel}>
                 {t("pricing.limitStores", {
-                  count: LICENSE_LIMITS.maxStoreCount,
+                  count: limits.maxStoreCount,
                 })}
               </Text>
             </Flex>
             <Flex vertical align="center" className={styles.limitCard}>
               <Text className={styles.limitValue}>
-                {LICENSE_LIMITS.maxMenuItemCount}
+                {limits.maxMenuItemCount}
               </Text>
               <Text className={styles.limitLabel}>
                 {t("pricing.limitMenuItems", {
-                  count: LICENSE_LIMITS.maxMenuItemCount,
+                  count: limits.maxMenuItemCount,
                 })}
               </Text>
             </Flex>
@@ -220,7 +226,7 @@ function PricingCard({
   plan,
   t,
 }: {
-  plan: (typeof PRICING_PLANS)[number];
+  plan: PricingPlan;
   t: (key: string, opts?: Record<string, unknown>) => string;
 }) {
   const isPopular = plan.isPopular;
