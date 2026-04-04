@@ -42,7 +42,11 @@ export const FALLBACK_LICENSE_LIMITS = {
   maxMenuItemCount: 125,
 } as const;
 
-export type LicenseLimits = typeof FALLBACK_LICENSE_LIMITS;
+export type LicenseLimits = {
+  maxBotsCount: number;
+  maxStoreCount: number;
+  maxMenuItemCount: number;
+};
 
 interface ApiLicensePlan {
   code: string;
