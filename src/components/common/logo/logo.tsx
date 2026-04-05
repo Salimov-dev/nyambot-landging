@@ -25,6 +25,7 @@ export function Logo({ size = "md" }: LogoProps) {
           alt={BRAND_CONFIG.name}
           width={imgSize}
           height={imgSize}
+          style={{ width: "auto", height: "auto" }}
           priority
         />
       </div>
