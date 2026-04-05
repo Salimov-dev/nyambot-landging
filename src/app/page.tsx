@@ -13,6 +13,8 @@ import { FaqSection } from "@/components/sections/faq/faq-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { fetchPricingData } from "@/config/pricing.config";
 
+export const dynamic = "force-dynamic";
+
 export default async function LandingPage() {
   const { plans, limits } = await fetchPricingData();
 
