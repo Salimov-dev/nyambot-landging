@@ -319,7 +319,8 @@
     "limitMenuItems": "Up to {{count}} menu items",
     "customTitle": "Need more?",
     "customSubtitle": "If standard limits aren't enough — contact us and we'll find the perfect solution for your business",
-    "customCta": "Discuss a custom plan"
+    "customCta": "Discuss a custom plan",
+    "emailCta": "Email"
   },
   "faq": {
     "label": "FAQ",

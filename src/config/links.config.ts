@@ -4,7 +4,7 @@ export const LINKS = {
   docs: "https://guide.nyambot.ru",
   support: {
     telegram: "https://t.me/nyambot_support",
-    max: "https://max.ru/u/f9LHodD0cOJ4W-Xs57n_VPLk1nSzl--ahlQ-FN2rdXf38_vqSiDlakTSqCk",
+    email: "mailto:support@nyambot.ru",
   },
 
   demo: {

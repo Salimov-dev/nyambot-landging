@@ -317,7 +317,8 @@
     "limitMenuItems": "{{count}} menyu elementinə qədər",
     "customTitle": "Daha çox lazımdır?",
     "customSubtitle": "Standart limitlər kifayət etmirsə — bizə yazın, biznesiniz üçün həll tapaq",
-    "customCta": "Fərdi tarifi müzakirə edin"
+    "customCta": "Fərdi tarifi müzakirə edin",
+    "emailCta": "Poçt"
   },
   "faq": {
     "label": "Tez-tez verilən suallar",

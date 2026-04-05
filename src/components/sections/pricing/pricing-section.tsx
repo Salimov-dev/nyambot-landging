@@ -207,12 +207,11 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
               </Button>
               <Button
                 size="large"
-                href={LINKS.support.max}
-                target="_blank"
+                href={LINKS.support.email}
                 className={styles.defaultBtn}
-                onClick={() => reachGoal("click_max_support")}
+                onClick={() => reachGoal("click_email_support")}
               >
-                MAX
+                {t("pricing.emailCta")}
               </Button>
             </Flex>
           </Flex>
