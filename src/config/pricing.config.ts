@@ -124,14 +124,11 @@ export async function fetchPricingData(): Promise<{
   const apiKey = process.env.MAIN_SERVER_API_KEY;
 
   if (!apiUrl) {
-    console.log("[Pricing] MAIN_SERVER_API_URL не задан, используются фоллбэки");
     return {
       plans: FALLBACK_PRICING_PLANS,
       limits: FALLBACK_LICENSE_LIMITS,
     };
   }
-
-  console.log("[Pricing] Загрузка данных из", apiUrl);
 
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
@@ -155,8 +152,6 @@ export async function fetchPricingData(): Promise<{
       ? ((await menuLimitsRes.json()) as { success: boolean; data?: ApiSystemLimit[] })
       : null;
 
-    console.log("[Pricing] plans:", plansRes.ok, "system:", systemLimitsRes.ok, "menu:", menuLimitsRes.ok);
-
     const plans = plansData?.success && plansData.data
       ? apiPlansToPricing(plansData.data)
       : FALLBACK_PRICING_PLANS;
@@ -165,11 +160,8 @@ export async function fetchPricingData(): Promise<{
       menuLimitsData?.success && menuLimitsData.data ? menuLimitsData.data : [],
     );
 
-    console.log("[Pricing] Результат:", { plans: plans.length, limits });
-
     return { plans, limits };
-  } catch (error) {
-    console.error("[Pricing] Ошибка загрузки:", error);
+  } catch {
     return {
       plans: FALLBACK_PRICING_PLANS,
       limits: FALLBACK_LICENSE_LIMITS,
