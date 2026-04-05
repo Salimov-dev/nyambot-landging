@@ -19,7 +19,8 @@ export type MetrikaGoal =
   | "click_max_support"
   | "registration"
   | "first_order"
-  | "payment";
+  | "payment"
+  | "click_email_support";
 
 /** Отправить цель в Яндекс.Метрику */
 export function reachGoal(goal: MetrikaGoal, params?: Record<string, unknown>) {
