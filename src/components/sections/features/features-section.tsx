@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -24,6 +25,7 @@ const FEATURES = [
     accentColor: theme.colors.accent,
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/first_service.png",
+    mockupVideo: "/videos/phone/feature-messengers.mp4",
   },
   {
     id: "modernUI",
@@ -35,6 +37,8 @@ const FEATURES = [
     accentColor: "#eb2f96",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/design.png",
+    mockupVideo: "/videos/phone/feature-miniapp.mp4",
+    mockupVideoWide: true,
   },
   {
     id: "noCommission",
@@ -46,6 +50,7 @@ const FEATURES = [
     accentColor: theme.colors.success,
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/stop_pay.png",
+    mockupVideo: "/videos/phone/feature-no-commission.mp4",
   },
   {
     id: "crm",
@@ -68,6 +73,7 @@ const FEATURES = [
     accentColor: "#fa8c16",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/sostav-modifiers.png",
+    mockupVideo: "/videos/phone/feature-menu-customization.mp4",
   },
   {
     id: "comboBuilder",
@@ -79,6 +85,7 @@ const FEATURES = [
     accentColor: "#36cfc9",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/combo.png",
+    mockupVideo: "/videos/phone/feature-combo.mp4",
   },
   {
     id: "crewAdmin",
@@ -90,6 +97,8 @@ const FEATURES = [
     accentColor: "#9254de",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/crew_admin.png",
+    mockupVideo: "/videos/phone/feature-crew-admin.mp4",
+    mockupVideoContain: true,
   },
   {
     id: "crew",
@@ -101,6 +110,8 @@ const FEATURES = [
     accentColor: "#b652ff",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/crew_courier.png",
+    mockupVideo: "/videos/phone/feature-crew-delivery.mp4",
+    mockupVideoContain: true,
   },
   {
     id: "payment",
@@ -112,6 +123,8 @@ const FEATURES = [
     accentColor: "#1677ff",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/payments.png",
+    mockupVideo: "/videos/phone/feature-payment.mp4",
+    mockupVideoZoom: true,
   },
   {
     id: "marketing",
@@ -125,6 +138,7 @@ const FEATURES = [
     accentColor: "#14c4a2",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/discount.png",
+    mockupVideo: "/videos/phone/feature-marketing.mp4",
   },
   {
     id: "scheduledSending",
@@ -136,6 +150,7 @@ const FEATURES = [
     accentColor: "#fa541c",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/day_offer.png",
+    mockupVideo: "/videos/phone/feature-scheduled-send.mp4",
   },
   {
     id: "languages",
@@ -147,6 +162,7 @@ const FEATURES = [
     accentColor: "#f5a623",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/multi_language.png",
+    mockupVideo: "/videos/phone/feature-languages.mp4",
   },
   {
     id: "selfService",
@@ -180,8 +196,43 @@ const FEATURES = [
     accentColor: "#13c2c2",
     mockupType: "phone" as "phone" | "notebook",
     mockupImage: "/images/sections/AI_search.png",
+    mockupVideo: "/videos/phone/feature-ai-search.mp4",
   },
 ] as const;
+
+function PhoneVideo({ src, className }: { src: string; className?: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          void video.play();
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      className={className}
+      muted
+      loop
+      playsInline
+    />
+  );
+}
 
 function FeatureBlock({
   feature,
@@ -341,7 +392,12 @@ function FeatureBlock({
                 </NotebookMockup>
               ) : (
                 <PhoneMockup>
-                  {"mockupImage" in feature && feature.mockupImage ? (
+                  {"mockupVideo" in feature && feature.mockupVideo ? (
+                    <PhoneVideo
+                      src={feature.mockupVideo}
+                      className={`${styles.phoneScreenImage}${"mockupVideoWide" in feature && feature.mockupVideoWide ? ` ${styles.phoneScreenImageWide}` : ""}${"mockupVideoContain" in feature && feature.mockupVideoContain ? ` ${styles.phoneScreenImageContain}` : ""}${"mockupVideoCenter" in feature && feature.mockupVideoCenter ? ` ${styles.phoneScreenImageCenter}` : ""}${"mockupVideoZoom" in feature && feature.mockupVideoZoom ? ` ${styles.phoneScreenImageZoom}` : ""}`}
+                    />
+                  ) : "mockupImage" in feature && feature.mockupImage ? (
                     <Image
                       src={feature.mockupImage}
                       alt={t(feature.titleKey)}

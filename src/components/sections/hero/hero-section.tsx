@@ -1,9 +1,9 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, type Variants } from "framer-motion";
 import { Button, Flex, Tag, Typography } from "antd";
-import Image from "next/image";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
@@ -34,6 +34,26 @@ const phoneVariants: Variants = {
 
 export function HeroSection() {
   const { t } = useTranslation("landing");
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          void video.play();
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="hero" className={styles.section}>
@@ -109,13 +129,13 @@ export function HeroSection() {
             <div className={styles.phoneWrapper}>
               <div className={styles.phoneGlow} />
               <PhoneMockup>
-                <Image
-                  src="/images/sections/main.png"
-                  alt="Нямбот — мини-приложение"
-                  fill
-                  priority
-                  sizes="280px"
+                <video
+                  ref={videoRef}
+                  src="/videos/phone/hero-intro.mp4"
                   className={styles.phoneScreenImage}
+                  muted
+                  loop
+                  playsInline
                 />
               </PhoneMockup>
             </div>

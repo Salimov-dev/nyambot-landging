@@ -10,6 +10,7 @@ export function IPhoneFrame({ className }: { className?: string }) {
       viewBox="0 0 280 572"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
       aria-hidden="true"
     >
       <defs>
@@ -84,8 +85,8 @@ export function IPhoneFrame({ className }: { className?: string }) {
         height="556"
         rx="18"
         ry="18"
-        fill="transparent"
-        stroke="#333336"
+        fill="#191E36"
+        stroke="#191E36"
         strokeWidth="0.5"
       />
 

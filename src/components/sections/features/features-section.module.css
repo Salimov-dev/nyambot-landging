@@ -47,8 +47,39 @@
 }
 
 .phoneScreenImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center top;
+  background: #191E36;
+  margin-left: -3px;
+}
+
+.phoneScreenImageContain {
+  object-fit: fill;
+}
+
+.phoneScreenImageCenter {
+  object-position: center center;
+}
+
+.phoneScreenImageZoom {
+  inset: unset;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 116%;
+  transform: translateY(-50%);
+  object-fit: cover;
+  object-position: center center;
+}
+
+.phoneScreenImageWide {
+  width: calc(100% + 12px);
+  left: 2px;
+  right: -6px;
 }
 
 @media (max-width: 768px) {

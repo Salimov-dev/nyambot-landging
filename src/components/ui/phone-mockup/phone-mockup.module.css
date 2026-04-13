@@ -6,8 +6,8 @@
 
 .phone {
   position: relative;
-  width: 280px;
-  height: 572px;
+  width: 320px;
+  height: 594px;
   filter: drop-shadow(0 32px 80px rgba(0, 0, 0, 0.6))
     drop-shadow(0 8px 32px rgba(255, 140, 0, 0.1));
   animation: float 4s ease-in-out infinite;
@@ -30,8 +30,8 @@
   right: 3.2%;
   bottom: 1.6%;
   z-index: 3;
-  background: #0c1524;
-  border-radius: 18px;
+  background: #191E36;
+  border-radius: 23px;
   overflow: hidden;
 }
 
@@ -47,20 +47,20 @@
 
 @media (max-width: 900px) {
   .phone {
-    width: 230px;
-    height: 468px;
+    width: 260px;
+    height: 483px;
   }
   .screen {
-    border-radius: 16px;
+    border-radius: 18px;
   }
 }
 
 @media (max-width: 480px) {
   .phone {
-    width: 200px;
+    width: 220px;
     height: 408px;
   }
   .screen {
-    border-radius: 14px;
+    border-radius: 16px;
   }
 }
