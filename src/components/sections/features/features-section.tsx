@@ -202,6 +202,7 @@ const FEATURES = [
 
 function PhoneVideo({ src, className }: { src: string; className?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const loadedRef = useRef(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -210,26 +211,30 @@ function PhoneVideo({ src, className }: { src: string; className?: string }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          if (!loadedRef.current) {
+            video.src = src;
+            loadedRef.current = true;
+          }
           void video.play();
         } else {
           video.pause();
         }
       },
-      { threshold: 0.3 },
+      { rootMargin: "200px", threshold: 0.1 },
     );
 
     observer.observe(video);
     return () => observer.disconnect();
-  }, []);
+  }, [src]);
 
   return (
     <video
       ref={videoRef}
-      src={src}
       className={className}
       muted
       loop
       playsInline
+      preload="none"
     />
   );
 }
