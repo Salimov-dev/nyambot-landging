@@ -157,8 +157,10 @@
   }
   .burger {
     display: flex;
+    margin-left: 0;
   }
   .actions {
     gap: 0 !important;
+    margin-left: auto;
   }
 }
