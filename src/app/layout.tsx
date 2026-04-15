@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "Принимайте заказы через Telegram и MAX без агрегаторов. 0% комиссии, CRM, курьерское приложение — всё включено. 7 дней бесплатно.",
     images: [
       {
-        url: "/images/nyambot_logo.png",
+        url: "/images/nyambot_logo_square.png",
         width: 512,
         height: 512,
         alt: "Нямбот — заказы через Telegram и MAX",
@@ -50,12 +50,12 @@ export const metadata: Metadata = {
     title: `${BRAND_CONFIG.name} — Ваш ресторан в Telegram и MAX`,
     description:
       "Принимайте заказы через Telegram и MAX без агрегаторов. 0% комиссии.",
-    images: ["/images/nyambot_logo.png"],
+    images: ["/images/nyambot_logo_square.png"],
   },
   icons: {
     icon: "/images/nyambot_logo.png",
     shortcut: "/images/nyambot_logo.png",
-    apple: "/images/nyambot_logo.png",
+    apple: "/images/nyambot_logo_square.png",
   },
   robots: { index: true, follow: true },
 };

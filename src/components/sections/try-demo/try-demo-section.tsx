@@ -116,7 +116,7 @@ export function TryDemoSection() {
                   />
                   <PhoneMockup>
                     <Image
-                      src="/images/sections/demo_max.png"
+                      src="/images/sections/demo_bot_max.png"
                       alt="MAX демо"
                       fill
                       sizes="280px"
@@ -185,7 +185,7 @@ export function TryDemoSection() {
                   />
                   <PhoneMockup>
                     <Image
-                      src="/images/sections/demo_tg.png"
+                      src="/images/sections/demo_bot_tg.png"
                       alt="Telegram демо"
                       fill
                       sizes="280px"
