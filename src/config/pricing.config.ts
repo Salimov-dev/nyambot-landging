@@ -137,26 +137,47 @@ export async function fetchPricingData(): Promise<{
 
   try {
     const [plansRes, systemLimitsRes, menuLimitsRes] = await Promise.all([
-      fetch(`${apiUrl}/api/standards/license-plans`, { headers, next: { revalidate: 3600 } }),
-      fetch(`${apiUrl}/api/standards/limits/system`, { headers, next: { revalidate: 3600 } }),
-      fetch(`${apiUrl}/api/standards/limits/menu`, { headers, next: { revalidate: 3600 } }),
+      fetch(`${apiUrl}/api/standards/license-plans`, {
+        headers,
+        next: { revalidate: 3600 },
+      }),
+      fetch(`${apiUrl}/api/standards/limits/system`, {
+        headers,
+        next: { revalidate: 3600 },
+      }),
+      fetch(`${apiUrl}/api/standards/limits/menu`, {
+        headers,
+        next: { revalidate: 3600 },
+      }),
     ]);
 
     const plansData = plansRes.ok
-      ? ((await plansRes.json()) as { success: boolean; data?: ApiLicensePlan[] })
+      ? ((await plansRes.json()) as {
+          success: boolean;
+          data?: ApiLicensePlan[];
+        })
       : null;
     const systemLimitsData = systemLimitsRes.ok
-      ? ((await systemLimitsRes.json()) as { success: boolean; data?: ApiSystemLimit[] })
+      ? ((await systemLimitsRes.json()) as {
+          success: boolean;
+          data?: ApiSystemLimit[];
+        })
       : null;
     const menuLimitsData = menuLimitsRes.ok
-      ? ((await menuLimitsRes.json()) as { success: boolean; data?: ApiSystemLimit[] })
+      ? ((await menuLimitsRes.json()) as {
+          success: boolean;
+          data?: ApiSystemLimit[];
+        })
       : null;
 
-    const plans = plansData?.success && plansData.data
-      ? apiPlansToPricing(plansData.data)
-      : FALLBACK_PRICING_PLANS;
+    const plans =
+      plansData?.success && plansData.data
+        ? apiPlansToPricing(plansData.data)
+        : FALLBACK_PRICING_PLANS;
     const limits = apiLimitsToLicenseLimits(
-      systemLimitsData?.success && systemLimitsData.data ? systemLimitsData.data : [],
+      systemLimitsData?.success && systemLimitsData.data
+        ? systemLimitsData.data
+        : [],
       menuLimitsData?.success && menuLimitsData.data ? menuLimitsData.data : [],
     );
 

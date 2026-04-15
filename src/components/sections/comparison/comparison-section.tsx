@@ -197,7 +197,13 @@ export function ComparisonSection() {
     },
     {
       title: () => (
-        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600, whiteSpace: "nowrap" }}>
+        <Text
+          style={{
+            color: theme.colors.textTertiary,
+            fontWeight: 600,
+            whiteSpace: "nowrap",
+          }}
+        >
           {t("comparison.botServicesCol")}
         </Text>
       ),
@@ -209,7 +215,13 @@ export function ComparisonSection() {
     },
     {
       title: () => (
-        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600, whiteSpace: "nowrap" }}>
+        <Text
+          style={{
+            color: theme.colors.textTertiary,
+            fontWeight: 600,
+            whiteSpace: "nowrap",
+          }}
+        >
           Яндекс.Еда
         </Text>
       ),
@@ -221,7 +233,13 @@ export function ComparisonSection() {
     },
     {
       title: () => (
-        <Text style={{ color: theme.colors.textTertiary, fontWeight: 600, whiteSpace: "nowrap" }}>
+        <Text
+          style={{
+            color: theme.colors.textTertiary,
+            fontWeight: 600,
+            whiteSpace: "nowrap",
+          }}
+        >
           {t("comparison.othersCol")}
         </Text>
       ),
