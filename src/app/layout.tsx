@@ -8,11 +8,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${BRAND_CONFIG.name} — Ваш ресторан в Telegram и MAX. Без агрегаторов`,
+    default: `${BRAND_CONFIG.name} — своя доставка в MAX и Telegram. Без агрегаторов`,
     template: `%s | ${BRAND_CONFIG.name}`,
   },
   description:
-    "Своя доставка без агрегаторов. Мини-приложение в MAX и Telegram, CRM, приложение для админа и курьера, программа лояльности и промокоды. 0% комиссии, 7 дней бесплатно.",
+    "Всё включено: мини-приложение, CRM, приложение для админа и курьеров, акции, лояльность, промокоды, 7 языков. 0% комиссии. 7 дней бесплатно.",
   keywords: [
     "Нямбот",
     "ресторан Telegram бот",
