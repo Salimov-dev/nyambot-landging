@@ -8,7 +8,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${BRAND_CONFIG.name} — своя доставка в MAX и Telegram. Без агрегаторов`,
+    default: `${BRAND_CONFIG.name} — Ваше заведение в МАХ и ТГ. Без агрегаторов`,
     template: `%s | ${BRAND_CONFIG.name}`,
   },
   description:
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     url: BRAND_CONFIG.siteUrl,
-    title: `${BRAND_CONFIG.name} — Ваш ресторан в Telegram и MAX. Без агрегаторов`,
+    title: `${BRAND_CONFIG.name} — Ваше заведение в МАХ и ТГ. Без агрегаторов`,
     description:
       "Принимайте заказы через Telegram и MAX без агрегаторов. 0% комиссии, CRM, курьерское приложение — всё включено. 7 дней бесплатно.",
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: `${BRAND_CONFIG.name} — Ваш ресторан в Telegram и MAX`,
+    title: `${BRAND_CONFIG.name} — Ваше заведение в МАХ и ТГ`,
     description:
       "Принимайте заказы через Telegram и MAX без агрегаторов. 0% комиссии.",
     images: ["/images/nyambot_logo_square.png"],

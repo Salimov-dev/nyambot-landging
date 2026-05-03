@@ -1,7 +1,7 @@
 export const BRAND_CONFIG = {
   name: "Нямбот",
   nameEn: "Nyambot",
-  tagline: "Ваш ресторан в Telegram и MAX",
+  tagline: "Ваше заведение в МАХ и ТГ",
   siteName: "nyambot.ru",
   siteUrl: "https://nyambot.ru",
   logoFile: "/images/nyambot_logo.png",
