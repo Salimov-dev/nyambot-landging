@@ -1,0 +1,21 @@
+.section {
+  padding: 48px 0;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border-light);
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 32px 0;
+  }
+
+  .inner {
+    padding: 0 16px;
+  }
+}

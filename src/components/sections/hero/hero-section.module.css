@@ -164,6 +164,69 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* Scroll hint */
+.scrollHint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.scrollHintVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollHintHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scrollHintRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scrollHintIcon {
+  font-size: 22px;
+  color: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+  line-height: 1;
+}
+
+.scrollHintText {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.scrollHintArrow {
+  font-size: 20px;
+  color: var(--accent);
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .section {
@@ -188,6 +251,12 @@
   }
   .phoneCol {
     order: -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .scrollHint {
+    display: none;
   }
 }
 

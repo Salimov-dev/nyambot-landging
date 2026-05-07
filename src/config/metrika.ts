@@ -20,7 +20,15 @@ export type MetrikaGoal =
   | "registration"
   | "first_order"
   | "payment"
-  | "click_email_support";
+  | "click_email_support"
+  | "click_social_telegram"
+  | "click_social_rutube"
+  | "click_social_vk"
+  | "click_social_youtube"
+  | "click_social_ok"
+  | "click_social_max"
+  | "video_play"
+  | "scroll_video";
 
 /** Отправить цель в Яндекс.Метрику */
 export function reachGoal(goal: MetrikaGoal, params?: Record<string, unknown>) {

@@ -20,6 +20,11 @@ export const LINKS = {
   },
 
   social: {
-    telegram: "https://t.me/nyambot",
+    telegram: "https://t.me/nyambot_ru",
+    max: "https://max.ru/id183401217970_biz",
+    rutube: "https://rutube.ru/channel/28468267/",
+    vk: "https://vk.com/nyambot_ru",
+    youtube: "https://www.youtube.com/@nyambot_ru",
+    ok: "https://ok.ru/group/70000051407337",
   },
 } as const;

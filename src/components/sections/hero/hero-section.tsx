@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, type Variants } from "framer-motion";
 import { Button, Flex, Tag, Typography } from "antd";
@@ -35,6 +35,7 @@ const phoneVariants: Variants = {
 export function HeroSection() {
   const { t } = useTranslation("landing");
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [showHint, setShowHint] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -52,6 +53,22 @@ export function HeroSection() {
     );
 
     observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const videoSection = document.getElementById("video");
+    if (!videoSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setShowHint(false);
+        else setShowHint(true);
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(videoSection);
     return () => observer.disconnect();
   }, []);
 
@@ -143,6 +160,18 @@ export function HeroSection() {
           </motion.div>
         </Flex>
       </div>
+
+      <a
+        href="#video"
+        className={`${styles.scrollHint} ${showHint ? styles.scrollHintVisible : styles.scrollHintHidden}`}
+        aria-label="Смотри видео"
+      >
+        <span className={styles.scrollHintRow}>
+          <span className={styles.scrollHintIcon}>▶</span>
+          <span className={styles.scrollHintText}>Смотри видео</span>
+        </span>
+        <span className={styles.scrollHintArrow}>↓</span>
+      </a>
     </section>
   );
 }
