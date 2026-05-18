@@ -26,7 +26,7 @@
   },
   "features": {
     "label": "İmkanlar",
-    "title": "Restorana lazım olan hər şey — bir alətdə",
+    "title": "İaşə müəssisəsinə lazım olan hər şey — bir alətdə",
     "items": {
       "messengers": {
         "tag": "Telegram + MAX",
@@ -185,7 +185,7 @@
       },
       "aiCrm": {
         "tag": "AI CRM-də",
-        "title": "Restoran sahibi üçün AI-köməkçi",
+        "title": "Müəssisə sahibi üçün AI-köməkçi",
         "description": "CRM-dəki AI-köməkçi sahibə sistemi başa düşməyə və hər şeyi müstəqil şəkildə qurmağa kömək edir — menecerlər və dəstək xidməti olmadan",
         "points": [
           "Menyu, aksiyalar və çatdırılmanı necə quracağını izah edir",
@@ -209,7 +209,7 @@
   },
   "crmDemo": {
     "tag": "Öz hazırladığımız CRM",
-    "title": "Restoranınızı vahid kabinetdən idarə edin",
+    "title": "Müəssisənizi vahid kabinetdən idarə edin",
     "description": "Tam CRM — üçüncü tərəf xidmət deyil, öz hazırladığımızdır. Modifikatorlu menyu, sifariş idarəetməsi, gəlir analitikası, marketinq kampaniyaları və müştəri bazası — əlavə inteqrasiyalar olmadan bir yerdə",
     "ownDev": "CRM komandamız tərəfindən sıfırdan qurulub — funksionallıq və etibarlılıq üzərində tam nəzarət. Heç bir üçüncü tərəf platforma yoxdur",
     "pricing": "Şəffaf qiymətləndirmə: sabit tarif, gizli komissiyalar və əlavə ödənişlər yoxdur",
@@ -315,7 +315,7 @@
     "limitBots": "{{count}} bota qədər",
     "limitStores": "{{count}} satış nöqtəsinə qədər",
     "limitMenuItems": "{{count}} menyu elementinə qədər",
-    "customTitle": "Restoran şəbəkəniz var?",
+    "customTitle": "Müəssisələr şəbəkəniz var?",
     "customSubtitle": "2 və daha çox satış nöqtəsi olan şəbəkələr üçün — fərdi tarif. Bizə yazın, miqyasınıza uyğun şərtlər seçək",
     "customCta": "Fərdi tarifi müzakirə edin",
     "emailCta": "Poçt"
@@ -368,7 +368,7 @@
     "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz"
   },
   "footer": {
-    "description": "Restoranlar və kafelər üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
+    "description": "İaşə müəssisələri üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
     "product": "Məhsul",
     "crm": "CRM-i aç",
     "crew": "Personal üçün tətbiq",

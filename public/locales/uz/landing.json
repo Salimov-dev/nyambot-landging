@@ -26,11 +26,11 @@
   },
   "features": {
     "label": "Imkoniyatlar",
-    "title": "Restoran uchun kerak bo'lgan hamma narsa — bitta vositada",
+    "title": "Ovqatlanish joyi uchun kerak bo'lgan hamma narsa — bitta vositada",
     "items": {
       "messengers": {
         "tag": "Telegram + MAX",
-        "title": "Telegram va MAX ni bir vaqtda qo'llab-quvvatlaydigan birinchi xizmat",
+        "title": "MAX va Telegram — bitta xizmatda, har ikkala messenjerda buyurtma qabul qiling",
         "description": "Xaridorlar mini-ilovani to'g'ridan-to'g'ri tanish messenjerda ochadi",
         "points": [
           "Telegram-bot va MAX-bot — bitta sozlash",
@@ -185,7 +185,7 @@
       },
       "aiCrm": {
         "tag": "AI CRM da",
-        "title": "Restoran egasi uchun AI-yordamchi",
+        "title": "Muassasa egasi uchun AI-yordamchi",
         "description": "CRM'dagi AI-yordamchi egaga tizimni tushunishga va hamma narsani mustaqil sozlashga yordam beradi — menejerlar va texnik qo'llabsiz",
         "points": [
           "Menyu, aksiyalar va yetkazib berishni sozlashni tushuntiradi",
@@ -209,7 +209,7 @@
   },
   "crmDemo": {
     "tag": "O'z ishlab chiqishimiz CRM",
-    "title": "Restoraningizni yagona kabinetdan boshqaring",
+    "title": "Muassasangizni yagona kabinetdan boshqaring",
     "description": "To'liq CRM — uchinchi tomon xizmat emas, o'z ishlab chiqishimiz. Modifikatorli menyu, buyurtmalarni boshqarish, daromad tahlili, marketing aktsiyalari va mijozlar bazasi — qo'shimcha integratsiyalarsiz bir joyda",
     "ownDev": "CRM bizning jamoamiz tomonidan noldan yaratilgan — funksionallik va ishonchlilikni to'liq nazorat qilamiz. Uchinchi tomon platformalar yo'q",
     "pricing": "Shaffof narxlash: belgilangan tarif, yashirin komissiyalar va qo'shimcha to'lovlar yo'q",
@@ -315,7 +315,7 @@
     "limitBots": "{{count}} tagacha bot",
     "limitStores": "{{count}} tagacha savdo nuqtasi",
     "limitMenuItems": "{{count}} tagacha menyu elementi",
-    "customTitle": "Restoran tarmog'ingiz bormi?",
+    "customTitle": "Muassasalar tarmog'ingiz bormi?",
     "customSubtitle": "2 va undan ko'p savdo nuqtasi bo'lgan tarmoqlar uchun — individual tarif. Bizga yozing, ko'lamingizga mos shartlarni tanlaymiz",
     "customCta": "Individual tarifni muhokama qilish",
     "emailCta": "Pochta"
@@ -368,7 +368,7 @@
     "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz"
   },
   "footer": {
-    "description": "Restoranlar va kafe uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",
+    "description": "Ovqatlanish joylari uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",
     "product": "Mahsulot",
     "crm": "CRM ochish",
     "crew": "Xodimlar uchun ilova",

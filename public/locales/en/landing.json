@@ -23,11 +23,11 @@
   },
   "features": {
     "label": "Features",
-    "title": "Everything a restaurant needs — in one tool",
+    "title": "Everything a food business needs — in one tool",
     "items": {
       "messengers": {
         "tag": "Telegram + MAX",
-        "title": "First service supporting Telegram and MAX simultaneously",
+        "title": "MAX and Telegram in one service — accept orders in both messengers",
         "description": "Customers open the mini-app right in their familiar messenger. One client in both channels — shared history, points and promotions",
         "points": [
           "Telegram bot and MAX bot — one setup",
@@ -182,7 +182,7 @@
       },
       "aiCrm": {
         "tag": "AI in CRM",
-        "title": "AI assistant for the restaurant owner",
+        "title": "AI assistant for the venue owner",
         "description": "The AI assistant in CRM helps the owner understand the system and configure everything independently — without managers or support",
         "points": [
           "Explains how to set up menu, promotions and delivery",
@@ -206,7 +206,7 @@
   },
   "crmDemo": {
     "tag": "In-house CRM",
-    "title": "Manage your restaurant from a single dashboard",
+    "title": "Manage your venue from a single dashboard",
     "description": "Full-featured in-house CRM — not a third-party service. Menu with modifiers, order management, revenue analytics, marketing campaigns and customer database — all in one place, no extra integrations",
     "ownDev": "CRM built from scratch by our team — full control over features and reliability. No third-party platforms",
     "pricing": "Transparent pricing: fixed tariff, no hidden commissions or surcharges",
@@ -317,7 +317,7 @@
     "limitBots": "Up to {{count}} bots",
     "limitStores": "Up to {{count}} stores",
     "limitMenuItems": "Up to {{count}} menu items",
-    "customTitle": "Running a restaurant chain?",
+    "customTitle": "Running a chain of venues?",
     "customSubtitle": "For chains with 2+ locations — custom pricing. Contact us and we'll tailor the plan to your scale",
     "customCta": "Discuss a custom plan",
     "emailCta": "Email"
@@ -346,7 +346,7 @@
       },
       {
         "question": "What is a MAX bot and do I need it?",
-        "answer": "MAX is a Russian messenger from Mail.ru with a growing audience. Nyambot is one of the first services with full MAX support. Connection is optional but allows reaching additional audience at no extra cost"
+        "answer": "MAX is a Russian messenger with a growing audience and mini-app support. Connection is optional but allows reaching additional audience and gaining a new stable sales channel at no extra cost"
       },
       {
         "question": "How does the trial period work?",
@@ -370,7 +370,7 @@
     "hint": "No card required · Free trial, no commitment"
   },
   "footer": {
-    "description": "Platform for restaurants and cafes. Orders via Telegram and MAX without aggregators",
+    "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",
     "product": "Product",
     "crm": "Open CRM",
     "crew": "Staff app",
