@@ -171,9 +171,9 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
           {/* Limits */}
           <Flex gap={16} wrap justify="center" style={{ marginBottom: 28 }}>
             <Flex vertical align="center" className={styles.limitCard}>
-              <Text className={styles.limitValue}>{limits.maxBotsCount}</Text>
+              <Text className={styles.limitValue}>TG + MAX</Text>
               <Text className={styles.limitLabel}>
-                {t("pricing.limitBots", { count: limits.maxBotsCount })}
+                {t("pricing.limitBots")}
               </Text>
             </Flex>
             <Flex vertical align="center" className={styles.limitCard}>
