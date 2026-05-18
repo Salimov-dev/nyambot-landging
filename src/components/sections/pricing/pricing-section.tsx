@@ -97,7 +97,7 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
           ))}
         </Row>
 
-        {/* Registration hint */}
+        {/* Registration hint — прямо под карточками */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -115,7 +115,53 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
           </Text>
         </motion.div>
 
-        {/* Limits + included features + custom CTA */}
+        {/* Custom plan CTA — под подсказкой */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <Flex vertical align="center" gap={12} className={styles.customCta}>
+            <Title
+              level={4}
+              style={{ color: theme.colors.accent, margin: 0, fontWeight: 700 }}
+            >
+              {t("pricing.customTitle")}
+            </Title>
+            <Text
+              style={{
+                color: theme.colors.textSecondary,
+                fontSize: 15,
+                textAlign: "center",
+                maxWidth: 480,
+                lineHeight: 1.6,
+              }}
+            >
+              {t("pricing.customSubtitle")}
+            </Text>
+            <Flex gap={12}>
+              <Button
+                size="large"
+                href={LINKS.support.telegram}
+                target="_blank"
+                className={styles.defaultBtn}
+                onClick={() => reachGoal("click_tg_support")}
+              >
+                Telegram
+              </Button>
+              <Button
+                size="large"
+                href={LINKS.support.email}
+                className={styles.defaultBtn}
+                onClick={() => reachGoal("click_email_support")}
+              >
+                {t("pricing.emailCta")}
+              </Button>
+            </Flex>
+          </Flex>
+        </motion.div>
+
+        {/* Limits + included features */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -170,46 +216,6 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
                 ✓ {item}
               </Tag>
             ))}
-          </Flex>
-
-          {/* Custom plan CTA */}
-          <Flex vertical align="center" gap={12} className={styles.customCta}>
-            <Title
-              level={4}
-              style={{ color: theme.colors.accent, margin: 0, fontWeight: 700 }}
-            >
-              {t("pricing.customTitle")}
-            </Title>
-            <Text
-              style={{
-                color: theme.colors.textSecondary,
-                fontSize: 15,
-                textAlign: "center",
-                maxWidth: 480,
-                lineHeight: 1.6,
-              }}
-            >
-              {t("pricing.customSubtitle")}
-            </Text>
-            <Flex gap={12}>
-              <Button
-                size="large"
-                href={LINKS.support.telegram}
-                target="_blank"
-                className={styles.defaultBtn}
-                onClick={() => reachGoal("click_tg_support")}
-              >
-                Telegram
-              </Button>
-              <Button
-                size="large"
-                href={LINKS.support.email}
-                className={styles.defaultBtn}
-                onClick={() => reachGoal("click_email_support")}
-              >
-                {t("pricing.emailCta")}
-              </Button>
-            </Flex>
           </Flex>
         </motion.div>
       </div>

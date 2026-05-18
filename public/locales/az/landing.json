@@ -315,8 +315,8 @@
     "limitBots": "{{count}} bota qədər",
     "limitStores": "{{count}} satış nöqtəsinə qədər",
     "limitMenuItems": "{{count}} menyu elementinə qədər",
-    "customTitle": "Daha çox lazımdır?",
-    "customSubtitle": "Standart limitlər kifayət etmirsə — bizə yazın, biznesiniz üçün həll tapaq",
+    "customTitle": "Restoran şəbəkəniz var?",
+    "customSubtitle": "2 və daha çox satış nöqtəsi olan şəbəkələr üçün — fərdi tarif. Bizə yazın, miqyasınıza uyğun şərtlər seçək",
     "customCta": "Fərdi tarifi müzakirə edin",
     "emailCta": "Poçt"
   },

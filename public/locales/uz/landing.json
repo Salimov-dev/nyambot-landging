@@ -315,8 +315,8 @@
     "limitBots": "{{count}} tagacha bot",
     "limitStores": "{{count}} tagacha savdo nuqtasi",
     "limitMenuItems": "{{count}} tagacha menyu elementi",
-    "customTitle": "Ko'proq kerakmi?",
-    "customSubtitle": "Standart limitlar yetarli bo'lmasa — bizga yozing, biznesingiz uchun yechim topamiz",
+    "customTitle": "Restoran tarmog'ingiz bormi?",
+    "customSubtitle": "2 va undan ko'p savdo nuqtasi bo'lgan tarmoqlar uchun — individual tarif. Bizga yozing, ko'lamingizga mos shartlarni tanlaymiz",
     "customCta": "Individual tarifni muhokama qilish",
     "emailCta": "Pochta"
   },

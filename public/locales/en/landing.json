@@ -317,8 +317,8 @@
     "limitBots": "Up to {{count}} bots",
     "limitStores": "Up to {{count}} stores",
     "limitMenuItems": "Up to {{count}} menu items",
-    "customTitle": "Need more?",
-    "customSubtitle": "If standard limits aren't enough — contact us and we'll find the perfect solution for your business",
+    "customTitle": "Running a restaurant chain?",
+    "customSubtitle": "For chains with 2+ locations — custom pricing. Contact us and we'll tailor the plan to your scale",
     "customCta": "Discuss a custom plan",
     "emailCta": "Email"
   },
@@ -338,7 +338,7 @@
       },
       {
         "question": "Can I connect multiple locations?",
-        "answer": "Yes. You can connect up to 22 locations in one account. Each location is configured independently: its own menu, hours, delivery zones and payment settings"
+        "answer": "For a single location — 4,900 ₽/month, everything included. For chains with 2+ locations — custom pricing. Contact support and we'll tailor the plan to your scale"
       },
       {
         "question": "How does order payment work?",

@@ -5,32 +5,32 @@ export const FALLBACK_PRICING_PLANS: PricingPlan[] = [
   {
     code: "license-1-month",
     months: 1,
-    priceRub: 12000,
-    pricePerMonth: 12000,
+    priceRub: 4900,
+    pricePerMonth: 4900,
     discountPercent: 0,
     isPopular: false,
   },
   {
     code: "license-3-months",
     months: 3,
-    priceRub: 32400,
-    pricePerMonth: 10800,
+    priceRub: 13200,
+    pricePerMonth: 4400,
     discountPercent: 10,
     isPopular: false,
   },
   {
     code: "license-6-months",
     months: 6,
-    priceRub: 61200,
-    pricePerMonth: 10200,
+    priceRub: 24900,
+    pricePerMonth: 4150,
     discountPercent: 15,
     isPopular: true,
   },
   {
     code: "license-12-months",
     months: 12,
-    priceRub: 108000,
-    pricePerMonth: 9000,
+    priceRub: 44100,
+    pricePerMonth: 3675,
     discountPercent: 25,
     isPopular: false,
   },
@@ -64,7 +64,7 @@ interface ApiSystemLimit {
 }
 
 const POPULAR_MONTHS = 6;
-const BASE_MONTH_PRICE_FALLBACK = 12000;
+const BASE_MONTH_PRICE_FALLBACK = 4900;
 
 function apiPlansToPricing(plans: ApiLicensePlan[]): PricingPlan[] {
   const activePlans = plans
