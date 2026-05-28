@@ -9,6 +9,7 @@ import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section"
 import { TryDemoSection } from "@/components/sections/try-demo/try-demo-section";
 import { HowItWorksSection } from "@/components/sections/how-it-works/how-it-works-section";
 import { ComparisonSection } from "@/components/sections/comparison/comparison-section";
+import { SecuritySection } from "@/components/sections/security/security-section";
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
@@ -33,6 +34,7 @@ export default async function LandingPage() {
         <TryDemoSection />
         <HowItWorksSection />
         <ComparisonSection />
+        <SecuritySection />
         <PricingSection plans={plans} limits={limits} />
         <FaqSection />
         <CtaSection />

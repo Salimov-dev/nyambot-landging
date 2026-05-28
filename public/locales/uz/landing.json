@@ -290,6 +290,47 @@
       "price": "To'lov modeli"
     }
   },
+  "security": {
+    "label": "Xavfsizlik",
+    "title": "Ma'lumotlaringiz himoyalangan",
+    "subtitle": "Rossiya Federatsiyasining «Shaxsiy ma'lumotlar to'g'risida»gi 152-ФЗ qonuniga rioya qilamiz. Ma'lumotlar Rossiyada saqlanadi, himoyalangan kanallar orqali uzatiladi va uchinchi shaxslarga berilmaydi",
+    "imageAlt": "Nyambot ma'lumotlari xavfsizligi — 152-ФЗ ga muvofiqlik",
+    "items": {
+      "fz152": {
+        "title": "152-ФЗ ga muvofiq",
+        "description": "Shaxsiy ma'lumotlar to'g'risidagi federal qonun doirasida ishlaymiz"
+      },
+      "localization": {
+        "title": "Ma'lumotlar bazasi RFda",
+        "description": "Serverlar va zaxira nusxalari Rossiya hududida joylashgan"
+      },
+      "encryption": {
+        "title": "Ma'lumotlarni shifrlash",
+        "description": "Uzatishda HTTPS/TLS, saqlashda sezgir ma'lumotlarni shifrlash"
+      },
+      "madeInRussia": {
+        "title": "Rossiyada ishlab chiqilgan",
+        "description": "Rossiyalik ishlab chiqish jamoasi va RFdan texnik yordam"
+      },
+      "standards": {
+        "title": "Zamonaviy standartlar",
+        "description": "Muntazam tekshiruvlar, xavfsizlik yangilanishlari va kirishni boshqarish"
+      },
+      "noThirdParty": {
+        "title": "Uchinchi shaxslarga bermaymiz",
+        "description": "Mijozlar ma'lumotlari muassasaga tegishli — biz ularni sotmaymiz va ulashmaymiz"
+      }
+    },
+    "chips": {
+      "backups": "Muntazam zaxira nusxalari",
+      "policy": "Shaffof maxfiylik siyosati",
+      "deletion": "So'rov asosida o'chirish huquqi",
+      "minData": "Faqat zarur bo'lganlarini yig'amiz",
+      "supportRu": "RFdan yordam"
+    },
+    "privacyLink": "Maxfiylik siyosati",
+    "offerLink": "Ommaviy taklif"
+  },
   "pricing": {
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",

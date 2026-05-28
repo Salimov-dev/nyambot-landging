@@ -287,6 +287,47 @@
       "price": "Pricing model"
     }
   },
+  "security": {
+    "label": "Security",
+    "title": "Your data is protected",
+    "subtitle": "We comply with Russian Federal Law No. 152-FZ on Personal Data. Data is stored in Russia, transmitted over secure channels, and never shared with third parties",
+    "imageAlt": "Nyambot data security — compliance with 152-FZ",
+    "items": {
+      "fz152": {
+        "title": "152-FZ compliant",
+        "description": "We operate under the Russian Federal Law on Personal Data"
+      },
+      "localization": {
+        "title": "Database in Russia",
+        "description": "Servers and backups are located within the Russian Federation"
+      },
+      "encryption": {
+        "title": "Data encryption",
+        "description": "HTTPS/TLS in transit, encryption of sensitive data at rest"
+      },
+      "madeInRussia": {
+        "title": "Made in Russia",
+        "description": "Russian development team and local technical support"
+      },
+      "standards": {
+        "title": "Modern standards",
+        "description": "Regular audits, security updates and access control"
+      },
+      "noThirdParty": {
+        "title": "No third-party sharing",
+        "description": "Customer data belongs to the venue — we don't sell or share it"
+      }
+    },
+    "chips": {
+      "backups": "Regular backups",
+      "policy": "Transparent privacy policy",
+      "deletion": "Right to deletion on request",
+      "minData": "We collect only what's necessary",
+      "supportRu": "Support based in Russia"
+    },
+    "privacyLink": "Privacy policy",
+    "offerLink": "Public offer"
+  },
   "pricing": {
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",

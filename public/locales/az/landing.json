@@ -290,6 +290,47 @@
       "price": "Ödəniş modeli"
     }
   },
+  "security": {
+    "label": "Təhlükəsizlik",
+    "title": "Məlumatlarınız qorunur",
+    "subtitle": "Rusiya Federasiyasının «Şəxsi məlumatlar haqqında» 152-ФЗ saylı qanununa uyğunuq. Məlumatlar Rusiyada saxlanılır, qorunan kanallarla ötürülür və üçüncü şəxslərə verilmir",
+    "imageAlt": "Nyambot məlumat təhlükəsizliyi — 152-ФЗ-ə uyğunluq",
+    "items": {
+      "fz152": {
+        "title": "152-ФЗ-ə uyğun",
+        "description": "Şəxsi məlumatlar haqqında federal qanun çərçivəsində işləyirik"
+      },
+      "localization": {
+        "title": "Verilənlər bazası RF-də",
+        "description": "Serverlər və ehtiyat nüsxələri Rusiya ərazisində yerləşir"
+      },
+      "encryption": {
+        "title": "Məlumatların şifrələnməsi",
+        "description": "Ötürmə zamanı HTTPS/TLS, saxlama zamanı həssas məlumatların şifrələnməsi"
+      },
+      "madeInRussia": {
+        "title": "Rusiyada hazırlanıb",
+        "description": "Rusiya inkişaf komandası və RF-dən texniki dəstək"
+      },
+      "standards": {
+        "title": "Müasir standartlar",
+        "description": "Müntəzəm yoxlamalar, təhlükəsizlik yeniləmələri və giriş nəzarəti"
+      },
+      "noThirdParty": {
+        "title": "Üçüncü şəxslərə vermirik",
+        "description": "Müştəri məlumatları müəssisəyə aiddir — biz onları satmırıq və paylaşmırıq"
+      }
+    },
+    "chips": {
+      "backups": "Müntəzəm ehtiyat nüsxələri",
+      "policy": "Şəffaf məxfilik siyasəti",
+      "deletion": "Sorğu əsasında silinmə hüququ",
+      "minData": "Yalnız lazım olanı toplayırıq",
+      "supportRu": "RF-dən dəstək"
+    },
+    "privacyLink": "Məxfilik siyasəti",
+    "offerLink": "Açıq təklif"
+  },
   "pricing": {
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
