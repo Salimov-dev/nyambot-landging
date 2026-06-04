@@ -28,6 +28,18 @@ const FEATURES = [
     mockupVideo: "/videos/phone/feature-messengers.mp4",
   },
   {
+    id: "network",
+    tagKey: "features.items.network.tag",
+    titleKey: "features.items.network.title",
+    descriptionKey: "features.items.network.description",
+    pointsKey: "features.items.network.points",
+    icon: "🌐",
+    accentColor: "#15aabf",
+    mockupType: "phone" as "phone" | "notebook",
+    // TODO: временный ассет — заменить на мокап выбора локации
+    mockupImage: "/images/sections/first_service.png",
+  },
+  {
     id: "modernUI",
     tagKey: "features.items.modernUI.tag",
     titleKey: "features.items.modernUI.title",
@@ -62,6 +74,17 @@ const FEATURES = [
     accentColor: "#1677ff",
     mockupType: "notebook" as "phone" | "notebook",
     mockupImage: "/images/sections/monitoring.png",
+  },
+  {
+    id: "posIiko",
+    tagKey: "features.items.posIiko.tag",
+    titleKey: "features.items.posIiko.title",
+    descriptionKey: "features.items.posIiko.description",
+    pointsKey: "features.items.posIiko.points",
+    icon: "🍳",
+    accentColor: "#7048e8",
+    mockupType: "banner" as "phone" | "notebook" | "banner",
+    mockupImage: "/images/sections/iiko_int.png",
   },
   {
     id: "menuCustomization",
@@ -114,6 +137,29 @@ const FEATURES = [
     mockupVideoContain: true,
   },
   {
+    id: "kitchen",
+    tagKey: "features.items.kitchen.tag",
+    titleKey: "features.items.kitchen.title",
+    descriptionKey: "features.items.kitchen.description",
+    pointsKey: "features.items.kitchen.points",
+    icon: "👨‍🍳",
+    accentColor: "#e8590c",
+    mockupType: "phone" as "phone" | "notebook",
+    // TODO: временный ассет — третье изображение будет позже
+    mockupImage: "/images/sections/crew_admin.png",
+  },
+  {
+    id: "delivery",
+    tagKey: "features.items.delivery.tag",
+    titleKey: "features.items.delivery.title",
+    descriptionKey: "features.items.delivery.description",
+    pointsKey: "features.items.delivery.points",
+    icon: "📦",
+    accentColor: "#f76707",
+    mockupType: "banner" as "phone" | "notebook" | "banner",
+    mockupImage: "/images/sections/yand_delivery_int.png",
+  },
+  {
     id: "payment",
     tagKey: "features.items.payment.tag",
     titleKey: "features.items.payment.title",
@@ -152,18 +198,19 @@ const FEATURES = [
     mockupImage: "/images/sections/day_offer.png",
     mockupVideo: "/videos/phone/feature-scheduled-send.mp4",
   },
-  {
-    id: "languages",
-    tagKey: "features.items.languages.tag",
-    titleKey: "features.items.languages.title",
-    descriptionKey: "features.items.languages.description",
-    pointsKey: "features.items.languages.points",
-    icon: "🌍",
-    accentColor: "#f5a623",
-    mockupType: "phone" as "phone" | "notebook",
-    mockupImage: "/images/sections/multi_language.png",
-    mockupVideo: "/videos/phone/feature-languages.mp4",
-  },
+  // Секция «Весь сервис говорит на вашем языке» временно скрыта (не удалять)
+  // {
+  //   id: "languages",
+  //   tagKey: "features.items.languages.tag",
+  //   titleKey: "features.items.languages.title",
+  //   descriptionKey: "features.items.languages.description",
+  //   pointsKey: "features.items.languages.points",
+  //   icon: "🌍",
+  //   accentColor: "#f5a623",
+  //   mockupType: "phone" as "phone" | "notebook",
+  //   mockupImage: "/images/sections/multi_language.png",
+  //   mockupVideo: "/videos/phone/feature-languages.mp4",
+  // },
   {
     id: "selfService",
     tagKey: "features.items.selfService.tag",
@@ -250,6 +297,7 @@ function FeatureBlock({
   const { ref, isInView } = useScrollAnimation();
   const points = t(feature.pointsKey, { returnObjects: true }) as string[];
   const isNotebook = feature.mockupType === "notebook";
+  const isBanner = feature.mockupType === "banner";
   const textSpan = isNotebook ? 10 : 12;
   const mockupSpan = isNotebook ? 14 : 12;
 
@@ -381,7 +429,21 @@ function FeatureBlock({
                   background: `radial-gradient(circle, ${feature.accentColor}22 0%, transparent 65%)`,
                 }}
               />
-              {isNotebook ? (
+              {isBanner ? (
+                <div className={styles.bannerCard}>
+                  {"mockupImage" in feature && feature.mockupImage ? (
+                    <Image
+                      src={feature.mockupImage}
+                      alt={t(feature.titleKey)}
+                      fill
+                      sizes="560px"
+                      className={styles.bannerImage}
+                    />
+                  ) : (
+                    <div className={styles.phoneScreen} />
+                  )}
+                </div>
+              ) : isNotebook ? (
                 <NotebookMockup>
                   {"mockupImage" in feature && feature.mockupImage ? (
                     <Image

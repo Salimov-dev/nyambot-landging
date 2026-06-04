@@ -13,6 +13,7 @@ export type MetrikaGoal =
   | "click_pricing"
   | "scroll_pricing"
   | "scroll_features"
+  | "click_switch"
   | "click_tg_support"
   | "click_tg_bot"
   | "click_max_demo"

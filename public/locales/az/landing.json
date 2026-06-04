@@ -8,7 +8,7 @@
     "openCrm": "CRM-i aç"
   },
   "hero": {
-    "badge": "🔥 Telegram + MAX · 7 dil",
+    "badge": "🔥 MAX + Telegram · iiko · Яндекс.Доставка",
     "title": "Öz çatdırılma xidmətiniz <em>MAX və Telegram</em>-da. Aqreqatorsuz",
     "subtitle": "Sifarişləri birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz müştəri bazası və çatdırılma üzərində tam nəzarət",
     "cta": "Pulsuz sınayın",
@@ -16,9 +16,18 @@
     "trial": "7 gün pulsuz, kart əlavə etmədən"
   },
   "stats": {
-    "commission": { "value": "0%", "label": "Hər sifarişdən komissiya" },
-    "messengers": { "value": "2", "label": "Messencer: Telegram və MAX" },
-    "trial": { "value": "7", "label": "Pulsuz dövrün günləri" },
+    "commission": {
+      "value": "0%",
+      "label": "Hər sifarişdən komissiya"
+    },
+    "messengers": {
+      "value": "2",
+      "label": "Messencer: Telegram və MAX"
+    },
+    "trial": {
+      "value": "7",
+      "label": "Pulsuz dövrün günləri"
+    },
     "savings": {
       "value": "45%-ə qədər",
       "label": "Aqreqatorlara nisbətən qənaət"
@@ -290,6 +299,40 @@
       "price": "Ödəniş modeli"
     }
   },
+  "switch": {
+    "label": "Nyambot-a keçid",
+    "title": "Sifarişləri başqa xidmətdə qəbul edirsən? Nyambot-a keç",
+    "subtitle": "Aqreqator və ya başqa bot-xidmətlə işləyirsən — 6 ay üçün 50% endirim veririk və menyu ilə müştəri bazasını köçürməyə kömək edirik. Kanalın səndə qalır, sadəcə indi onu Nyambot idarə edir",
+    "badge": "6 ay üçün −50%",
+    "steps": {
+      "0": {
+        "title": "Müraciət və köçürmə planı",
+        "description": "Müraciət edirsən, cari xidmətini öyrənir və menyuna və proseslərinə uyğun köçürmə planı hazırlayırıq"
+      },
+      "1": {
+        "title": "Məlumatları köçürməyə kömək edirik",
+        "description": "Menyu, məhsullar və müştəri bazasını yükləməkdə məsləhət və kömək edirik ki, köçürmə zamanı heç nə itməsin"
+      },
+      "2": {
+        "title": "Kanalını qoşuruq",
+        "description": "Botu MAX və Telegramda brendinə uyğun qururuq. Kanal səndə və abunəçilərində qalır, sadəcə indi onu Nyambot idarə edir"
+      },
+      "3": {
+        "title": "İşə salma və dəstək",
+        "description": "Sifariş qəbulunu işə salır və əlaqədə qalırıq, hər addımda öyrəşməyə kömək edirik"
+      }
+    },
+    "movesTitle": "Köçürməyə kömək edirik",
+    "moves": {
+      "0": "Müştəri bazası və kontaktlar",
+      "1": "Menyu, məhsullar və kateqoriyalar",
+      "2": "Messencerlərdə kanal və abunəçilər",
+      "3": "Promo-kodlar və loyallıq proqramı"
+    },
+    "button": "50% endirimlə keçid",
+    "compare": "Cari xidmətlə müqayisə",
+    "hint": "6 ay üçün 50% endirim · Baza köçürülməsi pulsuz · Hər addımda kömək edirik"
+  },
   "security": {
     "label": "Təhlükəsizlik",
     "title": "Məlumatlarınız qorunur",
@@ -338,7 +381,12 @@
     "popular": "Sərfəli",
     "perMonth": "aylıq",
     "totalBilled": "{{total}} silinir",
-    "months": { "1": "1 ay", "3": "3 ay", "6": "6 ay", "12": "12 ay" },
+    "months": {
+      "1": "1 ay",
+      "3": "3 ay",
+      "6": "6 ay",
+      "12": "12 ay"
+    },
     "cta": "Qoşul",
     "included": "İstənilən tarifə nə daxildir",
     "includedItems": [

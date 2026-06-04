@@ -46,6 +46,23 @@
   background: var(--bg);
 }
 
+.bannerCard {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.bannerImage {
+  object-fit: cover;
+  object-position: center center;
+}
+
 .phoneScreenImage {
   position: absolute;
   inset: 0;

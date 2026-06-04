@@ -8,7 +8,7 @@
     "openCrm": "CRM ochish"
   },
   "hero": {
-    "badge": "🔥 Telegram + MAX · 7 til",
+    "badge": "🔥 MAX + Telegram · iiko · Яндекс.Доставка",
     "title": "O'z yetkazib berish xizmatingiz <em>MAX va Telegram</em>da. Agregatorlarsiz",
     "subtitle": "Buyurtmalarni messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
@@ -16,9 +16,18 @@
     "trial": "7 kun bepul, karta bog'lashsiz"
   },
   "stats": {
-    "commission": { "value": "0%", "label": "Har bir buyurtmadan komissiya" },
-    "messengers": { "value": "2", "label": "Messenjer: Telegram va MAX" },
-    "trial": { "value": "7", "label": "Bepul davr kunlari" },
+    "commission": {
+      "value": "0%",
+      "label": "Har bir buyurtmadan komissiya"
+    },
+    "messengers": {
+      "value": "2",
+      "label": "Messenjer: Telegram va MAX"
+    },
+    "trial": {
+      "value": "7",
+      "label": "Bepul davr kunlari"
+    },
     "savings": {
       "value": "45% gacha",
       "label": "Agregatorlarga nisbatan tejash"
@@ -290,6 +299,40 @@
       "price": "To'lov modeli"
     }
   },
+  "switch": {
+    "label": "Nyambot-ga ko‘chish",
+    "title": "Buyurtmalarni boshqa xizmatda qabul qilyapsizmi? Nyambot-ga ko‘ching",
+    "subtitle": "Agregator yoki boshqa bot-xizmat bilan ishlayapsizmi — 6 oyga 50% chegirma beramiz va menyu hamda mijozlar bazasini ko‘chirishga yordam beramiz. Kanalingiz o‘zingizda qoladi, endi uni Nyambot boshqaradi",
+    "badge": "6 oyga −50%",
+    "steps": {
+      "0": {
+        "title": "Ariza va ko‘chish rejasi",
+        "description": "Ariza qoldirasiz, joriy xizmatingizni o‘rganamiz va menyu hamda jarayonlaringizga mos ko‘chish rejasini tuzamiz"
+      },
+      "1": {
+        "title": "Ma’lumotlarni ko‘chirishga yordam beramiz",
+        "description": "Menyu, mahsulotlar va mijozlar bazasini yuklashda maslahat va yordam beramiz, ko‘chishda hech narsa yo‘qolmasligi uchun"
+      },
+      "2": {
+        "title": "Kanalingizni ulaymiz",
+        "description": "Botni MAX va Telegramda brendingiz ostida sozlaymiz. Kanal o‘zingizda va obunachilaringizda qoladi, endi uni Nyambot boshqaradi"
+      },
+      "3": {
+        "title": "Ishga tushirish va qo‘llab-quvvatlash",
+        "description": "Buyurtma qabulini ishga tushiramiz va aloqada bo‘lamiz, har bosqichda moslashishga yordam beramiz"
+      }
+    },
+    "movesTitle": "Ko‘chirishga yordam beramiz",
+    "moves": {
+      "0": "Mijozlar bazasi va kontaktlar",
+      "1": "Menyu, mahsulotlar va toifalar",
+      "2": "Messenjerlardagi kanal va obunachilar",
+      "3": "Promo-kodlar va sodiqlik dasturi"
+    },
+    "button": "50% chegirma bilan o‘tish",
+    "compare": "Joriy xizmat bilan solishtirish",
+    "hint": "6 oyga 50% chegirma · Bazani ko‘chirish bepul · Har bosqichda yordam beramiz"
+  },
   "security": {
     "label": "Xavfsizlik",
     "title": "Ma'lumotlaringiz himoyalangan",
@@ -338,7 +381,12 @@
     "popular": "Foydali",
     "perMonth": "oyiga",
     "totalBilled": "{{total}} hisobdan chiqariladi",
-    "months": { "1": "1 oy", "3": "3 oy", "6": "6 oy", "12": "12 oy" },
+    "months": {
+      "1": "1 oy",
+      "3": "3 oy",
+      "6": "6 oy",
+      "12": "12 oy"
+    },
     "cta": "Ulash",
     "included": "Har qanday tarifga nima kiradi",
     "includedItems": [

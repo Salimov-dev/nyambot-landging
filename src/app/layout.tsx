@@ -2,34 +2,36 @@ import type { Metadata } from "next";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Providers } from "@/providers/providers";
 import { YandexMetrika } from "@/components/ui/analytics/yandex-metrika";
+import { StructuredData } from "@/components/common/structured-data/structured-data";
 import { geistSans, geistMono } from "@/lib/fonts";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${BRAND_CONFIG.name} — Ваше заведение в МАХ и ТГ. Без агрегаторов`,
+    default: `${BRAND_CONFIG.name} — вся сеть в одном канале MAX и Telegram`,
     template: `%s | ${BRAND_CONFIG.name}`,
   },
   description:
-    "Всё включено: мини-приложение, CRM, приложение для админа и курьеров, акции, лояльность, промокоды, 7 языков. 0% комиссии. 7 дней бесплатно.",
+    "Один бот в MAX и Telegram на всю сеть точек: своя база клиентов, повторные заказы без комиссии агрегатора, CRM, приложение «Команда», интеграция с iiko и доставка через Яндекс.Доставку. 7 дней бесплатно.",
   keywords: [
     "Нямбот",
+    "один бот на сеть точек",
+    "бот для сети ресторанов",
     "ресторан Telegram бот",
     "кафе Telegram бот",
-    "доставка еды Telegram",
     "MAX бот ресторан",
     "мини-приложение для ресторана",
     "мини-приложение для кафе",
     "CRM для ресторана",
     "CRM для заведения",
-    "заказы без агрегаторов",
+    "собственный канал продаж ресторан",
+    "повторные заказы без комиссии",
     "приём заказов в мессенджере",
-    "доставка еды без комиссии",
-    "замена Яндекс Еды",
-    "ресторан без агрегатора",
-    "заведение без агрегатора",
-    "курьерское приложение для заведения",
+    "iiko интеграция",
+    "Яндекс.Доставка для ресторана",
+    "доставка без своего штата курьеров",
+    "приложение для администратора и курьера",
   ],
   metadataBase: new URL(BRAND_CONFIG.siteUrl),
   openGraph: {
@@ -37,23 +39,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     url: BRAND_CONFIG.siteUrl,
-    title: `${BRAND_CONFIG.name} — Ваше заведение в МАХ и ТГ. Без агрегаторов`,
+    title: `${BRAND_CONFIG.name} — вся сеть в одном канале MAX и Telegram`,
     description:
-      "Принимайте заказы через Telegram и MAX без агрегаторов. 0% комиссии, CRM, курьерское приложение — всё включено. 7 дней бесплатно.",
+      "Веди всю сеть через один канал в MAX и Telegram, работай со своими клиентами напрямую — без комиссии с чека. CRM, приложение «Команда», iiko, доставка через Яндекс.Доставку. 7 дней бесплатно.",
     images: [
       {
         url: "/images/nyambot_logo_square.png",
         width: 512,
         height: 512,
-        alt: "Нямбот — заказы через Telegram и MAX",
+        alt: "Нямбот — вся сеть в одном канале MAX и Telegram",
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: `${BRAND_CONFIG.name} — Ваше заведение в МАХ и ТГ`,
+    title: `${BRAND_CONFIG.name} — вся сеть в одном канале MAX и Telegram`,
     description:
-      "Принимайте заказы через Telegram и MAX без агрегаторов. 0% комиссии.",
+      "Один канал в MAX и Telegram на всю сеть. Свои клиенты, своя маржа, без комиссии агрегатора.",
     images: ["/images/nyambot_logo_square.png"],
   },
   icons: {
@@ -72,6 +74,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
+        <StructuredData />
         <script
           dangerouslySetInnerHTML={{
             __html: `if ("scrollRestoration" in history) { history.scrollRestoration = "manual"; } window.scrollTo(0, 0);`,

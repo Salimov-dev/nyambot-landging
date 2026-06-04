@@ -8,7 +8,7 @@
     "openCrm": "Open CRM"
   },
   "hero": {
-    "badge": "🔥 Telegram + MAX · 7 languages",
+    "badge": "🔥 MAX + Telegram · iiko · Яндекс.Доставка",
     "title": "Your own delivery in <em>MAX and Telegram</em>. No aggregators",
     "subtitle": "Accept orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
     "cta": "Try for free",
@@ -16,10 +16,22 @@
     "trial": "7 days free, no card required"
   },
   "stats": {
-    "commission": { "value": "0%", "label": "Commission per order" },
-    "messengers": { "value": "2", "label": "Messengers: Telegram and MAX" },
-    "trial": { "value": "7", "label": "Days of free trial" },
-    "savings": { "value": "up to 45%", "label": "Savings vs aggregators" }
+    "commission": {
+      "value": "0%",
+      "label": "Commission per order"
+    },
+    "messengers": {
+      "value": "2",
+      "label": "Messengers: Telegram and MAX"
+    },
+    "trial": {
+      "value": "7",
+      "label": "Days of free trial"
+    },
+    "savings": {
+      "value": "up to 45%",
+      "label": "Savings vs aggregators"
+    }
   },
   "features": {
     "label": "Features",
@@ -286,6 +298,40 @@
       "branding": "Branding",
       "price": "Pricing model"
     }
+  },
+  "switch": {
+    "label": "Move to Nyambot",
+    "title": "Already taking orders in another service? Move to Nyambot",
+    "subtitle": "Working with an aggregator or another bot service — we will give you 50% off for 6 months and help you move your menu and customer base. Your channel stays with you, it is just now managed by Nyambot",
+    "badge": "−50% for 6 months",
+    "steps": {
+      "0": {
+        "title": "Request and migration plan",
+        "description": "You send a request, we review your current service and prepare a migration plan for your menu and workflows"
+      },
+      "1": {
+        "title": "We help you move your data",
+        "description": "We guide and help you upload your menu, products and customer base so nothing is lost in the move"
+      },
+      "2": {
+        "title": "We connect your channel",
+        "description": "We set up the bot in MAX and Telegram under your brand. Your channel stays with you and its subscribers, it is just now managed by Nyambot"
+      },
+      "3": {
+        "title": "Launch and support",
+        "description": "We launch order taking and stay in touch, helping you settle in at every step"
+      }
+    },
+    "movesTitle": "We help you move",
+    "moves": {
+      "0": "Customer base and contacts",
+      "1": "Menu, products and categories",
+      "2": "Channel and subscribers in messengers",
+      "3": "Promo codes and loyalty program"
+    },
+    "button": "Switch with 50% off",
+    "compare": "Compare with your current service",
+    "hint": "50% off for 6 months · Free data migration · We help at every step"
   },
   "security": {
     "label": "Security",
