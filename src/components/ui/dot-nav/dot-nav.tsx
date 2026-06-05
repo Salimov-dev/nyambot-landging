@@ -12,7 +12,6 @@ const SECTIONS: { id: string; label: string; goal: MetrikaGoal | null }[] = [
   { id: "crm-demo", label: "CRM", goal: null },
   { id: "try-demo", label: "Демо", goal: null },
   { id: "how-it-works", label: "Как работает", goal: null },
-  { id: "comparison", label: "Сравнение", goal: null },
   { id: "switch", label: "Переезд", goal: null },
   { id: "security", label: "Безопасность", goal: null },
   { id: "pricing", label: "Тарифы", goal: "scroll_pricing" },

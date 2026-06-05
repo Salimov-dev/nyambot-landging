@@ -24,11 +24,6 @@ export function SwitchSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
 
-  const handleCompare = () => {
-    const el = document.getElementById("comparison");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section id="switch" className={styles.section}>
       <div className={styles.glow} />
@@ -161,14 +156,6 @@ export function SwitchSection() {
               onClick={() => reachGoal("click_switch")}
             >
               {t("switch.button")}
-            </Button>
-            <Button
-              type="default"
-              size="large"
-              className={styles.secondaryBtn}
-              onClick={handleCompare}
-            >
-              {t("switch.compare")}
             </Button>
           </Flex>
 

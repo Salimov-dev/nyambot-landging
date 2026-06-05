@@ -36,8 +36,8 @@ const FEATURES = [
     icon: "🌐",
     accentColor: "#15aabf",
     mockupType: "phone" as "phone" | "notebook",
-    // TODO: временный ассет — заменить на мокап выбора локации
     mockupImage: "/images/sections/first_service.png",
+    mockupVideo: "/videos/phone/feature-combo.mp4",
   },
   {
     id: "modernUI",
@@ -436,7 +436,7 @@ function FeatureBlock({
                       src={feature.mockupImage}
                       alt={t(feature.titleKey)}
                       fill
-                      sizes="560px"
+                      sizes="360px"
                       className={styles.bannerImage}
                     />
                   ) : (
