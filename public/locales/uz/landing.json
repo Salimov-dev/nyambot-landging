@@ -72,6 +72,17 @@
           "Narxlar va aksiyalar ustidan to'liq nazorat"
         ]
       },
+      "posRkeeper": {
+        "tag": "R-keeper integratsiyasi",
+        "title": "R-keeper ulangan — buyurtmalar to‘g‘ridan-to‘g‘ri kassaga va oshxonaga",
+        "description": "R-keeper'da ishlaysizmi? Nyambot nomenklatura, narxlar va stop-ro‘yxatlarni olib, ularni dolzarb saqlaydi, har bir onlayn buyurtma esa o‘zi kassaga va oshxona ekraniga tushadi — qo‘lda ko‘chirishsiz va ikki marta hisobsiz",
+        "points": [
+          "Nomenklatura va narxlar R-keeper'dan olinadi va o‘zi yangilanadi",
+          "Onlayn buyurtma darhol R-keeper kassasida ro‘yxatga olinadi",
+          "Kassadan stop-ro‘yxat — mavjud bo‘lmagan taomlar mijozlardan yashiriladi",
+          "Hali integratsiyaga tayyor emasmisiz — Nyambot o‘z CRM'ida ham ishlaydi"
+        ]
+      },
       "crm": {
         "tag": "CRM va analitika",
         "title": "Hammasini bitta kabinetdan boshqaring",

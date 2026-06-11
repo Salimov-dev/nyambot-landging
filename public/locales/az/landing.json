@@ -72,6 +72,17 @@
           "Qiymətlər və aksiyalar üzərində tam nəzarət"
         ]
       },
+      "posRkeeper": {
+        "tag": "R-keeper inteqrasiyası",
+        "title": "R-keeper qoşuludur — sifarişlər birbaşa kassaya və mətbəxə",
+        "description": "R-keeper-də işləyirsiniz? Nyambot nomenklaturanı, qiymətləri və stop-siyahıları götürüb aktual saxlayacaq, hər onlayn sifariş isə özü kassaya və mətbəx ekranına düşəcək — əl ilə köçürmə və ikiqat uçot olmadan",
+        "points": [
+          "Nomenklatura və qiymətlər R-keeper-dən götürülür və özü yenilənir",
+          "Onlayn sifariş dərhal R-keeper kassasında qeydə alınır",
+          "Kassadan stop-siyahı — mövcud olmayan yeməklər müştərilərdən gizlənir",
+          "Hələ inteqrasiyaya hazır deyilsiniz — Nyambot öz CRM-ində də işləyir"
+        ]
+      },
       "crm": {
         "tag": "CRM və analitika",
         "title": "Hər şeyi bir kabinetdən idarə edin",

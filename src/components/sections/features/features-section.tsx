@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -23,9 +23,8 @@ const FEATURES = [
     pointsKey: "features.items.messengers.points",
     icon: "💬",
     accentColor: theme.colors.accent,
-    mockupType: "phone" as "phone" | "notebook",
-    mockupImage: "/images/sections/first_service.png",
-    mockupVideo: "/videos/phone/feature-messengers.mp4",
+    mockupType: "banner" as "phone" | "notebook" | "banner",
+    mockupImage: "/images/sections/max-telegram-section.png",
   },
   {
     id: "network",
@@ -35,9 +34,8 @@ const FEATURES = [
     pointsKey: "features.items.network.points",
     icon: "🌐",
     accentColor: "#15aabf",
-    mockupType: "phone" as "phone" | "notebook",
-    mockupImage: "/images/sections/first_service.png",
-    mockupVideo: "/videos/phone/feature-combo.mp4",
+    mockupType: "banner" as "phone" | "notebook" | "banner",
+    mockupImage: "/images/sections/one-bot-network-section.png",
   },
   {
     id: "modernUI",
@@ -60,9 +58,8 @@ const FEATURES = [
     pointsKey: "features.items.noCommission.points",
     icon: "💸",
     accentColor: theme.colors.success,
-    mockupType: "phone" as "phone" | "notebook",
-    mockupImage: "/images/sections/stop_pay.png",
-    mockupVideo: "/videos/phone/feature-no-commission.mp4",
+    mockupType: "banner" as "phone" | "notebook" | "banner",
+    mockupImage: "/images/sections/repeat-orders-no-commission-section.png",
   },
   {
     id: "crm",
@@ -84,7 +81,20 @@ const FEATURES = [
     icon: "🍳",
     accentColor: "#7048e8",
     mockupType: "banner" as "phone" | "notebook" | "banner",
-    mockupImage: "/images/sections/iiko_int.png",
+    mockupImage: "/images/sections/iiko-kitchen-section.png",
+    bannerRatio: "2 / 3",
+  },
+  {
+    id: "posRkeeper",
+    tagKey: "features.items.posRkeeper.tag",
+    titleKey: "features.items.posRkeeper.title",
+    descriptionKey: "features.items.posRkeeper.description",
+    pointsKey: "features.items.posRkeeper.points",
+    icon: "🍽️",
+    accentColor: "#f76707",
+    mockupType: "banner" as "phone" | "notebook" | "banner",
+    mockupImage: "/images/sections/rkeeper-kitchen-section.png",
+    bannerRatio: "2 / 3",
   },
   {
     id: "menuCustomization",
@@ -157,7 +167,7 @@ const FEATURES = [
     icon: "📦",
     accentColor: "#f76707",
     mockupType: "banner" as "phone" | "notebook" | "banner",
-    mockupImage: "/images/sections/yand_delivery_int.png",
+    mockupImage: "/images/sections/yandex-delivery-section.png",
   },
   {
     id: "payment",
@@ -430,7 +440,16 @@ function FeatureBlock({
                 }}
               />
               {isBanner ? (
-                <div className={styles.bannerCard}>
+                <div
+                  className={styles.bannerCard}
+                  style={
+                    "bannerRatio" in feature && feature.bannerRatio
+                      ? ({
+                          "--banner-ratio": feature.bannerRatio,
+                        } as CSSProperties)
+                      : undefined
+                  }
+                >
                   {"mockupImage" in feature && feature.mockupImage ? (
                     <Image
                       src={feature.mockupImage}

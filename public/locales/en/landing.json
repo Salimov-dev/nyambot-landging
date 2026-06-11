@@ -72,6 +72,17 @@
           "Full control over pricing and promotions"
         ]
       },
+      "posRkeeper": {
+        "tag": "R-keeper integration",
+        "title": "R-keeper connected — orders flow straight to the till and kitchen",
+        "description": "Running R-keeper? Nyambot pulls in your item list, prices and stop-lists and keeps them up to date, while every online order lands in the till and on the kitchen screen on its own — no manual transfer, no double accounting",
+        "points": [
+          "Item list and prices are pulled from R-keeper and refresh automatically",
+          "Online orders are registered in the R-keeper till instantly",
+          "Stop-list from the till — unavailable dishes hide from customers",
+          "Not ready to integrate yet — Nyambot also runs on its own CRM"
+        ]
+      },
       "crm": {
         "tag": "CRM and analytics",
         "title": "Manage everything from one dashboard",
