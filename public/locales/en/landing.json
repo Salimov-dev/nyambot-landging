@@ -8,7 +8,7 @@
     "openCrm": "Open CRM"
   },
   "hero": {
-    "badge": "🔥 MAX + Telegram · iiko · Яндекс.Доставка",
+    "badge": "🔥 MAX + Telegram · iiko · R-Keeper · Яндекс.Доставка",
     "title": "Your own delivery in <em>MAX and Telegram</em>. No aggregators",
     "subtitle": "Accept orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
     "cta": "Try for free",
@@ -432,7 +432,7 @@
       },
       {
         "question": "Is there integration with iiko or R-Keeper?",
-        "answer": "Currently there is no direct integration with POS systems. Nyambot works as a standalone platform: menu, orders, customers and delivery are managed through our CRM"
+        "answer": "Yes. Nyambot integrates with iiko and R-keeper: menu, prices, stop-lists and orders sync automatically — an order from the messenger is rung up in the till and sent to the kitchen. Nyambot also works fully on its own, without a POS"
       },
       {
         "question": "Can I connect multiple locations?",
@@ -452,7 +452,7 @@
       },
       {
         "question": "Can Nyambot be used without couriers?",
-        "answer": "Yes. You can set up pickup only or dine-in service. The Crew app and courier module are included in the plan but optional"
+        "answer": "Yes. You can set up pickup only or dine-in service — delivery is optional. And if you need delivery but have no couriers of your own, connect Yandex.Delivery: Nyambot places the request once the order is ready and a courier comes for it. The Crew app and your own courier module are included in the plan too, but optional"
       },
       {
         "question": "How quickly can I start accepting orders?",

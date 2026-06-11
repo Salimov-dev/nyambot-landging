@@ -8,7 +8,7 @@
     "openCrm": "CRM-i aç"
   },
   "hero": {
-    "badge": "🔥 MAX + Telegram · iiko · Яндекс.Доставка",
+    "badge": "🔥 MAX + Telegram · iiko · R-Keeper · Яндекс.Доставка",
     "title": "Öz çatdırılma xidmətiniz <em>MAX və Telegram</em>-da. Aqreqatorsuz",
     "subtitle": "Sifarişləri birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz müştəri bazası və çatdırılma üzərində tam nəzarət",
     "cta": "Pulsuz sınayın",
@@ -432,7 +432,7 @@
       },
       {
         "question": "iiko və ya R-Keeper ilə inteqrasiya varmı?",
-        "answer": "Hal-hazırda POS-sistemlərlə birbaşa inteqrasiya yoxdur"
+        "answer": "Bəli. Nyambot iiko və R-keeper ilə inteqrasiya olunur: menyu, qiymətlər, stop-siyahılar və sifarişlər avtomatik sinxronlaşır — messendcerdən gələn sifariş kassada qeydə alınır və mətbəxə göndərilir. Nyambot POS olmadan da tam müstəqil işləyir"
       },
       {
         "question": "Bir neçə ticarət nöqtəsini qoşa bilərəmmi?",
@@ -452,7 +452,7 @@
       },
       {
         "question": "Kuryersiz istifadə etmək olarmı?",
-        "answer": "Bəli. Özü götürmə və ya zalda xidmət — kuryer modulu olmadan"
+        "answer": "Bəli. Yalnız özü götürmə və ya zalda xidmət qura bilərsiniz — çatdırılma məcburi deyil. Çatdırılma lazımdırsa, amma öz kuryeriniz yoxdursa — Yandex.Çatdırılmanı qoşun: sifariş hazır olan kimi Nyambot özü sorğu yerləşdirir və kuryer onun üçün gəlir. Crew tətbiqi və öz kuryer modulunuz da tarifə daxildir, amma istifadəsi məcburi deyil"
       },
       {
         "question": "Sifarişlər qəbul etməyə nə qədər tez başlamaq olar?",

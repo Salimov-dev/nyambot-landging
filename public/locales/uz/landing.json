@@ -8,7 +8,7 @@
     "openCrm": "CRM ochish"
   },
   "hero": {
-    "badge": "🔥 MAX + Telegram · iiko · Яндекс.Доставка",
+    "badge": "🔥 MAX + Telegram · iiko · R-Keeper · Яндекс.Доставка",
     "title": "O'z yetkazib berish xizmatingiz <em>MAX va Telegram</em>da. Agregatorlarsiz",
     "subtitle": "Buyurtmalarni messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
@@ -432,7 +432,7 @@
       },
       {
         "question": "iiko yoki R-Keeper bilan integratsiya bormi?",
-        "answer": "Hozircha POS-tizimlar bilan to'g'ridan-to'g'ri integratsiya yo'q"
+        "answer": "Ha. Nyambot iiko va R-keeper bilan integratsiyalanadi: menyu, narxlar, stop-ro'yxatlar va buyurtmalar avtomatik sinxronlanadi — messenjerdan kelgan buyurtma kassada ro'yxatga olinadi va oshxonaga yuboriladi. Nyambot POS'siz ham to'liq mustaqil ishlaydi"
       },
       {
         "question": "Bir nechta savdo nuqtasini ulash mumkinmi?",
@@ -452,7 +452,7 @@
       },
       {
         "question": "Kuryerlarsiz foydalanish mumkinmi?",
-        "answer": "Ha. O'z-o'zidan olib ketish yoki zalda xizmat ko'rsatish — kuryer modulisiz"
+        "answer": "Ha. Faqat o'z-o'zidan olib ketish yoki zalda xizmat ko'rsatishni sozlash mumkin — yetkazib berish majburiy emas. Agar yetkazib berish kerak bo'lsa-yu, o'z kuryeringiz bo'lmasa — Yandex.Yetkazib berishni ulang: buyurtma tayyor bo'lishi bilan Nyambot o'zi so'rov yuboradi va kuryer kelib oladi. Crew ilovasi va o'z kuryer moduli ham tarifga kiradi, lekin ulardan foydalanish majburiy emas"
       },
       {
         "question": "Buyurtmalarni qabul qilishni qancha tez boshlash mumkin?",
