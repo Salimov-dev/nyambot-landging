@@ -103,7 +103,8 @@
           "Narx qayta hisoblanishi bilan ingredientlarni qo'shish va olib tashlash",
           "Yorqin ingredient rasmlarining tayyor to'plami",
           "Modifikator guruhlari: majburiy tanlov yoki ixtiyoriy",
-          "Xaridor tarkibni ko'radi va allergenni olib tashlashi mumkin"
+          "Xaridor tarkibni ko'radi va allergenni olib tashlashi mumkin",
+          "Modifikatorlar iiko va R-keeper'dan avtomatik tortib olinadi"
         ]
       },
       "comboBuilder": {
@@ -119,17 +120,17 @@
         ]
       },
       "crewAdmin": {
-        "tag": "Crew — administrator uchun",
-        "title": "Administrator birorta buyurtmani o'tkazib yubormasin",
-        "description": "Administrator uchun Crew ilovasi — smartfondan to'liq buyurtmalarni boshqarish. CRM ochmasdan qabul qiling, bekor qiling, kuryerlarni tayinlang",
+        "tag": "Komanda ilovasi",
+        "title": "Komanda ilovasi — administrator, kuryer va oshxona bitta ekranda",
+        "description": "Butun smena uchun bitta ilova: administrator buyurtmalarni qabul qiladi va taqsimlaydi, kuryer manzilni xaritada ko'radi, oshpaz tayyorlikni belgilaydi — barchasi smartfondan, CRM ochmasdan",
         "points": [
-          "Buyurtmani qabul qilish, bekor qilish va xaridorga pul qaytarish",
-          "Kuryerni buyurtmaga tayinlaydi — u qo'shimcha harakatlarsiz qabul qiladi",
-          "Xaridor botda avtomatik bildirishnoma oladi",
-          "Buyurtma va yetkazib berish manzilini xaritada ko'radi",
-          "So'nggi 24 soat uchun buyurtmalar tarixi",
-          "Xaridorga bir bosish bilan qo'ng'iroq",
-          "Har bir holat daqiqagacha qayd etilgan to'liq buyurtma tarixi — «Qabul qilindi»dan «Yetkazildi» yoki «Kechikmoqda»gacha"
+          "Administrator: buyurtmani qabul qilish, bekor qilish va xaridorga pulni qaytarish",
+          "Kuryerni bir teginishda tayinlash — u manzilni darhol xaritada ko'radi",
+          "Kuryer: topshiriqlar, xaridor aloqasi, bir bosishda qo'ng'iroq va «Yetkazildi» belgisi",
+          "Oshpaz: buyurtmalar va «Tayyor» belgisi bo'lgan oshxona ekrani",
+          "Stop-ro'yxatlar: taom tugadi — barcha messenjerlarda xaridorlardan darhol yashiriladi",
+          "Xaridor botda holat bildirishnomalarini avtomatik oladi",
+          "Har bir holatni daqiqagacha qayd etgan to'liq buyurtma tarixi"
         ]
       },
       "crew": {
@@ -215,14 +216,15 @@
         ]
       },
       "aiSearch": {
-        "tag": "AI qidiruv",
-        "title": "Xaridorlar uchun aqlli AI-menyu qidiruvi",
-        "description": "Sun'iy intellekt tabiiy til so'rovlarini tushunadi — xaridorlar taom, tarkib yoki tavsif bo'yicha taomlarni topadilar, uzun menyu bo'ylab aylantirmasdan",
+        "tag": "Nyambotda SI",
+        "title": "Xaridorlar uchun SI-menyu qidiruvi va egasi uchun SI-yordamchi",
+        "description": "Sun'iy intellekt ikkala tomon uchun ishlaydi: xaridorlar taomlarni ta'mi va tarkibi bo'yicha tabiiy tilda topadi, egasi esa CRMda sozlamalar va tahlilni tushuntiradigan yordamchi oladi",
         "points": [
-          "AI tabiiy til so'rovlarini tushunadi",
-          "Ta'm, tarkib va tavsif bo'yicha qidiruv",
-          "Aniq so'z mosligisiz ishlaydi",
-          "7 ta interfeys tilini qo'llab-quvvatlaydi"
+          "SI-qidiruv tabiiy tildagi so'rovlarni tushunadi — ta'mi, tarkibi va tavsifi bo'yicha",
+          "Taomlarni aniq so'z mosligisiz va menyuni aylantirmasdan topadi",
+          "CRMdagi SI-yordamchi menyu, aksiya va yetkazib berishni qanday sozlashni tushuntiradi",
+          "Tahlilni tushunishga yordam beradi va tizim bo'yicha savollarga javob beradi",
+          "Ikkalasi ham 7 tilda ishlaydi"
         ]
       }
     }
@@ -230,7 +232,7 @@
   "crmDemo": {
     "tag": "O'z ishlab chiqishimiz CRM",
     "title": "Muassasangizni yagona kabinetdan boshqaring",
-    "description": "To'liq CRM — uchinchi tomon xizmat emas, o'z ishlab chiqishimiz. Modifikatorli menyu, buyurtmalarni boshqarish, daromad tahlili, marketing aktsiyalari va mijozlar bazasi — qo'shimcha integratsiyalarsiz bir joyda",
+    "description": "To'liq CRM — uchinchi tomon xizmat emas, o'z ishlab chiqishimiz. Modifikatorli menyu, buyurtmalarni boshqarish, daromad tahlili, marketing aktsiyalari va mijozlar bazasi — qo'shimcha integratsiyalarsiz bir joyda. Hammasini to'liq mustaqil ishga tushiring va boshqaring: menyu, narxlar, yetkazib berish zonalari va aksiyalar qo'llab-quvvatlash va dasturchilarsiz sozlanadi",
     "ownDev": "CRM bizning jamoamiz tomonidan noldan yaratilgan — funksionallik va ishonchlilikni to'liq nazorat qilamiz. Uchinchi tomon platformalar yo'q",
     "pricing": "Shaffof narxlash: belgilangan tarif, yashirin komissiyalar va qo'shimcha to'lovlar yo'q",
     "cta": "CRM ni ochish — 7 kun bepul",

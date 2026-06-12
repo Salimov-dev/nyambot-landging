@@ -103,7 +103,8 @@
           "Qiymət yenidən hesablanması ilə inqrediyentlərin əlavəsi və silinməsi",
           "Parlaq inqrediyent şəkillərinin hazır kolleksiyası",
           "Modifikator qrupları: məcburi seçim və ya istəyə görə",
-          "Alıcı tərkibi görür və allergeni silə bilər"
+          "Alıcı tərkibi görür və allergeni silə bilər",
+          "Modifikatorlar iiko və R-keeper-dən avtomatik çəkilir"
         ]
       },
       "comboBuilder": {
@@ -119,17 +120,17 @@
         ]
       },
       "crewAdmin": {
-        "tag": "Crew — inzibatçı üçün",
-        "title": "İnzibatçı heç bir sifarişi qaçırmaz",
-        "description": "İnzibatçı üçün Crew tətbiqi — smartfondan sifarişlərin tam idarəsi. CRM açmadan qəbul edin, ləğv edin, kuryerlər təyin edin",
+        "tag": "Komanda tətbiqi",
+        "title": "Komanda tətbiqi — administrator, kuryer və mətbəx bir ekranda",
+        "description": "Bütün növbə üçün bir tətbiq: administrator sifarişləri qəbul edir və paylayır, kuryer ünvanı xəritədə görür, aşpaz hazır olmanı qeyd edir — hamısı smartfondan, CRM açmadan",
         "points": [
-          "Sifarişi qəbul etmək, ləğv etmək və müştəriyə pul qaytarmaq",
-          "Sifarişə kuryer təyin edir — o əlavə addımlar olmadan qəbul edir",
-          "Müştəri botda avtomatik bildiriş alır",
-          "Sifarişi və çatdırılma ünvanını xəritədə görür",
-          "Son 24 saat üçün sifarişlər tarixi",
-          "Alıcıya bir klikdə zəng",
-          "Hər statusun dəqiqəyə qədər qeydə alındığı tam sifariş tarixi — «Qəbul edildi»dən «Çatdırıldı» və ya «Gecikir»ə qədər"
+          "Administrator: sifarişin qəbulu, ləğvi və müştəriyə pulun qaytarılması",
+          "Bir toxunuşla kuryer təyini — o, ünvanı dərhal xəritədə görür",
+          "Kuryer: tapşırıqlar, müştəri əlaqəsi, bir kliklə zəng və «Çatdırıldı» qeydi",
+          "Aşpaz: sifarişlər və «Hazır» qeydi olan mətbəx ekranı",
+          "Stop-siyahılar: yemək bitdi — bütün messencerlərdə müştərilərdən dərhal gizlədilir",
+          "Müştəri botda status bildirişlərini avtomatik alır",
+          "Hər statusu dəqiqəyədək qeyd edən tam sifariş tarixçəsi"
         ]
       },
       "crew": {
@@ -215,14 +216,15 @@
         ]
       },
       "aiSearch": {
-        "tag": "AI axtarış",
-        "title": "Müştərilər üçün ağıllı AI-menyu axtarışı",
-        "description": "Süni intellekt təbii dil sorğularını başa düşür — müştərilər yeməkləri dad, tərkib və ya təsvir əsasında uzun menyunu sürüşdürmədən tapır",
+        "tag": "Nyambotda AI",
+        "title": "Müştərilər üçün AI menyu axtarışı və sahib üçün AI köməkçi",
+        "description": "Süni intellekt hər iki tərəf üçün işləyir: müştərilər yeməkləri dad və tərkibə görə təbii dildə tapır, sahib isə CRM-də parametrləri və analitikanı izah edən köməkçi alır",
         "points": [
-          "AI təbii dil sorğularını başa düşür",
-          "Dad, tərkib və yemək təsvirinə görə axtarış",
-          "Sözlərin dəqiq uyğunluğu olmadan işləyir",
-          "7 interfeys dilini dəstəkləyir"
+          "AI axtarış təbii dildəki sorğuları anlayır — dad, tərkib və təsvirə görə",
+          "Yeməkləri dəqiq söz uyğunluğu və menyuda sürüşdürmə olmadan tapır",
+          "CRM-dəki AI köməkçi menyu, aksiya və çatdırılmanın necə qurulacağını izah edir",
+          "Analitikanı anlamağa kömək edir və sistem haqqında suallara cavab verir",
+          "Hər ikisi 7 dildə işləyir"
         ]
       }
     }
@@ -230,7 +232,7 @@
   "crmDemo": {
     "tag": "Öz hazırladığımız CRM",
     "title": "Müəssisənizi vahid kabinetdən idarə edin",
-    "description": "Tam CRM — üçüncü tərəf xidmət deyil, öz hazırladığımızdır. Modifikatorlu menyu, sifariş idarəetməsi, gəlir analitikası, marketinq kampaniyaları və müştəri bazası — əlavə inteqrasiyalar olmadan bir yerdə",
+    "description": "Tam CRM — üçüncü tərəf xidmət deyil, öz hazırladığımızdır. Modifikatorlu menyu, sifariş idarəetməsi, gəlir analitikası, marketinq kampaniyaları və müştəri bazası — əlavə inteqrasiyalar olmadan bir yerdə. Hər şeyi tam müstəqil işə salın və idarə edin: menyu, qiymətlər, çatdırılma zonaları və aksiyalar dəstək və proqramçılar olmadan qurulur",
     "ownDev": "CRM komandamız tərəfindən sıfırdan qurulub — funksionallıq və etibarlılıq üzərində tam nəzarət. Heç bir üçüncü tərəf platforma yoxdur",
     "pricing": "Şəffaf qiymətləndirmə: sabit tarif, gizli komissiyalar və əlavə ödənişlər yoxdur",
     "cta": "CRM açmaq — 7 gün pulsuz",

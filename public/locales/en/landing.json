@@ -103,7 +103,8 @@
           "Add and remove ingredients with automatic price recalculation",
           "Built-in collection of vibrant ingredient images",
           "Modifier groups: required choice or optional",
-          "Customer sees the composition and can remove allergens"
+          "Customer sees the composition and can remove allergens",
+          "Modifiers are pulled in automatically from iiko and R-keeper"
         ]
       },
       "comboBuilder": {
@@ -119,17 +120,17 @@
         ]
       },
       "crewAdmin": {
-        "tag": "Crew — for admin",
-        "title": "Admin never misses an order",
-        "description": "Crew app for the admin — full order control from a smartphone. Accept, cancel, and assign couriers without opening CRM",
+        "tag": "Team app",
+        "title": "Team app — admin, courier and kitchen in one screen",
+        "description": "One app for the whole shift: the admin accepts and assigns orders, the courier sees the address on the map, the cook marks dishes ready — all from a smartphone, without opening the CRM",
         "points": [
-          "Accept, cancel orders and refund customers",
-          "Assigns courier to order — courier receives it with no extra steps",
-          "Customer automatically gets a notification in the bot",
-          "Sees order and delivery address on the map",
-          "Order history for the last 24 hours",
-          "Call customer in one tap",
-          "Full order history with every status logged to the minute — from «Accepted» to «Delivered» or «Delayed»"
+          "Admin: accept, cancel an order and refund the customer",
+          "Assign a courier in one tap — they instantly see the address on the map",
+          "Courier: tasks, customer contact, one-tap call and a «Delivered» mark",
+          "Cook: kitchen screen with orders and a «Ready» mark",
+          "Stop lists: a dish runs out — instantly hidden from customers across all messengers",
+          "The customer automatically gets status notifications in the bot",
+          "Full order history with every status logged to the minute"
         ]
       },
       "crew": {
@@ -215,14 +216,15 @@
         ]
       },
       "aiSearch": {
-        "tag": "AI search",
-        "title": "Smart AI-powered menu search for customers",
-        "description": "Artificial intelligence understands natural language queries — customers find dishes by taste, ingredients or description without scrolling through a long menu",
+        "tag": "AI in Nyambot",
+        "title": "AI menu search for customers and an AI assistant for the owner",
+        "description": "Artificial intelligence works both ways: customers find dishes by taste and ingredients in natural language, while the owner gets a CRM assistant that explains settings and analytics",
         "points": [
-          "AI understands natural language queries",
-          "Search by taste, ingredients and dish description",
-          "Works without exact word match",
-          "Supports 7 interface languages"
+          "AI search understands natural-language queries — by taste, ingredients and description",
+          "Finds dishes without exact word matches or scrolling through the menu",
+          "The CRM AI assistant explains how to set up the menu, promotions and delivery",
+          "Helps you make sense of analytics and answers questions about the system",
+          "Both work in 7 languages"
         ]
       }
     }
@@ -230,7 +232,7 @@
   "crmDemo": {
     "tag": "In-house CRM",
     "title": "Manage your venue from a single dashboard",
-    "description": "Full-featured in-house CRM — not a third-party service. Menu with modifiers, order management, revenue analytics, marketing campaigns and customer database — all in one place, no extra integrations",
+    "description": "Full-featured in-house CRM — not a third-party service. Menu with modifiers, order management, revenue analytics, marketing campaigns and customer database — all in one place, no extra integrations. Launch and run everything fully on your own: menu, prices, delivery zones and promotions are set up without support or programmers",
     "ownDev": "CRM built from scratch by our team — full control over features and reliability. No third-party platforms",
     "pricing": "Transparent pricing: fixed tariff, no hidden commissions or surcharges",
     "cta": "Open CRM — 7 days free",

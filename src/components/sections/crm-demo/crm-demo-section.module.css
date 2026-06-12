@@ -1,5 +1,5 @@
 .section {
-  padding: 100px 0;
+  padding: 48px 0 100px;
   position: relative;
   overflow: hidden;
   background: var(--bg);
@@ -71,7 +71,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 64px 0;
+    padding: 32px 0 64px;
   }
   .inner {
     padding: 0 16px;
