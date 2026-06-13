@@ -80,7 +80,11 @@
           "Item list and prices are pulled from R-keeper and refresh automatically",
           "Online orders are registered in the R-keeper till instantly",
           "Stop-list from the till — unavailable dishes hide from customers",
-          "Not ready to integrate yet — Nyambot also runs on its own CRM"
+          "Not ready to integrate yet — Nyambot also runs on its own CRM",
+          "R-keeper loyalty: discounts, bonuses, gifts and coupons — right in the bot and mini app",
+          "Online payment by card and via Yandex.Pay",
+          "Delivery without your own staff — Yandex.Delivery couriers",
+          "Stock balances and stop-lists — always in sync with R-keeper"
         ]
       },
       "crm": {

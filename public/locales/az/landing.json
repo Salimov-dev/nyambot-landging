@@ -80,7 +80,11 @@
           "Nomenklatura və qiymətlər R-keeper-dən götürülür və özü yenilənir",
           "Onlayn sifariş dərhal R-keeper kassasında qeydə alınır",
           "Kassadan stop-siyahı — mövcud olmayan yeməklər müştərilərdən gizlənir",
-          "Hələ inteqrasiyaya hazır deyilsiniz — Nyambot öz CRM-ində də işləyir"
+          "Hələ inteqrasiyaya hazır deyilsiniz — Nyambot öz CRM-ində də işləyir",
+          "R-keeper loyallığı: endirimlər, bonuslar, hədiyyələr və kuponlar — birbaşa botda və mini-tətbiqdə",
+          "Onlayn ödəniş kartla və Yandex.Pay vasitəsilə",
+          "Öz heyətiniz olmadan çatdırılma — Yandex.Delivery kuryerləri",
+          "Anbar qalıqları və stop-listlər — həmişə R-keeper ilə sinxron"
         ]
       },
       "crm": {
