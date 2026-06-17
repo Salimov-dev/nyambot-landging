@@ -7,7 +7,6 @@ import styles from "./dot-nav.module.css";
 
 const SECTIONS: { id: string; label: string; goal: MetrikaGoal | null }[] = [
   { id: "hero", label: "Главная", goal: null },
-  { id: "stats", label: "Статистика", goal: null },
   { id: "features", label: "Возможности", goal: "scroll_features" },
   { id: "crm-demo", label: "CRM", goal: null },
   { id: "try-demo", label: "Демо", goal: null },

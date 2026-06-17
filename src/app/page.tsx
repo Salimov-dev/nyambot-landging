@@ -2,8 +2,8 @@ import { Header } from "@/components/ui/header/header";
 import { Footer } from "@/components/ui/footer/footer";
 import { DotNav } from "@/components/ui/dot-nav/dot-nav";
 import { HeroSection } from "@/components/sections/hero/hero-section";
-import { StatsSection } from "@/components/sections/stats/stats-section";
 import { VideoSection } from "@/components/sections/video/video-section";
+import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
 import { TryDemoSection } from "@/components/sections/try-demo/try-demo-section";
@@ -28,7 +28,7 @@ export default async function LandingPage() {
       <main>
         <HeroSection />
         <VideoSection />
-        <StatsSection />
+        <IntegrationsSection />
         <FeaturesSection />
         <CrmDemoSection />
         <TryDemoSection />
@@ -39,6 +39,7 @@ export default async function LandingPage() {
         <FaqSection />
         <CtaSection />
         <SocialSection />
+        <IntegrationsSection />
       </main>
       <Footer />
     </>

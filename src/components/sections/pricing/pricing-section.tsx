@@ -70,6 +70,23 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
           >
             {t("pricing.subtitle")}
           </Text>
+          <Text
+            style={{
+              display: "block",
+              maxWidth: 860,
+              margin: "28px auto 0",
+              padding: "20px 28px",
+              borderRadius: theme.radius.xl,
+              background: theme.colors.accentBg,
+              border: `1px solid ${theme.colors.accentBorder}`,
+              color: theme.colors.textPrimary,
+              fontSize: 17,
+              fontWeight: 500,
+              lineHeight: 1.65,
+            }}
+          >
+            🎁 {t("pricing.trialNote")}
+          </Text>
         </motion.div>
 
         <Row gutter={[20, 20]} justify="center">
