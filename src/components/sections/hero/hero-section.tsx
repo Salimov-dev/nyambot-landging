@@ -130,9 +130,7 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
-                {t("hero.trial")}
-              </Text>
+              <span className={styles.trialPill}>{t("hero.trial")}</span>
             </motion.div>
           </motion.div>
 

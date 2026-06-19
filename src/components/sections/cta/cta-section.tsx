@@ -56,6 +56,16 @@ export function CtaSection() {
               {t("cta.subtitle")}
             </Text>
 
+            <Flex gap={12} wrap justify="center" className={styles.trialStats}>
+              {(
+                t("cta.trialFeatures", { returnObjects: true }) as string[]
+              ).map((item, i) => (
+                <div key={i} className={styles.trialStat}>
+                  {item}
+                </div>
+              ))}
+            </Flex>
+
             <Flex gap={12} wrap justify="center">
               <Button
                 type="primary"

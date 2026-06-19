@@ -36,6 +36,30 @@
   box-shadow: var(--shadow-glow);
 }
 
+.trialStats {
+  width: 100%;
+  justify-content: center;
+}
+
+.trialStat {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 140, 0, 0.1);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  border-radius: 999px;
+  padding: 7px 18px;
+}
+
+.trialStat::before {
+  content: "✓";
+  color: #ff8c00;
+  margin-right: 6px;
+  font-weight: 700;
+}
+
 .primaryBtn {
   height: 52px !important;
   padding: 0 36px !important;

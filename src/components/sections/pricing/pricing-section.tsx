@@ -286,6 +286,23 @@ function PricingCard({
 
         {/* Price */}
         <Flex vertical gap={4}>
+          <Tag
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              background: theme.colors.successBg,
+              border: `1px solid ${theme.colors.success}44`,
+              color: theme.colors.success,
+              borderRadius: "var(--radius-pill)",
+              fontSize: 12,
+              fontWeight: 700,
+              padding: "3px 10px",
+              marginBottom: 4,
+              width: "fit-content",
+            }}
+          >
+            🎁 {t("pricing.freeTrial")}
+          </Tag>
           <Flex align="baseline" gap={4}>
             <Title
               level={2}

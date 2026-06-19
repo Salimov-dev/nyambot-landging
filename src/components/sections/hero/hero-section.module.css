@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
+  padding: 160px 0 80px;
   overflow: hidden;
   background: var(--gradient-hero);
 }
@@ -164,6 +164,20 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* Trial pill */
+.trialPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-pill);
+  padding: 5px 14px;
+}
+
 /* Scroll hint */
 .scrollHint {
   position: absolute;
@@ -242,7 +256,7 @@
 /* Responsive */
 @media (max-width: 900px) {
   .section {
-    padding: 100px 0 60px;
+    padding: 140px 0 60px;
   }
   .content {
     flex-direction: column;
@@ -274,7 +288,7 @@
 
 @media (max-width: 480px) {
   .section {
-    padding: 88px 0 48px;
+    padding: 128px 0 48px;
   }
   .primaryBtn,
   .secondaryBtn {

@@ -13,7 +13,7 @@
     "subtitle": "Buyurtmalarni messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
     "ctaSecondary": "Imkoniyatlar",
-    "trial": "7 kun bepul, karta bog'lashsiz"
+    "trial": "90 kun bepul — to'liq kirish, karta bog'lashsiz"
   },
   "stats": {
     "commission": {
@@ -25,8 +25,8 @@
       "label": "Messenjer: Telegram va MAX"
     },
     "trial": {
-      "value": "7",
-      "label": "Bepul davr kunlari"
+      "value": "90",
+      "label": "To'liq bepul kirish kunlari"
     },
     "savings": {
       "value": "45% gacha",
@@ -239,8 +239,8 @@
     "description": "To'liq CRM — uchinchi tomon xizmat emas, o'z ishlab chiqishimiz. Modifikatorli menyu, buyurtmalarni boshqarish, daromad tahlili, marketing aktsiyalari va mijozlar bazasi — qo'shimcha integratsiyalarsiz bir joyda. Hammasini to'liq mustaqil ishga tushiring va boshqaring: menyu, narxlar, yetkazib berish zonalari va aksiyalar qo'llab-quvvatlash va dasturchilarsiz sozlanadi",
     "ownDev": "CRM bizning jamoamiz tomonidan noldan yaratilgan — funksionallik va ishonchlilikni to'liq nazorat qilamiz. Uchinchi tomon platformalar yo'q",
     "pricing": "Shaffof narxlash: belgilangan tarif, yashirin komissiyalar va qo'shimcha to'lovlar yo'q",
-    "cta": "CRM ni ochish — 7 kun bepul",
-    "ctaHint": "To'liq kirish · Karta talab qilinmaydi · Demo-kirish majburiyatsiz",
+    "cta": "CRM ni ochish — 90 kun bepul",
+    "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
     "screenPlaceholder": "Bu yerda Nyambot CRM skrinshotи bo'ladi",
     "features": {
       "dashboard": "Daromad va ko'rsatkichlar paneli",
@@ -261,7 +261,7 @@
     "maxCta": "MAX'da ochish",
     "crmHint": "CRM'ni egasi tomonidan baholamoqchimisiz?",
     "crmCta": "CRM'ga ro'yxatdan o'tish",
-    "crmTrial": "7 kun bepul · To'liq kirish · Karta kerak emas"
+    "crmTrial": "90 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas"
   },
   "howItWorks": {
     "label": "Qanday ishlaydi",
@@ -424,7 +424,8 @@
     "customTitle": "Muassasalar tarmog'ingiz bormi?",
     "customSubtitle": "2 va undan ko'p savdo nuqtasi bo'lgan tarmoqlar uchun — individual tarif. Bizga yozing, ko'lamingizga mos shartlarni tanlaymiz",
     "customCta": "Individual tarifni muhokama qilish",
-    "emailCta": "Pochta"
+    "emailCta": "Pochta",
+    "freeTrial": "0 ₽ · birinchi 90 kun"
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar",
@@ -454,7 +455,7 @@
       },
       {
         "question": "Sinov davri qanday ishlaydi?",
-        "answer": "7 kun barcha funksiyalar bilan cheklovsiz bepul. Karta talab qilinmaydi"
+        "answer": "Ro'yxatdan o'tgandan so'ng barcha funksiyalar bilan cheklovsiz 90 kun to'liq bepul kirish. Karta talab qilinmaydi. Bu vaqt ichida botni ishga tushirib, birinchi buyurtmalarni olasiz"
       },
       {
         "question": "Kuryerlarsiz foydalanish mumkinmi?",
@@ -468,10 +469,15 @@
   },
   "cta": {
     "title": "Bugun buyurtmalar qabul qilishni boshlang",
-    "subtitle": "7 kun bepul. Telegram va MAX. Agregatorlarsiz",
+    "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. Agregatorlarsiz o'z kanalingiz",
     "button": "Bepul sinab ko'rish",
     "docs": "Hujjatlarni o'qish",
-    "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz"
+    "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz",
+    "trialFeatures": [
+      "90 kun bepul",
+      "Toʻliq kirish",
+      "Karta kerak emas"
+    ]
   },
   "footer": {
     "description": "Ovqatlanish joylari uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",
@@ -492,5 +498,9 @@
   },
   "video": {
     "socialHeading": "Nyambot haqida ko'proq videolar — ijtimoiy tarmoqlarimizda"
+  },
+  "promoBar": {
+    "text": "🎁 90 kun bepul · Toʻliq kirish · Karta kerak emas",
+    "cta": "Sinab koʻring"
   }
 }

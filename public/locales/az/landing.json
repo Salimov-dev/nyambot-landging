@@ -13,7 +13,7 @@
     "subtitle": "Sifarişləri birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz müştəri bazası və çatdırılma üzərində tam nəzarət",
     "cta": "Pulsuz sınayın",
     "ctaSecondary": "İmkanlar",
-    "trial": "7 gün pulsuz, kart əlavə etmədən"
+    "trial": "90 gün pulsuz — tam giriş, kart əlavə etmədən"
   },
   "stats": {
     "commission": {
@@ -25,8 +25,8 @@
       "label": "Messencer: Telegram və MAX"
     },
     "trial": {
-      "value": "7",
-      "label": "Pulsuz dövrün günləri"
+      "value": "90",
+      "label": "Tam pulsuz giriş günləri"
     },
     "savings": {
       "value": "45%-ə qədər",
@@ -239,8 +239,8 @@
     "description": "Tam CRM — üçüncü tərəf xidmət deyil, öz hazırladığımızdır. Modifikatorlu menyu, sifariş idarəetməsi, gəlir analitikası, marketinq kampaniyaları və müştəri bazası — əlavə inteqrasiyalar olmadan bir yerdə. Hər şeyi tam müstəqil işə salın və idarə edin: menyu, qiymətlər, çatdırılma zonaları və aksiyalar dəstək və proqramçılar olmadan qurulur",
     "ownDev": "CRM komandamız tərəfindən sıfırdan qurulub — funksionallıq və etibarlılıq üzərində tam nəzarət. Heç bir üçüncü tərəf platforma yoxdur",
     "pricing": "Şəffaf qiymətləndirmə: sabit tarif, gizli komissiyalar və əlavə ödənişlər yoxdur",
-    "cta": "CRM açmaq — 7 gün pulsuz",
-    "ctaHint": "Tam giriş · Kart tələb olunmur · Demo-giriş öhdəliksiz",
+    "cta": "CRM açmaq — 90 gün pulsuz",
+    "ctaHint": "Tam giriş · Tam dəstək · Kart tələb olunmur",
     "screenPlaceholder": "Nyambot CRM ekran görüntüsü burada olacaq",
     "features": {
       "dashboard": "Gəlir və metriklər paneli",
@@ -261,7 +261,7 @@
     "maxCta": "MAX-da açın",
     "crmHint": "CRM-ni sahibin tərəfindən qiymətləndirmək istəyirsiniz?",
     "crmCta": "CRM-də qeydiyyatdan keçin",
-    "crmTrial": "7 gün pulsuz · Tam giriş · Kart lazım deyil"
+    "crmTrial": "90 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil"
   },
   "howItWorks": {
     "label": "Necə işləyir",
@@ -424,7 +424,8 @@
     "customTitle": "Müəssisələr şəbəkəniz var?",
     "customSubtitle": "2 və daha çox satış nöqtəsi olan şəbəkələr üçün — fərdi tarif. Bizə yazın, miqyasınıza uyğun şərtlər seçək",
     "customCta": "Fərdi tarifi müzakirə edin",
-    "emailCta": "Poçt"
+    "emailCta": "Poçt",
+    "freeTrial": "0 ₽ · ilk 90 gün"
   },
   "faq": {
     "label": "Tez-tez verilən suallar",
@@ -454,7 +455,7 @@
       },
       {
         "question": "Sınaq dövrü necə işləyir?",
-        "answer": "7 gün bütün funksiyalarla məhdudiyyətsiz pulsuz. Kart tələb olunmur"
+        "answer": "Qeydiyyatdan sonra bütün funksiyalarla məhdudiyyətsiz və tam dəstəklə 90 gün pulsuz giriş açılır. Kart tələb olunmur"
       },
       {
         "question": "Kuryersiz istifadə etmək olarmı?",
@@ -468,10 +469,15 @@
   },
   "cta": {
     "title": "Bu gün sifarişlər qəbul etməyə başlayın",
-    "subtitle": "7 gün pulsuz. Telegram və MAX. Aqreqatorsuz",
+    "subtitle": "90 gün pulsuz. Tam funksionallıq, tam dəstək. Aqreqatorsuz",
     "button": "Pulsuz sınayın",
     "docs": "Sənədləri oxuyun",
-    "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz"
+    "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz",
+    "trialFeatures": [
+      "90 gün pulsuz",
+      "Tam giriş",
+      "Kart tələb olunmur"
+    ]
   },
   "footer": {
     "description": "İaşə müəssisələri üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
@@ -492,5 +498,9 @@
   },
   "video": {
     "socialHeading": "Nyambot haqqında daha çox video — sosial mediamızda"
+  },
+  "promoBar": {
+    "text": "🎁 90 gün pulsuz · Tam giriş · Kart tələb olunmur",
+    "cta": "Sınayın"
   }
 }

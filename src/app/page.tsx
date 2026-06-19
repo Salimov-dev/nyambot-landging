@@ -1,4 +1,5 @@
 import { Header } from "@/components/ui/header/header";
+import { PromoBar } from "@/components/ui/promo-bar/promo-bar";
 import { Footer } from "@/components/ui/footer/footer";
 import { DotNav } from "@/components/ui/dot-nav/dot-nav";
 import { HeroSection } from "@/components/sections/hero/hero-section";
@@ -23,6 +24,7 @@ export default async function LandingPage() {
 
   return (
     <>
+      <PromoBar />
       <Header />
       <DotNav />
       <main>
@@ -39,7 +41,6 @@ export default async function LandingPage() {
         <FaqSection />
         <CtaSection />
         <SocialSection />
-        <IntegrationsSection />
       </main>
       <Footer />
     </>

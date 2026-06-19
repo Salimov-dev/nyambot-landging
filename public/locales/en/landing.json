@@ -13,7 +13,7 @@
     "subtitle": "Accept orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
     "cta": "Try for free",
     "ctaSecondary": "Features",
-    "trial": "7 days free, no card required"
+    "trial": "90 days free — full access, no card required"
   },
   "stats": {
     "commission": {
@@ -25,8 +25,8 @@
       "label": "Messengers: Telegram and MAX"
     },
     "trial": {
-      "value": "7",
-      "label": "Days of free trial"
+      "value": "90",
+      "label": "Days of full free access"
     },
     "savings": {
       "value": "up to 45%",
@@ -239,8 +239,8 @@
     "description": "Full-featured in-house CRM — not a third-party service. Menu with modifiers, order management, revenue analytics, marketing campaigns and customer database — all in one place, no extra integrations. Launch and run everything fully on your own: menu, prices, delivery zones and promotions are set up without support or programmers",
     "ownDev": "CRM built from scratch by our team — full control over features and reliability. No third-party platforms",
     "pricing": "Transparent pricing: fixed tariff, no hidden commissions or surcharges",
-    "cta": "Open CRM — 7 days free",
-    "ctaHint": "Full access · No card required · Free trial, no commitment",
+    "cta": "Open CRM — 90 days free",
+    "ctaHint": "Full access · Full support · No card required",
     "screenPlaceholder": "Nyambot CRM screenshot coming soon",
     "features": {
       "dashboard": "Revenue and metrics dashboard",
@@ -261,7 +261,7 @@
     "maxCta": "Open in MAX",
     "crmHint": "Want to evaluate CRM from the owner's side?",
     "crmCta": "Register in CRM",
-    "crmTrial": "7 days free · Full access · No card required"
+    "crmTrial": "90 days free · Full access · Full support · No card"
   },
   "howItWorks": {
     "label": "How it works",
@@ -424,7 +424,8 @@
     "customTitle": "Running a chain of venues?",
     "customSubtitle": "For chains with 2+ locations — custom pricing. Contact us and we'll tailor the plan to your scale",
     "customCta": "Discuss a custom plan",
-    "emailCta": "Email"
+    "emailCta": "Email",
+    "freeTrial": "0 ₽ · first 90 days"
   },
   "faq": {
     "label": "FAQ",
@@ -454,7 +455,7 @@
       },
       {
         "question": "How does the trial period work?",
-        "answer": "After registration, a 7-day free trial with all features is available. No card required. After the trial, choose a suitable plan"
+        "answer": "After registration, you get 90 days of full free access with all features and no limits. No card required. This gives you time to launch the bot, receive your first orders and see the real value of the service"
       },
       {
         "question": "Can Nyambot be used without couriers?",
@@ -468,10 +469,15 @@
   },
   "cta": {
     "title": "Start accepting orders today",
-    "subtitle": "7 days free. Telegram and MAX. No aggregators and no commissions",
+    "subtitle": "90 days free. Full features, full support. Your own channel — no aggregator fees",
     "button": "Try for free",
     "docs": "Read documentation",
-    "hint": "No card required · Free trial, no commitment"
+    "hint": "No card required · Free trial, no commitment",
+    "trialFeatures": [
+      "90 days free",
+      "Full access",
+      "No card required"
+    ]
   },
   "footer": {
     "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",
@@ -492,5 +498,9 @@
   },
   "video": {
     "socialHeading": "More videos about how Nyambot works — on our social media"
+  },
+  "promoBar": {
+    "text": "🎁 90 days free · Full access · No card required",
+    "cta": "Try free"
   }
 }
