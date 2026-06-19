@@ -97,6 +97,8 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
+  min-height: 100%;
 }
 
 body {
