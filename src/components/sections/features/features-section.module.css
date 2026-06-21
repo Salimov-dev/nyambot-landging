@@ -103,6 +103,51 @@
   right: -6px;
 }
 
+.outcomeChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.outcomeChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.outcomeChip:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+}
+
+.detailsBtn {
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.detailsBtn:hover {
+  transform: translateX(2px);
+  filter: brightness(1.1);
+}
+
+.modalBody {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 64px 0 24px;

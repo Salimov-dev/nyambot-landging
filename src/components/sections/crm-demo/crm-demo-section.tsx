@@ -114,20 +114,6 @@ export function CrmDemoSection() {
                   ))}
                 </div>
 
-                {/* Transparent pricing */}
-                <Flex align="center" gap={10} className={styles.pricingBadge}>
-                  <Text style={{ fontSize: 18 }}>💳</Text>
-                  <Text
-                    style={{
-                      color: theme.colors.textSecondary,
-                      fontSize: 14,
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {t("crmDemo.pricing")}
-                  </Text>
-                </Flex>
-
                 <Flex gap={12} wrap>
                   <Button
                     type="primary"
@@ -162,7 +148,7 @@ export function CrmDemoSection() {
             >
               <NotebookMockup>
                 <Image
-                  src="/images/sections/crm_final.png"
+                  src="/images/sections/crm-dashboard-section.png"
                   alt="CRM Нямбот"
                   fill
                   sizes="640px"

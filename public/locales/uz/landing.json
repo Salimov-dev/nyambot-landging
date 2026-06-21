@@ -473,11 +473,7 @@
     "button": "Bepul sinab ko'rish",
     "docs": "Hujjatlarni o'qish",
     "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz",
-    "trialFeatures": [
-      "90 kun bepul",
-      "Toʻliq kirish",
-      "Karta kerak emas"
-    ]
+    "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
     "description": "Ovqatlanish joylari uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",

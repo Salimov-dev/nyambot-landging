@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Button, Col, Flex, Row, Tag, Typography } from "antd";
+import { Button, Col, Flex, Row, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
@@ -17,8 +17,6 @@ const STEPS = [
   { step: 3, icon: "💬", key: "2" },
   { step: 4, icon: "🚀", key: "3" },
 ] as const;
-
-const MOVES = ["0", "1", "2", "3"] as const;
 
 export function SwitchSection() {
   const { t } = useTranslation("landing");
@@ -129,23 +127,6 @@ export function SwitchSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className={styles.offer}
         >
-          <Text
-            style={{
-              color: theme.colors.textPrimary,
-              fontSize: 15,
-              fontWeight: 700,
-            }}
-          >
-            {t("switch.movesTitle")}
-          </Text>
-          <Flex gap={10} wrap justify="center" className={styles.moves}>
-            {MOVES.map((m) => (
-              <Tag key={m} className={styles.moveTag}>
-                ✓ {t(`switch.moves.${m}`)}
-              </Tag>
-            ))}
-          </Flex>
-
           <Flex gap={12} wrap justify="center" className={styles.actions}>
             <Button
               type="primary"

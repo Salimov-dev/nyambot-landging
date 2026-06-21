@@ -473,11 +473,7 @@
     "button": "Pulsuz sınayın",
     "docs": "Sənədləri oxuyun",
     "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz",
-    "trialFeatures": [
-      "90 gün pulsuz",
-      "Tam giriş",
-      "Kart tələb olunmur"
-    ]
+    "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
     "description": "İaşə müəssisələri üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",

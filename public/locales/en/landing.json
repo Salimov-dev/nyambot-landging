@@ -473,11 +473,7 @@
     "button": "Try for free",
     "docs": "Read documentation",
     "hint": "No card required · Free trial, no commitment",
-    "trialFeatures": [
-      "90 days free",
-      "Full access",
-      "No card required"
-    ]
+    "trialFeatures": ["90 days free", "Full access", "No card required"]
   },
   "footer": {
     "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",

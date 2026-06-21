@@ -3,7 +3,6 @@ import { PromoBar } from "@/components/ui/promo-bar/promo-bar";
 import { Footer } from "@/components/ui/footer/footer";
 import { DotNav } from "@/components/ui/dot-nav/dot-nav";
 import { HeroSection } from "@/components/sections/hero/hero-section";
-import { VideoSection } from "@/components/sections/video/video-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
@@ -29,7 +28,6 @@ export default async function LandingPage() {
       <DotNav />
       <main>
         <HeroSection />
-        <VideoSection />
         <IntegrationsSection />
         <FeaturesSection />
         <CrmDemoSection />
