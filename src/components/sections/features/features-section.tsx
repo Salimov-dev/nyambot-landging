@@ -8,7 +8,6 @@ import { Button, Col, Flex, Modal, Row, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { theme } from "@/config/theme";
-import { LINKS } from "@/config/links.config";
 import styles from "./features-section.module.css";
 
 const { Title, Text } = Typography;
@@ -40,7 +39,6 @@ const BENEFITS: readonly Benefit[] = [
     accentColor: "#14c4a2",
     mockupType: "banner",
     mockupImage: "/images/sections/loyalty-regulars-section.png",
-    linkUrl: `${LINKS.docs}/promotions-examples`,
   },
   {
     id: "retention",
@@ -63,6 +61,13 @@ const BENEFITS: readonly Benefit[] = [
     accentColor: "#f76707",
     mockupType: "banner",
     mockupImage: "/images/sections/yandex-delivery-section.png",
+  },
+  {
+    id: "team",
+    icon: "👥",
+    accentColor: "#12b886",
+    mockupType: "banner",
+    mockupImage: "/images/sections/team-app-section.png",
   },
   {
     id: "autopilot",
@@ -290,13 +295,14 @@ function BenefitDetailsModal({
       footer={null}
       width={560}
       title={
-        <Flex align="center" gap={10}>
-          <span style={{ fontSize: 22 }}>{benefit.icon}</span>
+        <Flex align="center" gap={10} style={{ paddingRight: 32 }}>
+          <span style={{ fontSize: 22, flexShrink: 0 }}>{benefit.icon}</span>
           <span
             style={{
               color: theme.colors.textPrimary,
               fontSize: 19,
               fontWeight: 800,
+              lineHeight: 1.3,
             }}
           >
             {t(`${base}.title`)}
