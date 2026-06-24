@@ -56,6 +56,13 @@ const BENEFITS: readonly Benefit[] = [
     bannerRatio: "2 / 3",
   },
   {
+    id: "constructor",
+    icon: "🍔",
+    accentColor: "#e64980",
+    mockupType: "banner",
+    mockupImage: "/images/sections/dish-constructor-section.png",
+  },
+  {
     id: "delivery",
     icon: "📦",
     accentColor: "#f76707",
