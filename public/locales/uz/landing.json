@@ -13,7 +13,9 @@
     "subtitle": "Buyurtmalarni messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
     "ctaSecondary": "Imkoniyatlar",
-    "trial": "90 kun bepul — to'liq kirish, karta bog'lashsiz"
+    "trial": "90 kun bepul — to'liq kirish, karta bog'lashsiz",
+    "watchVideo": "Video ko'rish",
+    "videoTitle": "Nyambot nima?"
   },
   "stats": {
     "commission": {
@@ -31,6 +33,282 @@
     "savings": {
       "value": "45% gacha",
       "label": "Agregatorlarga nisbatan tejash"
+    }
+  },
+  "benefits": {
+    "title": "Nyambot sizning biznesingizni rivojlantirish uchun yaratilgan",
+    "chips": [
+      "📈 Ko'proq daromad",
+      "🧾 Yuqori o'rtacha chek",
+      "❤️ Sodiq mehmonlar",
+      "🍔 Mehmon didiga mos taom",
+      "🗺️ Kengaytirilgan yetkazib berish zonalari",
+      "📱 MAX va Telegramdagi mavjudlik"
+    ],
+    "detailsCta": "Batafsil",
+    "items": {
+      "retention": {
+        "tag": "O'z mijozlaringiz, o'z marjangiz",
+        "title": "Takroriy buyurtma — o'z kanalingizga, agregatorga emas",
+        "result": "Agregator har bir buyurtmadan 20–45% oladi. Nyambot takroriy buyurtmalarni komissiyasiz o'z kanalingizga qaytaradi — bir xil mehmonlardan ko'proq daromad, mijoz esa sizning bazangizda qoladi",
+        "details": {
+          "intro": "Agregator yangi mehmonlarni jalb qilish uchun yaxshi kanal, undan foydalanish kerak. Biroq takroriy buyurtmalarda u mijozni o'zida qoldiradi. Vazifa — ushbu lidni o'z kanalingizga o'tkazish va mehmonni shaxsan sizniki qilish.",
+          "sections": [
+            {
+              "title": "Takroriy buyurtmalardan 0% komissiya",
+              "points": [
+                "Har bir chekdan foiz o'rniga belgilangan obuna",
+                "Takroriy buyurtmalar qanchalik ko'p bo'lsa — tejash shunchalik katta",
+                "Narxlar, aksiyalar va ustama ustidan to'liq nazorat"
+              ]
+            },
+            {
+              "title": "Mijoz sizniki bo'ladi",
+              "points": [
+                "Buyurtmalar tarixi bo'lgan mijozlar bazasi — sizniki, agregatorniki emas",
+                "Mehmon bilan to'g'ridan-to'g'ri aloqa: aksiyalar, reklama xabarlari, sodiqlik dasturi",
+                "Vositachisiz segmentatsiya va takroriy savdolar"
+              ]
+            }
+          ]
+        }
+      },
+      "channel": {
+        "tag": "Yangi savdo kanali",
+        "title": "Bitta bot — MAX va Telegramdagi butun tarmoqingiz",
+        "result": "Bir vaqtning o'zida ikkita messenger orqali yangi savdo kanali: ko'proq mehmon va kengaytirilgan qamrov — MAX ning o'sib borayotgan auditoriyasi va bitta botdagi butun tarmoq, har bir nuqta uchun alohida botsiz",
+        "details": {
+          "intro": "Har bir nuqta uchun alohida bot yaratib reklamasini qilishning hojati yo'q — bitta kanal butun tarmoqqa xizmat qiladi, mehmon esa aynan kerakli nuqtaga tushadi.",
+          "sections": [
+            {
+              "title": "Ikki messenger — bitta sozlash",
+              "points": [
+                "MAX va Telegram bir vaqtda: yangi kanal va MAX ning o'sib borayotgan auditoriyasi",
+                "Mini-ilova to'g'ridan-to'g'ri messengarda ochiladi — mehmon hech narsa o'rnatishi shart emas",
+                "Ikkala kanalda yagona mijoz: umumiy tarix, ballar va aksiyalar",
+                "SMS va parolsiz avtorizatsiya"
+              ]
+            },
+            {
+              "title": "Butun tarmoq uchun bitta kanal",
+              "points": [
+                "Reklama tarqalmaydi — siz bitta kanalni targ'ib qilasiz",
+                "Mehmon lokatsiyani geolokatsiya yoki ro'yxatdan tanlaydi",
+                "Har bir nuqtaning o'z menyusi, narxlari, stop-ro'yxati va yetkazib berish zonasi bor",
+                "Yangi nuqta alohida ishga tushirmasdan ulanadi"
+              ]
+            }
+          ]
+        }
+      },
+      "growth": {
+        "tag": "O'rtacha chek va sodiqlikni oshirish",
+        "title": "Bir martalik mehmonlarni doimiylarga aylantiring",
+        "result": "Aksiyalar, sodiqlik, reklama xabarlari va qulay menyu mehmonlarni qayta olib keladi va o'rtacha chekni oshiradi — daromad bir xil trafikdan o'sadi, qo'lda ish bajarmasdan",
+        "details": {
+          "intro": "Mehmon qanchalik tez-tez qaytsa va savatga qanchalik ko'p solsa, bir xil trafikdan daromad shunchalik yuqori. Nyambot buni avtomatik qiladi.",
+          "sections": [
+            {
+              "title": "Yuqori o'rtacha chek",
+              "points": [
+                "Modifikatorlar va qo'shimchalar: mehmon taomni o'zi yig'adi va ko'proq sotib oladi",
+                "Jadval bo'yicha kombo va biznes-lanchlar",
+                "Menyuda AI-qidiruv — mehmonlar tezroq topadi va ko'proq buyurtma beradi"
+              ]
+            },
+            {
+              "title": "Qayta kiriladigan mini-ilova",
+              "points": [
+                "Zamonaviy dizayn, qorong'i tema, ravon animatsiyalar",
+                "«Yangilik», «Foydali», «Kunning taklifi» nishonlari",
+                "Kesish va optimallashtirish bilan yuqori sifatli taom rasmlari"
+              ]
+            },
+            {
+              "title": "Ushlab turadigan marketing",
+              "points": [
+                "Savat shartlari bo'yicha chegirmalar va sovg'alar",
+                "Har qanday cheklovli promokodlar",
+                "Sodiqlik ballari: to'plash va sarflash",
+                "Kategoriyadan N ta tovar uchun sovg'a",
+                "Barcha messenjerlarda bir vaqtda ishlaydi"
+              ]
+            },
+            {
+              "title": "Kunlik taklif va jadval bo'yicha reklama xabarlari",
+              "points": [
+                "MAX va Telegramda kunlik taklifni avtomatik yuborish",
+                "CRM da aksiyalarning vizual kalendari",
+                "Reklama xabarlarini haftalar oldin rejalashtiring"
+              ]
+            }
+          ]
+        }
+      },
+      "pos": {
+        "tag": "POS bilan integratsiya",
+        "title": "iiko va R-Keeper — buyurtma to'g'ridan-to'g'ri kassaga va oshxonaga",
+        "result": "Menyu, narxlar va stop-ro'yxatlar kassa bilan avtomatik sinxronlashadi, messenjerdan kelgan buyurtma esa o'zi kassada pul qabul qiladi va oshxona trekerga ketadi — qo'shaloq kiritishsiz. POS hali bo'lmasa — Nyambot to'liq mustaqil ishlaydi",
+        "details": {
+          "intro": "iiko yoki R-Keeper ulash buyurtmalarni qo'lda ko'chirish va qo'shaloq kiritishni yo'q qiladi: menyu, qoldiqlar, buyurtmalar va sodiqlik avtomatik sinxronlanadi.",
+          "sections": [
+            {
+              "title": "Menyu va qoldiqlar kassa bilan sinxron",
+              "points": [
+                "Nomenklatura, narxlar va stop-ro'yxatlar POS dan tortib olinadi va o'zi yangilanadi",
+                "Taom tugadi — barcha messenjerlarda mehmonlardan darhol yashiriladi",
+                "Qo'shaloq kiritish va qo'lda sinxronlash yo'q"
+              ]
+            },
+            {
+              "title": "Buyurtma to'g'ridan-to'g'ri kassaga va oshxonaga",
+              "points": [
+                "Messenjerdan kelgan buyurtma o'zi kassada pul qabul qiladi va oshxona trekerga ketadi",
+                "Buyurtma holatlari POS dan to'g'ridan-to'g'ri messenjerdagi mehmonlarga yuboriladi",
+                "POS modifikatorlari: o'lchamlar, ingredientlarni qo'shish va olib tashlash",
+                "POS dagi kombo-to'plamlar mini-ilovadagi konstruktor bilan ishlaydi"
+              ]
+            },
+            {
+              "title": "POS dan sodiqlik va to'lov",
+              "points": [
+                "Chegirmalar, bonuslar, sovg'alar va promokodlar to'g'ridan-to'g'ri POS dan — bot va mini-ilovada",
+                "Barcha to'lov turlari: naqd, karta, onlayn va mehmon ballari",
+                "Aniq vaqtda yetkazib berish yoki o'zi olib ketish — POS ga eksport qilinadi"
+              ]
+            },
+            {
+              "title": "POS siz ham ishlaydi",
+              "points": [
+                "Kassa tizimi yo'q — Nyambot o'z CRM ida to'liq mustaqil ishlaydi",
+                "POS ni keyinroq ulang — ma'lumotlar yo'qolmaydi"
+              ]
+            }
+          ]
+        }
+      },
+      "constructor": {
+        "tag": "Taom va kombo konstruktori",
+        "title": "Mehmon taomni o'zi yig'adi — oshxona adashib qolmaydi",
+        "result": "Mehmon ingredientlarni qo'shadi yoki olib tashlaydi va kombo-to'plamlarni mini-ilovada to'g'ridan-to'g'ri yig'adi — Nyambot o'zi tanlaydigan rasmlar bilan. Tarkib iiko yoki R-Keeper modifikatorlari sifatida kassaga to'g'ri ketadi, POS bo'lmasa — Nyambot ning o'rnatilgan mexanizmi ishlaydi",
+        "details": {
+          "intro": "Mehmon menyudan shunchaki pozitsiyani tanlamaydi, balki o'z didi bo'yicha yig'adi — tushunarli rasmlar va oshxona xatolarisiz. Har qanday tarkib o'zgarishi kassaga to'g'ri ketadi.",
+          "sections": [
+            {
+              "title": "Ingredientlarni qo'shish yoki olib tashlash",
+              "points": [
+                "Mehmon piyozni olib tashlaydi, pishloq yoki qo'sh kotlet qo'shadi — to'g'ridan-to'g'ri taom kartasida",
+                "Nyambot ingredientlarning yorqin rasmlarini o'zi tanlaydi — ishtaha ochadigan ko'rinadi",
+                "O'zgarishlar iiko / R-Keeper modifikatorlari sifatida kassaga ketadi",
+                "Narx haqiqiy vaqtda qayta hisoblanadi — mehmon natijani darhol ko'radi"
+              ]
+            },
+            {
+              "title": "Kombo-to'plamlar konstruktori",
+              "points": [
+                "Mehmon bir necha taomdan o'z didi bo'yicha kombo yig'adi",
+                "Kombo guruhlari va tarkibi sizning menyungizga moslashtirilgan",
+                "POS dagi kombolar tayyor ishlaydi — iiko va R-Keeper"
+              ]
+            },
+            {
+              "title": "POS siz ham ishlaydi",
+              "points": [
+                "Kassa yo'q — Nyambot ning o'rnatilgan mexanizmi modifikatorlar va kombolarni o'zi boshqaradi",
+                "POS ni keyinroq ulang — konstruktor sozlamalari saqlanib qoladi"
+              ]
+            }
+          ]
+        }
+      },
+      "delivery": {
+        "tag": "O'z xodimlarisiz yetkazib berish",
+        "title": "O'z kuryer xodimlarisiz yetkazib berishni kengaytiring",
+        "result": "Kuryer yollamasdan yetkazib berish zonalari va geografiyasini kengaytiring: Yandex.Delivery ga ariza Crew ilovasidan yoki to'g'ridan-to'g'ri iiko / R-Keeper kassasidan bir teginishda yuboriladi, kuryer esa sizning kuchingiz yetmaydigan joyga yetkazib beradi. Siz haqiqiy yetkazib berishlar uchun to'laysiz, xodimlar uchun emas",
+        "details": {
+          "intro": "Yetkazib berishni kuryer yollamasdan ishga tushirsa bo'ladi: bir teginishda ariza qoldirasiz, Yandex kurieri esa tayyor buyurtmani o'zi olib ketadi.",
+          "sections": [
+            {
+              "title": "Yandex.Delivery orqali yetkazib berish",
+              "points": [
+                "Ariza Crew ilovasidan administrator yoki iiko / R-Keeper kassasidan kassir tomonidan yuboriladi",
+                "Kuryer buyurtma olishga tayyor bo'lganda avtomatik chaqiriladi",
+                "Siz haqiqiy yetkazib berishlar uchun to'laysiz, kuryer xodimlari uchun emas"
+              ]
+            },
+            {
+              "title": "Moslashuvchan va nazorat ostida",
+              "points": [
+                "Kuryer kuzatuvi — mehmonlarga botda, sizga CRM da",
+                "O'z kureylaringiz ham qo'llab-quvvatlanadi — siz tanlaySiz",
+                "Uchinchi tomon ilova kerak emas — hamma narsa Nyambot ichida"
+              ]
+            }
+          ]
+        }
+      },
+      "team": {
+        "tag": "Komanda ilovasi",
+        "title": "Butun jamoangiz bitta ilovada — admin, kuryer va oshxona",
+        "result": "Administrator, kuryer va oshpaz bitta ilovada smartfondan ishlaydi: buyurtmalarni qabul qilish va taqsimlash, xaritadagi manzil, tayyor belgilash — CRM ochmasdan. Har bir xodim faqat o'z roliga kerakli narsani ko'radi",
+        "details": {
+          "intro": "Bitta ilova nuqtaning barcha operatsiyasini yopadi: administrator buyurtmalarni boshqaradi, kuryer yetkazib beradi, oshpaz tayyorlaydi — har biri o'z telefonidan.",
+          "sections": [
+            {
+              "title": "Administrator",
+              "points": [
+                "Buyurtmani qabul qilish, bekor qilish va mehmonlarga pulni qaytarish",
+                "Kuryerni bir teginishda tayinlash — u manzilni darhol xaritada ko'radi",
+                "Har bir holatni daqiqagacha qayd etgan to'liq buyurtma tarixi"
+              ]
+            },
+            {
+              "title": "Kuryer",
+              "points": [
+                "Xaritadagi vazifalar va yetkazib berish manzili",
+                "Mijozga bir klikda qo'ng'iroq va kechikish haqida xabardor qilish",
+                "To'g'ridan-to'g'ri ilovadan «Yetkazildi» belgisi"
+              ]
+            },
+            {
+              "title": "Oshpaz va oshxona",
+              "points": [
+                "Buyurtmalar va «Tayyor» belgisi bo'lgan oshxona ekrani",
+                "Stop-ro'yxatlar: taom tugadi — barcha messenjerlarda mehmonlardan darhol yashiriladi",
+                "«Ingredient → taomlar» kaskadi: ingredient olib tashlandi — bog'liq pozitsiyalar yashiriladi"
+              ]
+            }
+          ]
+        }
+      },
+      "autopilot": {
+        "tag": "Dasturchilarsiz sozlanadi",
+        "title": "Hamma narsa o'zi ishlaydi — va yordam doim yaqinda",
+        "result": "Menyu, narxlar, zonalar, to'lov va kassa dasturchilarsiz CRM da sozlanadi, onlayn to'lovlar va qaytarishlar esa to'lov tizimlari bilan integratsiya orqali avtomatik bo'ladi. Yordam kerak — texnik qo'llab-quvvatlash har bir bosqichda ko'rsatadi",
+        "details": {
+          "intro": "Nyambot ni to'liq mustaqil ishga tushirish va boshqarish mumkin. Ammo mustaqillik «yolg'iz» degani emas: texnik qo'llab-quvvatlash har qanday bosqichda ulashishga tayyor.",
+          "sections": [
+            {
+              "title": "To'liq mustaqillik",
+              "points": [
+                "Menyu, narxlar, yetkazib berish zonalari va aksiyalarni CRM da o'zingiz sozlaysiz",
+                "Yangi botni 10 daqiqada ulash",
+                "CRM dagi AI-yordamchi har qanday savolda yordam beradi",
+                "Noldan birinchi buyurtmaga qadar bosqichma-bosqich hujjatlar"
+              ]
+            },
+            {
+              "title": "Har bosqichda qo'llab-quvvatlash",
+              "points": [
+                "iiko, R-Keeper va onlayn to'lov integratsiyasida yordam",
+                "Ro'yxatdan o'tishdan birinchi buyurtmaga qadar ko'rsatamiz",
+                "Har qanday savolga javob beramiz va muammolarni hal qilamiz",
+                "Rossiyadan jonli qo'llab-quvvatlash"
+              ]
+            }
+          ]
+        }
+      }
     }
   },
   "features": {
@@ -304,6 +582,9 @@
       "markup": "Tovarlar narxiga ustama",
       "messengers": "Messenjerlar",
       "clients": "Sizning mijozlar bazasi",
+      "network": "Butun tarmoq uchun bitta kanal",
+      "delivery": "O'z xodimlarisiz yetkazib berish",
+      "pos": "POS integratsiyasi (iiko, R-Keeper)",
       "crm": "CRM va analitika",
       "crew": "Kuryer ilovasi",
       "adminApp": "Administrator ilovasi",
@@ -395,6 +676,7 @@
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
     "subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
+    "trialNote": "Ro'yxatdan o'tgandan so'ng 90 kun to'liq bepul kirish — barcha funksiyalar, to'liq qo'llab-quvvatlash, cheklovsiz. To'liq davr faqat siz tayyor bo'lganingizda boshlanadi",
     "popular": "Foydali",
     "perMonth": "oyiga",
     "totalBilled": "{{total}} hisobdan chiqariladi",
@@ -412,7 +694,9 @@
       "Crew-ilova",
       "Sodiqlik dasturi",
       "Promokodlar va chegirmalar",
-      "YuKassa",
+      "YuKassa va Yandex.Pay",
+      "iiko va R-Keeper integratsiyasi",
+      "Yandex.Delivery",
       "Qo'llab-quvvatlash"
     ],
     "limits": "{{bots}} tagacha bot · {{stores}} tagacha savdo nuqtasi · {{items}} tagacha menyu pozitsiyasi",
@@ -494,6 +778,18 @@
   },
   "video": {
     "socialHeading": "Nyambot haqida ko'proq videolar — ijtimoiy tarmoqlarimizda"
+  },
+  "integrations": {
+    "label": "Integratsiyalar",
+    "title": "Siz allaqachon foydalanayotgan xizmatlar bilan ishlaymiz",
+    "subtitle": "iiko, R-Keeper, YuKassa, Yandex.Pay va Yandex.Delivery — bir necha klikda ulanadi, dasturchilarsiz",
+    "items": {
+      "iiko": "iiko",
+      "rkeeper": "R-Keeper",
+      "yookassa": "YuKassa",
+      "yandexPay": "Yandex.Pay",
+      "yandexDelivery": "Yandex.Delivery"
+    }
   },
   "promoBar": {
     "text": "🎁 90 kun bepul · Toʻliq kirish · Karta kerak emas",

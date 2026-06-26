@@ -13,7 +13,9 @@
     "subtitle": "Sifarişləri birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz müştəri bazası və çatdırılma üzərində tam nəzarət",
     "cta": "Pulsuz sınayın",
     "ctaSecondary": "İmkanlar",
-    "trial": "90 gün pulsuz — tam giriş, kart əlavə etmədən"
+    "trial": "90 gün pulsuz — tam giriş, kart əlavə etmədən",
+    "watchVideo": "Videoya baxın",
+    "videoTitle": "Nyambot nədir?"
   },
   "stats": {
     "commission": {
@@ -31,6 +33,282 @@
     "savings": {
       "value": "45%-ə qədər",
       "label": "Aqreqatorlara nisbətən qənaət"
+    }
+  },
+  "benefits": {
+    "title": "Nyambot biznesinizin inkişafı üçün yaradılıb",
+    "chips": [
+      "📈 Daha çox gəlir",
+      "🧾 Orta çekin artması",
+      "❤️ Sadiq müştərilər",
+      "🍔 Qonağın zövqünə uyğun yemək",
+      "🗺️ Daha geniş çatdırılma ərazisi",
+      "📱 MAX və Telegram-da mövcudluq"
+    ],
+    "detailsCta": "Ətraflı",
+    "items": {
+      "retention": {
+        "tag": "Öz müştərilərin, öz marginin",
+        "title": "Təkrar sifariş — aqreqatora deyil, öz kanalına",
+        "result": "Aqreqator hər sifarişdən 20–45% alır. Nyambot təkrar sifarişləri komissiyasız sizin kanalınıza qaytarır — eyni qonaqlardан daha çox gəlir, müştəri isə sizin bazanızda qalır",
+        "details": {
+          "intro": "Aqreqator yeni qonaq cəlb etmək üçün yaxşı kanaldır və ondan istifadə etmək lazımdır. Lakin təkrar sifarişlərdə o müştərini özü üçün saxlayır. Məqsəd — bu lidi öz kanalınıza alıb, qonağı şəxsən öz müştərinizə çevirmək.",
+          "sections": [
+            {
+              "title": "Təkrar sifarişlərdən 0% komissiya",
+              "points": [
+                "Hər çekin faizinin əvəzinə sabit abunəlik",
+                "Təkrar sifarişlər nə qədər çox olarsa, qənaət bir o qədər böyük olar",
+                "Qiymətlər, aksiyalar və əlavə xərclər üzərində tam nəzarət"
+              ]
+            },
+            {
+              "title": "Müştəri sizin müştərinizə çevrilir",
+              "points": [
+                "Sifariş tarixi olan müştəri bazası — sizinki, aqreqatorun deyil",
+                "Qonaqla birbaşa əlaqə: aksiyalar, göndərişlər, loyallıq proqramı",
+                "Vasitəçisiz seqmentasiya və yenidən satış"
+              ]
+            }
+          ]
+        }
+      },
+      "channel": {
+        "tag": "Yeni satış kanalı",
+        "title": "Bir bot — MAX və Telegram-da bütün şəbəkəniz",
+        "result": "Eyni anda iki messencerdə yeni satış kanalı: daha çox qonaq və daha geniş əhatə — MAX-ın böyüyən auditoriyası və bir botda bütün şəbəkə, hər nöqtə üçün ayrı bot yaratmadan",
+        "details": {
+          "intro": "Hər nöqtə üçün ayrı bot yaratmağa və reklamlamağa ehtiyac yoxdur — bir kanal bütün şəbəkəyə xidmət edir, qonaq isə tam düzgün nöqtəyə düşür.",
+          "sections": [
+            {
+              "title": "İki messenсer — bir quraşdırma",
+              "points": [
+                "MAX və Telegram eyni anda: yeni kanal və MAX-ın böyüyən auditoriyası",
+                "Mini-tətbiq birbaşa messencerdə açılır — qonaq heç nə quraşdırmır",
+                "İki kanalda bir müştəri: ümumi tarix, xallar və aksiyalar",
+                "SMS və şifrəsiz identifikasiya"
+              ]
+            },
+            {
+              "title": "Bütün şəbəkə üçün bir kanal",
+              "points": [
+                "Reklam dağınıqlığı yoxdur — siz bir kanalı inkişaf etdirirsiniz",
+                "Qonaq yerləşməsinə görə və ya siyahıdan yer seçir",
+                "Hər nöqtənin öz müştəriləri, qiymətləri, stop-siyahısı və çatdırılma ərazisi var",
+                "Yeni nöqtə ayrı başlanğıcsız qoşulur"
+              ]
+            }
+          ]
+        }
+      },
+      "growth": {
+        "tag": "Orta çek və loyallığın artması",
+        "title": "Bir dəfəlik qonaqları daimi müştərilərə çevirin",
+        "result": "Aksiyalar, loyallıq, göndərişlər və rahat menyu qonaqları geri qaytarır və orta çeki artırır — eyni trafikdən gəlir çoxalır, əl işi olmadan",
+        "details": {
+          "intro": "Qonaq nə qədər tez qayıtsа və səbətə nə qədər çox əlavə etsə, eyni trafikdən gəlir bir o qədər yüksəkdir. Nyambot bunu avtomatlaşdırır.",
+          "sections": [
+            {
+              "title": "Orta çekin yüksəlməsi",
+              "points": [
+                "Modifikatorlar və əlavələr: qonaq yeməyi özünə uyğun yığır və daha çox alır",
+                "Cədvələ görə kombo və biznes-lançlar",
+                "Menüdə axtarış — qonaq daha tez tapır və daha çox sifariş verir"
+              ]
+            },
+            {
+              "title": "Geri qayıdan mini-tətbiq",
+              "points": [
+                "Müasir dizayn, tünd tema, hamar animasiyalar",
+                "«Yeni», «Faydalı», «Günün təklifi» işarələri",
+                "Yüksək keyfiyyətlə kəsmə və optimallaşdırma ilə yemək şəkilləri"
+              ]
+            },
+            {
+              "title": "Saxlayan marketinq",
+              "points": [
+                "Səbət şərtlərinə görə endirimlər və hədiyyələr",
+                "İstənilən məhdudiyyətlərlə promokodlar",
+                "Loyallıq xalları: yığmaq və xərcləmək",
+                "Kateqoriyadan N məhsul üçün hədiyyə",
+                "Bütün messencerlərdə eyni anda işləyir"
+              ]
+            },
+            {
+              "title": "Günün təklifi və planlaşdırılmış göndərişlər",
+              "points": [
+                "MAX və Telegram-da günün təklifinin avtomatik göndərilməsi",
+                "CRM-də aksiyaların vizual təqvimi",
+                "Göndərişləri həftələr öncə planlaşdırın"
+              ]
+            }
+          ]
+        }
+      },
+      "pos": {
+        "tag": "POS ilə inteqrasiya",
+        "title": "iiko və R-Keeper — sifariş birbaşa kassa və mətbəxə",
+        "result": "Menü, qiymətlər və stop-siyahılar kassa ilə avtomatik sinxronlaşır, messencerdən sifariş isə kassaya yazılıb mətbəx izləyicisinə çatır — ikiqat yazma olmadan. Əgər POS hələ yoxdursa — Nyambot tamamilə müstəqil işləyir",
+        "details": {
+          "intro": "iiko və ya R-Keeper-i qoşmaq sifarişləri əl ilə köçürməyi və ikiqat yazmağı aradan qaldırır: menü, qalıqlar, sifarişlər və loyallıq avtomatik sinxronlaşır.",
+          "sections": [
+            {
+              "title": "Menü və qalıqlar kassa ilə sinxronlaşır",
+              "points": [
+                "Nomenklatura, qiymətlər və stop-siyahılar POS-dan çəkilib özündən-özünə yenilənir",
+                "Yemək bitti — dərhal bütün messencerlərdə qonaqlardан gizlənir",
+                "İkiqat yazma və əl ilə uyğunlaşdırma olmadan"
+              ]
+            },
+            {
+              "title": "Sifariş kassa və mətbəxə gedir",
+              "points": [
+                "Messencerdən sifariş kassaya yazılıb mətbəx izləyicisinə çatır",
+                "POS-dan sifariş statusları birbaşa messencerdə qonağa gedir",
+                "POS-dan modifikatorlar: ölçülər, inqredientləri əlavə etmək və çıxarmaq",
+                "POS-dan kombo dəstlər mini-tətbiqdəki konstruktorla işləyir"
+              ]
+            },
+            {
+              "title": "POS-dan loyallıq və ödəniş",
+              "points": [
+                "POS-dan endirimlər, bonuslar, hədiyyələr və promokodlar — bot və mini-tətbiqdə",
+                "Bütün ödəniş növləri: nağd, kart, onlayn və qonaq xalları",
+                "Dəqiq vaxtda çatdırılma və ya götürmə — POS-a göndərilir"
+              ]
+            },
+            {
+              "title": "POS olmasa da işləyir",
+              "points": [
+                "Kassa sistemi yoxdur — Nyambot öz CRM-ında tamamilə müstəqil işləyir",
+                "POS-u sonradan qoşun — məlumat itkisi olmadan"
+              ]
+            }
+          ]
+        }
+      },
+      "constructor": {
+        "tag": "Yemək və kombo konstruktoru",
+        "title": "Qonaq yeməyi özünə uyğun yığır — mətbəx çaşmır",
+        "result": "Qonaq inqredientlər əlavə edib çıxararaq, kombo dəstlərini birbaşa mini-tətbiqdə yığır — Nyambot-un özünün seçdiyi şəkillərlə. Tərkib iiko və ya R-Keeper-in düzgün modifikatorları kimi kassaya çatır, POS olmadıqda isə Nyambot-un daxili mühərriki işləyir",
+        "details": {
+          "intro": "Qonaq menüdən yalnız mövqe seçmir, onu öz zövqünə görə yığır — aydın şəkillərlə və mətbəx səhvləri olmadan. Tərkibdəki istənilən dəyişiklik düzgün kassaya çatır.",
+          "sections": [
+            {
+              "title": "İnqredientlər əlavə etmək və ya çıxarmaq",
+              "points": [
+                "Qonaq soğanı çıxarıb, pendir və ya ikiqat kotlet əlavə edir — birbaşa yemək kartında",
+                "Nyambot inqredientlərin parlaq şəkillərini özü seçir — iştah açır",
+                "Dəyişikliklər iiko / R-Keeper modifikatorları kimi kassaya gedir",
+                "Qiymət real vaxtda yenidən hesablanır — qonaq nəticəni dərhal görür"
+              ]
+            },
+            {
+              "title": "Kombo dəstlərinin konstruktoru",
+              "points": [
+                "Qonaq bir neçə yeməkdən kombonu öz zövqünə görə yığır",
+                "Kombo qrupları və tərkibi sizin menünüzə görə konfiqurasiya edilir",
+                "POS-dan kombolar 'qutudan' işləyir — iiko və R-Keeper"
+              ]
+            },
+            {
+              "title": "POS olmasa da işləyir",
+              "points": [
+                "Kassa yoxdur — Nyambot-un daxili mühərriki modifikatorları və kombonu özü idarə edir",
+                "POS-u sonradan qoşun — konstruktor parametrləri saxlanılır"
+              ]
+            }
+          ]
+        }
+      },
+      "delivery": {
+        "tag": "Öz işçilərinsiz çatdırılma",
+        "title": "Öz kuryer işçilərinsiz çatdırılma ərazinizi genişləndirin",
+        "result": "Kuryerləri işə götürmədən əraziləri və çatdırılma coğrafiyasını genişləndirin: Komanda tətbiqindən və ya iiko / R-Keeper kassasından bir toxunuşla sorğu Yandex.Dostavka-ya göndərilir, kuryer isə sizin gücünüzün çatmadığı yerə çatdırır. Siz yalnız real çatdırılmalar üçün ödəyirsiniz, işçi heyəti üçün deyil",
+        "details": {
+          "intro": "Çatdırılmaya kuryerləri işə götürmədən başlamaq olar: bir toxunuşla sorğu qoyun, Yandex kuryeri isə hazır sifarişi özü götürür.",
+          "sections": [
+            {
+              "title": "Yandex.Dostavka vasitəsilə çatdırılma",
+              "points": [
+                "Sorğunu administrator Komanda tətbiqindən və ya kassir iiko / R-Keeper kassasından qoyur",
+                "Sifariş götürülməyə hazır olduqda kuryer avtomatik çağrılır",
+                "Siz yalnız real çatdırılmalar üçün ödəyirsiniz, kuryer heyəti üçün deyil"
+              ]
+            },
+            {
+              "title": "Çevik və nəzarət altında",
+              "points": [
+                "Kuryerin izlənməsi — qonağa bot vasitəsilə, sizə CRM-də",
+                "Öz kuryerləriniz də dəstəklənir — siz seçirsiniz",
+                "Üçüncü tərəf tətbiqi lazım deyil — hər şey Nyambot-un içindədir"
+              ]
+            }
+          ]
+        }
+      },
+      "team": {
+        "tag": "Komanda tətbiqi",
+        "title": "Bütün komanda bir tətbiqdə — administrator, kuryer və mətbəx",
+        "result": "Administrator, kuryer və aşpaz smartfondan bir tətbiqdə işləyir: sifarişlərin qəbulu və bölüşdürülməsi, ünvan xəritədə, hazırlığın qeydiyyatı — CRM açmadan. Hər işçi yalnız öz roluna lazım olanı görür",
+        "details": {
+          "intro": "Bir tətbiq nöqtənin bütün operativini əhatə edir: administrator sifarişləri idarə edir, kuryer çatdırır, aşpaz hazırlayır — onların hər biri öz telefonundan.",
+          "sections": [
+            {
+              "title": "Administrator",
+              "points": [
+                "Sifarişi qəbul etmək, ləğv etmək və qonağa pul qaytarmaq",
+                "Bir toxunuşla kuryer təyin etmək — o ünvanı dərhal xəritədə görür",
+                "Hər statusun dəqiqəyə qədər qeyd edildiyi sifarişin tam tarixi"
+              ]
+            },
+            {
+              "title": "Kuryer",
+              "points": [
+                "Tapşırıqlar və çatdırılma ünvanı xəritədə",
+                "Bir kliklə qonağa zəng etmək və gecikmə barədə xəbər vermək",
+                "Tətbiqdən birbaşa «Çatdırıldı» qeydi"
+              ]
+            },
+            {
+              "title": "Aşpaz və mətbəx",
+              "points": [
+                "Sifarişlər və «Hazır» qeydi ilə mətbəx ekranı",
+                "Stop-siyahılar: yemək bitti — dərhal bütün messencerlərdə qonaqlardан gizlənir",
+                "«İnqredient → yeməklər» kaskadı: inqredienti sildik — bağlı mövqelər gizlənir"
+              ]
+            }
+          ]
+        }
+      },
+      "autopilot": {
+        "tag": "Proqramçısız quraşdırılır",
+        "title": "Hər şey öz-özünə işləyir — dəstək isə həmişə yaxındır",
+        "result": "Menü, qiymətlər, ərazilər, ödəniş və kassa proqramçısız CRM-də quraşdırılır, onlayn ödənişlər və geri qayıtmalar isə ödəniş sistemləri ilə inteqrasiya vasitəsilə avtomatik gedir. Kömək lazımdır — texniki dəstək hər mərhələdə rəhbərlik edir",
+        "details": {
+          "intro": "Nyambot tamamilə müstəqil şəkildə başlanıb idarə edilə bilər. Lakin müstəqillik «tənha» anlamında deyil: texniki dəstək hər addımda qoşulmağa hazırdır.",
+          "sections": [
+            {
+              "title": "Tam müstəqillik",
+              "points": [
+                "Menü, qiymətlər, çatdırılma əraziləri və aksiyaları CRM-də özünüz quraşdırırsınız",
+                "10 dəqiqədə yeni bot qoşulması",
+                "CRM-dəki AI köməkçi istənilən suala kömək edir",
+                "Sıfırdan ilk sifarişə qədər addım-addım təlimatlar"
+              ]
+            },
+            {
+              "title": "Hər mərhələdə dəstək",
+              "points": [
+                "iiko, R-Keeper və onlayn ödənişin inteqrasiyasında kömək edirik",
+                "Qeydiyyatdan ilk sifarişə qədər rəhbərlik edirik",
+                "İstənilən suala cavab verib, problemləri həll edirik",
+                "RF-dan canlı dəstək"
+              ]
+            }
+          ]
+        }
+      }
     }
   },
   "features": {
@@ -313,7 +591,10 @@
       "aiAssistant": "AI köməkçilər",
       "languages": "İnterfeys dilləri",
       "branding": "Brendinq",
-      "price": "Ödəniş modeli"
+      "price": "Ödəniş modeli",
+      "network": "Bütün şəbəkə üçün bir kanal",
+      "delivery": "Öz işçilərinsiz çatdırılma",
+      "pos": "POS inteqrasiyası (iiko, R-Keeper)"
     }
   },
   "switch": {
@@ -395,6 +676,7 @@
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
     "subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
+    "trialNote": "Qeydiyyatdan sonra 90 gün tam pulsuz giriş — bütün funksiyalar, tam dəstək, məhdudiyyətsiz. Ödənişli dövr yalnız siz hazır olduqda başlayır",
     "popular": "Sərfəli",
     "perMonth": "aylıq",
     "totalBilled": "{{total}} silinir",
@@ -412,7 +694,9 @@
       "Crew-tətbiqi",
       "Loyallıq proqramı",
       "Promokodlar və endirimlər",
-      "YuKassa",
+      "YuKassa və Yandex.Pay",
+      "iiko və R-Keeper inteqrasiyası",
+      "Yandex.Dostavka",
       "Dəstək"
     ],
     "limits": "{{bots}} bota qədər · {{stores}} ticarət nöqtəsinə qədər · {{items}} menyu mövqeyinə qədər",
@@ -494,6 +778,18 @@
   },
   "video": {
     "socialHeading": "Nyambot haqqında daha çox video — sosial mediamızda"
+  },
+  "integrations": {
+    "label": "İnteqrasiyalar",
+    "title": "Artıq istifadə etdiyiniz xidmətlərlə işləyirik",
+    "subtitle": "iiko, R-Keeper, YuKassa, Yandex.Pay və Yandex.Dostavka — bir neçə kliklə, proqramçısız qoşulur",
+    "items": {
+      "iiko": "iiko",
+      "rkeeper": "R-Keeper",
+      "yookassa": "YuKassa",
+      "yandexPay": "Yandex.Pay",
+      "yandexDelivery": "Yandex.Dostavka"
+    }
   },
   "promoBar": {
     "text": "🎁 90 gün pulsuz · Tam giriş · Kart tələb olunmur",
