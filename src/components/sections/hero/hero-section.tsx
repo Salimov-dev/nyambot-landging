@@ -110,7 +110,7 @@ export function HeroSection() {
                 <Button
                   type="default"
                   size="large"
-                  href="#features"
+                  href="#try-demo"
                   className={styles.secondaryBtn}
                   onClick={() => reachGoal("click_features")}
                 >

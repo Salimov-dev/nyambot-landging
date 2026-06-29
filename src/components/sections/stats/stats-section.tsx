@@ -13,7 +13,12 @@ const STATS = [
   {
     valueKey: "stats.commission.value",
     labelKey: "stats.commission.label",
-    icon: "🚀",
+    icon: "✅",
+  },
+  {
+    valueKey: "stats.savings.value",
+    labelKey: "stats.savings.label",
+    icon: "💸",
   },
   {
     valueKey: "stats.messengers.value",
@@ -21,11 +26,6 @@ const STATS = [
     icon: "💬",
   },
   { valueKey: "stats.trial.value", labelKey: "stats.trial.label", icon: "🎁" },
-  {
-    valueKey: "stats.savings.value",
-    labelKey: "stats.savings.label",
-    icon: "💰",
-  },
 ] as const;
 
 export function StatsSection() {

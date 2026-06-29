@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Button, Col, Flex, Modal, Row, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
+import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./features-section.module.css";
 
@@ -247,7 +248,10 @@ function BenefitBlock({
               <Button
                 type="default"
                 size="large"
-                onClick={() => onOpenDetails(benefit)}
+                onClick={() => {
+                  reachGoal("click_details", { benefit: benefit.id });
+                  onOpenDetails(benefit);
+                }}
                 className={styles.detailsBtn}
                 style={{
                   width: "fit-content",

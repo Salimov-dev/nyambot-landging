@@ -8,35 +8,35 @@
     "openCrm": "CRM ochish"
   },
   "hero": {
-    "badge": "🔥 MAX + Telegram · iiko · R-Keeper · Яндекс.Доставка",
-    "title": "O'z yetkazib berish xizmatingiz <em>MAX va Telegram</em>da. Agregatorlarsiz",
-    "subtitle": "Buyurtmalarni messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
+    "badge": "🔥 Kafe, restoran, novvoyxona va yetkazib berish uchun",
+    "title": "Ovqat buyurtma va yetkazib berish <em>MAX va Telegram</em>da. Agregatorlarsiz",
+    "subtitle": "Ovqat buyurtmalarini messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
-    "ctaSecondary": "Imkoniyatlar",
-    "trial": "90 kun bepul — to'liq kirish, karta bog'lashsiz",
+    "ctaSecondary": "Demoni ko‘rish",
+    "trial": "✅ 90 kun bepul · qo‘llab-quvvatlash va menyuni ko‘chirishda yordam",
     "watchVideo": "Video ko'rish",
     "videoTitle": "Nyambot nima?"
   },
   "stats": {
     "commission": {
       "value": "0%",
-      "label": "Har bir buyurtmadan komissiya"
+      "label": "Bizning har buyurtmadan komissiyamiz"
+    },
+    "savings": {
+      "value": "20–45%",
+      "label": "Agregator har buyurtmadan oladi"
     },
     "messengers": {
       "value": "2",
-      "label": "Messenjer: Telegram va MAX"
+      "label": "Messenjer: MAX va Telegram"
     },
     "trial": {
       "value": "90",
-      "label": "To'liq bepul kirish kunlari"
-    },
-    "savings": {
-      "value": "45% gacha",
-      "label": "Agregatorlarga nisbatan tejash"
+      "label": "Kun to'liq bepul kirish"
     }
   },
   "benefits": {
-    "title": "Nyambot sizning biznesingizni rivojlantirish uchun yaratilgan",
+    "title": "Muassasangiz ko‘proq daromad olishi uchun hammasi",
     "chips": [
       "📈 Ko'proq daromad",
       "🧾 Yuqori o'rtacha chek",
@@ -564,39 +564,6 @@
       }
     ]
   },
-  "comparison": {
-    "label": "Taqqoslash",
-    "title": "Nyambot vs raqobatchilar",
-    "subtitle": "Bot xizmatlari va agregatorlar bilan solishtiring — va har bir buyurtmadan 45% gacha qaytaring",
-    "featureCol": "Parametr",
-    "botServicesCol": "Boshqa bot xizmatlar",
-    "othersCol": "Delivery Club",
-    "ourChoice": "Bizning tanlov",
-    "full": "To'liq",
-    "partial": "Qisman",
-    "fixed": "Belgilangan",
-    "fixedOrPercent": "Belg. yoki %",
-    "fromRevenue": "% buyurtmadan",
-    "rows": {
-      "commission": "Komissiya",
-      "markup": "Tovarlar narxiga ustama",
-      "messengers": "Messenjerlar",
-      "clients": "Sizning mijozlar bazasi",
-      "network": "Butun tarmoq uchun bitta kanal",
-      "delivery": "O'z xodimlarisiz yetkazib berish",
-      "pos": "POS integratsiyasi (iiko, R-Keeper)",
-      "crm": "CRM va analitika",
-      "crew": "Kuryer ilovasi",
-      "adminApp": "Administrator ilovasi",
-      "loyalty": "Sodiqlik dasturi",
-      "marketing": "Aksiyalar va promokodlar",
-      "marketingAuto": "Marketing avtomatizatsiyasi",
-      "aiAssistant": "AI yordamchilar",
-      "languages": "Interfeys tillari",
-      "branding": "Brending",
-      "price": "To'lov modeli"
-    }
-  },
   "switch": {
     "label": "Nyambot-ga ko‘chish",
     "title": "Buyurtmalarni boshqa xizmatda qabul qilyapsizmi? Nyambot-ga ko‘ching",
@@ -794,5 +761,56 @@
   "promoBar": {
     "text": "🎁 90 kun bepul · Toʻliq kirish · Karta kerak emas",
     "cta": "Sinab koʻring"
+  },
+  "forWhom": {
+    "title": "Nyambot — har qanday umumiy ovqatlanish formati uchun",
+    "subtitle": "Ovqatga buyurtma qabul qilasizmi — Nyambot formatingizga mos keladi",
+    "items": {
+      "cafe": {
+        "title": "Kafe va restoranlar",
+        "text": "Buyurtma va ovqat yetkazish uchun o'z kanalingiz"
+      },
+      "bakery": {
+        "title": "Novvoyxona va qahvaxonalar",
+        "text": "Navbatsiz oldindan buyurtma va olib ketish"
+      },
+      "dark": {
+        "title": "Dark-kitchenlar va yetkazib berish",
+        "text": "Agregator komissiyasisiz buyurtmalar"
+      },
+      "chains": {
+        "title": "Muassasalar tarmog'i",
+        "text": "Barcha nuqtalar uchun bitta bot"
+      },
+      "production": {
+        "title": "Ovqat ishlab chiqarish va keytering",
+        "text": "Tayyor ovqat va to'g'ridan-to'g'ri buyurtmalar"
+      }
+    }
+  },
+  "why": {
+    "label": "Nega biz",
+    "title": "Nega Nyambot",
+    "items": {
+      "ownDev": {
+        "title": "Rossiyada o'z ishlanmamiz",
+        "text": "CRM va botlar noldan o'zimiz tomonidan yaratilgan, chetdan konstruktor emas — to'liq nazorat va RFdan qo'llab-quvvatlash"
+      },
+      "pos": {
+        "title": "Kassangiz bilan va usiz ishlaydi",
+        "text": "iiko va R-Keeper bilan integratsiya yoki to'liq mustaqil — butun tarmoq uchun bitta kabinet"
+      },
+      "fast": {
+        "title": "Bir oqshomda ishga tushirish, dasturchisiz",
+        "text": "Bot, menyu, to'lov va yetkazib berish to'g'ridan-to'g'ri CRMda sozlanadi"
+      },
+      "noRisk": {
+        "title": "Boshlanishida hech qanday xavf yo'q",
+        "text": "90 kun to'liq bepul kirish, kartani bog'lamasdan"
+      }
+    },
+    "riskTitle": "Xavfsiz sinab ko'ring",
+    "riskText": "90 kun bepul, kartasiz. Mos kelmadi — shunchaki to'lamaysiz. Sozlash va menyuni ko'chirishda yordam beramiz.",
+    "riskCta": "Bepul sinab ko'rish"
   }
 }

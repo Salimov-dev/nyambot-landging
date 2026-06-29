@@ -8,35 +8,35 @@
     "openCrm": "Open CRM"
   },
   "hero": {
-    "badge": "🔥 MAX + Telegram · iiko · R-Keeper · Яндекс.Доставка",
-    "title": "Your own delivery in <em>MAX and Telegram</em>. No aggregators",
-    "subtitle": "Accept orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
+    "badge": "🔥 For cafés, restaurants, bakeries and delivery",
+    "title": "Your own food ordering and delivery in <em>MAX and Telegram</em>. No aggregators",
+    "subtitle": "Accept food orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
     "cta": "Try for free",
-    "ctaSecondary": "Features",
-    "trial": "90 days free — full access, no card required",
+    "ctaSecondary": "See the demo",
+    "trial": "✅ 90 days free · support and help migrating your menu",
     "watchVideo": "Watch video",
     "videoTitle": "What is Nyambot?"
   },
   "stats": {
     "commission": {
       "value": "0%",
-      "label": "Commission per order"
+      "label": "Our commission per order"
+    },
+    "savings": {
+      "value": "20–45%",
+      "label": "Aggregators take per order"
     },
     "messengers": {
       "value": "2",
-      "label": "Messengers: Telegram and MAX"
+      "label": "Messengers: MAX and Telegram"
     },
     "trial": {
       "value": "90",
-      "label": "Days of full free access"
-    },
-    "savings": {
-      "value": "up to 45%",
-      "label": "Savings vs aggregators"
+      "label": "Days of full access free"
     }
   },
   "benefits": {
-    "title": "Nyambot is built to grow your business",
+    "title": "Everything to help your venue earn more",
     "chips": [
       "📈 More revenue",
       "🧾 Higher average order",
@@ -564,39 +564,6 @@
       }
     ]
   },
-  "comparison": {
-    "label": "Comparison",
-    "title": "Nyambot vs competitors",
-    "subtitle": "Compare with bot services and aggregators — and take back up to 45% from every order",
-    "featureCol": "Parameter",
-    "botServicesCol": "Other bot services",
-    "othersCol": "Delivery Club",
-    "ourChoice": "Best choice",
-    "full": "Full",
-    "partial": "Partial",
-    "fixed": "Fixed",
-    "fixedOrPercent": "Fixed or %",
-    "fromRevenue": "% of order",
-    "rows": {
-      "commission": "Commission",
-      "markup": "Price markup on goods",
-      "messengers": "Messengers",
-      "clients": "Your customer database",
-      "network": "One channel for the entire network",
-      "delivery": "Delivery without own staff",
-      "pos": "POS integration (iiko, R-Keeper)",
-      "crm": "CRM and analytics",
-      "crew": "Courier app",
-      "adminApp": "Admin app",
-      "loyalty": "Loyalty program",
-      "marketing": "Promotions and promo codes",
-      "marketingAuto": "Marketing automation",
-      "aiAssistant": "AI assistants",
-      "languages": "Interface languages",
-      "branding": "Branding",
-      "price": "Pricing model"
-    }
-  },
   "switch": {
     "label": "Move to Nyambot",
     "title": "Already taking orders in another service? Move to Nyambot",
@@ -794,5 +761,56 @@
   "promoBar": {
     "text": "🎁 90 days free · Full access · No card required",
     "cta": "Try free"
+  },
+  "forWhom": {
+    "title": "Nyambot — for any food business format",
+    "subtitle": "If you take food orders, Nyambot fits your format",
+    "items": {
+      "cafe": {
+        "title": "Cafés and restaurants",
+        "text": "Your own channel for orders and food delivery"
+      },
+      "bakery": {
+        "title": "Bakeries and coffee shops",
+        "text": "Pre-orders and pickup without queues"
+      },
+      "dark": {
+        "title": "Dark kitchens and delivery",
+        "text": "Orders with no aggregator commission"
+      },
+      "chains": {
+        "title": "Venue chains",
+        "text": "One bot for all your locations"
+      },
+      "production": {
+        "title": "Food production and catering",
+        "text": "Ready meals and direct orders"
+      }
+    }
+  },
+  "why": {
+    "label": "Why us",
+    "title": "Why Nyambot",
+    "items": {
+      "ownDev": {
+        "title": "Built in-house in Russia",
+        "text": "CRM and bots built by us from scratch, not a third-party builder — full control and support from Russia"
+      },
+      "pos": {
+        "title": "Works with your POS or without it",
+        "text": "Integrates with iiko and R-Keeper or runs fully standalone — one dashboard for the whole network"
+      },
+      "fast": {
+        "title": "Launch in an evening, no developers",
+        "text": "Bot, menu, payments and delivery are set up right in the CRM"
+      },
+      "noRisk": {
+        "title": "No risk to start",
+        "text": "90 days of full access free, no card required"
+      }
+    },
+    "riskTitle": "Try it risk-free",
+    "riskText": "90 days free, no card required. Not a fit — you simply don't pay. We'll help set up and migrate your menu.",
+    "riskCta": "Try for free"
   }
 }

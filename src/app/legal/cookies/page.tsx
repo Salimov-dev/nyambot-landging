@@ -6,7 +6,9 @@ import remarkGfm from "remark-gfm";
 import { BRAND_CONFIG } from "@/config/brand.config";
 
 export const metadata: Metadata = {
-  title: `Политика cookie | ${BRAND_CONFIG.name}`,
+  title: { absolute: `Политика cookie | ${BRAND_CONFIG.name}` },
+  description:
+    "Политика использования cookie на сайте Нямбота: какие файлы cookie мы применяем, зачем они нужны и как управлять их настройками.",
 };
 
 export default function CookiesPage() {

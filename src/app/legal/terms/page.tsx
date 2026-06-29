@@ -6,7 +6,9 @@ import remarkGfm from "remark-gfm";
 import { BRAND_CONFIG } from "@/config/brand.config";
 
 export const metadata: Metadata = {
-  title: `Лицензионное соглашение | ${BRAND_CONFIG.name}`,
+  title: { absolute: `Лицензионное соглашение | ${BRAND_CONFIG.name}` },
+  description:
+    "Лицензионное соглашение Нямбота: условия предоставления права использования сервиса, ограничения, ответственность и порядок работы.",
 };
 
 export default function TermsPage() {

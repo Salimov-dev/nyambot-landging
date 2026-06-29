@@ -6,7 +6,9 @@ import remarkGfm from "remark-gfm";
 import { BRAND_CONFIG } from "@/config/brand.config";
 
 export const metadata: Metadata = {
-  title: `Политика конфиденциальности | ${BRAND_CONFIG.name}`,
+  title: { absolute: `Политика конфиденциальности | ${BRAND_CONFIG.name}` },
+  description:
+    "Политика конфиденциальности Нямбота: какие персональные данные мы собираем, как обрабатываем и храним, ваши права и порядок защиты данных.",
 };
 
 export default function PrivacyPage() {

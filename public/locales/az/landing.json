@@ -8,35 +8,35 @@
     "openCrm": "CRM-i aç"
   },
   "hero": {
-    "badge": "🔥 MAX + Telegram · iiko · R-Keeper · Яндекс.Доставка",
-    "title": "Öz çatdırılma xidmətiniz <em>MAX və Telegram</em>-da. Aqreqatorsuz",
-    "subtitle": "Sifarişləri birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz müştəri bazası və çatdırılma üzərində tam nəzarət",
+    "badge": "🔥 Kafe, restoran, çörəkxana və çatdırılma üçün",
+    "title": "Yemək sifarişi və çatdırılması <em>MAX və Telegram</em>-da. Aqreqatorsuz",
+    "subtitle": "Yemək sifarişlərini birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz müştəri bazası və çatdırılma üzərində tam nəzarət",
     "cta": "Pulsuz sınayın",
-    "ctaSecondary": "İmkanlar",
-    "trial": "90 gün pulsuz — tam giriş, kart əlavə etmədən",
+    "ctaSecondary": "Demoya bax",
+    "trial": "✅ 90 gün pulsuz · dəstək və menyu köçürməkdə kömək",
     "watchVideo": "Videoya baxın",
     "videoTitle": "Nyambot nədir?"
   },
   "stats": {
     "commission": {
       "value": "0%",
-      "label": "Hər sifarişdən komissiya"
+      "label": "Bizim hər sifarişdən komissiyamız"
+    },
+    "savings": {
+      "value": "20–45%",
+      "label": "Aqreqator hər sifarişdən alır"
     },
     "messengers": {
       "value": "2",
-      "label": "Messencer: Telegram və MAX"
+      "label": "Messencer: MAX və Telegram"
     },
     "trial": {
       "value": "90",
-      "label": "Tam pulsuz giriş günləri"
-    },
-    "savings": {
-      "value": "45%-ə qədər",
-      "label": "Aqreqatorlara nisbətən qənaət"
+      "label": "Gün tam pulsuz giriş"
     }
   },
   "benefits": {
-    "title": "Nyambot biznesinizin inkişafı üçün yaradılıb",
+    "title": "Müəssisənizin daha çox qazanması üçün hər şey",
     "chips": [
       "📈 Daha çox gəlir",
       "🧾 Orta çekin artması",
@@ -564,39 +564,6 @@
       }
     ]
   },
-  "comparison": {
-    "label": "Müqayisə",
-    "title": "Nyambot vs rəqiblər",
-    "subtitle": "Bot xidmətləri və aqreqatorlarla müqayisə edin — və hər sifarişdən 45%-ə qədər geri qaytarın",
-    "featureCol": "Parametr",
-    "botServicesCol": "Digər bot xidmətlər",
-    "othersCol": "Delivery Club",
-    "ourChoice": "Bizim seçim",
-    "full": "Tam",
-    "partial": "Qismən",
-    "fixed": "Sabit",
-    "fixedOrPercent": "Sabit və ya %",
-    "fromRevenue": "% sifarişdən",
-    "rows": {
-      "commission": "Komissiya",
-      "markup": "Mallara qiymət əlavəsi",
-      "messengers": "Messencerlər",
-      "clients": "Sizin müştəri bazanız",
-      "crm": "CRM və analitika",
-      "crew": "Kuryer tətbiqi",
-      "adminApp": "Administrator tətbiqi",
-      "loyalty": "Loyallıq proqramı",
-      "marketing": "Aksiyalar və promokodlar",
-      "marketingAuto": "Marketinq avtomatlaşdırması",
-      "aiAssistant": "AI köməkçilər",
-      "languages": "İnterfeys dilləri",
-      "branding": "Brendinq",
-      "price": "Ödəniş modeli",
-      "network": "Bütün şəbəkə üçün bir kanal",
-      "delivery": "Öz işçilərinsiz çatdırılma",
-      "pos": "POS inteqrasiyası (iiko, R-Keeper)"
-    }
-  },
   "switch": {
     "label": "Nyambot-a keçid",
     "title": "Sifarişləri başqa xidmətdə qəbul edirsən? Nyambot-a keç",
@@ -794,5 +761,56 @@
   "promoBar": {
     "text": "🎁 90 gün pulsuz · Tam giriş · Kart tələb olunmur",
     "cta": "Sınayın"
+  },
+  "forWhom": {
+    "title": "Nyambot — istənilən iaşə formatı üçün",
+    "subtitle": "Yeməyə sifariş qəbul edirsinizsə, Nyambot formatınıza uyğundur",
+    "items": {
+      "cafe": {
+        "title": "Kafe və restoranlar",
+        "text": "Sifariş və yemək çatdırılması üçün öz kanalınız"
+      },
+      "bakery": {
+        "title": "Çörəkxana və qəhvəxanalar",
+        "text": "Növbəsiz ön sifariş və götürmə"
+      },
+      "dark": {
+        "title": "Dark-kitchen və çatdırılma",
+        "text": "Aqreqator komissiyası olmadan sifarişlər"
+      },
+      "chains": {
+        "title": "Müəssisə şəbəkələri",
+        "text": "Bütün nöqtələr üçün bir bot"
+      },
+      "production": {
+        "title": "Yemək istehsalı və keyterinq",
+        "text": "Hazır yemək və birbaşa sifarişlər"
+      }
+    }
+  },
+  "why": {
+    "label": "Niyə biz",
+    "title": "Niyə Nyambot",
+    "items": {
+      "ownDev": {
+        "title": "Rusiyada öz işləməmiz",
+        "text": "CRM və botlar sıfırdan bizim tərəfimizdən hazırlanıb, kənar konstruktor deyil — tam nəzarət və RF-dən dəstək"
+      },
+      "pos": {
+        "title": "Kassanızla və onsuz işləyir",
+        "text": "iiko və R-Keeper ilə inteqrasiya və ya tam müstəqil — bütün şəbəkə üçün bir kabinet"
+      },
+      "fast": {
+        "title": "Bir axşama başlat, proqramçısız",
+        "text": "Bot, menyu, ödəniş və çatdırılma birbaşa CRM-də qurulur"
+      },
+      "noRisk": {
+        "title": "Başlanğıcda heç bir risk yoxdur",
+        "text": "90 gün tam pulsuz giriş, kart bağlamadan"
+      }
+    },
+    "riskTitle": "Risksiz sınayın",
+    "riskText": "90 gün pulsuz, kartsız. Uyğun gəlmədi — sadəcə ödəmirsiniz. Quraşdırmaqda və menyunu köçürməkdə kömək edəcəyik.",
+    "riskCta": "Pulsuz sınayın"
   }
 }

@@ -8,28 +8,39 @@ declare global {
 
 /** Идентификаторы целей Яндекс.Метрики */
 export type MetrikaGoal =
+  // Конверсии (триал/CRM)
   | "click_trial"
-  | "click_features"
-  | "click_pricing"
-  | "scroll_pricing"
-  | "scroll_features"
-  | "click_switch"
-  | "click_tg_support"
-  | "click_tg_bot"
-  | "click_max_demo"
-  | "click_max_support"
   | "registration"
   | "first_order"
   | "payment"
+  // Навигация / интерес к разделам
+  | "click_features"
+  | "scroll_features"
+  | "scroll_pricing"
+  | "click_details"
+  // Глубина просмотра страницы
+  | "scroll_25"
+  | "scroll_50"
+  | "scroll_75"
+  | "scroll_100"
+  // Переезд с агрегатора
+  | "click_switch"
+  // Демо-боты
+  | "click_max_demo"
+  | "click_tg_bot"
+  // Видео
+  | "video_play"
+  // Поддержка
+  | "click_tg_support"
+  | "click_max_support"
   | "click_email_support"
+  // Соцсети
   | "click_social_telegram"
   | "click_social_rutube"
   | "click_social_vk"
   | "click_social_youtube"
   | "click_social_ok"
-  | "click_social_max"
-  | "video_play"
-  | "scroll_video";
+  | "click_social_max";
 
 /** Отправить цель в Яндекс.Метрику */
 export function reachGoal(goal: MetrikaGoal, params?: Record<string, unknown>) {

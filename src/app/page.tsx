@@ -2,14 +2,17 @@ import { Header } from "@/components/ui/header/header";
 import { PromoBar } from "@/components/ui/promo-bar/promo-bar";
 import { Footer } from "@/components/ui/footer/footer";
 import { DotNav } from "@/components/ui/dot-nav/dot-nav";
+import { ScrollDepthTracker } from "@/components/ui/analytics/scroll-depth-tracker";
 import { HeroSection } from "@/components/sections/hero/hero-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
+import { ForWhomSection } from "@/components/sections/for-whom/for-whom-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
 import { TryDemoSection } from "@/components/sections/try-demo/try-demo-section";
 import { HowItWorksSection } from "@/components/sections/how-it-works/how-it-works-section";
 import { SwitchSection } from "@/components/sections/switch/switch-section";
 import { SecuritySection } from "@/components/sections/security/security-section";
+import { WhySection } from "@/components/sections/why/why-section";
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
@@ -26,8 +29,10 @@ export default async function LandingPage() {
       <PromoBar />
       <Header />
       <DotNav />
+      <ScrollDepthTracker />
       <main>
         <HeroSection />
+        <ForWhomSection />
         <IntegrationsSection />
         <FeaturesSection />
         <CrmDemoSection />
@@ -35,6 +40,7 @@ export default async function LandingPage() {
         <HowItWorksSection />
         <SwitchSection />
         <SecuritySection />
+        <WhySection />
         <PricingSection plans={plans} limits={limits} />
         <FaqSection />
         <CtaSection />
