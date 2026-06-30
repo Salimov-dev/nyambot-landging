@@ -217,7 +217,13 @@ export function TryDemoSection() {
           transition={{ duration: 0.6, delay: 0.35 }}
         >
           <Flex vertical align="center" gap={12} className={styles.crmCta}>
-            <Text style={{ color: theme.colors.textSecondary, fontSize: 15 }}>
+            <Text
+              style={{
+                color: theme.colors.textSecondary,
+                fontSize: 15,
+                textAlign: "center",
+              }}
+            >
               {t("tryDemo.crmHint")}
             </Text>
             <Button
@@ -229,7 +235,13 @@ export function TryDemoSection() {
             >
               {t("tryDemo.crmCta")}
             </Button>
-            <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
+            <Text
+              style={{
+                color: theme.colors.textTertiary,
+                fontSize: 13,
+                textAlign: "center",
+              }}
+            >
               {t("tryDemo.crmTrial")}
             </Text>
           </Flex>
