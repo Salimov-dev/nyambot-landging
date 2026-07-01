@@ -1,6 +1,10 @@
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { LINKS } from "@/config/links.config";
 import { fetchPricingData } from "@/config/pricing.config";
+import faqLocale from "../../../../public/locales/ru/landing.json";
+
+type FaqItem = { question: string; answer: string };
+const FAQ_ITEMS = faqLocale.faq.items as FaqItem[];
 
 /**
  * JSON-LD разметка для поисковых систем (schema.org).
@@ -37,6 +41,7 @@ export async function StructuredData() {
           LINKS.social.youtube,
           LINKS.social.rutube,
           LINKS.social.ok,
+          LINKS.social.dzen,
         ],
       },
       {
@@ -63,6 +68,18 @@ export async function StructuredData() {
           price: basePrice,
           category: "subscription",
         },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${siteUrl}/#faq`,
+        mainEntity: FAQ_ITEMS.map(({ question, answer }) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: answer,
+          },
+        })),
       },
     ],
   };

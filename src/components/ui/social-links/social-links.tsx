@@ -54,6 +54,13 @@ const SOCIALS: {
     icon: "/images/social/OK.png",
     goal: "click_social_ok",
   },
+  {
+    key: "dzen",
+    label: "Дзен",
+    href: LINKS.social.dzen,
+    icon: "/images/social/dzen.png",
+    goal: "click_social_dzen",
+  },
 ];
 
 export function SocialLinks() {

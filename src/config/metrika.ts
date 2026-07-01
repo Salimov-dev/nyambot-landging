@@ -40,7 +40,8 @@ export type MetrikaGoal =
   | "click_social_vk"
   | "click_social_youtube"
   | "click_social_ok"
-  | "click_social_max";
+  | "click_social_max"
+  | "click_social_dzen";
 
 /** Отправить цель в Яндекс.Метрику */
 export function reachGoal(goal: MetrikaGoal, params?: Record<string, unknown>) {

@@ -26,5 +26,6 @@ export const LINKS = {
     vk: "https://vk.com/nyambot_ru",
     youtube: "https://www.youtube.com/@nyambot_ru",
     ok: "https://ok.ru/group/70000051407337",
+    dzen: "https://dzen.ru/nyambot",
   },
 } as const;
