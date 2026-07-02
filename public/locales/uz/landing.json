@@ -311,215 +311,13 @@
       }
     }
   },
-  "features": {
-    "label": "Imkoniyatlar",
-    "title": "Ovqatlanish joyi uchun kerak bo'lgan hamma narsa — bitta vositada",
-    "items": {
-      "messengers": {
-        "tag": "Telegram + MAX",
-        "title": "MAX va Telegram — bitta xizmatda, har ikkala messenjerda buyurtma qabul qiling",
-        "description": "Xaridorlar mini-ilovani to'g'ridan-to'g'ri tanish messenjerda ochadi",
-        "points": [
-          "Telegram-bot va MAX-bot — bitta sozlash",
-          "Messenjerlar o'rtasida yagona mijozlar bazasi",
-          "SMS va parolsiz avtorizatsiya",
-          "Real vaqtda holat haqida bildirishnomalar"
-        ]
-      },
-      "modernUI": {
-        "tag": "Zamonaviy dizayn",
-        "title": "Qayta kirishni xohlaydigan mini-ilova",
-        "description": "Har bir detalga e'tibor qaratilgan zamonaviy interfeys. Xaridorlar shunchaki katalog emas — ishongan va foydalanishdan zavq oladigan chiroyli mahsulot ko'radilar",
-        "points": [
-          "Yorqin animatsiyali nishonlar: «Yangilik», «Foydali», «Kunning taklifi», chegirmalar",
-          "Har bir harakatda silliq o'tishlar va mikro-animatsiyalar",
-          "Yarim tiniq elementlar va glassmorphism effektlari",
-          "Adaptiv tarmoq — har qanday ekranda mukammal ko'rinadi",
-          "Qorong'i tema — zamonaviy va zarafatli",
-          "Taomlarning suratlari kesish va optimallashtirish bilan"
-        ]
-      },
-      "noCommission": {
-        "tag": "Nol komissiyalar",
-        "title": "Agregatorlarga 45% gacha to'lashni to'xtating",
-        "description": "Yandex.Eda har bir buyurtmadan 20–45% oladi. Nyambot — belgilangan tarif",
-        "points": [
-          "Har bir buyurtmadan 0% komissiya",
-          "Belgilangan oylik to'lov",
-          "Mijozlaringiz — sizning ma'lumotlar bazangiz",
-          "Narxlar va aksiyalar ustidan to'liq nazorat"
-        ]
-      },
-      "posRkeeper": {
-        "tag": "R-keeper integratsiyasi",
-        "title": "R-keeper ulangan — buyurtmalar to‘g‘ridan-to‘g‘ri kassaga va oshxonaga",
-        "description": "R-keeper'da ishlaysizmi? Nyambot nomenklatura, narxlar va stop-ro‘yxatlarni olib, ularni dolzarb saqlaydi, har bir onlayn buyurtma esa o‘zi kassaga va oshxona ekraniga tushadi — qo‘lda ko‘chirishsiz va ikki marta hisobsiz",
-        "points": [
-          "Nomenklatura va narxlar R-keeper'dan olinadi va o‘zi yangilanadi",
-          "Onlayn buyurtma darhol R-keeper kassasida ro‘yxatga olinadi",
-          "Kassadan stop-ro‘yxat — mavjud bo‘lmagan taomlar mijozlardan yashiriladi",
-          "Hali integratsiyaga tayyor emasmisiz — Nyambot o‘z CRM'ida ham ishlaydi",
-          "R-keeper sodiqlik dasturi: chegirmalar, bonuslar, sovgʻalar va kuponlar — bot va mini-ilovada",
-          "Karta va Yandex.Pay orqali onlayn toʻlov",
-          "Oʻz xodimingizsiz yetkazib berish — Yandex.Delivery kuryerlari",
-          "Ombor qoldiqlari va stop-roʻyxatlar — doimo R-keeper bilan sinxron"
-        ]
-      },
-      "crm": {
-        "tag": "CRM va analitika",
-        "title": "Hammasini bitta kabinetdan boshqaring",
-        "description": "Menyu, buyurtmalar, mijozlar, marketing — hammasi yagona CRM da",
-        "points": [
-          "Daromad va buyurtmalar bilan dashboard",
-          "Menyu, stop-ro'yxatlar, modifikatorlarni boshqarish",
-          "Tarix va segmentatsiyali mijozlar bazasi",
-          "Marketing: chegirmalar, promokodlar, sodiqlik"
-        ]
-      },
-      "menuCustomization": {
-        "tag": "Moslashuvchan menyu",
-        "title": "Har bir taom — xaridorning didiga",
-        "description": "Modifikatorlar, tarkib va ingredientlar — xaridor taomni mini-ilovada o'ziga moslashtiradi. Barchasini CRM-da dasturchilarsiz sozlaysiz",
-        "points": [
-          "Modifikatorlar: diametr, asos, hajm, achchiqlik — istalgan parametrlar",
-          "Narx qayta hisoblanishi bilan ingredientlarni qo'shish va olib tashlash",
-          "Yorqin ingredient rasmlarining tayyor to'plami",
-          "Modifikator guruhlari: majburiy tanlov yoki ixtiyoriy",
-          "Xaridor tarkibni ko'radi va allergenni olib tashlashi mumkin",
-          "Modifikatorlar iiko va R-keeper'dan avtomatik tortib olinadi"
-        ]
-      },
-      "comboBuilder": {
-        "tag": "Kombo va biznes-lanchlar",
-        "title": "Kombo yig' — xaridor tanlaydi, qidirmaydi",
-        "description": "Biznes-lanchlar va kombo to'plamlari mini-ilovada moslashuvchan yig'ish bilan. Xaridor kategoriyalardan taomlarni tanlaydi, yakuniy narxni ko'radi va bir necha klikda buyurtma beradi",
-        "points": [
-          "Kombo uchun belgilangan narx — xaridor har bir kategoriyadan taom tanlaydi",
-          "Har qanday kombo elementi kartasini ochib tarkibi, surati, tavsifini ko'rish",
-          "Moslashuvchan qoidalar: majburiy va ixtiyoriy pozitsiyalar",
-          "Jadval bo'yicha biznes-lanchlar — avtomatik paydo bo'ladi va yo'qoladi",
-          "Kombo savatda tafsilotlar bilan yagona element sifatida ko'rsatiladi"
-        ]
-      },
-      "crewAdmin": {
-        "tag": "Komanda ilovasi",
-        "title": "Komanda ilovasi — administrator, kuryer va oshxona bitta ekranda",
-        "description": "Butun smena uchun bitta ilova: administrator buyurtmalarni qabul qiladi va taqsimlaydi, kuryer manzilni xaritada ko'radi, oshpaz tayyorlikni belgilaydi — barchasi smartfondan, CRM ochmasdan",
-        "points": [
-          "Administrator: buyurtmani qabul qilish, bekor qilish va xaridorga pulni qaytarish",
-          "Kuryerni bir teginishda tayinlash — u manzilni darhol xaritada ko'radi",
-          "Kuryer: topshiriqlar, xaridor aloqasi, bir bosishda qo'ng'iroq va «Yetkazildi» belgisi",
-          "Oshpaz: buyurtmalar va «Tayyor» belgisi bo'lgan oshxona ekrani",
-          "Stop-ro'yxatlar: taom tugadi — barcha messenjerlarda xaridorlardan darhol yashiriladi",
-          "Xaridor botda holat bildirishnomalarini avtomatik oladi",
-          "Har bir holatni daqiqagacha qayd etgan to'liq buyurtma tarixi"
-        ]
-      },
-      "crew": {
-        "tag": "Crew — kuryer uchun",
-        "title": "Kuryer buyurtmani oladi va qayerga borishini biladi",
-        "description": "Kuryer uchun Crew ilovasi — yetkazib berish uchun hamma narsa bir ekranda: topshiriqlar, xaritadagi manzil, xaridor kontakti va bildirishnomalar",
-        "points": [
-          "Administrator tomonidan tayinlangan buyurtmani oladi",
-          "Buyurtma va yetkazib berish manzilini xaritada ko'radi",
-          "Ilovadan xaridorga kechikish haqida xabar berish",
-          "Xaridorga bir bosish bilan qo'ng'iroq",
-          "Buyurtmani yetkazilgan deb belgilash",
-          "Yangi buyurtmalar haqida tovushli bildirishnomalar va tebranish"
-        ]
-      },
-      "payment": {
-        "tag": "To'lov",
-        "title": "Har qanday qulay usulda moslashuvchan to'lov",
-        "description": "Naqd pul, yetkazib berishda karta yoki ЮКасса orqali onlayn to'lovni qabul qiling — xaridor o'zi tanlaydi",
-        "points": [
-          "Naqd pul — kuryer tayyor bo'lishi uchun buyurtmada qaytim miqdorini ko'rsating",
-          "Yetkazib berishda kuryerga karta bilan",
-          "Onlayn: ЮMoney, Mir Pay, SberPay, T-Pay, СБП"
-        ]
-      },
-      "marketing": {
-        "tag": "Marketing",
-        "title": "Sotuvlarni o'stirish uchun vositalar",
-        "description": "Moslashuvchan aksiyalar, promokodlar va sodiqlik dasturi yordamida mijozlarni ushlab turing. Bir yoki bir nechta savdo nuqtalariga qo'llaniladi",
-        "linkLabel": "35 ta tayyor aksiya g'oyalari",
-        "points": [
-          "Savat shartlari bo'yicha chegirmalar va sovg'alar",
-          "Har qanday cheklovli promokodlar",
-          "Sodiqlik ballari: to'plash va sarflash",
-          "Kategoriyadan N ta tovar sotib olganlik uchun sovg'a",
-          "Barcha messenjerda bir vaqtda ishlaydi"
-        ]
-      },
-      "scheduledSending": {
-        "tag": "Tarqatmalar va kunlik takliflar",
-        "title": "Rejalashtirilgan kunlik takliflar Telegram va MAX da",
-        "description": "Marketing tarqatmalarini oldindan rejalashtiring. Kunlik taklif avtomatik ravishda Telegram va MAX abonentlariga to'g'ri vaqtda yuboriladi — qo'lda ishlashsiz",
-        "points": [
-          "Kunlik taklif: Telegram va MAX ga avtoyuborish",
-          "CRM dagi aksiyalar vizual kalendari",
-          "Tarqatmalarni haftalar oldin rejalashtiring",
-          "Barcha abonentlarga qo'lda harakat qilmasdan yetib boring"
-        ]
-      },
-      "languages": {
-        "tag": "7 ta interfeys tili",
-        "title": "Butun xizmat sizning tilingizda gaplashadi",
-        "description": "Nyambot — bu sohada har darajada 7 tilni qo'llab-quvvatlaydigan yagona xizmat: xaridor mini-ilovada menyuni ko'radi, egasi CRM'da ishlaydi, administrator buyurtmalarni boshqaradi, kuryer topshiriq oladi — har biri o'z tilida",
-        "points": [
-          "Mini-ilova: xaridorning tilida menyu va buyurtmalar",
-          "CRM: egasi va administrator interfeysi",
-          "Crew: kuryer uchun topshiriqlar",
-          "7 til: RU, EN, UZ, BE, TG, KY, AZ"
-        ]
-      },
-      "selfService": {
-        "tag": "To'liq mustaqillik",
-        "title": "Menejerlar yordamisiz ishga tushiring va boshqaring",
-        "description": "Hamma narsa CRM orqali mustaqil sozlanadi — ishga tushirishdan boshlab istalgan vaqtda. Ovqat qo'shish, narx o'zgartirish yoki yetkazib berish zonalarini sozlash uchun qo'llab-quvvatlashga yozish shart emas",
-        "points": [
-          "Menyu: pozitsiyalarni o'zingiz qo'shing, tahrirlang, yashiring",
-          "Yetkazib berish zonalari — xaritada o'zingiz chizing",
-          "Aksiyalar, promokodlar, stop-ro'yxatlar — dasturchilarsiz",
-          "Yangi botni 10 daqiqada ulang",
-          "Hujjatlar: noldan birinchi buyurtmaga qadar bosqichma-bosqich yo'riqnoma",
-          "CRM'dagi AI-yordamchi — har qanday savolga tezkor yordam, qo'llab-quvvatlashga murojaat qilmasdan"
-        ]
-      },
-      "aiCrm": {
-        "tag": "AI CRM da",
-        "title": "Muassasa egasi uchun AI-yordamchi",
-        "description": "CRM'dagi AI-yordamchi egaga tizimni tushunishga va hamma narsani mustaqil sozlashga yordam beradi — menejerlar va texnik qo'llabsiz",
-        "points": [
-          "Menyu, aksiyalar va yetkazib berishni sozlashni tushuntiradi",
-          "Analitika va hisobotlarni tushunishga yordam beradi",
-          "CRM da ishlash bo'yicha har qanday savollarga javob beradi",
-          "7 tilda ishlaydi"
-        ]
-      },
-      "aiSearch": {
-        "tag": "Nyambotda SI",
-        "title": "Xaridorlar uchun SI-menyu qidiruvi va egasi uchun SI-yordamchi",
-        "description": "Sun'iy intellekt ikkala tomon uchun ishlaydi: xaridorlar taomlarni ta'mi va tarkibi bo'yicha tabiiy tilda topadi, egasi esa CRMda sozlamalar va tahlilni tushuntiradigan yordamchi oladi",
-        "points": [
-          "SI-qidiruv tabiiy tildagi so'rovlarni tushunadi — ta'mi, tarkibi va tavsifi bo'yicha",
-          "Taomlarni aniq so'z mosligisiz va menyuni aylantirmasdan topadi",
-          "CRMdagi SI-yordamchi menyu, aksiya va yetkazib berishni qanday sozlashni tushuntiradi",
-          "Tahlilni tushunishga yordam beradi va tizim bo'yicha savollarga javob beradi",
-          "Ikkalasi ham 7 tilda ishlaydi"
-        ]
-      }
-    }
-  },
   "crmDemo": {
     "tag": "O'z ishlab chiqishimiz CRM",
     "title": "Muassasangizni yagona kabinetdan boshqaring",
     "description": "To'liq CRM — uchinchi tomon xizmat emas, o'z ishlab chiqishimiz. Modifikatorli menyu, buyurtmalarni boshqarish, daromad tahlili, marketing aktsiyalari va mijozlar bazasi — qo'shimcha integratsiyalarsiz bir joyda. Hammasini to'liq mustaqil ishga tushiring va boshqaring: menyu, narxlar, yetkazib berish zonalari va aksiyalar qo'llab-quvvatlash va dasturchilarsiz sozlanadi",
     "ownDev": "CRM bizning jamoamiz tomonidan noldan yaratilgan — funksionallik va ishonchlilikni to'liq nazorat qilamiz. Uchinchi tomon platformalar yo'q",
-    "pricing": "Shaffof narxlash: belgilangan tarif, yashirin komissiyalar va qo'shimcha to'lovlar yo'q",
     "cta": "CRM ni ochish — 90 kun bepul",
     "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
-    "screenPlaceholder": "Bu yerda Nyambot CRM skrinshotи bo'ladi",
     "features": {
       "dashboard": "Daromad va ko'rsatkichlar paneli",
       "orders": "Real vaqtda buyurtmalar",
@@ -586,13 +384,6 @@
         "title": "Ishga tushirish va qo‘llab-quvvatlash",
         "description": "Buyurtma qabulini ishga tushiramiz va aloqada bo‘lamiz, har bosqichda moslashishga yordam beramiz"
       }
-    },
-    "movesTitle": "Ko‘chirishga yordam beramiz",
-    "moves": {
-      "0": "Mijozlar bazasi va kontaktlar",
-      "1": "Menyu, mahsulotlar va toifalar",
-      "2": "Messenjerlardagi kanal va obunachilar",
-      "3": "Promo-kodlar va sodiqlik dasturi"
     },
     "button": "50% chegirma bilan o‘tish",
     "compare": "Joriy xizmat bilan solishtirish",
@@ -724,7 +515,11 @@
     "button": "Bepul sinab ko'rish",
     "docs": "Hujjatlarni o'qish",
     "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz",
-    "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
+    "trialFeatures": [
+      "90 kun bepul",
+      "Toʻliq kirish",
+      "Karta kerak emas"
+    ]
   },
   "footer": {
     "description": "Ovqatlanish joylari uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",

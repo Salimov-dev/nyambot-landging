@@ -311,215 +311,13 @@
       }
     }
   },
-  "features": {
-    "label": "Features",
-    "title": "Everything a food business needs — in one tool",
-    "items": {
-      "messengers": {
-        "tag": "Telegram + MAX",
-        "title": "MAX and Telegram in one service — accept orders in both messengers",
-        "description": "Customers open the mini-app right in their familiar messenger. One client in both channels — shared history, points and promotions",
-        "points": [
-          "Telegram bot and MAX bot — one setup",
-          "Unified customer base across messengers",
-          "Login without SMS or passwords",
-          "Real-time order status notifications"
-        ]
-      },
-      "modernUI": {
-        "tag": "Stylish design",
-        "title": "A mini-app customers want to come back to",
-        "description": "Modern interface with attention to every detail. Customers see not just a catalog — but a beautiful product they trust and enjoy using",
-        "points": [
-          "Vivid badges: «New», «Best deal», «Daily offer», discounts",
-          "Smooth transitions and micro-animations on every action",
-          "Semi-transparent elements and glassmorphism effects",
-          "Adaptive grid — looks perfect on any screen",
-          "Dark theme out of the box — modern and sleek",
-          "Dish photos with cropping and optimization"
-        ]
-      },
-      "noCommission": {
-        "tag": "Zero commissions",
-        "title": "Stop paying up to 45% to aggregators",
-        "description": "Yandex.Eda charges 20–45% per order. Nyambot — fixed tariff. With 500 orders per month, savings exceed 100,000 ₽",
-        "points": [
-          "0% commission per order",
-          "Fixed monthly payment",
-          "Your customers — your database",
-          "Full control over pricing and promotions"
-        ]
-      },
-      "posRkeeper": {
-        "tag": "R-keeper integration",
-        "title": "R-keeper connected — orders flow straight to the till and kitchen",
-        "description": "Running R-keeper? Nyambot pulls in your item list, prices and stop-lists and keeps them up to date, while every online order lands in the till and on the kitchen screen on its own — no manual transfer, no double accounting",
-        "points": [
-          "Item list and prices are pulled from R-keeper and refresh automatically",
-          "Online orders are registered in the R-keeper till instantly",
-          "Stop-list from the till — unavailable dishes hide from customers",
-          "Not ready to integrate yet — Nyambot also runs on its own CRM",
-          "R-keeper loyalty: discounts, bonuses, gifts and coupons — right in the bot and mini app",
-          "Online payment by card and via Yandex.Pay",
-          "Delivery without your own staff — Yandex.Delivery couriers",
-          "Stock balances and stop-lists — always in sync with R-keeper"
-        ]
-      },
-      "crm": {
-        "tag": "CRM and analytics",
-        "title": "Manage everything from one dashboard",
-        "description": "Menu, orders, customers, marketing — all in one CRM. Real-time analytics helps make data-driven decisions",
-        "points": [
-          "Revenue and orders dashboard",
-          "Menu, stop-lists, modifier management",
-          "Customer base with history and segmentation",
-          "Marketing: discounts, promo codes, loyalty"
-        ]
-      },
-      "menuCustomization": {
-        "tag": "Flexible menu",
-        "title": "Every dish — tailored to the customer",
-        "description": "Modifiers, ingredients and composition — customers build their dish right in the mini-app. You configure everything in CRM without developers",
-        "points": [
-          "Modifiers: diameter, base, volume, spiciness — any parameters",
-          "Add and remove ingredients with automatic price recalculation",
-          "Built-in collection of vibrant ingredient images",
-          "Modifier groups: required choice or optional",
-          "Customer sees the composition and can remove allergens",
-          "Modifiers are pulled in automatically from iiko and R-keeper"
-        ]
-      },
-      "comboBuilder": {
-        "tag": "Combos & business lunches",
-        "title": "Build a combo — the customer chooses, not searches",
-        "description": "Business lunches and combo sets with flexible assembly right in the mini-app. Customer picks dishes from categories, sees the total price and places an order in a few clicks",
-        "points": [
-          "Fixed combo price — customer picks dishes from each category",
-          "Open any combo item card to see ingredients, photo, description",
-          "Flexible rules: required and optional positions",
-          "Business lunches on schedule — appear and disappear automatically",
-          "Combo shows in cart as a single item with details"
-        ]
-      },
-      "crewAdmin": {
-        "tag": "Team app",
-        "title": "Team app — admin, courier and kitchen in one screen",
-        "description": "One app for the whole shift: the admin accepts and assigns orders, the courier sees the address on the map, the cook marks dishes ready — all from a smartphone, without opening the CRM",
-        "points": [
-          "Admin: accept, cancel an order and refund the customer",
-          "Assign a courier in one tap — they instantly see the address on the map",
-          "Courier: tasks, customer contact, one-tap call and a «Delivered» mark",
-          "Cook: kitchen screen with orders and a «Ready» mark",
-          "Stop lists: a dish runs out — instantly hidden from customers across all messengers",
-          "The customer automatically gets status notifications in the bot",
-          "Full order history with every status logged to the minute"
-        ]
-      },
-      "crew": {
-        "tag": "Crew — for courier",
-        "title": "Courier gets the order and knows exactly where to go",
-        "description": "Crew app for couriers — everything needed for delivery in one screen: tasks, map address, customer contact and notifications",
-        "points": [
-          "Receives assigned order from admin",
-          "Sees order and delivery address on the map",
-          "Notify the customer about a delay from the app",
-          "Call customer in one tap",
-          "Mark order as delivered",
-          "Sound notifications and vibration for new orders"
-        ]
-      },
-      "payment": {
-        "tag": "Payments",
-        "title": "Flexible payment options for every customer",
-        "description": "Accept cash, card on delivery or online via YuKassa — the customer chooses",
-        "points": [
-          "Cash — specify the change amount in the order so the courier is prepared",
-          "Card to courier on delivery",
-          "Online: YuMoney, Mir Pay, SberPay, T-Pay, SBP"
-        ]
-      },
-      "marketing": {
-        "tag": "Marketing",
-        "title": "Tools to grow your sales",
-        "description": "Retain customers with flexible promotions, promo codes and loyalty program. Applied to one or multiple locations",
-        "linkLabel": "35 ready-to-use promotion ideas",
-        "points": [
-          "Discounts and gifts based on cart conditions",
-          "Promo codes with any restrictions",
-          "Loyalty points: earn and redeem",
-          "Free item for purchasing N items from a category",
-          "Works across all messengers simultaneously"
-        ]
-      },
-      "scheduledSending": {
-        "tag": "Broadcasts & daily offers",
-        "title": "Scheduled daily offers in Telegram and MAX",
-        "description": "Plan marketing broadcasts in advance. The daily offer is automatically sent to subscribers in Telegram and MAX at the right time — no manual work needed",
-        "points": [
-          "Daily offer: auto-send to Telegram and MAX",
-          "Visual promotion calendar in CRM",
-          "Schedule broadcasts weeks in advance",
-          "Reach all subscribers automatically"
-        ]
-      },
-      "languages": {
-        "tag": "7 interface languages",
-        "title": "The entire service speaks your language",
-        "description": "Nyambot is the only service in the niche with 7 languages at every level: the customer sees the mini-app menu, the owner works in CRM, the admin manages orders, the courier receives tasks — each in their own language",
-        "points": [
-          "Mini-app: menu and orders in the customer's language",
-          "CRM: interface for owner and admin",
-          "Crew: app for admin and courier",
-          "7 languages: RU, EN, UZ, BE, TG, KY, AZ"
-        ]
-      },
-      "selfService": {
-        "tag": "Full self-service",
-        "title": "Launch and manage without managers",
-        "description": "Everything is configured in CRM on your own — from launch and at any time. No need to contact support to add a dish, change a price, or configure delivery zones",
-        "points": [
-          "Menu: add, edit, hide items yourself",
-          "Delivery zones — draw on the map yourself",
-          "Promotions, promo codes, stop-lists — no developers needed",
-          "Connect a new bot in 10 minutes",
-          "Documentation: step-by-step launch from zero to first order",
-          "AI assistant in CRM — instant help on any question without contacting support"
-        ]
-      },
-      "aiCrm": {
-        "tag": "AI in CRM",
-        "title": "AI assistant for the venue owner",
-        "description": "The AI assistant in CRM helps the owner understand the system and configure everything independently — without managers or support",
-        "points": [
-          "Explains how to set up menu, promotions and delivery",
-          "Helps understand analytics and reports",
-          "Answers any questions about working in CRM",
-          "Works in 7 languages"
-        ]
-      },
-      "aiSearch": {
-        "tag": "AI in Nyambot",
-        "title": "AI menu search for customers and an AI assistant for the owner",
-        "description": "Artificial intelligence works both ways: customers find dishes by taste and ingredients in natural language, while the owner gets a CRM assistant that explains settings and analytics",
-        "points": [
-          "AI search understands natural-language queries — by taste, ingredients and description",
-          "Finds dishes without exact word matches or scrolling through the menu",
-          "The CRM AI assistant explains how to set up the menu, promotions and delivery",
-          "Helps you make sense of analytics and answers questions about the system",
-          "Both work in 7 languages"
-        ]
-      }
-    }
-  },
   "crmDemo": {
     "tag": "In-house CRM",
     "title": "Manage your venue from a single dashboard",
     "description": "Full-featured in-house CRM — not a third-party service. Menu with modifiers, order management, revenue analytics, marketing campaigns and customer database — all in one place, no extra integrations. Launch and run everything fully on your own: menu, prices, delivery zones and promotions are set up without support or programmers",
     "ownDev": "CRM built from scratch by our team — full control over features and reliability. No third-party platforms",
-    "pricing": "Transparent pricing: fixed tariff, no hidden commissions or surcharges",
     "cta": "Open CRM — 90 days free",
     "ctaHint": "Full access · Full support · No card required",
-    "screenPlaceholder": "Nyambot CRM screenshot coming soon",
     "features": {
       "dashboard": "Revenue and metrics dashboard",
       "orders": "Real-time order management",
@@ -586,13 +384,6 @@
         "title": "Launch and support",
         "description": "We launch order taking and stay in touch, helping you settle in at every step"
       }
-    },
-    "movesTitle": "We help you move",
-    "moves": {
-      "0": "Customer base and contacts",
-      "1": "Menu, products and categories",
-      "2": "Channel and subscribers in messengers",
-      "3": "Promo codes and loyalty program"
     },
     "button": "Switch with 50% off",
     "compare": "Compare with your current service",
@@ -724,7 +515,11 @@
     "button": "Try for free",
     "docs": "Read documentation",
     "hint": "No card required · Free trial, no commitment",
-    "trialFeatures": ["90 days free", "Full access", "No card required"]
+    "trialFeatures": [
+      "90 days free",
+      "Full access",
+      "No card required"
+    ]
   },
   "footer": {
     "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",
