@@ -232,14 +232,14 @@
               "title": "Delivery via Yandex.Delivery",
               "points": [
                 "Request placed by an admin from the Crew app or a cashier from the iiko / R-Keeper till",
-                "Courier is called automatically when the order is ready for pickup",
+                "Call a courier in one tap and see the delivery price before confirming — or enable auto-dispatch",
                 "You pay per actual deliveries, not for courier headcount"
               ]
             },
             {
               "title": "Flexible and in control",
               "points": [
-                "Courier tracking — sent to guest in bot, visible to you in CRM",
+                "Courier tracking on the map: a link to the guest in the bot, to you in CRM and the Crew app",
                 "Your own couriers are also supported — your choice",
                 "No third-party app needed — everything inside Nyambot"
               ]

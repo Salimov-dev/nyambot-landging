@@ -232,14 +232,14 @@
               "title": "Yandex.Dostavka vasitəsilə çatdırılma",
               "points": [
                 "Sorğunu administrator Komanda tətbiqindən və ya kassir iiko / R-Keeper kassasından qoyur",
-                "Sifariş götürülməyə hazır olduqda kuryer avtomatik çağrılır",
+                "Kuryeri bir toxunuşla çağırırsınız və təsdiqdən əvvəl çatdırılma qiymətini görürsünüz — və ya avtomatik çağırışı aktiv edirsiniz",
                 "Siz yalnız real çatdırılmalar üçün ödəyirsiniz, kuryer heyəti üçün deyil"
               ]
             },
             {
               "title": "Çevik və nəzarət altında",
               "points": [
-                "Kuryerin izlənməsi — qonağa bot vasitəsilə, sizə CRM-də",
+                "Xəritədə kuryer izlənməsi: qonağa bot vasitəsilə keçid, sizə CRM və Komanda tətbiqində",
                 "Öz kuryerləriniz də dəstəklənir — siz seçirsiniz",
                 "Üçüncü tərəf tətbiqi lazım deyil — hər şey Nyambot-un içindədir"
               ]

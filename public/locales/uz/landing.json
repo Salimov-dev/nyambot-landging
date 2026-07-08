@@ -232,14 +232,14 @@
               "title": "Yandex.Delivery orqali yetkazib berish",
               "points": [
                 "Ariza Crew ilovasidan administrator yoki iiko / R-Keeper kassasidan kassir tomonidan yuboriladi",
-                "Kuryer buyurtma olishga tayyor bo'lganda avtomatik chaqiriladi",
+                "Kuryerni bir marta bosib chaqirasiz va tasdiqlashdan oldin yetkazib berish narxini ko'rasiz — yoki avtomatik chaqiruvni yoqasiz",
                 "Siz haqiqiy yetkazib berishlar uchun to'laysiz, kuryer xodimlari uchun emas"
               ]
             },
             {
               "title": "Moslashuvchan va nazorat ostida",
               "points": [
-                "Kuryer kuzatuvi — mehmonlarga botda, sizga CRM da",
+                "Xaritada kuryer kuzatuvi: mehmonga botda havola, sizga CRM va Crew ilovasida",
                 "O'z kureylaringiz ham qo'llab-quvvatlanadi — siz tanlaySiz",
                 "Uchinchi tomon ilova kerak emas — hamma narsa Nyambot ichida"
               ]
