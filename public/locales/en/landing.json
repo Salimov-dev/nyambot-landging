@@ -172,9 +172,9 @@
             {
               "title": "Loyalty and payment from POS",
               "points": [
-                "Discounts, bonuses, gifts and promo codes directly from POS — in the bot and mini-app",
+                "Discounts, bonuses, gifts and promo codes directly from POS — in the bot and mini-app (in iiko, marketing and loyalty run through iikoCard)",
                 "All payment types: cash, card, online and guest loyalty points",
-                "Delivery or pickup at exact time — exported to POS"
+                "Delivery or pickup at exact time — exported to POS (in R-Keeper via the Delivery module)"
               ]
             },
             {
