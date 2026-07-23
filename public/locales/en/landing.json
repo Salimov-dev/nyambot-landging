@@ -387,7 +387,7 @@
     },
     "button": "Switch with 50% off",
     "compare": "Compare with your current service",
-    "hint": "50% off for 6 months · Free data migration · We help at every step"
+    "hint": "50% off for 6 months · Free data migration · We help at every step · Discounts don't stack"
   },
   "security": {
     "label": "Security",
