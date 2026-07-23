@@ -1,0 +1,26 @@
+# Нормализация концов строк: в репозитории и в рабочей копии — LF.
+# Выровнено с prettier (endOfLine=lf); убирает предупреждения git «LF→CRLF»
+# при core.autocrlf=true.
+* text=auto eol=lf
+
+# Бинарные файлы — без нормализации концов строк и без текстового diff.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.avif  binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.eot   binary
+*.zip   binary
+*.gz    binary
+*.mp4   binary
+*.webm  binary
+*.mp3   binary
+*.xlsx  binary
+*.docx  binary
