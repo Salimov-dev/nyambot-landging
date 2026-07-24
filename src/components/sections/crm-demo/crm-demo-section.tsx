@@ -2,9 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { Button, Col, Flex, Row, Tag, Typography } from "antd";
-import { NotebookMockup } from "@/components/ui/notebook-mockup/notebook-mockup";
+import { Button, Flex, Tag, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
@@ -29,135 +27,114 @@ export function CrmDemoSection() {
     <section id="crm-demo" className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.inner}>
-        <Row gutter={[64, 48]} align="middle">
-          {/* Left — text */}
-          <Col xs={24} lg={10}>
-            <motion.div
-              ref={ref}
-              initial={{ opacity: 0, x: -40 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.7, ease: "easeOut" }}
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 32 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <Flex vertical align="center" gap={20} className={styles.header}>
+            <Tag
+              style={{
+                background: theme.colors.accentBg,
+                border: `1px solid ${theme.colors.accentBorder}`,
+                color: theme.colors.accent,
+                borderRadius: "var(--radius-pill)",
+                padding: "4px 14px",
+                fontSize: 13,
+                fontWeight: 600,
+                width: "fit-content",
+                marginInlineEnd: 0,
+              }}
             >
-              <Flex vertical gap={24}>
-                <Tag
-                  style={{
-                    background: theme.colors.accentBg,
-                    border: `1px solid ${theme.colors.accentBorder}`,
-                    color: theme.colors.accent,
-                    borderRadius: "var(--radius-pill)",
-                    padding: "4px 14px",
-                    fontSize: 13,
-                    fontWeight: 600,
-                    width: "fit-content",
-                  }}
-                >
-                  🖥️ {t("crmDemo.tag")}
-                </Tag>
+              🖥️ {t("crmDemo.tag")}
+            </Tag>
 
-                <Title
-                  level={2}
-                  style={{
-                    color: theme.colors.textPrimary,
-                    fontSize: "clamp(24px, 3vw, 38px)",
-                    fontWeight: 800,
-                    lineHeight: 1.2,
-                    margin: 0,
-                  }}
-                >
-                  {t("crmDemo.title")}
-                </Title>
-
-                <Text
-                  style={{
-                    color: theme.colors.textSecondary,
-                    fontSize: 16,
-                    lineHeight: 1.65,
-                    display: "block",
-                  }}
-                >
-                  {t("crmDemo.description")}
-                </Text>
-
-                {/* Own development badge */}
-                <Flex align="center" gap={10} className={styles.ownDevBadge}>
-                  <Text style={{ fontSize: 18 }}>🏗️</Text>
-                  <Text
-                    style={{
-                      color: theme.colors.textSecondary,
-                      fontSize: 14,
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {t("crmDemo.ownDev")}
-                  </Text>
-                </Flex>
-
-                <div className={styles.featureGrid}>
-                  {CRM_FEATURES.map((f) => (
-                    <Flex
-                      key={f.key}
-                      align="center"
-                      gap={10}
-                      className={styles.featureItem}
-                    >
-                      <Text style={{ fontSize: 20 }}>{f.icon}</Text>
-                      <Text
-                        style={{
-                          color: theme.colors.textSecondary,
-                          fontSize: 14,
-                          fontWeight: 500,
-                        }}
-                      >
-                        {t(f.key)}
-                      </Text>
-                    </Flex>
-                  ))}
-                </div>
-
-                <Flex gap={12} wrap>
-                  <Button
-                    type="primary"
-                    size="large"
-                    href={LINKS.crm}
-                    target="_blank"
-                    style={{
-                      background: theme.gradients.primary,
-                      border: "none",
-                      fontWeight: 600,
-                    }}
-                  >
-                    {t("crmDemo.cta")}
-                  </Button>
-                </Flex>
-
-                <Text
-                  style={{ color: theme.colors.textTertiary, fontSize: 13 }}
-                >
-                  {t("crmDemo.ctaHint")}
-                </Text>
-              </Flex>
-            </motion.div>
-          </Col>
-
-          {/* Right — notebook mockup */}
-          <Col xs={24} lg={14}>
-            <motion.div
-              initial={{ opacity: 0, x: 40, scale: 0.96 }}
-              animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            <Title
+              level={2}
+              style={{
+                color: theme.colors.textPrimary,
+                fontSize: "clamp(26px, 3.4vw, 42px)",
+                fontWeight: 800,
+                lineHeight: 1.2,
+                margin: 0,
+              }}
             >
-              <NotebookMockup>
-                <Image
-                  src="/images/sections/crm-dashboard-section.png"
-                  alt="CRM Нямбот"
-                  fill
-                  sizes="640px"
-                  className={styles.notebookScreenImage}
-                />
-              </NotebookMockup>
+              {t("crmDemo.title")}
+            </Title>
+
+            <Text
+              style={{
+                color: theme.colors.textSecondary,
+                fontSize: 16,
+                lineHeight: 1.65,
+                display: "block",
+                maxWidth: 720,
+              }}
+            >
+              {t("crmDemo.description")}
+            </Text>
+
+            {/* Own development badge */}
+            <Flex align="center" gap={10} className={styles.ownDevBadge}>
+              <Text style={{ fontSize: 18 }}>🏗️</Text>
+              <Text
+                style={{
+                  color: theme.colors.textSecondary,
+                  fontSize: 14,
+                  lineHeight: 1.5,
+                }}
+              >
+                {t("crmDemo.ownDev")}
+              </Text>
+            </Flex>
+          </Flex>
+        </motion.div>
+
+        <div className={styles.featureGrid}>
+          {CRM_FEATURES.map((f, i) => (
+            <motion.div
+              key={f.key}
+              initial={{ opacity: 0, y: 24 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
+              className={styles.featureCard}
+            >
+              <span className={styles.featureIcon}>{f.icon}</span>
+              <Title
+                level={4}
+                style={{
+                  color: theme.colors.textPrimary,
+                  fontSize: 15,
+                  fontWeight: 600,
+                  lineHeight: 1.35,
+                  margin: 0,
+                }}
+              >
+                {t(f.key)}
+              </Title>
             </motion.div>
-          </Col>
-        </Row>
+          ))}
+        </div>
+
+        <Flex vertical align="center" gap={12} className={styles.ctaBlock}>
+          <Button
+            type="primary"
+            size="large"
+            href={LINKS.crm}
+            target="_blank"
+            style={{
+              background: theme.gradients.primary,
+              border: "none",
+              fontWeight: 600,
+            }}
+          >
+            {t("crmDemo.cta")}
+          </Button>
+          <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
+            {t("crmDemo.ctaHint")}
+          </Text>
+        </Flex>
       </div>
     </section>
   );

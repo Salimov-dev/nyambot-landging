@@ -24,9 +24,12 @@
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  background: #1a1a24;
-  border: 1px solid var(--border);
+  background: var(--glass-fallback-bg);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    var(--glass-shadow);
   overflow: hidden;
   min-width: 140px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);

@@ -14,93 +14,42 @@
   margin-bottom: 80px;
 }
 
-.featureBlock {
-  padding: 64px 0;
-  border-top: 1px solid var(--border-light);
+/* ===== Сетка возможностей =====
+   2 карточки в ряд, без изображений — только тег, заголовок, результат и «Подробнее».
+   Поверхность карточки — .landing-glass-card (глянец без blur). */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.featureBlock:first-of-type {
-  border-top: none;
-  padding-top: 0;
-}
-
-.featureBlock:last-of-type {
-  padding-bottom: 0;
-}
-
-.phoneContainer {
-  position: relative;
-}
-
-.phoneGlow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 360px;
-  height: 360px;
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 50%;
-}
-
-.phoneScreen {
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
-}
-
-.bannerCard {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 360px;
-  aspect-ratio: var(--banner-ratio, 3 / 4);
-  border-radius: 20px;
+.bentoCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
-.bannerImage {
-  object-fit: cover;
-  object-position: center center;
+.bentoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 32px;
+  flex: 1;
 }
 
-.phoneScreenImage {
-  position: absolute;
-  inset: 0;
+/* Кнопка «Подробнее» прижата к низу — ряд выглядит выровненным */
+.bentoContent > button {
+  margin-top: auto;
+}
+
+/* Цветная полоска снизу вместо изображения — свой акцент у каждой карточки */
+.accentBar {
+  height: 6px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  background: #191e36;
-  margin-left: -3px;
-}
-
-.phoneScreenImageContain {
-  object-fit: fill;
-}
-
-.phoneScreenImageCenter {
-  object-position: center center;
-}
-
-.phoneScreenImageZoom {
-  inset: unset;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 116%;
-  transform: translateY(-50%);
-  object-fit: cover;
-  object-position: center center;
-}
-
-.phoneScreenImageWide {
-  width: calc(100% + 12px);
-  left: 2px;
-  right: -6px;
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 .outcomeChips {
@@ -148,6 +97,13 @@
   padding-right: 4px;
 }
 
+@media (max-width: 900px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 64px 0 24px;
@@ -158,7 +114,7 @@
   .header {
     margin-bottom: 48px;
   }
-  .featureBlock {
-    padding: 48px 0;
+  .bentoContent {
+    padding: 24px 20px;
   }
 }

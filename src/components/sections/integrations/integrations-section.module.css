@@ -30,13 +30,20 @@
   aspect-ratio: 940 / 404;
   border-radius: var(--radius-lg, 16px);
   overflow: hidden;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
-  transition: transform 0.25s ease;
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.14),
+    0 4px 24px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.25s var(--ease-out-quart),
+    border-color 0.25s ease;
 }
 
-.logoCard:hover {
-  transform: translateY(-4px);
+@media (hover: hover) {
+  .logoCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--glass-border-active);
+  }
 }
 
 .logoImage {

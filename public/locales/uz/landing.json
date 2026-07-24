@@ -9,7 +9,7 @@
   },
   "hero": {
     "badge": "🔥 Kafe, restoran, novvoyxona va yetkazib berish uchun",
-    "title": "Ovqat buyurtma va yetkazib berish <em>MAX va Telegram</em>da. Agregatorlarsiz",
+    "title": "Ovqat buyurtma va yetkazib berish <em>MAX va&nbsp;Telegram</em>da. Agregatorlarsiz",
     "subtitle": "Ovqat buyurtmalarini messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
     "ctaSecondary": "Demoni ko‘rish",
@@ -321,7 +321,7 @@
     "features": {
       "dashboard": "Daromad va ko'rsatkichlar paneli",
       "orders": "Real vaqtda buyurtmalar",
-      "clients": "Mijozlar bazasi va segmentlar",
+      "clients": "Buyurtmalar tarixi bilan mijozlar bazasi",
       "marketing": "Aktsiyalar, chegirmalar, promokodlar",
       "menu": "Modifikatorli menyu va stop-ro'yxatlar",
       "analytics": "Davrlar bo'yicha savdo tahlili"
@@ -330,7 +330,7 @@
   "tryDemo": {
     "tag": "Demo",
     "title": "Hoziroq sinab ko'ring",
-    "subtitle": "Telegram yoki MAX'da demo-botni oching va mijozlaringiz qanday buyurtma berishini his qiling — ro'yxatdan o'tmasdan",
+    "subtitle": "Telegram yoki MAX'da demo-botni oching va mijozlaringiz qanday buyurtma berishini his qiling",
     "tgDesc": "Telegram'da mini-ilova demosi",
     "tgCta": "Telegram'da ochish",
     "maxDesc": "MAX'da mini-ilova demosi",
@@ -515,11 +515,7 @@
     "button": "Bepul sinab ko'rish",
     "docs": "Hujjatlarni o'qish",
     "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz",
-    "trialFeatures": [
-      "90 kun bepul",
-      "Toʻliq kirish",
-      "Karta kerak emas"
-    ]
+    "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
     "description": "Ovqatlanish joylari uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",

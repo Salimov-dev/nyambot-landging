@@ -84,6 +84,157 @@
   --radius-lg: 16px;
   --radius-xl: 20px;
   --radius-pill: 999px;
+
+  /* ===== Liquid Glass (бренд-система, перенос из miniapp) =====
+     Blur-бюджет лендинга: ≤2 blur-поверхностей в вьюпорте (шапка + меню/модалка).
+     Карточки контента — .landing-glass-card БЕЗ blur (плотный глянец). */
+  --glass-bg: rgba(17, 19, 28, 0.6);
+  --glass-bg-strong: rgba(13, 15, 23, 0.78);
+  --glass-card-bg: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 55%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-active: rgba(255, 160, 40, 0.55);
+  --glass-highlight: rgba(255, 255, 255, 0.22);
+  --glass-blur: blur(24px) saturate(1.6);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --glass-fallback-bg: rgba(15, 17, 26, 0.97);
+
+  /* ===== Motion — пружинные кривые (iOS) ===== */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
+  --press-duration: 0.16s;
+}
+
+/* ============================================
+   Liquid Glass — стеклянные поверхности.
+   Только классами: инлайн-стили не переопределить
+   fallback-медиа-запросами
+   ============================================ */
+
+/* Настоящее стекло с blur — ТОЛЬКО шапка, мобильное меню, модалки */
+.landing-glass {
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 1px var(--glass-highlight),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.07),
+    var(--glass-shadow);
+  overflow: hidden;
+}
+
+.landing-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 70% at 50% -20%,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.04) 45%,
+    transparent 62%
+  );
+}
+
+/* Глянцевая стеклянная карточка БЕЗ blur — для bento/сеток (дёшево для GPU) */
+.landing-glass-card {
+  position: relative;
+  background: var(--glass-card-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 1px var(--glass-highlight),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.06),
+    var(--shadow-card);
+  overflow: hidden;
+  transition:
+    transform 0.25s var(--ease-out-quart),
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.landing-glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    130% 85% at 50% -25%,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.03) 48%,
+    transparent 65%
+  );
+}
+
+@media (hover: hover) {
+  .landing-glass-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--glass-border-active);
+    box-shadow:
+      inset 0 1px 1px var(--glass-highlight),
+      0 16px 48px rgba(0, 0, 0, 0.5),
+      0 4px 20px rgba(255, 140, 0, 0.12);
+  }
+}
+
+/* Глянец CTA: выпуклый блик-линза поверх градиента */
+.landing-glossy {
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-glossy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    130% 85% at 50% -25%,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.08) 48%,
+    transparent 65%
+  );
+}
+
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .landing-glass {
+    background: var(--glass-fallback-bg);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .landing-glass {
+    background: var(--glass-fallback-bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* ============================================
+   Доступность: отключаемые анимации
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* ============================================
@@ -142,6 +293,21 @@ a {
 /* ============================================
    AntD overrides для лендинга
    ============================================ */
+/* Единый пресс-стандарт всех кнопок (iOS-отклик) */
+.ant-btn {
+  transition:
+    transform var(--press-duration) var(--ease-out-quart),
+    opacity 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ant-btn:active:not(:disabled) {
+  transform: scale(0.96) !important;
+}
+
 .ant-btn-primary {
   background: var(--gradient-primary) !important;
   border: none !important;
@@ -153,6 +319,10 @@ a {
   transform: translateY(-1px) !important;
 }
 
+.ant-btn-primary:active:not(:disabled) {
+  transform: scale(0.96) !important;
+}
+
 .ant-card {
   transition:
     transform 0.25s ease,
@@ -161,6 +331,20 @@ a {
 
 .ant-card:hover {
   transform: translateY(-4px) !important;
+}
+
+/* Модалки («Подробнее», видео) — стеклянная поверхность */
+.ant-modal-content {
+  background: var(--glass-fallback-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    var(--glass-shadow) !important;
+}
+
+.ant-modal-mask {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .ant-collapse-header {

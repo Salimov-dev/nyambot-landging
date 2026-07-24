@@ -9,7 +9,7 @@
   },
   "hero": {
     "badge": "🔥 Kafe, restoran, çörəkxana və çatdırılma üçün",
-    "title": "Yemək sifarişi və çatdırılması <em>MAX və Telegram</em>-da. Aqreqatorsuz",
+    "title": "Yemək sifarişi və çatdırılması <em>MAX və&nbsp;Telegram</em>-da. Aqreqatorsuz",
     "subtitle": "Yemək sifarişlərini birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz müştəri bazası və çatdırılma üzərində tam nəzarət",
     "cta": "Pulsuz sınayın",
     "ctaSecondary": "Demoya bax",
@@ -321,7 +321,7 @@
     "features": {
       "dashboard": "Gəlir və metriklər paneli",
       "orders": "Real vaxtda sifarişlər",
-      "clients": "Müştəri bazası və seqmentlər",
+      "clients": "Sifariş tarixçəsi ilə müştəri bazası",
       "marketing": "Aksiyalar, endirimlər, promokodlar",
       "menu": "Modifikatorlu menyu və stop-siyahılar",
       "analytics": "Dövrlər üzrə satış analitikası"
@@ -330,7 +330,7 @@
   "tryDemo": {
     "tag": "Demo",
     "title": "İndi sınayın",
-    "subtitle": "Telegram və ya MAX-da demo botu açın və müştərilərinizin necə sifariş verdiyini hiss edin — qeydiyyatsız",
+    "subtitle": "Telegram və ya MAX-da demo botu açın və müştərilərinizin necə sifariş verdiyini hiss edin",
     "tgDesc": "Telegram-da mini-tətbiq demosu",
     "tgCta": "Telegram-da açın",
     "maxDesc": "MAX-da mini-tətbiq demosu",
@@ -515,11 +515,7 @@
     "button": "Pulsuz sınayın",
     "docs": "Sənədləri oxuyun",
     "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz",
-    "trialFeatures": [
-      "90 gün pulsuz",
-      "Tam giriş",
-      "Kart tələb olunmur"
-    ]
+    "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
     "description": "İaşə müəssisələri üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",

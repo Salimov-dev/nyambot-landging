@@ -9,7 +9,7 @@
   },
   "hero": {
     "badge": "🔥 For cafés, restaurants, bakeries and delivery",
-    "title": "Your own food ordering and delivery in <em>MAX and Telegram</em>. No aggregators",
+    "title": "Your own food ordering and delivery in <em>MAX and&nbsp;Telegram</em>. No aggregators",
     "subtitle": "Accept food orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
     "cta": "Try for free",
     "ctaSecondary": "See the demo",
@@ -321,7 +321,7 @@
     "features": {
       "dashboard": "Revenue and metrics dashboard",
       "orders": "Real-time order management",
-      "clients": "Customer base and segments",
+      "clients": "Customer base with order history",
       "marketing": "Promotions, discounts, promo codes",
       "menu": "Menu with modifiers and stop-lists",
       "analytics": "Sales analytics by period"
@@ -330,7 +330,7 @@
   "tryDemo": {
     "tag": "Demo",
     "title": "Try it right now",
-    "subtitle": "Open the demo bot in Telegram or MAX and experience how your customers order — no registration required",
+    "subtitle": "Open the demo bot in Telegram or MAX and experience how your customers order",
     "tgDesc": "Mini-app demo in Telegram",
     "tgCta": "Open in Telegram",
     "maxDesc": "Mini-app demo in MAX",
@@ -515,11 +515,7 @@
     "button": "Try for free",
     "docs": "Read documentation",
     "hint": "No card required · Free trial, no commitment",
-    "trialFeatures": [
-      "90 days free",
-      "Full access",
-      "No card required"
-    ]
+    "trialFeatures": ["90 days free", "Full access", "No card required"]
   },
   "footer": {
     "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",

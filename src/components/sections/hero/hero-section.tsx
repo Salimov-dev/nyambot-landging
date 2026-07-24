@@ -167,7 +167,10 @@ export function HeroSection() {
         footer={null}
         width={880}
         title={t("hero.videoTitle")}
-        destroyOnClose
+        // antd 6: `destroyOnClose` объявлен устаревшим в пользу `destroyOnHidden`.
+        // Размонтирование обязательно — иначе iframe RuTube продолжает играть
+        // звук после закрытия модалки.
+        destroyOnHidden
       >
         <div className={styles.videoWrapper}>
           <iframe
