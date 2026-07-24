@@ -57,27 +57,15 @@
   align-items: center;
   gap: 8px;
   margin-top: 8px;
-  padding: 14px 30px;
+  padding: 10px 20px;
   border-radius: var(--radius-pill);
-  background: var(--gradient-primary);
-  color: #fff;
-  font-size: 20px;
-  font-weight: 800;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0.02em;
   box-shadow: 0 8px 30px rgba(255, 140, 0, 0.5);
-  animation: badgePulse 2.2s ease-in-out infinite;
-}
-
-@keyframes badgePulse {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 8px 28px rgba(255, 140, 0, 0.45);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 12px 40px rgba(255, 140, 0, 0.75);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

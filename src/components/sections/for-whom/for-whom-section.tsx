@@ -6,15 +6,22 @@ import { Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { theme } from "@/config/theme";
 import styles from "./for-whom-section.module.css";
+import {
+  UtensilsIcon,
+  ChefHatIcon,
+  BoxIcon,
+  StoreIcon,
+  FactoryIcon,
+} from "@/components/ui/icons/icons";
 
 const { Title, Text } = Typography;
 
 const SEGMENTS = [
-  { id: "cafe", icon: "🍔" },
-  { id: "bakery", icon: "🥐" },
-  { id: "dark", icon: "🍱" },
-  { id: "chains", icon: "🍕" },
-  { id: "production", icon: "🍣" },
+  { id: "cafe", icon: UtensilsIcon },
+  { id: "bakery", icon: ChefHatIcon },
+  { id: "dark", icon: BoxIcon },
+  { id: "chains", icon: StoreIcon },
+  { id: "production", icon: FactoryIcon },
 ] as const;
 
 export function ForWhomSection() {
@@ -37,21 +44,11 @@ export function ForWhomSection() {
               color: theme.colors.textPrimary,
               fontSize: "clamp(24px, 3.5vw, 38px)",
               fontWeight: 800,
-              margin: "0 0 12px",
+              margin: 0,
             }}
           >
             {t("forWhom.title")}
           </Title>
-          <Text
-            style={{
-              color: theme.colors.textSecondary,
-              fontSize: 16,
-              lineHeight: 1.6,
-              display: "block",
-            }}
-          >
-            {t("forWhom.subtitle")}
-          </Text>
         </motion.div>
 
         <div className={styles.grid}>
@@ -63,7 +60,9 @@ export function ForWhomSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className={styles.card}
             >
-              <span className={styles.icon}>{segment.icon}</span>
+              <span className={styles.icon}>
+                <segment.icon size={26} />
+              </span>
               <Title
                 level={4}
                 style={{
@@ -75,15 +74,6 @@ export function ForWhomSection() {
               >
                 {t(`forWhom.items.${segment.id}.title`)}
               </Title>
-              <Text
-                style={{
-                  color: theme.colors.textSecondary,
-                  fontSize: 14,
-                  lineHeight: 1.5,
-                }}
-              >
-                {t(`forWhom.items.${segment.id}.text`)}
-              </Text>
             </motion.div>
           ))}
         </div>

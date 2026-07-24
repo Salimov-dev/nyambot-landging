@@ -7,6 +7,7 @@ import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { theme } from "@/config/theme";
+import { ShieldIcon } from "@/components/ui/icons/icons";
 import styles from "./footer.module.css";
 
 const { Text, Link } = Typography;
@@ -133,7 +134,16 @@ export function Footer() {
           gap={8}
           className={styles.bottom}
         >
-          <Flex vertical gap={4}>
+          <Flex vertical gap={6}>
+            {/* Российское происхождение и хранение данных — для B2B это
+                такой же аргумент, как цена: показываем явно, а не только
+                внутри секции «Безопасность» */}
+            <Flex align="center" gap={8} className={styles.madeInRussia}>
+              <ShieldIcon size={15} />
+              <Text className={styles.madeInRussiaText}>
+                {t("footer.madeInRussia")}
+              </Text>
+            </Flex>
             <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
               © {year} {BRAND_CONFIG.name}. {t("footer.allRights")}
             </Text>

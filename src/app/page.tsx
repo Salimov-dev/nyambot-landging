@@ -1,5 +1,4 @@
 import { Header } from "@/components/ui/header/header";
-import { PromoBar } from "@/components/ui/promo-bar/promo-bar";
 import { Footer } from "@/components/ui/footer/footer";
 import { DotNav } from "@/components/ui/dot-nav/dot-nav";
 import { ScrollDepthTracker } from "@/components/ui/analytics/scroll-depth-tracker";
@@ -22,11 +21,10 @@ import { fetchPricingData } from "@/config/pricing.config";
 export const dynamic = "force-dynamic";
 
 export default async function LandingPage() {
-  const { plans, limits } = await fetchPricingData();
+  const { plans } = await fetchPricingData();
 
   return (
     <>
-      <PromoBar />
       <Header />
       <DotNav />
       <ScrollDepthTracker />
@@ -41,7 +39,7 @@ export default async function LandingPage() {
         <SwitchSection />
         <SecuritySection />
         <WhySection />
-        <PricingSection plans={plans} limits={limits} />
+        <PricingSection plans={plans} />
         <FaqSection />
         <CtaSection />
         <SocialSection />

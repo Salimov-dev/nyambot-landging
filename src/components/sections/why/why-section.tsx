@@ -8,14 +8,15 @@ import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./why-section.module.css";
+import { PuzzleIcon, ZapIcon, ShieldIcon } from "@/components/ui/icons/icons";
 
 const { Title, Text } = Typography;
 
 const REASONS = [
-  { id: "ownDev", icon: "🇷🇺" },
-  { id: "pos", icon: "🧩" },
-  { id: "fast", icon: "⚡" },
-  { id: "noRisk", icon: "🛡️" },
+  { id: "ownDev", icon: ShieldIcon },
+  { id: "pos", icon: PuzzleIcon },
+  { id: "fast", icon: ZapIcon },
+  { id: "noRisk", icon: ShieldIcon },
 ] as const;
 
 export function WhySection() {
@@ -65,18 +66,25 @@ export function WhySection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className={styles.card}
             >
-              <span className={styles.icon}>{reason.icon}</span>
-              <Title
-                level={4}
-                style={{
-                  color: theme.colors.textPrimary,
-                  fontSize: 17,
-                  fontWeight: 700,
-                  margin: 0,
-                }}
-              >
-                {t(`why.items.${reason.id}.title`)}
-              </Title>
+              {/* Иконка и заголовок в одной строке: вертикальный столбик
+                  иконка → заголовок → текст растягивал карточку */}
+              <Flex align="flex-start" gap={12} className={styles.cardHead}>
+                <span className={styles.icon}>
+                  <reason.icon size={22} />
+                </span>
+                <Title
+                  level={4}
+                  style={{
+                    color: theme.colors.textPrimary,
+                    fontSize: 16,
+                    fontWeight: 700,
+                    lineHeight: 1.3,
+                    margin: 0,
+                  }}
+                >
+                  {t(`why.items.${reason.id}.title`)}
+                </Title>
+              </Flex>
               <Text
                 style={{
                   color: theme.colors.textSecondary,
@@ -104,9 +112,12 @@ export function WhySection() {
                 fontSize: 22,
                 fontWeight: 800,
                 margin: 0,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
               }}
             >
-              🛡️ {t("why.riskTitle")}
+              <ShieldIcon size={20} /> {t("why.riskTitle")}
             </Title>
             <Text
               style={{

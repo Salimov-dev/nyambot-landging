@@ -44,8 +44,17 @@
   transform: translateY(-4px);
 }
 
+/* Иконка формата — в бренд-круге: бесцветный контур на тёмном терялся */
 .icon {
-  font-size: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
   line-height: 1;
 }
 
@@ -75,4 +84,13 @@
   .card {
     padding: 22px 16px;
   }
+}
+
+/* Заголовок карточки — резерв под две строки, чтобы описания начинались
+   на одном уровне во всех карточках и на всех языках */
+.card h4 {
+  min-height: 2.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

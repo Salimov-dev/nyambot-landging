@@ -42,6 +42,16 @@
 }
 
 .icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-pill);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 32px;
   line-height: 1;
 }
@@ -103,5 +113,17 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+}
+
+/* Шапка карточки: резерв под три строки заголовка — колонки узкие, и без
+   него описания начинались на разной высоте, ряд выглядел рваным */
+.cardHead {
+  min-height: 44px;
+}
+
+@media (max-width: 900px) {
+  .cardHead {
+    min-height: 0;
   }
 }

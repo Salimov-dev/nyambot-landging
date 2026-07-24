@@ -7,15 +7,16 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
+import { PercentIcon } from "@/components/ui/icons/icons";
 import styles from "./switch-section.module.css";
 
 const { Title, Text } = Typography;
 
 const STEPS = [
-  { step: 1, icon: "📞", key: "0" },
-  { step: 2, icon: "📦", key: "1" },
-  { step: 3, icon: "💬", key: "2" },
-  { step: 4, icon: "🚀", key: "3" },
+  { step: 1, key: "0" },
+  { step: 2, key: "1" },
+  { step: 3, key: "2" },
+  { step: 4, key: "3" },
 ] as const;
 
 export function SwitchSection() {
@@ -68,7 +69,10 @@ export function SwitchSection() {
           >
             {t("switch.subtitle")}
           </Text>
-          <span className={styles.badge}>{t("switch.badge")}</span>
+          <span className={styles.badge}>
+            <PercentIcon size={17} />
+            {t("switch.badge")}
+          </span>
         </motion.div>
 
         <Row gutter={[24, 24]} className={styles.steps}>
@@ -80,8 +84,8 @@ export function SwitchSection() {
                 transition={{ duration: 0.55, delay: i * 0.1 }}
                 className={styles.stepCard}
               >
-                <Flex vertical gap={16}>
-                  <Flex align="center" gap={12}>
+                <Flex vertical gap={12}>
+                  <Flex align="center" gap={12} className={styles.stepHead}>
                     <div className={styles.stepNumber}>
                       <Text
                         style={{
@@ -93,19 +97,19 @@ export function SwitchSection() {
                         {step.step}
                       </Text>
                     </div>
-                    <Text style={{ fontSize: 28 }}>{step.icon}</Text>
+                    <Title
+                      level={4}
+                      style={{
+                        color: theme.colors.textPrimary,
+                        margin: 0,
+                        fontWeight: 700,
+                        fontSize: 17,
+                        lineHeight: 1.25,
+                      }}
+                    >
+                      {t(`switch.steps.${step.key}.title`)}
+                    </Title>
                   </Flex>
-                  <Title
-                    level={4}
-                    style={{
-                      color: theme.colors.textPrimary,
-                      margin: 0,
-                      fontWeight: 700,
-                      fontSize: 17,
-                    }}
-                  >
-                    {t(`switch.steps.${step.key}.title`)}
-                  </Title>
                   <Text
                     style={{
                       color: theme.colors.textSecondary,

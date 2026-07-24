@@ -27,8 +27,6 @@ export function CtaSection() {
           className={styles.card}
         >
           <Flex vertical align="center" gap={24}>
-            <Text style={{ fontSize: 40 }}>🚀</Text>
-
             <Title
               level={2}
               style={{

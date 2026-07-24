@@ -9,6 +9,7 @@ import { SocialLinks } from "@/components/ui/social-links/social-links";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
+import { StoreIcon, CheckIcon } from "@/components/ui/icons/icons";
 import styles from "./hero-section.module.css";
 
 const { Title, Text } = Typography;
@@ -82,7 +83,10 @@ export function HeroSection() {
             animate="visible"
           >
             <motion.div variants={itemVariants}>
-              <Tag className={styles.badge}>{t("hero.badge")}</Tag>
+              <Tag className={styles.badge}>
+                <StoreIcon size={16} />
+                {t("hero.badge")}
+              </Tag>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -120,7 +124,10 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <span className={styles.trialPill}>{t("hero.trial")}</span>
+              <span className={styles.trialPill}>
+                <CheckIcon size={16} />
+                {t("hero.trial")}
+              </span>
             </motion.div>
           </motion.div>
 

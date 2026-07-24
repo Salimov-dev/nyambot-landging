@@ -7,16 +7,24 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
 import styles from "./security-section.module.css";
+import {
+  DocumentIcon,
+  ServerIcon,
+  LockIcon,
+  MonitorIcon,
+  ShieldIcon,
+  HandshakeIcon,
+} from "@/components/ui/icons/icons";
 
 const { Title, Text } = Typography;
 
 const ITEMS = [
-  { icon: "📜", key: "fz152" },
-  { icon: "🇷🇺", key: "localization" },
-  { icon: "🔐", key: "encryption" },
-  { icon: "💻", key: "madeInRussia" },
-  { icon: "🛡️", key: "standards" },
-  { icon: "🤝", key: "noThirdParty" },
+  { icon: DocumentIcon, key: "fz152" },
+  { icon: ServerIcon, key: "localization" },
+  { icon: LockIcon, key: "encryption" },
+  { icon: MonitorIcon, key: "madeInRussia" },
+  { icon: ShieldIcon, key: "standards" },
+  { icon: HandshakeIcon, key: "noThirdParty" },
 ] as const;
 
 const CHIPS = [
@@ -83,7 +91,9 @@ export function SecuritySection() {
           <div className={styles.badgesGrid}>
             {ITEMS.map((item) => (
               <span key={item.key} className={styles.badge}>
-                <span className={styles.badgeIcon}>{item.icon}</span>
+                <span className={styles.badgeIcon}>
+                  <item.icon size={20} />
+                </span>
                 {t(`security.items.${item.key}.title`)}
               </span>
             ))}
@@ -108,22 +118,14 @@ export function SecuritySection() {
             <Button
               href={LINKS.legal.privacy}
               target="_blank"
-              style={{
-                background: "transparent",
-                borderColor: theme.colors.border,
-                color: theme.colors.textSecondary,
-              }}
+              className={styles.legalBtn}
             >
               {t("security.privacyLink")}
             </Button>
             <Button
               href={LINKS.legal.offer}
               target="_blank"
-              style={{
-                background: "transparent",
-                borderColor: theme.colors.border,
-                color: theme.colors.textSecondary,
-              }}
+              className={styles.legalBtn}
             >
               {t("security.offerLink")}
             </Button>

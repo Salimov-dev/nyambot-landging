@@ -7,16 +7,26 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
 import styles from "./crm-demo-section.module.css";
+import {
+  ChartIcon,
+  CartIcon,
+  UsersIcon,
+  TargetIcon,
+  ListIcon,
+  TrendingUpIcon,
+  MonitorIcon,
+  ToolsIcon,
+} from "@/components/ui/icons/icons";
 
 const { Title, Text } = Typography;
 
 const CRM_FEATURES = [
-  { icon: "📊", key: "crmDemo.features.dashboard" },
-  { icon: "🛒", key: "crmDemo.features.orders" },
-  { icon: "👥", key: "crmDemo.features.clients" },
-  { icon: "🎯", key: "crmDemo.features.marketing" },
-  { icon: "📋", key: "crmDemo.features.menu" },
-  { icon: "📈", key: "crmDemo.features.analytics" },
+  { icon: ChartIcon, key: "crmDemo.features.dashboard" },
+  { icon: CartIcon, key: "crmDemo.features.orders" },
+  { icon: UsersIcon, key: "crmDemo.features.clients" },
+  { icon: TargetIcon, key: "crmDemo.features.marketing" },
+  { icon: ListIcon, key: "crmDemo.features.menu" },
+  { icon: TrendingUpIcon, key: "crmDemo.features.analytics" },
 ] as const;
 
 export function CrmDemoSection() {
@@ -100,14 +110,16 @@ export function CrmDemoSection() {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
               className={styles.featureCard}
             >
-              <span className={styles.featureIcon}>{f.icon}</span>
+              <span className={styles.featureIcon}>
+                <f.icon size={18} />
+              </span>
               <Title
                 level={4}
                 style={{
                   color: theme.colors.textPrimary,
-                  fontSize: 15,
+                  fontSize: 14,
                   fontWeight: 600,
-                  lineHeight: 1.35,
+                  lineHeight: 1.3,
                   margin: 0,
                 }}
               >

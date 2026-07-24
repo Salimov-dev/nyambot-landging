@@ -12,25 +12,21 @@ const { Title, Text } = Typography;
 const STEPS = [
   {
     step: 1,
-    icon: "🤖",
     titleKey: "howItWorks.steps.0.title",
     descKey: "howItWorks.steps.0.description",
   },
   {
     step: 2,
-    icon: "📋",
     titleKey: "howItWorks.steps.1.title",
     descKey: "howItWorks.steps.1.description",
   },
   {
     step: 3,
-    icon: "📣",
     titleKey: "howItWorks.steps.2.title",
     descKey: "howItWorks.steps.2.description",
   },
   {
     step: 4,
-    icon: "💳",
     titleKey: "howItWorks.steps.3.title",
     descKey: "howItWorks.steps.3.description",
   },
@@ -92,8 +88,8 @@ export function HowItWorksSection() {
                 transition={{ duration: 0.55, delay: i * 0.12 }}
                 className={styles.stepCard}
               >
-                <Flex vertical gap={16}>
-                  <Flex align="center" gap={12}>
+                <Flex vertical gap={12}>
+                  <Flex align="center" gap={12} className={styles.stepHead}>
                     <div className={styles.stepNumber}>
                       <Text
                         style={{
@@ -105,19 +101,19 @@ export function HowItWorksSection() {
                         {step.step}
                       </Text>
                     </div>
-                    <Text style={{ fontSize: 28 }}>{step.icon}</Text>
+                    <Title
+                      level={4}
+                      style={{
+                        color: theme.colors.textPrimary,
+                        margin: 0,
+                        fontWeight: 700,
+                        fontSize: 17,
+                        lineHeight: 1.25,
+                      }}
+                    >
+                      {t(step.titleKey)}
+                    </Title>
                   </Flex>
-                  <Title
-                    level={4}
-                    style={{
-                      color: theme.colors.textPrimary,
-                      margin: 0,
-                      fontWeight: 700,
-                      fontSize: 17,
-                    }}
-                  >
-                    {t(step.titleKey)}
-                  </Title>
                   <Text
                     style={{
                       color: theme.colors.textSecondary,

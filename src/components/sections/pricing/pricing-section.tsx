@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import { Badge, Button, Card, Col, Flex, Row, Tag, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import type { PricingPlan } from "@/types/landing.types";
-import type { LicenseLimits } from "@/config/pricing.config";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./pricing-section.module.css";
+import { CheckIcon } from "@/components/ui/icons/icons";
 
 const { Title, Text } = Typography;
 
@@ -22,10 +22,9 @@ const MONTH_LABELS: Record<number, string> = {
 
 interface PricingSectionProps {
   plans: PricingPlan[];
-  limits: LicenseLimits;
 }
 
-export function PricingSection({ plans, limits }: PricingSectionProps) {
+export function PricingSection({ plans }: PricingSectionProps) {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
 
@@ -132,91 +131,64 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
           </Text>
         </motion.div>
 
-        {/* Limits + included features */}
+        {/* Состав тарифа одной карточкой: сначала что подключаешь,
+            потом что получаешь, и тут же вариант для сети — раньше эти три
+            куска висели по отдельности и не читались как одно предложение */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
           className={styles.includes}
         >
-          {/* Limits */}
-          <Flex gap={16} wrap justify="center" style={{ marginBottom: 28 }}>
-            <Flex vertical align="center" className={styles.limitCard}>
-              <Text className={styles.limitValue}>TG + MAX</Text>
-              <Text className={styles.limitLabel}>
-                {t("pricing.limitBots")}
+          <div className={styles.includesGrid}>
+            <div className={styles.includesCol}>
+              <Text className={styles.includesTitle}>
+                {t("pricing.connectTitle")}
               </Text>
-            </Flex>
-            <Flex vertical align="center" className={styles.limitCard}>
-              <Text className={styles.limitValue}>{limits.maxStoreCount}</Text>
-              <Text className={styles.limitLabel}>
-                {t("pricing.limitStores", {
-                  count: limits.maxStoreCount,
-                })}
-              </Text>
-            </Flex>
-            <Flex vertical align="center" className={styles.limitCard}>
-              <Text className={styles.limitValue}>
-                {limits.maxMenuItemCount}
-              </Text>
-              <Text className={styles.limitLabel}>
-                {t("pricing.limitMenuItems", {
-                  count: limits.maxMenuItemCount,
-                })}
-              </Text>
-            </Flex>
-          </Flex>
+              <ul className={styles.includesList}>
+                {(
+                  t("pricing.connectItems", { returnObjects: true }) as string[]
+                ).map((item) => (
+                  <li key={item} className={styles.includesItem}>
+                    <CheckIcon size={15} className={styles.includeIcon} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Included features */}
-          <Text
-            style={{
-              color: theme.colors.textTertiary,
-              fontSize: 13,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-              fontWeight: 600,
-            }}
-          >
-            {t("pricing.included")}
-          </Text>
-          <Flex gap={12} wrap justify="center" style={{ marginTop: 20 }}>
-            {(
-              t("pricing.includedItems", { returnObjects: true }) as string[]
-            ).map((item, i) => (
-              <Tag key={i} className={styles.includeTag}>
-                ✓ {item}
-              </Tag>
-            ))}
-          </Flex>
-        </motion.div>
+            <div className={styles.includesCol}>
+              <Text className={styles.includesTitle}>
+                {t("pricing.included")}
+              </Text>
+              <ul
+                className={`${styles.includesList} ${styles.includesListTwo}`}
+              >
+                {(
+                  t("pricing.includedItems", {
+                    returnObjects: true,
+                  }) as string[]
+                ).map((item) => (
+                  <li key={item} className={styles.includesItem}>
+                    <CheckIcon size={15} className={styles.includeIcon} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-        {/* Custom plan CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <Flex vertical align="center" gap={12} className={styles.customCta}>
-            <Title
-              level={4}
-              style={{ color: theme.colors.accent, margin: 0, fontWeight: 700 }}
-            >
-              {t("pricing.customTitle")}
-            </Title>
-            <Text
-              style={{
-                color: theme.colors.textSecondary,
-                fontSize: 15,
-                textAlign: "center",
-                maxWidth: 480,
-                lineHeight: 1.6,
-              }}
-            >
-              {t("pricing.customSubtitle")}
-            </Text>
-            <Flex gap={12}>
+          <div className={styles.networkRow}>
+            <div className={styles.networkText}>
+              <Text className={styles.networkTitle}>
+                {t("pricing.customTitle")}
+              </Text>
+              <Text className={styles.networkSubtitle}>
+                {t("pricing.customSubtitle")}
+              </Text>
+            </div>
+            <Flex gap={10} className={styles.networkActions}>
               <Button
-                size="large"
                 href={LINKS.support.telegram}
                 target="_blank"
                 className={styles.defaultBtn}
@@ -225,7 +197,6 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
                 Telegram
               </Button>
               <Button
-                size="large"
                 href={LINKS.support.email}
                 className={styles.defaultBtn}
                 onClick={() => reachGoal("click_email_support")}
@@ -233,7 +204,7 @@ export function PricingSection({ plans, limits }: PricingSectionProps) {
                 {t("pricing.emailCta")}
               </Button>
             </Flex>
-          </Flex>
+          </div>
         </motion.div>
       </div>
     </section>

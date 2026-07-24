@@ -303,7 +303,6 @@
 .scrollHintIcon {
   font-size: 22px;
   color: var(--accent);
-  animation: pulse 2s ease-in-out infinite;
   line-height: 1;
 }
 
@@ -318,7 +317,7 @@
 .scrollHintArrow {
   font-size: 20px;
   color: var(--accent);
-  animation: bounce 1.5s ease-in-out infinite;
+  animation: bounce 1.5s ease-in-out 3;
 }
 
 @keyframes pulse {

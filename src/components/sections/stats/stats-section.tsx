@@ -6,6 +6,12 @@ import { Col, Flex, Row, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { theme } from "@/config/theme";
 import styles from "./stats-section.module.css";
+import {
+  CheckIcon,
+  WalletIcon,
+  MessageIcon,
+  GiftIcon,
+} from "@/components/ui/icons/icons";
 
 const { Text, Title } = Typography;
 
@@ -13,19 +19,23 @@ const STATS = [
   {
     valueKey: "stats.commission.value",
     labelKey: "stats.commission.label",
-    icon: "✅",
+    icon: CheckIcon,
   },
   {
     valueKey: "stats.savings.value",
     labelKey: "stats.savings.label",
-    icon: "💸",
+    icon: WalletIcon,
   },
   {
     valueKey: "stats.messengers.value",
     labelKey: "stats.messengers.label",
-    icon: "💬",
+    icon: MessageIcon,
   },
-  { valueKey: "stats.trial.value", labelKey: "stats.trial.label", icon: "🎁" },
+  {
+    valueKey: "stats.trial.value",
+    labelKey: "stats.trial.label",
+    icon: GiftIcon,
+  },
 ] as const;
 
 export function StatsSection() {
@@ -49,7 +59,7 @@ export function StatsSection() {
                   gap={8}
                   className={styles.statCard}
                 >
-                  <Text style={{ fontSize: 28 }}>{stat.icon}</Text>
+                  <stat.icon size={24} className={styles.statIcon} />
                   <Title
                     level={3}
                     style={{

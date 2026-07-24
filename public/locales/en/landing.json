@@ -8,12 +8,12 @@
     "openCrm": "Open CRM"
   },
   "hero": {
-    "badge": "🔥 For cafés, restaurants, bakeries and delivery",
-    "title": "Your own food ordering and delivery in <em>MAX and&nbsp;Telegram</em>. No aggregators",
-    "subtitle": "Accept food orders directly through messengers. Zero commission per order, your own customer base and full control over delivery",
+    "badge": "For cafés, restaurants, bakeries and delivery",
+    "title": "Your own ordering and food delivery channel <em>in&nbsp;MAX and&nbsp;Telegram</em>",
+    "subtitle": "Accept food orders directly through messengers. Zero commission per order, your own guest base and full control over delivery",
     "cta": "Try for free",
     "ctaSecondary": "See the demo",
-    "trial": "✅ 90 days free · support and help migrating your menu",
+    "trial": "90 days free · support and setup tips",
     "watchVideo": "Watch video",
     "videoTitle": "What is Nyambot?"
   },
@@ -36,23 +36,23 @@
     }
   },
   "benefits": {
-    "title": "Everything to help your venue earn more",
+    "title": "Earn more from the same guests",
     "chips": [
-      "📈 More revenue",
-      "🧾 Higher average order",
-      "❤️ Loyal customers",
-      "🍔 Dish tailored to the guest",
-      "🗺️ Wider delivery zones",
-      "📱 Presence in MAX and Telegram"
+      "More revenue",
+      "Higher average check",
+      "Loyal guests",
+      "Dish to taste",
+      "Wider delivery",
+      "MAX and Telegram"
     ],
     "detailsCta": "Learn more",
     "items": {
       "retention": {
-        "tag": "Your customers, your margin",
+        "tag": "Your guests, your margin",
         "title": "Repeat orders go to your channel, not the aggregator",
-        "result": "Aggregators charge 20–45% per order. Nyambot brings repeat orders back to your channel commission-free — more revenue from the same customers, and the client stays in your database",
+        "result": "Aggregators charge 20–45% per order. Nyambot brings repeat orders back to your channel commission-free — more revenue from the same guests, and the guest stays in your database",
         "details": {
-          "intro": "An aggregator is a valid channel for attracting new customers. But on repeat orders it keeps the customer for itself. The goal is to capture that lead into your own channel and make the guest personally yours.",
+          "intro": "An aggregator is a valid channel for attracting new guests. But on repeat orders it keeps the guest for itself. The goal is to capture that lead into your own channel and make the guest personally yours.",
           "sections": [
             {
               "title": "0% commission on repeat orders",
@@ -63,9 +63,9 @@
               ]
             },
             {
-              "title": "The customer becomes yours",
+              "title": "The guest becomes yours",
               "points": [
-                "Customer base with order history — yours, not the aggregator's",
+                "Guest base with order history — yours, not the aggregator's",
                 "Direct contact with the guest: promotions, newsletters, loyalty program",
                 "Segmentation and repeat sales without an intermediary"
               ]
@@ -85,7 +85,7 @@
               "points": [
                 "MAX and Telegram at once: new channel and MAX's growing audience",
                 "The mini-app opens directly in the messenger — guests don't need to install anything",
-                "Single customer profile across both channels: shared history, points and promotions",
+                "Single guest profile across both channels: shared history, points and promotions",
                 "Login without SMS or passwords"
               ]
             },
@@ -128,18 +128,18 @@
               "title": "Marketing that retains",
               "points": [
                 "Discounts and gifts based on cart conditions",
-                "Promo codes with any restrictions",
+                "Promo codes with conditions: dates, amount, items, number of uses",
                 "Loyalty points: earn and redeem",
-                "Free item for N items from a category",
+                "A gift when selected items are ordered",
                 "Works across all messengers simultaneously"
               ]
             },
             {
-              "title": "Daily offer and scheduled newsletters",
+              "title": "Offer of the day",
               "points": [
-                "Auto-send daily offer in MAX and Telegram",
-                "Visual promotion calendar in CRM",
-                "Schedule newsletters weeks in advance"
+                "Automatic offer of the day in MAX and Telegram",
+                "Visual promo calendar in the CRM",
+                "Plan offers days ahead"
               ]
             }
           ]
@@ -257,7 +257,7 @@
             {
               "title": "Admin",
               "points": [
-                "Accept, cancel an order and refund the customer",
+                "Accept, cancel an order and refund the guest",
                 "Assign a courier in one tap — they immediately see the address on the map",
                 "Full order history with every status logged to the minute"
               ]
@@ -266,7 +266,7 @@
               "title": "Courier",
               "points": [
                 "Tasks and delivery address on the map",
-                "Call the customer in one click and notify about a delay",
+                "Call the guest in one click and notify about a delay",
                 "Mark as 'Delivered' directly from the app"
               ]
             },
@@ -292,45 +292,46 @@
               "title": "Full independence",
               "points": [
                 "Menu, prices, delivery zones and promotions configured in CRM yourself",
-                "Connect a new bot in 10 minutes",
-                "AI assistant in CRM helps with any question",
+                "A new bot is connected with a token right in the CRM",
+                "The AI assistant in the CRM helps you figure out settings",
                 "Step-by-step documentation from zero to first order"
               ]
             },
             {
               "title": "Support at every step",
               "points": [
-                "Help with iiko, R-Keeper and online payment integration",
-                "Walk you from registration to first order",
-                "Answer any question and resolve issues",
-                "Live support based in Russia"
+                "We advise on iiko, R-Keeper and online payment integration",
+                "We stay with you from signup to the first order",
+                "We answer questions and help you figure things out",
+                "Live support from Russia"
               ]
             }
           ]
         }
       }
-    }
+    },
+    "detailsClose": "Close"
   },
   "crmDemo": {
     "tag": "In-house CRM",
-    "title": "Manage your venue from a single dashboard",
-    "description": "Full-featured in-house CRM — not a third-party service. Menu with modifiers, order management, revenue analytics, marketing campaigns and customer database — all in one place, no extra integrations. Launch and run everything fully on your own: menu, prices, delivery zones and promotions are set up without support or programmers",
-    "ownDev": "CRM built from scratch by our team — full control over features and reliability. No third-party platforms",
+    "title": "Your whole venue in one dashboard",
+    "description": "Menu, orders, analytics, marketing and guest base — in one place. You set it all up yourself, no developers",
+    "ownDev": "Our own product, not a builder — we answer for features and reliability",
     "cta": "Open CRM — 90 days free",
     "ctaHint": "Full access · Full support · No card required",
     "features": {
-      "dashboard": "Revenue and metrics dashboard",
-      "orders": "Real-time order management",
-      "clients": "Customer base with order history",
-      "marketing": "Promotions, discounts, promo codes",
-      "menu": "Menu with modifiers and stop-lists",
-      "analytics": "Sales analytics by period"
+      "dashboard": "Revenue dashboard",
+      "orders": "Real-time orders",
+      "clients": "Guest base",
+      "marketing": "Promos and promo codes",
+      "menu": "Menu and stop lists",
+      "analytics": "Sales analytics"
     }
   },
   "tryDemo": {
     "tag": "Demo",
     "title": "Try it right now",
-    "subtitle": "Open the demo bot in Telegram or MAX and experience how your customers order",
+    "subtitle": "Open the demo bot in Telegram or MAX and experience how your guests order",
     "tgDesc": "Mini-app demo in Telegram",
     "tgCta": "Open in Telegram",
     "maxDesc": "Mini-app demo in MAX",
@@ -341,53 +342,53 @@
   },
   "howItWorks": {
     "label": "How it works",
-    "title": "From bot creation to first order — one day",
+    "title": "From creating a bot to the first order",
     "subtitle": "No lengthy development. Everything is configured through CRM without developers",
     "steps": [
       {
         "title": "Create a bot",
-        "description": "Create a Telegram bot via @BotFather or a MAX bot in the partner panel. Takes 10 minutes"
+        "description": "In the MAX partner panel or via @BotFather in Telegram"
       },
       {
         "title": "Set up in CRM",
-        "description": "Add your bot token to CRM, add menu, set delivery zones and configure payment via YooKassa"
+        "description": "Paste the token into the CRM, add the menu, delivery zones and payment"
       },
       {
         "title": "Share the link",
-        "description": "Post the bot link on social media, website, or QR code in your venue — customers start ordering"
+        "description": "Share the link on social media, your site and a QR code at the venue"
       },
       {
         "title": "Receive orders",
-        "description": "Orders come into CRM and Crew app. Courier gets the task, customer gets a notification at every status"
+        "description": "Orders appear in the CRM and the «Crew» app, the guest gets statuses in the messenger"
       }
     ]
   },
   "switch": {
     "label": "Move to Nyambot",
-    "title": "Already taking orders in another service? Move to Nyambot",
-    "subtitle": "Working with an aggregator or another bot service — we will give you 50% off for 6 months and help you move your menu and customer base. Your channel stays with you, it is just now managed by Nyambot",
+    "title": "Move over with a <em>50% discount</em>",
+    "subtitle": "Already taking orders through another bot service or builder — we give 50% off for the first 6 months and walk you through the setup. The bot and its subscribers stay yours, only the service behind them changes",
     "badge": "−50% for 6 months",
     "steps": {
       "0": {
-        "title": "Request and migration plan",
-        "description": "You send a request, we review your current service and prepare a migration plan for your menu and workflows"
+        "title": "Request and review",
+        "description": "You leave a request — we go through what you use now, what needs moving and where to start"
       },
       "1": {
-        "title": "We help you move your data",
-        "description": "We guide and help you upload your menu, products and customer base so nothing is lost in the move"
+        "title": "Menu and settings",
+        "description": "Menu, modifiers, prices and delivery zones are set in the CRM. With iiko or R-Keeper connected, the menu and stop lists come from the POS"
       },
       "2": {
-        "title": "We connect your channel",
-        "description": "We set up the bot in MAX and Telegram under your brand. Your channel stays with you and its subscribers, it is just now managed by Nyambot"
+        "title": "Your bot in MAX and Telegram",
+        "description": "You create the bot and stay its owner — we show how to connect the token in the CRM and brand the channel"
       },
       "3": {
         "title": "Launch and support",
-        "description": "We launch order taking and stay in touch, helping you settle in at every step"
+        "description": "You turn on order taking, and we stay in touch in support — answering questions about setup and daily work"
       }
     },
     "button": "Switch with 50% off",
     "compare": "Compare with your current service",
-    "hint": "50% off for 6 months · Free data migration · We help at every step · Discounts don't stack"
+    "hint": "50% off for the first 6 months · We help you figure out the setup · Discounts don't stack"
   },
   "security": {
     "label": "Security",
@@ -396,15 +397,15 @@
     "imageAlt": "Nyambot data security — compliance with 152-FZ",
     "items": {
       "fz152": {
-        "title": "152-FZ compliant",
+        "title": "152-FZ",
         "description": "We operate under the Russian Federal Law on Personal Data"
       },
       "localization": {
-        "title": "Database in Russia",
+        "title": "Data in Russia",
         "description": "Servers and backups are located within the Russian Federation"
       },
       "encryption": {
-        "title": "Data encryption",
+        "title": "Encryption",
         "description": "HTTPS/TLS in transit, encryption of sensitive data at rest"
       },
       "madeInRussia": {
@@ -412,20 +413,20 @@
         "description": "Russian development team and local technical support"
       },
       "standards": {
-        "title": "Modern standards",
+        "title": "Access control",
         "description": "Regular audits, security updates and access control"
       },
       "noThirdParty": {
-        "title": "No third-party sharing",
-        "description": "Customer data belongs to the venue — we don't sell or share it"
+        "title": "No third parties",
+        "description": "Guest data belongs to the venue — we don't sell or share it"
       }
     },
     "chips": {
-      "backups": "Regular backups",
-      "policy": "Transparent privacy policy",
-      "deletion": "Right to deletion on request",
-      "minData": "We collect only what's necessary",
-      "supportRu": "Support based in Russia"
+      "backups": "Backups",
+      "policy": "Transparent policy",
+      "deletion": "Deletion on request",
+      "minData": "We collect the minimum",
+      "supportRu": "Support from Russia"
     },
     "privacyLink": "Privacy policy",
     "offerLink": "Public offer"
@@ -434,7 +435,7 @@
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",
     "subtitle": "Fixed payment. One plan — all features without functional limits",
-    "trialNote": "90 days of full free access after registration — all features, full support, no limits. The paid period only starts when you are ready",
+    "trialNote": "90 days of full access after signup — all features and support, no limits and no card required. You choose and pay for a plan when the trial ends",
     "popular": "Best value",
     "perMonth": "per month",
     "totalBilled": "Billed {{total}}",
@@ -445,29 +446,22 @@
       "12": "12 months"
     },
     "cta": "Get started",
-    "included": "What's included in any plan",
+    "included": "What you get",
     "includedItems": [
-      "Telegram + MAX bots",
-      "CRM and analytics",
-      "Crew app",
-      "Loyalty program",
-      "Promo codes and discounts",
-      "YooKassa and Yandex.Pay",
-      "iiko and R-Keeper integration",
-      "Yandex.Delivery",
+      "Mini app",
+      "CRM",
+      "«Crew» app",
+      "Loyalty and promos",
+      "All integrations",
       "Support"
     ],
-    "limits": "Up to {{bots}} bots · Up to {{stores}} locations · Up to {{items}} menu items",
     "registrationHint": "Clicking «Connect» will open the CRM. Complete registration, go to «License» section and pay for the selected plan — then you are ready to start",
-    "limitsTitle": "What's included in every plan",
-    "limitBots": "one bot per messenger",
-    "limitStores": "{{count}} location",
-    "limitMenuItems": "{{count}} menu items",
-    "customTitle": "Running a chain of venues?",
-    "customSubtitle": "For chains with 2+ locations — custom pricing. Contact us and we'll tailor the plan to your scale",
-    "customCta": "Discuss a custom plan",
+    "customTitle": "Running a chain?",
+    "customSubtitle": "From 2 venues — a custom plan for your scale",
     "emailCta": "Email",
-    "freeTrial": "0 ₽ · first 90 days"
+    "freeTrial": "0 ₽ · first 90 days",
+    "connectTitle": "You connect to the system",
+    "connectItems": ["1 venue", "1 bot in MAX", "1 bot in Telegram"]
   },
   "faq": {
     "label": "FAQ",
@@ -476,7 +470,7 @@
     "askSupport": "Ask support",
     "items": [
       {
-        "question": "Do customers need to install an app?",
+        "question": "Do guests need to install an app?",
         "answer": "No. The mini-app opens directly in Telegram or MAX — messengers already installed on most users' phones. No additional installation required"
       },
       {
@@ -489,7 +483,7 @@
       },
       {
         "question": "How does order payment work?",
-        "answer": "Online card payment via YooKassa can be connected for all locations at once or selectively. Customers pay directly in the messenger. Cash on delivery is also supported"
+        "answer": "Online card payment via YooKassa can be connected for all locations at once or selectively. Guests pay directly in the messenger. Cash on delivery is also supported"
       },
       {
         "question": "What is a MAX bot and do I need it?",
@@ -497,7 +491,7 @@
       },
       {
         "question": "How does the trial period work?",
-        "answer": "After registration, you get 90 days of full free access with all features and no limits. No card required. This gives you time to launch the bot, receive your first orders and see the real value of the service"
+        "answer": "After signup we give 90 days free — no card and no crippled features: the full CRM, the «Crew» app, POS and delivery integrations. You set everything up yourself, and support answers questions at every step"
       },
       {
         "question": "Can Nyambot be used without couriers?",
@@ -505,12 +499,12 @@
       },
       {
         "question": "How quickly can I start accepting orders?",
-        "answer": "With a bot ready — within one day. You need to create a bot, connect it in CRM, add the menu and share the link with customers"
+        "answer": "The order is: create a bot, connect it in the CRM, upload the menu, set delivery zones and share the link with guests. All of it is done in the CRM yourself, and support helps along the way"
       }
     ]
   },
   "cta": {
-    "title": "Start accepting orders today",
+    "title": "Start taking orders in your own channel",
     "subtitle": "90 days free. Full features, full support. Your own channel — no aggregator fees",
     "button": "Try for free",
     "docs": "Read documentation",
@@ -532,7 +526,8 @@
     "terms": "Terms of Service",
     "offer": "Public Offer",
     "cookies": "Cookie Policy",
-    "allRights": "All rights reserved"
+    "allRights": "All rights reserved",
+    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ"
   },
   "video": {
     "socialHeading": "More videos about how Nyambot works — on our social media"
@@ -540,7 +535,7 @@
   "integrations": {
     "label": "Integrations",
     "title": "We work with services you already use",
-    "subtitle": "iiko, R-Keeper, YooKassa, Yandex.Pay and Yandex.Delivery — connect in a couple of clicks, without developers",
+    "subtitle": "Connected right in the CRM, without developers or custom work",
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
@@ -550,32 +545,26 @@
     }
   },
   "promoBar": {
-    "text": "🎁 90 days free · Full access · No card required",
+    "text": "90 days free · Full access · No card required",
     "cta": "Try free"
   },
   "forWhom": {
-    "title": "Nyambot — for any food business format",
-    "subtitle": "If you take food orders, Nyambot fits your format",
+    "title": "For any food service format",
     "items": {
       "cafe": {
-        "title": "Cafés and restaurants",
-        "text": "Your own channel for orders and food delivery"
+        "title": "Cafés and restaurants"
       },
       "bakery": {
-        "title": "Bakeries and coffee shops",
-        "text": "Pre-orders and pickup without queues"
+        "title": "Bakeries and coffee shops"
       },
       "dark": {
-        "title": "Dark kitchens and delivery",
-        "text": "Orders with no aggregator commission"
+        "title": "Dark kitchens and delivery"
       },
       "chains": {
-        "title": "Venue chains",
-        "text": "One bot for all your locations"
+        "title": "Venue chains and franchises"
       },
       "production": {
-        "title": "Food production and catering",
-        "text": "Ready meals and direct orders"
+        "title": "Food production and catering"
       }
     }
   },
@@ -584,24 +573,24 @@
     "title": "Why Nyambot",
     "items": {
       "ownDev": {
-        "title": "Built in-house in Russia",
-        "text": "CRM and bots built by us from scratch, not a third-party builder — full control and support from Russia"
+        "title": "In-house product",
+        "text": "The CRM and bots are built by us from scratch, not a third-party builder — full control and support from Russia"
       },
       "pos": {
-        "title": "Works with your POS or without it",
-        "text": "Integrates with iiko and R-Keeper or runs fully standalone — one dashboard for the whole network"
+        "title": "Works with your POS and without it",
+        "text": "Integration with iiko and R-Keeper or fully standalone — one dashboard for the whole network"
       },
       "fast": {
-        "title": "Launch in an evening, no developers",
-        "text": "Bot, menu, payments and delivery are set up right in the CRM"
+        "title": "No developers needed",
+        "text": "Bot, menu, prices, delivery zones and payment are set up right in the CRM — no developers or specs"
       },
       "noRisk": {
-        "title": "No risk to start",
-        "text": "90 days of full access free, no card required"
+        "title": "No risk at the start",
+        "text": "90 days of full access free and without a card — enough to test it on real orders"
       }
     },
     "riskTitle": "Try it risk-free",
-    "riskText": "90 days free, no card required. Not a fit — you simply don't pay. We'll help set up and migrate your menu.",
+    "riskText": "90 days free, no card required. Not a fit — you simply don't pay. We'll show you how to set things up and move your menu.",
     "riskCta": "Try for free"
   }
 }

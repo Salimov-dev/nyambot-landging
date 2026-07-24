@@ -8,12 +8,12 @@
     "openCrm": "CRM ochish"
   },
   "hero": {
-    "badge": "🔥 Kafe, restoran, novvoyxona va yetkazib berish uchun",
-    "title": "Ovqat buyurtma va yetkazib berish <em>MAX va&nbsp;Telegram</em>da. Agregatorlarsiz",
-    "subtitle": "Ovqat buyurtmalarini messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mijozlar bazasi va yetkazib berish ustidan to'liq nazorat",
+    "badge": "Kafe, restoran, novvoyxona va yetkazib berish uchun",
+    "title": "O'z buyurtma va yetkazib berish kanaling <em>MAX va&nbsp;Telegramda</em>",
+    "subtitle": "Ovqat buyurtmalarini messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mehmonlar bazasi va yetkazib berish ustidan to'liq nazorat",
     "cta": "Bepul sinab ko'rish",
     "ctaSecondary": "Demoni ko‘rish",
-    "trial": "✅ 90 kun bepul · qo‘llab-quvvatlash va menyuni ko‘chirishda yordam",
+    "trial": "90 kun bepul · qo'llab-quvvatlash va sozlash bo'yicha maslahatlar",
     "watchVideo": "Video ko'rish",
     "videoTitle": "Nyambot nima?"
   },
@@ -36,23 +36,23 @@
     }
   },
   "benefits": {
-    "title": "Muassasangiz ko‘proq daromad olishi uchun hammasi",
+    "title": "O'sha mehmonlardan ko'proq daromad ol",
     "chips": [
-      "📈 Ko'proq daromad",
-      "🧾 Yuqori o'rtacha chek",
-      "❤️ Sodiq mehmonlar",
-      "🍔 Mehmon didiga mos taom",
-      "🗺️ Kengaytirilgan yetkazib berish zonalari",
-      "📱 MAX va Telegramdagi mavjudlik"
+      "Ko'proq daromad",
+      "Yuqori o'rtacha chek",
+      "Sodiq mehmonlar",
+      "Didga mos taom",
+      "Kengroq yetkazish",
+      "MAX va Telegram"
     ],
     "detailsCta": "Batafsil",
     "items": {
       "retention": {
-        "tag": "O'z mijozlaringiz, o'z marjangiz",
+        "tag": "O'z mehmonlaringiz, o'z marjangiz",
         "title": "Takroriy buyurtma — o'z kanalingizga, agregatorga emas",
-        "result": "Agregator har bir buyurtmadan 20–45% oladi. Nyambot takroriy buyurtmalarni komissiyasiz o'z kanalingizga qaytaradi — bir xil mehmonlardan ko'proq daromad, mijoz esa sizning bazangizda qoladi",
+        "result": "Agregator har bir buyurtmadan 20–45% oladi. Nyambot takroriy buyurtmalarni komissiyasiz o'z kanalingizga qaytaradi — bir xil mehmonlardan ko'proq daromad, mehmon esa sizning bazangizda qoladi",
         "details": {
-          "intro": "Agregator yangi mehmonlarni jalb qilish uchun yaxshi kanal, undan foydalanish kerak. Biroq takroriy buyurtmalarda u mijozni o'zida qoldiradi. Vazifa — ushbu lidni o'z kanalingizga o'tkazish va mehmonni shaxsan sizniki qilish.",
+          "intro": "Agregator yangi mehmonlarni jalb qilish uchun yaxshi kanal, undan foydalanish kerak. Biroq takroriy buyurtmalarda u mehmonni o'zida qoldiradi. Vazifa — ushbu lidni o'z kanalingizga o'tkazish va mehmonni shaxsan sizniki qilish.",
           "sections": [
             {
               "title": "Takroriy buyurtmalardan 0% komissiya",
@@ -63,9 +63,9 @@
               ]
             },
             {
-              "title": "Mijoz sizniki bo'ladi",
+              "title": "Mehmon sizniki bo'ladi",
               "points": [
-                "Buyurtmalar tarixi bo'lgan mijozlar bazasi — sizniki, agregatorniki emas",
+                "Buyurtmalar tarixi bo'lgan mehmonlar bazasi — sizniki, agregatorniki emas",
                 "Mehmon bilan to'g'ridan-to'g'ri aloqa: aksiyalar, reklama xabarlari, sodiqlik dasturi",
                 "Vositachisiz segmentatsiya va takroriy savdolar"
               ]
@@ -85,7 +85,7 @@
               "points": [
                 "MAX va Telegram bir vaqtda: yangi kanal va MAX ning o'sib borayotgan auditoriyasi",
                 "Mini-ilova to'g'ridan-to'g'ri messengarda ochiladi — mehmon hech narsa o'rnatishi shart emas",
-                "Ikkala kanalda yagona mijoz: umumiy tarix, ballar va aksiyalar",
+                "Ikkala kanalda yagona mehmon: umumiy tarix, ballar va aksiyalar",
                 "SMS va parolsiz avtorizatsiya"
               ]
             },
@@ -128,18 +128,18 @@
               "title": "Ushlab turadigan marketing",
               "points": [
                 "Savat shartlari bo'yicha chegirmalar va sovg'alar",
-                "Har qanday cheklovli promokodlar",
+                "Shartli promokodlar: muddat, summa, tovarlar, foydalanish soni",
                 "Sodiqlik ballari: to'plash va sarflash",
-                "Kategoriyadan N ta tovar uchun sovg'a",
+                "Tanlangan pozitsiyalar buyurtma qilinganda sovg'a",
                 "Barcha messenjerlarda bir vaqtda ishlaydi"
               ]
             },
             {
-              "title": "Kunlik taklif va jadval bo'yicha reklama xabarlari",
+              "title": "Kun taklifi",
               "points": [
-                "MAX va Telegramda kunlik taklifni avtomatik yuborish",
+                "Kun taklifini MAX va Telegramga avtomatik yuborish",
                 "CRM da aksiyalarning vizual kalendari",
-                "Reklama xabarlarini haftalar oldin rejalashtiring"
+                "Takliflarni kunlar oldin rejalashtirasan"
               ]
             }
           ]
@@ -266,7 +266,7 @@
               "title": "Kuryer",
               "points": [
                 "Xaritadagi vazifalar va yetkazib berish manzili",
-                "Mijozga bir klikda qo'ng'iroq va kechikish haqida xabardor qilish",
+                "Mehmonga bir klikda qo'ng'iroq va kechikish haqida xabardor qilish",
                 "To'g'ridan-to'g'ri ilovadan «Yetkazildi» belgisi"
               ]
             },
@@ -292,45 +292,46 @@
               "title": "To'liq mustaqillik",
               "points": [
                 "Menyu, narxlar, yetkazib berish zonalari va aksiyalarni CRM da o'zingiz sozlaysiz",
-                "Yangi botni 10 daqiqada ulash",
-                "CRM dagi AI-yordamchi har qanday savolda yordam beradi",
+                "Yangi bot to'g'ridan-to'g'ri CRM da token bilan ulanadi",
+                "CRM dagi AI-yordamchi sozlamalarni tushunishga yordam beradi",
                 "Noldan birinchi buyurtmaga qadar bosqichma-bosqich hujjatlar"
               ]
             },
             {
               "title": "Har bosqichda qo'llab-quvvatlash",
               "points": [
-                "iiko, R-Keeper va onlayn to'lov integratsiyasida yordam",
-                "Ro'yxatdan o'tishdan birinchi buyurtmaga qadar ko'rsatamiz",
-                "Har qanday savolga javob beramiz va muammolarni hal qilamiz",
-                "Rossiyadan jonli qo'llab-quvvatlash"
+                "iiko, R-Keeper va onlayn to'lov integratsiyasi bo'yicha maslahat beramiz",
+                "Ro'yxatdan o'tishdan birinchi buyurtmagacha hamrohlik qilamiz",
+                "Savollarga javob beramiz va tushunishga yordam beramiz",
+                "RFdan jonli qo'llab-quvvatlash"
               ]
             }
           ]
         }
       }
-    }
+    },
+    "detailsClose": "Yopish"
   },
   "crmDemo": {
     "tag": "O'z ishlab chiqishimiz CRM",
-    "title": "Muassasangizni yagona kabinetdan boshqaring",
-    "description": "To'liq CRM — uchinchi tomon xizmat emas, o'z ishlab chiqishimiz. Modifikatorli menyu, buyurtmalarni boshqarish, daromad tahlili, marketing aktsiyalari va mijozlar bazasi — qo'shimcha integratsiyalarsiz bir joyda. Hammasini to'liq mustaqil ishga tushiring va boshqaring: menyu, narxlar, yetkazib berish zonalari va aksiyalar qo'llab-quvvatlash va dasturchilarsiz sozlanadi",
-    "ownDev": "CRM bizning jamoamiz tomonidan noldan yaratilgan — funksionallik va ishonchlilikni to'liq nazorat qilamiz. Uchinchi tomon platformalar yo'q",
+    "title": "Butun muassasa bitta kabinetda",
+    "description": "Menyu, buyurtmalar, tahlil, marketing va mehmonlar bazasi — bir joyda. Hammasini o'zing sozlaysan, dasturchilarsiz",
+    "ownDev": "O'z ishlanmamiz, konstruktor emas — funksiyalar va ishonchlilik uchun javob beramiz",
     "cta": "CRM ni ochish — 90 kun bepul",
     "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
     "features": {
-      "dashboard": "Daromad va ko'rsatkichlar paneli",
+      "dashboard": "Daromad dashboardi",
       "orders": "Real vaqtda buyurtmalar",
-      "clients": "Buyurtmalar tarixi bilan mijozlar bazasi",
-      "marketing": "Aktsiyalar, chegirmalar, promokodlar",
-      "menu": "Modifikatorli menyu va stop-ro'yxatlar",
-      "analytics": "Davrlar bo'yicha savdo tahlili"
+      "clients": "Mehmonlar bazasi",
+      "marketing": "Aksiyalar va promokodlar",
+      "menu": "Menyu va stop-ro'yxatlar",
+      "analytics": "Sotuv tahlili"
     }
   },
   "tryDemo": {
     "tag": "Demo",
     "title": "Hoziroq sinab ko'ring",
-    "subtitle": "Telegram yoki MAX'da demo-botni oching va mijozlaringiz qanday buyurtma berishini his qiling",
+    "subtitle": "Telegram yoki MAX'da demo-botni oching va mehmonlaringiz qanday buyurtma berishini his qiling",
     "tgDesc": "Telegram'da mini-ilova demosi",
     "tgCta": "Telegram'da ochish",
     "maxDesc": "MAX'da mini-ilova demosi",
@@ -341,53 +342,53 @@
   },
   "howItWorks": {
     "label": "Qanday ishlaydi",
-    "title": "Botni yaratishdan birinchi buyurtmaga qadar — bir kun",
+    "title": "Bot yaratishdan birinchi buyurtmagacha",
     "subtitle": "Uzoq ishlab chiqish yo'q. Hamma narsa dasturchilarisiz CRM orqali sozlanadi",
     "steps": [
       {
         "title": "Bot yarating",
-        "description": "@BotFather orqali Telegram-bot yoki MAX-bot yarating. 10 daqiqa vaqt ketadi"
+        "description": "MAX hamkor panelida yoki Telegramda @BotFather orqali"
       },
       {
         "title": "CRM da sozlang",
-        "description": "Bot tokenini kiriting, menyu qo'shing va YuKassa orqali to'lovni sozlang"
+        "description": "Tokenni CRM ga joylashtir, menyu, yetkazish zonalari va to'lovni qo'sh"
       },
       {
-        "title": "Mijozlarga havola bering",
-        "description": "Havolani ijtimoiy tarmoqlarda yoki muassasadagi QR-kodda joylashtiring"
+        "title": "Mehmonlarga havola bering",
+        "description": "Havolani ijtimoiy tarmoqlarda, saytda va muassasadagi QR-kodda joylashtir"
       },
       {
         "title": "Buyurtmalar qabul qiling",
-        "description": "Buyurtmalar CRM ga keladi. Kuryer topshiriq oladi, xaridor — bildirishnomalar"
+        "description": "Buyurtmalar CRM va «Команда» ilovasida ko'rinadi, mehmon statuslarni messenjerda oladi"
       }
     ]
   },
   "switch": {
     "label": "Nyambot-ga ko‘chish",
-    "title": "Buyurtmalarni boshqa xizmatda qabul qilyapsizmi? Nyambot-ga ko‘ching",
-    "subtitle": "Agregator yoki boshqa bot-xizmat bilan ishlayapsizmi — 6 oyga 50% chegirma beramiz va menyu hamda mijozlar bazasini ko‘chirishga yordam beramiz. Kanalingiz o‘zingizda qoladi, endi uni Nyambot boshqaradi",
+    "title": "<em>50% chegirma</em> bilan o't",
+    "subtitle": "Allaqachon boshqa bot-xizmat yoki konstruktor orqali buyurtma qabul qilyapsanmi — dastlabki 6 oyga 50% chegirma beramiz va sozlashda yo'l ko'rsatamiz. Bot va obunachilar seniki bo'lib qoladi, faqat ularni boshqaradigan xizmat o'zgaradi",
     "badge": "6 oyga −50%",
     "steps": {
       "0": {
-        "title": "Ariza va ko‘chish rejasi",
-        "description": "Ariza qoldirasiz, joriy xizmatingizni o‘rganamiz va menyu hamda jarayonlaringizga mos ko‘chish rejasini tuzamiz"
+        "title": "Ariza va tahlil",
+        "description": "Ariza qoldirasan — hozir nimadan foydalanayotganingni, nimani ko'chirish kerakligini va nimadan boshlashni ko'rib chiqamiz"
       },
       "1": {
-        "title": "Ma’lumotlarni ko‘chirishga yordam beramiz",
-        "description": "Menyu, mahsulotlar va mijozlar bazasini yuklashda maslahat va yordam beramiz, ko‘chishda hech narsa yo‘qolmasligi uchun"
+        "title": "Menyu va sozlamalar",
+        "description": "Menyu, modifikatorlar, narxlar va yetkazish zonalari CRM da kiritiladi. iiko yoki R-Keeper ulangan bo'lsa, menyu va stop-ro'yxatlar kassadan tortiladi"
       },
       "2": {
-        "title": "Kanalingizni ulaymiz",
-        "description": "Botni MAX va Telegramda brendingiz ostida sozlaymiz. Kanal o‘zingizda va obunachilaringizda qoladi, endi uni Nyambot boshqaradi"
+        "title": "MAX va Telegramda o'z boting",
+        "description": "Botni o'zing yaratasan va egasi bo'lib qolasan — tokenni CRM ga qanday ulashni va kanalni brendingga moslashni ko'rsatamiz"
       },
       "3": {
-        "title": "Ishga tushirish va qo‘llab-quvvatlash",
-        "description": "Buyurtma qabulini ishga tushiramiz va aloqada bo‘lamiz, har bosqichda moslashishga yordam beramiz"
+        "title": "Ishga tushirish va qo'llab-quvvatlash",
+        "description": "Buyurtma qabulini yoqasan, biz esa qo'llab-quvvatlashda aloqadamiz — sozlash va ish bo'yicha savollarga javob beramiz"
       }
     },
     "button": "50% chegirma bilan o‘tish",
     "compare": "Joriy xizmat bilan solishtirish",
-    "hint": "6 oyga 50% chegirma · Bazani ko‘chirish bepul · Har bosqichda yordam beramiz · Chegirmalar jamlanmaydi"
+    "hint": "Dastlabki 6 oyga 50% chegirma · Sozlashni tushunishga yordam beramiz · Chegirmalar qo'shilmaydi"
   },
   "security": {
     "label": "Xavfsizlik",
@@ -396,15 +397,15 @@
     "imageAlt": "Nyambot ma'lumotlari xavfsizligi — 152-ФЗ ga muvofiqlik",
     "items": {
       "fz152": {
-        "title": "152-ФЗ ga muvofiq",
+        "title": "152-FZ",
         "description": "Shaxsiy ma'lumotlar to'g'risidagi federal qonun doirasida ishlaymiz"
       },
       "localization": {
-        "title": "Ma'lumotlar bazasi RFda",
+        "title": "Ma'lumotlar RFda",
         "description": "Serverlar va zaxira nusxalari Rossiya hududida joylashgan"
       },
       "encryption": {
-        "title": "Ma'lumotlarni shifrlash",
+        "title": "Shifrlash",
         "description": "Uzatishda HTTPS/TLS, saqlashda sezgir ma'lumotlarni shifrlash"
       },
       "madeInRussia": {
@@ -412,20 +413,20 @@
         "description": "Rossiyalik ishlab chiqish jamoasi va RFdan texnik yordam"
       },
       "standards": {
-        "title": "Zamonaviy standartlar",
+        "title": "Kirish nazorati",
         "description": "Muntazam tekshiruvlar, xavfsizlik yangilanishlari va kirishni boshqarish"
       },
       "noThirdParty": {
-        "title": "Uchinchi shaxslarga bermaymiz",
-        "description": "Mijozlar ma'lumotlari muassasaga tegishli — biz ularni sotmaymiz va ulashmaymiz"
+        "title": "Uchinchi shaxslarsiz",
+        "description": "Mehmonlar ma'lumotlari muassasaga tegishli — biz ularni sotmaymiz va ulashmaymiz"
       }
     },
     "chips": {
-      "backups": "Muntazam zaxira nusxalari",
-      "policy": "Shaffof maxfiylik siyosati",
-      "deletion": "So'rov asosida o'chirish huquqi",
-      "minData": "Faqat zarur bo'lganlarini yig'amiz",
-      "supportRu": "RFdan yordam"
+      "backups": "Zaxira nusxalar",
+      "policy": "Shaffof siyosat",
+      "deletion": "So'rov bo'yicha o'chirish",
+      "minData": "Minimal to'playmiz",
+      "supportRu": "RFdan qo'llab-quvvatlash"
     },
     "privacyLink": "Maxfiylik siyosati",
     "offerLink": "Ommaviy taklif"
@@ -434,7 +435,7 @@
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
     "subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
-    "trialNote": "Ro'yxatdan o'tgandan so'ng 90 kun to'liq bepul kirish — barcha funksiyalar, to'liq qo'llab-quvvatlash, cheklovsiz. To'liq davr faqat siz tayyor bo'lganingizda boshlanadi",
+    "trialNote": "Ro'yxatdan o'tgach 90 kun to'liq kirish — barcha funksiyalar va qo'llab-quvvatlash, cheklovsiz va kartasiz. Tarifni sinov muddati tugagach tanlaysan va to'laysan",
     "popular": "Foydali",
     "perMonth": "oyiga",
     "totalBilled": "{{total}} hisobdan chiqariladi",
@@ -445,29 +446,22 @@
       "12": "12 oy"
     },
     "cta": "Ulash",
-    "included": "Har qanday tarifga nima kiradi",
+    "included": "Nima olasan",
     "includedItems": [
-      "Telegram + MAX botlar",
-      "CRM va analitika",
-      "Crew-ilova",
-      "Sodiqlik dasturi",
-      "Promokodlar va chegirmalar",
-      "YuKassa va Yandex.Pay",
-      "iiko va R-Keeper integratsiyasi",
-      "Yandex.Delivery",
+      "Mini-ilova",
+      "CRM",
+      "«Команда» ilovasi",
+      "Sodiqlik va aksiyalar",
+      "Barcha integratsiyalar",
       "Qo'llab-quvvatlash"
     ],
-    "limits": "{{bots}} tagacha bot · {{stores}} tagacha savdo nuqtasi · {{items}} tagacha menyu pozitsiyasi",
     "registrationHint": "«Ulash» tugmasini bosganingizdan so'ng CRM ochiladi. Ro'yxatdan o'ting, «Litsenziya» bo'limiga o'ting va tanlangan tarifni to'lang — shundan keyin ishni boshlashingiz mumkin",
-    "limitsTitle": "Har tarifga nima kiradi",
-    "limitBots": "har bir messenjerda bitta bot",
-    "limitStores": "{{count}} savdo nuqtasi",
-    "limitMenuItems": "{{count}} menyu elementi",
-    "customTitle": "Muassasalar tarmog'ingiz bormi?",
-    "customSubtitle": "2 va undan ko'p savdo nuqtasi bo'lgan tarmoqlar uchun — individual tarif. Bizga yozing, ko'lamingizga mos shartlarni tanlaymiz",
-    "customCta": "Individual tarifni muhokama qilish",
+    "customTitle": "Tarmog'ing bormi?",
+    "customSubtitle": "2 savdo nuqtasidan — miqyosingga mos individual tarif",
     "emailCta": "Pochta",
-    "freeTrial": "0 ₽ · birinchi 90 kun"
+    "freeTrial": "0 ₽ · birinchi 90 kun",
+    "connectTitle": "Tizimga ulaysan",
+    "connectItems": ["1 savdo nuqtasi", "MAXda 1 bot", "Telegramda 1 bot"]
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar",
@@ -476,7 +470,7 @@
     "askSupport": "Qo'llab-quvvatlashga so'rang",
     "items": [
       {
-        "question": "Xaridorlar ilova o'rnatishi kerakmi?",
+        "question": "Mehmonlar ilova o'rnatishi kerakmi?",
         "answer": "Yo'q. Mini-ilova to'g'ridan-to'g'ri Telegram yoki MAX da ochiladi"
       },
       {
@@ -489,7 +483,7 @@
       },
       {
         "question": "Buyurtmalar uchun to'lov qanday ishlaydi?",
-        "answer": "YuKassa orqali onlayn to'lov barcha savdo nuqtalariga yoki tanlab ulash mumkin. Xaridor to'g'ridan-to'g'ri messenjerda to'laydi. Yetkazib berishda to'lash ham qo'llab-quvvatlanadi"
+        "answer": "YuKassa orqali onlayn to'lov barcha savdo nuqtalariga yoki tanlab ulash mumkin. Mehmon to'g'ridan-to'g'ri messenjerda to'laydi. Yetkazib berishda to'lash ham qo'llab-quvvatlanadi"
       },
       {
         "question": "MAX-bot nima va u kerakmi?",
@@ -497,7 +491,7 @@
       },
       {
         "question": "Sinov davri qanday ishlaydi?",
-        "answer": "Ro'yxatdan o'tgandan so'ng barcha funksiyalar bilan cheklovsiz 90 kun to'liq bepul kirish. Karta talab qilinmaydi. Bu vaqt ichida botni ishga tushirib, birinchi buyurtmalarni olasiz"
+        "answer": "Ro'yxatdan o'tgach 90 kun bepul beramiz — kartasiz va cheklangan funksiyalarsiz: to'liq CRM, «Команда» ilovasi, POS va yetkazish integratsiyalari. Hammasini o'zing sozlaysan, qo'llab-quvvatlash esa har qadamda savollarga javob beradi"
       },
       {
         "question": "Kuryerlarsiz foydalanish mumkinmi?",
@@ -505,12 +499,12 @@
       },
       {
         "question": "Buyurtmalarni qabul qilishni qancha tez boshlash mumkin?",
-        "answer": "Tayyor bot mavjud bo'lsa — bir kun ichida"
+        "answer": "Tartib shunday: bot yarating, uni CRM ga ulang, menyuni yuklang, yetkazib berish zonalarini belgilang va havolani mehmonlar bilan ulashing. Bularning bari CRM da mustaqil bajariladi, qo'llab-quvvatlash esa har qadamda yordam beradi"
       }
     ]
   },
   "cta": {
-    "title": "Bugun buyurtmalar qabul qilishni boshlang",
+    "title": "O'z kanalingda buyurtma qabul qilishni boshla",
     "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. Agregatorlarsiz o'z kanalingiz",
     "button": "Bepul sinab ko'rish",
     "docs": "Hujjatlarni o'qish",
@@ -532,7 +526,8 @@
     "terms": "Foydalanish shartlari",
     "offer": "Ommaviy oferta",
     "cookies": "Cookies siyosati",
-    "allRights": "Barcha huquqlar himoyalangan"
+    "allRights": "Barcha huquqlar himoyalangan",
+    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ"
   },
   "video": {
     "socialHeading": "Nyambot haqida ko'proq videolar — ijtimoiy tarmoqlarimizda"
@@ -540,7 +535,7 @@
   "integrations": {
     "label": "Integratsiyalar",
     "title": "Siz allaqachon foydalanayotgan xizmatlar bilan ishlaymiz",
-    "subtitle": "iiko, R-Keeper, YuKassa, Yandex.Pay va Yandex.Delivery — bir necha klikda ulanadi, dasturchilarsiz",
+    "subtitle": "To'g'ridan-to'g'ri CRM da ulanadi — dasturchilarsiz va qo'shimcha ishlanmasiz",
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
@@ -550,32 +545,26 @@
     }
   },
   "promoBar": {
-    "text": "🎁 90 kun bepul · Toʻliq kirish · Karta kerak emas",
+    "text": "90 kun bepul · Toʻliq kirish · Karta kerak emas",
     "cta": "Sinab koʻring"
   },
   "forWhom": {
-    "title": "Nyambot — har qanday umumiy ovqatlanish formati uchun",
-    "subtitle": "Ovqatga buyurtma qabul qilasizmi — Nyambot formatingizga mos keladi",
+    "title": "Har qanday ovqatlanish formati uchun",
     "items": {
       "cafe": {
-        "title": "Kafe va restoranlar",
-        "text": "Buyurtma va ovqat yetkazish uchun o'z kanalingiz"
+        "title": "Kafe va restoranlar"
       },
       "bakery": {
-        "title": "Novvoyxona va qahvaxonalar",
-        "text": "Navbatsiz oldindan buyurtma va olib ketish"
+        "title": "Novvoyxona va qahvaxonalar"
       },
       "dark": {
-        "title": "Dark-kitchenlar va yetkazib berish",
-        "text": "Agregator komissiyasisiz buyurtmalar"
+        "title": "Dark-kitchenlar va yetkazib berish"
       },
       "chains": {
-        "title": "Muassasalar tarmog'i",
-        "text": "Barcha nuqtalar uchun bitta bot"
+        "title": "Tarmoqlar va franshizalar"
       },
       "production": {
-        "title": "Ovqat ishlab chiqarish va keytering",
-        "text": "Tayyor ovqat va to'g'ridan-to'g'ri buyurtmalar"
+        "title": "Ovqat ishlab chiqarish va keytering"
       }
     }
   },
@@ -584,24 +573,24 @@
     "title": "Nega Nyambot",
     "items": {
       "ownDev": {
-        "title": "Rossiyada o'z ishlanmamiz",
-        "text": "CRM va botlar noldan o'zimiz tomonidan yaratilgan, chetdan konstruktor emas — to'liq nazorat va RFdan qo'llab-quvvatlash"
+        "title": "O'z ishlanmamiz",
+        "text": "CRM va botlar noldan biz tomonimizdan yaratilgan, chetdan konstruktor emas — to'liq nazorat va RFdan qo'llab-quvvatlash"
       },
       "pos": {
-        "title": "Kassangiz bilan va usiz ishlaydi",
+        "title": "Kassa bilan ham, kassasiz ham ishlaydi",
         "text": "iiko va R-Keeper bilan integratsiya yoki to'liq mustaqil — butun tarmoq uchun bitta kabinet"
       },
       "fast": {
-        "title": "Bir oqshomda ishga tushirish, dasturchisiz",
-        "text": "Bot, menyu, to'lov va yetkazib berish to'g'ridan-to'g'ri CRMda sozlanadi"
+        "title": "Dasturchilarsiz",
+        "text": "Bot, menyu, narxlar, yetkazish zonalari va to'lov to'g'ridan-to'g'ri CRM da sozlanadi — dasturchilarsiz va texnik topshiriqsiz"
       },
       "noRisk": {
-        "title": "Boshlanishida hech qanday xavf yo'q",
-        "text": "90 kun to'liq bepul kirish, kartani bog'lamasdan"
+        "title": "Boshida xavfsiz",
+        "text": "90 kun to'liq kirish bepul va kartasiz — real buyurtmalarda sinab ko'rishga yetadi"
       }
     },
     "riskTitle": "Xavfsiz sinab ko'ring",
-    "riskText": "90 kun bepul, kartasiz. Mos kelmadi — shunchaki to'lamaysiz. Sozlash va menyuni ko'chirishda yordam beramiz.",
+    "riskText": "90 kun bepul, kartasiz. To'g'ri kelmadi — shunchaki to'lamaysan. Qanday sozlash va menyuni ko'chirishni aytib beramiz.",
     "riskCta": "Bepul sinab ko'rish"
   }
 }
