@@ -366,7 +366,7 @@
   "switch": {
     "label": "Move to Nyambot",
     "title": "Move over with a <em>50% discount</em>",
-    "subtitle": "Already taking orders through another bot service or builder — we give 50% off for the first 6 months and walk you through the setup. The bot and its subscribers stay yours, only the service behind them changes",
+    "subtitle": "Already taking orders through another bot service or builder — we give 50% off for the first 6 months and walk you through the setup. The bot stays yours: only the service behind it changes. If a chain runs several bots, we help you bring all locations into a single channel",
     "badge": "−50% for 6 months",
     "steps": {
       "0": {
@@ -461,7 +461,11 @@
     "emailCta": "Email",
     "freeTrial": "0 ₽ · first 90 days",
     "connectTitle": "You connect to the system",
-    "connectItems": ["1 venue", "1 bot in MAX", "1 bot in Telegram"]
+    "connectItems": [
+      "1 venue",
+      "1 bot in MAX",
+      "1 bot in Telegram"
+    ]
   },
   "faq": {
     "label": "FAQ",
@@ -509,7 +513,11 @@
     "button": "Try for free",
     "docs": "Read documentation",
     "hint": "No card required · Free trial, no commitment",
-    "trialFeatures": ["90 days free", "Full access", "No card required"]
+    "trialFeatures": [
+      "90 days free",
+      "Full access",
+      "No card required"
+    ]
   },
   "footer": {
     "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",

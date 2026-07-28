@@ -366,7 +366,7 @@
   "switch": {
     "label": "Nyambot-a keçid",
     "title": "<em>50% endirimlə</em> keç",
-    "subtitle": "Artıq başqa bot-xidmət və ya konstruktor vasitəsilə sifariş qəbul edirsən — ilk 6 aya 50% endirim veririk və quraşdırmada yol göstəririk. Bot və abunəçilər səndə qalır, yalnız onları idarə edən xidmət dəyişir",
+    "subtitle": "Artıq başqa bot-xidmət və ya konstruktor vasitəsilə sifariş qəbul edirsən — ilk 6 aya 50% endirim veririk və quraşdırmada yol göstəririk. Bot səndə qalır: yalnız onu idarə edən xidmət dəyişir. Şəbəkədə bir neçə bot varsa, bütün nöqtələri bir kanalda birləşdirməyə kömək edirik",
     "badge": "6 ay üçün −50%",
     "steps": {
       "0": {
@@ -461,7 +461,11 @@
     "emailCta": "Poçt",
     "freeTrial": "0 ₽ · ilk 90 gün",
     "connectTitle": "Sistemə qoşursan",
-    "connectItems": ["1 ticarət nöqtəsi", "MAX-da 1 bot", "Telegram-da 1 bot"]
+    "connectItems": [
+      "1 ticarət nöqtəsi",
+      "MAX-da 1 bot",
+      "Telegram-da 1 bot"
+    ]
   },
   "faq": {
     "label": "Tez-tez verilən suallar",
@@ -509,7 +513,11 @@
     "button": "Pulsuz sınayın",
     "docs": "Sənədləri oxuyun",
     "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz",
-    "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
+    "trialFeatures": [
+      "90 gün pulsuz",
+      "Tam giriş",
+      "Kart tələb olunmur"
+    ]
   },
   "footer": {
     "description": "İaşə müəssisələri üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",

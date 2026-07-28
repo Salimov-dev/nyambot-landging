@@ -7,7 +7,6 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
-import { PercentIcon } from "@/components/ui/icons/icons";
 import styles from "./switch-section.module.css";
 
 const { Title, Text } = Typography;
@@ -69,10 +68,9 @@ export function SwitchSection() {
           >
             {t("switch.subtitle")}
           </Text>
-          <span className={styles.badge}>
-            <PercentIcon size={17} />
-            {t("switch.badge")}
-          </span>
+          {/* Иконка процента убрана: в тексте бейджа уже есть «%», два
+              символа подряд читались как опечатка (правка 28.07.2026) */}
+          <span className={styles.badge}>{t("switch.badge")}</span>
         </motion.div>
 
         <Row gutter={[24, 24]} className={styles.steps}>
