@@ -28,8 +28,6 @@ export type MetrikaGoal =
   // Демо-боты
   | "click_max_demo"
   | "click_tg_bot"
-  // Видео
-  | "video_play"
   // Поддержка
   | "click_tg_support"
   | "click_max_support"

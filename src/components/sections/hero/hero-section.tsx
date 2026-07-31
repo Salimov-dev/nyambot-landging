@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, type Variants } from "framer-motion";
-import { Button, Flex, Modal, Tag, Typography } from "antd";
+import { Button, Flex, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
-import { SocialLinks } from "@/components/ui/social-links/social-links";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
@@ -37,7 +36,6 @@ const phoneVariants: Variants = {
 export function HeroSection() {
   const { t } = useTranslation("landing");
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -57,11 +55,6 @@ export function HeroSection() {
     observer.observe(video);
     return () => observer.disconnect();
   }, []);
-
-  const openVideo = () => {
-    reachGoal("video_play");
-    setIsVideoOpen(true);
-  };
 
   return (
     <section id="hero" className={styles.section}>
@@ -97,6 +90,9 @@ export function HeroSection() {
 
             <motion.div variants={itemVariants}>
               <Text className={styles.subtitle}>{t("hero.subtitle")}</Text>
+              <Text className={styles.subtitleIntegrations}>
+                {t("hero.subtitleIntegrations")}
+              </Text>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -144,6 +140,7 @@ export function HeroSection() {
                 <video
                   ref={videoRef}
                   src="/videos/phone/hero-intro.mp4"
+                  poster="/videos/phone/hero-intro-poster.jpg"
                   className={styles.phoneScreenImage}
                   muted
                   loop
@@ -155,44 +152,6 @@ export function HeroSection() {
           </motion.div>
         </Flex>
       </div>
-
-      <button
-        type="button"
-        onClick={openVideo}
-        className={`${styles.scrollHint} ${styles.scrollHintVisible}`}
-        aria-label={t("hero.watchVideo")}
-      >
-        <span className={styles.scrollHintRow}>
-          <span className={styles.scrollHintIcon}>▶</span>
-          <span className={styles.scrollHintText}>{t("hero.watchVideo")}</span>
-        </span>
-      </button>
-
-      <Modal
-        open={isVideoOpen}
-        onCancel={() => setIsVideoOpen(false)}
-        footer={null}
-        width={880}
-        title={t("hero.videoTitle")}
-        // antd 6: `destroyOnClose` объявлен устаревшим в пользу `destroyOnHidden`.
-        // Размонтирование обязательно — иначе iframe RuTube продолжает играть
-        // звук после закрытия модалки.
-        destroyOnHidden
-      >
-        <div className={styles.videoWrapper}>
-          <iframe
-            className={styles.videoIframe}
-            src="https://rutube.ru/play/embed/f2898aaaafa45b12485780db020b854a/"
-            frameBorder="0"
-            allow="clipboard-write; autoplay"
-            allowFullScreen
-            title={t("hero.videoTitle")}
-          />
-        </div>
-        <div className={styles.videoSocials}>
-          <SocialLinks />
-        </div>
-      </Modal>
     </section>
   );
 }

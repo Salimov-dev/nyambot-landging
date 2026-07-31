@@ -8,32 +8,13 @@
     "openCrm": "Open CRM"
   },
   "hero": {
-    "badge": "For cafés, restaurants, bakeries and delivery",
-    "title": "Your own ordering and food delivery channel <em>in&nbsp;MAX and&nbsp;Telegram</em>",
-    "subtitle": "Accept food orders directly through messengers. Zero commission per order, your own guest base and full control over delivery",
+    "badge": "For a single venue and for a whole chain — cafés, restaurants, bakeries, delivery",
+    "title": "One bot for your whole chain — orders and food delivery <em>in&nbsp;MAX and&nbsp;Telegram</em>",
+    "subtitle": "One bot for all your locations. Guest base, order history and points are shared across MAX and Telegram. Each location keeps its own menu, prices and delivery zone. No separate bot per location and no aggregator fees",
+    "subtitleIntegrations": "iiko and R-Keeper, online payment, Yandex.Delivery",
     "cta": "Try for free",
     "ctaSecondary": "See the demo",
-    "trial": "90 days free · support and setup tips",
-    "watchVideo": "Watch video",
-    "videoTitle": "What is Nyambot?"
-  },
-  "stats": {
-    "commission": {
-      "value": "0%",
-      "label": "Our commission per order"
-    },
-    "savings": {
-      "value": "20–45%",
-      "label": "Aggregators take per order"
-    },
-    "messengers": {
-      "value": "2",
-      "label": "Messengers: MAX and Telegram"
-    },
-    "trial": {
-      "value": "90",
-      "label": "Days of full access free"
-    }
+    "trial": "90 days free · support and setup tips"
   },
   "benefits": {
     "title": "Earn more from the same guests",
@@ -43,7 +24,7 @@
       "Loyal guests",
       "Dish to taste",
       "Wider delivery",
-      "MAX and Telegram"
+      "One bot: MAX and Telegram"
     ],
     "detailsCta": "Learn more",
     "items": {
@@ -74,27 +55,28 @@
         }
       },
       "channel": {
-        "tag": "New sales channel",
-        "title": "One bot — your entire network in MAX and Telegram",
-        "result": "A new sales channel across two messengers at once: more guests and wider reach — MAX's growing audience and your entire network in one bot, without a separate bot for each location",
+        "tag": "Others can't do this",
+        "title": "One bot for the whole chain — and one guest base in MAX and Telegram",
+        "result": "You don't need a separate bot for each location: one bot serves the whole chain, and the guest, their order history and points are shared across both messengers. Advertising isn't split, and a new location goes live without a separate launch",
         "details": {
-          "intro": "No need to set up and promote a separate bot for each location — one channel serves the entire network, and the guest lands at exactly the right location.",
+          "intro": "Usually it works like this: a bot per location and a separate base in each messenger. Nyambot is the opposite — one bot for the whole chain and one guest base, while the guest still lands at exactly the right location.",
           "sections": [
             {
-              "title": "Two messengers — one setup",
+              "title": "Two messengers — one guest",
               "points": [
-                "MAX and Telegram at once: new channel and MAX's growing audience",
+                "MAX and Telegram at once: the bot connects to both messengers, the dashboard and the base are shared",
+                "Guests are identified by phone: ordered in Telegram, came back from MAX — order history and points are still there",
                 "The mini-app opens directly in the messenger — guests don't need to install anything",
-                "Single guest profile across both channels: shared history, points and promotions",
                 "Login without SMS or passwords"
               ]
             },
             {
-              "title": "One channel for the entire network",
+              "title": "One bot and one base for the whole chain",
               "points": [
-                "Advertising isn't split — you promote one channel",
+                "Advertising isn't split — you promote one channel for all locations",
                 "Guest chooses location by geolocation or from a list",
                 "Each location has its own menu, prices, stop-list and delivery zone",
+                "Guests earn and spend points at any location of the chain — the loyalty programme is shared",
                 "New location added without a separate launch"
               ]
             }
@@ -314,8 +296,8 @@
   },
   "crmDemo": {
     "tag": "In-house CRM",
-    "title": "Your whole venue in one dashboard",
-    "description": "Menu, orders, analytics, marketing and guest base — in one place. You set it all up yourself, no developers",
+    "title": "Your whole chain in one dashboard",
+    "description": "Menu, orders, analytics, marketing and a shared guest base for the whole chain — in one place. You set it all up yourself, no developers",
     "ownDev": "Our own product, not a builder — we answer for features and reliability",
     "cta": "Open CRM — 90 days free",
     "ctaHint": "Full access · Full support · No card required",
@@ -366,7 +348,7 @@
   "switch": {
     "label": "Move to Nyambot",
     "title": "Move over with a <em>50% discount</em>",
-    "subtitle": "Already taking orders through another bot service or builder — we give 50% off for the first 6 months and walk you through the setup. The bot stays yours: only the service behind it changes. If a chain runs several bots, we help you bring all locations into a single channel",
+    "subtitle": "Already taking orders through another bot service or builder — we give 50% off for the first 6 months and walk you through the setup. The bot stays yours: only the service behind it changes. If a chain runs several bots, we help you bring all locations into a single channel and merge guests into one base",
     "badge": "−50% for 6 months",
     "steps": {
       "0": {
@@ -461,11 +443,7 @@
     "emailCta": "Email",
     "freeTrial": "0 ₽ · first 90 days",
     "connectTitle": "You connect to the system",
-    "connectItems": [
-      "1 venue",
-      "1 bot in MAX",
-      "1 bot in Telegram"
-    ]
+    "connectItems": ["1 venue", "1 bot in MAX", "1 bot in Telegram"]
   },
   "faq": {
     "label": "FAQ",
@@ -473,6 +451,10 @@
     "notFound": "Didn't find an answer?",
     "askSupport": "Ask support",
     "items": [
+      {
+        "question": "Do I need a separate bot for each location?",
+        "answer": "No. One bot serves the whole chain: the guest picks a location — by geolocation or from a list — and sees the menu, prices and delivery zone of exactly that location. You promote one channel, and a new location goes live without a separate launch. The guest base, order history and points stay shared across the whole chain"
+      },
       {
         "question": "Do guests need to install an app?",
         "answer": "No. The mini-app opens directly in Telegram or MAX — messengers already installed on most users' phones. No additional installation required"
@@ -482,24 +464,24 @@
         "answer": "Yes. Nyambot integrates with iiko and R-keeper: menu, prices, stop-lists and orders sync automatically — an order from the messenger is rung up in the till and sent to the kitchen. Nyambot also works fully on its own, without a POS"
       },
       {
-        "question": "Can I connect multiple locations?",
-        "answer": "For a single location — 4,900 ₽/month, everything included. For chains with 2+ locations — custom pricing. Contact support and we'll tailor the plan to your scale"
+        "question": "A guest ordered in Telegram and came back from MAX — are their history and points kept?",
+        "answer": "Yes. Guests are identified by phone number, so an order from Telegram and an order from MAX belong to the same guest: one order history, one points balance, the same promotions. The bot is connected to both messengers, while the guest base and the CRM account are shared"
       },
       {
         "question": "How does order payment work?",
         "answer": "Online card payment via YooKassa can be connected for all locations at once or selectively. Guests pay directly in the messenger. Cash on delivery is also supported"
       },
       {
-        "question": "What is a MAX bot and do I need it?",
-        "answer": "MAX is a Russian messenger with a growing audience and mini-app support. Connection is optional but allows reaching additional audience and gaining a new stable sales channel at no extra cost"
+        "question": "Can Nyambot be used without couriers?",
+        "answer": "Yes. You can set up pickup only or dine-in service — delivery is optional. And if you need delivery but have no couriers of your own, connect Yandex.Delivery: Nyambot places the request once the order is ready and a courier comes for it. The Crew app and your own courier module are included in the plan too, but optional"
       },
       {
         "question": "How does the trial period work?",
         "answer": "After signup we give 90 days free — no card and no crippled features: the full CRM, the «Crew» app, POS and delivery integrations. You set everything up yourself, and support answers questions at every step"
       },
       {
-        "question": "Can Nyambot be used without couriers?",
-        "answer": "Yes. You can set up pickup only or dine-in service — delivery is optional. And if you need delivery but have no couriers of your own, connect Yandex.Delivery: Nyambot places the request once the order is ready and a courier comes for it. The Crew app and your own courier module are included in the plan too, but optional"
+        "question": "What is a MAX bot and do I need it?",
+        "answer": "MAX is a Russian messenger with a growing audience and mini-app support. Connection is optional but allows reaching additional audience and gaining a new stable sales channel at no extra cost MAX needs no separate base and no separate setup: guests from MAX land in the same base as guests from Telegram"
       },
       {
         "question": "How quickly can I start accepting orders?",
@@ -509,15 +491,11 @@
   },
   "cta": {
     "title": "Start taking orders in your own channel",
-    "subtitle": "90 days free. Full features, full support. Your own channel — no aggregator fees",
+    "subtitle": "90 days free. Full features, full support. One bot and one guest base for the whole chain — in MAX and Telegram, no aggregator fees",
     "button": "Try for free",
     "docs": "Read documentation",
     "hint": "No card required · Free trial, no commitment",
-    "trialFeatures": [
-      "90 days free",
-      "Full access",
-      "No card required"
-    ]
+    "trialFeatures": ["90 days free", "Full access", "No card required"]
   },
   "footer": {
     "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",
@@ -553,7 +531,7 @@
     }
   },
   "promoBar": {
-    "text": "90 days free · Full access · No card required",
+    "text": "One bot for the whole chain in MAX and Telegram · 90 days free · No card required",
     "cta": "Try free"
   },
   "forWhom": {
@@ -586,7 +564,7 @@
       },
       "pos": {
         "title": "Works with your POS and without it",
-        "text": "Integration with iiko and R-Keeper or fully standalone — one dashboard for the whole network"
+        "text": "Integration with iiko and R-Keeper or fully standalone — one dashboard and one base for the whole chain"
       },
       "fast": {
         "title": "No developers needed",

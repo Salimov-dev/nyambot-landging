@@ -8,32 +8,13 @@
     "openCrm": "CRM-i aç"
   },
   "hero": {
-    "badge": "Kafe, restoran, çörəkxana və çatdırılma üçün",
-    "title": "Öz sifariş və çatdırılma kanalın <em>MAX və&nbsp;Telegram-da</em>",
-    "subtitle": "Yemək sifarişlərini birbaşa messencerlər vasitəsilə qəbul edin. Hər sifarişdən sıfır komissiya, öz qonaq bazası və çatdırılma üzərində tam nəzarət",
+    "badge": "Bir nöqtə üçün və bütün şəbəkə üçün — kafelər, restoranlar, çörək evləri, çatdırılma",
+    "title": "Bütün şəbəkəyə bir bot — sifarişlər və yemək çatdırılması <em>MAX və&nbsp;Telegram-da</em>",
+    "subtitle": "Bütün nöqtələriniz üçün bir bot. Qonaq bazası, sifariş tarixçəsi və ballar MAX və Telegram-da ümumidir. Hər nöqtənin öz menyusu, qiymətləri və çatdırılma zonası var. Hər nöqtə üçün ayrı bot yoxdur, aqreqator komissiyası da yoxdur",
+    "subtitleIntegrations": "iiko və R-Keeper, onlayn ödəniş, Yandex.Çatdırılma",
     "cta": "Pulsuz sınayın",
     "ctaSecondary": "Demoya bax",
-    "trial": "90 gün pulsuz · dəstək və quraşdırma məsləhətləri",
-    "watchVideo": "Videoya baxın",
-    "videoTitle": "Nyambot nədir?"
-  },
-  "stats": {
-    "commission": {
-      "value": "0%",
-      "label": "Bizim hər sifarişdən komissiyamız"
-    },
-    "savings": {
-      "value": "20–45%",
-      "label": "Aqreqator hər sifarişdən alır"
-    },
-    "messengers": {
-      "value": "2",
-      "label": "Messencer: MAX və Telegram"
-    },
-    "trial": {
-      "value": "90",
-      "label": "Gün tam pulsuz giriş"
-    }
+    "trial": "90 gün pulsuz · dəstək və quraşdırma məsləhətləri"
   },
   "benefits": {
     "title": "Eyni qonaqlardan daha çox qazan",
@@ -43,7 +24,7 @@
       "Sadiq qonaqlar",
       "Zövqə uyğun yemək",
       "Geniş çatdırılma",
-      "MAX və Telegram"
+      "Bir bot: MAX və Telegram"
     ],
     "detailsCta": "Ətraflı",
     "items": {
@@ -74,28 +55,29 @@
         }
       },
       "channel": {
-        "tag": "Yeni satış kanalı",
-        "title": "Bir bot — MAX və Telegram-da bütün şəbəkəniz",
-        "result": "Eyni anda iki messencerdə yeni satış kanalı: daha çox qonaq və daha geniş əhatə — MAX-ın böyüyən auditoriyası və bir botda bütün şəbəkə, hər nöqtə üçün ayrı bot yaratmadan",
+        "tag": "Başqaları bunu bacarmır",
+        "title": "Bütün şəbəkəyə bir bot — və MAX ilə Telegram-da bir qonaq bazası",
+        "result": "Hər nöqtə üçün ayrı bota ehtiyac yoxdur: bir bot bütün şəbəkəyə xidmət edir, qonaq, onun sifariş tarixçəsi və balları isə iki messencerdə ümumidir. Reklam bölünmür, yeni nöqtə ayrı start olmadan qoşulur",
         "details": {
-          "intro": "Hər nöqtə üçün ayrı bot yaratmağa və reklamlamağa ehtiyac yoxdur — bir kanal bütün şəbəkəyə xidmət edir, qonaq isə tam düzgün nöqtəyə düşür.",
+          "intro": "Adətən belə olur: hər nöqtəyə bir bot və hər messencerdə ayrı baza. Nyambot-da əksinə — bütün şəbəkəyə bir bot və bir qonaq bazası, qonaq isə məhz lazım olan nöqtəyə düşür.",
           "sections": [
             {
-              "title": "İki messenсer — bir quraşdırma",
+              "title": "İki messencer — bir qonaq",
               "points": [
-                "MAX və Telegram eyni anda: yeni kanal və MAX-ın böyüyən auditoriyası",
-                "Mini-tətbiq birbaşa messencerdə açılır — qonaq heç nə quraşdırmır",
-                "İki kanalda bir qonaq: ümumi tarix, xallar və aksiyalar",
-                "SMS və şifrəsiz identifikasiya"
+                "MAX və Telegram dərhal: bot hər iki messencerə qoşulur, kabinet və baza ümumidir",
+                "Qonaq telefon nömrəsi ilə tanınır: Telegram-da sifariş verdi, MAX-dan qayıtdı — sifariş tarixçəsi və ballar yerindədir",
+                "Mini-tətbiq birbaşa messencerdə açılır — qonağın heç nə quraşdırmasına ehtiyac yoxdur",
+                "SMS və parol olmadan giriş"
               ]
             },
             {
-              "title": "Bütün şəbəkə üçün bir kanal",
+              "title": "Bütün şəbəkəyə bir bot və bir baza",
               "points": [
-                "Reklam dağınıqlığı yoxdur — siz bir kanalı inkişaf etdirirsiniz",
-                "Qonaq yerləşməsinə görə və ya siyahıdan yer seçir",
-                "Hər nöqtənin öz qonaqları, qiymətləri, stop-siyahısı və çatdırılma ərazisi var",
-                "Yeni nöqtə ayrı başlanğıcsız qoşulur"
+                "Reklam bölünmür — bütün nöqtələr üçün bir kanal tanıdırsınız",
+                "Qonaq nöqtəni geolokasiya ilə və ya siyahıdan seçir",
+                "Hər nöqtənin öz menyusu, qiymətləri, stop-listi və çatdırılma zonası var",
+                "Qonaq balları şəbəkənin istənilən nöqtəsində yığır və xərcləyir — loyallıq proqramı ümumidir",
+                "Yeni nöqtə ayrı start olmadan qoşulur"
               ]
             }
           ]
@@ -314,8 +296,8 @@
   },
   "crmDemo": {
     "tag": "Öz hazırladığımız CRM",
-    "title": "Bütün müəssisə bir kabinetdə",
-    "description": "Menyu, sifarişlər, analitika, marketinq və qonaq bazası — bir yerdə. Hər şeyi özün qurursan, proqramçısız",
+    "title": "Bütün şəbəkə bir kabinetdə",
+    "description": "Menyu, sifarişlər, analitika, marketinq və bütün şəbəkənin ümumi qonaq bazası — bir yerdə. Hər şeyi özünüz qurursunuz, proqramçı olmadan",
     "ownDev": "Öz işləməmiz, konstruktor deyil — funksiyalara və etibarlılığa cavabdehik",
     "cta": "CRM açmaq — 90 gün pulsuz",
     "ctaHint": "Tam giriş · Tam dəstək · Kart tələb olunmur",
@@ -366,7 +348,7 @@
   "switch": {
     "label": "Nyambot-a keçid",
     "title": "<em>50% endirimlə</em> keç",
-    "subtitle": "Artıq başqa bot-xidmət və ya konstruktor vasitəsilə sifariş qəbul edirsən — ilk 6 aya 50% endirim veririk və quraşdırmada yol göstəririk. Bot səndə qalır: yalnız onu idarə edən xidmət dəyişir. Şəbəkədə bir neçə bot varsa, bütün nöqtələri bir kanalda birləşdirməyə kömək edirik",
+    "subtitle": "Artıq başqa bot-servis və ya konstruktor vasitəsilə sifariş qəbul edirsiniz — ilk 6 ay üçün 50% endirim veririk və quraşdırmada yol göstəririk. Bot sizin olaraq qalır: yalnız onu idarə edən servis dəyişir. Şəbəkənin bir neçə botu varsa, bütün nöqtələri bir kanala toplamağa və qonaqları bir bazaya birləşdirməyə kömək edirik",
     "badge": "6 ay üçün −50%",
     "steps": {
       "0": {
@@ -461,11 +443,7 @@
     "emailCta": "Poçt",
     "freeTrial": "0 ₽ · ilk 90 gün",
     "connectTitle": "Sistemə qoşursan",
-    "connectItems": [
-      "1 ticarət nöqtəsi",
-      "MAX-da 1 bot",
-      "Telegram-da 1 bot"
-    ]
+    "connectItems": ["1 ticarət nöqtəsi", "MAX-da 1 bot", "Telegram-da 1 bot"]
   },
   "faq": {
     "label": "Tez-tez verilən suallar",
@@ -473,6 +451,10 @@
     "notFound": "Cavab tapmadınız?",
     "askSupport": "Dəstəkdən soruşun",
     "items": [
+      {
+        "question": "Hər nöqtə üçün ayrı bot lazımdırmı?",
+        "answer": "Xeyr. Bir bot bütün şəbəkəyə işləyir: qonaq nöqtəni — geolokasiya ilə və ya siyahıdan — seçir və məhz o nöqtənin menyusunu, qiymətlərini və çatdırılma zonasını görür. Siz bir kanal tanıdırsınız, yeni nöqtə isə ayrı start olmadan qoşulur. Qonaq bazası, sifariş tarixçəsi və ballar bütün şəbəkə üzrə ümumi qalır"
+      },
       {
         "question": "Qonaqların tətbiq quraşdırması lazımdırmı?",
         "answer": "Xeyr. Mini-tətbiq birbaşa Telegram və ya MAX-da açılır"
@@ -482,24 +464,24 @@
         "answer": "Bəli. Nyambot iiko və R-keeper ilə inteqrasiya olunur: menyu, qiymətlər, stop-siyahılar və sifarişlər avtomatik sinxronlaşır — messendcerdən gələn sifariş kassada qeydə alınır və mətbəxə göndərilir. Nyambot POS olmadan da tam müstəqil işləyir"
       },
       {
-        "question": "Bir neçə ticarət nöqtəsini qoşa bilərəmmi?",
-        "answer": "Bəli. Bir hesabda 22 ticarət nöqtəsinə qədər qoşmaq olar"
+        "question": "Qonaq Telegram-da sifariş verib, sonra MAX-dan daxil oldu — tarixçə və ballar saxlanacaq?",
+        "answer": "Bəli. Qonaq telefon nömrəsi ilə tanınır, ona görə Telegram-dan və MAX-dan gələn sifarişlər eyni qonağa aiddir: bir sifariş tarixçəsi, bir bal balansı, eyni aksiyalar. Bot hər iki messencerə qoşulur, qonaq bazası və kabinet isə ümumidir"
       },
       {
         "question": "Sifarişlər üçün ödəniş necə işləyir?",
         "answer": "YuKassa vasitəsilə onlayn ödəniş bütün ticarət nöqtələrinə birdən və ya seçici şəkildə qoşula bilər. Qonaq birbaşa messencerdə ödəyir. Çatdırılmada ödəniş də dəstəklənir"
       },
       {
-        "question": "MAX-bot nədir və ona ehtiyac varmı?",
-        "answer": "MAX — rus messengerdir. Qoşulma məcburi deyil, lakin auditoriyani genişləndirir"
+        "question": "Kuryersiz istifadə etmək olarmı?",
+        "answer": "Bəli. Yalnız özü götürmə və ya zalda xidmət qura bilərsiniz — çatdırılma məcburi deyil. Çatdırılma lazımdırsa, amma öz kuryeriniz yoxdursa — Yandex.Çatdırılmanı qoşun: sifariş hazır olan kimi Nyambot özü sorğu yerləşdirir və kuryer onun üçün gəlir. Crew tətbiqi və öz kuryer modulunuz da tarifə daxildir, amma istifadəsi məcburi deyil"
       },
       {
         "question": "Sınaq dövrü necə işləyir?",
         "answer": "Qeydiyyatdan sonra 90 gün pulsuz veririk — kart bağlamadan və məhdudlaşdırılmış funksiyalar olmadan: tam CRM, «Komanda» tətbiqi, POS və çatdırılma inteqrasiyaları. Hər şeyi özün qurursan, dəstək isə hər addımda suallara cavab verir"
       },
       {
-        "question": "Kuryersiz istifadə etmək olarmı?",
-        "answer": "Bəli. Yalnız özü götürmə və ya zalda xidmət qura bilərsiniz — çatdırılma məcburi deyil. Çatdırılma lazımdırsa, amma öz kuryeriniz yoxdursa — Yandex.Çatdırılmanı qoşun: sifariş hazır olan kimi Nyambot özü sorğu yerləşdirir və kuryer onun üçün gəlir. Crew tətbiqi və öz kuryer modulunuz da tarifə daxildir, amma istifadəsi məcburi deyil"
+        "question": "MAX-bot nədir və ona ehtiyac varmı?",
+        "answer": "MAX — rus messengerdir. Qoşulma məcburi deyil, lakin auditoriyani genişləndirir MAX ayrı baza və ayrı quraşdırma tələb etmir: MAX-dan gələn qonaqlar Telegram-dan gələn qonaqlarla eyni bazaya düşür"
       },
       {
         "question": "Sifarişlər qəbul etməyə nə qədər tez başlamaq olar?",
@@ -509,15 +491,11 @@
   },
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
-    "subtitle": "90 gün pulsuz. Tam funksionallıq, tam dəstək. Aqreqatorsuz",
+    "subtitle": "90 gün ödənişsiz. Tam funksionallıq, tam dəstək. Bütün şəbəkəyə bir bot və bir qonaq bazası — MAX və Telegram-da, aqreqator komissiyası olmadan",
     "button": "Pulsuz sınayın",
     "docs": "Sənədləri oxuyun",
     "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz",
-    "trialFeatures": [
-      "90 gün pulsuz",
-      "Tam giriş",
-      "Kart tələb olunmur"
-    ]
+    "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
     "description": "İaşə müəssisələri üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
@@ -553,7 +531,7 @@
     }
   },
   "promoBar": {
-    "text": "90 gün pulsuz · Tam giriş · Kart tələb olunmur",
+    "text": "Bütün şəbəkəyə MAX və Telegram-da bir bot · 90 gün ödənişsiz · Kart bağlamadan",
     "cta": "Sınayın"
   },
   "forWhom": {
@@ -586,7 +564,7 @@
       },
       "pos": {
         "title": "Kassa ilə və kassasız işləyir",
-        "text": "iiko və R-Keeper ilə inteqrasiya və ya tam müstəqil — bütün şəbəkə üçün bir kabinet"
+        "text": "iiko və R-Keeper ilə inteqrasiya və ya tam müstəqil — bütün şəbəkə üçün bir kabinet və bir baza"
       },
       "fast": {
         "title": "Proqramçısız",

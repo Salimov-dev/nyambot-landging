@@ -8,32 +8,13 @@
     "openCrm": "CRM ochish"
   },
   "hero": {
-    "badge": "Kafe, restoran, novvoyxona va yetkazib berish uchun",
-    "title": "O'z buyurtma va yetkazib berish kanaling <em>MAX va&nbsp;Telegramda</em>",
-    "subtitle": "Ovqat buyurtmalarini messenjerlar orqali to'g'ridan-to'g'ri qabul qiling. Har bir buyurtmadan nol komissiya, o'z mehmonlar bazasi va yetkazib berish ustidan to'liq nazorat",
+    "badge": "Bitta nuqta va butun tarmoq uchun — kafelar, restoranlar, nonvoyxonalar, yetkazib berish",
+    "title": "Butun tarmoqqa bitta bot — buyurtmalar va ovqat yetkazib berish <em>MAX va&nbsp;Telegram'da</em>",
+    "subtitle": "Barcha nuqtalaringizga bitta bot. Mehmonlar bazasi, buyurtmalar tarixi va ballar MAX va Telegram'da umumiy. Har bir nuqtaning o'z menyusi, narxlari va yetkazib berish zonasi bor. Har nuqta uchun alohida bot ham, agregator komissiyasi ham yo'q",
+    "subtitleIntegrations": "iiko va R-Keeper, onlayn to'lov, Yandex.Yetkazib berish",
     "cta": "Bepul sinab ko'rish",
     "ctaSecondary": "Demoni ko‘rish",
-    "trial": "90 kun bepul · qo'llab-quvvatlash va sozlash bo'yicha maslahatlar",
-    "watchVideo": "Video ko'rish",
-    "videoTitle": "Nyambot nima?"
-  },
-  "stats": {
-    "commission": {
-      "value": "0%",
-      "label": "Bizning har buyurtmadan komissiyamiz"
-    },
-    "savings": {
-      "value": "20–45%",
-      "label": "Agregator har buyurtmadan oladi"
-    },
-    "messengers": {
-      "value": "2",
-      "label": "Messenjer: MAX va Telegram"
-    },
-    "trial": {
-      "value": "90",
-      "label": "Kun to'liq bepul kirish"
-    }
+    "trial": "90 kun bepul · qo'llab-quvvatlash va sozlash bo'yicha maslahatlar"
   },
   "benefits": {
     "title": "O'sha mehmonlardan ko'proq daromad ol",
@@ -43,7 +24,7 @@
       "Sodiq mehmonlar",
       "Didga mos taom",
       "Kengroq yetkazish",
-      "MAX va Telegram"
+      "Bitta bot: MAX va Telegram"
     ],
     "detailsCta": "Batafsil",
     "items": {
@@ -74,28 +55,29 @@
         }
       },
       "channel": {
-        "tag": "Yangi savdo kanali",
-        "title": "Bitta bot — MAX va Telegramdagi butun tarmoqingiz",
-        "result": "Bir vaqtning o'zida ikkita messenger orqali yangi savdo kanali: ko'proq mehmon va kengaytirilgan qamrov — MAX ning o'sib borayotgan auditoriyasi va bitta botdagi butun tarmoq, har bir nuqta uchun alohida botsiz",
+        "tag": "Boshqalar buni qila olmaydi",
+        "title": "Butun tarmoqqa bitta bot — va MAX bilan Telegram'da bitta mehmonlar bazasi",
+        "result": "Har nuqta uchun alohida bot kerak emas: bitta bot butun tarmoqqa xizmat qiladi, mehmon, uning buyurtmalar tarixi va ballari esa ikki messenjerda umumiy. Reklama sochilmaydi, yangi nuqta alohida ishga tushirilmasdan ulanadi",
         "details": {
-          "intro": "Har bir nuqta uchun alohida bot yaratib reklamasini qilishning hojati yo'q — bitta kanal butun tarmoqqa xizmat qiladi, mehmon esa aynan kerakli nuqtaga tushadi.",
+          "intro": "Odatda shunday bo'ladi: har nuqtaga bot va har messenjerda alohida baza. Nyambot'da esa teskari — butun tarmoqqa bitta bot va bitta mehmonlar bazasi, mehmon esa aynan kerakli nuqtaga tushadi.",
           "sections": [
             {
-              "title": "Ikki messenger — bitta sozlash",
+              "title": "Ikki messenjer — bitta mehmon",
               "points": [
-                "MAX va Telegram bir vaqtda: yangi kanal va MAX ning o'sib borayotgan auditoriyasi",
-                "Mini-ilova to'g'ridan-to'g'ri messengarda ochiladi — mehmon hech narsa o'rnatishi shart emas",
-                "Ikkala kanalda yagona mehmon: umumiy tarix, ballar va aksiyalar",
-                "SMS va parolsiz avtorizatsiya"
+                "MAX va Telegram darhol: bot ikkala messenjerga ulanadi, kabinet va baza umumiy",
+                "Mehmon telefon raqami bo'yicha aniqlanadi: Telegram'da buyurtma bergan, MAX'dan qaytgan — buyurtmalar tarixi va ballar joyida",
+                "Mini-ilova to'g'ridan-to'g'ri messenjerda ochiladi — mehmon hech narsa o'rnatmaydi",
+                "SMS va parolsiz kirish"
               ]
             },
             {
-              "title": "Butun tarmoq uchun bitta kanal",
+              "title": "Butun tarmoqqa bitta bot va bitta baza",
               "points": [
-                "Reklama tarqalmaydi — siz bitta kanalni targ'ib qilasiz",
-                "Mehmon lokatsiyani geolokatsiya yoki ro'yxatdan tanlaydi",
-                "Har bir nuqtaning o'z menyusi, narxlari, stop-ro'yxati va yetkazib berish zonasi bor",
-                "Yangi nuqta alohida ishga tushirmasdan ulanadi"
+                "Reklama sochilmaydi — barcha nuqtalar uchun bitta kanalni targ'ib qilasiz",
+                "Mehmon nuqtani joylashuvi bo'yicha yoki ro'yxatdan tanlaydi",
+                "Har bir nuqtaning o'z menyusi, narxlari, stop-listi va yetkazib berish zonasi bor",
+                "Mehmon ballarni tarmoqning istalgan nuqtasida yig'adi va sarflaydi — loyallik dasturi umumiy",
+                "Yangi nuqta alohida ishga tushirilmasdan ulanadi"
               ]
             }
           ]
@@ -314,8 +296,8 @@
   },
   "crmDemo": {
     "tag": "O'z ishlab chiqishimiz CRM",
-    "title": "Butun muassasa bitta kabinetda",
-    "description": "Menyu, buyurtmalar, tahlil, marketing va mehmonlar bazasi — bir joyda. Hammasini o'zing sozlaysan, dasturchilarsiz",
+    "title": "Butun tarmoq bitta kabinetda",
+    "description": "Menyu, buyurtmalar, tahlil, marketing va butun tarmoqning umumiy mehmonlar bazasi — bir joyda. Hammasini o'zingiz sozlaysiz, programmistlarsiz",
     "ownDev": "O'z ishlanmamiz, konstruktor emas — funksiyalar va ishonchlilik uchun javob beramiz",
     "cta": "CRM ni ochish — 90 kun bepul",
     "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
@@ -366,7 +348,7 @@
   "switch": {
     "label": "Nyambot-ga ko‘chish",
     "title": "<em>50% chegirma</em> bilan o't",
-    "subtitle": "Allaqachon boshqa bot-xizmat yoki konstruktor orqali buyurtma qabul qilyapsanmi — dastlabki 6 oyga 50% chegirma beramiz va sozlashda yo'l ko'rsatamiz. Bot seniki bo'lib qoladi: faqat uni boshqaradigan xizmat o'zgaradi. Agar tarmoqda bir nechta bot bo'lsa, barcha nuqtalarni bitta kanalga yig'ishga yordam beramiz",
+    "subtitle": "Allaqachon boshqa bot-servis yoki konstruktor orqali buyurtma qabul qilayotgan bo'lsangiz — birinchi 6 oy uchun 50% chegirma beramiz va sozlashda yo'l ko'rsatamiz. Bot sizniki bo'lib qoladi: faqat uni boshqaradigan servis o'zgaradi. Tarmoqda bir nechta bot bo'lsa, barcha nuqtalarni bitta kanalga jamlashga va mehmonlarni bitta bazaga birlashtirishga yordam beramiz",
     "badge": "6 oyga −50%",
     "steps": {
       "0": {
@@ -461,11 +443,7 @@
     "emailCta": "Pochta",
     "freeTrial": "0 ₽ · birinchi 90 kun",
     "connectTitle": "Tizimga ulaysan",
-    "connectItems": [
-      "1 savdo nuqtasi",
-      "MAXda 1 bot",
-      "Telegramda 1 bot"
-    ]
+    "connectItems": ["1 savdo nuqtasi", "MAXda 1 bot", "Telegramda 1 bot"]
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar",
@@ -473,6 +451,10 @@
     "notFound": "Javob topolmadingizmi?",
     "askSupport": "Qo'llab-quvvatlashga so'rang",
     "items": [
+      {
+        "question": "Har bir nuqta uchun alohida bot kerakmi?",
+        "answer": "Yo'q. Bitta bot butun tarmoqqa ishlaydi: mehmon nuqtani — joylashuvi bo'yicha yoki ro'yxatdan — tanlaydi va aynan o'sha nuqtaning menyusi, narxlari va yetkazib berish zonasini ko'radi. Siz bitta kanalni targ'ib qilasiz, yangi nuqta esa alohida ishga tushirilmasdan ulanadi. Mehmonlar bazasi, buyurtmalar tarixi va ballar butun tarmoq bo'ylab umumiy qoladi"
+      },
       {
         "question": "Mehmonlar ilova o'rnatishi kerakmi?",
         "answer": "Yo'q. Mini-ilova to'g'ridan-to'g'ri Telegram yoki MAX da ochiladi"
@@ -482,24 +464,24 @@
         "answer": "Ha. Nyambot iiko va R-keeper bilan integratsiyalanadi: menyu, narxlar, stop-ro'yxatlar va buyurtmalar avtomatik sinxronlanadi — messenjerdan kelgan buyurtma kassada ro'yxatga olinadi va oshxonaga yuboriladi. Nyambot POS'siz ham to'liq mustaqil ishlaydi"
       },
       {
-        "question": "Bir nechta savdo nuqtasini ulash mumkinmi?",
-        "answer": "Ha. Bitta akkauntda 22 tagacha savdo nuqtasini ulash mumkin"
+        "question": "Mehmon Telegram'da buyurtma bergan, endi MAX'dan kirdi — tarix va ballar saqlanadimi?",
+        "answer": "Ha. Mehmon telefon raqami bo'yicha aniqlanadi, shuning uchun Telegram'dagi va MAX'dagi buyurtma — bir xil mehmon: bitta buyurtmalar tarixi, bitta ballar balansi, o'sha aksiyalar. Bot ikkala messenjerga ulanadi, mehmonlar bazasi va kabinet esa umumiy"
       },
       {
         "question": "Buyurtmalar uchun to'lov qanday ishlaydi?",
         "answer": "YuKassa orqali onlayn to'lov barcha savdo nuqtalariga yoki tanlab ulash mumkin. Mehmon to'g'ridan-to'g'ri messenjerda to'laydi. Yetkazib berishda to'lash ham qo'llab-quvvatlanadi"
       },
       {
-        "question": "MAX-bot nima va u kerakmi?",
-        "answer": "MAX — rus messenjeri. Ulanish majburiy emas, lekin auditoriyani kengaytiradi"
+        "question": "Kuryerlarsiz foydalanish mumkinmi?",
+        "answer": "Ha. Faqat o'z-o'zidan olib ketish yoki zalda xizmat ko'rsatishni sozlash mumkin — yetkazib berish majburiy emas. Agar yetkazib berish kerak bo'lsa-yu, o'z kuryeringiz bo'lmasa — Yandex.Yetkazib berishni ulang: buyurtma tayyor bo'lishi bilan Nyambot o'zi so'rov yuboradi va kuryer kelib oladi. Crew ilovasi va o'z kuryer moduli ham tarifga kiradi, lekin ulardan foydalanish majburiy emas"
       },
       {
         "question": "Sinov davri qanday ishlaydi?",
         "answer": "Ro'yxatdan o'tgach 90 kun bepul beramiz — kartasiz va cheklangan funksiyalarsiz: to'liq CRM, «Команда» ilovasi, POS va yetkazish integratsiyalari. Hammasini o'zing sozlaysan, qo'llab-quvvatlash esa har qadamda savollarga javob beradi"
       },
       {
-        "question": "Kuryerlarsiz foydalanish mumkinmi?",
-        "answer": "Ha. Faqat o'z-o'zidan olib ketish yoki zalda xizmat ko'rsatishni sozlash mumkin — yetkazib berish majburiy emas. Agar yetkazib berish kerak bo'lsa-yu, o'z kuryeringiz bo'lmasa — Yandex.Yetkazib berishni ulang: buyurtma tayyor bo'lishi bilan Nyambot o'zi so'rov yuboradi va kuryer kelib oladi. Crew ilovasi va o'z kuryer moduli ham tarifga kiradi, lekin ulardan foydalanish majburiy emas"
+        "question": "MAX-bot nima va u kerakmi?",
+        "answer": "MAX — rus messenjeri. Ulanish majburiy emas, lekin auditoriyani kengaytiradi MAX alohida baza va alohida sozlashni talab qilmaydi: MAX'dan kelgan mehmonlar Telegram'dan kelgan mehmonlar bilan bir xil bazaga tushadi"
       },
       {
         "question": "Buyurtmalarni qabul qilishni qancha tez boshlash mumkin?",
@@ -509,15 +491,11 @@
   },
   "cta": {
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
-    "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. Agregatorlarsiz o'z kanalingiz",
+    "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. Butun tarmoqqa bitta bot va bitta mehmonlar bazasi — MAX va Telegram'da, agregator komissiyasisiz",
     "button": "Bepul sinab ko'rish",
     "docs": "Hujjatlarni o'qish",
     "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz",
-    "trialFeatures": [
-      "90 kun bepul",
-      "Toʻliq kirish",
-      "Karta kerak emas"
-    ]
+    "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
     "description": "Ovqatlanish joylari uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",
@@ -553,7 +531,7 @@
     }
   },
   "promoBar": {
-    "text": "90 kun bepul · Toʻliq kirish · Karta kerak emas",
+    "text": "MAX va Telegram'da butun tarmoqqa bitta bot · 90 kun bepul · Karta bog'lamasdan",
     "cta": "Sinab koʻring"
   },
   "forWhom": {
@@ -586,7 +564,7 @@
       },
       "pos": {
         "title": "Kassa bilan ham, kassasiz ham ishlaydi",
-        "text": "iiko va R-Keeper bilan integratsiya yoki to'liq mustaqil — butun tarmoq uchun bitta kabinet"
+        "text": "iiko va R-Keeper bilan integratsiya yoki to'liq mustaqil — butun tarmoq uchun bitta kabinet va bitta baza"
       },
       "fast": {
         "title": "Dasturchilarsiz",

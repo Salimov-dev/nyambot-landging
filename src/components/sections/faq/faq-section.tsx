@@ -20,6 +20,7 @@ const FAQ_KEYS = [
   "faq.items.5",
   "faq.items.6",
   "faq.items.7",
+  "faq.items.8",
 ] as const;
 
 export function FaqSection() {

@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 160px 0 80px;
+  padding: 132px 0 88px;
   overflow: hidden;
   background: var(--gradient-hero);
 }
@@ -78,7 +78,7 @@
 }
 
 .content {
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 220px);
   align-items: center;
 }
 
@@ -97,7 +97,7 @@
   border: 1px solid var(--accent-border) !important;
   background: var(--accent-bg) !important;
   color: var(--accent) !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 18px !important;
   display: inline-flex !important;
   align-items: center;
   gap: 6px;
@@ -105,11 +105,11 @@
 }
 
 .title {
-  font-size: clamp(36px, 5vw, 64px) !important;
+  font-size: clamp(32px, 4.4vw, 56px) !important;
   font-weight: 800 !important;
-  line-height: 1.1 !important;
+  line-height: 1.08 !important;
   color: var(--text-primary) !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 16px !important;
   letter-spacing: -0.02em;
   /* Равномерные строки заголовка на любых ширинах (фикс выпирающего «— в») */
   text-wrap: balance;
@@ -125,15 +125,26 @@
 
 .subtitle {
   display: block;
-  font-size: 18px !important;
+  font-size: 17px !important;
   color: var(--text-secondary) !important;
-  line-height: 1.65 !important;
-  margin-bottom: 36px !important;
+  line-height: 1.55 !important;
+  margin-bottom: 6px !important;
+  max-width: 500px;
+}
+
+/* Перечень интеграций — отдельной строкой, чтобы не сливался с ключевым
+   сообщением подзаголовка (один бот на сеть + общая база). */
+.subtitleIntegrations {
+  display: block;
+  font-size: 15px !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.5 !important;
+  margin-bottom: 26px !important;
   max-width: 500px;
 }
 
 .ctaRow {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .primaryBtn {
@@ -231,115 +242,6 @@
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
-/* Scroll hint / video trigger */
-.scrollHint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  padding: 10px 22px;
-  transition:
-    opacity 0.5s ease,
-    visibility 0.5s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.scrollHint:hover {
-  border-color: var(--accent-border);
-  transform: translateX(-50%) translateY(-2px);
-}
-
-.videoWrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.videoIframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.videoSocials {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.scrollHintVisible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.scrollHintHidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.scrollHintRow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.scrollHintIcon {
-  font-size: 22px;
-  color: var(--accent);
-  line-height: 1;
-}
-
-.scrollHintText {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.scrollHintArrow {
-  font-size: 20px;
-  color: var(--accent);
-  animation: bounce 1.5s ease-in-out 3;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   .section {
@@ -356,7 +258,8 @@
     flex-direction: column;
     align-items: center;
   }
-  .subtitle {
+  .subtitle,
+  .subtitleIntegrations {
     max-width: 100%;
   }
   .ctaRow {
@@ -364,12 +267,6 @@
   }
   .phoneCol {
     order: -1;
-  }
-}
-
-@media (max-width: 900px) {
-  .scrollHint {
-    display: none;
   }
 }
 
