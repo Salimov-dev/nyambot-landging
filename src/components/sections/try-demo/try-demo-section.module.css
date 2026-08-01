@@ -32,6 +32,35 @@
   text-align: center;
 }
 
+/* Плашка «без регистрации» — главный довод открыть демо прямо сейчас */
+.noAuthPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-pill);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.noAuthPill svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .noAuthPill {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
 .demoCard {
   padding: 32px 24px;
   background: var(--surface);

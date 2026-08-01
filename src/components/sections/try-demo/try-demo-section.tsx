@@ -11,6 +11,7 @@ import { MaxIcon } from "@/components/ui/messenger-icons/max-icon";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
+import { HandIcon, CheckIcon } from "@/components/ui/icons/icons";
 import styles from "./try-demo-section.module.css";
 
 const { Title, Text } = Typography;
@@ -41,7 +42,10 @@ export function TryDemoSection() {
               fontWeight: 600,
             }}
           >
-            👆 {t("tryDemo.tag")}
+            <Flex align="center" gap={6}>
+              <HandIcon size={14} />
+              {t("tryDemo.tag")}
+            </Flex>
           </Tag>
 
           <Title
@@ -68,6 +72,13 @@ export function TryDemoSection() {
           >
             {t("tryDemo.subtitle")}
           </Text>
+
+          {/* Главное отличие демо: меню открывается без телефона и геолокации.
+              Отдельной плашкой, иначе тонет в подзаголовке */}
+          <span className={styles.noAuthPill}>
+            <CheckIcon size={16} />
+            {t("tryDemo.noAuth")}
+          </span>
         </motion.div>
 
         <Row gutter={[32, 32]} justify="center" style={{ marginTop: 56 }}>

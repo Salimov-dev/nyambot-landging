@@ -368,3 +368,13 @@ export function HandIcon({ size = DEFAULT_SIZE, className }: IconProps) {
     </svg>
   );
 }
+
+/** Медаль — статус участника проекта «Сколково» */
+export function AwardIcon({ size = DEFAULT_SIZE, className }: IconProps) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <circle cx="12" cy="9" r="6" />
+      <path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5" />
+    </svg>
+  );
+}

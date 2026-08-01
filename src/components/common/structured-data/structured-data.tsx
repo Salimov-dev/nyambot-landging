@@ -34,6 +34,14 @@ export async function StructuredData() {
         url: siteUrl,
         logo: logoUrl,
         email: supportEmail,
+        // Статус участника проекта «Сколково»: внешнее подтверждение проекта,
+        // ОРН — публичный идентификатор в реестре Фонда
+        memberOf: {
+          "@type": "Organization",
+          name: "Фонд «Сколково»",
+          url: "https://sk.ru",
+        },
+        identifier: "ОРН 1129172",
         sameAs: [
           LINKS.social.telegram,
           LINKS.social.max,

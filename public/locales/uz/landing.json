@@ -10,11 +10,52 @@
   "hero": {
     "badge": "Bitta nuqta va butun tarmoq uchun — kafelar, restoranlar, nonvoyxonalar, yetkazib berish",
     "title": "Butun tarmoqqa bitta bot — buyurtmalar va ovqat yetkazib berish <em>MAX va&nbsp;Telegram'da</em>",
-    "subtitle": "Barcha nuqtalaringizga bitta bot. Mehmonlar bazasi, buyurtmalar tarixi va ballar MAX va Telegram'da umumiy. Har bir nuqtaning o'z menyusi, narxlari va yetkazib berish zonasi bor. Har nuqta uchun alohida bot ham, agregator komissiyasi ham yo'q",
-    "subtitleIntegrations": "iiko va R-Keeper, onlayn to'lov, Yandex.Yetkazib berish",
-    "cta": "Bepul sinab ko'rish",
-    "ctaSecondary": "Demoni ko‘rish",
-    "trial": "90 kun bepul · qo'llab-quvvatlash va sozlash bo'yicha maslahatlar"
+    "subtitle": "Bitta mehmonlar bazasi, buyurtmalar tarixi va ballar — ikkala messenjerda umumiy. Har bir nuqtaning oʻz menyusi, narxlari va yetkazib berish hududi bor",
+    "cta": "Bepul boshlash",
+    "ctaSecondary": "Demo botni ochish",
+    "trial": "90 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz",
+    "skolkovo": "«Skolkovo» loyihasi ishtirokchisi",
+    "skolkovoOrn": "ORN 1129172"
+  },
+  "killer": {
+    "label": "Asosiysi",
+    "title": "Bu yerda nima boshqacha",
+    "subtitle": "Oltita farq — va qilishingiz shart boʻlmagan ishlar",
+    "notPrefix": "Shart emas",
+    "items": {
+      "network": {
+        "title": "Butun tarmoqqa bitta bot",
+        "text": "Mehmon nuqtani tanlaydi va uning menyusi, narxlari va yetkazib berish hududini koʻradi. Mehmonlar bazasi, buyurtmalar tarixi va ballar MAX va Telegramda umumiy",
+        "nothing": "har bir nuqta uchun alohida bot ochish va reklamani bir necha kanalga boʻlish"
+      },
+      "guest": {
+        "title": "Mehmon roʻyxatdan oʻtmasdan buyurtma beradi",
+        "text": "Mini-ilovani messenjerning oʻzida ochadi — darhol menyuni koʻrib, savatni toʻldiradi. Telefon raqami faqat buyurtmani rasmiylashtirishda soʻraladi",
+        "nothing": "menyuni koʻrish uchun ilova oʻrnatish, raqam kiritish va joylashuvni ulashish"
+      },
+      "pos": {
+        "title": "Kassangiz bilan ham, kassasiz ham ishlaydi",
+        "text": "iiko yoki R-Keeper bor — integratsiyani ulaysiz, menyu va stop-roʻyxatlar kassadan keladi. Kassa boshqa yoki umuman yoʻq — Nyambot menyu, modifikatorlar va sodiqlik dasturini oʻzi yuritadi",
+        "nothing": "yetkazib berish ishlashi uchun kassani almashtirish yoki POS oʻrnatish"
+      },
+      "delivery": {
+        "title": "Oʻz kuryerlaringizsiz yetkazib berish",
+        "text": "Yandex.Dostavka kuryerini «Команда» ilovasidan yoki toʻgʻridan-toʻgʻri kassadan bir teginishda chaqirasiz. Oʻz kuryerlaringiz ham qoʻllab-quvvatlanadi — tanlov sizniki",
+        "nothing": "kuryer yollash va alohida ilova oʻrnatish"
+      },
+      "email": {
+        "title": "Bugunoq sinab koʻrish mumkin — pochta yetarli",
+        "text": "CRMda roʻyxatdan oʻtish — pochta va parol. Keyin 90 kun toʻliq kirish: menyu, hududlar va toʻlovni oʻzingiz sozlaysiz, qoʻllab-quvvatlash xohishingizga koʻra javob beradi",
+        "nothing": "telefon qoldirish, anketa toʻldirish, menejerni kutish va «joriy etish»ga buyurtma berish"
+      },
+      "skolkovo": {
+        "title": "«Skolkovo» loyihasi ishtirokchisi",
+        "text": "«Nyambot» MChJ — «Skolkovo» loyihasi ishtirokchisi, ORN 1129172. Loyiha Jamgʻarma ekspertizasidan oʻtgan, ishlab chiqish va qoʻllab-quvvatlash rossiyalik",
+        "nothing": "soʻzimizga ishonish: ishtirokchi maqomi Jamgʻarma reyestrida tekshiriladi"
+      }
+    },
+    "pricingCta": "Tariflarni koʻrish",
+    "pricingNote": "Bitta tarif — barcha imkoniyatlar cheklovsiz. Narxlar shu sahifada, «soʻrov boʻyicha» emas"
   },
   "benefits": {
     "title": "O'sha mehmonlardan ko'proq daromad ol",
@@ -55,7 +96,7 @@
         }
       },
       "channel": {
-        "tag": "Boshqalar buni qila olmaydi",
+        "tag": "Butun tarmoqqa bitta kanal",
         "title": "Butun tarmoqqa bitta bot — va MAX bilan Telegram'da bitta mehmonlar bazasi",
         "result": "Har nuqta uchun alohida bot kerak emas: bitta bot butun tarmoqqa xizmat qiladi, mehmon, uning buyurtmalar tarixi va ballari esa ikki messenjerda umumiy. Reklama sochilmaydi, yangi nuqta alohida ishga tushirilmasdan ulanadi",
         "details": {
@@ -128,7 +169,7 @@
         }
       },
       "pos": {
-        "tag": "POS bilan integratsiya",
+        "tag": "Kassa majburiy emas",
         "title": "iiko va R-Keeper — buyurtma to'g'ridan-to'g'ri kassaga va oshxonaga",
         "result": "Menyu, narxlar va stop-ro'yxatlar kassa bilan avtomatik sinxronlashadi, messenjerdan kelgan buyurtma esa o'zi kassada pul qabul qiladi va oshxona trekerga ketadi — qo'shaloq kiritishsiz. POS hali bo'lmasa — Nyambot to'liq mustaqil ishlaydi",
         "details": {
@@ -314,6 +355,7 @@
     "tag": "Demo",
     "title": "Hoziroq sinab ko'ring",
     "subtitle": "Telegram yoki MAX'da demo-botni oching va mehmonlaringiz qanday buyurtma berishini his qiling",
+    "noAuth": "Roʻyxatdan oʻtmasdan va telefon raqamisiz",
     "tgDesc": "Telegram'da mini-ilova demosi",
     "tgCta": "Telegram'da ochish",
     "maxDesc": "MAX'da mini-ilova demosi",
@@ -346,14 +388,14 @@
     ]
   },
   "switch": {
-    "label": "Nyambot-ga ko‘chish",
-    "title": "<em>50% chegirma</em> bilan o't",
-    "subtitle": "Allaqachon boshqa bot-servis yoki konstruktor orqali buyurtma qabul qilayotgan bo'lsangiz — birinchi 6 oy uchun 50% chegirma beramiz va sozlashda yo'l ko'rsatamiz. Bot sizniki bo'lib qoladi: faqat uni boshqaradigan servis o'zgaradi. Tarmoqda bir nechta bot bo'lsa, barcha nuqtalarni bitta kanalga jamlashga va mehmonlarni bitta bazaga birlashtirishga yordam beramiz",
+    "label": "Boshqa xizmatdan foydalanasizmi",
+    "title": "Buyurtma qabul qilish uchun boshqa xizmatdan foydalanasizmi? <em>50% chegirma</em>",
+    "subtitle": "Nyambotga oʻting — dastlabki 6 oy ikki barobar arzon. Bot sizniki boʻlib qoladi, faqat uni boshqaradigan xizmat oʻzgaradi. Nuqtalar bir nechta boʻlsa, ular bitta kanal va bitta mehmonlar bazasiga birlashadi",
     "badge": "6 oyga −50%",
     "steps": {
       "0": {
         "title": "Ariza va tahlil",
-        "description": "Ariza qoldirasan — hozir nimadan foydalanayotganingni, nimani ko'chirish kerakligini va nimadan boshlashni ko'rib chiqamiz"
+        "description": "Ariza qoldirasiz va qaysi xizmatdan foydalanishingizni aytasiz — chegirmani biriktiramiz va nimadan boshlashni muhokama qilamiz"
       },
       "1": {
         "title": "Menyu va sozlamalar",
@@ -368,9 +410,8 @@
         "description": "Buyurtma qabulini yoqasan, biz esa qo'llab-quvvatlashda aloqadamiz — sozlash va ish bo'yicha savollarga javob beramiz"
       }
     },
-    "button": "50% chegirma bilan o‘tish",
-    "compare": "Joriy xizmat bilan solishtirish",
-    "hint": "Dastlabki 6 oyga 50% chegirma · Sozlashni tushunishga yordam beramiz · Chegirmalar qo'shilmaydi"
+    "button": "50% chegirma olish",
+    "hint": "Dastlabki 6 oyga 50% chegirma · Sozlash boʻyicha savollarga javob beramiz · Chegirmalar qoʻshilmaydi"
   },
   "security": {
     "label": "Xavfsizlik",
@@ -393,6 +434,10 @@
       "madeInRussia": {
         "title": "Rossiyada ishlab chiqilgan",
         "description": "Rossiyalik ishlab chiqish jamoasi va RFdan texnik yordam"
+      },
+      "skolkovo": {
+        "title": "«Skolkovo» ishtirokchisi",
+        "description": "«Nyambot» MChJ — «Skolkovo» loyihasi ishtirokchisi, ORN 1129172"
       },
       "standards": {
         "title": "Kirish nazorati",
@@ -439,7 +484,7 @@
     ],
     "registrationHint": "«Ulash» tugmasini bosganingizdan so'ng CRM ochiladi. Ro'yxatdan o'ting, «Litsenziya» bo'limiga o'ting va tanlangan tarifni to'lang — shundan keyin ishni boshlashingiz mumkin",
     "customTitle": "Tarmog'ing bormi?",
-    "customSubtitle": "2 savdo nuqtasidan — miqyosingga mos individual tarif",
+    "customSubtitle": "2 ta savdo nuqtasidan — miqyosingizga mos individual tarif. Xat yozmasdan ham sinab koʻrish mumkin: roʻyxatdan oʻtish hammaga ochiq",
     "emailCta": "Pochta",
     "freeTrial": "0 ₽ · birinchi 90 kun",
     "connectTitle": "Tizimga ulaysan",
@@ -454,6 +499,18 @@
       {
         "question": "Har bir nuqta uchun alohida bot kerakmi?",
         "answer": "Yo'q. Bitta bot butun tarmoqqa ishlaydi: mehmon nuqtani — joylashuvi bo'yicha yoki ro'yxatdan — tanlaydi va aynan o'sha nuqtaning menyusi, narxlari va yetkazib berish zonasini ko'radi. Siz bitta kanalni targ'ib qilasiz, yangi nuqta esa alohida ishga tushirilmasdan ulanadi. Mehmonlar bazasi, buyurtmalar tarixi va ballar butun tarmoq bo'ylab umumiy qoladi"
+      },
+      {
+        "question": "Menyuni koʻrish uchun mehmon roʻyxatdan oʻtishi kerakmi?",
+        "answer": "Yoʻq. Mehmon messenjerda mini-ilovani ochadi va darhol menyuni koʻradi, narxlarni tekshiradi va savatni toʻldiradi — roʻyxatdan oʻtmasdan, telefon raqamisiz va joylashuvsiz. Telefon va manzil faqat buyurtmani rasmiylashtirishda kerak boʻladi"
+      },
+      {
+        "question": "Kassani almashtirishga toʻgʻri keladimi?",
+        "answer": "Yoʻq. Nyambot kassani almashtirmaydi va uni talab qilmaydi. iiko yoki R-Keeper boʻlsa, integratsiya ulanadi va menyu, stop-roʻyxatlar hamda buyurtmalar avtomatik sinxronlanadi. Kassa boshqa yoki umuman yoʻq boʻlsa, Nyambot menyu, modifikatorlar, sodiqlik va buyurtmalarni oʻz CRMida mustaqil yuritadi. Keyinroq kassani ulasangiz — maʼlumotlar joyida qoladi"
+      },
+      {
+        "question": "Menejer bilan gaplashish va joriy etishga buyurtma berish kerakmi?",
+        "answer": "Yoʻq. CRMda roʻyxatdan oʻtish — pochta va parol, anketasiz va telefonsiz. Barcha tariflar va narxlar shu sahifada eʼlon qilingan. Sozlash CRMda mustaqil bajariladi, qoʻllab-quvvatlash esa oʻzingiz chaqirganingizda ulanadi"
       },
       {
         "question": "Mehmonlar ilova o'rnatishi kerakmi?",
@@ -492,9 +549,9 @@
   "cta": {
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
     "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. Butun tarmoqqa bitta bot va bitta mehmonlar bazasi — MAX va Telegram'da, agregator komissiyasisiz",
-    "button": "Bepul sinab ko'rish",
+    "button": "Bepul boshlash",
     "docs": "Hujjatlarni o'qish",
-    "hint": "Karta bog'lashsiz · Demo-kirish majburiyatsiz",
+    "hint": "Faqat pochta kerak · Kartasiz · Menejer qoʻngʻirogʻisiz",
     "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
@@ -513,15 +570,22 @@
     "offer": "Ommaviy oferta",
     "cookies": "Cookies siyosati",
     "allRights": "Barcha huquqlar himoyalangan",
-    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ"
+    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ",
+    "skolkovo": "«Skolkovo» loyihasi ishtirokchisi, ORN 1129172"
   },
   "video": {
     "socialHeading": "Nyambot haqida ko'proq videolar — ijtimoiy tarmoqlarimizda"
   },
   "integrations": {
     "label": "Integratsiyalar",
-    "title": "Siz allaqachon foydalanayotgan xizmatlar bilan ishlaymiz",
-    "subtitle": "To'g'ridan-to'g'ri CRM da ulanadi — dasturchilarsiz va qo'shimcha ishlanmasiz",
+    "title": "Integratsiyalar — xohishga koʻra",
+    "subtitle": "Nyambot oʻzi mustaqil ishlaydi. Agar kassa, ekvayring yoki kuryerlik xizmatingiz boʻlsa — ular CRMda ulanadi, dasturchilarsiz va qoʻshimcha ishlarsiz",
+    "noPos": "Kassa yoʻqmi? Hech narsa ulash shart emas — Nyambot toʻliq mustaqil ishlaydi",
+    "roles": {
+      "pos": "kassa integratsiyasi",
+      "payment": "onlayn toʻlov integratsiyasi",
+      "delivery": "yetkazib berish integratsiyasi"
+    },
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
@@ -529,10 +593,6 @@
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Delivery"
     }
-  },
-  "promoBar": {
-    "text": "MAX va Telegram'da butun tarmoqqa bitta bot · 90 kun bepul · Karta bog'lamasdan",
-    "cta": "Sinab koʻring"
   },
   "forWhom": {
     "title": "Har qanday ovqatlanish formati uchun",
@@ -560,7 +620,7 @@
     "items": {
       "ownDev": {
         "title": "O'z ishlanmamiz",
-        "text": "CRM va botlar noldan biz tomonimizdan yaratilgan, chetdan konstruktor emas — to'liq nazorat va RFdan qo'llab-quvvatlash"
+        "text": "CRM va botlar noldan oʻzimiz tomonidan yaratilgan, tayyor konstruktor emas. Rossiyada ishlab chiqilgan, RFdan qoʻllab-quvvatlash, «Skolkovo» loyihasi ishtirokchisi"
       },
       "pos": {
         "title": "Kassa bilan ham, kassasiz ham ishlaydi",

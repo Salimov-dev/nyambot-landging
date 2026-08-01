@@ -7,70 +7,59 @@ import { geistSans, geistMono } from "@/lib/fonts";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import "./globals.css";
 
+/** Заголовок и описание держим в пределах того, что показывают выдачи:
+ *  title ≈ 70 символов, description ≈ 230 — длинный текст всё равно
+ *  обрезается, а обрезанный теряет УТП в середине. */
+const PAGE_TITLE = `${BRAND_CONFIG.name} — один бот на всю сеть в MAX и Telegram`;
+const PAGE_DESCRIPTION =
+  "Один бот на все точки сети и одна база гостей в MAX и Telegram. Гость заказывает без регистрации. Работает с iiko и R-Keeper — и совсем без кассы. Регистрация по почте, 90 дней бесплатно, без карты";
+const OG_IMAGE = "/images/og-cover.png";
+
 export const metadata: Metadata = {
   title: {
-    default: `${BRAND_CONFIG.name} — один бот на всю сеть: заказы и доставка еды в MAX и Telegram`,
+    default: PAGE_TITLE,
     template: `%s | ${BRAND_CONFIG.name}`,
   },
-  description:
-    "Сервис для общепита: один бот на всю сеть и одна база гостей в MAX и Telegram. Гость выбирает точку и заказывает у тебя напрямую, история заказов и баллы у него общие в двух мессенджерах, у каждой точки своё меню и зона доставки. Без отдельного бота на каждую точку и без комиссии агрегаторов. CRM и приложение «Команда», iiko и R-Keeper, онлайн-оплата, Яндекс.Доставка. 90 дней бесплатно",
+  description: PAGE_DESCRIPTION,
   keywords: [
     "Нямбот",
     "один бот на всю сеть",
-    "один бот на несколько точек",
     "единая база гостей сети",
-    "общие баллы во всех точках",
-    "один бот в MAX и Telegram",
-    "бот для сети кофеен",
-    "бот для франшизы общепита",
-    "свой канал заказов и доставки",
-    "приём заказов в мессенджере",
     "бот для общепита",
-    "бот для сети заведений",
     "бот для доставки еды",
-    "ресторан Telegram бот",
-    "кафе Telegram бот",
-    "пекарня Telegram бот",
-    "дарк-китчен приём заказов",
-    "MAX бот для заведения",
-    "мини-приложение для общепита",
-    "мини-приложение для кафе",
+    "мини-приложение для кафе без регистрации",
     "CRM для общепита",
-    "CRM для заведения",
-    "собственный канал продаж ресторан",
-    "повторные заказы без комиссии",
-    "онлайн-оплата заказов в ресторане",
-    "один бот на сеть точек",
+    "приём заказов в мессенджере",
+    "MAX бот для заведения",
     "iiko интеграция",
     "R-Keeper интеграция",
-    "Яндекс.Доставка для ресторана",
     "доставка без своего штата курьеров",
-    "приложение для администратора и курьера",
   ],
   metadataBase: new URL(BRAND_CONFIG.siteUrl),
+  alternates: {
+    canonical: BRAND_CONFIG.siteUrl,
+  },
   openGraph: {
     siteName: BRAND_CONFIG.siteName,
     type: "website",
     locale: "ru_RU",
     url: BRAND_CONFIG.siteUrl,
-    title: `${BRAND_CONFIG.name} — один бот на всю сеть: заказы и доставка еды в MAX и Telegram`,
-    description:
-      "Один бот на всю сеть и одна база гостей в MAX и Telegram: гость заказывает у тебя напрямую, история и баллы общие в двух мессенджерах, iiko и R-Keeper, оплата и Яндекс.Доставка",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     images: [
       {
-        url: "/images/nyambot_logo_square.png",
-        width: 512,
-        height: 512,
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
         alt: "Нямбот — один бот на всю сеть: заказы и доставка еды в MAX и Telegram",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: `${BRAND_CONFIG.name} — один бот на всю сеть: заказы и доставка еды в MAX и Telegram`,
-    description:
-      "Один бот на всю сеть и одна база гостей в MAX и Telegram: гость заказывает у тебя напрямую, история и баллы общие в двух мессенджерах.",
-    images: ["/images/nyambot_logo_square.png"],
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
   icons: {
     icon: "/images/nyambot_logo.png",

@@ -14,6 +14,7 @@ import {
   MonitorIcon,
   ShieldIcon,
   HandshakeIcon,
+  AwardIcon,
 } from "@/components/ui/icons/icons";
 
 const { Title, Text } = Typography;
@@ -25,6 +26,7 @@ const ITEMS = [
   { icon: MonitorIcon, key: "madeInRussia" },
   { icon: ShieldIcon, key: "standards" },
   { icon: HandshakeIcon, key: "noThirdParty" },
+  { icon: AwardIcon, key: "skolkovo" },
 ] as const;
 
 const CHIPS = [

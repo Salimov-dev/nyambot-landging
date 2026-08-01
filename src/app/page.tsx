@@ -3,6 +3,7 @@ import { Footer } from "@/components/ui/footer/footer";
 import { DotNav } from "@/components/ui/dot-nav/dot-nav";
 import { ScrollDepthTracker } from "@/components/ui/analytics/scroll-depth-tracker";
 import { HeroSection } from "@/components/sections/hero/hero-section";
+import { KillerSection } from "@/components/sections/killer/killer-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
 import { ForWhomSection } from "@/components/sections/for-whom/for-whom-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
@@ -28,18 +29,23 @@ export default async function LandingPage() {
       <Header />
       <DotNav />
       <ScrollDepthTracker />
+      {/* Порядок: что это → потрогать → для меня ли → что умеет → сколько
+          стоит → как начать → чем дополняется → доверие → возражения → действие.
+          Интеграции опущены с третьей позиции: наверху они читались как список
+          требований к тому, у кого нет кассы. */}
       <main>
         <HeroSection />
+        <KillerSection />
+        <TryDemoSection />
         <ForWhomSection />
-        <IntegrationsSection />
         <FeaturesSection />
         <CrmDemoSection />
-        <TryDemoSection />
+        <PricingSection plans={plans} />
         <HowItWorksSection />
+        <IntegrationsSection />
         <SwitchSection />
         <SecuritySection />
         <WhySection />
-        <PricingSection plans={plans} />
         <FaqSection />
         <CtaSection />
         <SocialSection />

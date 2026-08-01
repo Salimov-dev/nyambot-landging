@@ -73,3 +73,19 @@
   font-size: 13px;
   font-weight: 600;
 }
+
+/* Красный Фонда «Сколково» — статус читается отдельно от наших оранжевых строк */
+.skolkovo {
+  color: #ff3c5c;
+  width: fit-content;
+  padding: 4px 12px 4px 10px;
+  background: rgba(228, 0, 43, 0.1);
+  border: 1px solid rgba(255, 60, 92, 0.4);
+  border-radius: var(--radius-pill);
+}
+
+.skolkovoText {
+  color: #ff5c78 !important;
+  font-size: 13px;
+  font-weight: 600;
+}

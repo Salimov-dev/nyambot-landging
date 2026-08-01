@@ -126,19 +126,8 @@
 .subtitle {
   display: block;
   font-size: 17px !important;
-  color: var(--text-secondary) !important;
+  color: rgba(255, 255, 255, 0.78) !important;
   line-height: 1.55 !important;
-  margin-bottom: 6px !important;
-  max-width: 500px;
-}
-
-/* Перечень интеграций — отдельной строкой, чтобы не сливался с ключевым
-   сообщением подзаголовка (один бот на сеть + общая база). */
-.subtitleIntegrations {
-  display: block;
-  font-size: 15px !important;
-  color: var(--text-secondary) !important;
-  line-height: 1.5 !important;
   margin-bottom: 26px !important;
   max-width: 500px;
 }
@@ -228,6 +217,10 @@
 }
 
 /* Trial pill */
+.pills {
+  align-items: center;
+}
+
 .trialPill {
   display: inline-flex;
   align-items: center;
@@ -240,6 +233,90 @@
   border-radius: var(--radius-pill);
   padding: 5px 14px;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Статус участника «Сколково» =====
+   Фирменный красный Фонда, а не наш оранжевый: рядом с оранжевой пилюлей
+   пробного периода одинаковый цвет читался как её продолжение и терялся.
+   Свечение + блик раз в 6 секунд ловят взгляд, не превращая плашку в баннер. */
+.skolkovoPill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    rgba(228, 0, 43, 0.22) 0%,
+    rgba(228, 0, 43, 0.07) 100%
+  );
+  border: 1px solid rgba(255, 60, 92, 0.55);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  overflow: hidden;
+  box-shadow:
+    0 0 22px rgba(228, 0, 43, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18);
+}
+
+/* Блик пробегает по плашке и исчезает до следующего цикла */
+.skolkovoPill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  animation: skolkovoShine 6s ease-in-out 1.2s infinite;
+  pointer-events: none;
+}
+
+@keyframes skolkovoShine {
+  0% {
+    transform: translateX(-120%);
+  }
+  22%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.skolkovoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: #fff;
+  background: #e4002b;
+  flex-shrink: 0;
+}
+
+.skolkovoText {
+  white-space: nowrap;
+}
+
+.skolkovoOrn {
+  padding-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skolkovoPill::after {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 /* Responsive */
@@ -258,11 +335,11 @@
     flex-direction: column;
     align-items: center;
   }
-  .subtitle,
-  .subtitleIntegrations {
+  .subtitle {
     max-width: 100%;
   }
-  .ctaRow {
+  .ctaRow,
+  .pills {
     justify-content: center;
   }
   .phoneCol {
@@ -278,5 +355,16 @@
   .secondaryBtn {
     width: 100% !important;
     justify-content: center !important;
+  }
+  /* На узком экране плашка «Сколково» переносится, а не режется */
+  .skolkovoPill {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2px;
+    font-size: 13px;
+  }
+  .skolkovoOrn {
+    padding-left: 0;
+    border-left: none;
   }
 }

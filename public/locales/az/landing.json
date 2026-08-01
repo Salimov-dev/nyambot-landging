@@ -10,11 +10,52 @@
   "hero": {
     "badge": "Bir nöqtə üçün və bütün şəbəkə üçün — kafelər, restoranlar, çörək evləri, çatdırılma",
     "title": "Bütün şəbəkəyə bir bot — sifarişlər və yemək çatdırılması <em>MAX və&nbsp;Telegram-da</em>",
-    "subtitle": "Bütün nöqtələriniz üçün bir bot. Qonaq bazası, sifariş tarixçəsi və ballar MAX və Telegram-da ümumidir. Hər nöqtənin öz menyusu, qiymətləri və çatdırılma zonası var. Hər nöqtə üçün ayrı bot yoxdur, aqreqator komissiyası da yoxdur",
-    "subtitleIntegrations": "iiko və R-Keeper, onlayn ödəniş, Yandex.Çatdırılma",
-    "cta": "Pulsuz sınayın",
-    "ctaSecondary": "Demoya bax",
-    "trial": "90 gün pulsuz · dəstək və quraşdırma məsləhətləri"
+    "subtitle": "Bir qonaq bazası, sifariş tarixi və ballar — hər iki messencerdə ortaq. Hər nöqtənin öz menyusu, qiymətləri və çatdırılma zonası var",
+    "cta": "Pulsuz başla",
+    "ctaSecondary": "Demo botu aç",
+    "trial": "90 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan",
+    "skolkovo": "«Skolkovo» layihəsinin iştirakçısı",
+    "skolkovoOrn": "ORN 1129172"
+  },
+  "killer": {
+    "label": "Əsas məqamlar",
+    "title": "Burada nə fərqlidir",
+    "subtitle": "Altı fərq — və etməli olmayacağın işlər",
+    "notPrefix": "Lazım deyil",
+    "items": {
+      "network": {
+        "title": "Bütün şəbəkəyə bir bot",
+        "text": "Qonaq nöqtəni seçir və onun menyusunu, qiymətlərini və çatdırılma zonasını görür. Qonaq bazası, sifariş tarixi və ballar MAX və Telegramda ortaqdır",
+        "nothing": "hər nöqtə üçün ayrıca bot açmaq və reklamı bir neçə kanala bölmək"
+      },
+      "guest": {
+        "title": "Qonaq qeydiyyatsız sifariş verir",
+        "text": "Mini-tətbiqi birbaşa messencerdə açır — dərhal menyuya baxır və səbəti yığır. Telefon nömrəsi yalnız sifarişi rəsmiləşdirərkən soruşulur",
+        "nothing": "sadəcə menyuya baxmaq üçün tətbiq quraşdırmaq, nömrə yazmaq və məkanı paylaşmaq"
+      },
+      "pos": {
+        "title": "Kassanla da işləyir, kassasız da",
+        "text": "iiko və ya R-Keeper var — inteqrasiyanı qoşursan, menyu və stop-siyahılar kassadan gəlir. Kassa başqadır və ya heç yoxdur — Nyambot menyunu, modifikatorları və loyallığı özü aparır",
+        "nothing": "çatdırılma işləsin deyə kassanı dəyişmək və ya POS quraşdırmaq"
+      },
+      "delivery": {
+        "title": "Öz kuryer heyətin olmadan çatdırılma",
+        "text": "Yandex.Çatdırılma kuryerini «Komanda» tətbiqindən və ya birbaşa kassadan bir toxunuşla çağırırsan. Öz kuryerlərin də dəstəklənir — seçim səndədir",
+        "nothing": "kuryer işə götürmək və ayrıca tətbiq quraşdırmaq"
+      },
+      "email": {
+        "title": "Bu gün yoxlaya bilərsən — e-poçt kifayətdir",
+        "text": "CRM-də qeydiyyat — e-poçt və şifrə. Sonra 90 gün tam giriş: menyunu, zonaları və ödənişi özün qurursan, dəstək istədiyin an cavab verir",
+        "nothing": "telefon qoymaq, anket doldurmaq, menecer gözləmək və «tətbiq etmə» sifariş etmək"
+      },
+      "skolkovo": {
+        "title": "«Skolkovo» layihəsinin iştirakçısı",
+        "text": "«Nyambot» MMC — «Skolkovo» layihəsinin iştirakçısı, ORN 1129172. Layihə Fondun ekspertizasından keçib, işləmə və dəstək Rusiyadandır",
+        "nothing": "sözümüzə inanmaq: iştirakçı statusu Fondun reyestrində yoxlanılır"
+      }
+    },
+    "pricingCta": "Tariflərə bax",
+    "pricingNote": "Bir tarif — bütün imkanlar məhdudiyyətsiz. Qiymətlər bu səhifədədir, «sorğu ilə» deyil"
   },
   "benefits": {
     "title": "Eyni qonaqlardan daha çox qazan",
@@ -55,7 +96,7 @@
         }
       },
       "channel": {
-        "tag": "Başqaları bunu bacarmır",
+        "tag": "Bütün şəbəkəyə bir kanal",
         "title": "Bütün şəbəkəyə bir bot — və MAX ilə Telegram-da bir qonaq bazası",
         "result": "Hər nöqtə üçün ayrı bota ehtiyac yoxdur: bir bot bütün şəbəkəyə xidmət edir, qonaq, onun sifariş tarixçəsi və balları isə iki messencerdə ümumidir. Reklam bölünmür, yeni nöqtə ayrı start olmadan qoşulur",
         "details": {
@@ -128,7 +169,7 @@
         }
       },
       "pos": {
-        "tag": "POS ilə inteqrasiya",
+        "tag": "Kassa mütləq deyil",
         "title": "iiko və R-Keeper — sifariş birbaşa kassa və mətbəxə",
         "result": "Menü, qiymətlər və stop-siyahılar kassa ilə avtomatik sinxronlaşır, messencerdən sifariş isə kassaya yazılıb mətbəx izləyicisinə çatır — ikiqat yazma olmadan. Əgər POS hələ yoxdursa — Nyambot tamamilə müstəqil işləyir",
         "details": {
@@ -314,6 +355,7 @@
     "tag": "Demo",
     "title": "İndi sınayın",
     "subtitle": "Telegram və ya MAX-da demo botu açın və qonaqlarınızın necə sifariş verdiyini hiss edin",
+    "noAuth": "Qeydiyyatsız və telefon nömrəsi olmadan",
     "tgDesc": "Telegram-da mini-tətbiq demosu",
     "tgCta": "Telegram-da açın",
     "maxDesc": "MAX-da mini-tətbiq demosu",
@@ -346,14 +388,14 @@
     ]
   },
   "switch": {
-    "label": "Nyambot-a keçid",
-    "title": "<em>50% endirimlə</em> keç",
-    "subtitle": "Artıq başqa bot-servis və ya konstruktor vasitəsilə sifariş qəbul edirsiniz — ilk 6 ay üçün 50% endirim veririk və quraşdırmada yol göstəririk. Bot sizin olaraq qalır: yalnız onu idarə edən servis dəyişir. Şəbəkənin bir neçə botu varsa, bütün nöqtələri bir kanala toplamağa və qonaqları bir bazaya birləşdirməyə kömək edirik",
+    "label": "Başqa xidmətdən istifadə edirsən",
+    "title": "Sifariş qəbulu üçün başqa xidmətdən istifadə edirsən? <em>50% endirim</em>",
+    "subtitle": "Nyambota keç — ilk 6 ay iki dəfə ucuzdur. Bot səninki qalır, yalnız onu idarə edən xidmət dəyişir. Bir neçə nöqtə varsa, onlar bir kanalda və bir qonaq bazasında birləşir",
     "badge": "6 ay üçün −50%",
     "steps": {
       "0": {
         "title": "Müraciət və təhlil",
-        "description": "Müraciət göndərirsən — indi nədən istifadə etdiyini, nəyi köçürmək lazım olduğunu və haradan başlamağı müzakirə edirik"
+        "description": "Müraciət edirsən və hansı xidmətdən istifadə etdiyini deyirsən — endirimi təsbit edirik və haradan başlamağı müzakirə edirik"
       },
       "1": {
         "title": "Menyu və tənzimləmələr",
@@ -368,9 +410,8 @@
         "description": "Sifariş qəbulunu işə salırsan, biz isə dəstəkdə əlaqədə qalırıq — quraşdırma və iş barədə suallara cavab veririk"
       }
     },
-    "button": "50% endirimlə keçid",
-    "compare": "Cari xidmətlə müqayisə",
-    "hint": "İlk 6 aya 50% endirim · Quraşdırmada kömək edirik · Endirimlər toplanmır"
+    "button": "50% endirim al",
+    "hint": "İlk 6 aya 50% endirim · Quraşdırma suallarını cavablandırırıq · Endirimlər cəmlənmir"
   },
   "security": {
     "label": "Təhlükəsizlik",
@@ -393,6 +434,10 @@
       "madeInRussia": {
         "title": "Rusiyada hazırlanıb",
         "description": "Rusiya inkişaf komandası və RF-dən texniki dəstək"
+      },
+      "skolkovo": {
+        "title": "«Skolkovo» iştirakçısı",
+        "description": "«Nyambot» MMC — «Skolkovo» layihəsinin iştirakçısı, ORN 1129172"
       },
       "standards": {
         "title": "Giriş nəzarəti",
@@ -439,7 +484,7 @@
     ],
     "registrationHint": "«Qoşul» düyməsini basdıqdan sonra CRM açılacaq. Qeydiyyatdan keçin, «Lisenziya» bölməsinə keçin və seçilmiş tarifi ödəyin — bundan sonra işə başlaya bilərsiniz",
     "customTitle": "Şəbəkən var?",
-    "customSubtitle": "2 ticarət nöqtəsindən — miqyasına uyğun fərdi tarif",
+    "customSubtitle": "2 ticarət nöqtəsindən — miqyasına uyğun fərdi tarif. Məktub yazmadan da yoxlaya bilərsən: qeydiyyat hamıya açıqdır",
     "emailCta": "Poçt",
     "freeTrial": "0 ₽ · ilk 90 gün",
     "connectTitle": "Sistemə qoşursan",
@@ -454,6 +499,18 @@
       {
         "question": "Hər nöqtə üçün ayrı bot lazımdırmı?",
         "answer": "Xeyr. Bir bot bütün şəbəkəyə işləyir: qonaq nöqtəni — geolokasiya ilə və ya siyahıdan — seçir və məhz o nöqtənin menyusunu, qiymətlərini və çatdırılma zonasını görür. Siz bir kanal tanıdırsınız, yeni nöqtə isə ayrı start olmadan qoşulur. Qonaq bazası, sifariş tarixçəsi və ballar bütün şəbəkə üzrə ümumi qalır"
+      },
+      {
+        "question": "Menyuya baxmaq üçün qonaq qeydiyyatdan keçməlidir?",
+        "answer": "Xeyr. Qonaq messencerdə mini-tətbiqi açır və dərhal menyuya baxır, qiymətləri görür və səbəti yığır — qeydiyyatsız, telefon nömrəsi və məkan olmadan. Telefon və ünvan yalnız sifarişi rəsmiləşdirərkən lazım olur"
+      },
+      {
+        "question": "Kassanı dəyişmək lazım gələcək?",
+        "answer": "Xeyr. Nyambot kassanı əvəz etmir və onu tələb etmir. iiko və ya R-Keeper varsa, inteqrasiya qoşulur və menyu, stop-siyahılar və sifarişlər avtomatik sinxronlaşır. Kassa başqadırsa və ya heç yoxdursa, Nyambot menyunu, modifikatorları, loyallığı və sifarişləri öz CRM-ində müstəqil aparır. Kassanı sonra qoşsan — məlumatlar yerində qalır"
+      },
+      {
+        "question": "Meneceri gözləmək və tətbiq etmə sifariş etmək lazımdır?",
+        "answer": "Xeyr. CRM-də qeydiyyat — e-poçt və şifrə, anket və telefon olmadan. Bütün tariflər və qiymətlər bu səhifədə dərc olunub. Quraşdırma CRM-də özün tərəfindən aparılır, dəstək isə sən çağıranda qoşulur"
       },
       {
         "question": "Qonaqların tətbiq quraşdırması lazımdırmı?",
@@ -492,9 +549,9 @@
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
     "subtitle": "90 gün ödənişsiz. Tam funksionallıq, tam dəstək. Bütün şəbəkəyə bir bot və bir qonaq bazası — MAX və Telegram-da, aqreqator komissiyası olmadan",
-    "button": "Pulsuz sınayın",
+    "button": "Pulsuz başla",
     "docs": "Sənədləri oxuyun",
-    "hint": "Kart əlavə etmədən · Demo-giriş öhdəliksiz",
+    "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Menecer zəngi olmadan",
     "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
@@ -513,15 +570,22 @@
     "offer": "İctimai oferta",
     "cookies": "Cookies siyasəti",
     "allRights": "Bütün hüquqlar qorunur",
-    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ"
+    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
+    "skolkovo": "«Skolkovo» layihəsinin iştirakçısı, ORN 1129172"
   },
   "video": {
     "socialHeading": "Nyambot haqqında daha çox video — sosial mediamızda"
   },
   "integrations": {
     "label": "İnteqrasiyalar",
-    "title": "Artıq istifadə etdiyiniz xidmətlərlə işləyirik",
-    "subtitle": "Birbaşa CRM-də qoşulur — proqramçısız və əlavə işlənmə olmadan",
+    "title": "İnteqrasiyalar — istəyə görə",
+    "subtitle": "Nyambot özü müstəqil işləyir. Əgər kassan, ekvayrinqin və ya kuryer xidmətin varsa — birbaşa CRM-də qoşulur, proqramçısız və əlavə işlərsiz",
+    "noPos": "Kassa yoxdur? Heç nə qoşmaq lazım deyil — Nyambot tam müstəqil işləyir",
+    "roles": {
+      "pos": "kassa inteqrasiyası",
+      "payment": "onlayn ödəniş inteqrasiyası",
+      "delivery": "çatdırılma inteqrasiyası"
+    },
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
@@ -529,10 +593,6 @@
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Dostavka"
     }
-  },
-  "promoBar": {
-    "text": "Bütün şəbəkəyə MAX və Telegram-da bir bot · 90 gün ödənişsiz · Kart bağlamadan",
-    "cta": "Sınayın"
   },
   "forWhom": {
     "title": "İstənilən iaşə formatı üçün",
@@ -560,7 +620,7 @@
     "items": {
       "ownDev": {
         "title": "Öz işləməmiz",
-        "text": "CRM və botlar sıfırdan bizim tərəfimizdən hazırlanıb, kənar konstruktor deyil — tam nəzarət və RF-dən dəstək"
+        "text": "CRM və botlar sıfırdan bizim tərəfimizdən hazırlanıb, kənar konstruktor deyil. Rusiya işləməsi, RF-dən dəstək, «Skolkovo» layihəsinin iştirakçısı"
       },
       "pos": {
         "title": "Kassa ilə və kassasız işləyir",

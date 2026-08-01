@@ -7,7 +7,7 @@ import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { theme } from "@/config/theme";
-import { ShieldIcon } from "@/components/ui/icons/icons";
+import { ShieldIcon, AwardIcon } from "@/components/ui/icons/icons";
 import styles from "./footer.module.css";
 
 const { Text, Link } = Typography;
@@ -142,6 +142,14 @@ export function Footer() {
               <ShieldIcon size={15} />
               <Text className={styles.madeInRussiaText}>
                 {t("footer.madeInRussia")}
+              </Text>
+            </Flex>
+            {/* Статус участника «Сколково» — внешнее подтверждение, поэтому
+                своей плашкой в цветах Фонда, а не строкой в общем списке */}
+            <Flex align="center" gap={8} className={styles.skolkovo}>
+              <AwardIcon size={15} />
+              <Text className={styles.skolkovoText}>
+                {t("footer.skolkovo")}
               </Text>
             </Flex>
             <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>

@@ -8,7 +8,7 @@ import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
-import { StoreIcon, CheckIcon } from "@/components/ui/icons/icons";
+import { StoreIcon, CheckIcon, ShieldIcon } from "@/components/ui/icons/icons";
 import styles from "./hero-section.module.css";
 
 const { Title, Text } = Typography;
@@ -88,11 +88,11 @@ export function HeroSection() {
               </Title>
             </motion.div>
 
+            {/* Первый экран несёт одну мысль. Перечень интеграций отсюда убран:
+                ресторатору без кассы он читался как список требований к нему —
+                интеграции живут в своей секции с пометкой «по желанию» */}
             <motion.div variants={itemVariants}>
               <Text className={styles.subtitle}>{t("hero.subtitle")}</Text>
-              <Text className={styles.subtitleIntegrations}>
-                {t("hero.subtitleIntegrations")}
-              </Text>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -120,10 +120,27 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <span className={styles.trialPill}>
-                <CheckIcon size={16} />
-                {t("hero.trial")}
-              </span>
+              <Flex gap={10} wrap className={styles.pills}>
+                <span className={styles.trialPill}>
+                  <CheckIcon size={16} />
+                  {t("hero.trial")}
+                </span>
+                {/* Статус участника «Сколково» виден с первого экрана: для B2B
+                    это внешнее подтверждение, а не строчка в подвале. Красный
+                    Сколково вместо фирменного оранжевого — иначе пилюля
+                    сливается с соседней и её пропускают */}
+                <span className={styles.skolkovoPill}>
+                  <span className={styles.skolkovoMark}>
+                    <ShieldIcon size={15} />
+                  </span>
+                  <span className={styles.skolkovoText}>
+                    {t("hero.skolkovo")}
+                  </span>
+                  <span className={styles.skolkovoOrn}>
+                    {t("hero.skolkovoOrn")}
+                  </span>
+                </span>
+              </Flex>
             </motion.div>
           </motion.div>
 

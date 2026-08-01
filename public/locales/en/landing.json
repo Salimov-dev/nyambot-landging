@@ -10,11 +10,52 @@
   "hero": {
     "badge": "For a single venue and for a whole chain — cafés, restaurants, bakeries, delivery",
     "title": "One bot for your whole chain — orders and food delivery <em>in&nbsp;MAX and&nbsp;Telegram</em>",
-    "subtitle": "One bot for all your locations. Guest base, order history and points are shared across MAX and Telegram. Each location keeps its own menu, prices and delivery zone. No separate bot per location and no aggregator fees",
-    "subtitleIntegrations": "iiko and R-Keeper, online payment, Yandex.Delivery",
-    "cta": "Try for free",
-    "ctaSecondary": "See the demo",
-    "trial": "90 days free · support and setup tips"
+    "subtitle": "One guest base, order history and points — shared across both messengers. Each location has its own menu, prices and delivery zone",
+    "cta": "Start free",
+    "ctaSecondary": "Open demo bot",
+    "trial": "90 days free · only an email needed · no card, no sales call",
+    "skolkovo": "Skolkovo project participant",
+    "skolkovoOrn": "Reg. no. 1129172"
+  },
+  "killer": {
+    "label": "Key points",
+    "title": "What works differently here",
+    "subtitle": "Six differences — and the things you won't have to do",
+    "notPrefix": "No need to",
+    "items": {
+      "network": {
+        "title": "One bot for the whole chain",
+        "text": "The guest picks a location and sees its menu, prices and delivery zone. Guest base, order history and points are shared across MAX and Telegram",
+        "nothing": "set up a bot for every location and split your ads across several channels"
+      },
+      "guest": {
+        "title": "Guests order without signing up",
+        "text": "They open the mini app right inside the messenger and start browsing the menu and filling the cart. The phone number is only asked at checkout",
+        "nothing": "install an app, enter a phone number or share a location just to look at the menu"
+      },
+      "pos": {
+        "title": "Works with your POS — and without one",
+        "text": "Got iiko or R-Keeper — connect the integration and the menu and stop lists come from the POS. A different POS or none at all — Nyambot runs the menu, modifiers and loyalty on its own",
+        "nothing": "replace your POS or install one just to get delivery running"
+      },
+      "delivery": {
+        "title": "Delivery without couriers of your own",
+        "text": "Call a Yandex.Delivery courier in one tap from the «Crew» app or straight from the POS. Your own couriers are supported too — it's your call",
+        "nothing": "hire couriers or install a separate app"
+      },
+      "email": {
+        "title": "You can try it today, with just an email",
+        "text": "Signing up for the CRM takes an email and a password. Then 90 days of full access: set up the menu, zones and payments yourself, support answers whenever you ask",
+        "nothing": "leave a phone number, fill in forms, wait for a manager or pay for «onboarding»"
+      },
+      "skolkovo": {
+        "title": "Skolkovo project participant",
+        "text": "Nyambot LLC is a participant of the Skolkovo project, reg. no. 1129172. The project passed the Foundation's expert review; development and support are Russian",
+        "nothing": "take our word for it: participant status can be checked in the Foundation's registry"
+      }
+    },
+    "pricingCta": "See pricing",
+    "pricingNote": "One plan — every feature, no limits. Prices are on this page, not «on request»"
   },
   "benefits": {
     "title": "Earn more from the same guests",
@@ -55,7 +96,7 @@
         }
       },
       "channel": {
-        "tag": "Others can't do this",
+        "tag": "One channel for the whole chain",
         "title": "One bot for the whole chain — and one guest base in MAX and Telegram",
         "result": "You don't need a separate bot for each location: one bot serves the whole chain, and the guest, their order history and points are shared across both messengers. Advertising isn't split, and a new location goes live without a separate launch",
         "details": {
@@ -128,7 +169,7 @@
         }
       },
       "pos": {
-        "tag": "POS integration",
+        "tag": "POS optional",
         "title": "iiko and R-Keeper — order goes straight to the till and kitchen",
         "result": "Menu, prices and stop-lists sync with the till automatically, and an order from the messenger rings through the till and goes to the kitchen tracker on its own — no double entry. And if you don't have a POS yet — Nyambot works completely on its own",
         "details": {
@@ -314,6 +355,7 @@
     "tag": "Demo",
     "title": "Try it right now",
     "subtitle": "Open the demo bot in Telegram or MAX and experience how your guests order",
+    "noAuth": "No sign-up, no phone number",
     "tgDesc": "Mini-app demo in Telegram",
     "tgCta": "Open in Telegram",
     "maxDesc": "Mini-app demo in MAX",
@@ -346,14 +388,14 @@
     ]
   },
   "switch": {
-    "label": "Move to Nyambot",
-    "title": "Move over with a <em>50% discount</em>",
-    "subtitle": "Already taking orders through another bot service or builder — we give 50% off for the first 6 months and walk you through the setup. The bot stays yours: only the service behind it changes. If a chain runs several bots, we help you bring all locations into a single channel and merge guests into one base",
+    "label": "You're on another service",
+    "title": "Using another ordering service? <em>50% off</em>",
+    "subtitle": "Switch to Nyambot — your first 6 months cost half as much. The bot stays yours, only the service behind it changes. If you have several locations, they come together into one channel and one guest base",
     "badge": "−50% for 6 months",
     "steps": {
       "0": {
         "title": "Request and review",
-        "description": "You leave a request — we go through what you use now, what needs moving and where to start"
+        "description": "You send a request and tell us which service you use — we lock in the discount and work out where to start"
       },
       "1": {
         "title": "Menu and settings",
@@ -368,9 +410,8 @@
         "description": "You turn on order taking, and we stay in touch in support — answering questions about setup and daily work"
       }
     },
-    "button": "Switch with 50% off",
-    "compare": "Compare with your current service",
-    "hint": "50% off for the first 6 months · We help you figure out the setup · Discounts don't stack"
+    "button": "Get 50% off",
+    "hint": "50% off for the first 6 months · We answer setup questions · Discounts don't stack"
   },
   "security": {
     "label": "Security",
@@ -393,6 +434,10 @@
       "madeInRussia": {
         "title": "Made in Russia",
         "description": "Russian development team and local technical support"
+      },
+      "skolkovo": {
+        "title": "Skolkovo participant",
+        "description": "Nyambot LLC is a participant of the Skolkovo project, reg. no. 1129172"
       },
       "standards": {
         "title": "Access control",
@@ -439,7 +484,7 @@
     ],
     "registrationHint": "Clicking «Connect» will open the CRM. Complete registration, go to «License» section and pay for the selected plan — then you are ready to start",
     "customTitle": "Running a chain?",
-    "customSubtitle": "From 2 venues — a custom plan for your scale",
+    "customSubtitle": "From 2 locations — a custom plan for your scale. You can try it without writing to us: sign-up is open to everyone",
     "emailCta": "Email",
     "freeTrial": "0 ₽ · first 90 days",
     "connectTitle": "You connect to the system",
@@ -454,6 +499,18 @@
       {
         "question": "Do I need a separate bot for each location?",
         "answer": "No. One bot serves the whole chain: the guest picks a location — by geolocation or from a list — and sees the menu, prices and delivery zone of exactly that location. You promote one channel, and a new location goes live without a separate launch. The guest base, order history and points stay shared across the whole chain"
+      },
+      {
+        "question": "Do guests have to sign up to see the menu?",
+        "answer": "No. A guest opens the mini app in the messenger and immediately browses the menu, checks prices and fills the cart — no sign-up, no phone number, no location. The phone number and address are only needed at checkout"
+      },
+      {
+        "question": "Will I have to replace my POS?",
+        "answer": "No. Nyambot doesn't replace your POS and doesn't require one. With iiko or R-Keeper you connect the integration, and the menu, stop lists and orders sync automatically. With a different POS or none at all, Nyambot runs the menu, modifiers, loyalty and orders on its own CRM. Connect a POS later — nothing is lost"
+      },
+      {
+        "question": "Do I have to talk to a sales manager or pay for onboarding?",
+        "answer": "No. Signing up for the CRM takes an email and a password — no forms, no phone number. All plans and prices are published on this page. You set everything up in the CRM yourself, and support steps in when you ask"
       },
       {
         "question": "Do guests need to install an app?",
@@ -492,9 +549,9 @@
   "cta": {
     "title": "Start taking orders in your own channel",
     "subtitle": "90 days free. Full features, full support. One bot and one guest base for the whole chain — in MAX and Telegram, no aggregator fees",
-    "button": "Try for free",
+    "button": "Start free",
     "docs": "Read documentation",
-    "hint": "No card required · Free trial, no commitment",
+    "hint": "Only an email needed · No card required · No sales call",
     "trialFeatures": ["90 days free", "Full access", "No card required"]
   },
   "footer": {
@@ -513,15 +570,22 @@
     "offer": "Public Offer",
     "cookies": "Cookie Policy",
     "allRights": "All rights reserved",
-    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ"
+    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
+    "skolkovo": "Skolkovo project participant, reg. no. 1129172"
   },
   "video": {
     "socialHeading": "More videos about how Nyambot works — on our social media"
   },
   "integrations": {
     "label": "Integrations",
-    "title": "We work with services you already use",
-    "subtitle": "Connected right in the CRM, without developers or custom work",
+    "title": "Integrations — optional",
+    "subtitle": "Nyambot works on its own. And if you already have a POS, a payment provider or a courier service — they connect right in the CRM, no developers or custom work",
+    "noPos": "No POS? Nothing to connect — Nyambot works entirely on its own",
+    "roles": {
+      "pos": "POS integration",
+      "payment": "online payment integration",
+      "delivery": "delivery integration"
+    },
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
@@ -529,10 +593,6 @@
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Delivery"
     }
-  },
-  "promoBar": {
-    "text": "One bot for the whole chain in MAX and Telegram · 90 days free · No card required",
-    "cta": "Try free"
   },
   "forWhom": {
     "title": "For any food service format",
@@ -560,7 +620,7 @@
     "items": {
       "ownDev": {
         "title": "In-house product",
-        "text": "The CRM and bots are built by us from scratch, not a third-party builder — full control and support from Russia"
+        "text": "The CRM and bots are built by us from scratch, not a third-party builder. Russian development, Russian support, Skolkovo project participant"
       },
       "pos": {
         "title": "Works with your POS and without it",

@@ -5,15 +5,17 @@ import { Tooltip } from "antd";
 import { reachGoal, type MetrikaGoal } from "@/config/metrika";
 import styles from "./dot-nav.module.css";
 
+/** Порядок совпадает с порядком секций на странице (page.tsx) */
 const SECTIONS: { id: string; label: string; goal: MetrikaGoal | null }[] = [
   { id: "hero", label: "Главная", goal: null },
+  { id: "killer", label: "Главное", goal: null },
+  { id: "try-demo", label: "Демо", goal: null },
   { id: "features", label: "Возможности", goal: "scroll_features" },
   { id: "crm-demo", label: "CRM", goal: null },
-  { id: "try-demo", label: "Демо", goal: null },
-  { id: "how-it-works", label: "Как работает", goal: null },
-  { id: "switch", label: "Переезд", goal: null },
-  { id: "security", label: "Безопасность", goal: null },
   { id: "pricing", label: "Тарифы", goal: "scroll_pricing" },
+  { id: "how-it-works", label: "Как работает", goal: null },
+  { id: "switch", label: "Скидка 50%", goal: null },
+  { id: "security", label: "Безопасность", goal: null },
   { id: "faq", label: "FAQ", goal: null },
   { id: "cta", label: "Начать", goal: null },
 ];
