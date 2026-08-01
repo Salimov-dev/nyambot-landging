@@ -156,7 +156,7 @@ export function Footer() {
               © {year} {BRAND_CONFIG.name}. {t("footer.allRights")}
             </Text>
             <Text style={{ color: theme.colors.textMuted, fontSize: 12 }}>
-              ИП Салимов Р.А., ОГРНИП 326470400046473
+              ООО «Нямбот», ОГРН 1264700010233, ИНН 4706098700
             </Text>
           </Flex>
           <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
