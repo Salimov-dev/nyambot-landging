@@ -26,12 +26,86 @@
   flex-shrink: 0;
 }
 
+/* ===== Статус участника «Сколково» =====
+   Логотип Фонда как есть, без плашки и подписей: знак узнаваем сам по себе.
+   Блик раз в 6 секунд ловит взгляд, не превращая логотип в баннер. */
+.skolkovoLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  /* Охранное поле вокруг знака: вплотную к кнопке CRM он читался бы её частью */
+  margin-left: 8px;
+  padding-left: 16px;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+/* Тонкая черта отделяет знак Фонда от наших элементов управления */
+.skolkovoLink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 24px;
+  background: var(--border-light);
+}
+
+.skolkovoLink:hover {
+  opacity: 0.8;
+}
+
+/* Минимум 34 px по Коммуникационному пакету Фонда, пропорции исходника */
+.skolkovoLogo {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+/* Блик пробегает по логотипу и исчезает до следующего цикла */
+.skolkovoLink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  animation: skolkovoShine 6s ease-in-out 1.2s infinite;
+  pointer-events: none;
+}
+
+@keyframes skolkovoShine {
+  0% {
+    transform: translateX(-120%);
+  }
+  22%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skolkovoLink::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 .nav {
   flex: 1;
 }
 
 .navLink {
-  padding: 8px 14px;
+  /* Иначе на промежуточных ширинах пункты рвались по слогам:
+     «Возмож/ности», «Вопр/осы» */
+  white-space: nowrap;
+  padding: 8px 12px;
   text-decoration: none;
   border-radius: var(--radius-sm);
   transition: background 0.2s ease;
@@ -145,12 +219,20 @@
   font-weight: 600 !important;
 }
 
-@media (max-width: 900px) {
-  .nav {
-    display: none;
-  }
+/* Знак Фонда занял место в правой группе. Первой уступает «Документация»:
+   ссылка на неё есть и в подвале, и в меню-бургере, а кнопка CRM и статус
+   участника — нет */
+@media (max-width: 1280px) {
   .docsBtn {
     display: none !important;
+  }
+}
+
+/* Порог поднят с 900: между 900 и 1080 пункты меню ещё показывались, но места
+   им уже не хватало — вместо этого уводим навигацию в бургер */
+@media (max-width: 1080px) {
+  .nav {
+    display: none;
   }
   .ctaBtn {
     display: none !important;
@@ -162,5 +244,24 @@
   .actions {
     gap: 0 !important;
     margin-left: auto;
+  }
+}
+
+/* На 320 px (iPhone SE, старые Android) отступов шапки не хватало:
+   логотип + переключатель языка + бургер не помещались, и бургер уезжал
+   за правый край — кнопка меню становилась недоступной */
+@media (max-width: 400px) {
+  /* gap перебиваем !important: antd Flex задаёт его инлайн-стилем */
+  .inner {
+    padding: 0 14px;
+    gap: 12px !important;
+  }
+}
+
+/* Ниже 480 px знак Фонда (116 px при обязательной высоте 34) вытесняет из шапки
+   бургер. Уменьшать логотип нельзя, поэтому на телефонах он показан внизу hero */
+@media (max-width: 480px) {
+  .skolkovoLink {
+    display: none;
   }
 }

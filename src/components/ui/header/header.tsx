@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button, Flex, Typography } from "antd";
@@ -9,6 +10,11 @@ import { LanguageSwitcher } from "@/components/ui/language-switcher/language-swi
 import { useLandingStore } from "@/store/use-landing.store";
 import { LINKS } from "@/config/links.config";
 import { reachGoal, type MetrikaGoal } from "@/config/metrika";
+import {
+  getSkolkovoLogo,
+  getSkolkovoLogoSize,
+  SKOLKOVO_LOGO_KIND,
+} from "@/config/skolkovo.config";
 import styles from "./header.module.css";
 
 const { Text } = Typography;
@@ -29,9 +35,13 @@ const NAV_ITEMS = [
 ] as const;
 
 export function Header() {
-  const { t } = useTranslation("landing");
+  const { t, i18n } = useTranslation("landing");
   const { isMobileMenuOpen, openMobileMenu, closeMobileMenu } =
     useLandingStore();
+  const skolkovoLogo = getSkolkovoLogo(
+    i18n.language,
+    SKOLKOVO_LOGO_KIND.HORIZONTAL,
+  );
 
   return (
     <header className={styles.header}>
@@ -57,7 +67,6 @@ export function Header() {
         </Flex>
 
         <Flex align="center" gap={8} className={styles.actions}>
-          <LanguageSwitcher />
           <Button
             type="text"
             href={LINKS.docs}
@@ -76,8 +85,36 @@ export function Header() {
             size="middle"
             onClick={() => reachGoal("click_trial")}
           >
-            {t("nav.openCrm")}
+            {/* Короткое «CRM»: рядом со знаком Фонда кнопка «Открыть CRM» была
+                с ним одной длины, и два блока сливались в один. В бургер-меню
+                кнопка растянута на всю ширину — там остаётся полный текст */}
+            {t("nav.crm")}
           </Button>
+
+          {/* Переключатель языка стоит между кнопкой CRM и знаком Фонда
+              намеренно: оранжевая кнопка и зелёный логотип вплотную сливались
+              в одно цветное пятно, а плашка языка разбивает их нейтральным */}
+          <LanguageSwitcher />
+
+          {/* Статус участника «Сколково» — у правого края, максимально далеко от
+              логотипа Нямбота: рядом с ним два знака читались как один составной
+              бренд. Высота 34 px — минимум по Коммуникационному пакету Фонда,
+              уменьшать нельзя, поэтому на телефонах знак показан внизу hero */}
+          <a
+            href={LINKS.skolkovo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.skolkovoLink}
+            aria-label={t("skolkovo.alt")}
+          >
+            <Image
+              src={skolkovoLogo.src}
+              alt={t("skolkovo.alt")}
+              {...getSkolkovoLogoSize(skolkovoLogo, 34)}
+              className={styles.skolkovoLogo}
+              priority
+            />
+          </a>
         </Flex>
 
         {/* Mobile burger */}

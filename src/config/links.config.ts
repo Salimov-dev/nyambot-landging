@@ -2,6 +2,8 @@ export const LINKS = {
   crm: "https://crm.nyambot.ru",
   crew: "https://crew.nyambot.ru",
   docs: "https://guide.nyambot.ru",
+  /** Логотип участника проекта обязан вести на сайт Фонда (Положение № 165-Пр, ст. 4) */
+  skolkovo: "https://sk.ru",
   support: {
     telegram: "https://t.me/nyambot_support",
     email: "mailto:support@nyambot.ru",

@@ -31,6 +31,32 @@
   color: var(--text-primary) !important;
 }
 
+/* Логотип участника проекта и домен в правом нижнем углу.
+   Вертикальная версия не опускается ниже 50 px по Коммуникационному пакету */
+.skolkovoMark {
+  flex-shrink: 0;
+}
+
+.skolkovoLogoLink {
+  display: inline-flex;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.skolkovoLogoLink:hover {
+  opacity: 1;
+}
+
+/* На тач-экранах ссылки подвала были высотой в строку (22 px) и стояли вплотную —
+   мимо такой цели легко промахнуться. Разводим их до 44 px */
+@media (max-width: 900px) {
+  .footerLink {
+    min-height: 44px;
+    display: flex !important;
+    align-items: center;
+  }
+}
+
 .socialLink {
   font-size: 13px !important;
   font-weight: 500 !important;
@@ -61,6 +87,12 @@
   .inner {
     padding: 0 16px;
   }
+  /* Логотип с доменом переносится под реквизиты и прижимался к левому краю —
+     отдаём ему всю строку, чтобы встал по центру */
+  .skolkovoMark {
+    width: 100%;
+    margin-top: 8px;
+  }
 }
 
 /* Плашка «Разработано в России» */
@@ -70,22 +102,6 @@
 
 .madeInRussiaText {
   color: var(--accent) !important;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-/* Красный Фонда «Сколково» — статус читается отдельно от наших оранжевых строк */
-.skolkovo {
-  color: #ff3c5c;
-  width: fit-content;
-  padding: 4px 12px 4px 10px;
-  background: rgba(228, 0, 43, 0.1);
-  border: 1px solid rgba(255, 60, 92, 0.4);
-  border-radius: var(--radius-pill);
-}
-
-.skolkovoText {
-  color: #ff5c78 !important;
   font-size: 13px;
   font-weight: 600;
 }

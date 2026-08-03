@@ -114,10 +114,24 @@
   border-color: #1d8cc7 !important;
 }
 
+/* Кнопки ведут в чужие мессенджеры, поэтому окрашены в их фирменные цвета,
+   а не в наш оранжевый: так понятнее, куда именно ведёт кнопка.
+   Градиент MAX взят из официальной иконки public/images/social/max.svg */
 .maxBtn {
-  background: var(--gradient-primary) !important;
-  border-color: var(--accent) !important;
+  background: linear-gradient(
+    135deg,
+    #9b4ed8 0%,
+    #7b5ce5 50%,
+    #5b8def 100%
+  ) !important;
+  border-color: #7b5ce5 !important;
+  /* Иначе под фиолетовой кнопкой оставалось оранжевое свечение кнопки-праймари */
+  box-shadow: 0 8px 24px rgba(123, 92, 229, 0.35) !important;
   font-weight: 600;
+}
+
+.maxBtn:hover {
+  filter: brightness(1.08);
 }
 
 .crmCta {

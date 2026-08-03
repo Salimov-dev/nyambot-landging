@@ -5,17 +5,18 @@
     "pricing": "Pricing",
     "faq": "FAQ",
     "docs": "Documentation",
-    "openCrm": "Open CRM"
+    "openCrm": "Open CRM",
+    "crm": "CRM"
+  },
+  "skolkovo": {
+    "alt": "Skolkovo project participant"
   },
   "hero": {
-    "badge": "For a single venue and for a whole chain — cafés, restaurants, bakeries, delivery",
-    "title": "One bot for your whole chain — orders and food delivery <em>in&nbsp;MAX and&nbsp;Telegram</em>",
-    "subtitle": "One guest base, order history and points — shared across both messengers. Each location has its own menu, prices and delivery zone",
+    "title": "Orders and food delivery <em>in&nbsp;MAX&nbsp;and&nbsp;Telegram</em>&nbsp;— one bot for your whole chain",
+    "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location",
     "cta": "Start free",
-    "ctaSecondary": "Open demo bot",
-    "trial": "90 days free · only an email needed · no card, no sales call",
-    "skolkovo": "Skolkovo project participant",
-    "skolkovoOrn": "Reg. no. 1129172"
+    "ctaSecondary": "See demo",
+    "trial": "90 days free · only an email needed · no card, no sales call"
   },
   "killer": {
     "label": "Key points",
@@ -555,7 +556,7 @@
     "trialFeatures": ["90 days free", "Full access", "No card required"]
   },
   "footer": {
-    "description": "Platform for food venues. Orders via Telegram and MAX without aggregators",
+    "description": "One bot for the whole chain: orders, delivery and loyalty in MAX and Telegram. Your own guest base and analytics",
     "product": "Product",
     "crm": "Open CRM",
     "crew": "Staff app",
@@ -570,8 +571,7 @@
     "offer": "Public Offer",
     "cookies": "Cookie Policy",
     "allRights": "All rights reserved",
-    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
-    "skolkovo": "Skolkovo project participant, reg. no. 1129172"
+    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ"
   },
   "video": {
     "socialHeading": "More videos about how Nyambot works — on our social media"

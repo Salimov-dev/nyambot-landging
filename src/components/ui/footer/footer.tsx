@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { Col, Divider, Flex, Row, Typography } from "antd";
 import { Logo } from "@/components/common/logo/logo";
@@ -7,20 +8,31 @@ import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { theme } from "@/config/theme";
-import { ShieldIcon, AwardIcon } from "@/components/ui/icons/icons";
+import {
+  getSkolkovoLogo,
+  getSkolkovoLogoSize,
+  SKOLKOVO_LOGO_KIND,
+} from "@/config/skolkovo.config";
+import { ShieldIcon } from "@/components/ui/icons/icons";
 import styles from "./footer.module.css";
 
 const { Text, Link } = Typography;
 
 export function Footer() {
-  const { t } = useTranslation("landing");
+  const { t, i18n } = useTranslation("landing");
   const year = new Date().getFullYear();
+  const skolkovoLogo = getSkolkovoLogo(
+    i18n.language,
+    SKOLKOVO_LOGO_KIND.VERTICAL,
+  );
 
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <Row gutter={[32, 40]}>
-          <Col xs={24} sm={24} md={8}>
+          {/* На планшете колонки ссылок сжимались до 128 px и слова рвались
+              по слогам («ЮРИДИЧЕСК/ОЕ»). Четыре колонки в ряд — только с 992 px */}
+          <Col xs={24} sm={24} md={24} lg={8}>
             <Flex vertical gap={16}>
               <Logo size="md" />
               <Text
@@ -36,7 +48,7 @@ export function Footer() {
             </Flex>
           </Col>
 
-          <Col xs={12} sm={8} md={4}>
+          <Col xs={12} sm={8} md={8} lg={4}>
             <Flex vertical gap={12}>
               <Text strong className={styles.colTitle}>
                 {t("footer.product")}
@@ -73,7 +85,7 @@ export function Footer() {
             </Flex>
           </Col>
 
-          <Col xs={12} sm={8} md={4}>
+          <Col xs={12} sm={8} md={8} lg={4}>
             <Flex vertical gap={12}>
               <Text strong className={styles.colTitle}>
                 {t("footer.support")}
@@ -104,7 +116,7 @@ export function Footer() {
             </Flex>
           </Col>
 
-          <Col xs={24} sm={8} md={4}>
+          <Col xs={24} sm={8} md={8} lg={4}>
             <Flex vertical gap={12}>
               <Text strong className={styles.colTitle}>
                 {t("footer.legal")}
@@ -144,14 +156,9 @@ export function Footer() {
                 {t("footer.madeInRussia")}
               </Text>
             </Flex>
-            {/* Статус участника «Сколково» — внешнее подтверждение, поэтому
-                своей плашкой в цветах Фонда, а не строкой в общем списке */}
-            <Flex align="center" gap={8} className={styles.skolkovo}>
-              <AwardIcon size={15} />
-              <Text className={styles.skolkovoText}>
-                {t("footer.skolkovo")}
-              </Text>
-            </Flex>
+            {/* Статус участника показывает логотип Фонда справа — дублировать
+                его строкой с номером реестра незачем: кому нужно подтверждение,
+                тому даём выписку */}
             <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
               © {year} {BRAND_CONFIG.name}. {t("footer.allRights")}
             </Text>
@@ -159,9 +166,32 @@ export function Footer() {
               ООО «Нямбот», ОГРН 1264700010233, ИНН 4706098700
             </Text>
           </Flex>
-          <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
-            {BRAND_CONFIG.siteName}
-          </Text>
+          {/* Баннерная кнопка участника проекта: Положение допускает в подвале
+              и вертикальную версию логотипа. Домен уходит под знак, чтобы
+              вокруг логотипа осталось охранное поле */}
+          <Flex
+            vertical
+            align="center"
+            gap={10}
+            className={styles.skolkovoMark}
+          >
+            <a
+              href={LINKS.skolkovo}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("skolkovo.alt")}
+              className={styles.skolkovoLogoLink}
+            >
+              <Image
+                src={skolkovoLogo.src}
+                alt={t("skolkovo.alt")}
+                {...getSkolkovoLogoSize(skolkovoLogo, 84)}
+              />
+            </a>
+            <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
+              {BRAND_CONFIG.siteName}
+            </Text>
+          </Flex>
         </Flex>
       </div>
     </footer>

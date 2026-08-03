@@ -48,6 +48,23 @@
   border-top: 1px solid var(--border-light);
 }
 
+/* Зона нажатия была высотой в строку текста — на телефоне в неё сложно попасть.
+   Доводим до 44 px, как требуют мобильные гайдлайны */
+.supportLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 4px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.supportLink:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 64px 0;

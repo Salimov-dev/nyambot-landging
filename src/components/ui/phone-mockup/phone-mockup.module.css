@@ -4,10 +4,12 @@
   justify-content: center;
 }
 
+/* Размер задаётся переменными, чтобы секция могла подогнать макет под себя
+   (в hero он выравнивается по высоте текстовой колонки), не трогая остальные */
 .phone {
   position: relative;
-  width: 320px;
-  height: 594px;
+  width: var(--phone-mockup-width, 320px);
+  height: var(--phone-mockup-height, 594px);
   filter: drop-shadow(0 32px 80px rgba(0, 0, 0, 0.6))
     drop-shadow(0 8px 32px rgba(255, 140, 0, 0.1));
   animation: float 4s ease-in-out infinite;

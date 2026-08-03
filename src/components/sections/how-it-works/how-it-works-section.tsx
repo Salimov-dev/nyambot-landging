@@ -79,9 +79,11 @@ export function HowItWorksSection() {
           </Text>
         </motion.div>
 
+        {/* На планшете четыре колонки давали 128 px на карточку, и заголовки
+            рвались по слогам («Настро/й в CRM»). Четыре в ряд — только с 992 px */}
         <Row gutter={[24, 32]} className={styles.steps}>
           {STEPS.map((step, i) => (
-            <Col key={step.step} xs={24} sm={12} md={6}>
+            <Col key={step.step} xs={24} sm={12} md={12} lg={6}>
               <motion.div
                 initial={{ opacity: 0, y: 32 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}

@@ -5,17 +5,18 @@
     "pricing": "Tariflar",
     "faq": "Savollar",
     "docs": "Hujjatlar",
-    "openCrm": "CRM ochish"
+    "openCrm": "CRM ochish",
+    "crm": "CRM"
+  },
+  "skolkovo": {
+    "alt": "«Skolkovo» loyihasi ishtirokchisi"
   },
   "hero": {
-    "badge": "Bitta nuqta va butun tarmoq uchun — kafelar, restoranlar, nonvoyxonalar, yetkazib berish",
-    "title": "Butun tarmoqqa bitta bot — buyurtmalar va ovqat yetkazib berish <em>MAX va&nbsp;Telegram'da</em>",
-    "subtitle": "Bitta mehmonlar bazasi, buyurtmalar tarixi va ballar — ikkala messenjerda umumiy. Har bir nuqtaning oʻz menyusi, narxlari va yetkazib berish hududi bor",
+    "title": "Buyurtmalar va ovqat yetkazib berish <em>MAX&nbsp;va&nbsp;Telegram'da</em>&nbsp;— butun tarmoqqa bitta bot bilan",
+    "subtitle": "Bitta nuqta va butun tarmoq uchun: kafelar, restoranlar, nonvoyxonalar, yetkazib berish. Mehmonlar bazasi, buyurtmalar tarixi va ballar ikkala messenjerda umumiy, menyu, narxlar va yetkazib berish hududi esa har bir nuqtaning oʻziniki",
     "cta": "Bepul boshlash",
-    "ctaSecondary": "Demo botni ochish",
-    "trial": "90 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz",
-    "skolkovo": "«Skolkovo» loyihasi ishtirokchisi",
-    "skolkovoOrn": "ORN 1129172"
+    "ctaSecondary": "Demoni ko'rish",
+    "trial": "90 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz"
   },
   "killer": {
     "label": "Asosiysi",
@@ -555,7 +556,7 @@
     "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
-    "description": "Ovqatlanish joylari uchun platforma. Agregatorlarsiz Telegram va MAX orqali buyurtmalar",
+    "description": "Butun tarmoq uchun bitta bot: MAX va Telegram'da buyurtmalar, yetkazib berish va sodiqlik. O'z mehmonlar bazangiz va tahlilingiz",
     "product": "Mahsulot",
     "crm": "CRM ochish",
     "crew": "Xodimlar uchun ilova",
@@ -570,8 +571,7 @@
     "offer": "Ommaviy oferta",
     "cookies": "Cookies siyosati",
     "allRights": "Barcha huquqlar himoyalangan",
-    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ",
-    "skolkovo": "«Skolkovo» loyihasi ishtirokchisi, ORN 1129172"
+    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ"
   },
   "video": {
     "socialHeading": "Nyambot haqida ko'proq videolar — ijtimoiy tarmoqlarimizda"

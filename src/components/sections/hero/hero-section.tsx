@@ -1,14 +1,20 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { motion, type Variants } from "framer-motion";
-import { Button, Flex, Tag, Typography } from "antd";
+import { Button, Flex, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
-import { StoreIcon, CheckIcon, ShieldIcon } from "@/components/ui/icons/icons";
+import {
+  getSkolkovoLogo,
+  getSkolkovoLogoSize,
+  SKOLKOVO_LOGO_KIND,
+} from "@/config/skolkovo.config";
+import { CheckIcon } from "@/components/ui/icons/icons";
 import styles from "./hero-section.module.css";
 
 const { Title, Text } = Typography;
@@ -34,8 +40,12 @@ const phoneVariants: Variants = {
 };
 
 export function HeroSection() {
-  const { t } = useTranslation("landing");
+  const { t, i18n } = useTranslation("landing");
   const videoRef = useRef<HTMLVideoElement>(null);
+  const skolkovoLogo = getSkolkovoLogo(
+    i18n.language,
+    SKOLKOVO_LOGO_KIND.HORIZONTAL,
+  );
 
   useEffect(() => {
     const video = videoRef.current;
@@ -75,13 +85,10 @@ export function HeroSection() {
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={itemVariants}>
-              <Tag className={styles.badge}>
-                <StoreIcon size={16} />
-                {t("hero.badge")}
-              </Tag>
-            </motion.div>
-
+            {/* Надзаголовочной пилюли нет: она повторяла «бот на всю сеть» из
+                заголовка, а вместе с пилюлей триала зажимала блок в две рамки.
+                «Для одной точки и для сети» не потеряно — оно открывает
+                подзаголовок, чтобы одиночная точка не решила, что сервис не про неё */}
             <motion.div variants={itemVariants}>
               <Title level={1} className={styles.title}>
                 <span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
@@ -125,21 +132,25 @@ export function HeroSection() {
                   <CheckIcon size={16} />
                   {t("hero.trial")}
                 </span>
-                {/* Статус участника «Сколково» виден с первого экрана: для B2B
-                    это внешнее подтверждение, а не строчка в подвале. Красный
-                    Сколково вместо фирменного оранжевого — иначе пилюля
-                    сливается с соседней и её пропускают */}
-                <span className={styles.skolkovoPill}>
-                  <span className={styles.skolkovoMark}>
-                    <ShieldIcon size={15} />
-                  </span>
-                  <span className={styles.skolkovoText}>
-                    {t("hero.skolkovo")}
-                  </span>
-                  <span className={styles.skolkovoOrn}>
-                    {t("hero.skolkovoOrn")}
-                  </span>
-                </span>
+                {/* Знак участника «Сколково» живёт в шапке, но на телефонах он
+                    туда не помещается рядом с бургером — там показываем его
+                    здесь, чтобы статус не пропал с первого экрана */}
+                <a
+                  href={LINKS.skolkovo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.skolkovoLink}
+                  aria-label={t("skolkovo.alt")}
+                >
+                  {/* 44 px вместо минимальных 34: этот знак виден только на
+                      телефонах, где экран узкий и мелкий логотип теряется */}
+                  <Image
+                    src={skolkovoLogo.src}
+                    alt={t("skolkovo.alt")}
+                    {...getSkolkovoLogoSize(skolkovoLogo, 44)}
+                    className={styles.skolkovoLogo}
+                  />
+                </a>
               </Flex>
             </motion.div>
           </motion.div>

@@ -121,11 +121,7 @@ export function FaqSection() {
               href={LINKS.support.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                color: theme.colors.accent,
-                fontSize: 14,
-                fontWeight: 600,
-              }}
+              className={styles.supportLink}
             >
               {t("faq.askSupport")}
             </a>

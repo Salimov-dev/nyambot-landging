@@ -5,17 +5,18 @@
     "pricing": "Tariflər",
     "faq": "Suallar",
     "docs": "Sənədlər",
-    "openCrm": "CRM-i aç"
+    "openCrm": "CRM-i aç",
+    "crm": "CRM"
+  },
+  "skolkovo": {
+    "alt": "«Skolkovo» layihəsinin iştirakçısı"
   },
   "hero": {
-    "badge": "Bir nöqtə üçün və bütün şəbəkə üçün — kafelər, restoranlar, çörək evləri, çatdırılma",
-    "title": "Bütün şəbəkəyə bir bot — sifarişlər və yemək çatdırılması <em>MAX və&nbsp;Telegram-da</em>",
-    "subtitle": "Bir qonaq bazası, sifariş tarixi və ballar — hər iki messencerdə ortaq. Hər nöqtənin öz menyusu, qiymətləri və çatdırılma zonası var",
+    "title": "Sifarişlər və yemək çatdırılması <em>MAX&nbsp;və&nbsp;Telegram-da</em>&nbsp;— bütün şəbəkəyə bir botla",
+    "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
     "cta": "Pulsuz başla",
-    "ctaSecondary": "Demo botu aç",
-    "trial": "90 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan",
-    "skolkovo": "«Skolkovo» layihəsinin iştirakçısı",
-    "skolkovoOrn": "ORN 1129172"
+    "ctaSecondary": "Demoya bax",
+    "trial": "90 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
   },
   "killer": {
     "label": "Əsas məqamlar",
@@ -555,7 +556,7 @@
     "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
-    "description": "İaşə müəssisələri üçün platforma. Aqreqatorsuz Telegram və MAX vasitəsilə sifarişlər",
+    "description": "Bütün şəbəkə üçün bir bot: MAX və Telegram-da sifarişlər, çatdırılma və loyallıq. Öz qonaq bazanız və analitikanız",
     "product": "Məhsul",
     "crm": "CRM-i aç",
     "crew": "Personal üçün tətbiq",
@@ -570,8 +571,7 @@
     "offer": "İctimai oferta",
     "cookies": "Cookies siyasəti",
     "allRights": "Bütün hüquqlar qorunur",
-    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
-    "skolkovo": "«Skolkovo» layihəsinin iştirakçısı, ORN 1129172"
+    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ"
   },
   "video": {
     "socialHeading": "Nyambot haqqında daha çox video — sosial mediamızda"

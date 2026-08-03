@@ -86,22 +86,10 @@
 .textCol {
   flex: 1;
   min-width: 0;
-  max-width: 580px;
-}
-
-.badge {
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  padding: 5px 14px !important;
-  border-radius: var(--radius-pill) !important;
-  border: 1px solid var(--accent-border) !important;
-  background: var(--accent-bg) !important;
-  color: var(--accent) !important;
-  margin-bottom: 18px !important;
-  display: inline-flex !important;
-  align-items: center;
-  gap: 6px;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  /* Ровно под ряд «кнопка + кнопка + логотип участника» (~590 px): шире —
+     заголовок расползается, уже — логотип срывается на вторую строку.
+     Если экран тесный, flex сожмёт колонку и ряд перенесётся сам */
+  max-width: 600px;
 }
 
 .title {
@@ -111,7 +99,9 @@
   color: var(--text-primary) !important;
   margin-bottom: 16px !important;
   letter-spacing: -0.02em;
-  /* Равномерные строки заголовка на любых ширинах (фикс выпирающего «— в») */
+  /* Равномерные строки заголовка на любых ширинах. Balance выбирает точку
+     переноса сам, поэтому «в MAX и Telegram» связано неразрывными пробелами
+     в locales: иначе строка рвалась посреди акцентной фразы */
   text-wrap: balance;
 }
 
@@ -129,7 +119,9 @@
   color: rgba(255, 255, 255, 0.78) !important;
   line-height: 1.55 !important;
   margin-bottom: 26px !important;
-  max-width: 500px;
+  /* Подзаголовок вобрал в себя аудиторию из убранной пилюли и стал длиннее:
+     при прежних 500 px он растягивался в лишнюю строку и был уже ряда кнопок */
+  max-width: 560px;
 }
 
 .ctaRow {
@@ -169,6 +161,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Между исходными 594 px, при которых телефон торчал выше текста, и высотой
+     самой колонки: макет остаётся заметным, но первый экран не перекошен.
+     Пропорции исходника сохранены */
+  --phone-mockup-width: 300px;
+  --phone-mockup-height: 557px;
 }
 
 .phoneWrapper {
@@ -231,92 +228,30 @@
   background: var(--accent-bg);
   border: 1px solid var(--accent-border);
   border-radius: var(--radius-pill);
-  padding: 5px 14px;
+  /* Пилюля скруглённая — при переносе текст в две строки подходил слишком
+     близко к дуге слева, поэтому боковые отступы больше вертикальных */
+  padding: 7px 20px;
+  line-height: 1.4;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
-/* ===== Статус участника «Сколково» =====
-   Фирменный красный Фонда, а не наш оранжевый: рядом с оранжевой пилюлей
-   пробного периода одинаковый цвет читался как её продолжение и терялся.
-   Свечение + блик раз в 6 секунд ловят взгляд, не превращая плашку в баннер. */
-.skolkovoPill {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(
-    135deg,
-    rgba(228, 0, 43, 0.22) 0%,
-    rgba(228, 0, 43, 0.07) 100%
-  );
-  border: 1px solid rgba(255, 60, 92, 0.55);
-  border-radius: var(--radius-pill);
-  padding: 7px 16px;
-  overflow: hidden;
-  box-shadow:
-    0 0 22px rgba(228, 0, 43, 0.28),
-    inset 0 1px 1px rgba(255, 255, 255, 0.18);
-}
-
-/* Блик пробегает по плашке и исчезает до следующего цикла */
-.skolkovoPill::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    100deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.28) 50%,
-    transparent 65%
-  );
-  transform: translateX(-120%);
-  animation: skolkovoShine 6s ease-in-out 1.2s infinite;
-  pointer-events: none;
-}
-
-@keyframes skolkovoShine {
-  0% {
-    transform: translateX(-120%);
-  }
-  22%,
-  100% {
-    transform: translateX(120%);
-  }
-}
-
-.skolkovoMark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  color: #fff;
-  background: #e4002b;
+.trialPill svg {
   flex-shrink: 0;
 }
 
-.skolkovoText {
-  white-space: nowrap;
+/* ===== Статус участника «Сколково» =====
+   Основное место знака — шапка сайта. Здесь он только для телефонов, где в
+   шапке нет места рядом с бургером: скрыт до брейкпоинта, ниже — показан. */
+.skolkovoLink {
+  display: none;
 }
 
-.skolkovoOrn {
-  padding-left: 8px;
-  border-left: 1px solid rgba(255, 255, 255, 0.22);
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 600;
-  font-size: 13px;
-  white-space: nowrap;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .skolkovoPill::after {
-    animation: none;
-    opacity: 0;
-  }
+/* 44 px: минимум Фонда — 34, но здесь знак виден только на телефонах, где
+   мелкий логотип теряется. Пропорции исходника не искажаем */
+.skolkovoLogo {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 /* Responsive */
@@ -342,6 +277,16 @@
   .pills {
     justify-content: center;
   }
+  /* Блоки отцентрованы — текст внутри пилюли тоже, иначе вторая строка
+     висит по левому краю и плашка выглядит перекошенной */
+  .trialPill {
+    text-align: center;
+  }
+  /* Текст в пилюле переносится, и иконка сбоку от двух строк выглядит
+     съехавшей — на узком экране она ничего не добавляет, убираем */
+  .trialPill svg {
+    display: none;
+  }
   .phoneCol {
     order: -1;
   }
@@ -356,15 +301,15 @@
     width: 100% !important;
     justify-content: center !important;
   }
-  /* На узком экране плашка «Сколково» переносится, а не режется */
-  .skolkovoPill {
-    flex-wrap: wrap;
+  /* С этой ширины знак Фонда пропадает из шапки — показываем его здесь,
+     отдельной строкой под пилюлей, чтобы статус остался на первом экране.
+     Ряд отцентрован, знак идёт следом за пилюлей и переносится на свою строку.
+     Отступ сверху больше, чем gap ряда: вплотную к пилюле знак читался её
+     продолжением, а охранное поле вокруг логотипа требует Фонд */
+  .skolkovoLink {
+    display: inline-flex;
     justify-content: center;
-    row-gap: 2px;
-    font-size: 13px;
-  }
-  .skolkovoOrn {
-    padding-left: 0;
-    border-left: none;
+    width: 100%;
+    margin-top: 8px;
   }
 }

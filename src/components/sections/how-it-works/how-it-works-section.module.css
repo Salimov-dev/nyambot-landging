@@ -67,7 +67,9 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+/* Соединительная линия имеет смысл только когда все четыре шага в одном ряду —
+   а это с 992 px; на планшете сетка 2×2 и линия вела бы в пустоту */
+@media (min-width: 992px) {
   .connector {
     display: block;
     position: absolute;

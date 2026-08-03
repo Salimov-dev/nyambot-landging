@@ -102,6 +102,11 @@
   .section {
     padding: 32px 0 64px;
   }
+  /* Текст плашки переносится, и значок сбоку от нескольких строк выглядит
+     съехавшим — на узком экране он ничего не добавляет */
+  .ownDevBadge > span:first-child {
+    display: none;
+  }
   .inner {
     padding: 0 16px;
   }

@@ -12,7 +12,7 @@ import "./globals.css";
  *  обрезается, а обрезанный теряет УТП в середине. */
 const PAGE_TITLE = `${BRAND_CONFIG.name} — один бот на всю сеть в MAX и Telegram`;
 const PAGE_DESCRIPTION =
-  "Один бот на все точки сети и одна база гостей в MAX и Telegram. Гость заказывает без регистрации. Работает с iiko и R-Keeper — и совсем без кассы. Регистрация по почте, 90 дней бесплатно, без карты";
+  "Один бот на все точки сети и одна база гостей в MAX и Telegram. Гость заказывает без регистрации. Работает с iiko и R-Keeper — и совсем без кассы. 90 дней бесплатно. Участник проекта «Сколково»";
 const OG_IMAGE = "/images/og-cover.png";
 
 export const metadata: Metadata = {

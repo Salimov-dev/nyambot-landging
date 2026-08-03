@@ -96,6 +96,14 @@
   display: block;
 }
 
+@media (max-width: 640px) {
+  /* Текст плашки переносится, и галочка сбоку от нескольких строк выглядит
+     съехавшей — на узком экране она ничего не добавляет */
+  .noPos svg {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .section {
     padding: 48px 0;

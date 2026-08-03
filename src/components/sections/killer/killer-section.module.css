@@ -150,6 +150,11 @@
   .section {
     padding: 56px 0 64px;
   }
+  /* Текст плашки переносится, и галочка сбоку от нескольких строк выглядит
+     съехавшей — на узком экране она ничего не добавляет */
+  .pricingNote svg {
+    display: none;
+  }
   .grid {
     grid-template-columns: 1fr;
     gap: 16px;
