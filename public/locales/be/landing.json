@@ -589,9 +589,9 @@
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
-      "yookassa": "ЮКаса",
-      "yandexPay": "Яндэкс.Пэй",
-      "yandexDelivery": "Яндэкс.Дастаўка"
+      "yookassa": "ЮKassa",
+      "yandexPay": "Яндекс.Пэй",
+      "yandexDelivery": "Яндекс.Доставка"
     }
   },
   "forWhom": {
