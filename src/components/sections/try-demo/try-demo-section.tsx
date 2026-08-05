@@ -2,9 +2,9 @@
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Button, Col, Flex, Row, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
+import { ImageWithSkeleton } from "@/components/ui/image-with-skeleton/image-with-skeleton";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { TelegramIcon } from "@/components/ui/messenger-icons/telegram-icon";
 import { MaxIcon } from "@/components/ui/messenger-icons/max-icon";
@@ -126,10 +126,9 @@ export function TryDemoSection() {
                     }}
                   />
                   <PhoneMockup>
-                    <Image
+                    <ImageWithSkeleton
                       src="/images/sections/demo_bot_max.png"
                       alt="MAX демо"
-                      fill
                       sizes="280px"
                       className={styles.phoneScreenImage}
                     />
@@ -195,10 +194,9 @@ export function TryDemoSection() {
                     }}
                   />
                   <PhoneMockup>
-                    <Image
+                    <ImageWithSkeleton
                       src="/images/sections/demo_bot_tg.png"
                       alt="Telegram демо"
-                      fill
                       sizes="280px"
                       className={styles.phoneScreenImage}
                     />
