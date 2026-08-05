@@ -35,6 +35,15 @@ WORKDIR /app
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs
 
+# Серверные переменные нужны и В РАНТАЙМЕ, не только на сборке: страницы
+# юридических документов ревалидируются раз в час уже в контейнере, а форма
+# заявки уходит на главный сервер с сервера лендинга. Без этого повторный
+# поход за документом падал бы «MAIN_SERVER_API_URL не задан».
+ARG MAIN_SERVER_API_URL
+ARG MAIN_SERVER_API_KEY
+ENV MAIN_SERVER_API_URL=$MAIN_SERVER_API_URL
+ENV MAIN_SERVER_API_KEY=$MAIN_SERVER_API_KEY
+
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
