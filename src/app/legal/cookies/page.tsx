@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { BRAND_CONFIG } from "@/config/brand.config";
-import {
-  LEGAL_DOCUMENT,
-  LEGAL_PAGE_REVALIDATE_SECONDS,
-  loadLegalDocument,
-} from "@/lib/legal-document";
+import { LEGAL_DOCUMENT, loadLegalDocument } from "@/lib/legal-document";
 
 export const metadata: Metadata = {
   title: { absolute: `Политика cookie | ${BRAND_CONFIG.name}` },
@@ -14,8 +10,12 @@ export const metadata: Metadata = {
     "Политика использования cookie на сайте Нямбота: какие файлы cookie мы применяем, зачем они нужны и как управлять их настройками.",
 };
 
-/** Документ живёт ОДИН — в источнике на главном сервере (см. lib/legal-document). */
-export const revalidate = LEGAL_PAGE_REVALIDATE_SECONDS;
+/**
+ * Документ живёт ОДИН — в источнике на главном сервере (см. lib/legal-document).
+ * Час, как и у fetch: Next разбирает это значение статически и принимает
+ * только литерал — импортированная константа роняет прод-сборку.
+ */
+export const revalidate = 3600;
 
 export default async function CookiesPage() {
   const content = await loadLegalDocument(LEGAL_DOCUMENT.COOKIES);
