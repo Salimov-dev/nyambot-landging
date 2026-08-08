@@ -281,7 +281,7 @@
             {
               "title": "Admin",
               "points": [
-                "Accept, cancel an order and refund the guest",
+                "Accept and cancel orders, work with statuses",
                 "Assign a courier in one tap — they immediately see the address on the map",
                 "Full order history with every status logged to the minute"
               ]
@@ -308,7 +308,7 @@
       "autopilot": {
         "tag": "Set up without developers",
         "title": "Everything runs itself — and support is right there",
-        "result": "Menu, prices, zones, payment and till are configured in CRM without developers, and online payments and refunds happen automatically through payment integrations. Need help — support will walk you through every step",
+        "result": "Menu, prices, zones, payment and till are configured in CRM without developers. Payments from guests arrive automatically, while refunding money is your decision alone: neither the till nor your staff can send money from your account. Need help — support will walk you through every step",
         "details": {
           "intro": "Nyambot can be fully launched and managed on your own. But independence doesn't mean 'alone': support is ready to step in at any stage.",
           "sections": [
@@ -317,6 +317,7 @@
               "points": [
                 "Menu, prices, delivery zones and promotions configured in CRM yourself",
                 "A new bot is connected with a token right in the CRM",
+                "Refunding a guest — one click, and only by your decision",
                 "The AI assistant in the CRM helps you figure out settings",
                 "Step-by-step documentation from zero to first order"
               ]

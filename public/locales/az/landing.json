@@ -281,7 +281,7 @@
             {
               "title": "Administrator",
               "points": [
-                "Sifarişi qəbul etmək, ləğv etmək və qonağa pul qaytarmaq",
+                "Sifarişin qəbulu və ləğvi, statuslarla iş",
                 "Bir toxunuşla kuryer təyin etmək — o ünvanı dərhal xəritədə görür",
                 "Hər statusun dəqiqəyə qədər qeyd edildiyi sifarişin tam tarixi"
               ]
@@ -308,7 +308,7 @@
       "autopilot": {
         "tag": "Proqramçısız quraşdırılır",
         "title": "Hər şey öz-özünə işləyir — dəstək isə həmişə yaxındır",
-        "result": "Menü, qiymətlər, ərazilər, ödəniş və kassa proqramçısız CRM-də quraşdırılır, onlayn ödənişlər və geri qayıtmalar isə ödəniş sistemləri ilə inteqrasiya vasitəsilə avtomatik gedir. Kömək lazımdır — texniki dəstək hər mərhələdə rəhbərlik edir",
+        "result": "Menü, qiymətlər, ərazilər, ödəniş və kassa proqramçısız CRM-də quraşdırılır. Qonaqlardan ödəniş avtomatik gəlir, pulun qaytarılması isə yalnız sənin qərarındır: nə kassa, nə də işçilər sənin hesabından pul göndərə bilməz. Kömək lazımdır — texniki dəstək hər mərhələdə rəhbərlik edir",
         "details": {
           "intro": "Nyambot tamamilə müstəqil şəkildə başlanıb idarə edilə bilər. Lakin müstəqillik «tənha» anlamında deyil: texniki dəstək hər addımda qoşulmağa hazırdır.",
           "sections": [
@@ -317,6 +317,7 @@
               "points": [
                 "Menü, qiymətlər, çatdırılma əraziləri və aksiyaları CRM-də özünüz quraşdırırsınız",
                 "Yeni bot birbaşa CRM-də tokenlə qoşulur",
+                "Qonağa pulun qaytarılması — bir kliklə və yalnız sənin qərarınla",
                 "CRM-dəki AI-köməkçi tənzimləmələri anlamağa kömək edir",
                 "Sıfırdan ilk sifarişə qədər addım-addım təlimatlar"
               ]

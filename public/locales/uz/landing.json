@@ -281,7 +281,7 @@
             {
               "title": "Administrator",
               "points": [
-                "Buyurtmani qabul qilish, bekor qilish va mehmonlarga pulni qaytarish",
+                "Buyurtmani qabul qilish va bekor qilish, holatlar bilan ishlash",
                 "Kuryerni bir teginishda tayinlash — u manzilni darhol xaritada ko'radi",
                 "Har bir holatni daqiqagacha qayd etgan to'liq buyurtma tarixi"
               ]
@@ -308,7 +308,7 @@
       "autopilot": {
         "tag": "Dasturchilarsiz sozlanadi",
         "title": "Hamma narsa o'zi ishlaydi — va yordam doim yaqinda",
-        "result": "Menyu, narxlar, zonalar, to'lov va kassa dasturchilarsiz CRM da sozlanadi, onlayn to'lovlar va qaytarishlar esa to'lov tizimlari bilan integratsiya orqali avtomatik bo'ladi. Yordam kerak — texnik qo'llab-quvvatlash har bir bosqichda ko'rsatadi",
+        "result": "Menyu, narxlar, zonalar, to'lov va kassani dasturchilarsiz CRM da o'zing sozlaysan. Mehmonlardan to'lov avtomatik keladi, pulni qaytarish esa faqat sening qaroring: uni na kassa, na xodimlar sening hisobingdan yubora oladi. Yordam kerak — texnik qo'llab-quvvatlash har bir bosqichda ko'rsatadi",
         "details": {
           "intro": "Nyambot ni to'liq mustaqil ishga tushirish va boshqarish mumkin. Ammo mustaqillik «yolg'iz» degani emas: texnik qo'llab-quvvatlash har qanday bosqichda ulashishga tayyor.",
           "sections": [
@@ -317,6 +317,7 @@
               "points": [
                 "Menyu, narxlar, yetkazib berish zonalari va aksiyalarni CRM da o'zingiz sozlaysiz",
                 "Yangi bot to'g'ridan-to'g'ri CRM da token bilan ulanadi",
+                "Mehmonga pulni qaytarish — bir bosishda va faqat sening qaroring bilan",
                 "CRM dagi AI-yordamchi sozlamalarni tushunishga yordam beradi",
                 "Noldan birinchi buyurtmaga qadar bosqichma-bosqich hujjatlar"
               ]
