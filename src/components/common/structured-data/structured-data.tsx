@@ -1,6 +1,6 @@
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { LINKS } from "@/config/links.config";
-import { fetchPricingData } from "@/config/pricing.config";
+import { PRICING_PLANS } from "@/config/pricing.config";
 import faqLocale from "../../../../public/locales/ru/landing.json";
 
 type FaqItem = { question: string; answer: string };
@@ -10,14 +10,14 @@ const FAQ_ITEMS = faqLocale.faq.items as FaqItem[];
  * JSON-LD разметка для поисковых систем (schema.org).
  * Organization + WebSite + SoftwareApplication описывают бренд и продукт
  * в терминах нового позиционирования «один канал → вся сеть».
- * Базовая цена берётся из тарифов (fetchPricingData дедуплицируется Next
- * с запросом на странице, отдельного обращения к API не создаёт).
+ * Базовая цена берётся из тарифов — тех же чисел, что видит гость в карточках
+ * (`PRICING_PLANS`), без обращения к API.
  */
-export async function StructuredData() {
+export function StructuredData() {
   const { siteUrl, name, nameEn, supportEmail } = BRAND_CONFIG;
   const logoUrl = `${siteUrl}/images/nyambot_logo_square.png`;
 
-  const { plans } = await fetchPricingData();
+  const plans = PRICING_PLANS;
   const basePlan =
     plans.find((p) => p.months === 1) ??
     plans.reduce((min, p) => (p.priceRub < min.priceRub ? p : min), plans[0]);

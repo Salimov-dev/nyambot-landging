@@ -21,7 +21,7 @@
   "killer": {
     "label": "Asosiysi",
     "title": "Bu yerda nima boshqacha",
-    "subtitle": "Oltita farq — va qilishingiz shart boʻlmagan ishlar",
+    "subtitle": "Sakkizta farq — va qilishingiz shart boʻlmagan ishlar",
     "notPrefix": "Shart emas",
     "items": {
       "network": {
@@ -36,18 +36,28 @@
       },
       "pos": {
         "title": "Kassangiz bilan ham, kassasiz ham ishlaydi",
-        "text": "iiko yoki R-Keeper bor — integratsiyani ulaysiz, menyu va stop-roʻyxatlar kassadan keladi. Kassa boshqa yoki umuman yoʻq — Nyambot menyu, modifikatorlar va sodiqlik dasturini oʻzi yuritadi",
+        "text": "iiko yoki R-Keeper bor — menyu va stop-roʻyxatlar kassadan keladi, mehmonning tarkibga kiritgan oʻzgarishlari esa chekkacha yetib boradi. Kassa yoʻq yoki boshqa — Nyambot menyu va sodiqlik dasturini oʻzi yuritadi",
         "nothing": "yetkazib berish ishlashi uchun kassani almashtirish yoki POS oʻrnatish"
+      },
+      "loyalty": {
+        "title": "Kassangdagi aksiyalar — toʻgʻridan-toʻgʻri messenjerda",
+        "text": "iiko'ni iikoCard bilan ulading — kassaning chegirmalari, bonuslari, sovgʻalari va promokodlari toʻgʻridan-toʻgʻri mehmonda ishlaydi. Dastur butun tarmoq uchun bitta: mehmon istalgan nuqtada yigʻadi va sarflaydi",
+        "nothing": "oʻsha aksiyalarni ikkinchi marta yaratish va kassa bilan bot ajralib ketmasligini kuzatish"
       },
       "delivery": {
         "title": "Oʻz kuryerlaringizsiz yetkazib berish",
-        "text": "Yandex.Dostavka kuryerini «Команда» ilovasidan yoki toʻgʻridan-toʻgʻri kassadan bir teginishda chaqirasiz. Oʻz kuryerlaringiz ham qoʻllab-quvvatlanadi — tanlov sizniki",
+        "text": "Yandex.Dostavka kuryerini «Команда» ilovasidan yoki CRM'dan bir teginishda chaqirasiz. Oʻz kuryerlaringiz ham qoʻllab-quvvatlanadi — tanlov sizniki",
         "nothing": "kuryer yollash va alohida ilova oʻrnatish"
       },
       "email": {
         "title": "Bugunoq sinab koʻrish mumkin — pochta yetarli",
         "text": "CRMda roʻyxatdan oʻtish — pochta va parol. Keyin 90 kun toʻliq kirish: menyu, hududlar va toʻlovni oʻzingiz sozlaysiz, qoʻllab-quvvatlash xohishingizga koʻra javob beradi",
         "nothing": "telefon qoldirish, anketa toʻldirish, menejerni kutish va «joriy etish»ga buyurtma berish"
+      },
+      "money": {
+        "title": "Buyurtma puli — toʻgʻridan-toʻgʻri sizga, qaytarish — faqat sizning qaroringiz bilan",
+        "text": "Mehmon mini-ilovada onlayn toʻlaydi — pul toʻgʻridan-toʻgʻri sizning ЮKassa yoki Yandex.Pay hisobingizga tushadi. Sizning tugmangizsiz bir soʻm ham qaytmaydi: na kassa, na xodim onlayn toʻlovni qaytara oladi",
+        "nothing": "tushumni vositachida ushlab turish va qaytarish sizdan chetlab oʻtishidan qoʻrqish"
       },
       "skolkovo": {
         "title": "«Skolkovo» loyihasi ishtirokchisi",
@@ -73,7 +83,7 @@
       "retention": {
         "tag": "O'z mehmonlaringiz, o'z marjangiz",
         "title": "Takroriy buyurtma — o'z kanalingizga, agregatorga emas",
-        "result": "Agregator har bir buyurtmadan 20–45% oladi. Nyambot takroriy buyurtmalarni komissiyasiz o'z kanalingizga qaytaradi — bir xil mehmonlardan ko'proq daromad, mehmon esa sizning bazangizda qoladi",
+        "result": "Agregator har bir buyurtmadan foiz oladi, Nyambot esa — belgilangan obuna. Takroriy buyurtmalar komissiyasiz o'z kanalingizga qaytadi: bir xil mehmonlardan ko'proq daromad, mehmon esa sizning bazangizda qoladi",
         "details": {
           "intro": "Agregator yangi mehmonlarni jalb qilish uchun yaxshi kanal, undan foydalanish kerak. Biroq takroriy buyurtmalarda u mehmonni o'zida qoldiradi. Vazifa — ushbu lidni o'z kanalingizga o'tkazish va mehmonni shaxsan sizniki qilish.",
           "sections": [
@@ -136,7 +146,7 @@
               "title": "Yuqori o'rtacha chek",
               "points": [
                 "Modifikatorlar va qo'shimchalar: mehmon taomni o'zi yig'adi va ko'proq sotib oladi",
-                "Jadval bo'yicha kombo va biznes-lanchlar",
+                "Kombo-toʻplamlar: Nyambot dagi oʻz toʻplamlari va iiko yoki R-Keeper kassasidan kelganlari — mehmon har guruhdan bitta taom tanlaydi",
                 "Menyuda AI-qidiruv — mehmonlar tezroq topadi va ko'proq buyurtma beradi"
               ]
             },
@@ -196,7 +206,9 @@
             {
               "title": "POS dan sodiqlik va to'lov",
               "points": [
-                "Chegirmalar, bonuslar, sovg'alar va promokodlar to'g'ridan-to'g'ri POS dan — bot va mini-ilovada (iiko da marketing va sodiqlik iikoCard orqali)",
+                "iikoCard bilan iiko: kassaning chegirmalari, bonuslari, sovgʻalari va promokodlari mehmonda botda va mini-ilovada ishlaydi, dastur butun tarmoq uchun bitta",
+                "R-Keeper: buyurtmaga kassaning chegirmalari qoʻllanadi",
+                "Istalgan kassada va kassasiz Nyambot ning oʻz sodiqlik dasturi ishlaydi — ballar, promokodlar, sovgʻalar va aksiyalar",
                 "Barcha to'lov turlari: naqd, karta, onlayn va mehmon ballari",
                 "Aniq vaqtda yetkazib berish yoki o'zi olib ketish — POS ga eksport qilinadi (R-Keeper da Delivery moduli orqali)"
               ]
@@ -214,7 +226,7 @@
       "constructor": {
         "tag": "Taom va kombo konstruktori",
         "title": "Mehmon taomni o'zi yig'adi — oshxona adashib qolmaydi",
-        "result": "Mehmon ingredientlarni qo'shadi yoki olib tashlaydi va kombo-to'plamlarni mini-ilovada to'g'ridan-to'g'ri yig'adi — Nyambot o'zi tanlaydigan rasmlar bilan. Tarkib iiko yoki R-Keeper modifikatorlari sifatida kassaga to'g'ri ketadi, POS bo'lmasa — Nyambot ning o'rnatilgan mexanizmi ishlaydi",
+        "result": "Mehmon ingredientlarni qo'shadi yoki olib tashlaydi va kombo-to'plamlarni mini-ilovada to'g'ridan-to'g'ri yig'adi — Nyambot o'zi tanlaydigan rasmlar bilan. Tarkib istalgan kassa bilan chekkacha yetib boradi — iiko ham, R-Keeper ham, — kassa umuman boʻlmasa, Nyambot ning oʻrnatilgan mexanizmi ishlaydi",
         "details": {
           "intro": "Mehmon menyudan shunchaki pozitsiyani tanlamaydi, balki o'z didi bo'yicha yig'adi — tushunarli rasmlar va oshxona xatolarisiz. Har qanday tarkib o'zgarishi kassaga to'g'ri ketadi.",
           "sections": [
@@ -248,14 +260,14 @@
       "delivery": {
         "tag": "O'z xodimlarisiz yetkazib berish",
         "title": "O'z kuryer xodimlarisiz yetkazib berishni kengaytiring",
-        "result": "Kuryer yollamasdan yetkazib berish zonalari va geografiyasini kengaytiring: Yandex.Delivery ga ariza Crew ilovasidan yoki to'g'ridan-to'g'ri iiko / R-Keeper kassasidan bir teginishda yuboriladi, kuryer esa sizning kuchingiz yetmaydigan joyga yetkazib beradi. Siz haqiqiy yetkazib berishlar uchun to'laysiz, xodimlar uchun emas",
+        "result": "Kuryer yollamasdan yetkazib berish zonalari va geografiyasini kengaytiring: Yandex.Delivery ga ariza Crew ilovasidan yoki CRM'dan bir teginishda yuboriladi, kuryer esa sizning kuchingiz yetmaydigan joyga yetkazib beradi. Siz haqiqiy yetkazib berishlar uchun to'laysiz, xodimlar uchun emas",
         "details": {
           "intro": "Yetkazib berishni kuryer yollamasdan ishga tushirsa bo'ladi: bir teginishda ariza qoldirasiz, Yandex kurieri esa tayyor buyurtmani o'zi olib ketadi.",
           "sections": [
             {
               "title": "Yandex.Delivery orqali yetkazib berish",
               "points": [
-                "Ariza Crew ilovasidan administrator yoki iiko / R-Keeper kassasidan kassir tomonidan yuboriladi",
+                "Arizani administrator Crew ilovasidan yoki CRM'dan yuboradi",
                 "Kuryerni bir marta bosib chaqirasiz va tasdiqlashdan oldin yetkazib berish narxini ko'rasiz — yoki avtomatik chaqiruvni yoqasiz",
                 "Siz haqiqiy yetkazib berishlar uchun to'laysiz, kuryer xodimlari uchun emas"
               ]
@@ -418,7 +430,7 @@
   "security": {
     "label": "Xavfsizlik",
     "title": "Ma'lumotlaringiz himoyalangan",
-    "subtitle": "Rossiya Federatsiyasining «Shaxsiy ma'lumotlar to'g'risida»gi 152-ФЗ qonuniga rioya qilamiz. Ma'lumotlar Rossiyada saqlanadi, himoyalangan kanallar orqali uzatiladi va uchinchi shaxslarga berilmaydi",
+    "subtitle": "Rossiya Federatsiyasining «Shaxsiy ma'lumotlar to'g'risida»gi 152-ФЗ qonuniga rioya qilamiz. Ma'lumotlar Rossiyada saqlanadi va himoyalangan kanallar orqali faqat buyurtmani bajarish uchun zarur bo'lganlarga uzatiladi",
     "imageAlt": "Nyambot ma'lumotlari xavfsizligi — 152-ФЗ ga muvofiqlik",
     "items": {
       "fz152": {
@@ -446,8 +458,8 @@
         "description": "Muntazam tekshiruvlar, xavfsizlik yangilanishlari va kirishni boshqarish"
       },
       "noThirdParty": {
-        "title": "Uchinchi shaxslarsiz",
-        "description": "Mehmonlar ma'lumotlari muassasaga tegishli — biz ularni sotmaymiz va ulashmaymiz"
+        "title": "Ma'lumotlar — muassasaniki",
+        "description": "Mehmonlar ma'lumotlari muassasaga tegishli. Biz ularni sotmaymiz va buyurtmani bajaruvchilardan — kassa, yetkazib berish xizmati va to'lov provayderidan — boshqa hech kimga bermaymiz"
       }
     },
     "chips": {
@@ -490,7 +502,12 @@
     "emailCta": "Pochta",
     "freeTrial": "0 ₽ · birinchi 90 kun",
     "connectTitle": "Tizimga ulaysan",
-    "connectItems": ["1 savdo nuqtasi", "MAXda 1 bot", "Telegramda 1 bot"]
+    "connectItems": [
+      "1 savdo nuqtasi",
+      "MAXda 1 bot",
+      "Telegramda 1 bot",
+      "Menyuda 200 tagacha pozitsiya"
+    ]
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar",
@@ -523,6 +540,14 @@
         "answer": "Ha. Nyambot iiko va R-keeper bilan integratsiyalanadi: menyu, narxlar, stop-ro'yxatlar va buyurtmalar avtomatik sinxronlanadi — messenjerdan kelgan buyurtma kassada ro'yxatga olinadi va oshxonaga yuboriladi. Nyambot POS'siz ham to'liq mustaqil ishlaydi"
       },
       {
+        "question": "Kassadagi aksiyalarim va bonuslarim botda ishlaydimi?",
+        "answer": "Ha, agar bu iikoCard bilan iiko boʻlsa: dasturingizning chegirmalari, bonuslari, sovgʻalari va promokodlari buyurtmaga toʻgʻridan-toʻgʻri botda va mini-ilovada qoʻllanadi, dastur esa butun tarmoq uchun bitta boʻlib qoladi — mehmon istalgan nuqtada yigʻadi va sarflaydi. R-Keeper da buyurtmaga kassaning chegirmalari qoʻllanadi. Istalgan kassada, shuningdek umuman kassasiz ham Nyambot ning oʻz sodiqlik dasturi ishlaydi: ballar, promokodlar, sovgʻalar va kun hamda soatlar boʻyicha aksiyalar"
+      },
+      {
+        "question": "Kassam boʻlsa, mehmon ingredientlarni olib tashlashi yoki qoʻshishi mumkinmi?",
+        "answer": "Ha, istalgan kassada. Mehmon taomni toʻgʻridan-toʻgʻri uning kartasida yigʻadi — piyozni olib tashlaydi, pishloq yoki ikkilangan kotlet qoʻshadi, — va tarkib kassa chop etadigan koʻrinishda chekkacha yetib boradi: iiko da modifikatorlar bilan, R-Keeper da taom ostidagi tarkib satri bilan. Oshxona mehmon tanlagan narsani aynan koʻradi"
+      },
+      {
         "question": "Mehmon Telegram'da buyurtma bergan, endi MAX'dan kirdi — tarix va ballar saqlanadimi?",
         "answer": "Ha. Mehmon telefon raqami bo'yicha aniqlanadi, shuning uchun Telegram'dagi va MAX'dagi buyurtma — bir xil mehmon: bitta buyurtmalar tarixi, bitta ballar balansi, o'sha aksiyalar. Bot ikkala messenjerga ulanadi, mehmonlar bazasi va kabinet esa umumiy"
       },
@@ -532,7 +557,7 @@
       },
       {
         "question": "Kuryerlarsiz foydalanish mumkinmi?",
-        "answer": "Ha. Faqat o'z-o'zidan olib ketish yoki zalda xizmat ko'rsatishni sozlash mumkin — yetkazib berish majburiy emas. Agar yetkazib berish kerak bo'lsa-yu, o'z kuryeringiz bo'lmasa — Yandex.Yetkazib berishni ulang: buyurtma tayyor bo'lishi bilan Nyambot o'zi so'rov yuboradi va kuryer kelib oladi. Crew ilovasi va o'z kuryer moduli ham tarifga kiradi, lekin ulardan foydalanish majburiy emas"
+        "answer": "Ha. Faqat oʻzi olib ketish yoki zalda xizmat koʻrsatishni sozlash mumkin. Agar yetkazib berish kerak boʻlsa-yu, oʻz kuryeringiz boʻlmasa — Yandex.Yetkazib berishni ulang: arizani «Команда» ilovasidan yoki CRM'dan bir teginishda yuborasiz va kuryer buyurtma uchun keladi. Oʻz kuryerlaringiz ham qoʻllab-quvvatlanadi — yetkazib berish usulini oʻzingiz tanlaysiz"
       },
       {
         "question": "Sinov davri qanday ishlaydi?",
@@ -572,7 +597,8 @@
     "offer": "Ommaviy oferta",
     "cookies": "Cookies siyosati",
     "allRights": "Barcha huquqlar himoyalangan",
-    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ"
+    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ",
+    "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram va MAX nomlari va logotiplari o'z huquq egalariga tegishli bo'lib, moslikni ko'rsatish uchun ishlatilgan"
   },
   "video": {
     "socialHeading": "Nyambot haqida ko'proq videolar — ijtimoiy tarmoqlarimizda"
@@ -637,7 +663,7 @@
       }
     },
     "riskTitle": "Xavfsiz sinab ko'ring",
-    "riskText": "90 kun bepul, kartasiz. To'g'ri kelmadi — shunchaki to'lamaysan. Qanday sozlash va menyuni ko'chirishni aytib beramiz.",
+    "riskText": "90 kun bepul, kartasiz. To'g'ri kelmadi — shunchaki to'lamaysan. Qanday sozlash va nimadan boshlashni aytib beramiz",
     "riskCta": "Bepul sinab ko'rish"
   }
 }

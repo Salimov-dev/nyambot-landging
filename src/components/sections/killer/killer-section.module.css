@@ -47,10 +47,22 @@
   margin: 0 auto;
 }
 
+/* Шесть колонок вместо трёх — чтобы последний ряд не оставлял пустоту.
+   Карточек восемь: обычная занимает 2 колонки (три в ряд), а две последние —
+   по 3, то есть делят финальный ряд пополам. При трёх колонках восьмая
+   карточка вставала одна, и справа зияла дыра в треть ширины. */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
+}
+
+.grid > * {
+  grid-column: span 2;
+}
+
+.grid > *:nth-last-child(-n + 2) {
+  grid-column: span 3;
 }
 
 .card {
@@ -141,8 +153,14 @@
 }
 
 @media (max-width: 992px) {
+  /* Восемь карточек в два столбца ложатся ровно — деление на колонки-шестые
+     и растяжка последнего ряда здесь только мешали бы */
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .grid > *,
+  .grid > *:nth-last-child(-n + 2) {
+    grid-column: auto;
   }
 }
 

@@ -21,7 +21,7 @@
   "killer": {
     "label": "Əsas məqamlar",
     "title": "Burada nə fərqlidir",
-    "subtitle": "Altı fərq — və etməli olmayacağın işlər",
+    "subtitle": "Səkkiz fərq — və etməli olmayacağın işlər",
     "notPrefix": "Lazım deyil",
     "items": {
       "network": {
@@ -36,18 +36,28 @@
       },
       "pos": {
         "title": "Kassanla da işləyir, kassasız da",
-        "text": "iiko və ya R-Keeper var — inteqrasiyanı qoşursan, menyu və stop-siyahılar kassadan gəlir. Kassa başqadır və ya heç yoxdur — Nyambot menyunu, modifikatorları və loyallığı özü aparır",
+        "text": "iiko və ya R-Keeper var — menyu və stop-siyahılar kassadan gəlir, qonağın tərkibə etdiyi dəyişikliklər isə çekə çatır. Kassa yoxdur və ya başqadır — Nyambot menyunu və loyallığı özü aparır",
         "nothing": "çatdırılma işləsin deyə kassanı dəyişmək və ya POS quraşdırmaq"
+      },
+      "loyalty": {
+        "title": "Kassandakı aksiyalar — birbaşa messencerdə",
+        "text": "iiko-nu iikoCard ilə qoşdun — kassanın endirimləri, bonusları, hədiyyələri və promokodları birbaşa qonaqda işləyir. Proqram bütün şəbəkə üçün birdir: qonaq istənilən nöqtədə yığır və xərcləyir",
+        "nothing": "eyni aksiyaları ikinci dəfə qurmaq və kassa ilə botun ayrılmamasına göz qoymaq"
       },
       "delivery": {
         "title": "Öz kuryer heyətin olmadan çatdırılma",
-        "text": "Yandex.Çatdırılma kuryerini «Komanda» tətbiqindən və ya birbaşa kassadan bir toxunuşla çağırırsan. Öz kuryerlərin də dəstəklənir — seçim səndədir",
+        "text": "Yandex.Çatdırılma kuryerini «Komanda» tətbiqindən və ya CRM-dən bir toxunuşla çağırırsan. Öz kuryerlərin də dəstəklənir — seçim səndədir",
         "nothing": "kuryer işə götürmək və ayrıca tətbiq quraşdırmaq"
       },
       "email": {
         "title": "Bu gün yoxlaya bilərsən — e-poçt kifayətdir",
         "text": "CRM-də qeydiyyat — e-poçt və şifrə. Sonra 90 gün tam giriş: menyunu, zonaları və ödənişi özün qurursan, dəstək istədiyin an cavab verir",
         "nothing": "telefon qoymaq, anket doldurmaq, menecer gözləmək və «tətbiq etmə» sifariş etmək"
+      },
+      "money": {
+        "title": "Sifarişin pulu — birbaşa sənə, geri qaytarma — yalnız sənin qərarınla",
+        "text": "Qonaq mini-tətbiqdə onlayn ödəyir — pul birbaşa sənin ЮKassa və ya Yandex.Pay hesabına gedir. Sənin düymən olmadan bir qəpik də geri qayıtmır: nə kassa, nə işçi onlayn ödənişi geri qaytara bilməz",
+        "nothing": "gəliri vasitəçidə saxlamaq və geri qaytarmanın səndən yan keçməsindən qorxmaq"
       },
       "skolkovo": {
         "title": "«Skolkovo» layihəsinin iştirakçısı",
@@ -73,7 +83,7 @@
       "retention": {
         "tag": "Öz qonaqların, öz marginin",
         "title": "Təkrar sifariş — aqreqatora deyil, öz kanalına",
-        "result": "Aqreqator hər sifarişdən 20–45% alır. Nyambot təkrar sifarişləri komissiyasız sizin kanalınıza qaytarır — eyni qonaqlardan daha çox gəlir, qonaq isə sizin bazanızda qalır",
+        "result": "Aqreqator hər sifarişdən faiz alır, Nyambot isə — sabit abunə. Təkrar sifarişlər komissiyasız sizin kanalınıza qayıdır: eyni qonaqlardan daha çox gəlir, qonaq isə sizin bazanızda qalır",
         "details": {
           "intro": "Aqreqator yeni qonaq cəlb etmək üçün yaxşı kanaldır və ondan istifadə etmək lazımdır. Lakin təkrar sifarişlərdə o qonağı özü üçün saxlayır. Məqsəd — bu lidi öz kanalınıza alıb, qonağı şəxsən özünüzə bağlamaq.",
           "sections": [
@@ -136,7 +146,7 @@
               "title": "Orta çekin yüksəlməsi",
               "points": [
                 "Modifikatorlar və əlavələr: qonaq yeməyi özünə uyğun yığır və daha çox alır",
-                "Cədvələ görə kombo və biznes-lançlar",
+                "Kombo dəstlər: Nyambot-un öz dəstləri və iiko yaxud R-Keeper kassasından gələnlər — qonaq hər qrupdan bir yemək seçir",
                 "Menüdə axtarış — qonaq daha tez tapır və daha çox sifariş verir"
               ]
             },
@@ -196,7 +206,9 @@
             {
               "title": "POS-dan loyallıq və ödəniş",
               "points": [
-                "POS-dan endirimlər, bonuslar, hədiyyələr və promokodlar — bot və mini-tətbiqdə (iiko-da marketinq və loyallıq iikoCard vasitəsilə)",
+                "iikoCard ilə iiko: kassanın endirimləri, bonusları, hədiyyələri və promokodları qonaqda botda və mini-tətbiqdə işləyir, proqram bütün şəbəkə üçün birdir",
+                "R-Keeper: sifarişə kassanın endirimləri tətbiq olunur",
+                "İstənilən kassada və kassasız Nyambot-un öz loyallıq proqramı işləyir — xallar, promokodlar, hədiyyələr və aksiyalar",
                 "Bütün ödəniş növləri: nağd, kart, onlayn və qonaq xalları",
                 "Dəqiq vaxtda çatdırılma və ya götürmə — POS-a göndərilir (R-Keeper-də Delivery modulu vasitəsilə)"
               ]
@@ -214,7 +226,7 @@
       "constructor": {
         "tag": "Yemək və kombo konstruktoru",
         "title": "Qonaq yeməyi özünə uyğun yığır — mətbəx çaşmır",
-        "result": "Qonaq inqredientlər əlavə edib çıxararaq, kombo dəstlərini birbaşa mini-tətbiqdə yığır — Nyambot-un özünün seçdiyi şəkillərlə. Tərkib iiko və ya R-Keeper-in düzgün modifikatorları kimi kassaya çatır, POS olmadıqda isə Nyambot-un daxili mühərriki işləyir",
+        "result": "Qonaq inqredientlər əlavə edib çıxararaq, kombo dəstlərini birbaşa mini-tətbiqdə yığır — Nyambot-un özünün seçdiyi şəkillərlə. Tərkib istənilən kassa ilə çekə çatır — həm iiko, həm R-Keeper — kassa ümumiyyətlə yoxdursa, Nyambot-un daxili mühərriki işləyir",
         "details": {
           "intro": "Qonaq menüdən yalnız mövqe seçmir, onu öz zövqünə görə yığır — aydın şəkillərlə və mətbəx səhvləri olmadan. Tərkibdəki istənilən dəyişiklik düzgün kassaya çatır.",
           "sections": [
@@ -248,14 +260,14 @@
       "delivery": {
         "tag": "Öz işçilərinsiz çatdırılma",
         "title": "Öz kuryer işçilərinsiz çatdırılma ərazinizi genişləndirin",
-        "result": "Kuryerləri işə götürmədən əraziləri və çatdırılma coğrafiyasını genişləndirin: Komanda tətbiqindən və ya iiko / R-Keeper kassasından bir toxunuşla sorğu Yandex.Dostavka-ya göndərilir, kuryer isə sizin gücünüzün çatmadığı yerə çatdırır. Siz yalnız real çatdırılmalar üçün ödəyirsiniz, işçi heyəti üçün deyil",
+        "result": "Kuryerləri işə götürmədən əraziləri və çatdırılma coğrafiyasını genişləndirin: Komanda tətbiqindən və ya CRM-dən bir toxunuşla sorğu Yandex.Dostavka-ya göndərilir, kuryer isə sizin gücünüzün çatmadığı yerə çatdırır. Siz yalnız real çatdırılmalar üçün ödəyirsiniz, işçi heyəti üçün deyil",
         "details": {
           "intro": "Çatdırılmaya kuryerləri işə götürmədən başlamaq olar: bir toxunuşla sorğu qoyun, Yandex kuryeri isə hazır sifarişi özü götürür.",
           "sections": [
             {
               "title": "Yandex.Dostavka vasitəsilə çatdırılma",
               "points": [
-                "Sorğunu administrator Komanda tətbiqindən və ya kassir iiko / R-Keeper kassasından qoyur",
+                "Sorğunu administrator Komanda tətbiqindən və ya CRM-dən yerləşdirir",
                 "Kuryeri bir toxunuşla çağırırsınız və təsdiqdən əvvəl çatdırılma qiymətini görürsünüz — və ya avtomatik çağırışı aktiv edirsiniz",
                 "Siz yalnız real çatdırılmalar üçün ödəyirsiniz, kuryer heyəti üçün deyil"
               ]
@@ -418,7 +430,7 @@
   "security": {
     "label": "Təhlükəsizlik",
     "title": "Məlumatlarınız qorunur",
-    "subtitle": "Rusiya Federasiyasının «Şəxsi məlumatlar haqqında» 152-ФЗ saylı qanununa uyğunuq. Məlumatlar Rusiyada saxlanılır, qorunan kanallarla ötürülür və üçüncü şəxslərə verilmir",
+    "subtitle": "Rusiya Federasiyasının «Şəxsi məlumatlar haqqında» 152-ФЗ saylı qanununa uyğunuq. Məlumatlar Rusiyada saxlanılır və qorunan kanallarla yalnız sifarişin yerinə yetirilməsi üçün zəruri olanlara ötürülür",
     "imageAlt": "Nyambot məlumat təhlükəsizliyi — 152-ФЗ-ə uyğunluq",
     "items": {
       "fz152": {
@@ -446,8 +458,8 @@
         "description": "Müntəzəm yoxlamalar, təhlükəsizlik yeniləmələri və giriş nəzarəti"
       },
       "noThirdParty": {
-        "title": "Üçüncü tərəflər yoxdur",
-        "description": "Qonaq məlumatları müəssisəyə aiddir — biz onları satmırıq və paylaşmırıq"
+        "title": "Məlumatlar — müəssisənindir",
+        "description": "Qonaq məlumatları müəssisəyə aiddir. Biz onları satmırıq və sifarişi yerinə yetirənlərdən — kassa, çatdırılma xidməti və ödəniş provayderindən — başqa heç kimə vermirik"
       }
     },
     "chips": {
@@ -490,7 +502,12 @@
     "emailCta": "Poçt",
     "freeTrial": "0 ₽ · ilk 90 gün",
     "connectTitle": "Sistemə qoşursan",
-    "connectItems": ["1 ticarət nöqtəsi", "MAX-da 1 bot", "Telegram-da 1 bot"]
+    "connectItems": [
+      "1 ticarət nöqtəsi",
+      "MAX-da 1 bot",
+      "Telegram-da 1 bot",
+      "Menyuda 200-ə qədər mövqe"
+    ]
   },
   "faq": {
     "label": "Tez-tez verilən suallar",
@@ -523,6 +540,14 @@
         "answer": "Bəli. Nyambot iiko və R-keeper ilə inteqrasiya olunur: menyu, qiymətlər, stop-siyahılar və sifarişlər avtomatik sinxronlaşır — messendcerdən gələn sifariş kassada qeydə alınır və mətbəxə göndərilir. Nyambot POS olmadan da tam müstəqil işləyir"
       },
       {
+        "question": "Kassadakı aksiyalarım və bonuslarım botda işləyəcəkmi?",
+        "answer": "Bəli, əgər bu iikoCard ilə iiko-dursa: proqramınızın endirimləri, bonusları, hədiyyələri və promokodları sifarişə birbaşa botda və mini-tətbiqdə tətbiq olunur, proqram isə bütün şəbəkə üçün bir qalır — qonaq istənilən nöqtədə yığır və xərcləyir. R-Keeper-də sifarişə kassanın endirimləri tətbiq olunur. İstənilən kassada, eləcə də kassasız Nyambot-un öz loyallıq proqramı işləyir: xallar, promokodlar, hədiyyələr və günlər ilə saatlar üzrə aksiyalar"
+      },
+      {
+        "question": "Kassam varsa, qonaq inqredient çıxara və ya əlavə edə biləcəkmi?",
+        "answer": "Bəli, istənilən kassada. Qonaq yeməyi birbaşa onun kartında yığır — soğanı çıxarır, pendir və ya ikiqat kotlet əlavə edir — və tərkib kassanın çap etdiyi formada çekə çatır: iiko-da modifikatorlarla, R-Keeper-də yeməyin altında tərkib sətri ilə. Mətbəx qonağın seçdiyini olduğu kimi görür"
+      },
+      {
         "question": "Qonaq Telegram-da sifariş verib, sonra MAX-dan daxil oldu — tarixçə və ballar saxlanacaq?",
         "answer": "Bəli. Qonaq telefon nömrəsi ilə tanınır, ona görə Telegram-dan və MAX-dan gələn sifarişlər eyni qonağa aiddir: bir sifariş tarixçəsi, bir bal balansı, eyni aksiyalar. Bot hər iki messencerə qoşulur, qonaq bazası və kabinet isə ümumidir"
       },
@@ -532,7 +557,7 @@
       },
       {
         "question": "Kuryersiz istifadə etmək olarmı?",
-        "answer": "Bəli. Yalnız özü götürmə və ya zalda xidmət qura bilərsiniz — çatdırılma məcburi deyil. Çatdırılma lazımdırsa, amma öz kuryeriniz yoxdursa — Yandex.Çatdırılmanı qoşun: sifariş hazır olan kimi Nyambot özü sorğu yerləşdirir və kuryer onun üçün gəlir. Crew tətbiqi və öz kuryer modulunuz da tarifə daxildir, amma istifadəsi məcburi deyil"
+        "answer": "Bəli. Yalnız özü götürmə və ya zalda xidmət qura bilərsiniz. Çatdırılma lazımdırsa, amma öz kuryeriniz yoxdursa — Yandex.Çatdırılmanı qoşun: sorğunu «Komanda» tətbiqindən və ya CRM-dən bir toxunuşla yerləşdirirsiniz və kuryer sifariş üçün gəlir. Öz kuryerləriniz də dəstəklənir — çatdırılma üsulunu özünüz seçirsiniz"
       },
       {
         "question": "Sınaq dövrü necə işləyir?",
@@ -572,7 +597,8 @@
     "offer": "İctimai oferta",
     "cookies": "Cookies siyasəti",
     "allRights": "Bütün hüquqlar qorunur",
-    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ"
+    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
+    "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram və MAX adları və loqotipləri onların hüquq sahiblərinə məxsusdur və uyğunluğu göstərmək üçün istifadə olunub"
   },
   "video": {
     "socialHeading": "Nyambot haqqında daha çox video — sosial mediamızda"
@@ -637,7 +663,7 @@
       }
     },
     "riskTitle": "Risksiz sınayın",
-    "riskText": "90 gün pulsuz, kart bağlamadan. Uyğun gəlmədi — sadəcə ödəmirsən. Necə quraşdırmağı və menyunu köçürməyi göstərərik.",
+    "riskText": "90 gün pulsuz, kart bağlamadan. Uyğun gəlmədi — sadəcə ödəmirsən. Necə quraşdırmağı və nədən başlamağı göstərərik",
     "riskCta": "Pulsuz sınayın"
   }
 }

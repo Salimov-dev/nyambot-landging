@@ -21,7 +21,7 @@
   "killer": {
     "label": "Key points",
     "title": "What works differently here",
-    "subtitle": "Six differences — and the things you won't have to do",
+    "subtitle": "Eight differences — and the things you won't have to do",
     "notPrefix": "No need to",
     "items": {
       "network": {
@@ -36,18 +36,28 @@
       },
       "pos": {
         "title": "Works with your POS — and without one",
-        "text": "Got iiko or R-Keeper — connect the integration and the menu and stop lists come from the POS. A different POS or none at all — Nyambot runs the menu, modifiers and loyalty on its own",
+        "text": "Got iiko or R-Keeper — menu and stop lists come from the till, and the guest's changes to a dish reach the receipt. No till or a different one — Nyambot runs the menu and loyalty on its own",
         "nothing": "replace your POS or install one just to get delivery running"
+      },
+      "loyalty": {
+        "title": "Your till's promos — right in the messenger",
+        "text": "Connect iiko with iikoCard and the till's discounts, bonuses, gifts and promo codes work right for the guest. One programme across the whole chain: earn and spend at any venue",
+        "nothing": "setting the same promos up a second time and watching the till and the bot drift apart"
       },
       "delivery": {
         "title": "Delivery without couriers of your own",
-        "text": "Call a Yandex.Delivery courier in one tap from the «Crew» app or straight from the POS. Your own couriers are supported too — it's your call",
+        "text": "Call a Yandex.Delivery courier in one tap from the «Crew» app or in the CRM. Your own couriers are supported too — it's your call",
         "nothing": "hire couriers or install a separate app"
       },
       "email": {
         "title": "You can try it today, with just an email",
         "text": "Signing up for the CRM takes an email and a password. Then 90 days of full access: set up the menu, zones and payments yourself, support answers whenever you ask",
         "nothing": "leave a phone number, fill in forms, wait for a manager or pay for «onboarding»"
+      },
+      "money": {
+        "title": "Order money goes straight to you — refunds only by your call",
+        "text": "The guest pays online right in the mini-app — the money goes straight to your YooKassa or Yandex.Pay account. Not a rouble goes back without your button: neither the till nor an employee can refund an online payment",
+        "nothing": "keeping your revenue with a middleman and fearing a refund slips past you"
       },
       "skolkovo": {
         "title": "Skolkovo project participant",
@@ -73,7 +83,7 @@
       "retention": {
         "tag": "Your guests, your margin",
         "title": "Repeat orders go to your channel, not the aggregator",
-        "result": "Aggregators charge 20–45% per order. Nyambot brings repeat orders back to your channel commission-free — more revenue from the same guests, and the guest stays in your database",
+        "result": "Aggregators take a percentage of every order; Nyambot takes a fixed subscription. Repeat orders come back to your own channel commission-free: more revenue from the same guests, and the guest stays in your database",
         "details": {
           "intro": "An aggregator is a valid channel for attracting new guests. But on repeat orders it keeps the guest for itself. The goal is to capture that lead into your own channel and make the guest personally yours.",
           "sections": [
@@ -136,7 +146,7 @@
               "title": "Higher average order",
               "points": [
                 "Modifiers and add-ons: guest builds the dish and buys more",
-                "Combos and business lunches on schedule",
+                "Combo sets: your own in Nyambot and from the iiko or R-Keeper till — the guest picks a dish in each group",
                 "AI menu search — guests find items faster and order more"
               ]
             },
@@ -196,7 +206,9 @@
             {
               "title": "Loyalty and payment from POS",
               "points": [
-                "Discounts, bonuses, gifts and promo codes directly from POS — in the bot and mini-app (in iiko, marketing and loyalty run through iikoCard)",
+                "iiko with iikoCard: the till's discounts, bonuses, gifts and promo codes work for the guest in the bot and mini-app, one programme across the whole chain",
+                "R-Keeper: the till's discounts apply to the order",
+                "With any till and without one, Nyambot's own loyalty programme works — points, promo codes, gifts and promos",
                 "All payment types: cash, card, online and guest loyalty points",
                 "Delivery or pickup at exact time — exported to POS (in R-Keeper via the Delivery module)"
               ]
@@ -214,7 +226,7 @@
       "constructor": {
         "tag": "Dish and combo builder",
         "title": "Guest builds the dish their way — kitchen doesn't get confused",
-        "result": "Guest adds or removes ingredients and assembles combo sets right in the mini-app — with images Nyambot picks automatically. The composition goes to the till as correct iiko or R-Keeper modifiers, and if there's no POS — Nyambot's built-in engine handles it",
+        "result": "Guest adds or removes ingredients and assembles combo sets right in the mini-app — with images Nyambot picks automatically. The composition reaches the receipt with any till — iiko and R-Keeper alike — and with no till at all Nyambot's built-in engine handles it",
         "details": {
           "intro": "The guest doesn't just choose a menu item, but assembles it to their taste — with clear images and no kitchen errors. Any ingredient change is correctly sent to the till.",
           "sections": [
@@ -248,14 +260,14 @@
       "delivery": {
         "tag": "Delivery without own staff",
         "title": "Scale delivery without your own courier staff",
-        "result": "Expand delivery zones and geography without hiring couriers: a Yandex.Delivery request is made with one tap from the Crew app or directly from the iiko / R-Keeper till, and a courier delivers where your own team can't reach. You pay per actual delivery, not for a full-time headcount",
+        "result": "Expand delivery zones and geography without hiring couriers: a Yandex.Delivery request is placed with one tap from the Crew app or in the CRM, and a courier delivers where your own team can't reach. You pay per actual delivery, not for a full-time headcount",
         "details": {
           "intro": "You can launch delivery without hiring couriers: place a request with one tap, and a Yandex courier picks up the ready order.",
           "sections": [
             {
               "title": "Delivery via Yandex.Delivery",
               "points": [
-                "Request placed by an admin from the Crew app or a cashier from the iiko / R-Keeper till",
+                "Request placed by an admin from the Crew app or in the CRM",
                 "Call a courier in one tap and see the delivery price before confirming — or enable auto-dispatch",
                 "You pay per actual deliveries, not for courier headcount"
               ]
@@ -418,7 +430,7 @@
   "security": {
     "label": "Security",
     "title": "Your data is protected",
-    "subtitle": "We comply with Russian Federal Law No. 152-FZ on Personal Data. Data is stored in Russia, transmitted over secure channels, and never shared with third parties",
+    "subtitle": "We comply with Russian Federal Law No. 152-FZ on Personal Data. Data is stored in Russia and transmitted over secure channels — only to those without whom the order cannot be fulfilled",
     "imageAlt": "Nyambot data security — compliance with 152-FZ",
     "items": {
       "fz152": {
@@ -446,8 +458,8 @@
         "description": "Regular audits, security updates and access control"
       },
       "noThirdParty": {
-        "title": "No third parties",
-        "description": "Guest data belongs to the venue — we don't sell or share it"
+        "title": "The data is the venue's",
+        "description": "Guest data belongs to the venue. We never sell it and never pass it to anyone except those fulfilling the order: the POS, the courier service and the payment provider"
       }
     },
     "chips": {
@@ -490,7 +502,12 @@
     "emailCta": "Email",
     "freeTrial": "0 ₽ · first 90 days",
     "connectTitle": "You connect to the system",
-    "connectItems": ["1 venue", "1 bot in MAX", "1 bot in Telegram"]
+    "connectItems": [
+      "1 venue",
+      "1 bot in MAX",
+      "1 bot in Telegram",
+      "Up to 200 menu items"
+    ]
   },
   "faq": {
     "label": "FAQ",
@@ -523,6 +540,14 @@
         "answer": "Yes. Nyambot integrates with iiko and R-keeper: menu, prices, stop-lists and orders sync automatically — an order from the messenger is rung up in the till and sent to the kitchen. Nyambot also works fully on its own, without a POS"
       },
       {
+        "question": "Will my promos and bonuses from the till work in the bot?",
+        "answer": "Yes, if it's iiko with iikoCard: your programme's discounts, bonuses, gifts and promo codes apply to the order right in the bot and mini-app, and the programme stays one across the whole chain — the guest earns and spends at any venue. On R-Keeper the till's discounts apply to the order. And with any till, as well as with none at all, Nyambot's own loyalty programme works: points, promo codes, gifts and promos by day and hour"
+      },
+      {
+        "question": "Can a guest remove or add ingredients if I have a till?",
+        "answer": "Yes, with any till. The guest builds the dish right in its card — removes onion, adds cheese or a double patty — and the composition reaches the receipt exactly as the till prints it: as modifiers in iiko, as a composition line under the dish in R-Keeper. The kitchen sees exactly what the guest chose"
+      },
+      {
         "question": "A guest ordered in Telegram and came back from MAX — are their history and points kept?",
         "answer": "Yes. Guests are identified by phone number, so an order from Telegram and an order from MAX belong to the same guest: one order history, one points balance, the same promotions. The bot is connected to both messengers, while the guest base and the CRM account are shared"
       },
@@ -532,7 +557,7 @@
       },
       {
         "question": "Can Nyambot be used without couriers?",
-        "answer": "Yes. You can set up pickup only or dine-in service — delivery is optional. And if you need delivery but have no couriers of your own, connect Yandex.Delivery: Nyambot places the request once the order is ready and a courier comes for it. The Crew app and your own courier module are included in the plan too, but optional"
+        "answer": "Yes. You can set up pickup only or dine-in service. And if you need delivery but have no couriers of your own, connect Yandex.Delivery: you place the request in one tap from the Crew app or in the CRM, and a courier comes for the order. Your own couriers are supported too — the delivery method is your call"
       },
       {
         "question": "How does the trial period work?",
@@ -572,7 +597,8 @@
     "offer": "Public Offer",
     "cookies": "Cookie Policy",
     "allRights": "All rights reserved",
-    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ"
+    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
+    "trademarks": "The names and logos of iiko, R-Keeper, YooKassa, Yandex Pay, Yandex Delivery, Telegram and MAX belong to their respective owners and are used to indicate compatibility"
   },
   "video": {
     "socialHeading": "More videos about how Nyambot works — on our social media"
@@ -637,7 +663,7 @@
       }
     },
     "riskTitle": "Try it risk-free",
-    "riskText": "90 days free, no card required. Not a fit — you simply don't pay. We'll show you how to set things up and move your menu.",
+    "riskText": "90 days free, no card required. Not a fit — you simply don't pay. We'll show you how to set things up and where to start",
     "riskCta": "Try for free"
   }
 }

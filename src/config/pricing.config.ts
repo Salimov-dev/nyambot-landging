@@ -1,7 +1,24 @@
 import type { PricingPlan } from "@/types/landing.types";
 
-// Фоллбэки — используются если API недоступен
-export const FALLBACK_PRICING_PLANS: PricingPlan[] = [
+/**
+ * Тарифы и состав тарифа стоят на лендинге ЧИСЛАМИ, а не тянутся с сервера —
+ * решение Руслана 12.08.2026.
+ *
+ * Почему так. Раньше страница ходила в главный сервер за планами и лимитами:
+ * лимиты она запрашивала двумя запросами и выбрасывала ответ (в разметку они не
+ * попадали ни разу), а фолбэки на случай молчания сервера расходились с базой —
+ * 10 ботов, 22 ТТ и 125 позиций против фактических 2 / 1 / 200. То есть один
+ * недоступный API превращал витрину цен в неверную. Цена — обещание публичной
+ * оферты, и она не должна зависеть от того, ответил ли сервер за 3 секунды.
+ *
+ * 🔴 Сверено с `license_plans` 12.08.2026: 4 900 / 13 200 / 24 900 / 44 100 ₽.
+ * Меняются тарифы в СРМ — эти числа правятся здесь тем же заходом, иначе
+ * лендинг обещает одну цену, а СРМ выставляет другую.
+ *
+ * Состав тарифа (1 ТТ, 1 бот MAX, 1 бот Telegram, до 200 позиций меню) живёт
+ * текстом в `pricing.connectItems` локали — там же, где его читает гость.
+ */
+export const PRICING_PLANS: PricingPlan[] = [
   {
     code: "license-1-month",
     months: 1,
@@ -35,157 +52,3 @@ export const FALLBACK_PRICING_PLANS: PricingPlan[] = [
     isPopular: false,
   },
 ];
-
-export const FALLBACK_LICENSE_LIMITS = {
-  maxBotsCount: 10,
-  maxStoreCount: 22,
-  maxMenuItemCount: 125,
-} as const;
-
-export type LicenseLimits = {
-  maxBotsCount: number;
-  maxStoreCount: number;
-  maxMenuItemCount: number;
-};
-
-interface ApiLicensePlan {
-  code: string;
-  months: number;
-  priceRub: number;
-  sortOrder: number;
-  isDefault: boolean;
-  isActive: boolean;
-}
-
-interface ApiSystemLimit {
-  key: string;
-  value: string | null;
-  label: string;
-}
-
-const POPULAR_MONTHS = 6;
-const BASE_MONTH_PRICE_FALLBACK = 4900;
-
-function apiPlansToPricing(plans: ApiLicensePlan[]): PricingPlan[] {
-  const activePlans = plans
-    .filter((p) => p.isActive)
-    .sort((a, b) => a.sortOrder - b.sortOrder || a.months - b.months);
-
-  if (activePlans.length === 0) return FALLBACK_PRICING_PLANS;
-
-  const basePlan = activePlans.find((p) => p.months === 1);
-  const baseMonthPrice = basePlan
-    ? basePlan.priceRub
-    : BASE_MONTH_PRICE_FALLBACK;
-
-  return activePlans.map((plan) => {
-    const pricePerMonth = Math.round(plan.priceRub / plan.months);
-    const discountPercent =
-      baseMonthPrice > 0
-        ? Math.round(((baseMonthPrice - pricePerMonth) / baseMonthPrice) * 100)
-        : 0;
-
-    return {
-      code: plan.code,
-      months: plan.months,
-      priceRub: plan.priceRub,
-      pricePerMonth,
-      discountPercent: Math.max(0, discountPercent),
-      isPopular: plan.months === POPULAR_MONTHS,
-    };
-  });
-}
-
-function apiLimitsToLicenseLimits(
-  systemLimits: ApiSystemLimit[],
-  menuLimits: ApiSystemLimit[],
-): LicenseLimits {
-  const allLimits = [...systemLimits, ...menuLimits];
-  const map = new Map(allLimits.map((l) => [l.key, l.value]));
-
-  return {
-    maxBotsCount:
-      parseInt(map.get("MAX_BOTS_COUNT") ?? "", 10) ||
-      FALLBACK_LICENSE_LIMITS.maxBotsCount,
-    maxStoreCount:
-      parseInt(map.get("MAX_STORES_PER_BOT") ?? "", 10) ||
-      FALLBACK_LICENSE_LIMITS.maxStoreCount,
-    maxMenuItemCount:
-      parseInt(map.get("MAX_MENU_ITEM_COUNT") ?? "", 10) ||
-      FALLBACK_LICENSE_LIMITS.maxMenuItemCount,
-  };
-}
-
-export async function fetchPricingData(): Promise<{
-  plans: PricingPlan[];
-  limits: LicenseLimits;
-}> {
-  const apiUrl = process.env.MAIN_SERVER_API_URL;
-  const apiKey = process.env.MAIN_SERVER_API_KEY;
-
-  if (!apiUrl) {
-    return {
-      plans: FALLBACK_PRICING_PLANS,
-      limits: FALLBACK_LICENSE_LIMITS,
-    };
-  }
-
-  const headers: Record<string, string> = {
-    "Content-Type": "application/json",
-    ...(apiKey ? { "x-api-key": apiKey } : {}),
-  };
-
-  try {
-    const [plansRes, systemLimitsRes, menuLimitsRes] = await Promise.all([
-      fetch(`${apiUrl}/api/standards/license-plans`, {
-        headers,
-        next: { revalidate: 3600 },
-      }),
-      fetch(`${apiUrl}/api/standards/limits/system`, {
-        headers,
-        next: { revalidate: 3600 },
-      }),
-      fetch(`${apiUrl}/api/standards/limits/menu`, {
-        headers,
-        next: { revalidate: 3600 },
-      }),
-    ]);
-
-    const plansData = plansRes.ok
-      ? ((await plansRes.json()) as {
-          success: boolean;
-          data?: ApiLicensePlan[];
-        })
-      : null;
-    const systemLimitsData = systemLimitsRes.ok
-      ? ((await systemLimitsRes.json()) as {
-          success: boolean;
-          data?: ApiSystemLimit[];
-        })
-      : null;
-    const menuLimitsData = menuLimitsRes.ok
-      ? ((await menuLimitsRes.json()) as {
-          success: boolean;
-          data?: ApiSystemLimit[];
-        })
-      : null;
-
-    const plans =
-      plansData?.success && plansData.data
-        ? apiPlansToPricing(plansData.data)
-        : FALLBACK_PRICING_PLANS;
-    const limits = apiLimitsToLicenseLimits(
-      systemLimitsData?.success && systemLimitsData.data
-        ? systemLimitsData.data
-        : [],
-      menuLimitsData?.success && menuLimitsData.data ? menuLimitsData.data : [],
-    );
-
-    return { plans, limits };
-  } catch {
-    return {
-      plans: FALLBACK_PRICING_PLANS,
-      limits: FALLBACK_LICENSE_LIMITS,
-    };
-  }
-}

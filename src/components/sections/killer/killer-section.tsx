@@ -13,6 +13,8 @@ import {
   MessageIcon,
   ShieldIcon,
   CheckIcon,
+  GiftIcon,
+  LockIcon,
 } from "@/components/ui/icons/icons";
 import styles from "./killer-section.module.css";
 
@@ -35,7 +37,11 @@ const ITEMS: readonly KillerItem[] = [
   { id: "network", icon: GlobeIcon, accentColor: "#15aabf" },
   { id: "guest", icon: CartIcon, accentColor: "#14c4a2" },
   { id: "pos", icon: ChefHatIcon, accentColor: "#7048e8" },
+  { id: "loyalty", icon: GiftIcon, accentColor: "#c2255c" },
   { id: "delivery", icon: PackageIcon, accentColor: "#f76707" },
+  { id: "money", icon: LockIcon, accentColor: "#2f9e44" },
+  // Последний ряд: «оценить по почте» и статус Фонда — обе про доверие и вход
+  // без риска, и обе половинной ширины (см. правило сетки в модуле стилей)
   { id: "email", icon: MessageIcon, accentColor: "#1677ff" },
   // Красный Фонда «Сколково», а не наш оранжевый — статус должен читаться
   // как внешнее подтверждение, а не как ещё одна наша плашка

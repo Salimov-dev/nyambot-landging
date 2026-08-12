@@ -17,13 +17,11 @@ import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
-import { fetchPricingData } from "@/config/pricing.config";
+import { PRICING_PLANS } from "@/config/pricing.config";
 
 export const dynamic = "force-dynamic";
 
-export default async function LandingPage() {
-  const { plans } = await fetchPricingData();
-
+export default function LandingPage() {
   return (
     <>
       <Header />
@@ -40,7 +38,7 @@ export default async function LandingPage() {
         <ForWhomSection />
         <FeaturesSection />
         <CrmDemoSection />
-        <PricingSection plans={plans} />
+        <PricingSection plans={PRICING_PLANS} />
         <HowItWorksSection />
         <IntegrationsSection />
         <SwitchSection />
