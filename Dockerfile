@@ -3,14 +3,14 @@
 # ============================================
 
 # Stage 1: Установка зависимостей
-FROM node:20-alpine AS deps
+FROM node:22-alpine AS deps
 WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN npm ci
 
 # Stage 2: Сборка приложения
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 
 # NEXT_PUBLIC_* переменные вкомпилируются при сборке
@@ -29,7 +29,7 @@ COPY . .
 RUN npm run build
 
 # Stage 3: Продакшен образ
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 WORKDIR /app
 
 RUN addgroup --system --gid 1001 nodejs && \
