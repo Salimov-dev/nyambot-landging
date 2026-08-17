@@ -409,7 +409,7 @@
     "steps": {
       "0": {
         "title": "Ariza va tahlil",
-        "description": "Ariza qoldirasiz va qaysi xizmatdan foydalanishingizni aytasiz — chegirmani biriktiramiz va nimadan boshlashni muhokama qilamiz"
+        "description": "Ariza qoldirasiz va hozir qaysi xizmatdan foydalanishingizni aytasiz — tasdiqlaymiz, chegirmani to'lovdan oldin biriktiramiz va nimadan boshlashni muhokama qilamiz. Chegirma CRM'da, «Litsenziya» bo'limida ko'rinadi"
       },
       "1": {
         "title": "Menyu va sozlamalar",
@@ -425,7 +425,8 @@
       }
     },
     "button": "50% chegirma olish",
-    "hint": "Dastlabki 6 oyga 50% chegirma · Sozlash boʻyicha savollarga javob beramiz · Chegirmalar qoʻshilmaydi"
+    "hint": "Dastlabki 6 oyga 50% chegirma · Amaldagi pullik buyurtma qabul qilish yoki yetkazish xizmati kerak · To'lovdan oldin biriktiramiz · Chegirmalar qoʻshilmaydi ·",
+    "terms": "Shartlar"
   },
   "security": {
     "label": "Xavfsizlik",
@@ -476,7 +477,7 @@
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
     "subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
-    "trialNote": "Ro'yxatdan o'tgach 90 kun to'liq kirish — barcha funksiyalar va qo'llab-quvvatlash, cheklovsiz va kartasiz. Tarifni sinov muddati tugagach tanlaysan va to'laysan",
+    "trialNote": "Ro'yxatdan o'tgach 90 kun to'liq kirish — barcha funksiyalar va qo'llab-quvvatlash, cheklangan funksiyalarsiz va kartasiz. Sinov muddati standart shartlarda: 1 savdo nuqtasi va 2 bot. Tarifni sinov muddati tugagach tanlaysan va to'laysan",
     "popular": "Foydali",
     "perMonth": "oyiga",
     "totalBilled": "{{total}} hisobdan chiqariladi",
@@ -498,7 +499,7 @@
     ],
     "registrationHint": "«Ulash» tugmasini bosganingizdan so'ng CRM ochiladi. Ro'yxatdan o'ting, «Litsenziya» bo'limiga o'ting va tanlangan tarifni to'lang — shundan keyin ishni boshlashingiz mumkin",
     "customTitle": "Tarmog'ing bormi?",
-    "customSubtitle": "2 ta savdo nuqtasidan — miqyosingizga mos individual tarif. Xat yozmasdan ham sinab koʻrish mumkin: roʻyxatdan oʻtish hammaga ochiq",
+    "customSubtitle": "2 ta savdo nuqtasidan — miqyosingizga mos individual tarif. Sinov muddati ham standart shartlarda: 1 nuqta va 2 bot — tarmoq uchun shartlarni alohida muhokama qilamiz. Xat yozmasdan ham sinab koʻrish mumkin: roʻyxatdan oʻtish hammaga ochiq",
     "emailCta": "Pochta",
     "freeTrial": "0 ₽ · birinchi 90 kun",
     "connectTitle": "Tizimga ulaysan",
@@ -529,7 +530,7 @@
       },
       {
         "question": "Menejer bilan gaplashish va joriy etishga buyurtma berish kerakmi?",
-        "answer": "Yoʻq. CRMda roʻyxatdan oʻtish — pochta va parol, anketasiz va telefonsiz. Barcha tariflar va narxlar shu sahifada eʼlon qilingan. Sozlash CRMda mustaqil bajariladi, qoʻllab-quvvatlash esa oʻzingiz chaqirganingizda ulanadi"
+        "answer": "Yoʻq. CRMda roʻyxatdan oʻtish — pochta va parol, anketasiz va telefonsiz. Barcha tariflar va narxlar shu sahifada eʼlon qilingan. Sozlash CRMda mustaqil bajariladi — agar biror narsa tushunarsiz boʻlsa, toʻgʻridan-toʻgʻri CRMda Anya, ichki SI-yordamchi javob beradi: u Nyambot qanday qurilganini biladi va qoʻllab-quvvatlash navbatini kutmasdan sozlash boʻyicha darhol maslahat beradi. Jonli qoʻllab-quvvatlash esa oʻzingiz chaqirganingizda ulanadi"
       },
       {
         "question": "Mehmonlar ilova o'rnatishi kerakmi?",
@@ -537,7 +538,7 @@
       },
       {
         "question": "iiko yoki R-Keeper bilan integratsiya bormi?",
-        "answer": "Ha. Nyambot iiko va R-keeper bilan integratsiyalanadi: menyu, narxlar, stop-ro'yxatlar va buyurtmalar avtomatik sinxronlanadi — messenjerdan kelgan buyurtma kassada ro'yxatga olinadi va oshxonaga yuboriladi. Nyambot POS'siz ham to'liq mustaqil ishlaydi"
+        "answer": "Ha. Nyambot iiko va R-keeper bilan integratsiyalanadi: menyu, narxlar, stop-ro'yxatlar va buyurtmalar avtomatik sinxronlanadi — messenjerdan kelgan buyurtma kassada ro'yxatga olinadi va oshxonaga yuboriladi. Kassada sozlangan aksiya va chegirmalarni mehmon to'g'ridan-to'g'ri menyuda ko'radi, chek bo'yicha yakuniy foydani esa kassaning o'zi tasdiqlaydi — shu tariqa messenjerdagi va kassadagi raqamlar mos keladi. Nyambot POS'siz ham to'liq mustaqil ishlaydi: o'z sodiqlik dasturi, aksiyalari va promokodlari bor"
       },
       {
         "question": "Kassadagi aksiyalarim va bonuslarim botda ishlaydimi?",
@@ -561,7 +562,15 @@
       },
       {
         "question": "Sinov davri qanday ishlaydi?",
-        "answer": "Ro'yxatdan o'tgach 90 kun bepul beramiz — kartasiz va cheklangan funksiyalarsiz: to'liq CRM, «Команда» ilovasi, POS va yetkazish integratsiyalari. Hammasini o'zing sozlaysan, qo'llab-quvvatlash esa har qadamda savollarga javob beradi"
+        "answer": "Ro'yxatdan o'tgach 90 kun bepul beramiz — kartasiz va cheklangan funksiyalarsiz: to'liq CRM, «Команда» ilovasi, POS va yetkazish integratsiyalari. Hammasini o'zing sozlaysan, qo'llab-quvvatlash esa har qadamda savollarga javob beradi. Sinov muddati standart shartlarda o'tadi — bitta savdo nuqtasi va ikkita bot; integratsiyalar cheklovsiz ulanadi. Tarmoqlar va katta hajmlarni alohida muhokama qilamiz"
+      },
+      {
+        "question": "50% chegirmani qanday olish mumkin?",
+        "answer": "Dastlabki 6 oyga chegirma — allaqachon pullik buyurtma qabul qilish yoki yetkazish xizmatidan foydalanayotganlar uchun. To'lovdan oldin bizga yozing va qaysi xizmatdan foydalanayotganingizni tasdiqlang — narxni biriktiramiz va u CRM'da «Litsenziya» bo'limida ko'rinadi. Chegirma tarifning to'liq narxidan hisoblanadi, boshqa chegirmalar va uzoq tariflar foydasi bilan qo'shilmaydi, olti oy esa birinchi to'lovdan hisoblanadi — sinov muddati ularga kirmaydi va ulardan oldin o'tadi"
+      },
+      {
+        "question": "Qo'llab-quvvatlashga nima kiradi?",
+        "answer": "Nyambot ishi va sozlanishi bo'yicha savollarga javob beramiz — har qadamda, xat orqali yoki messenjerda. Sizning o'rningizga bajariladigan ishlar — menyuni kiritish va ko'chirish, kassa, yetkazish yoki onlayn to'lovni ularning yetkazib beruvchilari tomonida sozlash, xodimlarni o'qitish, vazifalaringiz uchun qo'shimcha ishlar — qo'llab-quvvatlashga kirmaydi: bularni hajm va muddat bo'yicha alohida kelishamiz"
       },
       {
         "question": "MAX-bot nima va u kerakmi?",
@@ -575,10 +584,10 @@
   },
   "cta": {
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
-    "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. Butun tarmoqqa bitta bot va bitta mehmonlar bazasi — MAX va Telegram'da, agregator komissiyasisiz",
+    "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
     "button": "Bepul boshlash",
     "docs": "Hujjatlarni o'qish",
-    "hint": "Faqat pochta kerak · Kartasiz · Menejer qoʻngʻirogʻisiz",
+    "hint": "Faqat pochta kerak · Kartasiz · Boshida 1 nuqta va 2 bot",
     "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
@@ -596,6 +605,7 @@
     "terms": "Foydalanish shartlari",
     "offer": "Ommaviy oferta",
     "cookies": "Cookies siyosati",
+    "tariffs": "Tariflar va standartlar",
     "allRights": "Barcha huquqlar himoyalangan",
     "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ",
     "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram va MAX nomlari va logotiplari o'z huquq egalariga tegishli bo'lib, moslikni ko'rsatish uchun ishlatilgan"

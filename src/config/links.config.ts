@@ -19,6 +19,7 @@ export const LINKS = {
     terms: "/legal/terms",
     offer: "/legal/offer",
     cookies: "/legal/cookies",
+    tariffs: "/legal/tariffs",
   },
 
   social: {

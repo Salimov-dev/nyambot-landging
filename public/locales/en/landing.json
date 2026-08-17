@@ -409,7 +409,7 @@
     "steps": {
       "0": {
         "title": "Request and review",
-        "description": "You send a request and tell us which service you use — we lock in the discount and work out where to start"
+        "description": "You send a request and tell us which service you use today — we confirm it, lock in the discount before payment and work out where to start. The discount is visible in the CRM, «License» section"
       },
       "1": {
         "title": "Menu and settings",
@@ -425,7 +425,8 @@
       }
     },
     "button": "Get 50% off",
-    "hint": "50% off for the first 6 months · We answer setup questions · Discounts don't stack"
+    "hint": "50% off for the first 6 months · Requires an active paid order-taking or delivery service · Fixed before payment · Discounts don't stack ·",
+    "terms": "Terms"
   },
   "security": {
     "label": "Security",
@@ -476,7 +477,7 @@
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",
     "subtitle": "Fixed payment. One plan — all features without functional limits",
-    "trialNote": "90 days of full access after signup — all features and support, no limits and no card required. You choose and pay for a plan when the trial ends",
+    "trialNote": "90 days of full access after signup — all features and support, nothing stripped out and no card required. The trial runs on standard terms: 1 location and 2 bots. You choose and pay for a plan when the trial ends",
     "popular": "Best value",
     "perMonth": "per month",
     "totalBilled": "Billed {{total}}",
@@ -498,7 +499,7 @@
     ],
     "registrationHint": "Clicking «Connect» will open the CRM. Complete registration, go to «License» section and pay for the selected plan — then you are ready to start",
     "customTitle": "Running a chain?",
-    "customSubtitle": "From 2 locations — a custom plan for your scale. You can try it without writing to us: sign-up is open to everyone",
+    "customSubtitle": "From 2 locations — a custom plan for your scale. The trial runs on standard terms too: 1 location and 2 bots — for a chain we agree terms separately. You can try it without writing to us: sign-up is open to everyone",
     "emailCta": "Email",
     "freeTrial": "0 ₽ · first 90 days",
     "connectTitle": "You connect to the system",
@@ -529,7 +530,7 @@
       },
       {
         "question": "Do I have to talk to a sales manager or pay for onboarding?",
-        "answer": "No. Signing up for the CRM takes an email and a password — no forms, no phone number. All plans and prices are published on this page. You set everything up in the CRM yourself, and support steps in when you ask"
+        "answer": "No. Signing up for the CRM takes an email and a password — no forms, no phone number. All plans and prices are published on this page. You set everything up in the CRM yourself — and if something is unclear, Anya, the built-in AI assistant, answers right inside the CRM: she knows how Nyambot works and helps with setup straight away, without waiting in the support queue. Human support steps in when you ask"
       },
       {
         "question": "Do guests need to install an app?",
@@ -537,7 +538,7 @@
       },
       {
         "question": "Is there integration with iiko or R-Keeper?",
-        "answer": "Yes. Nyambot integrates with iiko and R-keeper: menu, prices, stop-lists and orders sync automatically — an order from the messenger is rung up in the till and sent to the kitchen. Nyambot also works fully on its own, without a POS"
+        "answer": "Yes. Nyambot integrates with iiko and R-keeper: menu, prices, stop-lists and orders sync automatically — an order from the messenger is rung up in the till and sent to the kitchen. Promotions and discounts configured in the POS are shown to the guest right in the menu, and the final benefit on the receipt is confirmed by the POS itself — so the numbers in the messenger and at the till match. Nyambot also works fully on its own, without a POS: it has its own loyalty programme, promotions and promo codes built in"
       },
       {
         "question": "Will my promos and bonuses from the till work in the bot?",
@@ -561,7 +562,15 @@
       },
       {
         "question": "How does the trial period work?",
-        "answer": "After signup we give 90 days free — no card and no crippled features: the full CRM, the «Crew» app, POS and delivery integrations. You set everything up yourself, and support answers questions at every step"
+        "answer": "After signup we give 90 days free — no card and no crippled features: the full CRM, the «Crew» app, POS and delivery integrations. You set everything up yourself, and support answers questions at every step. The trial runs on standard terms — one location and two bots; integrations connect without restrictions. For chains and larger volumes we agree terms separately"
+      },
+      {
+        "question": "How do I get the 50% discount?",
+        "answer": "The discount for the first 6 months is for those already using a paid order-taking or delivery service. Write to us before paying and confirm which service you use — we lock in the price, and you see it in the CRM under «License». The discount is calculated from the full plan price, does not stack with other discounts or with the savings of longer plans, and the six months count from your first payment — the trial is not part of them and comes before"
+      },
+      {
+        "question": "What does support cover?",
+        "answer": "We answer questions about how Nyambot works and how to set it up — at every step, by email or messenger. Work done for you — entering or migrating the menu, setting up the POS, delivery or online payments on the providers' side, staff training, custom development — is not part of support: we agree on that separately, by scope and timing"
       },
       {
         "question": "What is a MAX bot and do I need it?",
@@ -575,10 +584,10 @@
   },
   "cta": {
     "title": "Start taking orders in your own channel",
-    "subtitle": "90 days free. Full features, full support. One bot and one guest base for the whole chain — in MAX and Telegram, no aggregator fees",
+    "subtitle": "90 days free. Full features, full support. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
     "button": "Start free",
     "docs": "Read documentation",
-    "hint": "Only an email needed · No card required · No sales call",
+    "hint": "Only an email needed · No card required · 1 location and 2 bots to start",
     "trialFeatures": ["90 days free", "Full access", "No card required"]
   },
   "footer": {
@@ -596,6 +605,7 @@
     "terms": "Terms of Service",
     "offer": "Public Offer",
     "cookies": "Cookie Policy",
+    "tariffs": "Plans and standards",
     "allRights": "All rights reserved",
     "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
     "trademarks": "The names and logos of iiko, R-Keeper, YooKassa, Yandex Pay, Yandex Delivery, Telegram and MAX belong to their respective owners and are used to indicate compatibility"

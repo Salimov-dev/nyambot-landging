@@ -133,6 +133,9 @@ export function Footer() {
               <Link href={LINKS.legal.cookies} className={styles.footerLink}>
                 {t("footer.cookies")}
               </Link>
+              <Link href={LINKS.legal.tariffs} className={styles.footerLink}>
+                {t("footer.tariffs")}
+              </Link>
             </Flex>
           </Col>
         </Row>

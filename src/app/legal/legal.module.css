@@ -81,6 +81,54 @@
   color: #1677ff;
 }
 
+/**
+ * Таблицы приехали вместе с документом «Тарифы и стандарты» — до него ни один
+ * юридический документ их не содержал, и своих правил у страницы не было:
+ * antd-сброс отдавал ячейкам белый текст, и таблица пропадала на белом фоне.
+ */
+.content :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 20px;
+  font-size: 14px;
+}
+
+.content :global(th),
+.content :global(td) {
+  border: 1px solid #f0f0f0;
+  padding: 10px 12px;
+  text-align: left;
+  line-height: 1.6;
+  color: #595959;
+}
+
+.content :global(th) {
+  background: #fafafa;
+  color: #262626;
+  font-weight: 600;
+}
+
+.content :global(code) {
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  color: #262626;
+  font-size: 13px;
+}
+
+.content :global(blockquote) {
+  margin: 16px 0;
+  padding: 4px 0 4px 16px;
+  border-left: 3px solid #f0f0f0;
+  color: #8c8c8c;
+}
+
+.content :global(hr) {
+  margin: 28px 0;
+  border: none;
+  border-top: 1px solid #f0f0f0;
+}
+
 .footer {
   border-top: 1px solid #f0f0f0;
   padding: 16px 24px;

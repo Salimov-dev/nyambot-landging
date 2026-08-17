@@ -409,7 +409,7 @@
     "steps": {
       "0": {
         "title": "Müraciət və təhlil",
-        "description": "Müraciət edirsən və hansı xidmətdən istifadə etdiyini deyirsən — endirimi təsbit edirik və haradan başlamağı müzakirə edirik"
+        "description": "Müraciət edirsən və hazırda hansı xidmətdən istifadə etdiyini deyirsən — təsdiqləyirik, endirimi ödənişdən əvvəl təsbit edirik və haradan başlamağı müzakirə edirik. Endirim CRM-də, «Lisenziya» bölməsində görünür"
       },
       "1": {
         "title": "Menyu və tənzimləmələr",
@@ -425,7 +425,8 @@
       }
     },
     "button": "50% endirim al",
-    "hint": "İlk 6 aya 50% endirim · Quraşdırma suallarını cavablandırırıq · Endirimlər cəmlənmir"
+    "hint": "İlk 6 aya 50% endirim · Fəaliyyətdə olan ödənişli sifariş qəbulu və ya çatdırılma xidməti tələb olunur · Ödənişdən əvvəl təsbit edirik · Endirimlər cəmlənmir ·",
+    "terms": "Şərtlər"
   },
   "security": {
     "label": "Təhlükəsizlik",
@@ -476,7 +477,7 @@
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
     "subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
-    "trialNote": "Qeydiyyatdan sonra 90 gün tam giriş — bütün funksiyalar və dəstək, məhdudiyyətsiz və kart bağlamadan. Tarifi sınaq dövrü bitəndə seçib ödəyirsən",
+    "trialNote": "Qeydiyyatdan sonra 90 gün tam giriş — bütün funksiyalar və dəstək, məhdudlaşdırılmış funksiyalar olmadan və kart bağlamadan. Sınaq dövrü standart şərtlərlə işləyir: 1 ticarət nöqtəsi və 2 bot. Tarifi sınaq dövrü bitəndə seçib ödəyirsən",
     "popular": "Sərfəli",
     "perMonth": "aylıq",
     "totalBilled": "{{total}} silinir",
@@ -498,7 +499,7 @@
     ],
     "registrationHint": "«Qoşul» düyməsini basdıqdan sonra CRM açılacaq. Qeydiyyatdan keçin, «Lisenziya» bölməsinə keçin və seçilmiş tarifi ödəyin — bundan sonra işə başlaya bilərsiniz",
     "customTitle": "Şəbəkən var?",
-    "customSubtitle": "2 ticarət nöqtəsindən — miqyasına uyğun fərdi tarif. Məktub yazmadan da yoxlaya bilərsən: qeydiyyat hamıya açıqdır",
+    "customSubtitle": "2 ticarət nöqtəsindən — miqyasına uyğun fərdi tarif. Sınaq dövrü də standart şərtlərlə: 1 nöqtə və 2 bot — şəbəkə üçün şərtləri ayrıca müzakirə edirik. Məktub yazmadan da yoxlaya bilərsən: qeydiyyat hamıya açıqdır",
     "emailCta": "Poçt",
     "freeTrial": "0 ₽ · ilk 90 gün",
     "connectTitle": "Sistemə qoşursan",
@@ -529,7 +530,7 @@
       },
       {
         "question": "Meneceri gözləmək və tətbiq etmə sifariş etmək lazımdır?",
-        "answer": "Xeyr. CRM-də qeydiyyat — e-poçt və şifrə, anket və telefon olmadan. Bütün tariflər və qiymətlər bu səhifədə dərc olunub. Quraşdırma CRM-də özün tərəfindən aparılır, dəstək isə sən çağıranda qoşulur"
+        "answer": "Xeyr. CRM-də qeydiyyat — e-poçt və şifrə, anket və telefon olmadan. Bütün tariflər və qiymətlər bu səhifədə dərc olunub. Quraşdırma CRM-də özün tərəfindən aparılır — nəsə aydın deyilsə, birbaşa CRM-də Anya, quraşdırılmış Sİ-köməkçi cavab verir: o, Nyambotun necə qurulduğunu bilir və dəstək növbəsini gözləmədən dərhal quraşdırma üzrə məsləhət verir. Canlı dəstək isə sən çağıranda qoşulur"
       },
       {
         "question": "Qonaqların tətbiq quraşdırması lazımdırmı?",
@@ -537,7 +538,7 @@
       },
       {
         "question": "iiko və ya R-Keeper ilə inteqrasiya varmı?",
-        "answer": "Bəli. Nyambot iiko və R-keeper ilə inteqrasiya olunur: menyu, qiymətlər, stop-siyahılar və sifarişlər avtomatik sinxronlaşır — messendcerdən gələn sifariş kassada qeydə alınır və mətbəxə göndərilir. Nyambot POS olmadan da tam müstəqil işləyir"
+        "answer": "Bəli. Nyambot iiko və R-keeper ilə inteqrasiya olunur: menyu, qiymətlər, stop-siyahılar və sifarişlər avtomatik sinxronlaşır — messendcerdən gələn sifariş kassada qeydə alınır və mətbəxə göndərilir. Kassada qurulmuş aksiya və endirimləri qonaq birbaşa menyuda görür, çekdəki yekun faydanı isə kassanın özü təsdiqləyir — beləliklə messencer və kassadakı rəqəmlər üst-üstə düşür. Nyambot POS olmadan da tam müstəqil işləyir: öz loyallıq proqramı, aksiyaları və promokodları var"
       },
       {
         "question": "Kassadakı aksiyalarım və bonuslarım botda işləyəcəkmi?",
@@ -561,7 +562,15 @@
       },
       {
         "question": "Sınaq dövrü necə işləyir?",
-        "answer": "Qeydiyyatdan sonra 90 gün pulsuz veririk — kart bağlamadan və məhdudlaşdırılmış funksiyalar olmadan: tam CRM, «Komanda» tətbiqi, POS və çatdırılma inteqrasiyaları. Hər şeyi özün qurursan, dəstək isə hər addımda suallara cavab verir"
+        "answer": "Qeydiyyatdan sonra 90 gün pulsuz veririk — kart bağlamadan və məhdudlaşdırılmış funksiyalar olmadan: tam CRM, «Komanda» tətbiqi, POS və çatdırılma inteqrasiyaları. Hər şeyi özün qurursan, dəstək isə hər addımda suallara cavab verir. Sınaq dövrü standart şərtlərlə gedir — bir ticarət nöqtəsi və iki bot; inteqrasiyalar məhdudiyyətsiz qoşulur. Şəbəkələr və böyük həcmlər ayrıca müzakirə olunur"
+      },
+      {
+        "question": "50% endirimi necə almaq olar?",
+        "answer": "İlk 6 aya endirim artıq ödənişli sifariş qəbulu və ya çatdırılma xidmətindən istifadə edənlər üçündür. Ödənişdən əvvəl bizə yaz və hansı xidmətdən istifadə etdiyini təsdiqlə — qiyməti təsbit edirik, onu CRM-də «Lisenziya» bölməsində görürsən. Endirim tarifin tam dəyərindən hesablanır, digər endirimlərlə və uzun tariflərin faydası ilə cəmlənmir, altı ay isə ilk ödənişdən sayılır — sınaq dövrü onlara daxil deyil və onlardan əvvəl gedir"
+      },
+      {
+        "question": "Dəstəyə nə daxildir?",
+        "answer": "Nyambotun işi və qurulması ilə bağlı suallara cavab veririk — hər addımda, məktubla və ya messencerdə. Sənin əvəzinə görülən işlər — menyunun daxil edilməsi və köçürülməsi, kassanın, çatdırılmanın və ya onlayn ödənişin təchizatçı tərəfində qurulması, personalın təlimi, sənin tapşırıqların üçün əlavə işlər — dəstəyə daxil deyil: bunları həcm və müddətə görə ayrıca razılaşdırırıq"
       },
       {
         "question": "MAX-bot nədir və ona ehtiyac varmı?",
@@ -575,10 +584,10 @@
   },
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
-    "subtitle": "90 gün ödənişsiz. Tam funksionallıq, tam dəstək. Bütün şəbəkəyə bir bot və bir qonaq bazası — MAX və Telegram-da, aqreqator komissiyası olmadan",
+    "subtitle": "90 gün ödənişsiz. Tam funksionallıq, tam dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
     "button": "Pulsuz başla",
     "docs": "Sənədləri oxuyun",
-    "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Menecer zəngi olmadan",
+    "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Başlanğıcda 1 nöqtə və 2 bot",
     "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
@@ -596,6 +605,7 @@
     "terms": "İstifadə şərtləri",
     "offer": "İctimai oferta",
     "cookies": "Cookies siyasəti",
+    "tariffs": "Tariflər və standartlar",
     "allRights": "Bütün hüquqlar qorunur",
     "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
     "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram və MAX adları və loqotipləri onların hüquq sahiblərinə məxsusdur və uyğunluğu göstərmək üçün istifadə olunub"

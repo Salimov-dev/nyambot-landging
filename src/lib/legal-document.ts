@@ -14,6 +14,7 @@ export const LEGAL_DOCUMENT = {
   TERMS: "nyambot-crm-user-license-agreement.md",
   PRIVACY: "nyambot-personal-data-processing-policy.md",
   COOKIES: "nyambot-cookie-policy.md",
+  TARIFFS: "nyambot-tariffs-and-standards.md",
 } as const;
 
 export type LegalDocumentName =

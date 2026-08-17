@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Button, Col, Flex, Row, Typography } from "antd";
@@ -143,7 +144,13 @@ export function SwitchSection() {
           </Flex>
 
           <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
-            {t("switch.hint")}
+            {t("switch.hint")}{" "}
+            <Link
+              href={LINKS.legal.tariffs}
+              style={{ color: "inherit", textDecoration: "underline" }}
+            >
+              {t("switch.terms")}
+            </Link>
           </Text>
         </motion.div>
       </div>
