@@ -1,6 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import resourcesToBackend from "i18next-resources-to-backend";
 
 // ru
 import ruLanding from "../../public/locales/ru/landing.json";
@@ -45,18 +44,23 @@ const resources = {
   az: { landing: azLanding },
 };
 
-i18n
-  .use(resourcesToBackend(resources))
-  .use(initReactI18next)
-  .init({
-    lng: DEFAULT_LANGUAGE,
-    fallbackLng: DEFAULT_LANGUAGE,
-    supportedLngs: [...SUPPORTED_LANGUAGES],
-    ns: ["landing"],
-    defaultNS: "landing",
-    interpolation: { escapeValue: false },
-    load: "languageOnly",
-    cleanCode: true,
-  });
+/**
+ * 🔴 Словари передаются в init НАПРЯМУЮ, а не через resourcesToBackend.
+ * Бекенд грузит перевод асинхронно, и на сервере он не успевает: страница
+ * рендерилась с пустыми ключами, а робот Яндекса получал документ без единого
+ * слова. Все семь словарей и так импортированы статически и лежат в бандле —
+ * асинхронность здесь ничего не экономила.
+ */
+i18n.use(initReactI18next).init({
+  resources,
+  lng: DEFAULT_LANGUAGE,
+  fallbackLng: DEFAULT_LANGUAGE,
+  supportedLngs: [...SUPPORTED_LANGUAGES],
+  ns: ["landing"],
+  defaultNS: "landing",
+  interpolation: { escapeValue: false },
+  load: "languageOnly",
+  cleanCode: true,
+});
 
 export default i18n;

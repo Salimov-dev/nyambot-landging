@@ -48,7 +48,7 @@ export function Footer() {
             </Flex>
           </Col>
 
-          <Col xs={12} sm={8} md={8} lg={4}>
+          <Col xs={12} sm={12} md={6} lg={4}>
             <Flex vertical gap={12}>
               <Text strong className={styles.colTitle}>
                 {t("footer.product")}
@@ -75,17 +75,33 @@ export function Footer() {
               >
                 {t("footer.docs")}
               </Link>
-              <Link
-                href="#pricing"
-                className={styles.footerLink}
-                onClick={() => reachGoal("scroll_pricing")}
-              >
+              <Link href="#pricing" className={styles.footerLink}>
                 {t("footer.pricing")}
               </Link>
             </Flex>
           </Col>
 
-          <Col xs={12} sm={8} md={8} lg={4}>
+          {/* Отдельная колонка, а не хвост «Продукта»: вместе с CRM,
+              «Командой» и документацией получался список из семи пунктов,
+              который читается дольше, чем весь остальной подвал */}
+          <Col xs={12} sm={12} md={6} lg={4}>
+            <Flex vertical gap={12}>
+              <Text strong className={styles.colTitle}>
+                {t("footer.solutions")}
+              </Text>
+              <Link href={LINKS.pages.iiko} className={styles.footerLink}>
+                {t("footer.pageIiko")}
+              </Link>
+              <Link href={LINKS.pages.rkeeper} className={styles.footerLink}>
+                {t("footer.pageRkeeper")}
+              </Link>
+              <Link href={LINKS.pages.messengers} className={styles.footerLink}>
+                {t("footer.pageMessengers")}
+              </Link>
+            </Flex>
+          </Col>
+
+          <Col xs={12} sm={12} md={6} lg={4}>
             <Flex vertical gap={12}>
               <Text strong className={styles.colTitle}>
                 {t("footer.support")}
@@ -116,7 +132,7 @@ export function Footer() {
             </Flex>
           </Col>
 
-          <Col xs={24} sm={8} md={8} lg={4}>
+          <Col xs={12} sm={12} md={6} lg={4}>
             <Flex vertical gap={12}>
               <Text strong className={styles.colTitle}>
                 {t("footer.legal")}

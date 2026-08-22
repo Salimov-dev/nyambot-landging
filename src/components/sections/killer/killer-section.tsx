@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Button, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
-import { reachGoal } from "@/config/metrika";
 import {
   GlobeIcon,
   CartIcon,
@@ -140,7 +139,6 @@ export function KillerSection() {
             size="large"
             href="#pricing"
             className={styles.pricingBtn}
-            onClick={() => reachGoal("scroll_pricing")}
           >
             {t("killer.pricingCta")} →
           </Button>

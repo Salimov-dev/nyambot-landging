@@ -13,7 +13,17 @@ const FAQ_ITEMS = faqLocale.faq.items as FaqItem[];
  * Базовая цена берётся из тарифов — тех же чисел, что видит гость в карточках
  * (`PRICING_PLANS`), без обращения к API.
  */
-export function StructuredData() {
+type IProps = {
+  /**
+   * Включать ли разметку вопросов. По умолчанию нет: компонент стоит в
+   * корневом layout, то есть на КАЖДОЙ странице, а вопросы живут на главной.
+   * Разметка, которой нет в тексте страницы, для поисковика — обман, и на
+   * посадочных она вдобавок сталкивалась со своим блоком FAQPage.
+   */
+  withFaq?: boolean;
+};
+
+export function StructuredData({ withFaq = false }: IProps) {
   const { siteUrl, name, nameEn, supportEmail } = BRAND_CONFIG;
   const logoUrl = `${siteUrl}/images/nyambot_logo_square.png`;
 
@@ -69,7 +79,7 @@ export function StructuredData() {
         url: siteUrl,
         publisher: { "@id": `${siteUrl}/#organization` },
         description:
-          "Платформа собственного канала приёма заказов и доставки в MAX и Telegram для общепита и микро-ритейла: один бот на все точки сети и одна база гостей в двух мессенджерах — история заказов и баллы у гостя общие, повторные заказы без комиссии агрегатора, CRM, приложение «Команда» для администратора и курьера, интеграция с iiko и R-Keeper, онлайн-оплата и доставка через Яндекс.Доставку.",
+          "Платформа собственного канала приёма заказов и доставки в MAX и Телеграм для общепита и микро-ритейла: один бот на все точки сети и одна база гостей в двух мессенджерах — история заказов и баллы у гостя общие, повторные заказы без комиссии агрегатора, СРМ, приложение «Команда» для администратора и курьера, интеграция с iiko и R-Keeper, онлайн-оплата и доставка через Яндекс.Доставку.",
         offers: {
           "@type": "Offer",
           priceCurrency: "RUB",
@@ -77,18 +87,22 @@ export function StructuredData() {
           category: "subscription",
         },
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${siteUrl}/#faq`,
-        mainEntity: FAQ_ITEMS.map(({ question, answer }) => ({
-          "@type": "Question",
-          name: question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: answer,
-          },
-        })),
-      },
+      ...(withFaq
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${siteUrl}/#faq`,
+              mainEntity: FAQ_ITEMS.map(({ question, answer }) => ({
+                "@type": "Question",
+                name: question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: answer,
+                },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 

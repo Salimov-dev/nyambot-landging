@@ -3,9 +3,11 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { theme } from "@/config/theme";
+import { LINKS } from "@/config/links.config";
 import { CheckIcon } from "@/components/ui/icons/icons";
 import styles from "./integrations-section.module.css";
 
@@ -97,6 +99,22 @@ export function IntegrationsSection() {
               </span>
             </div>
           ))}
+        </motion.div>
+
+        {/* Ссылки рядом с логотипами касс: тому, кто узнал свою кассу,
+            дальше нужна не общая страница, а разбор именно этой интеграции */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className={styles.moreRow}
+        >
+          <Link href={LINKS.pages.iiko} className={styles.moreLink}>
+            {t("integrations.moreIiko")}
+          </Link>
+          <Link href={LINKS.pages.rkeeper} className={styles.moreLink}>
+            {t("integrations.moreRkeeper")}
+          </Link>
         </motion.div>
 
         <motion.div

@@ -9,7 +9,7 @@ import { Logo } from "@/components/common/logo/logo";
 import { LanguageSwitcher } from "@/components/ui/language-switcher/language-switcher";
 import { useLandingStore } from "@/store/use-landing.store";
 import { LINKS } from "@/config/links.config";
-import { reachGoal, type MetrikaGoal } from "@/config/metrika";
+import { reachGoal } from "@/config/metrika";
 import {
   getSkolkovoLogo,
   getSkolkovoLogoSize,
@@ -19,19 +19,13 @@ import styles from "./header.module.css";
 
 const { Text } = Typography;
 
+/** Целей на пунктах нет: показ секции отмечает SectionViewTracker — клик по
+ *  пункту всё равно прокручивает страницу к ней. */
 const NAV_ITEMS = [
-  {
-    labelKey: "nav.features",
-    href: "#features",
-    goal: "scroll_features" as MetrikaGoal,
-  },
-  { labelKey: "nav.howItWorks", href: "#how-it-works", goal: null },
-  {
-    labelKey: "nav.pricing",
-    href: "#pricing",
-    goal: "scroll_pricing" as MetrikaGoal,
-  },
-  { labelKey: "nav.faq", href: "#faq", goal: null },
+  { labelKey: "nav.features", href: "#features" },
+  { labelKey: "nav.howItWorks", href: "#how-it-works" },
+  { labelKey: "nav.pricing", href: "#pricing" },
+  { labelKey: "nav.faq", href: "#faq" },
 ] as const;
 
 export function Header() {
@@ -53,12 +47,7 @@ export function Header() {
         {/* Desktop nav */}
         <Flex align="center" gap={4} className={styles.nav}>
           {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={styles.navLink}
-              onClick={() => item.goal && reachGoal(item.goal)}
-            >
+            <a key={item.href} href={item.href} className={styles.navLink}>
               <Text style={{ fontSize: 14, fontWeight: 500 }}>
                 {t(item.labelKey)}
               </Text>
@@ -151,7 +140,6 @@ export function Header() {
                 href={item.href}
                 className={styles.mobileNavLink}
                 onClick={() => {
-                  if (item.goal) reachGoal(item.goal);
                   closeMobileMenu();
                 }}
               >

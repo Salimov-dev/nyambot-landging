@@ -608,7 +608,11 @@
     "tariffs": "Plans and standards",
     "allRights": "All rights reserved",
     "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
-    "trademarks": "The names and logos of iiko, R-Keeper, YooKassa, Yandex Pay, Yandex Delivery, Telegram and MAX belong to their respective owners and are used to indicate compatibility"
+    "trademarks": "The names and logos of iiko, R-Keeper, YooKassa, Yandex Pay, Yandex Delivery, Telegram and MAX belong to their respective owners and are used to indicate compatibility",
+    "pageIiko": "Nyambot and iiko",
+    "pageRkeeper": "Nyambot and R-Keeper",
+    "pageMessengers": "Orders in MAX and Telegram",
+    "solutions": "Solutions"
   },
   "video": {
     "socialHeading": "More videos about how Nyambot works — on our social media"
@@ -629,7 +633,9 @@
       "yookassa": "YooKassa",
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Delivery"
-    }
+    },
+    "moreIiko": "More about iiko",
+    "moreRkeeper": "More about R-Keeper"
   },
   "forWhom": {
     "title": "For any food service format",

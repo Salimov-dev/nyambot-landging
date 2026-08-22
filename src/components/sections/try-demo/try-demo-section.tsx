@@ -196,7 +196,7 @@ export function TryDemoSection() {
                   <PhoneMockup>
                     <ImageWithSkeleton
                       src="/images/sections/demo_bot_tg.png"
-                      alt="Telegram демо"
+                      alt="Телеграм демо"
                       sizes="280px"
                       className={styles.phoneScreenImage}
                     />

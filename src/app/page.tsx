@@ -1,7 +1,9 @@
+import { StructuredData } from "@/components/common/structured-data/structured-data";
 import { Header } from "@/components/ui/header/header";
 import { Footer } from "@/components/ui/footer/footer";
 import { DotNav } from "@/components/ui/dot-nav/dot-nav";
 import { ScrollDepthTracker } from "@/components/ui/analytics/scroll-depth-tracker";
+import { SectionViewTracker } from "@/components/ui/analytics/section-view-tracker";
 import { HeroSection } from "@/components/sections/hero/hero-section";
 import { KillerSection } from "@/components/sections/killer/killer-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
@@ -18,15 +20,25 @@ import { FaqSection } from "@/components/sections/faq/faq-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
 import { PRICING_PLANS } from "@/config/pricing.config";
+import { SEO_CONFIG, createPageMetadata } from "@/config/seo.config";
 
+/** Свой адрес главная объявляет сама — корневой layout его не задаёт, иначе
+ *  каноническим адресом главной подписались бы и юридические страницы. */
+export const metadata = createPageMetadata({
+  title: SEO_CONFIG.title,
+  description: SEO_CONFIG.description,
+  path: "/",
+});
 export const dynamic = "force-dynamic";
 
 export default function LandingPage() {
   return (
     <>
+      <StructuredData withFaq />
       <Header />
       <DotNav />
       <ScrollDepthTracker />
+      <SectionViewTracker />
       {/* Порядок: что это → потрогать → для меня ли → что умеет → сколько
           стоит → как начать → чем дополняется → доверие → возражения → действие.
           Интеграции опущены с третьей позиции: наверху они читались как список

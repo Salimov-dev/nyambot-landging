@@ -77,9 +77,16 @@
   z-index: 1;
 }
 
+/* 🔴 display: flex прописан здесь, а не взят у класса ant-flex. Стили Ant
+   приезжают клиентским JS, и до них колонки вставали друг под друга: телефон
+   оказывался под текстом, а через мгновение всё перестраивалось в ряд.
+   Модульный CSS приходит ссылкой в <head> — раскладка верна с первого кадра.
+   Отступы между колонками Ant задаёт инлайном, они работают и без своих стилей. */
 .content {
+  display: flex;
   min-height: calc(100vh - 220px);
   align-items: center;
+  justify-content: space-between;
 }
 
 /* Text column */
@@ -125,6 +132,8 @@
 }
 
 .ctaRow {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 
@@ -215,6 +224,8 @@
 
 /* Trial pill */
 .pills {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 

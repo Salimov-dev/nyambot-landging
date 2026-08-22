@@ -3,12 +3,16 @@
 import { useEffect } from "react";
 import { reachGoal, type MetrikaGoal } from "@/config/metrika";
 
+/** Допуск для последнего порога: ровно 100% не набирается, когда высота
+ *  экрана дробная или её меняет плавающая адресная строка телефона. */
+const SCROLL_END_TOLERANCE_PERCENT = 1;
+
 /** Пороги глубины просмотра страницы (в процентах) и их цели */
 const SCROLL_THRESHOLDS: { percent: number; goal: MetrikaGoal }[] = [
   { percent: 25, goal: "scroll_25" },
   { percent: 50, goal: "scroll_50" },
   { percent: 75, goal: "scroll_75" },
-  { percent: 100, goal: "scroll_100" },
+  { percent: 100 - SCROLL_END_TOLERANCE_PERCENT, goal: "scroll_100" },
 ];
 
 /**

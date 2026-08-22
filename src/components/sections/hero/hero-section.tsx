@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { motion, type Variants } from "framer-motion";
 import { Button, Flex, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
 import { LINKS } from "@/config/links.config";
@@ -18,26 +17,6 @@ import { CheckIcon } from "@/components/ui/icons/icons";
 import styles from "./hero-section.module.css";
 
 const { Title, Text } = Typography;
-
-const containerVariants: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 32 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-const phoneVariants: Variants = {
-  hidden: { opacity: 0, x: 60, scale: 0.92 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-    transition: { duration: 0.8, ease: "easeOut", delay: 0.2 },
-  },
-};
 
 export function HeroSection() {
   const { t, i18n } = useTranslation("landing");
@@ -79,30 +58,30 @@ export function HeroSection() {
           className={styles.content}
         >
           {/* Левая колонка — текст */}
-          <motion.div
-            className={styles.textCol}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
+          {/* 🔴 Первый экран НЕ анимируется. Варианты framer-motion писали
+              в разметку opacity: 0, и заголовок с кнопками проявлялись только
+              после загрузки бандла: платный клик из РСЯ упирался в пустой
+              экран, а LCP отсчитывался от конца анимации. Секции ниже сгиба
+              анимацию сохранили — на LCP они не влияют. */}
+          <div className={styles.textCol}>
             {/* Надзаголовочной пилюли нет: она повторяла «бот на всю сеть» из
                 заголовка, а вместе с пилюлей триала зажимала блок в две рамки.
                 «Для одной точки и для сети» не потеряно — оно открывает
                 подзаголовок, чтобы одиночная точка не решила, что сервис не про неё */}
-            <motion.div variants={itemVariants}>
+            <div>
               <Title level={1} className={styles.title}>
                 <span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
               </Title>
-            </motion.div>
+            </div>
 
             {/* Первый экран несёт одну мысль. Перечень интеграций отсюда убран:
                 ресторатору без кассы он читался как список требований к нему —
                 интеграции живут в своей секции с пометкой «по желанию» */}
-            <motion.div variants={itemVariants}>
+            <div>
               <Text className={styles.subtitle}>{t("hero.subtitle")}</Text>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div>
               <Flex gap={12} wrap className={styles.ctaRow}>
                 <Button
                   type="primary"
@@ -124,9 +103,9 @@ export function HeroSection() {
                   {t("hero.ctaSecondary")}
                 </Button>
               </Flex>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div>
               <Flex gap={10} wrap className={styles.pills}>
                 <span className={styles.trialPill}>
                   <CheckIcon size={16} />
@@ -152,16 +131,11 @@ export function HeroSection() {
                   />
                 </a>
               </Flex>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Правая колонка — телефон */}
-          <motion.div
-            className={styles.phoneCol}
-            variants={phoneVariants}
-            initial="hidden"
-            animate="visible"
-          >
+          <div className={styles.phoneCol}>
             <div className={styles.phoneWrapper}>
               <div className={styles.phoneGlow} />
               <PhoneMockup>
@@ -177,7 +151,7 @@ export function HeroSection() {
                 />
               </PhoneMockup>
             </div>
-          </motion.div>
+          </div>
         </Flex>
       </div>
     </section>

@@ -2,22 +2,23 @@
 
 import { useEffect, useState } from "react";
 import { Tooltip } from "antd";
-import { reachGoal, type MetrikaGoal } from "@/config/metrika";
 import styles from "./dot-nav.module.css";
 
-/** Порядок совпадает с порядком секций на странице (page.tsx) */
-const SECTIONS: { id: string; label: string; goal: MetrikaGoal | null }[] = [
-  { id: "hero", label: "Главная", goal: null },
-  { id: "killer", label: "Главное", goal: null },
-  { id: "try-demo", label: "Демо", goal: null },
-  { id: "features", label: "Возможности", goal: "scroll_features" },
-  { id: "crm-demo", label: "CRM", goal: null },
-  { id: "pricing", label: "Тарифы", goal: "scroll_pricing" },
-  { id: "how-it-works", label: "Как работает", goal: null },
-  { id: "switch", label: "Скидка 50%", goal: null },
-  { id: "security", label: "Безопасность", goal: null },
-  { id: "faq", label: "FAQ", goal: null },
-  { id: "cta", label: "Начать", goal: null },
+/** Порядок совпадает с порядком секций на странице (page.tsx). Целей здесь
+ *  нет: показ секции отмечает SectionViewTracker, а клик по точке к этому же
+ *  показу и приводит. */
+const SECTIONS: { id: string; label: string }[] = [
+  { id: "hero", label: "Главная" },
+  { id: "killer", label: "Главное" },
+  { id: "try-demo", label: "Демо" },
+  { id: "features", label: "Возможности" },
+  { id: "crm-demo", label: "CRM" },
+  { id: "pricing", label: "Тарифы" },
+  { id: "how-it-works", label: "Как работает" },
+  { id: "switch", label: "Скидка 50%" },
+  { id: "security", label: "Безопасность" },
+  { id: "faq", label: "FAQ" },
+  { id: "cta", label: "Начать" },
 ];
 
 export function DotNav() {
@@ -34,7 +35,9 @@ export function DotNav() {
         ([entry]) => {
           if (entry.isIntersecting) setActive(id);
         },
-        { threshold: 0.4 },
+        /* Активна секция, пересекающая середину экрана: доля площади не
+           годится — секция выше экрана не даст её никогда. */
+        { rootMargin: "-45% 0px -45% 0px" },
       );
       observer.observe(el);
       observers.push(observer);
@@ -43,19 +46,18 @@ export function DotNav() {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
-  const handleClick = (id: string, goal: MetrikaGoal | null) => {
-    if (goal) reachGoal(goal);
+  const handleClick = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <nav className={styles.nav} aria-label="Навигация по странице">
-      {SECTIONS.map(({ id, label, goal }) => (
+      {SECTIONS.map(({ id, label }) => (
         <Tooltip key={id} title={label} placement="right" mouseEnterDelay={0.2}>
           <button
             className={`${styles.dot} ${active === id ? styles.dotActive : ""}`}
-            onClick={() => handleClick(id, goal)}
+            onClick={() => handleClick(id)}
             aria-label={label}
           />
         </Tooltip>

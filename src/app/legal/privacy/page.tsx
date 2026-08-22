@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { BRAND_CONFIG } from "@/config/brand.config";
+import { LINKS } from "@/config/links.config";
+import { createPageMetadata } from "@/config/seo.config";
 import { LEGAL_DOCUMENT, loadLegalDocument } from "@/lib/legal-document";
 
-export const metadata: Metadata = {
-  title: { absolute: `Политика конфиденциальности | ${BRAND_CONFIG.name}` },
+export const metadata = createPageMetadata({
+  title: `Политика конфиденциальности | ${BRAND_CONFIG.name}`,
   description:
     "Политика конфиденциальности Нямбота: какие персональные данные мы собираем, как обрабатываем и храним, ваши права и порядок защиты данных.",
-};
+  path: LINKS.legal.privacy,
+});
 
 /**
  * Документ живёт ОДИН — в источнике на главном сервере (см. lib/legal-document).

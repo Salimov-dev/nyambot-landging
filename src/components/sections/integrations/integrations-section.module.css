@@ -129,3 +129,23 @@
     font-size: 14px;
   }
 }
+
+/* Ссылки на разборы интеграций — между логотипами касс и плашкой «кассы нет» */
+.moreRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+  margin-top: 28px;
+}
+
+.moreLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.moreLink:hover {
+  text-decoration: underline;
+}

@@ -14,6 +14,13 @@ export const LINKS = {
     max: "https://max.ru/id183401217970_bot",
   },
 
+  /** Посадочные страницы под поисковые запросы (тексты — landing-pages.config) */
+  pages: {
+    iiko: "/iiko",
+    rkeeper: "/rkeeper",
+    messengers: "/zakazy-v-max-i-telegram",
+  },
+
   legal: {
     privacy: "/legal/privacy",
     terms: "/legal/terms",

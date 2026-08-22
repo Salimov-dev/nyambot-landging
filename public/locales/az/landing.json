@@ -608,7 +608,11 @@
     "tariffs": "Tariflər və standartlar",
     "allRights": "Bütün hüquqlar qorunur",
     "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
-    "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram və MAX adları və loqotipləri onların hüquq sahiblərinə məxsusdur və uyğunluğu göstərmək üçün istifadə olunub"
+    "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram və MAX adları və loqotipləri onların hüquq sahiblərinə məxsusdur və uyğunluğu göstərmək üçün istifadə olunub",
+    "pageIiko": "Nyambot və iiko",
+    "pageRkeeper": "Nyambot və R-Keeper",
+    "pageMessengers": "MAX və Telegram-da sifarişlər",
+    "solutions": "Həllər"
   },
   "video": {
     "socialHeading": "Nyambot haqqında daha çox video — sosial mediamızda"
@@ -629,7 +633,9 @@
       "yookassa": "YuKassa",
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Dostavka"
-    }
+    },
+    "moreIiko": "iiko haqqında ətraflı",
+    "moreRkeeper": "R-Keeper haqqında ətraflı"
   },
   "forWhom": {
     "title": "İstənilən iaşə formatı üçün",

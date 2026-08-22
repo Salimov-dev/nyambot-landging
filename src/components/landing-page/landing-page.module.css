@@ -1,0 +1,434 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* Свечение первого экрана — то же, что на главной: страница должна читаться
+   как часть сайта, а не как отдельный документ */
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 520px;
+  background: var(--gradient-glow);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header,
+.main,
+.footer {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.homeLink,
+.footerLink {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.homeLink:hover,
+.footerLink:hover {
+  color: var(--accent);
+}
+
+.main {
+  flex: 1;
+  padding: 24px 24px 72px;
+}
+
+.label {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-pill);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin: 20px 0 0;
+  font-size: clamp(30px, 4.4vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.lead {
+  margin: 18px 0 0;
+  font-size: 18px;
+  line-height: 1.55;
+  /* 0.78, а не 0.6: ядро аудитории 35–44 года и три четверти — с телефона */
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 660px;
+}
+
+/* ===== Кнопки ===== */
+
+.ctaBlock {
+  margin: 36px 0;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.tertiaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 30px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s var(--ease-out-quart),
+    border-color 0.2s ease;
+}
+
+.primaryBtn {
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-button);
+  color: #fff;
+  font-weight: 700;
+}
+
+.secondaryBtn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.tertiaryBtn {
+  padding: 0 26px;
+  border: 1px solid var(--border-light);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover,
+.tertiaryBtn:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryBtn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tertiaryBtn:hover {
+  border-color: var(--accent-border);
+}
+
+/* Строка условий — отдельная мысль, а не подпись под кнопкой: вплотную она
+   читалась как часть последней кнопки */
+.trial {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 0;
+  padding: 8px 16px;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-pill);
+  background: var(--accent-bg-light);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ===== Карточки ===== */
+
+.blocks {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Одинаковая высота в ряду: карточки с разным текстом не должны
+     заканчиваться на разной высоте — ряд выглядит сломанным */
+  grid-auto-rows: 1fr;
+}
+
+.block,
+.notNeeded,
+.faq,
+.guideCard {
+  position: relative;
+  padding: 26px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  background: var(--glass-card-bg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* Тонкий блик по верхней кромке — от него стекло перестаёт быть плоским */
+.block::before,
+.notNeeded::before,
+.faq::before,
+.guideCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--glass-highlight),
+    transparent
+  );
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s var(--ease-out-quart),
+    border-color 0.25s ease;
+}
+
+.block:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-accent);
+}
+
+.blockIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.blockTitle {
+  margin: 0 0 10px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.blockText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.sectionTitle {
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ===== «Не нужно» ===== */
+
+.notNeeded {
+  margin-top: 16px;
+  border-color: var(--accent-border);
+  background: var(--gradient-card-accent);
+}
+
+.notNeededList {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notNeededItem {
+  position: relative;
+  padding-left: 34px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Крестик в кружке вместо маркера списка: строка читается как снятое
+   требование, а не как ещё один пункт перечисления */
+.notNeededItem::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ===== Вопросы ===== */
+
+.faq {
+  margin-top: 16px;
+}
+
+.faqList {
+  display: grid;
+  gap: 0;
+}
+
+.faqItem {
+  padding: 18px 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.faqItem:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.faqItem:last-child {
+  padding-bottom: 0;
+}
+
+.faqQuestion {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.faqAnswer {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ===== Ссылка в справку ===== */
+
+.guideCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4px 20px;
+  margin-top: 16px;
+  text-decoration: none;
+  transition:
+    transform 0.25s var(--ease-out-quart),
+    border-color 0.25s ease;
+}
+
+.guideCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-border);
+}
+
+.guideLabel {
+  grid-column: 1;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.guideText {
+  grid-column: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.guideArrow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 20px;
+}
+
+/* ===== Подвал ===== */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px;
+  border-top: 1px solid var(--border-light);
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 720px) {
+  .blocks {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .block,
+  .notNeeded,
+  .faq,
+  .guideCard {
+    padding: 22px;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn,
+  .tertiaryBtn {
+    width: 100%;
+  }
+}
