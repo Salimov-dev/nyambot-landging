@@ -404,7 +404,7 @@
   "switch": {
     "label": "You're on another service",
     "title": "Using another ordering service? <em>50% off</em>",
-    "subtitle": "Switch to Nyambot — your first 6 months cost half as much. The bot stays yours, only the service behind it changes. If you have several locations, they come together into one channel and one guest base",
+    "subtitle": "Switch to Nyambot — your first 6 months cost half as much. The bot stays yours, only the service behind it changes. If you have several locations, they come together into one channel and one guest base. Your site and your own app stay as they are — Nyambot sits alongside them, inside the messengers",
     "badge": "−50% for 6 months",
     "steps": {
       "0": {
@@ -595,6 +595,14 @@
       {
         "question": "I've wanted my own app for a while but don't know where to start",
         "answer": "Start with one location and pickup — that's enough to take your first orders. The trial is 90 days free and needs no card. We help with the launch: we'll show you how to build the menu and set up the location, and answer questions along the way. Delivery, promotions and a second location come later, when you decide"
+      },
+      {
+        "question": "I already have a site with ordering and guest accounts. Why add a bot?",
+        "answer": "It's not that a site takes orders badly. It's that a site is a place you have to go to: remember the address, open it, sign in. A messenger is open dozens of times a day anyway, and your bot sits right there in the chat list. The mini app opens from a link with nothing to install and no sign-up, and after the order the bot messages about the status — an account page can't do that, it stays silent. And separately: in MAX you have no site at all, while the bot there is the same one, with a shared base of guests and points"
+      },
+      {
+        "question": "I have my own app. Isn't this a duplicate?",
+        "answer": "An app has to be downloaded, and only a few get there — usually your most loyal guests, while the rest stay outside your channel. The mini app opens right inside MAX or Telegram from a link: you put that link in social media, on your site, on a QR code in the dining room and on the packaging — and the guest lands in the menu on the spot, without a browser and without a password. Your app doesn't go anywhere: it works for those who already installed it, the bot works for everyone else"
       }
     ]
   },
@@ -723,6 +731,63 @@
     "outcome": "From there the guest follows your venue's bot: their orders, contacts and points are yours, not a marketplace's",
     "note": "You get your bot's link and QR code in the dashboard and place them yourself"
   },
+  "ownChannels": {
+    "label": "Already have a site",
+    "title": "A site is a place to go to. A messenger is where the guest already is",
+    "subtitle": "Nyambot replaces neither your site nor your app, and doesn't argue with them. It adds a channel where the guest spends the day anyway — and takes over the repeat orders",
+    "columns": {
+      "site": "Site or your own app",
+      "nyambot": "Nyambot"
+    },
+    "rows": {
+      "reach": {
+        "criterion": "How the guest reaches you",
+        "site": "Remember the address and open the site",
+        "nyambot": "The bot chat sits in a messenger that's already open"
+      },
+      "login": {
+        "criterion": "Signing in",
+        "site": "Sign-up, password, account recovery",
+        "nyambot": "Open it and order — the phone number only at checkout"
+      },
+      "social": {
+        "criterion": "Coming from social media and ads",
+        "site": "A browser, then a login screen",
+        "nyambot": "The menu opens right there, without leaving the messenger"
+      },
+      "pos": {
+        "criterion": "Orders in the POS",
+        "site": "A separate integration with iiko or R-Keeper — if it was ever commissioned and paid for",
+        "nyambot": "Out of the box: menu and stop-lists come from the POS, and the order lands there as a check"
+      },
+      "payment": {
+        "criterion": "Online payment and courier",
+        "site": "Every service is bolted on as separate development work",
+        "nyambot": "YooKassa and Yandex.Pay — the money goes straight to your account, a Yandex.Delivery courier in one tap"
+      },
+      "loyalty": {
+        "criterion": "Promotions, points, promo codes",
+        "site": "A separate module or plugin, a different one per channel — and it knows nothing about your POS",
+        "nyambot": "Discounts, gifts, promo codes and points are built in: the guest earns and pays with points right in the cart, and with iiko the POS's own promotions work too"
+      },
+      "schedule": {
+        "criterion": "Daily deals and happy hours",
+        "site": "The banner goes up by hand and comes down by hand",
+        "nyambot": "A promotion has its own weekdays and hours: the Tuesday discount switches itself on and goes dark in the evening"
+      },
+      "contact": {
+        "criterion": "Contact after the order",
+        "site": "An email or a call — if the guest waits for it",
+        "nyambot": "A message straight to the phone: accepted, cooking, ready, courier on the way — with a tracking link"
+      },
+      "max": {
+        "criterion": "MAX",
+        "site": "None",
+        "nyambot": "The same bot, the same guest and points base"
+      }
+    },
+    "outcome": "You don't switch the site off — it keeps working for those who are searching. Nyambot works for those who have already ordered: their orders, contacts and points stay yours"
+  },
   "network": {
     "label": "Chains",
     "title": "For chains and franchises",
@@ -753,6 +818,7 @@
         "text": "Locations are grouped for billing: invoices and closing documents go to different legal entities while the dashboard stays one"
       }
     },
-    "cta": "Talk about a chain"
+    "cta": "Talk about a chain",
+    "ctaHint": "Opens the support chat in Telegram — we'll answer your questions about chains and franchises"
   }
 }

@@ -18,6 +18,7 @@ import { WhySection } from "@/components/sections/why/why-section";
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { GuestsPathSection } from "@/components/sections/guests-path/guests-path-section";
+import { OwnChannelsSection } from "@/components/sections/own-channels/own-channels-section";
 import { NetworkSection } from "@/components/sections/network/network-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
@@ -54,6 +55,10 @@ export default function LandingPage() {
             вопрос, который ресторатор задаёт вслух, и до списка возможностей
             он всё равно думает о нём, а не о них */}
         <GuestsPathSection />
+        {/* Возражение «у меня уже есть сайт и приложение» — сразу за путём
+            гостя: оба блока про один и тот же вопрос «где живёт мой гость»,
+            и порознь второй читается как повтор первого */}
+        <OwnChannelsSection />
         <FeaturesSection />
         <CrmDemoSection />
         {/* Сеть — перед тарифами: сети 20+ целевой сегмент, и до цены она

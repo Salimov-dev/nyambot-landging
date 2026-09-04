@@ -404,7 +404,7 @@
   "switch": {
     "label": "Boshqa xizmatdan foydalanasizmi",
     "title": "Buyurtma qabul qilish uchun boshqa xizmatdan foydalanasizmi? <em>50% chegirma</em>",
-    "subtitle": "Nyambotga oʻting — dastlabki 6 oy ikki barobar arzon. Bot sizniki boʻlib qoladi, faqat uni boshqaradigan xizmat oʻzgaradi. Nuqtalar bir nechta boʻlsa, ular bitta kanal va bitta mehmonlar bazasiga birlashadi",
+    "subtitle": "Nyambotga oʻting — dastlabki 6 oy ikki barobar arzon. Bot sizniki boʻlib qoladi, faqat uni boshqaradigan xizmat oʻzgaradi. Nuqtalar bir nechta boʻlsa, ular bitta kanal va bitta mehmonlar bazasiga birlashadi. Sayting va o‘z ilovang esa qoladi — Nyambot ular yonida, messenjerlarda ishlaydi",
     "badge": "6 oyga −50%",
     "steps": {
       "0": {
@@ -526,11 +526,11 @@
       },
       {
         "question": "Mehmonlar ilova haqida qanday biladi?",
-        "answer": "Hozir siz haqingizda qanday bilsalar, xuddi shunday — faqat ular sizning oʻz buyurtma kanalingizga kelishadi. Reklamadagi, ijtimoiy tarmoqlardagi, blogerdagi yoki qidiruvdagi havola darhol menyungizni ochadi, hech narsa oʻrnatmasdan. Zaldagi QR-kod tashrifni obunaga aylantiradi, qadoqdagi QR esa birinchi marta agregator orqali buyurtma bergan mehmonni toʻgʻridan-toʻgʻri qaytaradi. Eng arzoni — kassadagi ibora: «skanerlang, keyingi tashrifingizga bonus oling»"
+        "answer": "Hozir sen haqingda qanday bilsalar, xuddi shunday — faqat ular sening oʻz buyurtma kanalingga kelishadi. Reklamadagi, ijtimoiy tarmoqlardagi, blogerdagi yoki qidiruvdagi havola darhol menyungni ochadi, hech narsa oʻrnatmasdan. Zaldagi QR-kod tashrifni obunaga aylantiradi, qadoqdagi QR esa birinchi marta agregator orqali buyurtma bergan mehmonni toʻgʻridan-toʻgʻri qaytaradi. Eng arzoni — kassadagi ibora: «skanerlang, keyingi tashrifingizga bonus oling»"
       },
       {
-        "question": "Siz mehmon olib kelasizmi?",
-        "answer": "Nyambot — muassasaning oʻz nomi ostidagi buyurtma ilovasi. Biz trafik quvmaymiz — sizning trafikingizni qoʻndiramiz: reklamani, ijtimoiy tarmoqlarni, blogerlarni, qidiruvni, peshtaxtani va qadoqni. Agregatordan farqi mehmon qayerdan kelganida emas, keyin kimning mehmoni boʻlishida: maydonchada buyurtma bergan uning mehmoni boʻlib qoladi — har keyingi buyurtma uchun komissiya bilan, — Nyambotga kelgan esa muassasa botiga obuna va takroran toʻgʻridan-toʻgʻri buyurtma beradi"
+        "question": "Nyambot mehmon olib keladimi?",
+        "answer": "Nyambot — muassasaning oʻz nomi ostidagi buyurtma ilovasi. Biz trafik quvmaymiz — sening trafikingni qoʻndiramiz: reklamani, ijtimoiy tarmoqlarni, blogerlarni, qidiruvni, peshtaxtani va qadoqni. Agregatordan farqi mehmon qayerdan kelganida emas, keyin kimning mehmoni boʻlishida: maydonchada buyurtma bergan uning mehmoni boʻlib qoladi — har keyingi buyurtma uchun komissiya bilan, — Nyambotga kelgan esa muassasa botiga obuna va takroran toʻgʻridan-toʻgʻri buyurtma beradi"
       },
       {
         "question": "Kassani almashtirishga toʻgʻri keladimi?",
@@ -595,6 +595,14 @@
       {
         "question": "Anchadan beri oʻz ilovamni oʻylardim, lekin nimadan boshlashni bilmayman",
         "answer": "Bitta nuqta va oʻzi olib ketishdan boshlang — birinchi buyurtmalarni qabul qilish uchun shuning oʻzi yetarli. Sinov davri 90 kun bepul, karta kerak emas. Biz ishga tushirishda yordam beramiz: menyuni qanday yigʻish va nuqtani sozlashni koʻrsatamiz, yoʻl-yoʻlakay savollarga javob beramiz. Keyin yetkazib berish, aksiyalar va ikkinchi nuqta — oʻzingiz qaror qilganingizda"
+      },
+      {
+        "question": "Buyurtma qabul qiladigan saytim va shaxsiy kabinetim bor. Bot nimaga kerak?",
+        "answer": "Gap saytning buyurtmani yomon qabul qilishida emas. Gap shundaki, saytga borish kerak: manzilni eslash, ochish, kirish. Messenjerni mehmon kuniga o‘nlab marta ochadi, sening boting esa uning chatlar ro‘yxatida turadi. Mini-ilova havola orqali ochiladi — o‘rnatishsiz va ro‘yxatdan o‘tishsiz, buyurtmadan keyin esa bot holat haqida o‘zi yozadi; kabinet buni uddalay olmaydi, u jim turadi. Alohida: MAX'da sayting umuman yo‘q, bot esa o‘sha — umumiy mehmonlar va ballar bazasi bilan"
+      },
+      {
+        "question": "O‘z ilovam bor. Bu takrorlanish emasmi?",
+        "answer": "Ilovani yuklab olish kerak va unga kam odam yetib boradi — odatda eng sodiq mehmonlar, qolganlari sening kanalingdan tashqarida qoladi. Mini-ilova havola orqali to‘g‘ridan-to‘g‘ri MAX yoki Telegramda ochiladi: havolani ijtimoiy tarmoqlarga, saytga, zaldagi QR-kodga va qadoqqa qo‘yasan — odam brauzerga chiqmasdan va parol yaratmasdan o‘sha yerda menyuga tushadi. O‘z ilovang esa hech qayerga ketmaydi: u allaqachon o‘rnatganlar uchun, bot esa qolgan hamma uchun ishlaydi"
       }
     ]
   },
@@ -701,27 +709,84 @@
   "guestsPath": {
     "label": "Mehmonlar",
     "title": "Mehmonlar ilovaga qanday keladi",
-    "subtitle": "Nyambot trafik quvmaydi — u mehmonni sizning oʻz buyurtma kanalingizga oʻtqazadi. Buning toʻrtta yoʻli",
+    "subtitle": "Nyambot trafik quvmaydi — u mehmonni sening oʻz buyurtma kanalingga oʻtqazadi. Buning toʻrtta yoʻli",
     "items": {
       "link": {
         "title": "Reklama va ijtimoiy tarmoqlardagi havola",
-        "text": "Havola orqali odam darhol menyungizni ochadi va buyurtma beradi — ilova oʻrnatmasdan va roʻyxatdan oʻtmasdan. Yangi mehmonlar shunday keladi: reklamadan, ijtimoiy tarmoqlardan, blogerlardan va qidiruvdan"
+        "text": "Havola orqali odam darhol menyungni ochadi va buyurtma beradi — ilova oʻrnatmasdan va roʻyxatdan oʻtmasdan. Yangi mehmonlar shunday keladi: reklamadan, ijtimoiy tarmoqlardan, blogerlardan va qidiruvdan"
       },
       "qrHall": {
         "title": "Zaldagi QR-kod",
-        "text": "Stollarda, menyuda, chekda. Mehmon allaqachon sizda — QR tashrifni doimiy aloqaga aylantiradi"
+        "text": "Stollarda, menyuda, chekda. Mehmon allaqachon senda — QR tashrifni doimiy aloqaga aylantiradi"
       },
       "qrPack": {
         "title": "Qadoqdagi QR-kod",
-        "text": "Shu tariqa birinchi marta agregator orqali buyurtma bergan mehmon toʻgʻridan-toʻgʻri sizga qaytadi. Uning keyingi buyurtmasi komissiyasiz sizga keladi"
+        "text": "Shu tariqa birinchi marta agregator orqali buyurtma bergan mehmon toʻgʻridan-toʻgʻri senga qaytadi. Uning keyingi buyurtmasi komissiyasiz senga keladi"
       },
       "staff": {
         "title": "Xodimning soʻzi",
         "text": "«Skanerlang — keyingi tashrifingizga bonus oling». Eng arzon kanal: uni odam aytadi"
       }
     },
-    "outcome": "Keyin mehmon muassasa botiga obuna boʻladi: uning buyurtmalari, kontaktlari va ballari — sizniki, maydoncha emas",
-    "note": "Botingizning havolasi va QR-kodini kabinetda olasiz va oʻzingiz joylashtirasiz"
+    "outcome": "Keyin mehmon muassasa botiga obuna boʻladi: uning buyurtmalari, kontaktlari va ballari — seniki, maydoncha emas",
+    "note": "Botingning havolasi va QR-kodini kabinetda olasan va oʻzing joylashtirasan"
+  },
+  "ownChannels": {
+    "label": "Sayting bor",
+    "title": "Sayt — borish kerak bo‘lgan joy. Messenjer — mehmon allaqachon turgan joy",
+    "subtitle": "Nyambot na saytni, na o‘z ilovangni almashtiradi va ular bilan bahslashmaydi. U mehmon kunini o‘tkazadigan joyda kanal qo‘shadi va takroriy buyurtmalarni o‘z zimmasiga oladi",
+    "columns": {
+      "site": "Sayt yoki o‘z ilovang",
+      "nyambot": "Nyambot"
+    },
+    "rows": {
+      "reach": {
+        "criterion": "Mehmon senga qanday keladi",
+        "site": "Sayt manzilini eslab, uni ochishi kerak",
+        "nyambot": "Bot chati allaqachon ochiq messenjerda turadi"
+      },
+      "login": {
+        "criterion": "Kirish",
+        "site": "Ro‘yxatdan o‘tish, parol, kirishni tiklash",
+        "nyambot": "Ochdi va buyurtma berdi — telefon faqat rasmiylashtirishda"
+      },
+      "social": {
+        "criterion": "Ijtimoiy tarmoq va reklamadan o‘tish",
+        "site": "Brauzer, keyin kabinetga kirish",
+        "nyambot": "Menyu o‘sha yerda ochiladi, messenjerdan chiqmasdan"
+      },
+      "pos": {
+        "criterion": "Buyurtmalar kassada",
+        "site": "iiko yoki R-Keeper bilan alohida integratsiya — agar u buyurtma qilinib, to‘langan bo‘lsa",
+        "nyambot": "Qutidan chiqqanidek: menyu va stop-ro‘yxatlar kassadan keladi, buyurtma esa unga chek bo‘lib boradi"
+      },
+      "payment": {
+        "criterion": "Onlayn to‘lov va kuryer",
+        "site": "Har bir xizmat alohida ishlab chiqish bilan ulanadi",
+        "nyambot": "ЮKassa va Yandex.Pay — pul to‘g‘ridan-to‘g‘ri hisobingga, Yandex.Dostavka kuryeri bir bosishda"
+      },
+      "loyalty": {
+        "criterion": "Aksiyalar, ballar, promo-kodlar",
+        "site": "Alohida modul yoki plagin, har kanalda o‘ziniki — va u kassa haqida hech narsa bilmaydi",
+        "nyambot": "Chegirmalar, sovg‘alar, promo-kodlar va ballar to‘plamda: mehmon yig‘adi va to‘g‘ridan-to‘g‘ri savatda ballar bilan to‘laydi, iiko bilan esa kassaning o‘z aksiyalari ishlaydi"
+      },
+      "schedule": {
+        "criterion": "Kun taklifi va baxtli soatlar",
+        "site": "Bannerni qo‘lda osadilar va qo‘lda olib tashlaydilar",
+        "nyambot": "Aksiyaning o‘z hafta kunlari va soatlari bor: seshanba chegirmasi o‘zi yonadi va kechqurun o‘chadi"
+      },
+      "contact": {
+        "criterion": "Buyurtmadan keyingi aloqa",
+        "site": "Xat yoki qo‘ng‘iroq — agar mehmon uni kutsa",
+        "nyambot": "To‘g‘ridan-to‘g‘ri telefonga xabar: qabul qilindi, tayyorlanmoqda, tayyor, kuryer yo‘lda — kuzatish havolasi bilan"
+      },
+      "max": {
+        "criterion": "MAX",
+        "site": "Yo‘q",
+        "nyambot": "O‘sha bot, o‘sha mehmonlar va ballar bazasi"
+      }
+    },
+    "outcome": "Saytni o‘chirish shart emas — u qidirayotganlar uchun ishlayveradi. Nyambot allaqachon buyurtma berganlar uchun ishlaydi: ularning buyurtmalari, kontaktlari va ballari seniki bo‘lib qoladi"
   },
   "network": {
     "label": "Tarmoq",
@@ -753,6 +818,7 @@
         "text": "Nuqtalar hisob-kitob guruhlariga birlashtiriladi: hisoblar va yopuvchi hujjatlar turli yuridik shaxslarga boradi, kabinet esa bitta qoladi"
       }
     },
-    "cta": "Tarmoq haqida gaplashamiz"
+    "cta": "Tarmoq haqida gaplashamiz",
+    "ctaHint": "Telegramda qoʻllab-quvvatlash chati ochiladi — tarmoq va franshiza boʻyicha javob beramiz"
   }
 }

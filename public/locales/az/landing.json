@@ -404,7 +404,7 @@
   "switch": {
     "label": "Başqa xidmətdən istifadə edirsən",
     "title": "Sifariş qəbulu üçün başqa xidmətdən istifadə edirsən? <em>50% endirim</em>",
-    "subtitle": "Nyambota keç — ilk 6 ay iki dəfə ucuzdur. Bot səninki qalır, yalnız onu idarə edən xidmət dəyişir. Bir neçə nöqtə varsa, onlar bir kanalda və bir qonaq bazasında birləşir",
+    "subtitle": "Nyambota keç — ilk 6 ay iki dəfə ucuzdur. Bot səninki qalır, yalnız onu idarə edən xidmət dəyişir. Bir neçə nöqtə varsa, onlar bir kanalda və bir qonaq bazasında birləşir. Sayt və öz tətbiqin isə qalır — Nyambot onların yanında, messencerlərdə işləyir",
     "badge": "6 ay üçün −50%",
     "steps": {
       "0": {
@@ -526,11 +526,11 @@
       },
       {
         "question": "Qonaqlar tətbiq haqqında necə biləcək?",
-        "answer": "Sizin haqqınızda indi necə öyrənirlərsə, elə də — sadəcə onlar sizin öz sifariş kanalınıza gəlirlər. Reklamdakı, sosial şəbəkələrdəki, blogerdəki və ya axtarışdakı keçid dərhal menyunuzu açır, heç nə quraşdırmadan. Zaldakı QR-kod ziyarəti abunəliyə çevirir, qablaşdırmadakı QR isə ilk dəfə aqreqator vasitəsilə sifariş vermiş qonağı birbaşa geri qaytarır. Ən ucuz kanal isə kassadakı cümlədir: «skan edin, növbəti gəlişinizə bonus qazanın»"
+        "answer": "Sənin haqqında indi necə öyrənirlərsə, elə də — sadəcə onlar sənin öz sifariş kanalına gəlirlər. Reklamdakı, sosial şəbəkələrdəki, blogerdəki və ya axtarışdakı keçid dərhal menyunu açır, heç nə quraşdırmadan. Zaldakı QR-kod ziyarəti abunəliyə çevirir, qablaşdırmadakı QR isə ilk dəfə aqreqator vasitəsilə sifariş vermiş qonağı birbaşa geri qaytarır. Ən ucuz kanal isə kassadakı cümlədir: «skan edin, növbəti gəlişinizə bonus qazanın»"
       },
       {
-        "question": "Siz qonaq gətirirsiniz?",
-        "answer": "Nyambot — müəssisənin öz adı altında olan sifariş tətbiqidir. Biz trafik qovmuruq — sizin trafikinizi endiririk: reklamı, sosial şəbəkələri, blogerləri, axtarışı, lövhəni və qablaşdırmanı. Aqreqatordan fərq qonağın haradan gəlməsində deyil, sonra kimin qonağı olmasındadır: platformada sifariş verən onun qonağı olaraq qalır — hər növbəti sifariş üçün komissiya ilə, — Nyambota gələn isə müəssisənin botuna abunədir və təkrar sifarişi birbaşa verir"
+        "question": "Nyambot qonaq gətirir?",
+        "answer": "Nyambot — müəssisənin öz adı altında olan sifariş tətbiqidir. Biz trafik qovmuruq — sənin trafikini endiririk: reklamı, sosial şəbəkələri, blogerləri, axtarışı, lövhəni və qablaşdırmanı. Aqreqatordan fərq qonağın haradan gəlməsində deyil, sonra kimin qonağı olmasındadır: platformada sifariş verən onun qonağı olaraq qalır — hər növbəti sifariş üçün komissiya ilə, — Nyambota gələn isə müəssisənin botuna abunədir və təkrar sifarişi birbaşa verir"
       },
       {
         "question": "Kassanı dəyişmək lazım gələcək?",
@@ -595,6 +595,14 @@
       {
         "question": "Çoxdan öz tətbiqimi istəyirdim, amma haradan başlayacağımı bilmirəm",
         "answer": "Bir filial və özü götürmə ilə başlayın — ilk sifarişləri qəbul etmək üçün bu kifayətdir. Sınaq dövrü 90 gün pulsuzdur, kart tələb olunmur. Başlanğıcda kömək edirik: menyunu necə yığmağı və filialı necə qurmağı göstəririk, yol boyu suallara cavab veririk. Çatdırılma, aksiyalar və ikinci filial sonra gəlir — özünüz qərar verdiyiniz zaman"
+      },
+      {
+        "question": "Sifariş qəbul edən saytım və şəxsi kabinetim var. Bot niyə lazımdır?",
+        "answer": "Məsələ saytın sifarişi pis qəbul etməsində deyil. Məsələ ondadır ki, sayta gəlmək lazımdır: ünvanı xatırlamaq, açmaq, daxil olmaq. Messenceri qonaq onsuz da gündə onlarla dəfə açır və sənin botun onun söhbətlər siyahısındadır. Mini-tətbiq keçid ilə açılır — quraşdırma və qeydiyyat olmadan, sifarişdən sonra isə bot statusu özü yazır; kabinet bunu bacarmır, o susur. Ayrıca: MAX-da saytın ümumiyyətlə yoxdur, bot isə orada eynidir — ortaq qonaq və bal bazası ilə"
+      },
+      {
+        "question": "Öz tətbiqim var. Bu təkrar deyil?",
+        "answer": "Tətbiqi yükləmək lazımdır və oraya az adam çatır — adətən ən sadiq qonaqlar, qalanları isə sənin kanalından kənarda qalır. Mini-tətbiq keçid ilə birbaşa MAX və ya Teleqramda açılır: keçidi sosial şəbəkələrə, sayta, zaldakı QR-koda və qablaşdırmaya qoyursan — insan brauzerə çıxmadan və parol yaratmadan yerindəcə menyuya düşür. Öz tətbiqin isə heç yerə getmir: o, artıq quraşdıranlar üçün, bot isə qalan hamı üçün işləyir"
       }
     ]
   },
@@ -701,27 +709,84 @@
   "guestsPath": {
     "label": "Qonaqlar",
     "title": "Qonaqlar tətbiqə necə düşür",
-    "subtitle": "Nyambot trafik qovmur — o, qonağı sizin öz sifariş kanalınıza oturdur. Bunun baş verdiyi dörd yol",
+    "subtitle": "Nyambot trafik qovmur — o, qonağı sənin öz sifariş kanalına oturdur. Bunun baş verdiyi dörd yol",
     "items": {
       "link": {
         "title": "Reklam və sosial şəbəkələrdəki keçid",
-        "text": "Keçidlə insan dərhal menyunuzu açır və sifariş verir — tətbiq quraşdırmadan və qeydiyyatsız. Yeni qonaqlar belə gəlir: reklamdan, sosial şəbəkələrdən, blogerlərdən və axtarışdan"
+        "text": "Keçidlə insan dərhal menyunu açır və sifariş verir — tətbiq quraşdırmadan və qeydiyyatsız. Yeni qonaqlar belə gəlir: reklamdan, sosial şəbəkələrdən, blogerlərdən və axtarışdan"
       },
       "qrHall": {
         "title": "Zaldakı QR-kod",
-        "text": "Masalarda, menyuda, çekdə. Qonaq artıq sizdədir — QR ziyarəti daimi əlaqəyə çevirir"
+        "text": "Masalarda, menyuda, çekdə. Qonaq artıq səndədir — QR ziyarəti daimi əlaqəyə çevirir"
       },
       "qrPack": {
         "title": "Qablaşdırmadakı QR-kod",
-        "text": "Beləliklə ilk dəfə aqreqator vasitəsilə sifariş vermiş qonaq birbaşa sizə qayıdır. Onun növbəti sifarişi komissiyasız sizə gəlir"
+        "text": "Beləliklə ilk dəfə aqreqator vasitəsilə sifariş vermiş qonaq birbaşa sənə qayıdır. Onun növbəti sifarişi komissiyasız sənə gəlir"
       },
       "staff": {
         "title": "İşçinin sözü",
         "text": "«Skan edin — növbəti gəlişinizə bonus qazanın». Ən ucuz kanal: onu insan deyir"
       }
     },
-    "outcome": "Sonra qonaq müəssisənin botuna abunədir: onun sifarişləri, kontaktları və bonusları sizindir, platformanın deyil",
-    "note": "Botunuzun keçidini və QR-kodunu kabinetdə alırsınız və özünüz yerləşdirirsiniz"
+    "outcome": "Sonra qonaq müəssisənin botuna abunədir: onun sifarişləri, kontaktları və bonusları sənindir, platformanın deyil",
+    "note": "Botunun keçidini və QR-kodunu kabinetdə alırsan və özün yerləşdirirsən"
+  },
+  "ownChannels": {
+    "label": "Artıq saytın var",
+    "title": "Sayt — gəlmək lazım olan yerdir. Messencer isə qonağın onsuz da olduğu yer",
+    "subtitle": "Nyambot nə saytı, nə də öz tətbiqini əvəz edir və onlarla mübahisə etmir. O, qonağın onsuz da gününü keçirdiyi yerdə kanal əlavə edir və təkrar sifarişləri üzərinə götürür",
+    "columns": {
+      "site": "Sayt və ya öz tətbiqin",
+      "nyambot": "Nyambot"
+    },
+    "rows": {
+      "reach": {
+        "criterion": "Qonaq sənə necə gəlir",
+        "site": "Saytın ünvanını xatırlayıb açmalıdır",
+        "nyambot": "Botun söhbəti onsuz da açıq olan messencerdədir"
+      },
+      "login": {
+        "criterion": "Giriş",
+        "site": "Qeydiyyat, parol, girişin bərpası",
+        "nyambot": "Açır və sifariş verir — telefon yalnız rəsmiləşdirmədə"
+      },
+      "social": {
+        "criterion": "Sosial şəbəkə və reklamdan keçid",
+        "site": "Brauzer, sonra kabinetə giriş",
+        "nyambot": "Menyu yerindəcə açılır, messencerdən çıxmadan"
+      },
+      "pos": {
+        "criterion": "Sifarişlər kassada",
+        "site": "iiko və ya R-Keeper ilə ayrıca inteqrasiya — əgər sifariş verilib və ödənilibsə",
+        "nyambot": "Qutudan çıxan kimi: menyu və stop-siyahılar kassadan gəlir, sifariş isə çek kimi ora gedir"
+      },
+      "payment": {
+        "criterion": "Onlayn ödəniş və kuryer",
+        "site": "Hər xidmət ayrıca işləmə ilə qoşulur",
+        "nyambot": "ЮKassa və Yandex.Pay — pul birbaşa sənin hesabına, Yandex.Dostavka kuryeri bir toxunuşla"
+      },
+      "loyalty": {
+        "criterion": "Aksiyalar, ballar, promo-kodlar",
+        "site": "Ayrıca modul və ya plagin, hər kanalda öz — və kassadan xəbəri yoxdur",
+        "nyambot": "Endirimlər, hədiyyələr, promo-kodlar və ballar dəstdədir: qonaq yığır və birbaşa səbətdə ballarla ödəyir, iiko ilə isə kassanın öz aksiyaları işləyir"
+      },
+      "schedule": {
+        "criterion": "Günün təklifi və xoşbəxt saatlar",
+        "site": "Banner əl ilə asılır və əl ilə də yığışdırılır",
+        "nyambot": "Aksiyanın öz həftə günləri və saatları var: çərşənbə axşamı endirimi özü yanır və axşam sönür"
+      },
+      "contact": {
+        "criterion": "Sifarişdən sonrakı əlaqə",
+        "site": "Məktub və ya zəng — qonaq onu gözləyərsə",
+        "nyambot": "Birbaşa telefona mesaj: qəbul edildi, hazırlanır, hazırdır, kuryer yoldadır — izləmə keçidi ilə"
+      },
+      "max": {
+        "criterion": "MAX",
+        "site": "Yoxdur",
+        "nyambot": "Eyni bot, eyni qonaq və bal bazası"
+      }
+    },
+    "outcome": "Saytı söndürmək lazım deyil — o, axtaranlar üçün işləməyə davam edir. Nyambot artıq sifariş vermişlər üçün işləyir: onların sifarişləri, əlaqələri və balları sənin olaraq qalır"
   },
   "network": {
     "label": "Şəbəkə",
@@ -753,6 +818,7 @@
         "text": "Filiallar hesablaşma qruplarına birləşir: hesablar və bağlayıcı sənədlər müxtəlif hüquqi şəxslərə gedir, kabinet isə bir qalır"
       }
     },
-    "cta": "Şəbəkəni müzakirə edək"
+    "cta": "Şəbəkəni müzakirə edək",
+    "ctaHint": "Teleqramda dəstək söhbəti açılacaq — şəbəkə və franşiza ilə bağlı suallara cavab verəcəyik"
   }
 }

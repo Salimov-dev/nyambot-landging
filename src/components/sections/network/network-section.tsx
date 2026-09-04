@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Button, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
+import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import {
   StoreIcon,
   UsersIcon,
@@ -97,14 +99,23 @@ export function NetworkSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className={styles.ctaRow}
         >
+          {/* 🔴 Кнопка ведёт в поддержку, а не на якорь «#cta». Раньше она
+              роняла человека в блок регистрации: он нажимал «Обсудить сеть»,
+              его отбрасывало вниз страницы — и обсуждать там было не с кем.
+              Сеть и франшиза — единственный сценарий, где разговор нужен
+              раньше кабинета. */}
           <Button
             type="primary"
             size="large"
-            href="#cta"
+            href={LINKS.support.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => reachGoal("click_tg_support", { from: "network" })}
             className={styles.ctaBtn}
           >
             {t("network.cta")} →
           </Button>
+          <Text className={styles.ctaHint}>{t("network.ctaHint")}</Text>
         </motion.div>
       </div>
     </section>
