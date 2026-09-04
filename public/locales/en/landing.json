@@ -525,6 +525,14 @@
         "answer": "No. A guest opens the mini app in the messenger and immediately browses the menu, checks prices and fills the cart — no sign-up, no phone number, no location. The phone number and address are only needed at checkout"
       },
       {
+        "question": "How will guests find out about the app?",
+        "answer": "The same way they find out about you today — except they land in your own ordering channel. A link from an ad, social media, a blogger or search opens your menu right away, with nothing to install. A QR code in the dining room turns a visit into a subscription, and a QR code on the packaging brings back the guest who first ordered through an aggregator. And the cheapest channel of all is a line at the counter: “scan this and get a bonus on your next visit”"
+      },
+      {
+        "question": "Do you bring guests in?",
+        "answer": "Nyambot is the venue's own ordering app, under your name. We don't drive traffic — we land yours: ads, social media, bloggers, search, your sign and your packaging. The difference from an aggregator is not where the guest came from, but whose guest they are afterwards: someone who orders on a marketplace stays its guest — with its commission on every next order — while someone who comes to Nyambot follows your venue's bot and orders again directly"
+      },
+      {
         "question": "Will I have to replace my POS?",
         "answer": "No. Nyambot doesn't replace your POS and doesn't require one. With iiko or R-Keeper you connect the integration, and the menu, stop lists and orders sync automatically. With a different POS or none at all, Nyambot runs the menu, modifiers, loyalty and orders on its own CRM. Connect a POS later — nothing is lost"
       },
@@ -561,6 +569,10 @@
         "answer": "Yes. You can set up pickup only or dine-in service. And if you need delivery but have no couriers of your own, connect Yandex.Delivery: you place the request in one tap from the Crew app or in the CRM, and a courier comes for the order. Your own couriers are supported too — the delivery method is your call"
       },
       {
+        "question": "I don't do delivery — is Nyambot still for me?",
+        "answer": "Yes, and you don't have to start with couriers. Pickup and pre-orders work from day one: the guest builds the order in the app, pays online or on the spot and collects it at the time they choose — the kitchen sees the order in advance. Delivery can be switched on later: your own couriers or Yandex.Delivery, with zones and pricing set up in the dashboard"
+      },
+      {
         "question": "How does the trial period work?",
         "answer": "After signup we give 90 days free — no card and no crippled features: the full CRM, the «Crew» app, POS and delivery integrations. You set everything up yourself, and support answers questions at every step. The trial runs on standard terms — one location and two bots; integrations connect without restrictions. For chains and larger volumes we agree terms separately"
       },
@@ -579,6 +591,10 @@
       {
         "question": "How quickly can I start accepting orders?",
         "answer": "The order is: create a bot, connect it in the CRM, upload the menu, set delivery zones and share the link with guests. All of it is done in the CRM yourself, and support helps along the way"
+      },
+      {
+        "question": "I've wanted my own app for a while but don't know where to start",
+        "answer": "Start with one location and pickup — that's enough to take your first orders. The trial is 90 days free and needs no card. We help with the launch: we'll show you how to build the menu and set up the location, and answer questions along the way. Delivery, promotions and a second location come later, when you decide"
       }
     ]
   },
@@ -681,5 +697,62 @@
     "riskTitle": "Try it risk-free",
     "riskText": "90 days free, no card required. Not a fit — you simply don't pay. We'll show you how to set things up and where to start",
     "riskCta": "Try for free"
+  },
+  "guestsPath": {
+    "label": "Guests",
+    "title": "How guests reach the app",
+    "subtitle": "Nyambot doesn't drive traffic — it lands your guests in your own ordering channel. Four routes that make it happen",
+    "items": {
+      "link": {
+        "title": "A link in ads and social media",
+        "text": "The link opens your menu right away and the guest orders — nothing to install, no sign-up. That's how new guests arrive: from ads, social media, bloggers and search"
+      },
+      "qrHall": {
+        "title": "A QR code in the dining room",
+        "text": "On tables, in the menu, on the receipt. The guest is already with you — the QR code turns the visit into a lasting connection"
+      },
+      "qrPack": {
+        "title": "A QR code on the packaging",
+        "text": "This brings back, directly to you, the guest who first ordered through an aggregator. Their next order comes to you, commission-free"
+      },
+      "staff": {
+        "title": "A word from your staff",
+        "text": "“Scan this and get a bonus on your next visit.” The cheapest channel of all — because a person says it"
+      }
+    },
+    "outcome": "From there the guest follows your venue's bot: their orders, contacts and points are yours, not a marketplace's",
+    "note": "You get your bot's link and QR code in the dashboard and place them yourself"
+  },
+  "network": {
+    "label": "Chains",
+    "title": "For chains and franchises",
+    "subtitle": "Locations, roles, cities and invoices — in a single dashboard. No ten accounts and no spreadsheets in a messenger",
+    "items": {
+      "stores": {
+        "title": "Every location in one dashboard",
+        "text": "Twenty locations or three hundred — one dashboard, one guest base, shared points. New locations are created from a file, settings copied from an existing one"
+      },
+      "roles": {
+        "title": "Everyone gets their own",
+        "text": "A manager runs their location, a territory manager runs their cluster. A role is granted to a group of locations: open a new one and access is already there"
+      },
+      "rights": {
+        "title": "Permissions are split",
+        "text": "Who can refund, who sees the guest's phone and address, who only sees the numbers. Guest contacts are a separate decision per person, not a side effect of a job title"
+      },
+      "cities": {
+        "title": "The guest sees their own city",
+        "text": "In the app they pick a city and find the nearest location — instead of scrolling a list of three hundred"
+      },
+      "franchise": {
+        "title": "Franchising",
+        "text": "Head office runs the brand: menu, promotions, storefront and bot. For franchisee locations it sees summary figures only — guests, money and staff stay with the franchisee"
+      },
+      "billing": {
+        "title": "One invoice or several",
+        "text": "Locations are grouped for billing: invoices and closing documents go to different legal entities while the dashboard stays one"
+      }
+    },
+    "cta": "Talk about a chain"
   }
 }

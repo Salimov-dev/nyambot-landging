@@ -7,27 +7,34 @@ import type { CollapseProps } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
+import ruLanding from "../../../../public/locales/ru/landing.json";
 import styles from "./faq-section.module.css";
 
 const { Title, Text } = Typography;
 
-const FAQ_KEYS = [
-  "faq.items.0",
-  "faq.items.1",
-  "faq.items.2",
-  "faq.items.3",
-  "faq.items.4",
-  "faq.items.5",
-  "faq.items.6",
-  "faq.items.7",
-  "faq.items.8",
-] as const;
+/**
+ * 🔴 Вопросы берутся из словаря ЦЕЛИКОМ, а не по списку ключей.
+ *
+ * Список ключей здесь был забит руками и остановился на девятом вопросе, пока
+ * словарь дорос до шестнадцати. Семь ответов — про оплату, пробный период,
+ * скидку 50%, поддержку, MAX и сроки запуска — были написаны, переведены на
+ * семь языков и **не показывались никому**: разметка для поисковиков отдаёт их
+ * все (`structured-data`), то есть Google ответы видел, а человек нет.
+ *
+ * Длина берётся у русского словаря — он же источник разметки: перевод, в
+ * котором вопросов меньше, отдал бы пустые строки, и это заметно сразу, а
+ * молчаливой потери вопроса больше не будет.
+ */
+const FAQ_COUNT = (ruLanding.faq.items as unknown[]).length;
 
 export function FaqSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
 
-  const items: CollapseProps["items"] = FAQ_KEYS.map((key, i) => ({
+  const items: CollapseProps["items"] = Array.from(
+    { length: FAQ_COUNT },
+    (_, i) => `faq.items.${i}`,
+  ).map((key, i) => ({
     key: String(i),
     label: (
       <Text

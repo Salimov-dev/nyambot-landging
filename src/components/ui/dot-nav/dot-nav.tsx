@@ -12,6 +12,7 @@ const SECTIONS: { id: string; label: string }[] = [
   { id: "killer", label: "Главное" },
   { id: "try-demo", label: "Демо" },
   { id: "features", label: "Возможности" },
+  { id: "network", label: "Сеть" },
   { id: "crm-demo", label: "CRM" },
   { id: "pricing", label: "Тарифы" },
   { id: "how-it-works", label: "Как работает" },

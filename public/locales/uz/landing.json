@@ -525,6 +525,14 @@
         "answer": "Yoʻq. Mehmon messenjerda mini-ilovani ochadi va darhol menyuni koʻradi, narxlarni tekshiradi va savatni toʻldiradi — roʻyxatdan oʻtmasdan, telefon raqamisiz va joylashuvsiz. Telefon va manzil faqat buyurtmani rasmiylashtirishda kerak boʻladi"
       },
       {
+        "question": "Mehmonlar ilova haqida qanday biladi?",
+        "answer": "Hozir siz haqingizda qanday bilsalar, xuddi shunday — faqat ular sizning oʻz buyurtma kanalingizga kelishadi. Reklamadagi, ijtimoiy tarmoqlardagi, blogerdagi yoki qidiruvdagi havola darhol menyungizni ochadi, hech narsa oʻrnatmasdan. Zaldagi QR-kod tashrifni obunaga aylantiradi, qadoqdagi QR esa birinchi marta agregator orqali buyurtma bergan mehmonni toʻgʻridan-toʻgʻri qaytaradi. Eng arzoni — kassadagi ibora: «skanerlang, keyingi tashrifingizga bonus oling»"
+      },
+      {
+        "question": "Siz mehmon olib kelasizmi?",
+        "answer": "Nyambot — muassasaning oʻz nomi ostidagi buyurtma ilovasi. Biz trafik quvmaymiz — sizning trafikingizni qoʻndiramiz: reklamani, ijtimoiy tarmoqlarni, blogerlarni, qidiruvni, peshtaxtani va qadoqni. Agregatordan farqi mehmon qayerdan kelganida emas, keyin kimning mehmoni boʻlishida: maydonchada buyurtma bergan uning mehmoni boʻlib qoladi — har keyingi buyurtma uchun komissiya bilan, — Nyambotga kelgan esa muassasa botiga obuna va takroran toʻgʻridan-toʻgʻri buyurtma beradi"
+      },
+      {
         "question": "Kassani almashtirishga toʻgʻri keladimi?",
         "answer": "Yoʻq. Nyambot kassani almashtirmaydi va uni talab qilmaydi. iiko yoki R-Keeper boʻlsa, integratsiya ulanadi va menyu, stop-roʻyxatlar hamda buyurtmalar avtomatik sinxronlanadi. Kassa boshqa yoki umuman yoʻq boʻlsa, Nyambot menyu, modifikatorlar, sodiqlik va buyurtmalarni oʻz CRMida mustaqil yuritadi. Keyinroq kassani ulasangiz — maʼlumotlar joyida qoladi"
       },
@@ -561,6 +569,10 @@
         "answer": "Ha. Faqat oʻzi olib ketish yoki zalda xizmat koʻrsatishni sozlash mumkin. Agar yetkazib berish kerak boʻlsa-yu, oʻz kuryeringiz boʻlmasa — Yandex.Yetkazib berishni ulang: arizani «Команда» ilovasidan yoki CRM'dan bir teginishda yuborasiz va kuryer buyurtma uchun keladi. Oʻz kuryerlaringiz ham qoʻllab-quvvatlanadi — yetkazib berish usulini oʻzingiz tanlaysiz"
       },
       {
+        "question": "Mening yetkazib berishim yoʻq — Nyambot menga toʻgʻri keladimi?",
+        "answer": "Ha, kuryerlardan boshlash shart emas. Oʻzi olib ketish va oldindan buyurtma darhol ishlaydi: mehmon buyurtmani ilovada yigʻadi, onlayn yoki joyida toʻlaydi va kerakli vaqtda oladi — oshxona buyurtmani oldindan koʻradi. Yetkazib berishni keyinroq yoqish mumkin: oʻz kuryerlaringiz yoki Yandex.Yetkazib berish, zonalar va narx kabinetda sozlanadi"
+      },
+      {
         "question": "Sinov davri qanday ishlaydi?",
         "answer": "Ro'yxatdan o'tgach 90 kun bepul beramiz — kartasiz va cheklangan funksiyalarsiz: to'liq CRM, «Команда» ilovasi, POS va yetkazish integratsiyalari. Hammasini o'zing sozlaysan, qo'llab-quvvatlash esa har qadamda savollarga javob beradi. Sinov muddati standart shartlarda o'tadi — bitta savdo nuqtasi va ikkita bot; integratsiyalar cheklovsiz ulanadi. Tarmoqlar va katta hajmlarni alohida muhokama qilamiz"
       },
@@ -579,6 +591,10 @@
       {
         "question": "Buyurtmalarni qabul qilishni qancha tez boshlash mumkin?",
         "answer": "Tartib shunday: bot yarating, uni CRM ga ulang, menyuni yuklang, yetkazib berish zonalarini belgilang va havolani mehmonlar bilan ulashing. Bularning bari CRM da mustaqil bajariladi, qo'llab-quvvatlash esa har qadamda yordam beradi"
+      },
+      {
+        "question": "Anchadan beri oʻz ilovamni oʻylardim, lekin nimadan boshlashni bilmayman",
+        "answer": "Bitta nuqta va oʻzi olib ketishdan boshlang — birinchi buyurtmalarni qabul qilish uchun shuning oʻzi yetarli. Sinov davri 90 kun bepul, karta kerak emas. Biz ishga tushirishda yordam beramiz: menyuni qanday yigʻish va nuqtani sozlashni koʻrsatamiz, yoʻl-yoʻlakay savollarga javob beramiz. Keyin yetkazib berish, aksiyalar va ikkinchi nuqta — oʻzingiz qaror qilganingizda"
       }
     ]
   },
@@ -681,5 +697,62 @@
     "riskTitle": "Xavfsiz sinab ko'ring",
     "riskText": "90 kun bepul, kartasiz. To'g'ri kelmadi — shunchaki to'lamaysan. Qanday sozlash va nimadan boshlashni aytib beramiz",
     "riskCta": "Bepul sinab ko'rish"
+  },
+  "guestsPath": {
+    "label": "Mehmonlar",
+    "title": "Mehmonlar ilovaga qanday keladi",
+    "subtitle": "Nyambot trafik quvmaydi — u mehmonni sizning oʻz buyurtma kanalingizga oʻtqazadi. Buning toʻrtta yoʻli",
+    "items": {
+      "link": {
+        "title": "Reklama va ijtimoiy tarmoqlardagi havola",
+        "text": "Havola orqali odam darhol menyungizni ochadi va buyurtma beradi — ilova oʻrnatmasdan va roʻyxatdan oʻtmasdan. Yangi mehmonlar shunday keladi: reklamadan, ijtimoiy tarmoqlardan, blogerlardan va qidiruvdan"
+      },
+      "qrHall": {
+        "title": "Zaldagi QR-kod",
+        "text": "Stollarda, menyuda, chekda. Mehmon allaqachon sizda — QR tashrifni doimiy aloqaga aylantiradi"
+      },
+      "qrPack": {
+        "title": "Qadoqdagi QR-kod",
+        "text": "Shu tariqa birinchi marta agregator orqali buyurtma bergan mehmon toʻgʻridan-toʻgʻri sizga qaytadi. Uning keyingi buyurtmasi komissiyasiz sizga keladi"
+      },
+      "staff": {
+        "title": "Xodimning soʻzi",
+        "text": "«Skanerlang — keyingi tashrifingizga bonus oling». Eng arzon kanal: uni odam aytadi"
+      }
+    },
+    "outcome": "Keyin mehmon muassasa botiga obuna boʻladi: uning buyurtmalari, kontaktlari va ballari — sizniki, maydoncha emas",
+    "note": "Botingizning havolasi va QR-kodini kabinetda olasiz va oʻzingiz joylashtirasiz"
+  },
+  "network": {
+    "label": "Tarmoq",
+    "title": "Tarmoq va franshiza uchun",
+    "subtitle": "Nuqtalar, rollar, shaharlar va hisoblar — bitta kabinetda. Oʻnta hisobsiz va messenjerdagi jadvallarsiz",
+    "items": {
+      "stores": {
+        "title": "Barcha nuqtalar bitta kabinetda",
+        "text": "Yigirma nuqtami yoki uch yuzmi — bitta kabinet, bitta mehmonlar bazasi, umumiy ballar. Yangi nuqtalar fayldan roʻyxat bilan yaratiladi, sozlamalar tayyor nuqtadan nusxalanadi"
+      },
+      "roles": {
+        "title": "Har kimga oʻziniki",
+        "text": "Menejer oʻz nuqtasini yuritadi, hududiy menejer — oʻz klasterini. Rol nuqtalar guruhiga beriladi: yangisi ochildi — ruxsat oʻzi paydo boʻldi"
+      },
+      "rights": {
+        "title": "Huquqlar boʻlinadi",
+        "text": "Kim pulni qaytara oladi, kim mehmonning telefoni va manzilini koʻradi, kim faqat raqamlarni. Mehmon kontaktlari — har bir shaxs boʻyicha alohida qaror, lavozim natijasi emas"
+      },
+      "cities": {
+        "title": "Mehmon oʻz shahrini koʻradi",
+        "text": "Ilovada u shaharni tanlaydi va eng yaqin nuqtani topadi — uch yuztalik roʻyxatni varaqlamaydi"
+      },
+      "franchise": {
+        "title": "Franshiza",
+        "text": "Bosh ofis brendni yuritadi: menyu, aksiyalar, vitrina va bot. Franchayzi nuqtalari boʻyicha u faqat umumiy raqamlarni koʻradi — mehmonlar, pul va xodimlar franchayzida qoladi"
+      },
+      "billing": {
+        "title": "Bitta hisob yoki bir nechta",
+        "text": "Nuqtalar hisob-kitob guruhlariga birlashtiriladi: hisoblar va yopuvchi hujjatlar turli yuridik shaxslarga boradi, kabinet esa bitta qoladi"
+      }
+    },
+    "cta": "Tarmoq haqida gaplashamiz"
   }
 }

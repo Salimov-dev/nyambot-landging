@@ -1,0 +1,142 @@
+/* ===== Как гости попадают в приложение =====
+   Блок отвечает на первый вопрос ресторатора — «откуда возьмутся гости». Четыре
+   карточки-канала и закрывающая строка про то, чей гость дальше.
+   Мобильный порядок важнее десктопного: 74% трафика — телефон, и первым там
+   читается канал «ссылка», а не сетка целиком. */
+
+.section {
+  padding: 72px 0;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border-light);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.label {
+  display: block;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  color: var(--text-primary) !important;
+  font-size: clamp(28px, 4vw, 44px) !important;
+  font-weight: 800 !important;
+  margin: 12px 0 14px !important;
+  text-wrap: balance;
+}
+
+.subtitle {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 26px 24px 28px;
+  border-radius: var(--radius-xl);
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+}
+
+.cardTitle {
+  color: var(--text-primary) !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.cardText {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.outcome {
+  margin-top: 32px;
+  padding: 22px 26px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+/* Приписка про то, что раздаточные материалы мы не готовим: тише основного
+   текста, но на странице, а не в примечании внизу */
+.note {
+  display: block;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .inner {
+    padding: 0 16px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  /* На телефоне карточки идут в один столбец: две в ряд обрезают заголовок
+     канала до двух слов, и «QR-код на упаковке и в пакете» перестаёт читаться */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    padding: 20px 18px 22px;
+  }
+
+  .outcome {
+    margin-top: 22px;
+    padding: 18px 18px;
+    text-align: left;
+  }
+}

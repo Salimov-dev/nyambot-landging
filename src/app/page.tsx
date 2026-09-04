@@ -17,6 +17,8 @@ import { SecuritySection } from "@/components/sections/security/security-section
 import { WhySection } from "@/components/sections/why/why-section";
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
+import { GuestsPathSection } from "@/components/sections/guests-path/guests-path-section";
+import { NetworkSection } from "@/components/sections/network/network-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
 import { PRICING_PLANS } from "@/config/pricing.config";
@@ -48,8 +50,15 @@ export default function LandingPage() {
         <KillerSection />
         <TryDemoSection />
         <ForWhomSection />
+        {/* «Откуда возьмутся гости» — сразу после «для кого»: это первый
+            вопрос, который ресторатор задаёт вслух, и до списка возможностей
+            он всё равно думает о нём, а не о них */}
+        <GuestsPathSection />
         <FeaturesSection />
         <CrmDemoSection />
+        {/* Сеть — перед тарифами: сети 20+ целевой сегмент, и до цены она
+            должна увидеть, что её случай здесь описан целиком */}
+        <NetworkSection />
         <PricingSection plans={PRICING_PLANS} />
         <HowItWorksSection />
         <IntegrationsSection />

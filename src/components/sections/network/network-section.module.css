@@ -1,0 +1,134 @@
+/* ===== Для сети и франшизы =====
+   Отдельный разговор с отдельным читателем: у сети вопросы другие, чем у
+   владельца одной точки. Шесть карточек — шесть вопросов первого звонка.
+   🔴 Читается с телефона: таблицы ролей здесь нет намеренно, она на телефоне
+   не читается вовсе. */
+
+.section {
+  padding: 72px 0 88px;
+  background: var(--bg);
+  border-top: 1px solid var(--border-light);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.label {
+  display: block;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  color: var(--text-primary) !important;
+  font-size: clamp(28px, 4vw, 44px) !important;
+  font-weight: 800 !important;
+  margin: 12px 0 14px !important;
+  text-wrap: balance;
+}
+
+.subtitle {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 26px 26px 30px;
+  border-radius: var(--radius-xl);
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+}
+
+.cardTitle {
+  color: var(--text-primary) !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.cardText {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.ctaBtn {
+  font-weight: 600;
+  min-height: 48px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 48px 0 56px;
+  }
+
+  .inner {
+    padding: 0 16px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    padding: 20px 18px 22px;
+  }
+
+  .ctaRow {
+    margin-top: 24px;
+  }
+
+  .ctaBtn {
+    width: 100%;
+  }
+}

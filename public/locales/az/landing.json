@@ -525,6 +525,14 @@
         "answer": "Xeyr. Qonaq messencerdə mini-tətbiqi açır və dərhal menyuya baxır, qiymətləri görür və səbəti yığır — qeydiyyatsız, telefon nömrəsi və məkan olmadan. Telefon və ünvan yalnız sifarişi rəsmiləşdirərkən lazım olur"
       },
       {
+        "question": "Qonaqlar tətbiq haqqında necə biləcək?",
+        "answer": "Sizin haqqınızda indi necə öyrənirlərsə, elə də — sadəcə onlar sizin öz sifariş kanalınıza gəlirlər. Reklamdakı, sosial şəbəkələrdəki, blogerdəki və ya axtarışdakı keçid dərhal menyunuzu açır, heç nə quraşdırmadan. Zaldakı QR-kod ziyarəti abunəliyə çevirir, qablaşdırmadakı QR isə ilk dəfə aqreqator vasitəsilə sifariş vermiş qonağı birbaşa geri qaytarır. Ən ucuz kanal isə kassadakı cümlədir: «skan edin, növbəti gəlişinizə bonus qazanın»"
+      },
+      {
+        "question": "Siz qonaq gətirirsiniz?",
+        "answer": "Nyambot — müəssisənin öz adı altında olan sifariş tətbiqidir. Biz trafik qovmuruq — sizin trafikinizi endiririk: reklamı, sosial şəbəkələri, blogerləri, axtarışı, lövhəni və qablaşdırmanı. Aqreqatordan fərq qonağın haradan gəlməsində deyil, sonra kimin qonağı olmasındadır: platformada sifariş verən onun qonağı olaraq qalır — hər növbəti sifariş üçün komissiya ilə, — Nyambota gələn isə müəssisənin botuna abunədir və təkrar sifarişi birbaşa verir"
+      },
+      {
         "question": "Kassanı dəyişmək lazım gələcək?",
         "answer": "Xeyr. Nyambot kassanı əvəz etmir və onu tələb etmir. iiko və ya R-Keeper varsa, inteqrasiya qoşulur və menyu, stop-siyahılar və sifarişlər avtomatik sinxronlaşır. Kassa başqadırsa və ya heç yoxdursa, Nyambot menyunu, modifikatorları, loyallığı və sifarişləri öz CRM-ində müstəqil aparır. Kassanı sonra qoşsan — məlumatlar yerində qalır"
       },
@@ -561,6 +569,10 @@
         "answer": "Bəli. Yalnız özü götürmə və ya zalda xidmət qura bilərsiniz. Çatdırılma lazımdırsa, amma öz kuryeriniz yoxdursa — Yandex.Çatdırılmanı qoşun: sorğunu «Komanda» tətbiqindən və ya CRM-dən bir toxunuşla yerləşdirirsiniz və kuryer sifariş üçün gəlir. Öz kuryerləriniz də dəstəklənir — çatdırılma üsulunu özünüz seçirsiniz"
       },
       {
+        "question": "Çatdırılmam yoxdur — Nyambot mənə uyğundur?",
+        "answer": "Bəli, kuryerlərdən başlamaq məcburi deyil. Özü götürmə və ön sifariş dərhal işləyir: qonaq sifarişi tətbiqdə yığır, onlayn və ya yerində ödəyir və istədiyi vaxta götürür — mətbəx sifarişi əvvəlcədən görür. Çatdırılmanı sonra qoşa bilərsiniz: öz kuryerləriniz və ya Yandex.Çatdırılma, zonalar və qiymət kabinetdə qurulur"
+      },
+      {
         "question": "Sınaq dövrü necə işləyir?",
         "answer": "Qeydiyyatdan sonra 90 gün pulsuz veririk — kart bağlamadan və məhdudlaşdırılmış funksiyalar olmadan: tam CRM, «Komanda» tətbiqi, POS və çatdırılma inteqrasiyaları. Hər şeyi özün qurursan, dəstək isə hər addımda suallara cavab verir. Sınaq dövrü standart şərtlərlə gedir — bir ticarət nöqtəsi və iki bot; inteqrasiyalar məhdudiyyətsiz qoşulur. Şəbəkələr və böyük həcmlər ayrıca müzakirə olunur"
       },
@@ -579,6 +591,10 @@
       {
         "question": "Sifarişlər qəbul etməyə nə qədər tez başlamaq olar?",
         "answer": "Ardıcıllıq belədir: bot yarat, onu CRM-ə qoş, menyunu yüklə, çatdırılma zonalarını təyin et və linki qonaqlarla paylaş. Bunların hamısı CRM-də özün tərəfindən edilir, dəstək isə hər addımda kömək edir"
+      },
+      {
+        "question": "Çoxdan öz tətbiqimi istəyirdim, amma haradan başlayacağımı bilmirəm",
+        "answer": "Bir filial və özü götürmə ilə başlayın — ilk sifarişləri qəbul etmək üçün bu kifayətdir. Sınaq dövrü 90 gün pulsuzdur, kart tələb olunmur. Başlanğıcda kömək edirik: menyunu necə yığmağı və filialı necə qurmağı göstəririk, yol boyu suallara cavab veririk. Çatdırılma, aksiyalar və ikinci filial sonra gəlir — özünüz qərar verdiyiniz zaman"
       }
     ]
   },
@@ -681,5 +697,62 @@
     "riskTitle": "Risksiz sınayın",
     "riskText": "90 gün pulsuz, kart bağlamadan. Uyğun gəlmədi — sadəcə ödəmirsən. Necə quraşdırmağı və nədən başlamağı göstərərik",
     "riskCta": "Pulsuz sınayın"
+  },
+  "guestsPath": {
+    "label": "Qonaqlar",
+    "title": "Qonaqlar tətbiqə necə düşür",
+    "subtitle": "Nyambot trafik qovmur — o, qonağı sizin öz sifariş kanalınıza oturdur. Bunun baş verdiyi dörd yol",
+    "items": {
+      "link": {
+        "title": "Reklam və sosial şəbəkələrdəki keçid",
+        "text": "Keçidlə insan dərhal menyunuzu açır və sifariş verir — tətbiq quraşdırmadan və qeydiyyatsız. Yeni qonaqlar belə gəlir: reklamdan, sosial şəbəkələrdən, blogerlərdən və axtarışdan"
+      },
+      "qrHall": {
+        "title": "Zaldakı QR-kod",
+        "text": "Masalarda, menyuda, çekdə. Qonaq artıq sizdədir — QR ziyarəti daimi əlaqəyə çevirir"
+      },
+      "qrPack": {
+        "title": "Qablaşdırmadakı QR-kod",
+        "text": "Beləliklə ilk dəfə aqreqator vasitəsilə sifariş vermiş qonaq birbaşa sizə qayıdır. Onun növbəti sifarişi komissiyasız sizə gəlir"
+      },
+      "staff": {
+        "title": "İşçinin sözü",
+        "text": "«Skan edin — növbəti gəlişinizə bonus qazanın». Ən ucuz kanal: onu insan deyir"
+      }
+    },
+    "outcome": "Sonra qonaq müəssisənin botuna abunədir: onun sifarişləri, kontaktları və bonusları sizindir, platformanın deyil",
+    "note": "Botunuzun keçidini və QR-kodunu kabinetdə alırsınız və özünüz yerləşdirirsiniz"
+  },
+  "network": {
+    "label": "Şəbəkə",
+    "title": "Şəbəkə və franşiza üçün",
+    "subtitle": "Filiallar, rollar, şəhərlər və hesablar — bir kabinetdə. On hesab və messencerdəki cədvəllər olmadan",
+    "items": {
+      "stores": {
+        "title": "Bütün filiallar bir kabinetdə",
+        "text": "İyirmi filial və ya üç yüz — bir kabinet, bir qonaq bazası, ümumi bonuslar. Yeni filiallar fayldan siyahı ilə yaradılır, tənzimləmələr hazır filialdan köçürülür"
+      },
+      "roles": {
+        "title": "Hər kəsə öz payı",
+        "text": "Menecer öz filialını aparır, ərazi meneceri — öz klasterini. Rol filial qrupuna verilir: yenisi açıldı — giriş özü yarandı"
+      },
+      "rights": {
+        "title": "Hüquqlar bölünür",
+        "text": "Kim pulu qaytara bilər, kim qonağın telefonunu və ünvanını görür, kim yalnız rəqəmləri. Qonaq kontaktları hər şəxs üzrə ayrıca qərardır, vəzifənin nəticəsi deyil"
+      },
+      "cities": {
+        "title": "Qonaq öz şəhərini görür",
+        "text": "Tətbiqdə o, şəhəri seçir və ən yaxın filialı tapır — üç yüzlük siyahını vərəqləmir"
+      },
+      "franchise": {
+        "title": "Franşiza",
+        "text": "Baş ofis brendi aparır: menyu, aksiyalar, vitrin və bot. Franchayzi filialları üzrə yalnız ümumi rəqəmləri görür — qonaqlar, pul və işçilər franchayzidə qalır"
+      },
+      "billing": {
+        "title": "Bir hesab və ya bir neçə",
+        "text": "Filiallar hesablaşma qruplarına birləşir: hesablar və bağlayıcı sənədlər müxtəlif hüquqi şəxslərə gedir, kabinet isə bir qalır"
+      }
+    },
+    "cta": "Şəbəkəni müzakirə edək"
   }
 }
