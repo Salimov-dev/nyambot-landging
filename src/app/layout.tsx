@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Providers } from "@/providers/providers";
 import { YandexMetrika } from "@/components/ui/analytics/yandex-metrika";
+import { AdClickCapture } from "@/components/ui/analytics/ad-click-capture";
 import { geistSans, geistMono } from "@/lib/fonts";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { SEO_CONFIG } from "@/config/seo.config";
@@ -65,6 +66,7 @@ export default function RootLayout({
           <Providers>{children}</Providers>
         </AntdRegistry>
         <YandexMetrika />
+        <AdClickCapture />
       </body>
     </html>
   );
