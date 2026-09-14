@@ -646,11 +646,6 @@
     "title": "Integratsiyalar — xohishga koʻra",
     "subtitle": "Nyambot oʻzi mustaqil ishlaydi. Agar kassa, ekvayring yoki kuryerlik xizmatingiz boʻlsa — ular CRMda ulanadi, dasturchilarsiz va qoʻshimcha ishlarsiz",
     "noPos": "Kassa yoʻqmi? Hech narsa ulash shart emas — Nyambot toʻliq mustaqil ishlaydi",
-    "roles": {
-      "pos": "kassa integratsiyasi",
-      "payment": "onlayn toʻlov integratsiyasi",
-      "delivery": "yetkazib berish integratsiyasi"
-    },
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",

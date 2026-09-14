@@ -646,11 +646,6 @@
     "title": "Integrations — optional",
     "subtitle": "Nyambot works on its own. And if you already have a POS, a payment provider or a courier service — they connect right in the CRM, no developers or custom work",
     "noPos": "No POS? Nothing to connect — Nyambot works entirely on its own",
-    "roles": {
-      "pos": "POS integration",
-      "payment": "online payment integration",
-      "delivery": "delivery integration"
-    },
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",

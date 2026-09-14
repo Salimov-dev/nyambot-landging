@@ -137,6 +137,17 @@
   margin-bottom: 16px;
 }
 
+/**
+ * 🔴 Выравнивание текста задаём САМИ, не дожидаясь стилей antd.
+ *
+ * Высоту и паддинги кнопки ставит этот файл, а центрирование надписи до
+ * гидратации держать нечем: до приезда cssinjs текст прижимается к краю и
+ * прыгает на место уже на глазах у посетителя. Та же правка стоит у кнопок
+ * шапки — там она записана по такому же случаю с надписью «СРМ».
+ *
+ * `white-space: nowrap` — чтобы надпись не переносилась, пока ширину считает
+ * запасной шрифт: перенос двигает не только текст, но и всё под кнопками.
+ */
 .primaryBtn {
   height: 52px !important;
   padding: 0 32px !important;
@@ -146,6 +157,11 @@
   background: var(--gradient-primary) !important;
   border: none !important;
   box-shadow: var(--shadow-button) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
 }
 
 .secondaryBtn {
@@ -156,6 +172,11 @@
   border-radius: var(--radius-md) !important;
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
   color: var(--text-secondary) !important;
 }
 

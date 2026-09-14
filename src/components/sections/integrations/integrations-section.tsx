@@ -13,18 +13,15 @@ import styles from "./integrations-section.module.css";
 
 const { Title, Text } = Typography;
 
-/** Роль подписывается под каждым логотипом: без неё список читается как
- *  требования к заведению, а не как необязательные дополнения */
+/** 🔴 Подписи ролей под логотипами сняты 14.09.2026: «интеграция с кассой» под
+ *  логотипом iiko ничего не добавляет — логотип и так узнаётся, — зато делает
+ *  колонки разной высоты, и ряд карточек разъезжается по вертикали. */
 const LOGOS = [
-  { id: "iiko", src: "/images/integrations/iiko.png", role: "pos" },
-  { id: "rkeeper", src: "/images/integrations/r-keeper.png", role: "pos" },
-  { id: "yookassa", src: "/images/integrations/ukassa.png", role: "payment" },
-  { id: "yandexPay", src: "/images/integrations/y-pay.png", role: "payment" },
-  {
-    id: "yandexDelivery",
-    src: "/images/integrations/y-delivery.png",
-    role: "delivery",
-  },
+  { id: "iiko", src: "/images/integrations/iiko.png" },
+  { id: "rkeeper", src: "/images/integrations/r-keeper.png" },
+  { id: "yookassa", src: "/images/integrations/ukassa.png" },
+  { id: "yandexPay", src: "/images/integrations/y-pay.png" },
+  { id: "yandexDelivery", src: "/images/integrations/y-delivery.png" },
 ] as const;
 
 export function IntegrationsSection() {
@@ -94,9 +91,6 @@ export function IntegrationsSection() {
                   className={styles.logoImage}
                 />
               </div>
-              <span className={styles.logoRole}>
-                {t(`integrations.roles.${logo.role}`)}
-              </span>
             </div>
           ))}
         </motion.div>

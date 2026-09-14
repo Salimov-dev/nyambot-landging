@@ -16,30 +16,22 @@
   margin: 0 auto 48px;
 }
 
+/* 🔴 Выравнивание по ВЕРХУ, а не по центру: при `center` карточки в ряду
+   плавают по вертикали, стоит колонкам разойтись по высоте на пиксель. */
 .logos {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 20px;
 }
 
-/* Логотип + подпись роли одной колонкой: подпись снимает ощущение
-   обязательности («интеграция с кассой», а не «нужна касса») */
 .logoItem {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
   width: clamp(120px, 13vw, 160px);
-}
-
-.logoRole {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 13px;
-  line-height: 1.35;
-  text-align: center;
 }
 
 .noPosRow {

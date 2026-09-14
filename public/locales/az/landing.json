@@ -646,11 +646,6 @@
     "title": "İnteqrasiyalar — istəyə görə",
     "subtitle": "Nyambot özü müstəqil işləyir. Əgər kassan, ekvayrinqin və ya kuryer xidmətin varsa — birbaşa CRM-də qoşulur, proqramçısız və əlavə işlərsiz",
     "noPos": "Kassa yoxdur? Heç nə qoşmaq lazım deyil — Nyambot tam müstəqil işləyir",
-    "roles": {
-      "pos": "kassa inteqrasiyası",
-      "payment": "onlayn ödəniş inteqrasiyası",
-      "delivery": "çatdırılma inteqrasiyası"
-    },
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
