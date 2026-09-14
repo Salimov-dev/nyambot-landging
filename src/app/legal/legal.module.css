@@ -59,10 +59,28 @@
   margin-bottom: 12px;
 }
 
+/**
+ * Маркеры списков возвращаем руками: сброс Tailwind (preflight) гасит
+ * list-style у всех ul/ol, и перечисления юридического документа выходили
+ * чередой безликих абзацев с отступом — пункт «3.1. … для:» и его подпункты
+ * читались как один слипшийся текст.
+ */
 .content :global(ul),
 .content :global(ol) {
-  padding-left: 20px;
+  padding-left: 22px;
   margin-bottom: 12px;
+}
+
+.content :global(ul) {
+  list-style: disc outside;
+}
+
+.content :global(ol) {
+  list-style: decimal outside;
+}
+
+.content :global(li)::marker {
+  color: #8c8c8c;
 }
 
 .content :global(li) {
