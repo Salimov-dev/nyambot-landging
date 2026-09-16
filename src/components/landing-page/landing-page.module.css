@@ -282,8 +282,12 @@
 }
 
 .notNeededItem {
-  position: relative;
-  padding-left: 34px;
+  /* Строка как flex: кружок держится на одной базовой линии с текстом сам,
+     без ручного top — em внутри псевдоэлемента считается от ЕГО font-size (11px)
+     и любое смещение в em промахивается мимо строки */
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.82);
@@ -293,10 +297,8 @@
    требование, а не как ещё один пункт перечисления */
 .notNeededItem::before {
   content: "✕";
-  position: absolute;
-  left: 0;
-  top: -1px;
   display: flex;
+  flex: 0 0 22px;
   align-items: center;
   justify-content: center;
   width: 22px;
@@ -306,6 +308,7 @@
   color: var(--accent);
   font-size: 11px;
   font-weight: 700;
+  line-height: 1;
 }
 
 /* ===== Вопросы ===== */
