@@ -21,7 +21,7 @@ import { LandingPageCta } from "./landing-page-cta";
 import styles from "./landing-page.module.css";
 
 const PAGE_TEXT = {
-  home: "Главная",
+  home: "На главную",
   notNeededTitle: "Не нужно",
   guideTitle: "Как это настроить",
   faqTitle: "Частые вопросы",
@@ -74,8 +74,10 @@ export function LandingPage({ content }: IProps) {
         <Link href="/" className={styles.logo}>
           {BRAND_CONFIG.name}
         </Link>
+        {/* Возврат на главную — кнопка со стрелкой, а не слово в углу:
+            словом «Главная» его не замечали */}
         <Link href="/" className={styles.homeLink}>
-          {PAGE_TEXT.home}
+          <span aria-hidden="true">←</span> {PAGE_TEXT.home}
         </Link>
       </header>
 
@@ -102,16 +104,18 @@ export function LandingPage({ content }: IProps) {
           })}
         </div>
 
-        <section className={styles.notNeeded}>
-          <h2 className={styles.sectionTitle}>{PAGE_TEXT.notNeededTitle}</h2>
-          <ul className={styles.notNeededList}>
-            {content.notNeeded.map((item) => (
-              <li key={item} className={styles.notNeededItem}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {content.notNeeded ? (
+          <section className={styles.notNeeded}>
+            <h2 className={styles.sectionTitle}>{PAGE_TEXT.notNeededTitle}</h2>
+            <ul className={styles.notNeededList}>
+              {content.notNeeded.map((item) => (
+                <li key={item} className={styles.notNeededItem}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <section className={styles.faq}>
           <h2 className={styles.sectionTitle}>{PAGE_TEXT.faqTitle}</h2>

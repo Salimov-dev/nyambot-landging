@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { Col, Divider, Flex, Row, Typography } from "antd";
 import { Logo } from "@/components/common/logo/logo";
@@ -8,23 +7,14 @@ import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { theme } from "@/config/theme";
-import {
-  getSkolkovoLogo,
-  getSkolkovoLogoSize,
-  SKOLKOVO_LOGO_KIND,
-} from "@/config/skolkovo.config";
 import { ShieldIcon } from "@/components/ui/icons/icons";
 import styles from "./footer.module.css";
 
 const { Text, Link } = Typography;
 
 export function Footer() {
-  const { t, i18n } = useTranslation("landing");
+  const { t } = useTranslation("landing");
   const year = new Date().getFullYear();
-  const skolkovoLogo = getSkolkovoLogo(
-    i18n.language,
-    SKOLKOVO_LOGO_KIND.VERTICAL,
-  );
 
   return (
     <footer className={styles.footer}>
@@ -97,6 +87,24 @@ export function Footer() {
               </Link>
               <Link href={LINKS.pages.messengers} className={styles.footerLink}>
                 {t("footer.pageMessengers")}
+              </Link>
+              <Link href={LINKS.pages.features} className={styles.footerLink}>
+                {t("solutions.items.features.title")}
+              </Link>
+              <Link href={LINKS.pages.network} className={styles.footerLink}>
+                {t("solutions.items.network.title")}
+              </Link>
+              <Link
+                href={LINKS.pages.ownChannels}
+                className={styles.footerLink}
+              >
+                {t("solutions.items.ownChannels.title")}
+              </Link>
+              <Link href={LINKS.pages.security} className={styles.footerLink}>
+                {t("solutions.items.security.title")}
+              </Link>
+              <Link href={LINKS.pages.faq} className={styles.footerLink}>
+                {t("solutions.items.faq.title")}
               </Link>
             </Flex>
           </Col>
@@ -192,32 +200,8 @@ export function Footer() {
               {t("footer.trademarks")}
             </Text>
           </Flex>
-          {/* Баннерная кнопка участника проекта: Положение допускает в подвале
-              и вертикальную версию логотипа. Домен уходит под знак, чтобы
-              вокруг логотипа осталось охранное поле */}
-          <Flex
-            vertical
-            align="center"
-            gap={10}
-            className={styles.skolkovoMark}
-          >
-            <a
-              href={LINKS.skolkovo}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t("skolkovo.alt")}
-              className={styles.skolkovoLogoLink}
-            >
-              <Image
-                src={skolkovoLogo.src}
-                alt={t("skolkovo.alt")}
-                {...getSkolkovoLogoSize(skolkovoLogo, 84)}
-              />
-            </a>
-            <Text style={{ color: theme.colors.textMuted, fontSize: 13 }}>
-              {BRAND_CONFIG.siteName}
-            </Text>
-          </Flex>
+          {/* Знак участника проекта «Сколково» из подвала убран: он стоит в
+              шапке на каждой странице, и второй раз внизу читался как баннер */}
         </Flex>
       </div>
     </footer>

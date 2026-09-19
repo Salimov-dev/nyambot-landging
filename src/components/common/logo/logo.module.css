@@ -7,11 +7,37 @@
   user-select: none;
 }
 
+/* Коробка знака держит размер жёстко: без неё `height: auto` у next/image
+   отдавал картинке её собственные пиксели, и знак распирал шапку. */
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: var(--logo-size);
+  height: var(--logo-size);
   border-radius: var(--radius-sm);
   overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* На узком экране шапка тесная: знак и надпись сбавляем вместе, пропорции целы */
+@media (max-width: 480px) {
+  .icon {
+    width: calc(var(--logo-size) * 0.8);
+    height: calc(var(--logo-size) * 0.8);
+  }
+
+  .logo {
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 15px !important;
+  }
 }

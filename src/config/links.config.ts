@@ -19,6 +19,11 @@ export const LINKS = {
     iiko: "/iiko",
     rkeeper: "/rkeeper",
     messengers: "/zakazy-v-max-i-telegram",
+    features: "/vozmozhnosti",
+    faq: "/voprosy",
+    network: "/set-i-franshiza",
+    ownChannels: "/sayt-ili-prilozhenie",
+    security: "/bezopasnost",
   },
 
   legal: {

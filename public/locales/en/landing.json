@@ -1,7 +1,7 @@
 {
   "nav": {
     "features": "Features",
-    "howItWorks": "How it works",
+    "solutions": "Решения",
     "pricing": "Pricing",
     "faq": "FAQ",
     "docs": "Documentation",
@@ -23,331 +23,63 @@
     "title": "What works differently here",
     "subtitle": "Eight differences — and the things you won't have to do",
     "notPrefix": "No need to",
+    "notNeeded": "менять кассу · заводить бота на каждую точку · просить гостя установить приложение · заполнять анкеты и ждать менеджера",
     "items": {
       "network": {
         "title": "One bot for the whole chain",
-        "text": "The guest picks a location and sees its menu, prices and delivery zone. Guest base, order history and points are shared across MAX and Telegram",
-        "nothing": "set up a bot for every location and split your ads across several channels"
+        "text": "The guest picks a location and sees its menu, prices and delivery zone. Guest base, order history and points are shared across MAX and Telegram"
       },
       "guest": {
         "title": "Guests order without signing up",
-        "text": "They open the mini app right inside the messenger and start browsing the menu and filling the cart. The phone number is only asked at checkout",
-        "nothing": "install an app, enter a phone number or share a location just to look at the menu"
+        "text": "They open the mini app right inside the messenger and start browsing the menu and filling the cart. The phone number is only asked at checkout"
       },
       "pos": {
         "title": "Works with your POS — and without one",
-        "text": "Got iiko or R-Keeper — menu and stop lists come from the till, and the guest's changes to a dish reach the receipt. No till or a different one — Nyambot runs the menu and loyalty on its own",
-        "nothing": "replace your POS or install one just to get delivery running"
+        "text": "Got iiko or R-Keeper — menu and stop lists come from the till, and the guest's changes to a dish reach the receipt. No till or a different one — Nyambot runs the menu and loyalty on its own"
       },
       "loyalty": {
         "title": "Your till's promos — right in the messenger",
-        "text": "Connect iiko with iikoCard and the till's discounts, bonuses, gifts and promo codes work right for the guest. One programme across the whole chain: earn and spend at any venue",
-        "nothing": "setting the same promos up a second time and watching the till and the bot drift apart"
-      },
-      "delivery": {
-        "title": "Delivery without couriers of your own",
-        "text": "Call a Yandex.Delivery courier in one tap from the «Crew» app or in the CRM. Your own couriers are supported too — it's your call",
-        "nothing": "hire couriers or install a separate app"
-      },
-      "email": {
-        "title": "You can try it today, with just an email",
-        "text": "Signing up for the CRM takes an email and a password. Then 90 days of full access: set up the menu, zones and payments yourself, support answers whenever you ask",
-        "nothing": "leave a phone number, fill in forms, wait for a manager or pay for «onboarding»"
+        "text": "Connect iiko with iikoCard and the till's discounts, bonuses, gifts and promo codes work right for the guest. One programme across the whole chain: earn and spend at any venue"
       },
       "money": {
         "title": "Order money goes straight to you — refunds only by your call",
-        "text": "The guest pays online right in the mini-app — the money goes straight to your YooKassa or Yandex.Pay account. Not a rouble goes back without your button: neither the till nor an employee can refund an online payment",
-        "nothing": "keeping your revenue with a middleman and fearing a refund slips past you"
-      },
-      "skolkovo": {
-        "title": "Skolkovo project participant",
-        "text": "Nyambot LLC is a participant of the Skolkovo project, reg. no. 1129172. The project passed the Foundation's expert review; development and support are Russian",
-        "nothing": "take our word for it: participant status can be checked in the Foundation's registry"
+        "text": "The guest pays online right in the mini-app — the money goes straight to your YooKassa or Yandex.Pay account. Not a rouble goes back without your button: neither the till nor an employee can refund an online payment"
       }
     },
-    "pricingCta": "See pricing",
-    "pricingNote": "One plan — every feature, no limits. Prices are on this page, not «on request»"
+    "pricingNote": "One plan — every feature, no limits. Prices are on this page, not «on request»",
+    "pricingCta": "See pricing"
   },
   "benefits": {
+    "label": "Возможности",
     "title": "Earn more from the same guests",
-    "chips": [
-      "More revenue",
-      "Higher average check",
-      "Loyal guests",
-      "Dish to taste",
-      "Wider delivery",
-      "One bot: MAX and Telegram"
-    ],
-    "detailsCta": "Learn more",
+    "subtitle": "Шесть вещей, которые делают выручку — остальное на странице возможностей",
+    "moreCta": "Все возможности",
     "items": {
       "retention": {
-        "tag": "Your guests, your margin",
         "title": "Repeat orders go to your channel, not the aggregator",
-        "result": "Aggregators take a percentage of every order; Nyambot takes a fixed subscription. Repeat orders come back to your own channel commission-free: more revenue from the same guests, and the guest stays in your database",
-        "details": {
-          "intro": "An aggregator is a valid channel for attracting new guests. But on repeat orders it keeps the guest for itself. The goal is to capture that lead into your own channel and make the guest personally yours.",
-          "sections": [
-            {
-              "title": "0% commission on repeat orders",
-              "points": [
-                "Fixed subscription instead of a percentage of every order",
-                "The more repeat orders — the greater the savings",
-                "Full control over prices, promotions and margin"
-              ]
-            },
-            {
-              "title": "The guest becomes yours",
-              "points": [
-                "Guest base with order history — yours, not the aggregator's",
-                "Direct contact with the guest: promotions, newsletters, loyalty program",
-                "Segmentation and repeat sales without an intermediary"
-              ]
-            }
-          ]
-        }
-      },
-      "channel": {
-        "tag": "One channel for the whole chain",
-        "title": "One bot for the whole chain — and one guest base in MAX and Telegram",
-        "result": "You don't need a separate bot for each location: one bot serves the whole chain, and the guest, their order history and points are shared across both messengers. Advertising isn't split, and a new location goes live without a separate launch",
-        "details": {
-          "intro": "Usually it works like this: a bot per location and a separate base in each messenger. Nyambot is the opposite — one bot for the whole chain and one guest base, while the guest still lands at exactly the right location.",
-          "sections": [
-            {
-              "title": "Two messengers — one guest",
-              "points": [
-                "MAX and Telegram at once: the bot connects to both messengers, the dashboard and the base are shared",
-                "Guests are identified by phone: ordered in Telegram, came back from MAX — order history and points are still there",
-                "The mini-app opens directly in the messenger — guests don't need to install anything",
-                "Login without SMS or passwords"
-              ]
-            },
-            {
-              "title": "One bot and one base for the whole chain",
-              "points": [
-                "Advertising isn't split — you promote one channel for all locations",
-                "Guest chooses location by geolocation or from a list",
-                "Each location has its own menu, prices, stop-list and delivery zone",
-                "Guests earn and spend points at any location of the chain — the loyalty programme is shared",
-                "New location added without a separate launch"
-              ]
-            }
-          ]
-        }
+        "text": "Агрегатор берёт процент с каждого заказа, Нямбот — фиксированную подписку. Гость возвращается в твой канал и остаётся в твоей базе"
       },
       "growth": {
-        "tag": "Average order growth and loyalty",
         "title": "Turn one-time guests into regulars",
-        "result": "Promotions, loyalty, newsletters and a convenient menu bring guests back and raise the average order — revenue grows from the same traffic, without manual work",
-        "details": {
-          "intro": "The more often a guest returns and the more they put in the cart, the higher the revenue from the same traffic. Nyambot does this automatically.",
-          "sections": [
-            {
-              "title": "Higher average order",
-              "points": [
-                "Modifiers and add-ons: guest builds the dish and buys more",
-                "Combo sets: your own in Nyambot and from the iiko or R-Keeper till — the guest picks a dish in each group",
-                "AI menu search — guests find items faster and order more"
-              ]
-            },
-            {
-              "title": "A mini-app people come back to",
-              "points": [
-                "Modern design, dark theme, smooth animations",
-                "Badges «New», «Best deal», «Daily offer»",
-                "High-quality dish photos with cropping and optimization"
-              ]
-            },
-            {
-              "title": "Marketing that retains",
-              "points": [
-                "Discounts and gifts based on cart conditions",
-                "Promo codes with conditions: dates, amount, items, number of uses",
-                "Loyalty points: earn and redeem",
-                "A gift when selected items are ordered",
-                "Works across all messengers simultaneously"
-              ]
-            },
-            {
-              "title": "Offer of the day",
-              "points": [
-                "Automatic offer of the day in MAX and Telegram",
-                "Visual promo calendar in the CRM",
-                "Plan offers days ahead"
-              ]
-            }
-          ]
-        }
-      },
-      "pos": {
-        "tag": "POS optional",
-        "title": "iiko and R-Keeper — order goes straight to the till and kitchen",
-        "result": "Menu, prices and stop-lists sync with the till automatically, and an order from the messenger rings through the till and goes to the kitchen tracker on its own — no double entry. And if you don't have a POS yet — Nyambot works completely on its own",
-        "details": {
-          "intro": "Connecting iiko or R-Keeper removes manual order transfer and double entry: menu, stock, orders and loyalty sync automatically.",
-          "sections": [
-            {
-              "title": "Menu and stock in sync with the till",
-              "points": [
-                "Nomenclature, prices and stop-lists are pulled from POS and update automatically",
-                "A dish runs out — instantly hidden from guests across all messengers",
-                "No double entry or manual synchronization"
-              ]
-            },
-            {
-              "title": "Order straight to the till and kitchen",
-              "points": [
-                "Order from the messenger rings through the till and goes to the kitchen tracker on its own",
-                "Order statuses are sent to the guest in the messenger directly from POS",
-                "Modifiers from POS: sizes, adding and removing ingredients",
-                "Combo sets from POS work with the builder in the mini-app"
-              ]
-            },
-            {
-              "title": "Loyalty and payment from POS",
-              "points": [
-                "iiko with iikoCard: the till's discounts, bonuses, gifts and promo codes work for the guest in the bot and mini-app, one programme across the whole chain",
-                "R-Keeper: the till's discounts apply to the order",
-                "With any till and without one, Nyambot's own loyalty programme works — points, promo codes, gifts and promos",
-                "All payment types: cash, card, online and guest loyalty points",
-                "Delivery or pickup at exact time — exported to POS (in R-Keeper via the Delivery module)"
-              ]
-            },
-            {
-              "title": "Works without POS too",
-              "points": [
-                "No till system — Nyambot runs completely on its own CRM",
-                "Connect POS later — without data loss"
-              ]
-            }
-          ]
-        }
+        "text": "Модификаторы, комбо, акции, баллы и рассылки поднимают чек и возвращают гостя — без ручной работы"
       },
       "constructor": {
-        "tag": "Dish and combo builder",
         "title": "Guest builds the dish their way — kitchen doesn't get confused",
-        "result": "Guest adds or removes ingredients and assembles combo sets right in the mini-app — with images Nyambot picks automatically. The composition reaches the receipt with any till — iiko and R-Keeper alike — and with no till at all Nyambot's built-in engine handles it",
-        "details": {
-          "intro": "The guest doesn't just choose a menu item, but assembles it to their taste — with clear images and no kitchen errors. Any ingredient change is correctly sent to the till.",
-          "sections": [
-            {
-              "title": "Add or remove ingredients",
-              "points": [
-                "Guest removes onion, adds cheese or a double patty — right in the dish card",
-                "Nyambot automatically picks vibrant ingredient images — looks appetizing",
-                "Changes go to the till as iiko / R-Keeper modifiers",
-                "Price recalculates on the fly — guest sees the total immediately"
-              ]
-            },
-            {
-              "title": "Combo set builder",
-              "points": [
-                "Guest assembles a combo from multiple dishes to their taste",
-                "Combo groups and composition configured for your menu",
-                "POS combos work out of the box — iiko and R-Keeper"
-              ]
-            },
-            {
-              "title": "Works without POS too",
-              "points": [
-                "No till — Nyambot's built-in engine handles modifiers and combos on its own",
-                "Connect POS later — builder settings are saved"
-              ]
-            }
-          ]
-        }
-      },
-      "delivery": {
-        "tag": "Delivery without own staff",
-        "title": "Scale delivery without your own courier staff",
-        "result": "Expand delivery zones and geography without hiring couriers: a Yandex.Delivery request is placed with one tap from the Crew app or in the CRM, and a courier delivers where your own team can't reach. You pay per actual delivery, not for a full-time headcount",
-        "details": {
-          "intro": "You can launch delivery without hiring couriers: place a request with one tap, and a Yandex courier picks up the ready order.",
-          "sections": [
-            {
-              "title": "Delivery via Yandex.Delivery",
-              "points": [
-                "Request placed by an admin from the Crew app or in the CRM",
-                "Call a courier in one tap and see the delivery price before confirming — or enable auto-dispatch",
-                "You pay per actual deliveries, not for courier headcount"
-              ]
-            },
-            {
-              "title": "Flexible and in control",
-              "points": [
-                "Courier tracking on the map: a link to the guest in the bot, to you in CRM and the Crew app",
-                "Your own couriers are also supported — your choice",
-                "No third-party app needed — everything inside Nyambot"
-              ]
-            }
-          ]
-        }
+        "text": "Убрать лук, добавить сыр, взять двойную котлету. Состав уходит в чек той же строкой, что печатает касса"
       },
       "team": {
-        "tag": "Crew app",
         "title": "Your entire team in one app — admin, courier and kitchen",
-        "result": "Admin, courier and cook work from their smartphone in one app: accepting and distributing orders, address on the map, marking readiness — without opening CRM. Each employee sees only what their role needs",
-        "details": {
-          "intro": "One app handles all location operations: admin manages orders, courier delivers, cook prepares — each from their own phone.",
-          "sections": [
-            {
-              "title": "Admin",
-              "points": [
-                "Accept and cancel orders, work with statuses",
-                "Assign a courier in one tap — they immediately see the address on the map",
-                "Full order history with every status logged to the minute"
-              ]
-            },
-            {
-              "title": "Courier",
-              "points": [
-                "Tasks and delivery address on the map",
-                "Call the guest in one click and notify about a delay",
-                "Mark as 'Delivered' directly from the app"
-              ]
-            },
-            {
-              "title": "Cook and kitchen",
-              "points": [
-                "Kitchen screen with orders and a 'Ready' mark",
-                "Stop-lists: a dish runs out — instantly hidden from guests across all messengers",
-                "Cascade 'ingredient → dishes': remove an ingredient — dependent items are hidden"
-              ]
-            }
-          ]
-        }
+        "text": "Администратор, курьер и повар работают со смартфона: приём заказа, адрес на карте, отметка готовности"
+      },
+      "delivery": {
+        "title": "Scale delivery without your own courier staff",
+        "text": "Курьер Яндекс.Доставки вызывается в один тап. Свои курьеры тоже поддерживаются — выбираешь сам"
       },
       "autopilot": {
-        "tag": "Set up without developers",
         "title": "Everything runs itself — and support is right there",
-        "result": "Menu, prices, zones, payment and till are configured in CRM without developers. Payments from guests arrive automatically, while refunding money is your decision alone: neither the till nor your staff can send money from your account. Need help — support will walk you through every step",
-        "details": {
-          "intro": "Nyambot can be fully launched and managed on your own. But independence doesn't mean 'alone': support is ready to step in at any stage.",
-          "sections": [
-            {
-              "title": "Full independence",
-              "points": [
-                "Menu, prices, delivery zones and promotions configured in CRM yourself",
-                "A new bot is connected with a token right in the CRM",
-                "Refunding a guest — one click, and only by your decision",
-                "The AI assistant in the CRM helps you figure out settings",
-                "Step-by-step documentation from zero to first order"
-              ]
-            },
-            {
-              "title": "Support at every step",
-              "points": [
-                "We advise on iiko, R-Keeper and online payment integration",
-                "We stay with you from signup to the first order",
-                "We answer questions and help you figure things out",
-                "Live support from Russia"
-              ]
-            }
-          ]
-        }
+        "text": "Меню, цены, зоны, оплату и кассу заводишь сам в СРМ. Нужна помощь — поддержка рядом на каждом шаге"
       }
-    },
-    "detailsClose": "Close"
+    }
   },
   "crmDemo": {
     "tag": "In-house CRM",
@@ -377,101 +109,6 @@
     "crmHint": "Want to evaluate CRM from the owner's side?",
     "crmCta": "Register in CRM",
     "crmTrial": "90 days free · Full access · Full support · No card"
-  },
-  "howItWorks": {
-    "label": "How it works",
-    "title": "From creating a bot to the first order",
-    "subtitle": "No lengthy development. Everything is configured through CRM without developers",
-    "steps": [
-      {
-        "title": "Create a bot",
-        "description": "In the MAX partner panel or via @BotFather in Telegram"
-      },
-      {
-        "title": "Set up in CRM",
-        "description": "Paste the token into the CRM, add the menu, delivery zones and payment"
-      },
-      {
-        "title": "Share the link",
-        "description": "Share the link on social media, your site and a QR code at the venue"
-      },
-      {
-        "title": "Receive orders",
-        "description": "Orders appear in the CRM and the «Crew» app, the guest gets statuses in the messenger"
-      }
-    ]
-  },
-  "switch": {
-    "label": "You're on another service",
-    "title": "Using another ordering service? <em>50% off</em>",
-    "subtitle": "Switch to Nyambot — your first 6 months cost half as much. The bot stays yours, only the service behind it changes. If you have several locations, they come together into one channel and one guest base. Your site and your own app stay as they are — Nyambot sits alongside them, inside the messengers",
-    "badge": "−50% for 6 months",
-    "steps": {
-      "0": {
-        "title": "Request and review",
-        "description": "You send a request and tell us which service you use today — we confirm it, lock in the discount before payment and work out where to start. The discount is visible in the CRM, «License» section"
-      },
-      "1": {
-        "title": "Menu and settings",
-        "description": "Menu, modifiers, prices and delivery zones are set in the CRM. With iiko or R-Keeper connected, the menu and stop lists come from the POS"
-      },
-      "2": {
-        "title": "Your bot in MAX and Telegram",
-        "description": "You create the bot and stay its owner — we show how to connect the token in the CRM and brand the channel"
-      },
-      "3": {
-        "title": "Launch and support",
-        "description": "You turn on order taking, and we stay in touch in support — answering questions about setup and daily work"
-      }
-    },
-    "button": "Get 50% off",
-    "hint": "50% off for the first 6 months · Requires an active paid order-taking or delivery service · Fixed before payment · Discounts don't stack ·",
-    "terms": "Terms"
-  },
-  "security": {
-    "label": "Security",
-    "title": "Your data is protected",
-    "subtitle": "We comply with Russian Federal Law No. 152-FZ on Personal Data. Data is stored in Russia and transmitted over secure channels — only to those without whom the order cannot be fulfilled",
-    "imageAlt": "Nyambot data security — compliance with 152-FZ",
-    "items": {
-      "fz152": {
-        "title": "152-FZ",
-        "description": "We operate under the Russian Federal Law on Personal Data"
-      },
-      "localization": {
-        "title": "Data in Russia",
-        "description": "Servers and backups are located within the Russian Federation"
-      },
-      "encryption": {
-        "title": "Encryption",
-        "description": "HTTPS/TLS in transit, encryption of sensitive data at rest"
-      },
-      "madeInRussia": {
-        "title": "Made in Russia",
-        "description": "Russian development team and local technical support"
-      },
-      "skolkovo": {
-        "title": "Skolkovo participant",
-        "description": "Nyambot LLC is a participant of the Skolkovo project, reg. no. 1129172"
-      },
-      "standards": {
-        "title": "Access control",
-        "description": "Regular audits, security updates and access control"
-      },
-      "noThirdParty": {
-        "title": "The data is the venue's",
-        "description": "Guest data belongs to the venue. We never sell it and never pass it to anyone except those fulfilling the order: the POS, the courier service and the payment provider"
-      }
-    },
-    "chips": {
-      "backups": "Backups",
-      "policy": "Transparent policy",
-      "deletion": "Deletion on request",
-      "minData": "We collect the minimum",
-      "supportRu": "Support from Russia"
-    },
-    "privacyLink": "Privacy policy",
-    "offerLink": "Public offer"
   },
   "pricing": {
     "label": "Pricing",
@@ -508,13 +145,16 @@
       "1 bot in MAX",
       "1 bot in Telegram",
       "Up to 200 menu items"
-    ]
+    ],
+    "switchNote": "Пользуешься другим платным сервисом приёма заказов или доставки? Первые 6 месяцев — вдвое дешевле: напиши до оплаты, подтвердим и зафиксируем скидку",
+    "switchCta": "Получить скидку 50%"
   },
   "faq": {
     "label": "FAQ",
     "title": "Still have questions?",
     "notFound": "Didn't find an answer?",
     "askSupport": "Ask support",
+    "moreCta": "Все вопросы",
     "items": [
       {
         "question": "Do I need a separate bot for each location?",
@@ -539,70 +179,6 @@
       {
         "question": "Do I have to talk to a sales manager or pay for onboarding?",
         "answer": "No. Signing up for the CRM takes an email and a password — no forms, no phone number. All plans and prices are published on this page. You set everything up in the CRM yourself — and if something is unclear, Anya, the built-in AI assistant, answers right inside the CRM: she knows how Nyambot works and helps with setup straight away, without waiting in the support queue. Human support steps in when you ask"
-      },
-      {
-        "question": "Do guests need to install an app?",
-        "answer": "No. The mini-app opens directly in Telegram or MAX — messengers already installed on most users' phones. No additional installation required"
-      },
-      {
-        "question": "Is there integration with iiko or R-Keeper?",
-        "answer": "Yes. Nyambot integrates with iiko and R-keeper: menu, prices, stop-lists and orders sync automatically — an order from the messenger is rung up in the till and sent to the kitchen. Promotions and discounts configured in the POS are shown to the guest right in the menu, and the final benefit on the receipt is confirmed by the POS itself — so the numbers in the messenger and at the till match. Nyambot also works fully on its own, without a POS: it has its own loyalty programme, promotions and promo codes built in"
-      },
-      {
-        "question": "Will my promos and bonuses from the till work in the bot?",
-        "answer": "Yes, if it's iiko with iikoCard: your programme's discounts, bonuses, gifts and promo codes apply to the order right in the bot and mini-app, and the programme stays one across the whole chain — the guest earns and spends at any venue. On R-Keeper the till's discounts apply to the order. And with any till, as well as with none at all, Nyambot's own loyalty programme works: points, promo codes, gifts and promos by day and hour"
-      },
-      {
-        "question": "Can a guest remove or add ingredients if I have a till?",
-        "answer": "Yes, with any till. The guest builds the dish right in its card — removes onion, adds cheese or a double patty — and the composition reaches the receipt exactly as the till prints it: as modifiers in iiko, as a composition line under the dish in R-Keeper. The kitchen sees exactly what the guest chose"
-      },
-      {
-        "question": "A guest ordered in Telegram and came back from MAX — are their history and points kept?",
-        "answer": "Yes. Guests are identified by phone number, so an order from Telegram and an order from MAX belong to the same guest: one order history, one points balance, the same promotions. The bot is connected to both messengers, while the guest base and the CRM account are shared"
-      },
-      {
-        "question": "How does order payment work?",
-        "answer": "Online card payment via YooKassa can be connected for all locations at once or selectively. Guests pay directly in the messenger. Cash on delivery is also supported"
-      },
-      {
-        "question": "Can Nyambot be used without couriers?",
-        "answer": "Yes. You can set up pickup only or dine-in service. And if you need delivery but have no couriers of your own, connect Yandex.Delivery: you place the request in one tap from the Crew app or in the CRM, and a courier comes for the order. Your own couriers are supported too — the delivery method is your call"
-      },
-      {
-        "question": "I don't do delivery — is Nyambot still for me?",
-        "answer": "Yes, and you don't have to start with couriers. Pickup and pre-orders work from day one: the guest builds the order in the app, pays online or on the spot and collects it at the time they choose — the kitchen sees the order in advance. Delivery can be switched on later: your own couriers or Yandex.Delivery, with zones and pricing set up in the dashboard"
-      },
-      {
-        "question": "How does the trial period work?",
-        "answer": "After signup we give 90 days free — no card and no crippled features: the full CRM, the «Crew» app, POS and delivery integrations. You set everything up yourself, and support answers questions at every step. The trial runs on standard terms — one location and two bots; integrations connect without restrictions. For chains and larger volumes we agree terms separately"
-      },
-      {
-        "question": "How do I get the 50% discount?",
-        "answer": "The discount for the first 6 months is for those already using a paid order-taking or delivery service. Write to us before paying and confirm which service you use — we lock in the price, and you see it in the CRM under «License». The discount is calculated from the full plan price, does not stack with other discounts or with the savings of longer plans, and the six months count from your first payment — the trial is not part of them and comes before"
-      },
-      {
-        "question": "What does support cover?",
-        "answer": "We answer questions about how Nyambot works and how to set it up — at every step, by email or messenger. Work done for you — entering or migrating the menu, setting up the POS, delivery or online payments on the providers' side, staff training, custom development — is not part of support: we agree on that separately, by scope and timing"
-      },
-      {
-        "question": "What is a MAX bot and do I need it?",
-        "answer": "MAX is a Russian messenger with a growing audience and mini-app support. Connection is optional but allows reaching additional audience and gaining a new stable sales channel at no extra cost MAX needs no separate base and no separate setup: guests from MAX land in the same base as guests from Telegram"
-      },
-      {
-        "question": "How quickly can I start accepting orders?",
-        "answer": "The order is: create a bot, connect it in the CRM, upload the menu, set delivery zones and share the link with guests. All of it is done in the CRM yourself, and support helps along the way"
-      },
-      {
-        "question": "I've wanted my own app for a while but don't know where to start",
-        "answer": "Start with one location and pickup — that's enough to take your first orders. The trial is 90 days free and needs no card. We help with the launch: we'll show you how to build the menu and set up the location, and answer questions along the way. Delivery, promotions and a second location come later, when you decide"
-      },
-      {
-        "question": "I already have a site with ordering and guest accounts. Why add a bot?",
-        "answer": "It's not that a site takes orders badly. It's that a site is a place you have to go to: remember the address, open it, sign in. A messenger is open dozens of times a day anyway, and your bot sits right there in the chat list. The mini app opens from a link with nothing to install and no sign-up, and after the order the bot messages about the status — an account page can't do that, it stays silent. And separately: in MAX you have no site at all, while the bot there is the same one, with a shared base of guests and points"
-      },
-      {
-        "question": "I have my own app. Isn't this a duplicate?",
-        "answer": "An app has to be downloaded, and only a few get there — usually your most loyal guests, while the rest stay outside your channel. The mini app opens right inside MAX or Telegram from a link: you put that link in social media, on your site, on a QR code in the dining room and on the packaging — and the guest lands in the menu on the spot, without a browser and without a password. Your app doesn't go anywhere: it works for those who already installed it, the bot works for everyone else"
       }
     ]
   },
@@ -676,31 +252,6 @@
       }
     }
   },
-  "why": {
-    "label": "Why us",
-    "title": "Why Nyambot",
-    "items": {
-      "ownDev": {
-        "title": "In-house product",
-        "text": "The CRM and bots are built by us from scratch, not a third-party builder. Russian development, Russian support, Skolkovo project participant"
-      },
-      "pos": {
-        "title": "Works with your POS and without it",
-        "text": "Integration with iiko and R-Keeper or fully standalone — one dashboard and one base for the whole chain"
-      },
-      "fast": {
-        "title": "No developers needed",
-        "text": "Bot, menu, prices, delivery zones and payment are set up right in the CRM — no developers or specs"
-      },
-      "noRisk": {
-        "title": "No risk at the start",
-        "text": "90 days of full access free and without a card — enough to test it on real orders"
-      }
-    },
-    "riskTitle": "Try it risk-free",
-    "riskText": "90 days free, no card required. Not a fit — you simply don't pay. We'll show you how to set things up and where to start",
-    "riskCta": "Try for free"
-  },
   "guestsPath": {
     "label": "Guests",
     "title": "How guests reach the app",
@@ -726,94 +277,31 @@
     "outcome": "From there the guest follows your venue's bot: their orders, contacts and points are yours, not a marketplace's",
     "note": "You get your bot's link and QR code in the dashboard and place them yourself"
   },
-  "ownChannels": {
-    "label": "Already have a site",
-    "title": "A site is a place to go to. A messenger is where the guest already is",
-    "subtitle": "Nyambot replaces neither your site nor your app, and doesn't argue with them. It adds a channel where the guest spends the day anyway — and takes over the repeat orders",
-    "columns": {
-      "site": "Site or your own app",
-      "nyambot": "Nyambot"
-    },
-    "rows": {
-      "reach": {
-        "criterion": "How the guest reaches you",
-        "site": "Remember the address and open the site",
-        "nyambot": "The bot chat sits in a messenger that's already open"
-      },
-      "login": {
-        "criterion": "Signing in",
-        "site": "Sign-up, password, account recovery",
-        "nyambot": "Open it and order — the phone number only at checkout"
-      },
-      "social": {
-        "criterion": "Coming from social media and ads",
-        "site": "A browser, then a login screen",
-        "nyambot": "The menu opens right there, without leaving the messenger"
-      },
-      "pos": {
-        "criterion": "Orders in the POS",
-        "site": "A separate integration with iiko or R-Keeper — if it was ever commissioned and paid for",
-        "nyambot": "Out of the box: menu and stop-lists come from the POS, and the order lands there as a check"
-      },
-      "payment": {
-        "criterion": "Online payment and courier",
-        "site": "Every service is bolted on as separate development work",
-        "nyambot": "YooKassa and Yandex.Pay — the money goes straight to your account, a Yandex.Delivery courier in one tap"
-      },
-      "loyalty": {
-        "criterion": "Promotions, points, promo codes",
-        "site": "A separate module or plugin, a different one per channel — and it knows nothing about your POS",
-        "nyambot": "Discounts, gifts, promo codes and points are built in: the guest earns and pays with points right in the cart, and with iiko the POS's own promotions work too"
-      },
-      "schedule": {
-        "criterion": "Daily deals and happy hours",
-        "site": "The banner goes up by hand and comes down by hand",
-        "nyambot": "A promotion has its own weekdays and hours: the Tuesday discount switches itself on and goes dark in the evening"
-      },
-      "contact": {
-        "criterion": "Contact after the order",
-        "site": "An email or a call — if the guest waits for it",
-        "nyambot": "A message straight to the phone: accepted, cooking, ready, courier on the way — with a tracking link"
-      },
-      "max": {
-        "criterion": "MAX",
-        "site": "None",
-        "nyambot": "The same bot, the same guest and points base"
-      }
-    },
-    "outcome": "You don't switch the site off — it keeps working for those who are searching. Nyambot works for those who have already ordered: their orders, contacts and points stay yours"
-  },
-  "network": {
-    "label": "Chains",
-    "title": "For chains and franchises",
-    "subtitle": "Locations, roles, cities and invoices — in a single dashboard. No ten accounts and no spreadsheets in a messenger",
+  "solutions": {
+    "label": "Решения",
+    "title": "Если хочешь разобраться подробнее",
+    "subtitle": "Отдельные страницы по темам, которые чаще всего спрашивают",
     "items": {
-      "stores": {
-        "title": "Every location in one dashboard",
-        "text": "Twenty locations or three hundred — one dashboard, one guest base, shared points. New locations are created from a file, settings copied from an existing one"
+      "features": {
+        "title": "Все возможности",
+        "text": "Что умеет Нямбот целиком: лояльность, конструктор блюд, доставка, команда, аналитика"
       },
-      "roles": {
-        "title": "Everyone gets their own",
-        "text": "A manager runs their location, a territory manager runs their cluster. A role is granted to a group of locations: open a new one and access is already there"
+      "network": {
+        "title": "Сеть и франшиза",
+        "text": "Точки, роли, города и счета в одном кабинете. Что видит франчайзи, а что головной офис"
       },
-      "rights": {
-        "title": "Permissions are split",
-        "text": "Who can refund, who sees the guest's phone and address, who only sees the numbers. Guest contacts are a separate decision per person, not a side effect of a job title"
+      "ownChannels": {
+        "title": "Сайт или приложение",
+        "text": "Чем канал в мессенджере отличается от сайта и своего приложения и зачем он рядом с ними"
       },
-      "cities": {
-        "title": "The guest sees their own city",
-        "text": "In the app they pick a city and find the nearest location — instead of scrolling a list of three hundred"
+      "security": {
+        "title": "Безопасность данных",
+        "text": "152-ФЗ, хранение в России, кому передаются данные гостя и кому — никогда"
       },
-      "franchise": {
-        "title": "Franchising",
-        "text": "Head office runs the brand: menu, promotions, storefront and bot. For franchisee locations it sees summary figures only — guests, money and staff stay with the franchisee"
-      },
-      "billing": {
-        "title": "One invoice or several",
-        "text": "Locations are grouped for billing: invoices and closing documents go to different legal entities while the dashboard stays one"
+      "faq": {
+        "title": "Все вопросы",
+        "text": "Двадцать два вопроса про кассу, оплату, доставку, пробный период и скидку 50%"
       }
-    },
-    "cta": "Talk about a chain",
-    "ctaHint": "Opens the support chat in Telegram — we'll answer your questions about chains and franchises"
+    }
   }
 }

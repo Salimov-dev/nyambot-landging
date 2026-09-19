@@ -27,24 +27,17 @@ type KillerIcon = (props: {
 type KillerItem = { id: string; icon: KillerIcon; accentColor: string };
 
 /**
- * Порядок карточек = порядок чтения на телефоне (74% аудитории заходит с него):
- * сначала архитектурное отличие, затем то, чего делать НЕ нужно, и в конце —
- * подтверждение статуса. Каждая карточка заканчивается строкой «Не нужно: …» —
- * УТП подаётся через снятые требования, а не через список функций.
+ * Пять отличий — столько человек успевает прочитать: медиана визита 15 секунд.
+ * Прежние восемь карточек с личной строкой «Не нужно» у каждой давали вдвое
+ * больше текста; теперь снятые требования идут одной строкой под сеткой, а
+ * подробности живут на отдельных страницах раздела «Решения».
  */
 const ITEMS: readonly KillerItem[] = [
   { id: "network", icon: GlobeIcon, accentColor: "#15aabf" },
   { id: "guest", icon: CartIcon, accentColor: "#14c4a2" },
   { id: "pos", icon: ChefHatIcon, accentColor: "#7048e8" },
   { id: "loyalty", icon: GiftIcon, accentColor: "#c2255c" },
-  { id: "delivery", icon: PackageIcon, accentColor: "#f76707" },
   { id: "money", icon: LockIcon, accentColor: "#2f9e44" },
-  // Последний ряд: «оценить по почте» и статус Фонда — обе про доверие и вход
-  // без риска, и обе половинной ширины (см. правило сетки в модуле стилей)
-  { id: "email", icon: MessageIcon, accentColor: "#1677ff" },
-  // Красный Фонда «Сколково», а не наш оранжевый — статус должен читаться
-  // как внешнее подтверждение, а не как ещё одна наша плашка
-  { id: "skolkovo", icon: ShieldIcon, accentColor: "#e4002b" },
 ] as const;
 
 function KillerCard({ item, index }: { item: KillerItem; index: number }) {
@@ -76,16 +69,6 @@ function KillerCard({ item, index }: { item: KillerItem; index: number }) {
       </Title>
 
       <Text className={styles.cardText}>{t(`${base}.text`)}</Text>
-
-      <span className={styles.nothing}>
-        <span
-          className={styles.nothingLabel}
-          style={{ color: item.accentColor }}
-        >
-          {t("killer.notPrefix")}:
-        </span>{" "}
-        {t(`${base}.nothing`)}
-      </span>
 
       <span
         className={styles.accentBar}
@@ -123,6 +106,11 @@ export function KillerSection() {
             <KillerCard key={item.id} item={item} index={i} />
           ))}
         </div>
+
+        <p className={styles.nothing}>
+          <span className={styles.nothingLabel}>{t("killer.notPrefix")}:</span>{" "}
+          {t("killer.notNeeded")}
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

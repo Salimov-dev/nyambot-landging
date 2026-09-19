@@ -17,7 +17,8 @@ export type MetrikaGoal =
   | "click_features"
   | "scroll_features"
   | "scroll_pricing"
-  | "click_details"
+  /** Уход на вынесенную страницу: параметр page — какая именно */
+  | "click_solution"
   // Глубина просмотра страницы
   | "scroll_25"
   | "scroll_50"

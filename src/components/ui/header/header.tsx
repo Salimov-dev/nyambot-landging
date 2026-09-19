@@ -23,7 +23,45 @@ const { Text } = Typography;
  *  пункту всё равно прокручивает страницу к ней. */
 const NAV_ITEMS = [
   { labelKey: "nav.features", href: "#features" },
-  { labelKey: "nav.howItWorks", href: "#how-it-works" },
+  { labelKey: "nav.pricing", href: "#pricing" },
+  { labelKey: "nav.faq", href: "#faq" },
+] as const;
+
+/** Вынесенные страницы: на десктопе раскрываются списком в шапке, на телефоне
+ *  пункт «Решения» ведёт якорем на одноимённый блок с теми же карточками —
+ *  вложенный список в бургер-меню стоил бы двух тапов. */
+const SOLUTION_LINKS = [
+  {
+    id: "features",
+    labelKey: "solutions.items.features.title",
+    href: LINKS.pages.features,
+  },
+  {
+    id: "network",
+    labelKey: "solutions.items.network.title",
+    href: LINKS.pages.network,
+  },
+  {
+    id: "ownChannels",
+    labelKey: "solutions.items.ownChannels.title",
+    href: LINKS.pages.ownChannels,
+  },
+  {
+    id: "security",
+    labelKey: "solutions.items.security.title",
+    href: LINKS.pages.security,
+  },
+  {
+    id: "faq",
+    labelKey: "solutions.items.faq.title",
+    href: LINKS.pages.faq,
+  },
+] as const;
+
+/** На телефоне «Решения» — якорь на блок карточек внизу страницы */
+const MOBILE_NAV_ITEMS = [
+  { labelKey: "nav.features", href: "#features" },
+  { labelKey: "nav.solutions", href: "#solutions" },
   { labelKey: "nav.pricing", href: "#pricing" },
   { labelKey: "nav.faq", href: "#faq" },
 ] as const;
@@ -46,7 +84,41 @@ export function Header() {
 
         {/* Desktop nav */}
         <Flex align="center" gap={4} className={styles.nav}>
-          {NAV_ITEMS.map((item) => (
+          <a href="#features" className={styles.navLink}>
+            <Text style={{ fontSize: 14, fontWeight: 500 }}>
+              {t("nav.features")}
+            </Text>
+          </a>
+
+          <div className={styles.navDropdown}>
+            <button type="button" className={styles.navLink}>
+              <Text style={{ fontSize: 14, fontWeight: 500 }}>
+                {t("nav.solutions")}
+              </Text>
+              <span className={styles.navCaret} aria-hidden="true">
+                ▾
+              </span>
+            </button>
+            <div className={styles.navPanel}>
+              {SOLUTION_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={styles.navPanelLink}
+                  onClick={() =>
+                    reachGoal("click_solution", {
+                      page: item.id,
+                      from: "menu",
+                    })
+                  }
+                >
+                  {t(item.labelKey)}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {NAV_ITEMS.filter((item) => item.href !== "#features").map((item) => (
             <a key={item.href} href={item.href} className={styles.navLink}>
               <Text style={{ fontSize: 14, fontWeight: 500 }}>
                 {t(item.labelKey)}
@@ -134,7 +206,7 @@ export function Header() {
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.2 }}
           >
-            {NAV_ITEMS.map((item) => (
+            {MOBILE_NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}

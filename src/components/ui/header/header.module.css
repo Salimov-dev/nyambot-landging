@@ -130,6 +130,75 @@
   color: var(--text-primary) !important;
 }
 
+/* ===== Пункт «Решения» на десктопе =====
+   Список раскрывается по наведению и по фокусу с клавиатуры — состояния в
+   React под это не нужно. На телефоне пункта-списка нет: там якорь на блок
+   карточек, а сама шапка прячет .nav целиком. */
+.navDropdown {
+  position: relative;
+}
+
+.navDropdown > button {
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.navCaret {
+  color: var(--text-tertiary);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.navPanel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  padding: 8px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: rgba(20, 20, 26, 0.98);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+.navDropdown:hover .navPanel,
+.navDropdown:focus-within .navPanel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navPanelLink {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navPanelLink:hover {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
 .actions {
   display: flex;
   align-items: center;

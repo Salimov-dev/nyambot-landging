@@ -11,199 +11,113 @@
 
 .header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
 }
 
-/* ===== Сетка возможностей =====
-   2 карточки в ряд, без изображений — только тег, заголовок, результат и «Подробнее».
-   Поверхность карточки — .landing-glass-card (глянец без blur). */
-.bentoGrid {
+.label {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  color: var(--text-primary) !important;
+  font-size: clamp(28px, 4vw, 44px) !important;
+  font-weight: 800 !important;
+  margin: 12px 0 0 !important;
+}
+
+.subtitle {
+  display: block;
+  max-width: 640px;
+  margin: 14px auto 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ===== Плитки возможностей =====
+   Три в ряд на десктопе, одна на телефоне: заголовок и строка текста, без
+   раскрывашек. Поверхность — .landing-glass-card (глянец без blur). */
+.tileGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.bentoCard {
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-}
-
-.bentoContent {
+.tile {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 14px;
-  padding: 32px;
-  flex: 1;
-}
-
-/* Кнопка «Подробнее» прижата к низу — ряд выглядит выровненным */
-.bentoContent > button {
-  margin-top: auto;
-}
-
-/* Цветная полоска снизу вместо изображения — свой акцент у каждой карточки */
-.accentBar {
-  height: 6px;
-  width: 100%;
-  flex-shrink: 0;
-  margin-top: auto;
-}
-
-.outcomeChips {
-  display: flex;
-  flex-wrap: wrap;
   gap: 12px;
-  justify-content: center;
+  padding: 26px 24px 28px;
+  border-radius: var(--radius-xl);
 }
 
-.outcomeChip {
+.tileIcon {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-  padding: 6px 14px 6px 8px;
-  background: var(--surface);
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+}
+
+.tileTitle {
+  color: var(--text-primary) !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.tileText {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Ссылка на полную страницу возможностей: стоит там, где человек только что
+   прочитал шесть плиток и захотел деталей */
+.moreLink {
+  display: block;
+  width: fit-content;
+  margin: 32px auto 0;
+  padding: 12px 22px;
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-pill);
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: var(--radius-md);
   color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
   transition:
     border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.outcomeChip:hover {
-  border-color: var(--accent-border);
-  transform: translateY(-2px);
-}
-
-.detailsBtn {
-  font-weight: 600;
-  transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
-}
-
-.detailsBtn:hover {
-  transform: translateX(2px);
-  filter: brightness(1.1);
-}
-
-.modalBody {
-  max-height: 65vh;
-  overflow-y: auto;
-  padding-right: 4px;
-}
-
-@media (max-width: 900px) {
-  .bentoGrid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 64px 0 24px;
-  }
-  .inner {
-    padding: 0 16px;
-  }
-  .header {
-    margin-bottom: 48px;
-  }
-  .bentoContent {
-    padding: 24px 20px;
-  }
-}
-
-.outcomeChipIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: var(--radius-pill);
-  background: var(--accent-bg);
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-/* ===== Модалка «Подробнее» — свой слой на framer-motion =====
-   Размытие только вокруг: содержимое остаётся плотным и читаемым */
-.detailsOverlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(6, 7, 12, 0.5);
-  backdrop-filter: blur(18px) saturate(1.2);
-  -webkit-backdrop-filter: blur(18px) saturate(1.2);
-}
-
-.detailsDialog {
-  position: relative;
-  width: 100%;
-  max-width: 560px;
-  max-height: 82vh;
-  overflow-y: auto;
-  padding: 24px;
-  background: #12141d;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.14),
-    0 24px 60px rgba(0, 0, 0, 0.55);
-}
-
-.detailsHeader {
-  margin-bottom: 20px;
-  padding-right: 36px;
-}
-
-.detailsTitle {
-  color: var(--text-primary);
-  font-size: 19px;
-  font-weight: 800;
-  line-height: 1.3;
-}
-
-.detailsClose {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 32px;
-  height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text-secondary);
-  font-size: 14px;
-  cursor: pointer;
-  transition:
-    background 0.2s ease,
     color 0.2s ease;
 }
 
-.detailsClose:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--text-primary);
+.moreLink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
-@media (prefers-reduced-transparency: reduce) {
-  .detailsOverlay {
-    background: rgba(6, 7, 12, 0.92);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+@media (max-width: 900px) {
+  .tileGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 64px 0 24px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .tileGrid {
+    grid-template-columns: 1fr;
   }
 }

@@ -10,8 +10,9 @@ interface LogoProps {
   size?: "sm" | "md" | "lg";
 }
 
-const SIZE_MAP = { sm: 28, md: 36, lg: 44 } as const;
-const FONT_MAP = { sm: 15, md: 18, lg: 22 } as const;
+/** Размер знака в пикселях. Мобильную сбавку задаёт CSS через `--logo-size`. */
+const SIZE_MAP = { sm: 24, md: 30, lg: 40 } as const;
+const FONT_MAP = { sm: 14, md: 17, lg: 21 } as const;
 
 export function Logo({ size = "md" }: LogoProps) {
   const imgSize = SIZE_MAP[size];
@@ -19,18 +20,22 @@ export function Logo({ size = "md" }: LogoProps) {
 
   return (
     <Flex align="center" gap={10} className={styles.logo}>
-      <div className={styles.icon}>
+      <div
+        className={styles.icon}
+        style={{ ["--logo-size" as string]: `${imgSize}px` }}
+      >
         <Image
           src={BRAND_CONFIG.logoFile}
           alt={BRAND_CONFIG.name}
           width={imgSize}
           height={imgSize}
-          style={{ width: "auto", height: "auto" }}
+          className={styles.image}
           priority
         />
       </div>
       <Text
         strong
+        className={styles.title}
         style={{
           fontSize,
           color: theme.colors.textPrimary,

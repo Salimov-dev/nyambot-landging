@@ -11,14 +11,12 @@ const SECTIONS: { id: string; label: string }[] = [
   { id: "hero", label: "Главная" },
   { id: "killer", label: "Главное" },
   { id: "try-demo", label: "Демо" },
+  { id: "guests-path", label: "Гости" },
   { id: "features", label: "Возможности" },
-  { id: "network", label: "Сеть" },
-  { id: "crm-demo", label: "CRM" },
+  { id: "crm-demo", label: "СРМ" },
   { id: "pricing", label: "Тарифы" },
-  { id: "how-it-works", label: "Как работает" },
-  { id: "switch", label: "Скидка 50%" },
-  { id: "security", label: "Безопасность" },
-  { id: "faq", label: "FAQ" },
+  { id: "solutions", label: "Решения" },
+  { id: "faq", label: "Вопросы" },
   { id: "cta", label: "Начать" },
 ];
 

@@ -11,15 +11,10 @@ import { ForWhomSection } from "@/components/sections/for-whom/for-whom-section"
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
 import { TryDemoSection } from "@/components/sections/try-demo/try-demo-section";
-import { HowItWorksSection } from "@/components/sections/how-it-works/how-it-works-section";
-import { SwitchSection } from "@/components/sections/switch/switch-section";
-import { SecuritySection } from "@/components/sections/security/security-section";
-import { WhySection } from "@/components/sections/why/why-section";
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { GuestsPathSection } from "@/components/sections/guests-path/guests-path-section";
-import { OwnChannelsSection } from "@/components/sections/own-channels/own-channels-section";
-import { NetworkSection } from "@/components/sections/network/network-section";
+import { SolutionsSection } from "@/components/sections/solutions/solutions-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
 import { PRICING_PLANS } from "@/config/pricing.config";
@@ -42,34 +37,26 @@ export default function LandingPage() {
       <DotNav />
       <ScrollDepthTracker />
       <SectionViewTracker />
-      {/* Порядок: что это → потрогать → для меня ли → что умеет → сколько
-          стоит → как начать → чем дополняется → доверие → возражения → действие.
-          Интеграции опущены с третьей позиции: наверху они читались как список
-          требований к тому, у кого нет кассы. */}
+      {/* Порядок: что это → потрогать → для меня ли → откуда гости → что
+          приносит деньги → кабинет → сколько стоит → чем дополняется →
+          где читать подробнее → возражения → действие.
+
+          🔴 Длина — не украшение, а причина отказа: медиана визита 15 секунд,
+          до четверти прежней страницы доходили 5,5% визитов с рекламы. Разделы
+          «Сайт или приложение», «Сеть и франшиза», «Безопасность», «Почему мы»,
+          «Как работает» и «Переезд» уехали на собственные адреса — это входы из
+          выдачи, а ссылки на них собраны в секции «Решения». */}
       <main>
         <HeroSection />
         <KillerSection />
         <TryDemoSection />
         <ForWhomSection />
-        {/* «Откуда возьмутся гости» — сразу после «для кого»: это первый
-            вопрос, который ресторатор задаёт вслух, и до списка возможностей
-            он всё равно думает о нём, а не о них */}
         <GuestsPathSection />
-        {/* Возражение «у меня уже есть сайт и приложение» — сразу за путём
-            гостя: оба блока про один и тот же вопрос «где живёт мой гость»,
-            и порознь второй читается как повтор первого */}
-        <OwnChannelsSection />
         <FeaturesSection />
         <CrmDemoSection />
-        {/* Сеть — перед тарифами: сети 20+ целевой сегмент, и до цены она
-            должна увидеть, что её случай здесь описан целиком */}
-        <NetworkSection />
         <PricingSection plans={PRICING_PLANS} />
-        <HowItWorksSection />
         <IntegrationsSection />
-        <SwitchSection />
-        <SecuritySection />
-        <WhySection />
+        <SolutionsSection />
         <FaqSection />
         <CtaSection />
         <SocialSection />

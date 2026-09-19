@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Collapse, Flex, Typography } from "antd";
 import type { CollapseProps } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import ruLanding from "../../../../public/locales/ru/landing.json";
 import styles from "./faq-section.module.css";
@@ -16,14 +18,11 @@ const { Title, Text } = Typography;
  * 🔴 Вопросы берутся из словаря ЦЕЛИКОМ, а не по списку ключей.
  *
  * Список ключей здесь был забит руками и остановился на девятом вопросе, пока
- * словарь дорос до шестнадцати. Семь ответов — про оплату, пробный период,
- * скидку 50%, поддержку, MAX и сроки запуска — были написаны, переведены на
- * семь языков и **не показывались никому**: разметка для поисковиков отдаёт их
- * все (`structured-data`), то есть Google ответы видел, а человек нет.
+ * словарь дорос до шестнадцати: семь ответов были написаны, переведены и не
+ * показывались никому, хотя разметка отдавала их поисковикам.
  *
- * Длина берётся у русского словаря — он же источник разметки: перевод, в
- * котором вопросов меньше, отдал бы пустые строки, и это заметно сразу, а
- * молчаливой потери вопроса больше не будет.
+ * На главной теперь шесть вопросов — остальные живут на /voprosy вместе со
+ * своей разметкой FAQPage, поэтому видимое и размеченное снова совпадают.
  */
 const FAQ_COUNT = (ruLanding.faq.items as unknown[]).length;
 
@@ -119,8 +118,18 @@ export function FaqSection() {
             justify="center"
             align="center"
             gap={8}
+            wrap
             className={styles.supportHint}
           >
+            <Link
+              href={LINKS.pages.faq}
+              className={styles.moreLink}
+              onClick={() =>
+                reachGoal("click_solution", { page: "faq", from: "section" })
+              }
+            >
+              {t("faq.moreCta")} →
+            </Link>
             <Text style={{ color: theme.colors.textTertiary, fontSize: 14 }}>
               {t("faq.notFound")}
             </Text>

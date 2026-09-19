@@ -99,18 +99,21 @@
   line-height: 1.6;
 }
 
-/* Строка «Не нужно: …» — то, чего клиент НЕ делает, отделена от описания */
+/* Строка «Не нужно: …» одна на всю секцию: снятые требования перечислены
+   разом, а не повторяются в каждой карточке */
 .nothing {
-  margin-top: auto;
-  padding-top: 14px;
+  margin: 24px 0 0;
+  padding-top: 18px;
   border-top: 1px solid var(--border-light);
   color: rgba(255, 255, 255, 0.72);
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: center;
   width: 100%;
 }
 
 .nothingLabel {
+  color: var(--accent);
   font-weight: 700;
 }
 

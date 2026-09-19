@@ -46,7 +46,6 @@
   text-decoration: none;
 }
 
-.homeLink,
 .footerLink {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.78);
@@ -54,9 +53,33 @@
   transition: color 0.2s ease;
 }
 
-.homeLink:hover,
 .footerLink:hover {
   color: var(--accent);
+}
+
+/* Возврат на главную: словом в углу его не замечали, поэтому кнопка со
+   стрелкой и рамкой — на телефоне это ещё и нормальная цель для пальца */
+.homeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 140, 0, 0.08);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.homeLink:hover {
+  background: rgba(255, 140, 0, 0.16);
+  border-color: var(--accent);
 }
 
 .main {

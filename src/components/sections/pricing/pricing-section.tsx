@@ -131,6 +131,30 @@ export function PricingSection({ plans }: PricingSectionProps) {
           </Text>
         </motion.div>
 
+        {/* Переезд со скидкой 50% — строкой в тарифах вместо отдельной секции:
+            до неё доходили единицы, а условие важно тем, кто уже платит
+            другому сервису. Подробности — в чате поддержки, скидку фиксируем
+            до оплаты. */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className={styles.switchNote}
+        >
+          <Text className={styles.switchNoteText}>
+            {t("pricing.switchNote")}
+          </Text>
+          <a
+            href={LINKS.support.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.switchNoteLink}
+            onClick={() => reachGoal("click_switch")}
+          >
+            {t("pricing.switchCta")} →
+          </a>
+        </motion.div>
+
         {/* Состав тарифа одной карточкой: сначала что подключаешь,
             потом что получаешь, и тут же вариант для сети — раньше эти три
             куска висели по отдельности и не читались как одно предложение */}
