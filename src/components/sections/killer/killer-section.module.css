@@ -197,3 +197,21 @@
     text-align: center;
   }
 }
+
+/* Строка категории — что это вообще такое. Отрицания уместны только здесь:
+   до карточек человек ещё не знает, к чему относить Нямбот */
+.category {
+  max-width: 720px;
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .category {
+    margin-top: 12px;
+    font-size: 15px;
+    text-align: left;
+  }
+}

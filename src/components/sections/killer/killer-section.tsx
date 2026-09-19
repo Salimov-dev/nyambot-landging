@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Button, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
+import { useHasTranslation } from "@/hooks/use-has-translation.hook";
 import {
   GlobeIcon,
   CartIcon,
@@ -83,6 +84,7 @@ function KillerCard({ item, index }: { item: KillerItem; index: number }) {
 export function KillerSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
+  const hasCategory = useHasTranslation("killer.category");
 
   return (
     <section id="killer" className={styles.section}>
@@ -99,6 +101,11 @@ export function KillerSection() {
             {t("killer.title")}
           </Title>
           <Text className={styles.subtitle}>{t("killer.subtitle")}</Text>
+          {/* Строка категории — до карточек: сначала человек понимает, ЧТО это
+              вообще, и только потом читает отличия */}
+          {hasCategory ? (
+            <p className={styles.category}>{t("killer.category")}</p>
+          ) : null}
         </motion.div>
 
         <div className={styles.grid}>

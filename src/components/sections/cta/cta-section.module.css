@@ -107,3 +107,14 @@
     justify-content: center !important;
   }
 }
+
+/* Строка доверия: статус «Сколково», российское происхождение и 152-ФЗ.
+   Тише кнопок, но крупнее подписи в подвале — её читают перед регистрацией */
+.trust {
+  display: block;
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: center;
+}

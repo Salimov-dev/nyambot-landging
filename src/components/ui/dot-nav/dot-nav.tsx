@@ -9,7 +9,9 @@ import styles from "./dot-nav.module.css";
  *  показу и приводит. */
 const SECTIONS: { id: string; label: string }[] = [
   { id: "hero", label: "Главная" },
+  { id: "why-now", label: "Почему сейчас" },
   { id: "killer", label: "Главное" },
+  { id: "compare", label: "Сравнение" },
   { id: "try-demo", label: "Демо" },
   { id: "guests-path", label: "Гости" },
   { id: "features", label: "Возможности" },

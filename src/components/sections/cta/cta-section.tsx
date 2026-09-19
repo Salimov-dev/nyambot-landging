@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Button, Flex, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
+import { useHasTranslation } from "@/hooks/use-has-translation.hook";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
@@ -14,6 +15,7 @@ const { Title, Text } = Typography;
 export function CtaSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
+  const hasTrust = useHasTranslation("trust.line");
 
   return (
     <section id="cta" className={styles.section}>
@@ -89,6 +91,13 @@ export function CtaSection() {
             <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
               {t("cta.hint")}
             </Text>
+
+            {/* Сколково, российское происхождение и 152-ФЗ — здесь, а не только
+                мелким шрифтом в подвале: для сетей это аргумент уровня цены,
+                и читается он там, где принимается решение */}
+            {hasTrust ? (
+              <span className={styles.trust}>{t("trust.line")}</span>
+            ) : null}
           </Flex>
         </motion.div>
       </div>

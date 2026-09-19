@@ -1,0 +1,136 @@
+/* ===== Как мы работаем =====
+   Блок перед тарифами: цену видно сразу, менеджера ждать не надо — и при этом
+   настройку не оставляем на ресторатора. Карточка помощи крупнее вводного
+   текста: страх «не разберусь» сильнее интереса к порядку продажи. */
+
+.section {
+  padding: 72px 0 40px;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border-light);
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.label {
+  display: block;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  color: var(--text-primary) !important;
+  font-size: clamp(26px, 4vw, 40px) !important;
+  font-weight: 800 !important;
+  margin: 12px 0 14px !important;
+  text-wrap: balance;
+}
+
+.text {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.help {
+  padding: 28px 28px 26px;
+  border-radius: var(--radius-xl);
+}
+
+.helpIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+}
+
+.helpTitle {
+  color: var(--text-primary) !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  margin: 14px 0 10px !important;
+}
+
+.helpText {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.helpList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.helpItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.check {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .helpList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 48px 0 28px;
+  }
+
+  .inner {
+    padding: 0 16px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .help {
+    padding: 20px 18px;
+  }
+
+  .helpTitle {
+    font-size: 20px !important;
+  }
+}

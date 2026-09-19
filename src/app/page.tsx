@@ -6,6 +6,10 @@ import { ScrollDepthTracker } from "@/components/ui/analytics/scroll-depth-track
 import { SectionViewTracker } from "@/components/ui/analytics/section-view-tracker";
 import { HeroSection } from "@/components/sections/hero/hero-section";
 import { KillerSection } from "@/components/sections/killer/killer-section";
+import { WhyNowSection } from "@/components/sections/why-now/why-now-section";
+import { CompareSection } from "@/components/sections/compare/compare-section";
+import { GuestStepsSection } from "@/components/sections/guest-steps/guest-steps-section";
+import { OurWaySection } from "@/components/sections/our-way/our-way-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
 import { ForWhomSection } from "@/components/sections/for-whom/for-whom-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
@@ -48,12 +52,16 @@ export default function LandingPage() {
           выдачи, а ссылки на них собраны в секции «Решения». */}
       <main>
         <HeroSection />
+        <WhyNowSection />
         <KillerSection />
+        <CompareSection />
         <TryDemoSection />
         <ForWhomSection />
+        <GuestStepsSection />
         <GuestsPathSection />
         <FeaturesSection />
         <CrmDemoSection />
+        <OurWaySection />
         <PricingSection plans={PRICING_PLANS} />
         <IntegrationsSection />
         <SolutionsSection />
