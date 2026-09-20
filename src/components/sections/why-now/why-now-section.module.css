@@ -103,18 +103,21 @@
   }
 
   /* В один столбец цифра и подпись встают в строку: три карточки по центру
-     на телефоне занимали бы пол-экрана каждая */
+     на телефоне занимали бы пол-экрана каждая.
+     Сетка с колонкой фиксированной ширины держит подписи трёх карточек
+     на одной вертикали, а nowrap не даёт числу разорваться на «85 / млн» */
   .stat {
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: flex-start;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 108px) 1fr;
+    align-items: center;
+    gap: 14px;
     padding: 18px 20px;
     text-align: left;
   }
 
   .statValue {
     font-size: 28px;
+    white-space: nowrap;
   }
 }
 
