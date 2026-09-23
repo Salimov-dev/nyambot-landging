@@ -52,7 +52,7 @@
   "benefits": {
     "label": "Features",
     "title": "Earn more from the same guests",
-    "subtitle": "Six things that drive revenue — the rest is on the features page",
+    "subtitle": "Eight things that drive revenue — the rest is on the features page",
     "moreCta": "All features",
     "items": {
       "retention": {
@@ -70,6 +70,14 @@
       "team": {
         "title": "Team app",
         "text": "Admin, courier and cook work from a smartphone: accept the order, see the address on a map, mark it ready"
+      },
+      "guestChat": {
+        "title": "The guest asks — the bot answers",
+        "text": "«Where's my order?», «How late are you open?», «How much is delivery?» — AI answers questions like these in your bot. It looks at the location's data and at the guest's own orders. If the guest needs a person, or it's about money, a complaint or an allergy, the bot calls the admin of the right location, who replies right in the messenger"
+      },
+      "teamAlerts": {
+        "title": "Something breaks — you're the first to know",
+        "text": "The POS has stopped accepting orders, the bot isn't receiving messages, a refund is needed, a guest is calling for the admin — Nyambot messages the owner and managers in Telegram or MAX. Daily and weekly summaries go there too. Everyone chooses what to receive; at night only urgent alerts come through. A manager sees only their own locations"
       },
       "delivery": {
         "title": "Delivery without your own couriers",
@@ -179,6 +187,18 @@
       {
         "question": "Do I have to talk to a sales manager or pay for onboarding?",
         "answer": "No. Signing up for the CRM takes an email and a password — no forms, no phone number. All plans and prices are published on this page. You set everything up in the CRM yourself — and if something is unclear, Anya, the built-in AI assistant, answers right inside the CRM: she knows how Nyambot works and helps with setup straight away, without waiting in the support queue. Human support steps in when you ask"
+      },
+      {
+        "question": "Can a guest message the venue?",
+        "answer": "Yes, if guest chat is turned on for the location. The guest writes to the bot: AI answers the usual questions, and the location's admin handles the rest"
+      },
+      {
+        "question": "Won't the AI say too much?",
+        "answer": "The AI answers only from your location's data and this guest's orders. It doesn't promise discounts or refunds, and it doesn't change or cancel orders — such questions go to the admin. Other guests' orders and contacts are not visible to it"
+      },
+      {
+        "question": "How do I find out that the POS has stopped accepting orders?",
+        "answer": "Turn on notifications in the CRM: «Profile» → «Notifications». A message arrives in Telegram or MAX as soon as the POS stops responding, and another one when it's working again"
       }
     ]
   },
@@ -300,7 +320,7 @@
       },
       "faq": {
         "title": "All questions",
-        "text": "Twenty-two questions about the POS, payments, delivery, the trial period and the 50% discount"
+        "text": "Twenty-five questions about the POS, payments, delivery, the trial period and the 50% discount"
       }
     }
   }

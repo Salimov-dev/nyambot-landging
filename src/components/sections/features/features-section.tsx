@@ -15,6 +15,8 @@ import {
   UsersIcon,
   PackageIcon,
   SettingsIcon,
+  MessageIcon,
+  ZapIcon,
 } from "@/components/ui/icons/icons";
 import styles from "./features-section.module.css";
 
@@ -28,7 +30,7 @@ type BenefitIcon = (props: {
 type Benefit = { id: string; icon: BenefitIcon; accentColor: string };
 
 /**
- * Шесть плиток вместо восьми раскрывающихся блоков.
+ * Плитки вместо раскрывающихся блоков.
  *
  * 🔴 Раскрывашки «Подробнее» открывали за месяц 4 раза на 447 визитов, а текста
  * держали 1350 слов — 28% всей страницы при медиане визита 15 секунд. Подробный
@@ -41,6 +43,8 @@ const BENEFITS: readonly Benefit[] = [
   { id: "growth", icon: TargetIcon, accentColor: "#14c4a2" },
   { id: "constructor", icon: UtensilsIcon, accentColor: "#e64980" },
   { id: "team", icon: UsersIcon, accentColor: "#12b886" },
+  { id: "guestChat", icon: MessageIcon, accentColor: "#7950f2" },
+  { id: "teamAlerts", icon: ZapIcon, accentColor: "#fab005" },
   { id: "delivery", icon: PackageIcon, accentColor: "#f76707" },
   { id: "autopilot", icon: SettingsIcon, accentColor: "#1677ff" },
 ] as const;

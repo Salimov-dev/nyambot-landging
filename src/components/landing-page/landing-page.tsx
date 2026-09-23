@@ -15,6 +15,7 @@ import {
   MessageIcon,
   MonitorIcon,
   MapIcon,
+  ZapIcon,
 } from "@/components/ui/icons/icons";
 import { StructuredData } from "@/components/common/structured-data/structured-data";
 import { LandingPageCta } from "./landing-page-cta";
@@ -38,6 +39,7 @@ const ICONS: Record<IBlockIcon, typeof ListIcon> = {
   [BLOCK_ICON.GUEST]: MessageIcon,
   [BLOCK_ICON.STAFF]: MonitorIcon,
   [BLOCK_ICON.DELIVERY]: MapIcon,
+  [BLOCK_ICON.ALERT]: ZapIcon,
 };
 
 type IProps = {
@@ -99,6 +101,15 @@ export function LandingPage({ content }: IProps) {
                 </span>
                 <h2 className={styles.blockTitle}>{block.title}</h2>
                 <p className={styles.blockText}>{block.text}</p>
+                {block.points ? (
+                  <ul className={styles.blockPoints}>
+                    {block.points.map((point) => (
+                      <li key={point} className={styles.blockPoint}>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </section>
             );
           })}

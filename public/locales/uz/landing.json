@@ -52,7 +52,7 @@
   "benefits": {
     "label": "Imkoniyatlar",
     "title": "O'sha mehmonlardan ko'proq daromad ol",
-    "subtitle": "Tushum keltiradigan oltita narsa — qolgani imkoniyatlar sahifasida",
+    "subtitle": "Tushum keltiradigan sakkizta narsa — qolgani imkoniyatlar sahifasida",
     "moreCta": "Barcha imkoniyatlar",
     "items": {
       "retention": {
@@ -70,6 +70,14 @@
       "team": {
         "title": "«Komanda» ilovasi",
         "text": "Administrator, kuryer va oshpaz smartfondan ishlaydi: buyurtmani qabul qilish, xaritadagi manzil, tayyorlik belgisi"
+      },
+      "guestChat": {
+        "title": "Mehmon soʻraydi — bot javob beradi",
+        "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?», «Yetkazib berish qancha turadi?» — sening botingda bunday savollarga SI javob beradi. U nuqta maʼlumotlariga va mehmonning oʻz buyurtmalariga qaraydi. Agar mehmonga odam kerak boʻlsa yoki gap pul, shikoyat, allergiya haqida borsa, bot kerakli nuqtaning administratorini chaqiradi va u toʻgʻridan-toʻgʻri messenjerda javob beradi"
+      },
+      "teamAlerts": {
+        "title": "Nosozlik — birinchi boʻlib sen bilasan",
+        "text": "Kassa buyurtma qabul qilishni toʻxtatdi, bot xabarlarni olmayapti, pulni qaytarish kerak, mehmon administratorni chaqiryapti — Nyambot egasiga va boshqaruvchilarga Telegram yoki MAXda yozadi. Kun va hafta yakunlari ham oʻsha yerga keladi. Har kim nimani olishni oʻzi tanlaydi; tunda faqat shoshilinch xabarlar keladi. Boshqaruvchi faqat oʻz nuqtalarini koʻradi"
       },
       "delivery": {
         "title": "O‘z xodimlarisiz yetkazib berish",
@@ -179,6 +187,18 @@
       {
         "question": "Menejer bilan gaplashish va joriy etishga buyurtma berish kerakmi?",
         "answer": "Yoʻq. CRMda roʻyxatdan oʻtish — pochta va parol, anketasiz va telefonsiz. Barcha tariflar va narxlar shu sahifada eʼlon qilingan. Sozlash CRMda mustaqil bajariladi — agar biror narsa tushunarsiz boʻlsa, toʻgʻridan-toʻgʻri CRMda Anya, ichki SI-yordamchi javob beradi: u Nyambot qanday qurilganini biladi va qoʻllab-quvvatlash navbatini kutmasdan sozlash boʻyicha darhol maslahat beradi. Jonli qoʻllab-quvvatlash esa oʻzingiz chaqirganingizda ulanadi"
+      },
+      {
+        "question": "Mehmon muassasaga yoza oladimi?",
+        "answer": "Ha, agar nuqtada mehmonlar bilan chat yoqilgan boʻlsa. Mehmon botga yozadi, oddiy savollarga SI, qolganlariga esa nuqta administratori javob beradi"
+      },
+      {
+        "question": "SI ortiqcha gapirib qoʻymaydimi?",
+        "answer": "SI faqat sening nuqtang maʼlumotlari va shu mehmonning buyurtmalari boʻyicha javob beradi. U chegirma va pul qaytarishni vaʼda qilmaydi, buyurtmani oʻzgartirmaydi va bekor qilmaydi — bunday savollar administratorga oʻtadi. Boshqalarning buyurtmalari va kontaktlari unga koʻrinmaydi"
+      },
+      {
+        "question": "Kassa buyurtma qabul qilishni toʻxtatganini qanday bilsa boʻladi?",
+        "answer": "CRMda bildirishnomalarni yoq: «Profil» → «Bildirishnomalar». Kassa javob berishni toʻxtatishi bilan Telegram yoki MAXga xabar keladi, yana ishlay boshlaganda esa yana bittasi"
       }
     ]
   },
@@ -300,7 +320,7 @@
       },
       "faq": {
         "title": "Barcha savollar",
-        "text": "Kassa, to‘lov, yetkazib berish, sinov muddati va 50% chegirma haqida yigirma ikkita savol"
+        "text": "Kassa, to‘lov, yetkazib berish, sinov muddati va 50% chegirma haqida yigirma beshta savol"
       }
     }
   }

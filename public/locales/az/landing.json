@@ -52,7 +52,7 @@
   "benefits": {
     "label": "İmkanlar",
     "title": "Eyni qonaqlardan daha çox qazan",
-    "subtitle": "Gəlir gətirən altı şey — qalanı imkanlar səhifəsində",
+    "subtitle": "Gəlir gətirən səkkiz şey — qalanı imkanlar səhifəsində",
     "moreCta": "Bütün imkanlar",
     "items": {
       "retention": {
@@ -70,6 +70,14 @@
       "team": {
         "title": "«Komanda» tətbiqi",
         "text": "Administrator, kuryer və aşpaz smartfondan işləyir: sifarişin qəbulu, xəritədə ünvan, hazırlıq qeydi"
+      },
+      "guestChat": {
+        "title": "Qonaq soruşur — bot cavab verir",
+        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?», «Çatdırılma neçəyədir?» — sənin botunda belə suallara Sİ cavab verir. O, nöqtənin məlumatlarına və qonağın öz sifarişlərinə baxır. Qonağa insan lazımdırsa və ya söhbət pul, şikayət, allergiya barədədirsə, bot lazımi nöqtənin administratorunu çağırır və o, birbaşa messencerdə cavab verir"
+      },
+      "teamAlerts": {
+        "title": "Nasazlıq — ilk sən bilirsən",
+        "text": "Kassa sifariş qəbul etməyi dayandırıb, bot mesajları almır, geri ödəniş lazımdır, qonaq administratoru çağırır — Nyambot sahibə və idarəçilərə Telegram və ya MAX-da yazır. Günün və həftənin yekunları da ora gəlir. Hər kəs nə alacağını özü seçir; gecə yalnız təcili bildirişlər gəlir. İdarəçi yalnız öz nöqtələrini görür"
       },
       "delivery": {
         "title": "Öz ştatın olmadan çatdırılma",
@@ -179,6 +187,18 @@
       {
         "question": "Meneceri gözləmək və tətbiq etmə sifariş etmək lazımdır?",
         "answer": "Xeyr. CRM-də qeydiyyat — e-poçt və şifrə, anket və telefon olmadan. Bütün tariflər və qiymətlər bu səhifədə dərc olunub. Quraşdırma CRM-də özün tərəfindən aparılır — nəsə aydın deyilsə, birbaşa CRM-də Anya, quraşdırılmış Sİ-köməkçi cavab verir: o, Nyambotun necə qurulduğunu bilir və dəstək növbəsini gözləmədən dərhal quraşdırma üzrə məsləhət verir. Canlı dəstək isə sən çağıranda qoşulur"
+      },
+      {
+        "question": "Qonaq müəssisəyə yaza bilərmi?",
+        "answer": "Bəli, əgər nöqtədə qonaqlarla çat qoşulubsa. Qonaq bota yazır, adi suallara Sİ, qalanlarına isə nöqtənin administratoru cavab verir"
+      },
+      {
+        "question": "Sİ artıq söz deməz ki?",
+        "answer": "Sİ yalnız sənin nöqtənin məlumatlarına və bu qonağın sifarişlərinə əsasən cavab verir. O, endirim və geri ödəniş vəd etmir, sifarişi dəyişmir və ləğv etmir — belə suallar administratora ötürülür. Başqalarının sifarişlərini və əlaqə məlumatlarını görmür"
+      },
+      {
+        "question": "Kassanın sifariş qəbul etməyi dayandırdığını necə bilmək olar?",
+        "answer": "CRM-də bildirişləri qoş: «Profil» → «Bildirişlər». Kassa cavab verməyi dayandıran kimi Telegram və ya MAX-a mesaj gələcək, yenidən işləyəndə isə daha biri"
       }
     ]
   },
@@ -300,7 +320,7 @@
       },
       "faq": {
         "title": "Bütün suallar",
-        "text": "Kassa, ödəniş, çatdırılma, sınaq dövrü və 50% endirim barədə iyirmi iki sual"
+        "text": "Kassa, ödəniş, çatdırılma, sınaq dövrü və 50% endirim barədə iyirmi beş sual"
       }
     }
   }
