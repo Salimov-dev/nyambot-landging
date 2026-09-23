@@ -1,7 +1,7 @@
 {
   "nav": {
     "features": "Features",
-    "solutions": "Решения",
+    "solutions": "Solutions",
     "pricing": "Pricing",
     "faq": "FAQ",
     "docs": "Documentation",
@@ -23,7 +23,7 @@
     "title": "What works differently here",
     "subtitle": "Eight differences — and the things you won't have to do",
     "notPrefix": "No need to",
-    "notNeeded": "менять кассу · заводить бота на каждую точку · просить гостя установить приложение · заполнять анкеты и ждать менеджера",
+    "notNeeded": "switch your POS · set up a bot for every location · ask guests to install an app · fill out forms and wait for a manager",
     "items": {
       "network": {
         "title": "One bot for the whole chain",
@@ -50,34 +50,34 @@
     "pricingCta": "See pricing"
   },
   "benefits": {
-    "label": "Возможности",
+    "label": "Features",
     "title": "Earn more from the same guests",
-    "subtitle": "Шесть вещей, которые делают выручку — остальное на странице возможностей",
-    "moreCta": "Все возможности",
+    "subtitle": "Six things that drive revenue — the rest is on the features page",
+    "moreCta": "All features",
     "items": {
       "retention": {
-        "title": "Repeat orders go to your channel, not the aggregator",
-        "text": "Агрегатор берёт процент с каждого заказа, Нямбот — фиксированную подписку. Гость возвращается в твой канал и остаётся в твоей базе"
+        "title": "Repeat orders with no commission",
+        "text": "An aggregator takes 25–35% of every order — the first one and every one after. Nyambot charges a flat subscription and takes no percentage. The guest comes back to your channel and stays in your database"
       },
       "growth": {
-        "title": "Turn one-time guests into regulars",
-        "text": "Модификаторы, комбо, акции, баллы и рассылки поднимают чек и возвращают гостя — без ручной работы"
+        "title": "Average check and repeat visits",
+        "text": "Modifiers, combos, promos, points and mailings raise the average check and bring guests back — no manual work"
       },
       "constructor": {
-        "title": "Guest builds the dish their way — kitchen doesn't get confused",
-        "text": "Убрать лук, добавить сыр, взять двойную котлету. Состав уходит в чек той же строкой, что печатает касса"
+        "title": "The guest builds the dish their way",
+        "text": "Hold the onion, add cheese, make it a double patty. The build lands on the receipt in the same line the POS prints"
       },
       "team": {
-        "title": "Your entire team in one app — admin, courier and kitchen",
-        "text": "Администратор, курьер и повар работают со смартфона: приём заказа, адрес на карте, отметка готовности"
+        "title": "Team app",
+        "text": "Admin, courier and cook work from a smartphone: accept the order, see the address on a map, mark it ready"
       },
       "delivery": {
-        "title": "Scale delivery without your own courier staff",
-        "text": "Курьер Яндекс.Доставки вызывается в один тап. Свои курьеры тоже поддерживаются — выбираешь сам"
+        "title": "Delivery without your own couriers",
+        "text": "Call a Yandex.Delivery courier in one tap. Your own couriers work too — you choose"
       },
       "autopilot": {
-        "title": "Everything runs itself — and support is right there",
-        "text": "Меню, цены, зоны, оплату и кассу заводишь сам в СРМ. Нужна помощь — поддержка рядом на каждом шаге"
+        "title": "Setup without developers",
+        "text": "You set up the menu, prices, zones, payments and POS yourself in the CRM. Need help? Support is right there at every step"
       }
     }
   },
@@ -129,7 +129,7 @@
     "includedItems": [
       "Mini app",
       "CRM",
-      "«Crew» app",
+      "Team app",
       "Loyalty and promos",
       "All integrations",
       "Support"
@@ -146,15 +146,15 @@
       "1 bot in Telegram",
       "Up to 200 menu items"
     ],
-    "switchNote": "Пользуешься другим платным сервисом приёма заказов или доставки? Первые 6 месяцев — вдвое дешевле: напиши до оплаты, подтвердим и зафиксируем скидку",
-    "switchCta": "Получить скидку 50%"
+    "switchNote": "Using another paid ordering or delivery service? Your first 6 months are half price: message us before paying, we'll confirm and lock in the discount",
+    "switchCta": "Get 50% off"
   },
   "faq": {
     "label": "FAQ",
     "title": "Still have questions?",
     "notFound": "Didn't find an answer?",
     "askSupport": "Ask support",
-    "moreCta": "Все вопросы",
+    "moreCta": "All questions",
     "items": [
       {
         "question": "Do I need a separate bot for each location?",
@@ -278,29 +278,29 @@
     "note": "You get your bot's link and QR code in the dashboard and place them yourself"
   },
   "solutions": {
-    "label": "Решения",
-    "title": "Если хочешь разобраться подробнее",
-    "subtitle": "Отдельные страницы по темам, которые чаще всего спрашивают",
+    "label": "Solutions",
+    "title": "Want to dig deeper?",
+    "subtitle": "Separate pages on the topics people ask about most",
     "items": {
       "features": {
-        "title": "Все возможности",
-        "text": "Что умеет Нямбот целиком: лояльность, конструктор блюд, доставка, команда, аналитика"
+        "title": "All features",
+        "text": "Everything Nyambot can do: loyalty, dish builder, delivery, team, analytics"
       },
       "network": {
-        "title": "Сеть и франшиза",
-        "text": "Точки, роли, города и счета в одном кабинете. Что видит франчайзи, а что головной офис"
+        "title": "Chains and franchises",
+        "text": "Locations, roles, cities and invoices in one dashboard. What the franchisee sees and what the head office sees"
       },
       "ownChannels": {
-        "title": "Сайт или приложение",
-        "text": "Чем канал в мессенджере отличается от сайта и своего приложения и зачем он рядом с ними"
+        "title": "Website or app",
+        "text": "How a messenger channel differs from a website and your own app — and why it belongs next to them"
       },
       "security": {
-        "title": "Безопасность данных",
-        "text": "152-ФЗ, хранение в России, кому передаются данные гостя и кому — никогда"
+        "title": "Data security",
+        "text": "152-FZ, storage in Russia, who guest data is shared with — and who never gets it"
       },
       "faq": {
-        "title": "Все вопросы",
-        "text": "Двадцать два вопроса про кассу, оплату, доставку, пробный период и скидку 50%"
+        "title": "All questions",
+        "text": "Twenty-two questions about the POS, payments, delivery, the trial period and the 50% discount"
       }
     }
   }

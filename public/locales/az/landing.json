@@ -1,7 +1,7 @@
 {
   "nav": {
     "features": "İmkanlar",
-    "solutions": "Решения",
+    "solutions": "Həllər",
     "pricing": "Tariflər",
     "faq": "Suallar",
     "docs": "Sənədlər",
@@ -23,7 +23,7 @@
     "title": "Burada nə fərqlidir",
     "subtitle": "Səkkiz fərq — və etməli olmayacağın işlər",
     "notPrefix": "Lazım deyil",
-    "notNeeded": "менять кассу · заводить бота на каждую точку · просить гостя установить приложение · заполнять анкеты и ждать менеджера",
+    "notNeeded": "kassanı dəyişmək · hər nöqtəyə ayrıca bot açmaq · qonaqdan tətbiq quraşdırmağı xahiş etmək · anketlər doldurub menecer gözləmək",
     "items": {
       "network": {
         "title": "Bütün şəbəkəyə bir bot",
@@ -50,34 +50,34 @@
     "pricingCta": "Tariflərə bax"
   },
   "benefits": {
-    "label": "Возможности",
+    "label": "İmkanlar",
     "title": "Eyni qonaqlardan daha çox qazan",
-    "subtitle": "Шесть вещей, которые делают выручку — остальное на странице возможностей",
-    "moreCta": "Все возможности",
+    "subtitle": "Gəlir gətirən altı şey — qalanı imkanlar səhifəsində",
+    "moreCta": "Bütün imkanlar",
     "items": {
       "retention": {
-        "title": "Təkrar sifariş — aqreqatora deyil, öz kanalına",
-        "text": "Агрегатор берёт процент с каждого заказа, Нямбот — фиксированную подписку. Гость возвращается в твой канал и остаётся в твоей базе"
+        "title": "Komissiyasız təkrar sifarişlər",
+        "text": "Aqreqator hər sifarişdən 25–35% alır — həm birincidən, həm də sonrakıların hamısından. Nyambot sabit abunə haqqı alır, faiz almır. Qonaq sənin kanalına qayıdır və sənin bazanda qalır"
       },
       "growth": {
-        "title": "Bir dəfəlik qonaqları daimi qonaqlara çevirin",
-        "text": "Модификаторы, комбо, акции, баллы и рассылки поднимают чек и возвращают гостя — без ручной работы"
+        "title": "Orta çek və qayıdışlar",
+        "text": "Modifikatorlar, kombolar, aksiyalar, ballar və göndərişlər çeki artırır və qonağı geri qaytarır — əl işi olmadan"
       },
       "constructor": {
-        "title": "Qonaq yeməyi özünə uyğun yığır — mətbəx çaşmır",
-        "text": "Убрать лук, добавить сыр, взять двойную котлету. Состав уходит в чек той же строкой, что печатает касса"
+        "title": "Qonaq yeməyi özünə uyğun yığır",
+        "text": "Soğanı çıxar, pendir əlavə et, ikiqat kotlet götür. Tərkib çekə kassanın çap etdiyi eyni sətirlə düşür"
       },
       "team": {
-        "title": "Bütün komanda bir tətbiqdə — administrator, kuryer və mətbəx",
-        "text": "Администратор, курьер и повар работают со смартфона: приём заказа, адрес на карте, отметка готовности"
+        "title": "«Komanda» tətbiqi",
+        "text": "Administrator, kuryer və aşpaz smartfondan işləyir: sifarişin qəbulu, xəritədə ünvan, hazırlıq qeydi"
       },
       "delivery": {
-        "title": "Öz kuryer işçilərinsiz çatdırılma ərazinizi genişləndirin",
-        "text": "Курьер Яндекс.Доставки вызывается в один тап. Свои курьеры тоже поддерживаются — выбираешь сам"
+        "title": "Öz ştatın olmadan çatdırılma",
+        "text": "Yandex.Delivery kuryeri bir toxunuşla çağırılır. Öz kuryerlərin də dəstəklənir — özün seçirsən"
       },
       "autopilot": {
-        "title": "Hər şey öz-özünə işləyir — dəstək isə həmişə yaxındır",
-        "text": "Меню, цены, зоны, оплату и кассу заводишь сам в СРМ. Нужна помощь — поддержка рядом на каждом шаге"
+        "title": "Proqramçısız quraşdırma",
+        "text": "Menyunu, qiymətləri, zonaları, ödənişi və kassanı CRM-də özün qurursan. Kömək lazımdırsa — dəstək hər addımda yanındadır"
       }
     }
   },
@@ -146,15 +146,15 @@
       "Telegram-da 1 bot",
       "Menyuda 200-ə qədər mövqe"
     ],
-    "switchNote": "Пользуешься другим платным сервисом приёма заказов или доставки? Первые 6 месяцев — вдвое дешевле: напиши до оплаты, подтвердим и зафиксируем скидку",
-    "switchCta": "Получить скидку 50%"
+    "switchNote": "Sifariş qəbulu və ya çatdırılma üçün başqa ödənişli xidmətdən istifadə edirsən? İlk 6 ay — iki dəfə ucuz: ödənişdən əvvəl yaz, təsdiqləyib endirimi sabitləyəcəyik",
+    "switchCta": "50% endirim al"
   },
   "faq": {
     "label": "Tez-tez verilən suallar",
     "title": "Suallarınız qaldı?",
     "notFound": "Cavab tapmadınız?",
     "askSupport": "Dəstəkdən soruşun",
-    "moreCta": "Все вопросы",
+    "moreCta": "Bütün suallar",
     "items": [
       {
         "question": "Hər nöqtə üçün ayrı bot lazımdırmı?",
@@ -278,29 +278,29 @@
     "note": "Botunun keçidini və QR-kodunu kabinetdə alırsan və özün yerləşdirirsən"
   },
   "solutions": {
-    "label": "Решения",
-    "title": "Если хочешь разобраться подробнее",
-    "subtitle": "Отдельные страницы по темам, которые чаще всего спрашивают",
+    "label": "Həllər",
+    "title": "Daha ətraflı anlamaq istəyirsənsə",
+    "subtitle": "Ən çox soruşulan mövzular üzrə ayrıca səhifələr",
     "items": {
       "features": {
-        "title": "Все возможности",
-        "text": "Что умеет Нямбот целиком: лояльность, конструктор блюд, доставка, команда, аналитика"
+        "title": "Bütün imkanlar",
+        "text": "Nyambot tam olaraq nələri bacarır: loyallıq, yemək konstruktoru, çatdırılma, komanda, analitika"
       },
       "network": {
-        "title": "Сеть и франшиза",
-        "text": "Точки, роли, города и счета в одном кабинете. Что видит франчайзи, а что головной офис"
+        "title": "Şəbəkə və françayzinq",
+        "text": "Nöqtələr, rollar, şəhərlər və hesablar bir kabinetdə. Françayzi nəyi görür, baş ofis isə nəyi"
       },
       "ownChannels": {
-        "title": "Сайт или приложение",
-        "text": "Чем канал в мессенджере отличается от сайта и своего приложения и зачем он рядом с ними"
+        "title": "Sayt və ya tətbiq",
+        "text": "Messencerdəki kanal saytdan və öz tətbiqindən nə ilə fərqlənir və nə üçün onların yanında lazımdır"
       },
       "security": {
-        "title": "Безопасность данных",
-        "text": "152-ФЗ, хранение в России, кому передаются данные гостя и кому — никогда"
+        "title": "Məlumatların təhlükəsizliyi",
+        "text": "152-FZ, Rusiyada saxlama, qonağın məlumatları kimə verilir və kimə — heç vaxt"
       },
       "faq": {
-        "title": "Все вопросы",
-        "text": "Двадцать два вопроса про кассу, оплату, доставку, пробный период и скидку 50%"
+        "title": "Bütün suallar",
+        "text": "Kassa, ödəniş, çatdırılma, sınaq dövrü və 50% endirim barədə iyirmi iki sual"
       }
     }
   }

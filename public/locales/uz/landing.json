@@ -1,7 +1,7 @@
 {
   "nav": {
     "features": "Imkoniyatlar",
-    "solutions": "Решения",
+    "solutions": "Yechimlar",
     "pricing": "Tariflar",
     "faq": "Savollar",
     "docs": "Hujjatlar",
@@ -23,7 +23,7 @@
     "title": "Bu yerda nima boshqacha",
     "subtitle": "Sakkizta farq — va qilishingiz shart boʻlmagan ishlar",
     "notPrefix": "Shart emas",
-    "notNeeded": "менять кассу · заводить бота на каждую точку · просить гостя установить приложение · заполнять анкеты и ждать менеджера",
+    "notNeeded": "kassani almashtirish · har bir nuqtaga alohida bot ochish · mehmondan ilova o‘rnatishni so‘rash · anketa to‘ldirib, menejerni kutish",
     "items": {
       "network": {
         "title": "Butun tarmoqqa bitta bot",
@@ -50,34 +50,34 @@
     "pricingCta": "Tariflarni koʻrish"
   },
   "benefits": {
-    "label": "Возможности",
+    "label": "Imkoniyatlar",
     "title": "O'sha mehmonlardan ko'proq daromad ol",
-    "subtitle": "Шесть вещей, которые делают выручку — остальное на странице возможностей",
-    "moreCta": "Все возможности",
+    "subtitle": "Tushum keltiradigan oltita narsa — qolgani imkoniyatlar sahifasida",
+    "moreCta": "Barcha imkoniyatlar",
     "items": {
       "retention": {
-        "title": "Takroriy buyurtma — o'z kanalingizga, agregatorga emas",
-        "text": "Агрегатор берёт процент с каждого заказа, Нямбот — фиксированную подписку. Гость возвращается в твой канал и остаётся в твоей базе"
+        "title": "Takroriy buyurtmalar komissiyasiz",
+        "text": "Agregator har bir buyurtmadan 25–35% oladi — birinchisidan ham, keyingi hammasidan ham. Nyambot qat’iy obuna oladi va foiz olmaydi. Mehmon sening kanalingga qaytadi va sening bazangda qoladi"
       },
       "growth": {
-        "title": "Bir martalik mehmonlarni doimiylarga aylantiring",
-        "text": "Модификаторы, комбо, акции, баллы и рассылки поднимают чек и возвращают гостя — без ручной работы"
+        "title": "O‘rtacha chek va qaytishlar",
+        "text": "Modifikatorlar, kombo, aksiyalar, ballar va tarqatmalar chekni oshiradi va mehmonni qaytaradi — qo‘l mehnatisiz"
       },
       "constructor": {
-        "title": "Mehmon taomni o'zi yig'adi — oshxona adashib qolmaydi",
-        "text": "Убрать лук, добавить сыр, взять двойную котлету. Состав уходит в чек той же строкой, что печатает касса"
+        "title": "Mehmon taomni o‘ziga moslab yig‘adi",
+        "text": "Piyozni olib tashlash, pishloq qo‘shish, ikki qavat kotlet olish. Tarkib chekka kassa chop etadigan satrning aynan o‘zi bilan tushadi"
       },
       "team": {
-        "title": "Butun jamoangiz bitta ilovada — admin, kuryer va oshxona",
-        "text": "Администратор, курьер и повар работают со смартфона: приём заказа, адрес на карте, отметка готовности"
+        "title": "«Komanda» ilovasi",
+        "text": "Administrator, kuryer va oshpaz smartfondan ishlaydi: buyurtmani qabul qilish, xaritadagi manzil, tayyorlik belgisi"
       },
       "delivery": {
-        "title": "O'z kuryer xodimlarisiz yetkazib berishni kengaytiring",
-        "text": "Курьер Яндекс.Доставки вызывается в один тап. Свои курьеры тоже поддерживаются — выбираешь сам"
+        "title": "O‘z xodimlarisiz yetkazib berish",
+        "text": "Yandex.Delivery kuryeri bir teginishda chaqiriladi. O‘z kuryerlaring ham qo‘llab-quvvatlanadi — o‘zing tanlaysan"
       },
       "autopilot": {
-        "title": "Hamma narsa o'zi ishlaydi — va yordam doim yaqinda",
-        "text": "Меню, цены, зоны, оплату и кассу заводишь сам в СРМ. Нужна помощь — поддержка рядом на каждом шаге"
+        "title": "Dasturchilarsiz sozlash",
+        "text": "Menyu, narxlar, zonalar, to‘lov va kassani CRM’da o‘zing sozlaysan. Yordam kerakmi — har qadamda yordam xizmati yoningda"
       }
     }
   },
@@ -129,7 +129,7 @@
     "includedItems": [
       "Mini-ilova",
       "CRM",
-      "«Команда» ilovasi",
+      "«Komanda» ilovasi",
       "Sodiqlik va aksiyalar",
       "Barcha integratsiyalar",
       "Qo'llab-quvvatlash"
@@ -146,15 +146,15 @@
       "Telegramda 1 bot",
       "Menyuda 200 tagacha pozitsiya"
     ],
-    "switchNote": "Пользуешься другим платным сервисом приёма заказов или доставки? Первые 6 месяцев — вдвое дешевле: напиши до оплаты, подтвердим и зафиксируем скидку",
-    "switchCta": "Получить скидку 50%"
+    "switchNote": "Buyurtma qabul qilish yoki yetkazib berishning boshqa pullik xizmatidan foydalanyapsanmi? Dastlabki 6 oy — ikki baravar arzon: to‘lovdan oldin yoz, tasdiqlaymiz va chegirmani qayd etamiz",
+    "switchCta": "50% chegirma olish"
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar",
     "title": "Savollar qoldimi?",
     "notFound": "Javob topolmadingizmi?",
     "askSupport": "Qo'llab-quvvatlashga so'rang",
-    "moreCta": "Все вопросы",
+    "moreCta": "Barcha savollar",
     "items": [
       {
         "question": "Har bir nuqta uchun alohida bot kerakmi?",
@@ -278,29 +278,29 @@
     "note": "Botingning havolasi va QR-kodini kabinetda olasan va oʻzing joylashtirasan"
   },
   "solutions": {
-    "label": "Решения",
-    "title": "Если хочешь разобраться подробнее",
-    "subtitle": "Отдельные страницы по темам, которые чаще всего спрашивают",
+    "label": "Yechimlar",
+    "title": "Batafsilroq tushunmoqchi bo‘lsang",
+    "subtitle": "Eng ko‘p so‘raladigan mavzular bo‘yicha alohida sahifalar",
     "items": {
       "features": {
-        "title": "Все возможности",
-        "text": "Что умеет Нямбот целиком: лояльность, конструктор блюд, доставка, команда, аналитика"
+        "title": "Barcha imkoniyatlar",
+        "text": "Nyambot nimalarni qila oladi: sodiqlik, taom konstruktori, yetkazib berish, jamoa, tahlil"
       },
       "network": {
-        "title": "Сеть и франшиза",
-        "text": "Точки, роли, города и счета в одном кабинете. Что видит франчайзи, а что головной офис"
+        "title": "Tarmoq va franshiza",
+        "text": "Nuqtalar, rollar, shaharlar va hisoblar bitta kabinetda. Franchayzi nimani ko‘radi, bosh ofis esa nimani"
       },
       "ownChannels": {
-        "title": "Сайт или приложение",
-        "text": "Чем канал в мессенджере отличается от сайта и своего приложения и зачем он рядом с ними"
+        "title": "Sayt yoki ilova",
+        "text": "Messenjerdagi kanal sayt va o‘z ilovangdan nimasi bilan farq qiladi va nega u ular bilan yonma-yon kerak"
       },
       "security": {
-        "title": "Безопасность данных",
-        "text": "152-ФЗ, хранение в России, кому передаются данные гостя и кому — никогда"
+        "title": "Ma’lumotlar xavfsizligi",
+        "text": "152-FZ, Rossiyada saqlash, mehmon ma’lumotlari kimga beriladi va kimga — hech qachon"
       },
       "faq": {
-        "title": "Все вопросы",
-        "text": "Двадцать два вопроса про кассу, оплату, доставку, пробный период и скидку 50%"
+        "title": "Barcha savollar",
+        "text": "Kassa, to‘lov, yetkazib berish, sinov muddati va 50% chegirma haqida yigirma ikkita savol"
       }
     }
   }
