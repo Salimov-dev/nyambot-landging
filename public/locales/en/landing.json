@@ -16,7 +16,7 @@
     "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location",
     "cta": "Start free",
     "ctaSecondary": "See demo",
-    "trial": "90 days free · only an email needed · no card, no sales call"
+    "trial": "30 days free · only an email needed · no card, no sales call"
   },
   "killer": {
     "label": "Key points",
@@ -94,7 +94,7 @@
     "title": "Your whole chain in one dashboard",
     "description": "Menu, orders, analytics, marketing and a shared guest base for the whole chain — in one place. You set it all up yourself, no developers",
     "ownDev": "Our own product, not a builder — we answer for features and reliability",
-    "cta": "Open CRM — 90 days free",
+    "cta": "Open CRM — 30 days free",
     "ctaHint": "Full access · Full support · No card required",
     "features": {
       "dashboard": "Revenue dashboard",
@@ -116,13 +116,13 @@
     "maxCta": "Open in MAX",
     "crmHint": "Want to evaluate CRM from the owner's side?",
     "crmCta": "Register in CRM",
-    "crmTrial": "90 days free · Full access · Full support · No card"
+    "crmTrial": "30 days free · Full access · Full support · No card"
   },
   "pricing": {
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",
     "subtitle": "Fixed payment. One plan — all features without functional limits",
-    "trialNote": "90 days of full access after signup — all features and support, nothing stripped out and no card required. The trial runs on standard terms: 1 location and 2 bots. You choose and pay for a plan when the trial ends",
+    "trialNote": "30 days of full access after signup — all features and support, nothing stripped out and no card required. The trial runs on standard terms: 1 location and 2 bots. You choose and pay for a plan when the trial ends",
     "popular": "Best value",
     "perMonth": "per month",
     "totalBilled": "Billed {{total}}",
@@ -146,7 +146,7 @@
     "customTitle": "Running a chain?",
     "customSubtitle": "From 2 locations — a custom plan for your scale. The trial runs on standard terms too: 1 location and 2 bots — for a chain we agree terms separately. You can try it without writing to us: sign-up is open to everyone",
     "emailCta": "Email",
-    "freeTrial": "0 ₽ · first 90 days",
+    "freeTrial": "0 ₽ · first 30 days",
     "connectTitle": "You connect to the system",
     "connectItems": [
       "1 venue",
@@ -204,11 +204,11 @@
   },
   "cta": {
     "title": "Start taking orders in your own channel",
-    "subtitle": "90 days free. Full features, full support. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
+    "subtitle": "30 days free. Full features, full support. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
     "button": "Start free",
     "docs": "Read documentation",
     "hint": "Only an email needed · No card required · 1 location and 2 bots to start",
-    "trialFeatures": ["90 days free", "Full access", "No card required"]
+    "trialFeatures": ["30 days free", "Full access", "No card required"]
   },
   "footer": {
     "description": "One bot for the whole chain: orders, delivery and loyalty in MAX and Telegram. Your own guest base and analytics",

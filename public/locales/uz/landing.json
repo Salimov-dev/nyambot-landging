@@ -16,7 +16,7 @@
     "subtitle": "Bitta nuqta va butun tarmoq uchun: kafelar, restoranlar, nonvoyxonalar, yetkazib berish. Mehmonlar bazasi, buyurtmalar tarixi va ballar ikkala messenjerda umumiy, menyu, narxlar va yetkazib berish hududi esa har bir nuqtaning oʻziniki",
     "cta": "Bepul boshlash",
     "ctaSecondary": "Demoni ko'rish",
-    "trial": "90 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz"
+    "trial": "30 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz"
   },
   "killer": {
     "label": "Asosiysi",
@@ -94,7 +94,7 @@
     "title": "Butun tarmoq bitta kabinetda",
     "description": "Menyu, buyurtmalar, tahlil, marketing va butun tarmoqning umumiy mehmonlar bazasi — bir joyda. Hammasini o'zingiz sozlaysiz, programmistlarsiz",
     "ownDev": "O'z ishlanmamiz, konstruktor emas — funksiyalar va ishonchlilik uchun javob beramiz",
-    "cta": "CRM ni ochish — 90 kun bepul",
+    "cta": "CRM ni ochish — 30 kun bepul",
     "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
     "features": {
       "dashboard": "Daromad dashboardi",
@@ -116,13 +116,13 @@
     "maxCta": "MAX'da ochish",
     "crmHint": "CRM'ni egasi tomonidan baholamoqchimisiz?",
     "crmCta": "CRM'ga ro'yxatdan o'tish",
-    "crmTrial": "90 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas"
+    "crmTrial": "30 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas"
   },
   "pricing": {
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
     "subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
-    "trialNote": "Ro'yxatdan o'tgach 90 kun to'liq kirish — barcha funksiyalar va qo'llab-quvvatlash, cheklangan funksiyalarsiz va kartasiz. Sinov muddati standart shartlarda: 1 savdo nuqtasi va 2 bot. Tarifni sinov muddati tugagach tanlaysan va to'laysan",
+    "trialNote": "Ro'yxatdan o'tgach 30 kun to'liq kirish — barcha funksiyalar va qo'llab-quvvatlash, cheklangan funksiyalarsiz va kartasiz. Sinov muddati standart shartlarda: 1 savdo nuqtasi va 2 bot. Tarifni sinov muddati tugagach tanlaysan va to'laysan",
     "popular": "Foydali",
     "perMonth": "oyiga",
     "totalBilled": "{{total}} hisobdan chiqariladi",
@@ -146,7 +146,7 @@
     "customTitle": "Tarmog'ing bormi?",
     "customSubtitle": "2 ta savdo nuqtasidan — miqyosingizga mos individual tarif. Sinov muddati ham standart shartlarda: 1 nuqta va 2 bot — tarmoq uchun shartlarni alohida muhokama qilamiz. Xat yozmasdan ham sinab koʻrish mumkin: roʻyxatdan oʻtish hammaga ochiq",
     "emailCta": "Pochta",
-    "freeTrial": "0 ₽ · birinchi 90 kun",
+    "freeTrial": "0 ₽ · birinchi 30 kun",
     "connectTitle": "Tizimga ulaysan",
     "connectItems": [
       "1 savdo nuqtasi",
@@ -204,11 +204,11 @@
   },
   "cta": {
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
-    "subtitle": "90 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
+    "subtitle": "30 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
     "button": "Bepul boshlash",
     "docs": "Hujjatlarni o'qish",
     "hint": "Faqat pochta kerak · Kartasiz · Boshida 1 nuqta va 2 bot",
-    "trialFeatures": ["90 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
+    "trialFeatures": ["30 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
     "description": "Butun tarmoq uchun bitta bot: MAX va Telegram'da buyurtmalar, yetkazib berish va sodiqlik. O'z mehmonlar bazangiz va tahlilingiz",

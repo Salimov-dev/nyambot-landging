@@ -16,7 +16,7 @@
     "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
     "cta": "Pulsuz başla",
     "ctaSecondary": "Demoya bax",
-    "trial": "90 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
+    "trial": "30 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
   },
   "killer": {
     "label": "Əsas məqamlar",
@@ -94,7 +94,7 @@
     "title": "Bütün şəbəkə bir kabinetdə",
     "description": "Menyu, sifarişlər, analitika, marketinq və bütün şəbəkənin ümumi qonaq bazası — bir yerdə. Hər şeyi özünüz qurursunuz, proqramçı olmadan",
     "ownDev": "Öz işləməmiz, konstruktor deyil — funksiyalara və etibarlılığa cavabdehik",
-    "cta": "CRM açmaq — 90 gün pulsuz",
+    "cta": "CRM açmaq — 30 gün pulsuz",
     "ctaHint": "Tam giriş · Tam dəstək · Kart tələb olunmur",
     "features": {
       "dashboard": "Gəlir dashboardu",
@@ -116,13 +116,13 @@
     "maxCta": "MAX-da açın",
     "crmHint": "CRM-ni sahibin tərəfindən qiymətləndirmək istəyirsiniz?",
     "crmCta": "CRM-də qeydiyyatdan keçin",
-    "crmTrial": "90 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil"
+    "crmTrial": "30 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil"
   },
   "pricing": {
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
     "subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
-    "trialNote": "Qeydiyyatdan sonra 90 gün tam giriş — bütün funksiyalar və dəstək, məhdudlaşdırılmış funksiyalar olmadan və kart bağlamadan. Sınaq dövrü standart şərtlərlə işləyir: 1 ticarət nöqtəsi və 2 bot. Tarifi sınaq dövrü bitəndə seçib ödəyirsən",
+    "trialNote": "Qeydiyyatdan sonra 30 gün tam giriş — bütün funksiyalar və dəstək, məhdudlaşdırılmış funksiyalar olmadan və kart bağlamadan. Sınaq dövrü standart şərtlərlə işləyir: 1 ticarət nöqtəsi və 2 bot. Tarifi sınaq dövrü bitəndə seçib ödəyirsən",
     "popular": "Sərfəli",
     "perMonth": "aylıq",
     "totalBilled": "{{total}} silinir",
@@ -146,7 +146,7 @@
     "customTitle": "Şəbəkən var?",
     "customSubtitle": "2 ticarət nöqtəsindən — miqyasına uyğun fərdi tarif. Sınaq dövrü də standart şərtlərlə: 1 nöqtə və 2 bot — şəbəkə üçün şərtləri ayrıca müzakirə edirik. Məktub yazmadan da yoxlaya bilərsən: qeydiyyat hamıya açıqdır",
     "emailCta": "Poçt",
-    "freeTrial": "0 ₽ · ilk 90 gün",
+    "freeTrial": "0 ₽ · ilk 30 gün",
     "connectTitle": "Sistemə qoşursan",
     "connectItems": [
       "1 ticarət nöqtəsi",
@@ -204,11 +204,11 @@
   },
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
-    "subtitle": "90 gün ödənişsiz. Tam funksionallıq, tam dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
+    "subtitle": "30 gün ödənişsiz. Tam funksionallıq, tam dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
     "button": "Pulsuz başla",
     "docs": "Sənədləri oxuyun",
     "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Başlanğıcda 1 nöqtə və 2 bot",
-    "trialFeatures": ["90 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
+    "trialFeatures": ["30 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
     "description": "Bütün şəbəkə üçün bir bot: MAX və Telegram-da sifarişlər, çatdırılma və loyallıq. Öz qonaq bazanız və analitikanız",
