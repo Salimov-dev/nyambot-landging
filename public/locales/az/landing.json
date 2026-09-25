@@ -73,11 +73,11 @@
       },
       "guestChat": {
         "title": "Qonaq soruşur — bot cavab verir",
-        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?», «Çatdırılma neçəyədir?» — sənin botunda belə suallara Sİ cavab verir. O, nöqtənin məlumatlarına və qonağın öz sifarişlərinə baxır. Qonağa insan lazımdırsa və ya söhbət pul, şikayət, allergiya barədədirsə, bot lazımi nöqtənin administratorunu çağırır və o, birbaşa messencerdə cavab verir"
+        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — sənin botunda belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot nöqtənin administratorunu çağırır"
       },
       "teamAlerts": {
         "title": "Nasazlıq — ilk sən bilirsən",
-        "text": "Kassa sifariş qəbul etməyi dayandırıb, bot mesajları almır, geri ödəniş lazımdır, qonaq administratoru çağırır — Nyambot sahibə və idarəçilərə Telegram və ya MAX-da yazır. Günün və həftənin yekunları da ora gəlir. Hər kəs nə alacağını özü seçir; gecə yalnız təcili bildirişlər gəlir. İdarəçi yalnız öz nöqtələrini görür"
+        "text": "Kassa sifariş qəbul etməyi dayandırıb, qonaq administratoru çağırır — Nyambot sahibə və idarəçilərə Telegram və ya MAX-da yazır"
       },
       "delivery": {
         "title": "Öz ştatın olmadan çatdırılma",

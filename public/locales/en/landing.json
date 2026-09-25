@@ -73,11 +73,11 @@
       },
       "guestChat": {
         "title": "The guest asks — the bot answers",
-        "text": "«Where's my order?», «How late are you open?», «How much is delivery?» — AI answers questions like these in your bot. It looks at the location's data and at the guest's own orders. If the guest needs a person, or it's about money, a complaint or an allergy, the bot calls the admin of the right location, who replies right in the messenger"
+        "text": "«Where's my order?», «How late are you open?» — AI answers questions like these in your bot. If the guest needs a person, the bot calls the location's admin"
       },
       "teamAlerts": {
         "title": "Something breaks — you're the first to know",
-        "text": "The POS has stopped accepting orders, the bot isn't receiving messages, a refund is needed, a guest is calling for the admin — Nyambot messages the owner and managers in Telegram or MAX. Daily and weekly summaries go there too. Everyone chooses what to receive; at night only urgent alerts come through. A manager sees only their own locations"
+        "text": "The POS has stopped accepting orders, a guest is calling for the admin — Nyambot messages the owner and managers in Telegram or MAX"
       },
       "delivery": {
         "title": "Delivery without your own couriers",
