@@ -73,11 +73,11 @@
       },
       "guestChat": {
         "title": "Mehmon soʻraydi — bot javob beradi",
-        "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — sening botingda bunday savollarga SI javob beradi. Agar mehmonga odam kerak boʻlsa, bot nuqta administratorini chaqiradi"
+        "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — bunday savollarga SI javob beradi. Agar mehmonga odam kerak boʻlsa, bot smenadagi administratorni chaqiradi"
       },
       "teamAlerts": {
         "title": "Nosozlik — birinchi boʻlib sen bilasan",
-        "text": "Kassa buyurtma qabul qilishni toʻxtatdi, mehmon administratorni chaqiryapti — Nyambot egasiga va boshqaruvchilarga Telegram yoki MAXda yozadi"
+        "text": "Kassa buyurtma qabul qilmayapti, mehmon odam chaqiryapti — Nyambot smenadagi administratorga va boshqaruvchilarga Telegram yoki MAXda yozadi"
       },
       "delivery": {
         "title": "O‘z xodimlarisiz yetkazib berish",
@@ -190,7 +190,7 @@
       },
       {
         "question": "Mehmon muassasaga yoza oladimi?",
-        "answer": "Ha, agar nuqtada mehmonlar bilan chat yoqilgan boʻlsa. Mehmon botga yozadi, oddiy savollarga SI, qolganlariga esa nuqta administratori javob beradi"
+        "answer": "Ha, agar nuqtada mehmonlar bilan chat yoqilgan boʻlsa. Mehmon botga yozadi, oddiy savollarga SI, qolganlariga esa Telegram yoki MAXdan smenadagi administrator javob beradi"
       },
       {
         "question": "SI ortiqcha gapirib qoʻymaydimi?",

@@ -73,11 +73,11 @@
       },
       "guestChat": {
         "title": "Qonaq soruşur — bot cavab verir",
-        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — sənin botunda belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot nöqtənin administratorunu çağırır"
+        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot növbədəki administratoru çağırır"
       },
       "teamAlerts": {
         "title": "Nasazlıq — ilk sən bilirsən",
-        "text": "Kassa sifariş qəbul etməyi dayandırıb, qonaq administratoru çağırır — Nyambot sahibə və idarəçilərə Telegram və ya MAX-da yazır"
+        "text": "Kassa sifariş qəbul etmir, qonaq insan çağırır — Nyambot növbədəki administratora və idarəçilərə Telegram və ya MAX-da yazır"
       },
       "delivery": {
         "title": "Öz ştatın olmadan çatdırılma",
@@ -190,7 +190,7 @@
       },
       {
         "question": "Qonaq müəssisəyə yaza bilərmi?",
-        "answer": "Bəli, əgər nöqtədə qonaqlarla çat qoşulubsa. Qonaq bota yazır, adi suallara Sİ, qalanlarına isə nöqtənin administratoru cavab verir"
+        "answer": "Bəli, əgər nöqtədə qonaqlarla çat qoşulubsa. Qonaq bota yazır, adi suallara Sİ, qalanlarına isə Telegram və ya MAX-dan növbədəki administrator cavab verir"
       },
       {
         "question": "Sİ artıq söz deməz ki?",

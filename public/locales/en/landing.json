@@ -73,11 +73,11 @@
       },
       "guestChat": {
         "title": "The guest asks — the bot answers",
-        "text": "«Where's my order?», «How late are you open?» — AI answers questions like these in your bot. If the guest needs a person, the bot calls the location's admin"
+        "text": "«Where's my order?», «How late are you open?» — AI answers questions like these. If the guest needs a person, the bot calls the admin on shift"
       },
       "teamAlerts": {
         "title": "Something breaks — you're the first to know",
-        "text": "The POS has stopped accepting orders, a guest is calling for the admin — Nyambot messages the owner and managers in Telegram or MAX"
+        "text": "The POS isn't accepting orders, a guest is calling for a person — Nyambot messages the admin on shift and managers in Telegram or MAX"
       },
       "delivery": {
         "title": "Delivery without your own couriers",
@@ -190,7 +190,7 @@
       },
       {
         "question": "Can a guest message the venue?",
-        "answer": "Yes, if guest chat is turned on for the location. The guest writes to the bot: AI answers the usual questions, and the location's admin handles the rest"
+        "answer": "Yes, if guest chat is turned on for the location. The guest writes to the bot: AI answers the usual questions, and the admin on shift handles the rest from Telegram or MAX"
       },
       {
         "question": "Won't the AI say too much?",
