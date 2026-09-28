@@ -23,6 +23,7 @@ const SOLUTIONS = [
   { id: "features", href: LINKS.pages.features },
   { id: "iiko", href: LINKS.pages.iiko },
   { id: "rkeeper", href: LINKS.pages.rkeeper },
+  { id: "integrations", href: LINKS.pages.integrations },
   { id: "network", href: LINKS.pages.network },
   { id: "ownChannels", href: LINKS.pages.ownChannels },
   { id: "security", href: LINKS.pages.security },

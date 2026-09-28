@@ -94,6 +94,12 @@ export function Footer() {
               <Link href={LINKS.pages.rkeeper} className={styles.footerLink}>
                 {t("footer.pageRkeeper")}
               </Link>
+              <Link
+                href={LINKS.pages.integrations}
+                className={styles.footerLink}
+              >
+                {t("solutions.items.integrations.title")}
+              </Link>
               <Link href={LINKS.pages.messengers} className={styles.footerLink}>
                 {t("footer.pageMessengers")}
               </Link>

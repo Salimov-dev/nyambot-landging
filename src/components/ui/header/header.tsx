@@ -47,6 +47,11 @@ const SOLUTION_LINKS = [
     href: LINKS.pages.rkeeper,
   },
   {
+    id: "integrations",
+    labelKey: "solutions.items.integrations.title",
+    href: LINKS.pages.integrations,
+  },
+  {
     id: "network",
     labelKey: "solutions.items.network.title",
     href: LINKS.pages.network,

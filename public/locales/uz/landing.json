@@ -271,7 +271,8 @@
       "yandexDelivery": "Yandex.Delivery"
     },
     "moreIiko": "iiko haqida batafsil",
-    "moreRkeeper": "R-Keeper haqida batafsil"
+    "moreRkeeper": "R-Keeper haqida batafsil",
+    "moreAll": "Barcha integratsiyalar"
   },
   "forWhom": {
     "title": "Har qanday ovqatlanish formati uchun",
@@ -334,6 +335,10 @@
       "rkeeper": {
         "title": "R-Keeper bilan integratsiya",
         "text": "Menyu va stop-listlar kassadan olinadi, buyurtma R-Keeper’ga tushadi, mehmonda holat o‘zi yangilanadi"
+      },
+      "integrations": {
+        "title": "Barcha integratsiyalar",
+        "text": "Kassa, to‘lov va yetkazib berish: iiko, R-Keeper, YuKassa, Yandex.Pay, Yandex.Delivery"
       },
       "network": {
         "title": "Tarmoq va franshiza",

@@ -271,7 +271,8 @@
       "yandexDelivery": "Yandex.Delivery"
     },
     "moreIiko": "More about iiko",
-    "moreRkeeper": "More about R-Keeper"
+    "moreRkeeper": "More about R-Keeper",
+    "moreAll": "All integrations"
   },
   "forWhom": {
     "title": "For any food service format",
@@ -334,6 +335,10 @@
       "rkeeper": {
         "title": "R-Keeper integration",
         "text": "Menu and stop lists come from the POS, orders go to R-Keeper, the guest sees status updates"
+      },
+      "integrations": {
+        "title": "All integrations",
+        "text": "POS, payments and delivery: iiko, R-Keeper, YooKassa, Yandex.Pay, Yandex.Delivery"
       },
       "network": {
         "title": "Chains and franchises",

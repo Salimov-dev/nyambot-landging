@@ -109,6 +109,9 @@ export function IntegrationsSection() {
           <Link href={LINKS.pages.rkeeper} className={styles.moreLink}>
             {t("integrations.moreRkeeper")}
           </Link>
+          <Link href={LINKS.pages.integrations} className={styles.moreLink}>
+            {t("integrations.moreAll")}
+          </Link>
         </motion.div>
 
         <motion.div

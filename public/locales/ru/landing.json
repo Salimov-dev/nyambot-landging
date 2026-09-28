@@ -276,7 +276,8 @@
       "yandexDelivery": "Яндекс.Доставка"
     },
     "moreIiko": "Подробнее об iiko",
-    "moreRkeeper": "Подробнее об R-Keeper"
+    "moreRkeeper": "Подробнее об R-Keeper",
+    "moreAll": "Все интеграции"
   },
   "forWhom": {
     "title": "Для любого формата общепита",
@@ -339,6 +340,10 @@
       "rkeeper": {
         "title": "Интеграция с R-Keeper",
         "text": "Меню и стоп-листы из кассы, заказ уходит в R-Keeper, статус у гостя меняется сам"
+      },
+      "integrations": {
+        "title": "Все интеграции",
+        "text": "Касса, оплата и доставка: iiko, R-Keeper, ЮKassa, Яндекс.Пэй, Яндекс.Доставка"
       },
       "network": {
         "title": "Сеть и франшиза",

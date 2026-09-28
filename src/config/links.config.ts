@@ -21,6 +21,8 @@ export const LINKS = {
   pages: {
     iiko: "/iiko",
     rkeeper: "/rkeeper",
+    /** Все интеграции разом: кассы, оплата, доставка */
+    integrations: "/integracii",
     messengers: "/zakazy-v-max-i-telegram",
     features: "/vozmozhnosti",
     faq: "/voprosy",

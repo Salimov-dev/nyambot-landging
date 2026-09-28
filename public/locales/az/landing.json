@@ -271,7 +271,8 @@
       "yandexDelivery": "Yandex.Dostavka"
     },
     "moreIiko": "iiko haqqında ətraflı",
-    "moreRkeeper": "R-Keeper haqqında ətraflı"
+    "moreRkeeper": "R-Keeper haqqında ətraflı",
+    "moreAll": "Bütün inteqrasiyalar"
   },
   "forWhom": {
     "title": "İstənilən iaşə formatı üçün",
@@ -334,6 +335,10 @@
       "rkeeper": {
         "title": "R-Keeper ilə inteqrasiya",
         "text": "Menyu və stop-listlər kassadan gəlir, sifariş R-Keeper-ə düşür, qonaqda status özü yenilənir"
+      },
+      "integrations": {
+        "title": "Bütün inteqrasiyalar",
+        "text": "Kassa, ödəniş və çatdırılma: iiko, R-Keeper, YuKassa, Yandex.Pay, Yandex.Dostavka"
       },
       "network": {
         "title": "Şəbəkə və françayzinq",
