@@ -102,6 +102,35 @@
   color: var(--accent);
 }
 
+/* Неполный последний ряд растягиваем — пустой ячейки в сетке быть не должно.
+   На десктопе сетка в 6 долей, карточка занимает 2: одна в последнем ряду
+   встаёт во всю ширину, две — пополам. На планшете (2 колонки) во всю ширину
+   встаёт последняя нечётная. */
+@media (min-width: 901px) {
+  .tileGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .tileGrid > * {
+    grid-column: span 2;
+  }
+
+  .tileGrid > :last-child:nth-child(3n + 1) {
+    grid-column: span 6;
+  }
+
+  .tileGrid > :nth-last-child(2):nth-child(3n + 1),
+  .tileGrid > :last-child:nth-child(3n + 2) {
+    grid-column: span 3;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .tileGrid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 900px) {
   .tileGrid {
     grid-template-columns: repeat(2, 1fr);

@@ -205,7 +205,14 @@
   flex-shrink: 0;
 }
 
+/**
+ * Рамку снимаем сами: при гидратации antd сначала отдаёт кнопке базовую серую
+ * рамку, а потом анимацией (`transition: all`) гасит её до прозрачной — на
+ * загрузке кнопка вспыхивала рамкой, будто на неё прыгнул фокус, и сдвигалась
+ * на пиксель. У `.ctaBtn` рамка снята так же.
+ */
 .docsBtn {
+  border: none !important;
   color: var(--text-secondary) !important;
   font-size: 14px !important;
   font-weight: 500 !important;

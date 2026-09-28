@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Button, Flex, Typography } from "antd";
+import { Button, Typography } from "antd";
 import { useLanguage } from "@/hooks/use-language.hook";
 import { theme } from "@/config/theme";
 import styles from "./language-switcher.module.css";
@@ -31,7 +31,10 @@ export function LanguageSwitcher() {
         onClick={() => setIsOpen((v) => !v)}
         aria-label="Выбор языка"
       >
-        <Flex align="center" gap={4}>
+        {/* Раскладка своим классом, а не `Flex` из antd: его стили приезжают
+            после первой отрисовки, и до того обёртка была обычным блоком без
+            отступов — переключатель на загрузке прыгал с 73 до 81 px. */}
+        <span className={styles.content}>
           <Text style={{ fontSize: 14 }}>🌐</Text>
           <Text
             style={{
@@ -54,7 +57,7 @@ export function LanguageSwitcher() {
           >
             ▾
           </Text>
-        </Flex>
+        </span>
       </Button>
 
       {isOpen && (

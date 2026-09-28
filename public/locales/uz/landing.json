@@ -123,7 +123,8 @@
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
     "subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
     "trialNote": "Ro'yxatdan o'tgach 30 kun to'liq kirish — barcha funksiyalar va qo'llab-quvvatlash, cheklangan funksiyalarsiz va kartasiz. Sinov muddati standart shartlarda: 1 savdo nuqtasi va 2 bot. Tarifni sinov muddati tugagach tanlaysan va to'laysan",
-    "popular": "Foydali",
+    "popular": "Optimal",
+    "bestValue": "Foydali",
     "perMonth": "oyiga",
     "totalBilled": "{{total}} hisobdan chiqariladi",
     "months": {
@@ -305,6 +306,14 @@
       "features": {
         "title": "Barcha imkoniyatlar",
         "text": "Nyambot nimalarni qila oladi: sodiqlik, taom konstruktori, yetkazib berish, jamoa, tahlil"
+      },
+      "iiko": {
+        "title": "iiko bilan integratsiya",
+        "text": "Menyu va stop-listlar kassadan olinadi, buyurtma iiko’ga yetkazib berish sifatida tushadi, aksiyalar — iikoCard’dan"
+      },
+      "rkeeper": {
+        "title": "R-Keeper bilan integratsiya",
+        "text": "Menyu va stop-listlar kassadan olinadi, buyurtma R-Keeper’ga tushadi, mehmonda holat o‘zi yangilanadi"
       },
       "network": {
         "title": "Tarmoq va franshiza",

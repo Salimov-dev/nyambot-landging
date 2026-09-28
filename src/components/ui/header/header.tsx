@@ -37,6 +37,16 @@ const SOLUTION_LINKS = [
     href: LINKS.pages.features,
   },
   {
+    id: "iiko",
+    labelKey: "solutions.items.iiko.title",
+    href: LINKS.pages.iiko,
+  },
+  {
+    id: "rkeeper",
+    labelKey: "solutions.items.rkeeper.title",
+    href: LINKS.pages.rkeeper,
+  },
+  {
     id: "network",
     labelKey: "solutions.items.network.title",
     href: LINKS.pages.network,

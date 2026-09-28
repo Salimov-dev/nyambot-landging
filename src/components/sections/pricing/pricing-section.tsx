@@ -97,10 +97,16 @@ export function PricingSection({ plans }: PricingSectionProps) {
                 transition={{ duration: 0.55, delay: i * 0.1 }}
                 style={{ height: "100%" }}
               >
-                {plan.isPopular ? (
+                {plan.isPopular || plan.isBestValue ? (
                   <Badge.Ribbon
-                    text={t("pricing.popular")}
-                    color={theme.colors.accent}
+                    text={t(
+                      plan.isPopular ? "pricing.popular" : "pricing.bestValue",
+                    )}
+                    color={
+                      plan.isPopular
+                        ? theme.colors.accent
+                        : theme.colors.success
+                    }
                     className={styles.popularBadge}
                   >
                     <PricingCard plan={plan} t={t} />

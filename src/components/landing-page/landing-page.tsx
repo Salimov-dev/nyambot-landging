@@ -95,7 +95,14 @@ export function LandingPage({ content }: IProps) {
             const Icon = ICONS[block.icon];
 
             return (
-              <section key={block.title} className={styles.block}>
+              <section
+                key={block.title}
+                className={
+                  block.wide
+                    ? `${styles.block} ${styles.blockWide}`
+                    : styles.block
+                }
+              >
                 <span className={styles.blockIcon}>
                   <Icon size={20} />
                 </span>

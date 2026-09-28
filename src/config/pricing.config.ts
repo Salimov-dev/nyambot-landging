@@ -15,6 +15,12 @@ import type { PricingPlan } from "@/types/landing.types";
  * Меняются тарифы в СРМ — эти числа правятся здесь тем же заходом, иначе
  * лендинг обещает одну цену, а СРМ выставляет другую.
  *
+ * Две ленты: «Оптимально» на 6 месяцах — новичку страшно платить за год
+ * вперёд, а полгода со скидкой уже не пугают; «Выгодно» на 12 месяцах —
+ * там правда самая низкая цена. Раньше «Выгодно» стояло на 6 месяцах, при
+ * том что год дешевле, — надпись спорила с ценой рядом (решение Руслана
+ * 28.09.2026).
+ *
  * Состав тарифа (1 ТТ, 1 бот MAX, 1 бот Telegram, до 200 позиций меню) живёт
  * текстом в `pricing.connectItems` локали — там же, где его читает гость.
  */
@@ -26,6 +32,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     pricePerMonth: 4900,
     discountPercent: 0,
     isPopular: false,
+    isBestValue: false,
   },
   {
     code: "license-3-months",
@@ -34,6 +41,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     pricePerMonth: 4400,
     discountPercent: 10,
     isPopular: false,
+    isBestValue: false,
   },
   {
     code: "license-6-months",
@@ -42,6 +50,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     pricePerMonth: 4150,
     discountPercent: 15,
     isPopular: true,
+    isBestValue: false,
   },
   {
     code: "license-12-months",
@@ -50,5 +59,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     pricePerMonth: 3675,
     discountPercent: 25,
     isPopular: false,
+    isBestValue: true,
   },
 ];

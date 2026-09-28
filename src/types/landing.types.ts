@@ -4,7 +4,10 @@ export interface PricingPlan {
   priceRub: number;
   pricePerMonth: number;
   discountPercent: number;
+  /** Оранжевая лента «Оптимально» и подсветка карточки. */
   isPopular: boolean;
+  /** Зелёная лента «Выгодно» — самая низкая цена за месяц. */
+  isBestValue: boolean;
 }
 
 export interface FeatureItem {

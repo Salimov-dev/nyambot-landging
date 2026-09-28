@@ -123,7 +123,8 @@
     "title": "Transparent prices with no hidden fees",
     "subtitle": "Fixed payment. One plan — all features without functional limits",
     "trialNote": "30 days of full access after signup — all features and support, nothing stripped out and no card required. The trial runs on standard terms: 1 location and 2 bots. You choose and pay for a plan when the trial ends",
-    "popular": "Best value",
+    "popular": "Best balance",
+    "bestValue": "Best value",
     "perMonth": "per month",
     "totalBilled": "Billed {{total}}",
     "months": {
@@ -305,6 +306,14 @@
       "features": {
         "title": "All features",
         "text": "Everything Nyambot can do: loyalty, dish builder, delivery, team, analytics"
+      },
+      "iiko": {
+        "title": "iiko integration",
+        "text": "Menu and stop lists come from the POS, orders go to iiko as delivery, promos from iikoCard"
+      },
+      "rkeeper": {
+        "title": "R-Keeper integration",
+        "text": "Menu and stop lists come from the POS, orders go to R-Keeper, the guest sees status updates"
       },
       "network": {
         "title": "Chains and franchises",

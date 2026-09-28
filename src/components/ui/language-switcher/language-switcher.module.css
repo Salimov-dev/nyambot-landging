@@ -9,10 +9,19 @@
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: var(--radius-sm) !important;
-  height: auto !important;
+  /* Высота числом, а не auto: до приезда стилей antd у кнопки другая высота
+     строки, и переключатель на загрузке менял высоту на пиксель */
+  box-sizing: border-box !important;
+  height: 38px !important;
   transition:
     background 0.2s ease,
     border-color 0.2s ease !important;
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .trigger:hover {
