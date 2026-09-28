@@ -18,12 +18,32 @@
     "ctaSecondary": "Demoni ko'rish",
     "trial": "30 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz"
   },
+  "freeReview": {
+    "title": "Muassasangizni bepul tahlil qilib, botlarda nima boʻlishini koʻrsatamiz",
+    "items": [
+      {
+        "title": "Menyu va rasmlar",
+        "text": "saytdan yoki kassadan koʻchiramiz"
+      },
+      {
+        "title": "Yetkazib berish va aksiyalar",
+        "text": "hududlar, shartlar, biznes-lanchlar"
+      },
+      {
+        "title": "Kassa va toʻlov",
+        "text": "iiko, R‑Keeper va toʻlovni ulaymiz"
+      }
+    ],
+    "guarantee": "Ishga tushirishdan oldin barcha sozlamalarni avtomatik tekshiramiz. Mehmonlarni faqat tekshiruvdan keyin kiritamiz.",
+    "note": "Bir ish kuni ichida javob beramiz. Qoʻngʻiroqlarsiz va majburiyatlarsiz.",
+    "button": "Bepul tahlil olish"
+  },
   "killer": {
     "label": "Asosiysi",
     "title": "Bu yerda nima boshqacha",
     "subtitle": "Sakkizta farq — va qilishingiz shart boʻlmagan ishlar",
     "notPrefix": "Shart emas",
-    "notNeeded": "kassani almashtirish · har bir nuqtaga alohida bot ochish · mehmondan ilova o‘rnatishni so‘rash · anketa to‘ldirib, menejerni kutish",
+    "notNeeded": "kassani almashtirish · har bir nuqtaga alohida bot ochish · mehmondan ilova o‘rnatishni so‘rash · joriy etish uchun pul toʻlash",
     "items": {
       "network": {
         "title": "Butun tarmoqqa bitta bot",
@@ -84,15 +104,15 @@
         "text": "Yandex.Delivery kuryeri bir teginishda chaqiriladi. O‘z kuryerlaring ham qo‘llab-quvvatlanadi — o‘zing tanlaysan"
       },
       "autopilot": {
-        "title": "Dasturchilarsiz sozlash",
-        "text": "Menyu, narxlar, zonalar, to‘lov va kassani CRM’da o‘zing sozlaysan. Yordam kerakmi — har qadamda yordam xizmati yoningda"
+        "title": "Sen uchun ishga tushiramiz",
+        "text": "Menyu, hududlar, toʻlov va kassani oʻzimiz sozlaymiz. Keyin CRMda oʻzing yuritasan, yordam doim yonida."
       }
     }
   },
   "crmDemo": {
     "tag": "O'z ishlab chiqishimiz CRM",
     "title": "Butun tarmoq bitta kabinetda",
-    "description": "Menyu, buyurtmalar, tahlil, marketing va butun tarmoqning umumiy mehmonlar bazasi — bir joyda. Hammasini o'zingiz sozlaysiz, programmistlarsiz",
+    "description": "Menyu, buyurtmalar, tahlil, marketing va butun tarmoqning umumiy mehmonlar bazasi — bir joyda. Ishga tushirishni biz qilamiz, keyin oʻzing programmistlarsiz yuritasan.",
     "ownDev": "O'z ishlanmamiz, konstruktor emas — funksiyalar va ishonchlilik uchun javob beramiz",
     "cta": "CRM ni ochish — 30 kun bepul",
     "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
@@ -186,8 +206,8 @@
         "answer": "Yoʻq. Nyambot kassani almashtirmaydi va uni talab qilmaydi. iiko yoki R-Keeper boʻlsa, integratsiya ulanadi va menyu, stop-roʻyxatlar hamda buyurtmalar avtomatik sinxronlanadi. Kassa boshqa yoki umuman yoʻq boʻlsa, Nyambot menyu, modifikatorlar, sodiqlik va buyurtmalarni oʻz CRMida mustaqil yuritadi. Keyinroq kassani ulasangiz — maʼlumotlar joyida qoladi"
       },
       {
-        "question": "Menejer bilan gaplashish va joriy etishga buyurtma berish kerakmi?",
-        "answer": "Yoʻq. CRMda roʻyxatdan oʻtish — pochta va parol, anketasiz va telefonsiz. Barcha tariflar va narxlar shu sahifada eʼlon qilingan. Sozlash CRMda mustaqil bajariladi — agar biror narsa tushunarsiz boʻlsa, toʻgʻridan-toʻgʻri CRMda Anya, ichki SI-yordamchi javob beradi: u Nyambot qanday qurilganini biladi va qoʻllab-quvvatlash navbatini kutmasdan sozlash boʻyicha darhol maslahat beradi. Jonli qoʻllab-quvvatlash esa oʻzingiz chaqirganingizda ulanadi"
+        "question": "Hammasini kim sozlaydi?",
+        "answer": "Biz. Muassasani tahlil qilamiz, botlarni ochamiz, menyuni yuklaymiz, kassa va toʻlovni ulaymiz, ishga tushirishni tekshiramiz. Joriy etish bepul, barcha narxlar shu sahifada. Keyin hammasini CRMda oʻzing yuritasan, Anya va yordam xizmati koʻmaklashadi."
       },
       {
         "question": "Mehmon muassasaga yoza oladimi?",
@@ -206,7 +226,7 @@
   "cta": {
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
     "subtitle": "30 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
-    "button": "Bepul boshlash",
+    "button": "Bepul tahlil olish",
     "docs": "Hujjatlarni o'qish",
     "hint": "Faqat pochta kerak · Kartasiz · Boshida 1 nuqta va 2 bot",
     "trialFeatures": ["30 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
@@ -241,7 +261,7 @@
   "integrations": {
     "label": "Integratsiyalar",
     "title": "Integratsiyalar — xohishga koʻra",
-    "subtitle": "Nyambot oʻzi mustaqil ishlaydi. Agar kassa, ekvayring yoki kuryerlik xizmatingiz boʻlsa — ular CRMda ulanadi, dasturchilarsiz va qoʻshimcha ishlarsiz",
+    "subtitle": "Nyambot oʻzi mustaqil ishlaydi. Agar kassa, ekvayring yoki kuryerlik xizmatingiz boʻlsa — ularni oʻzimiz ulaymiz, dasturchilarsiz va qoʻshimcha ishlarsiz",
     "noPos": "Kassa yoʻqmi? Hech narsa ulash shart emas — Nyambot toʻliq mustaqil ishlaydi",
     "items": {
       "iiko": "iiko",

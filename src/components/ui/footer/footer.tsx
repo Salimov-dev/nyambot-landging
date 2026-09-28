@@ -44,6 +44,15 @@ export function Footer() {
                 {t("footer.product")}
               </Text>
               <Link
+                href={LINKS.pages.zapusk}
+                className={styles.footerLink}
+                onClick={() =>
+                  reachGoal("click_trial", { to: "zapusk", from: "footer" })
+                }
+              >
+                {t("freeReview.button")}
+              </Link>
+              <Link
                 href={LINKS.crm}
                 target="_blank"
                 className={styles.footerLink}

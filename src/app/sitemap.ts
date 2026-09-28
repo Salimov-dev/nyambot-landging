@@ -24,6 +24,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    /* Страница заявки не в LANDING_PAGES: у неё свой формат — шаги и форма */
+    {
+      url: `${base}${LINKS.pages.zapusk}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
     ...Object.values(LINKS.legal).map((path) => ({
       url: `${base}${path}`,
       lastModified,

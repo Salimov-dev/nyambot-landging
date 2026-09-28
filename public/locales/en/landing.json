@@ -18,12 +18,32 @@
     "ctaSecondary": "See demo",
     "trial": "30 days free · only an email needed · no card, no sales call"
   },
+  "freeReview": {
+    "title": "We'll review your venue for free and show what your bots will look like",
+    "items": [
+      {
+        "title": "Menu and photos",
+        "text": "moved from your website or POS"
+      },
+      {
+        "title": "Delivery and promotions",
+        "text": "zones, terms, business lunches"
+      },
+      {
+        "title": "POS and payments",
+        "text": "we connect iiko, R‑Keeper and payments"
+      }
+    ],
+    "guarantee": "Before launch we automatically check all settings. Guests come in only after the check.",
+    "note": "We reply within one business day. No calls, no obligations.",
+    "button": "Get a free review"
+  },
   "killer": {
     "label": "Key points",
     "title": "What works differently here",
     "subtitle": "Eight differences — and the things you won't have to do",
     "notPrefix": "No need to",
-    "notNeeded": "switch your POS · set up a bot for every location · ask guests to install an app · fill out forms and wait for a manager",
+    "notNeeded": "switch your POS · set up a bot for every location · ask guests to install an app · pay for onboarding",
     "items": {
       "network": {
         "title": "One bot for the whole chain",
@@ -84,15 +104,15 @@
         "text": "Call a Yandex.Delivery courier in one tap. Your own couriers work too — you choose"
       },
       "autopilot": {
-        "title": "Setup without developers",
-        "text": "You set up the menu, prices, zones, payments and POS yourself in the CRM. Need help? Support is right there at every step"
+        "title": "We launch it for you",
+        "text": "We set up the menu, zones, payments and POS ourselves. Then you run it in the CRM, with support at hand."
       }
     }
   },
   "crmDemo": {
     "tag": "In-house CRM",
     "title": "Your whole chain in one dashboard",
-    "description": "Menu, orders, analytics, marketing and a shared guest base for the whole chain — in one place. You set it all up yourself, no developers",
+    "description": "Menu, orders, analytics, marketing and a shared guest base for the whole chain — in one place. We launch it, then you run it yourself, no developers.",
     "ownDev": "Our own product, not a builder — we answer for features and reliability",
     "cta": "Open CRM — 30 days free",
     "ctaHint": "Full access · Full support · No card required",
@@ -186,8 +206,8 @@
         "answer": "No. Nyambot doesn't replace your POS and doesn't require one. With iiko or R-Keeper you connect the integration, and the menu, stop lists and orders sync automatically. With a different POS or none at all, Nyambot runs the menu, modifiers, loyalty and orders on its own CRM. Connect a POS later — nothing is lost"
       },
       {
-        "question": "Do I have to talk to a sales manager or pay for onboarding?",
-        "answer": "No. Signing up for the CRM takes an email and a password — no forms, no phone number. All plans and prices are published on this page. You set everything up in the CRM yourself — and if something is unclear, Anya, the built-in AI assistant, answers right inside the CRM: she knows how Nyambot works and helps with setup straight away, without waiting in the support queue. Human support steps in when you ask"
+        "question": "Who will set everything up?",
+        "answer": "We will. We review your venue, create the bots, load the menu, connect the POS and payments, and check the launch. Onboarding is free, and all prices are on this page. After that you run everything in the CRM, with Anya and support to help."
       },
       {
         "question": "Can a guest message the venue?",
@@ -206,7 +226,7 @@
   "cta": {
     "title": "Start taking orders in your own channel",
     "subtitle": "30 days free. Full features, full support. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
-    "button": "Start free",
+    "button": "Get a free review",
     "docs": "Read documentation",
     "hint": "Only an email needed · No card required · 1 location and 2 bots to start",
     "trialFeatures": ["30 days free", "Full access", "No card required"]
@@ -241,7 +261,7 @@
   "integrations": {
     "label": "Integrations",
     "title": "Integrations — optional",
-    "subtitle": "Nyambot works on its own. And if you already have a POS, a payment provider or a courier service — they connect right in the CRM, no developers or custom work",
+    "subtitle": "Nyambot works on its own. And if you already have a POS, a payment provider or a courier service — we connect them ourselves, no developers or custom work",
     "noPos": "No POS? Nothing to connect — Nyambot works entirely on its own",
     "items": {
       "iiko": "iiko",

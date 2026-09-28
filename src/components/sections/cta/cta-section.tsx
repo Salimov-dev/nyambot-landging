@@ -70,10 +70,9 @@ export function CtaSection() {
               <Button
                 type="primary"
                 size="large"
-                href={LINKS.crm}
-                target="_blank"
+                href={LINKS.pages.zapusk}
                 className={styles.primaryBtn}
-                onClick={() => reachGoal("click_trial")}
+                onClick={() => reachGoal("click_trial", { to: "zapusk" })}
               >
                 {t("cta.button")}
               </Button>

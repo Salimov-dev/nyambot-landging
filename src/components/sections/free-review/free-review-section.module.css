@@ -1,0 +1,194 @@
+/* Бесплатный разбор — акцентная карточка сразу под первым экраном: это
+   предложение, а не абзац, и оно обязано читаться с первого взгляда */
+
+.section {
+  position: relative;
+  padding: 24px 0 72px;
+}
+
+/* На посадочной — между карточками и вопросами, поля задаёт сама страница */
+.sectionEmbedded {
+  position: relative;
+  margin-top: 16px;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 48px;
+  border: 1px solid var(--accent-border);
+  border-radius: 24px;
+  background: var(--gradient-card-accent);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.24),
+    var(--shadow-glow);
+}
+
+.title {
+  max-width: 820px;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 22px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.itemTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.itemTitle::before {
+  content: "✓";
+  display: inline-flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.itemText {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.55;
+  /* Перенос — двумя ровными строками, а не одним словом внизу */
+  text-wrap: balance;
+}
+
+/* Проверка перед запуском — отвечает на главный страх ресторатора перед
+   новым каналом. Строкой с отметкой, а не четвёртой карточкой: это обещание
+   про запуск, а не пункт разбора (решение Руслана 28.09.2026) */
+.guarantee {
+  text-wrap: balance;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 24px 0 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.guarantee::before {
+  content: "🛡";
+  flex: 0 0 auto;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 36px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-button);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s var(--ease-out-quart);
+}
+
+/* Цвет текста закреплён во всех состояниях: сброс стилей antd перекрашивает
+   ссылки при наведении в оранжевый — на оранжевой кнопке текст пропадал */
+.button:hover,
+.button:focus,
+.button:active,
+.button:visited {
+  color: #fff;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .items {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 8px 0 56px;
+  }
+
+  .inner {
+    padding: 0 16px;
+  }
+
+  .card {
+    padding: 28px 22px;
+  }
+
+  /* Текст целиком в одну строку: на 390 px с отступами по 36 px он
+     переносился и прижимался влево */
+  .button {
+    width: 100%;
+    height: auto;
+    min-height: 56px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}

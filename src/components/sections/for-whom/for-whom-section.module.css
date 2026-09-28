@@ -62,6 +62,12 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Пять плиток в две колонки: последняя — во всю ширину, пустой ячейки
+     рядом с ней быть не должно */
+  .grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 480px) {

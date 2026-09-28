@@ -10,6 +10,8 @@ declare global {
 export type MetrikaGoal =
   // Конверсии (триал/CRM)
   | "click_trial"
+  /** Заявка на разбор сайта ушла — только после ответа сервера «принято» */
+  | "lead_form"
   | "registration"
   | "first_order"
   | "payment"

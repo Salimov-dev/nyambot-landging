@@ -1,11 +1,14 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { useHasTranslation } from "@/hooks/use-has-translation.hook";
 import { CheckIcon, HandshakeIcon } from "@/components/ui/icons/icons";
+import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import styles from "./our-way-section.module.css";
 
 const { Title, Text } = Typography;
@@ -67,6 +70,18 @@ export function OurWaySection() {
               </li>
             ))}
           </ul>
+
+          {/* «Сделаем вместе» — сразу с действием: без кнопки обещание помощи
+              повисало в воздухе */}
+          <Link
+            href={LINKS.pages.zapusk}
+            className={styles.helpButton}
+            onClick={() =>
+              reachGoal("click_trial", { to: "zapusk", from: "our_way" })
+            }
+          >
+            {t("freeReview.button")}
+          </Link>
         </motion.div>
       </div>
     </section>

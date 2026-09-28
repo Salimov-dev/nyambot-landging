@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button, Flex, Tag, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
+import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./crm-demo-section.module.css";
 import {
@@ -133,8 +134,9 @@ export function CrmDemoSection() {
           <Button
             type="primary"
             size="large"
-            href={LINKS.crm}
+            href={LINKS.crmRegister}
             target="_blank"
+            onClick={() => reachGoal("click_trial")}
             style={{
               background: theme.gradients.primary,
               border: "none",

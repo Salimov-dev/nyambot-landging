@@ -18,12 +18,32 @@
     "ctaSecondary": "Demoya bax",
     "trial": "30 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
   },
+  "freeReview": {
+    "title": "Müəssisəni pulsuz təhlil edib botlarda nə olacağını göstərəcəyik",
+    "items": [
+      {
+        "title": "Menyu və şəkillər",
+        "text": "saytdan və ya kassadan köçürəcəyik"
+      },
+      {
+        "title": "Çatdırılma və aksiyalar",
+        "text": "zonalar, şərtlər, biznes-lançlar"
+      },
+      {
+        "title": "Kassa və ödəniş",
+        "text": "iiko, R‑Keeper və ödənişi qoşacağıq"
+      }
+    ],
+    "guarantee": "İşə salmazdan əvvəl bütün ayarları avtomatik yoxlayırıq. Qonaqları yalnız yoxlamadan sonra buraxırıq.",
+    "note": "Bir iş günü ərzində cavab veririk. Zənglərsiz və öhdəliksiz.",
+    "button": "Pulsuz təhlil al"
+  },
   "killer": {
     "label": "Əsas məqamlar",
     "title": "Burada nə fərqlidir",
     "subtitle": "Səkkiz fərq — və etməli olmayacağın işlər",
     "notPrefix": "Lazım deyil",
-    "notNeeded": "kassanı dəyişmək · hər nöqtəyə ayrıca bot açmaq · qonaqdan tətbiq quraşdırmağı xahiş etmək · anketlər doldurub menecer gözləmək",
+    "notNeeded": "kassanı dəyişmək · hər nöqtəyə ayrıca bot açmaq · qonaqdan tətbiq quraşdırmağı xahiş etmək · tətbiq üçün pul ödəmək",
     "items": {
       "network": {
         "title": "Bütün şəbəkəyə bir bot",
@@ -84,15 +104,15 @@
         "text": "Yandex.Delivery kuryeri bir toxunuşla çağırılır. Öz kuryerlərin də dəstəklənir — özün seçirsən"
       },
       "autopilot": {
-        "title": "Proqramçısız quraşdırma",
-        "text": "Menyunu, qiymətləri, zonaları, ödənişi və kassanı CRM-də özün qurursan. Kömək lazımdırsa — dəstək hər addımda yanındadır"
+        "title": "Sənin üçün işə salırıq",
+        "text": "Menyu, zonalar, ödəniş və kassanı özümüz qururuq. Sonra CRM-də özün idarə edirsən, dəstək yanındadır."
       }
     }
   },
   "crmDemo": {
     "tag": "Öz hazırladığımız CRM",
     "title": "Bütün şəbəkə bir kabinetdə",
-    "description": "Menyu, sifarişlər, analitika, marketinq və bütün şəbəkənin ümumi qonaq bazası — bir yerdə. Hər şeyi özünüz qurursunuz, proqramçı olmadan",
+    "description": "Menyu, sifarişlər, analitika, marketinq və bütün şəbəkənin ümumi qonaq bazası — bir yerdə. İşə salmanı biz edirik, sonra özün proqramçısız idarə edirsən.",
     "ownDev": "Öz işləməmiz, konstruktor deyil — funksiyalara və etibarlılığa cavabdehik",
     "cta": "CRM açmaq — 30 gün pulsuz",
     "ctaHint": "Tam giriş · Tam dəstək · Kart tələb olunmur",
@@ -186,8 +206,8 @@
         "answer": "Xeyr. Nyambot kassanı əvəz etmir və onu tələb etmir. iiko və ya R-Keeper varsa, inteqrasiya qoşulur və menyu, stop-siyahılar və sifarişlər avtomatik sinxronlaşır. Kassa başqadırsa və ya heç yoxdursa, Nyambot menyunu, modifikatorları, loyallığı və sifarişləri öz CRM-ində müstəqil aparır. Kassanı sonra qoşsan — məlumatlar yerində qalır"
       },
       {
-        "question": "Meneceri gözləmək və tətbiq etmə sifariş etmək lazımdır?",
-        "answer": "Xeyr. CRM-də qeydiyyat — e-poçt və şifrə, anket və telefon olmadan. Bütün tariflər və qiymətlər bu səhifədə dərc olunub. Quraşdırma CRM-də özün tərəfindən aparılır — nəsə aydın deyilsə, birbaşa CRM-də Anya, quraşdırılmış Sİ-köməkçi cavab verir: o, Nyambotun necə qurulduğunu bilir və dəstək növbəsini gözləmədən dərhal quraşdırma üzrə məsləhət verir. Canlı dəstək isə sən çağıranda qoşulur"
+        "question": "Hər şeyi kim quracaq?",
+        "answer": "Biz. Müəssisəni təhlil edirik, botları yaradırıq, menyunu yükləyirik, kassa və ödənişi qoşuruq, işə salmanı yoxlayırıq. Tətbiq pulsuzdur, bütün qiymətlər bu səhifədədir. Sonra hər şeyi CRM-də özün idarə edirsən, Anya və dəstək kömək edir."
       },
       {
         "question": "Qonaq müəssisəyə yaza bilərmi?",
@@ -206,7 +226,7 @@
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
     "subtitle": "30 gün ödənişsiz. Tam funksionallıq, tam dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
-    "button": "Pulsuz başla",
+    "button": "Pulsuz təhlil al",
     "docs": "Sənədləri oxuyun",
     "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Başlanğıcda 1 nöqtə və 2 bot",
     "trialFeatures": ["30 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
@@ -241,7 +261,7 @@
   "integrations": {
     "label": "İnteqrasiyalar",
     "title": "İnteqrasiyalar — istəyə görə",
-    "subtitle": "Nyambot özü müstəqil işləyir. Əgər kassan, ekvayrinqin və ya kuryer xidmətin varsa — birbaşa CRM-də qoşulur, proqramçısız və əlavə işlərsiz",
+    "subtitle": "Nyambot özü müstəqil işləyir. Əgər kassan, ekvayrinqin və ya kuryer xidmətin varsa — özümüz qoşuruq, proqramçısız və əlavə işlərsiz",
     "noPos": "Kassa yoxdur? Heç nə qoşmaq lazım deyil — Nyambot tam müstəqil işləyir",
     "items": {
       "iiko": "iiko",

@@ -338,7 +338,7 @@ function PricingCard({
           type={isPopular ? "primary" : "default"}
           block
           size="large"
-          href={LINKS.crm}
+          href={LINKS.crmRegister}
           target="_blank"
           className={isPopular ? styles.primaryBtn : styles.defaultBtn}
           style={{ marginTop: "auto" }}

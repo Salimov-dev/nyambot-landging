@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { BRAND_CONFIG } from "@/config/brand.config";
-import { LINKS } from "@/config/links.config";
 import {
   BLOCK_ICON,
   type IBlockIcon,
@@ -17,17 +14,16 @@ import {
   MapIcon,
   ZapIcon,
 } from "@/components/ui/icons/icons";
-import { StructuredData } from "@/components/common/structured-data/structured-data";
+import Link from "next/link";
+import { FreeReviewSection } from "@/components/sections/free-review/free-review-section";
 import { LandingPageCta } from "./landing-page-cta";
+import { LandingPageShell } from "./landing-page-shell";
 import styles from "./landing-page.module.css";
 
 const PAGE_TEXT = {
-  home: "На главную",
   notNeededTitle: "Не нужно",
   guideTitle: "Как это настроить",
   faqTitle: "Частые вопросы",
-  legal: "Публичная оферта",
-  rights: "Все права защищены",
 } as const;
 
 const ICONS: Record<IBlockIcon, typeof ListIcon> = {
@@ -47,12 +43,11 @@ type IProps = {
 };
 
 /**
- * Оболочка посадочной страницы под поисковый запрос.
+ * Посадочная страница под поисковый запрос.
  *
  * Вёрстка своя, без компонентов Ant: у страницы одна задача — быстро
- * показаться человеку из выдачи, а стили Ant приезжают вместе с JS. Шапка
- * здесь тоже своя: у главной пункты меню — якоря вида «#pricing», и на
- * отдельной странице они вели бы в никуда.
+ * показаться человеку из выдачи, а стили Ant приезжают вместе с JS. Шапка и
+ * подвал — общий каркас `LandingPageShell`.
  */
 export function LandingPage({ content }: IProps) {
   /* Разметка вопросов — за расширенным сниппетом в выдаче. Берётся из тех же
@@ -68,21 +63,7 @@ export function LandingPage({ content }: IProps) {
   };
 
   return (
-    <div className={styles.page}>
-      <StructuredData />
-      <div className={styles.glow} />
-
-      <header className={styles.header}>
-        <Link href="/" className={styles.logo}>
-          {BRAND_CONFIG.name}
-        </Link>
-        {/* Возврат на главную — кнопка со стрелкой, а не слово в углу:
-            словом «Главная» его не замечали */}
-        <Link href="/" className={styles.homeLink}>
-          <span aria-hidden="true">←</span> {PAGE_TEXT.home}
-        </Link>
-      </header>
-
+    <LandingPageShell>
       <main className={styles.main}>
         <span className={styles.label}>{content.label}</span>
         <h1 className={styles.heading}>{content.heading}</h1>
@@ -117,6 +98,11 @@ export function LandingPage({ content }: IProps) {
                     ))}
                   </ul>
                 ) : null}
+                {block.link ? (
+                  <Link href={block.link.href} className={styles.blockLink}>
+                    {block.link.label} →
+                  </Link>
+                ) : null}
               </section>
             );
           })}
@@ -134,6 +120,10 @@ export function LandingPage({ content }: IProps) {
             </ul>
           </section>
         ) : null}
+
+        {/* Бесплатный разбор — на каждой посадочной, как на главной: страница
+            отвечает на запрос, а блок даёт следующий шаг (28.09.2026) */}
+        <FreeReviewSection embedded />
 
         <section className={styles.faq}>
           <h2 className={styles.sectionTitle}>{PAGE_TEXT.faqTitle}</h2>
@@ -163,19 +153,10 @@ export function LandingPage({ content }: IProps) {
         <LandingPageCta />
       </main>
 
-      <footer className={styles.footer}>
-        <span>
-          © {new Date().getFullYear()} {BRAND_CONFIG.name} · {PAGE_TEXT.rights}
-        </span>
-        <Link href={LINKS.legal.offer} className={styles.footerLink}>
-          {PAGE_TEXT.legal}
-        </Link>
-      </footer>
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    </div>
+    </LandingPageShell>
   );
 }

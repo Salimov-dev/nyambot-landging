@@ -31,6 +31,14 @@
   margin: 0 auto;
 }
 
+/* Страница с формой рядом с текстом (`/zapusk`): в 940 px заголовок сжимался
+   в левую половину, а форма вытягивалась в длинную колонку */
+.pageWide .header,
+.pageWide .main,
+.pageWide .footer {
+  max-width: 1160px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -283,6 +291,21 @@
   font-size: 16px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.78);
+}
+
+.blockLink {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blockLink:hover {
+  text-decoration: underline;
 }
 
 /* Пункты под текстом блока: та же строка-flex, что у «Не нужно», но с

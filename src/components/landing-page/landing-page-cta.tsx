@@ -23,15 +23,13 @@ export function LandingPageCta() {
   return (
     <div className={styles.ctaBlock}>
       <div className={styles.ctaRow}>
-        <a
-          href={LINKS.crm}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={LINKS.pages.zapusk}
           className={styles.primaryBtn}
-          onClick={() => reachGoal("click_trial")}
+          onClick={() => reachGoal("click_trial", { to: "zapusk" })}
         >
           {CTA_TEXT.primary}
-        </a>
+        </Link>
         <a
           href={LINKS.demo.max}
           target="_blank"

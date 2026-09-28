@@ -237,7 +237,7 @@ export function TryDemoSection() {
             </Text>
             <Button
               size="large"
-              href={LINKS.crm}
+              href={LINKS.crmRegister}
               target="_blank"
               className={styles.crmBtn}
               onClick={() => reachGoal("click_trial")}
