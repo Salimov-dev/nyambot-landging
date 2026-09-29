@@ -35,6 +35,8 @@ export type MetrikaGoal =
   | "click_tg_support"
   | "click_max_support"
   | "click_email_support"
+  /** Открыта плавающая кнопка связи (план аудита Гуляша, С7) */
+  | "open_contact_widget"
   // Соцсети
   | "click_social_telegram"
   | "click_social_rutube"

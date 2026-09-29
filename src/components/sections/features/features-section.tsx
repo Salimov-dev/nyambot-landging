@@ -17,6 +17,9 @@ import {
   SettingsIcon,
   MessageIcon,
   ZapIcon,
+  MegaphoneIcon,
+  ChartIcon,
+  BulbIcon,
 } from "@/components/ui/icons/icons";
 import styles from "./features-section.module.css";
 
@@ -37,13 +40,20 @@ type Benefit = { id: string; icon: BenefitIcon; accentColor: string };
  * разбор уехал на `/vozmozhnosti`, здесь остались заголовок и одна строка.
  * Плитки не пересекаются с секцией «Главное»: та про устройство продукта,
  * эта — про то, что приносит деньги.
+ *
+ * Рассылка по сегменту, метрики гостей и «что ищут гости» (29.09.2026) стоят
+ * рядом с тем, к чему относятся: рассылка и возвращаемость — после «Среднего
+ * чека и возвратов», поиск и вопросы без ответа — после чата с гостем.
  */
 const BENEFITS: readonly Benefit[] = [
   { id: "retention", icon: WalletIcon, accentColor: theme.colors.success },
   { id: "growth", icon: TargetIcon, accentColor: "#14c4a2" },
+  { id: "segmentBroadcast", icon: MegaphoneIcon, accentColor: "#be4bdb" },
+  { id: "guestMetrics", icon: ChartIcon, accentColor: "#15aabf" },
   { id: "constructor", icon: UtensilsIcon, accentColor: "#e64980" },
   { id: "team", icon: UsersIcon, accentColor: "#12b886" },
   { id: "guestChat", icon: MessageIcon, accentColor: "#7950f2" },
+  { id: "guestSearches", icon: BulbIcon, accentColor: "#4c6ef5" },
   { id: "teamAlerts", icon: ZapIcon, accentColor: "#fab005" },
   { id: "delivery", icon: PackageIcon, accentColor: "#f76707" },
   { id: "autopilot", icon: SettingsIcon, accentColor: "#1677ff" },

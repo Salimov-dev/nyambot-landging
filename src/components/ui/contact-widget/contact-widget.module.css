@@ -1,0 +1,125 @@
+/* Плавающая кнопка связи: правый нижний угол свободен — точки навигации слева,
+   шапка сверху (обе z-index 100). Модалки antd — 1000, их не перекрываем. */
+.root {
+  position: fixed;
+  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8c00, #ff6b00);
+  box-shadow: 0 8px 24px rgba(255, 140, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+}
+
+.fab:focus-visible,
+.channel:focus-visible {
+  outline: 2px solid #ff8c00;
+  outline-offset: 3px;
+}
+
+.panel {
+  width: 280px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #16161d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  margin: 0 0 4px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.channel:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.channelText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.channelName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.channelValue {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  overflow-wrap: anywhere;
+}
+
+.mailIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff8c00;
+  background: rgba(255, 140, 0, 0.12);
+}
+
+/* Телефон: 16 px от краёв, панель не шире экрана */
+@media (max-width: 480px) {
+  .root {
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .fab {
+    width: 52px;
+    height: 52px;
+  }
+
+  .panel {
+    width: min(280px, calc(100vw - 32px));
+  }
+}

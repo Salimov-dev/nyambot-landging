@@ -13,6 +13,9 @@ import {
   MonitorIcon,
   MapIcon,
   ZapIcon,
+  MegaphoneIcon,
+  ChartIcon,
+  BulbIcon,
 } from "@/components/ui/icons/icons";
 import Link from "next/link";
 import { FreeReviewSection } from "@/components/sections/free-review/free-review-section";
@@ -36,6 +39,9 @@ const ICONS: Record<IBlockIcon, typeof ListIcon> = {
   [BLOCK_ICON.STAFF]: MonitorIcon,
   [BLOCK_ICON.DELIVERY]: MapIcon,
   [BLOCK_ICON.ALERT]: ZapIcon,
+  [BLOCK_ICON.BROADCAST]: MegaphoneIcon,
+  [BLOCK_ICON.METRICS]: ChartIcon,
+  [BLOCK_ICON.INSIGHT]: BulbIcon,
 };
 
 type IProps = {

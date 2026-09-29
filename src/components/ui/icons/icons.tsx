@@ -378,3 +378,22 @@ export function AwardIcon({ size = DEFAULT_SIZE, className }: IconProps) {
     </svg>
   );
 }
+
+/** Конверт — почта в кнопке связи */
+export function MailIcon({ size = DEFAULT_SIZE, className }: IconProps) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3 7l9 6 9-6" />
+    </svg>
+  );
+}
+
+/** Крестик — закрыть панель */
+export function CloseIcon({ size = DEFAULT_SIZE, className }: IconProps) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M18 6L6 18M6 6l12 12" />
+    </svg>
+  );
+}

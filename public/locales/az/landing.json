@@ -72,7 +72,7 @@
   "benefits": {
     "label": "İmkanlar",
     "title": "Eyni qonaqlardan daha çox qazan",
-    "subtitle": "Gəlir gətirən səkkiz şey — qalanı imkanlar səhifəsində",
+    "subtitle": "Gəlir gətirən on bir şey — qalanı imkanlar səhifəsində",
     "moreCta": "Bütün imkanlar",
     "items": {
       "retention": {
@@ -82,6 +82,14 @@
       "growth": {
         "title": "Orta çek və qayıdışlar",
         "text": "Modifikatorlar, kombolar, aksiyalar, ballar və göndərişlər çeki artırır və qonağı geri qaytarır — əl işi olmadan"
+      },
+      "segmentBroadcast": {
+        "title": "Yatmış qonaqları geri qaytar",
+        "text": "Seqment seçirsən — «Yatmış», «Gedənlər» və ya «Daimi» — və şəkil və menyu düyməsi ilə mesaj yazırsan. Sonra neçə nəfərin sifariş verdiyi görünür"
+      },
+      "guestMetrics": {
+        "title": "Qonaqların qayıtdığı görünür",
+        "text": "Yeni və təkrar qonaqlar, 14 və 30 gün ərzində ikinci sifariş, sifariş tezliyi və aylar üzrə qayıdış — botdakı sifarişlər üzrə"
       },
       "constructor": {
         "title": "Qonaq yeməyi özünə uyğun yığır",
@@ -94,6 +102,10 @@
       "guestChat": {
         "title": "Qonaq soruşur — bot cavab verir",
         "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot növbədəki administratoru çağırır"
+      },
+      "guestSearches": {
+        "title": "Qonaqlara menyuda nə çatmır",
+        "text": "Qonaqlar bot menyusunda nə axtarır, nəyi tapmayıb və çatda hansı suallar cavabsız qalıb — hamısı CRM-də"
       },
       "teamAlerts": {
         "title": "Nasazlıq — ilk sən bilirsən",
@@ -357,5 +369,12 @@
         "text": "Kassa, ödəniş, çatdırılma, sınaq dövrü və 50% endirim barədə iyirmi beş sual"
       }
     }
+  },
+  "contactWidget": {
+    "ariaLabel": "Bizə yaz",
+    "title": "Sualın qaldı? Bizə yaz",
+    "telegram": "Telegram",
+    "max": "MAX",
+    "email": "Poçt"
   }
 }

@@ -72,7 +72,7 @@
   "benefits": {
     "label": "Imkoniyatlar",
     "title": "O'sha mehmonlardan ko'proq daromad ol",
-    "subtitle": "Tushum keltiradigan sakkizta narsa — qolgani imkoniyatlar sahifasida",
+    "subtitle": "Tushum keltiradigan oʻn bitta narsa — qolgani imkoniyatlar sahifasida",
     "moreCta": "Barcha imkoniyatlar",
     "items": {
       "retention": {
@@ -82,6 +82,14 @@
       "growth": {
         "title": "O‘rtacha chek va qaytishlar",
         "text": "Modifikatorlar, kombo, aksiyalar, ballar va tarqatmalar chekni oshiradi va mehmonni qaytaradi — qo‘l mehnatisiz"
+      },
+      "segmentBroadcast": {
+        "title": "Uxlab qolgan mehmonlarni qaytar",
+        "text": "Segment tanlaysan — «Uxlab qolganlar», «Ketganlar» yoki «Doimiy» — va rasm hamda menyu tugmasi bilan xabar yozasan. Keyin nechta mehmon buyurtma berganini koʻrasan"
+      },
+      "guestMetrics": {
+        "title": "Mehmonlar qaytishi koʻrinadi",
+        "text": "Yangi va takroriy mehmonlar, 14 va 30 kun ichida ikkinchi buyurtma, buyurtmalar chastotasi va oylar boʻyicha qaytish — botdagi buyurtmalar boʻyicha"
       },
       "constructor": {
         "title": "Mehmon taomni o‘ziga moslab yig‘adi",
@@ -94,6 +102,10 @@
       "guestChat": {
         "title": "Mehmon soʻraydi — bot javob beradi",
         "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — bunday savollarga SI javob beradi. Agar mehmonga odam kerak boʻlsa, bot smenadagi administratorni chaqiradi"
+      },
+      "guestSearches": {
+        "title": "Mehmonlarga menyuda nima yetishmaydi",
+        "text": "Mehmonlar bot menyusida nimani qidiradi, nimani topmadi va chatda qaysi savollar javobsiz qoldi — hammasi CRMda"
       },
       "teamAlerts": {
         "title": "Nosozlik — birinchi boʻlib sen bilasan",
@@ -357,5 +369,12 @@
         "text": "Kassa, to‘lov, yetkazib berish, sinov muddati va 50% chegirma haqida yigirma beshta savol"
       }
     }
+  },
+  "contactWidget": {
+    "ariaLabel": "Bizga yozing",
+    "title": "Savollar qoldimi? Bizga yoz",
+    "telegram": "Telegram",
+    "max": "MAX",
+    "email": "Pochta"
   }
 }

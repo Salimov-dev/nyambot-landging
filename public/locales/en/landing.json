@@ -72,7 +72,7 @@
   "benefits": {
     "label": "Features",
     "title": "Earn more from the same guests",
-    "subtitle": "Eight things that drive revenue — the rest is on the features page",
+    "subtitle": "Eleven things that drive revenue — the rest is on the features page",
     "moreCta": "All features",
     "items": {
       "retention": {
@@ -82,6 +82,14 @@
       "growth": {
         "title": "Average check and repeat visits",
         "text": "Modifiers, combos, promos, points and mailings raise the average check and bring guests back — no manual work"
+      },
+      "segmentBroadcast": {
+        "title": "Bring dormant guests back",
+        "text": "Pick a segment — «Dormant», «Lost» or «Loyal» — and write a message with an image and a button to the menu. Then see how many ordered"
+      },
+      "guestMetrics": {
+        "title": "See whether guests come back",
+        "text": "New and returning guests, second order within 14 and 30 days, order frequency and monthly retention — based on bot orders"
       },
       "constructor": {
         "title": "The guest builds the dish their way",
@@ -94,6 +102,10 @@
       "guestChat": {
         "title": "The guest asks — the bot answers",
         "text": "«Where's my order?», «How late are you open?» — AI answers questions like these. If the guest needs a person, the bot calls the admin on shift"
+      },
+      "guestSearches": {
+        "title": "What guests miss in the menu",
+        "text": "What guests search for in the bot's menu, what they didn't find and which chat questions went unanswered — all in the CRM"
       },
       "teamAlerts": {
         "title": "Something breaks — you're the first to know",
@@ -357,5 +369,12 @@
         "text": "Twenty-five questions about the POS, payments, delivery, the trial period and the 50% discount"
       }
     }
+  },
+  "contactWidget": {
+    "ariaLabel": "Contact us",
+    "title": "Still have questions? Write to us",
+    "telegram": "Telegram",
+    "max": "MAX",
+    "email": "Email"
   }
 }

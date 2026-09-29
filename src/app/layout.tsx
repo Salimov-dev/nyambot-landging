@@ -3,6 +3,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Providers } from "@/providers/providers";
 import { YandexMetrika } from "@/components/ui/analytics/yandex-metrika";
 import { AdClickCapture } from "@/components/ui/analytics/ad-click-capture";
+import { ContactWidget } from "@/components/ui/contact-widget/contact-widget";
 import { geistSans, geistMono } from "@/lib/fonts";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { SEO_CONFIG } from "@/config/seo.config";
@@ -63,7 +64,11 @@ export default function RootLayout({
       </head>
       <body>
         <AntdRegistry>
-          <Providers>{children}</Providers>
+          <Providers>
+            {children}
+            {/* Кнопка связи на всех страницах (план аудита Гуляша, С7) */}
+            <ContactWidget />
+          </Providers>
         </AntdRegistry>
         <YandexMetrika />
         <AdClickCapture />

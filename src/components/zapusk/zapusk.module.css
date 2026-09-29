@@ -61,10 +61,13 @@
   font-weight: 700;
 }
 
+/* Ссылка — всегда по нижнему краю плитки, как у карточек «Возможностей»:
+   плитка — колонка, текст разной длины ссылку не сдвигает (Руслан, 29.09) */
 .stepLink {
   display: inline-flex;
   align-self: flex-start;
-  margin-top: 14px;
+  margin-top: auto;
+  padding-top: 14px;
   color: var(--accent);
   font-size: 15px;
   font-weight: 600;
