@@ -26,8 +26,10 @@ const FILE_MARKER_META = "nyambot-qr";
 /** Ключ последнего выбора гостя — только в его браузере. */
 const LAST_CHOICE_STORAGE_KEY = "nyambot_chooser_last";
 
+/** Значки кнопок. Кольцо MAX — вырез (evenodd), а не закрашенный круг:
+ *  сквозь него видна подложка кнопки, а не чужой цвет. */
 const ICONS: Record<IChooserMessenger, string> = {
-  [CHOOSER_MESSENGER.MAX]: `<svg width="28" height="28" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fff" fill-opacity=".18"/><path d="M24 10C16.3 10 10 16.3 10 24c0 3.5 1.3 6.7 3.5 9.1L12 38l5.2-1.4c2.2 1.2 4.4 1.9 6.8 1.9 7.7 0 14-6.3 14-14.3C38 16.3 31.7 10 24 10Z" fill="#fff"/><circle cx="24" cy="24" r="7" fill="#7B5CE5"/></svg>`,
+  [CHOOSER_MESSENGER.MAX]: `<svg width="28" height="28" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fff" fill-opacity=".18"/><path fill-rule="evenodd" d="M24 10C16.3 10 10 16.3 10 24c0 3.5 1.3 6.7 3.5 9.1L12 38l5.2-1.4c2.2 1.2 4.4 1.9 6.8 1.9 7.7 0 14-6.3 14-14.3C38 16.3 31.7 10 24 10Zm0 7a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z" fill="#fff"/></svg>`,
   [CHOOSER_MESSENGER.TELEGRAM]: `<svg width="28" height="28" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#fff" fill-opacity=".18"/><path d="M34.9 13.4 30.4 35.2c-.3 1.3-1.1 1.6-2.2 1l-6.5-4.8-3.1 3c-.4.4-.7.7-1.4.7l.5-6.7 11.9-10.7c.5-.4-.1-.7-.8-.3L14 26.7l-6.3-2c-1.3-.4-1.4-1.3.2-2l25.2-10c1.1-.4 2.1.3 1.8.7Z" fill="#fff"/></svg>`,
 };
 
