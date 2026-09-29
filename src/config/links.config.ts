@@ -17,6 +17,9 @@ export const LINKS = {
   demo: {
     telegram: "https://t.me/kusochek_demo_bot",
     max: "https://max.ru/id183401217970_bot",
+    /** Общий QR-код демо: страница выбора «MAX или Телеграм» — та же, что у
+     *  заведений на Нямботе (`/go/<адрес>`). */
+    chooser: "/demo",
   },
 
   /** Посадочные страницы под поисковые запросы (тексты — landing-pages.config) */
@@ -33,6 +36,8 @@ export const LINKS = {
     security: "/bezopasnost",
     /** Бесплатный разбор сайта и запуск — куда ведёт «Начать бесплатно» */
     zapusk: "/zapusk",
+    /** Один QR-код на MAX и Телеграм — посадочная под рекламу */
+    qrCode: "/odin-qr-kod",
   },
 
   legal: {

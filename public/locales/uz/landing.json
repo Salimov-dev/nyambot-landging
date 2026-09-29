@@ -41,7 +41,7 @@
   "killer": {
     "label": "Asosiysi",
     "title": "Bu yerda nima boshqacha",
-    "subtitle": "Sakkizta farq — va qilishingiz shart boʻlmagan ishlar",
+    "subtitle": "Kanal daromadini tashkil etadigan oltita narsa",
     "notPrefix": "Shart emas",
     "notNeeded": "kassani almashtirish · har bir nuqtaga alohida bot ochish · mehmondan ilova o‘rnatishni so‘rash · joriy etish uchun pul toʻlash",
     "items": {
@@ -64,6 +64,10 @@
       "money": {
         "title": "Buyurtma puli — toʻgʻridan-toʻgʻri sizga, qaytarish — faqat sizning qaroringiz bilan",
         "text": "Mehmon mini-ilovada onlayn toʻlaydi — pul toʻgʻridan-toʻgʻri sizning ЮKassa yoki Yandex.Pay hisobingizga tushadi. Sizning tugmangizsiz bir soʻm ham qaytmaydi: na kassa, na xodim onlayn toʻlovni qaytara oladi"
+      },
+      "qr": {
+        "title": "MAX va Telegram uchun bitta QR-kod",
+        "text": "Mehmon kodni skanerlaydi va messenjerni o‘zi tanlaydi. Kodni o‘z domeningda saqlasang, Nyambotdan ketsang ham u seniki bo‘lib qoladi"
       }
     },
     "pricingNote": "Bitta tarif — barcha imkoniyatlar cheklovsiz. Narxlar shu sahifada, «soʻrov boʻyicha» emas",
@@ -148,7 +152,11 @@
     "maxCta": "MAX'da ochish",
     "crmHint": "CRM'ni egasi tomonidan baholamoqchimisiz?",
     "crmCta": "CRM'ga ro'yxatdan o'tish",
-    "crmTrial": "30 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas"
+    "crmTrial": "30 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas",
+    "qrTitle": "Ikkala messenjer uchun bitta QR-kod",
+    "qrText": "Telefon kamerasini to‘g‘rila — mehmonlaring ko‘radigan tanlash sahifasi ochiladi. Qadoqda, zalda va reklamada ikkita o‘rniga bitta kod chop etasan.",
+    "qrOpen": "Tanlash sahifasini ochish",
+    "qrMore": "Qanday ishlaydi"
   },
   "pricing": {
     "label": "Tariflar",
@@ -359,6 +367,10 @@
       "ownChannels": {
         "title": "Sayt yoki ilova",
         "text": "Messenjerdagi kanal sayt va o‘z ilovangdan nimasi bilan farq qiladi va nega u ular bilan yonma-yon kerak"
+      },
+      "qrCode": {
+        "title": "Umumiy QR-kod",
+        "text": "Qadoq va reklamada bitta kod: mehmon messenjerni o‘zi tanlaydi, o‘z domeningda esa kod seniki bo‘lib qoladi"
       },
       "security": {
         "title": "Ma’lumotlar xavfsizligi",

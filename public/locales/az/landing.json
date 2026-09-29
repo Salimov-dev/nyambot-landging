@@ -41,7 +41,7 @@
   "killer": {
     "label": "Əsas məqamlar",
     "title": "Burada nə fərqlidir",
-    "subtitle": "Səkkiz fərq — və etməli olmayacağın işlər",
+    "subtitle": "Kanalın gəlirini təşkil edən altı şey",
     "notPrefix": "Lazım deyil",
     "notNeeded": "kassanı dəyişmək · hər nöqtəyə ayrıca bot açmaq · qonaqdan tətbiq quraşdırmağı xahiş etmək · tətbiq üçün pul ödəmək",
     "items": {
@@ -64,6 +64,10 @@
       "money": {
         "title": "Sifarişin pulu — birbaşa sənə, geri qaytarma — yalnız sənin qərarınla",
         "text": "Qonaq mini-tətbiqdə onlayn ödəyir — pul birbaşa sənin ЮKassa və ya Yandex.Pay hesabına gedir. Sənin düymən olmadan bir qəpik də geri qayıtmır: nə kassa, nə işçi onlayn ödənişi geri qaytara bilməz"
+      },
+      "qr": {
+        "title": "MAX və Telegram üçün bir QR-kod",
+        "text": "Qonaq kodu skan edir və messenceri özü seçir. Kodu öz domenində saxla — Nyambotdan getsən belə, o səninki qalacaq"
       }
     },
     "pricingNote": "Bir tarif — bütün imkanlar məhdudiyyətsiz. Qiymətlər bu səhifədədir, «sorğu ilə» deyil",
@@ -148,7 +152,11 @@
     "maxCta": "MAX-da açın",
     "crmHint": "CRM-ni sahibin tərəfindən qiymətləndirmək istəyirsiniz?",
     "crmCta": "CRM-də qeydiyyatdan keçin",
-    "crmTrial": "30 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil"
+    "crmTrial": "30 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil",
+    "qrTitle": "Hər iki messencer üçün bir QR-kod",
+    "qrText": "Telefonun kamerasını tut — qonaqlarının görəcəyi eyni seçim səhifəsi açılacaq. Qablaşdırmada, zalda və reklamda iki əvəzinə bir kod çap edirsən.",
+    "qrOpen": "Seçim səhifəsini aç",
+    "qrMore": "Necə işləyir"
   },
   "pricing": {
     "label": "Tariflər",
@@ -359,6 +367,10 @@
       "ownChannels": {
         "title": "Sayt və ya tətbiq",
         "text": "Messencerdəki kanal saytdan və öz tətbiqindən nə ilə fərqlənir və nə üçün onların yanında lazımdır"
+      },
+      "qrCode": {
+        "title": "Ümumi QR-kod",
+        "text": "Qablaşdırmada və reklamda bir kod: qonaq messenceri özü seçir, öz domenində isə kod səninki qalır"
       },
       "security": {
         "title": "Məlumatların təhlükəsizliyi",

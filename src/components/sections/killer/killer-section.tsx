@@ -15,6 +15,7 @@ import {
   CheckIcon,
   GiftIcon,
   LockIcon,
+  QrCodeIcon,
 } from "@/components/ui/icons/icons";
 import styles from "./killer-section.module.css";
 
@@ -28,10 +29,11 @@ type KillerIcon = (props: {
 type KillerItem = { id: string; icon: KillerIcon; accentColor: string };
 
 /**
- * Пять отличий — столько человек успевает прочитать: медиана визита 15 секунд.
- * Прежние восемь карточек с личной строкой «Не нужно» у каждой давали вдвое
- * больше текста; теперь снятые требования идут одной строкой под сеткой, а
- * подробности живут на отдельных страницах раздела «Решения».
+ * Шесть отличий, два ряда по три. Было пять — столько человек успевает
+ * прочитать за медианные 15 секунд визита; шестое — общий QR-код на MAX и
+ * Телеграм (29.09.2026): этого нет у других, и ресторатор спотыкается о «два
+ * кода на упаковке» раньше, чем о всё остальное. Снятые требования — одной
+ * строкой под сеткой, подробности — на страницах раздела «Решения».
  */
 const ITEMS: readonly KillerItem[] = [
   { id: "network", icon: GlobeIcon, accentColor: "#15aabf" },
@@ -39,6 +41,7 @@ const ITEMS: readonly KillerItem[] = [
   { id: "pos", icon: ChefHatIcon, accentColor: "#7048e8" },
   { id: "loyalty", icon: GiftIcon, accentColor: "#c2255c" },
   { id: "money", icon: LockIcon, accentColor: "#2f9e44" },
+  { id: "qr", icon: QrCodeIcon, accentColor: "#e8590c" },
 ] as const;
 
 function KillerCard({ item, index }: { item: KillerItem; index: number }) {

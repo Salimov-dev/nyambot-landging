@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/icons/icons";
 import Link from "next/link";
 import { FreeReviewSection } from "@/components/sections/free-review/free-review-section";
+import { DemoQrBlock } from "@/components/sections/try-demo/demo-qr-block";
 import { LandingPageCta } from "./landing-page-cta";
 import { LandingPageShell } from "./landing-page-shell";
 import styles from "./landing-page.module.css";
@@ -76,6 +77,10 @@ export function LandingPage({ content }: IProps) {
         <p className={styles.lead}>{content.lead}</p>
 
         <LandingPageCta />
+
+        {/* Страница про общий QR-код показывает сам код: навести телефон
+            убедительнее любого описания */}
+        {content.demoQr ? <DemoQrBlock showMore={false} inPage /> : null}
 
         <div className={styles.blocks}>
           {content.blocks.map((block) => {

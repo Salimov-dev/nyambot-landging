@@ -115,6 +115,9 @@ export function Footer() {
               >
                 {t("solutions.items.ownChannels.title")}
               </Link>
+              <Link href={LINKS.pages.qrCode} className={styles.footerLink}>
+                {t("solutions.items.qrCode.title")}
+              </Link>
               <Link href={LINKS.pages.security} className={styles.footerLink}>
                 {t("solutions.items.security.title")}
               </Link>

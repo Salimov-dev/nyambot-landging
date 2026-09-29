@@ -62,6 +62,11 @@ const SOLUTION_LINKS = [
     href: LINKS.pages.ownChannels,
   },
   {
+    id: "qrCode",
+    labelKey: "solutions.items.qrCode.title",
+    href: LINKS.pages.qrCode,
+  },
+  {
     id: "security",
     labelKey: "solutions.items.security.title",
     href: LINKS.pages.security,

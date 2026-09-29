@@ -171,3 +171,116 @@
     margin-top: 40px;
   }
 }
+
+/* Общий QR-код демо: картинка слева, текст справа; на телефоне — столбиком */
+.qrBlock {
+  margin: 40px auto 0;
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 28px;
+  background: var(--gradient-card-accent);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg, 20px);
+}
+
+/* На посадочной: ширина — как у карточек под ним, отступ — как у кнопок над ним */
+.qrBlockInPage {
+  max-width: none;
+  margin: 0 0 36px;
+}
+
+.qrImageWrap {
+  flex-shrink: 0;
+  display: block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 16px;
+  line-height: 0;
+}
+
+.qrContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.qrTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.qrTitle svg {
+  color: var(--accent);
+}
+
+.qrText {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.qrActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.qrPrimary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: var(--gradient-primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.qrPrimary:hover {
+  filter: brightness(1.06);
+  color: #fff;
+}
+
+.qrSecondary {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.qrSecondary:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .qrBlock,
+  .qrBlockInPage {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 24px 16px;
+    margin-top: 32px;
+  }
+  .qrBlockInPage {
+    margin: 0 0 28px;
+  }
+  .qrImageWrap {
+    align-self: center;
+  }
+  .qrTitle {
+    justify-content: center;
+  }
+  .qrActions {
+    justify-content: center;
+  }
+}

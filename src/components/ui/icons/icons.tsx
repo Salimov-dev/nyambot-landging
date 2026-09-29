@@ -397,3 +397,15 @@ export function CloseIcon({ size = DEFAULT_SIZE, className }: IconProps) {
     </svg>
   );
 }
+
+/** Общий QR-код на MAX и Телеграм: три угловых маркера и точка данных. */
+export function QrCodeIcon({ size = DEFAULT_SIZE, className }: IconProps) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <rect x="3" y="3" width="7" height="7" rx="1" />
+      <rect x="14" y="3" width="7" height="7" rx="1" />
+      <rect x="3" y="14" width="7" height="7" rx="1" />
+      <path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3" />
+    </svg>
+  );
+}

@@ -12,6 +12,7 @@ import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import { HandIcon, CheckIcon } from "@/components/ui/icons/icons";
+import { DemoQrBlock } from "./demo-qr-block";
 import styles from "./try-demo-section.module.css";
 
 const { Title, Text } = Typography;
@@ -218,6 +219,9 @@ export function TryDemoSection() {
             </motion.div>
           </Col>
         </Row>
+
+        {/* Общий QR-код демо: с компьютера — навести телефон, с телефона — нажать */}
+        <DemoQrBlock />
 
         {/* CRM CTA */}
         <motion.div

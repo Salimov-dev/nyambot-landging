@@ -41,7 +41,7 @@
   "killer": {
     "label": "Key points",
     "title": "What works differently here",
-    "subtitle": "Eight differences — and the things you won't have to do",
+    "subtitle": "Six things that make up the channel's revenue",
     "notPrefix": "No need to",
     "notNeeded": "switch your POS · set up a bot for every location · ask guests to install an app · pay for onboarding",
     "items": {
@@ -64,6 +64,10 @@
       "money": {
         "title": "Order money goes straight to you — refunds only by your call",
         "text": "The guest pays online right in the mini-app — the money goes straight to your YooKassa or Yandex.Pay account. Not a rouble goes back without your button: neither the till nor an employee can refund an online payment"
+      },
+      "qr": {
+        "title": "One QR code for MAX and Telegram",
+        "text": "The guest scans the code and picks the messenger. Keep the code on your own domain and it stays yours even if you leave Nyambot"
       }
     },
     "pricingNote": "One plan — every feature, no limits. Prices are on this page, not «on request»",
@@ -148,7 +152,11 @@
     "maxCta": "Open in MAX",
     "crmHint": "Want to evaluate CRM from the owner's side?",
     "crmCta": "Register in CRM",
-    "crmTrial": "30 days free · Full access · Full support · No card"
+    "crmTrial": "30 days free · Full access · Full support · No card",
+    "qrTitle": "One QR code for both messengers",
+    "qrText": "Point your phone camera at it — the same choice page your guests will see opens. You print one code on packaging, in the hall and in ads instead of two.",
+    "qrOpen": "Open the choice page",
+    "qrMore": "How it works"
   },
   "pricing": {
     "label": "Pricing",
@@ -359,6 +367,10 @@
       "ownChannels": {
         "title": "Website or app",
         "text": "How a messenger channel differs from a website and your own app — and why it belongs next to them"
+      },
+      "qrCode": {
+        "title": "Shared QR code",
+        "text": "One code on packaging and in ads: the guest picks the messenger, and on your own domain the code stays yours"
       },
       "security": {
         "title": "Data security",
