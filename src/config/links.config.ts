@@ -1,3 +1,14 @@
+import {
+  buildDemoBotLink,
+  DEMO_START_SOURCE,
+} from "@/shared/utm-rules/utm-rules.shared";
+
+/** Демо-боты «Кусочка» — голые ссылки; по сайту ходят только с источником. */
+const DEMO_BOTS = {
+  telegram: "https://t.me/kusochek_demo_bot",
+  max: "https://max.ru/id183401217970_bot",
+} as const;
+
 export const LINKS = {
   crm: "https://crm.nyambot.ru",
   /** СРМ сразу на регистрации — для кнопок, которые обещают «зарегистрироваться»:
@@ -15,8 +26,13 @@ export const LINKS = {
   },
 
   demo: {
-    telegram: "https://t.me/kusochek_demo_bot",
-    max: "https://max.ru/id183401217970_bot",
+    ...DEMO_BOTS,
+    /** Кнопки демо на лендинге и посадочных: бот считает «Старт» по источнику
+     *  `?start=src_landing` (план «UTM-метки», Ф4). */
+    fromLanding: {
+      telegram: buildDemoBotLink(DEMO_BOTS.telegram, DEMO_START_SOURCE.LANDING),
+      max: buildDemoBotLink(DEMO_BOTS.max, DEMO_START_SOURCE.LANDING),
+    },
     /** Общий QR-код демо: страница выбора «MAX или Телеграм» — та же, что у
      *  заведений на Нямботе (`/go/<адрес>`). */
     chooser: "/demo",

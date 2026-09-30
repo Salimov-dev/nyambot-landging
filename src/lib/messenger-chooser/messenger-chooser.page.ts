@@ -22,8 +22,6 @@ import {
  * нас, поэтому в нём нет ни одной внешней зависимости — стили и скрипт внутри.
  */
 
-const NYAMBOT_URL = "https://nyambot.ru";
-
 /** Имя метки скачанного файла — то же читает проверка домена в main-server. */
 const FILE_MARKER_META = "nyambot-qr";
 
@@ -139,8 +137,8 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     ? ""
     : `<p class="note">${escapeHtml(CHOOSER_TEXT.sameEverywhere)}</p>`;
 
-  const powered = params.poweredBy
-    ? `<a class="powered" href="${NYAMBOT_URL}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_TEXT.poweredByPrefix)} <span class="brand">${escapeHtml(CHOOSER_TEXT.poweredByBrand)}</span></a>`
+  const powered = params.poweredByUrl
+    ? `<a class="powered" href="${escapeHtml(params.poweredByUrl)}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_TEXT.poweredByPrefix)} <span class="brand">${escapeHtml(CHOOSER_TEXT.poweredByBrand)}</span></a>`
     : "";
 
   const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1><p class="lead">${lead}</p><div class="buttons">${buttons}</div>${note}${powered}</main>`;

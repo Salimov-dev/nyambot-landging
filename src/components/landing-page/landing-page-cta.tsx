@@ -31,7 +31,7 @@ export function LandingPageCta() {
           {CTA_TEXT.primary}
         </Link>
         <a
-          href={LINKS.demo.max}
+          href={LINKS.demo.fromLanding.max}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.secondaryBtn}
@@ -40,7 +40,7 @@ export function LandingPageCta() {
           {CTA_TEXT.demoMax}
         </a>
         <a
-          href={LINKS.demo.telegram}
+          href={LINKS.demo.fromLanding.telegram}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.secondaryBtn}

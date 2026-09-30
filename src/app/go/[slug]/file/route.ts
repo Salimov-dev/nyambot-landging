@@ -46,7 +46,7 @@ export async function GET(_request: Request, context: IRouteContext) {
     renderChooserPage({
       title: result.data.title,
       targets: result.data.targets,
-      poweredBy: false,
+      poweredByUrl: null,
       fileMarker: slug,
       // Лого вклеено data-URI — файл на домене клиента от нас не зависит.
       logo: result.data.logo,

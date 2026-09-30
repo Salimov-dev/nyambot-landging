@@ -1,5 +1,10 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { LEAD_API } from "@/config/zapusk-page.config";
+import {
+  parseUtmCookie,
+  UTM_COOKIE,
+  type UtmMarks,
+} from "@/shared/utm-rules/utm-rules.shared";
 
 /**
  * Заявка на разбор сайта: браузер → сервер лендинга → main-server.
@@ -38,6 +43,23 @@ const visitorIpOf = (request: NextRequest): string => {
   if (real) return real;
   const forwarded = request.headers.get("x-forwarded-for")?.split(",");
   return forwarded?.[forwarded.length - 1]?.trim() ?? "";
+};
+
+/**
+ * Метки перехода из куки `nb_utm` (план «UTM-метки», Ф3): откуда пришёл
+ * человек, оставивший заявку. Читаем сырой заголовок: `request.cookies`
+ * раскодирует значение сам, и второе раскодирование в `parseUtmCookie`
+ * испортило бы метку со знаком «%».
+ */
+const utmOf = (request: NextRequest): UtmMarks | null => {
+  const prefix = `${UTM_COOKIE.NAME}=`;
+  const raw = request.headers
+    .get("cookie")
+    ?.split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(prefix))
+    ?.slice(prefix.length);
+  return parseUtmCookie(raw);
 };
 
 const pickBody = (raw: unknown): Record<string, unknown> => {
@@ -85,6 +107,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         ...pickBody(raw),
         visitorIp: visitorIpOf(request),
+        utm: utmOf(request),
       }),
       signal: AbortSignal.timeout(LEAD_API.TIMEOUT_MS),
       cache: "no-store",

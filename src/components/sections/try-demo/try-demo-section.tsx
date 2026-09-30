@@ -139,7 +139,7 @@ export function TryDemoSection() {
                 <Button
                   type="primary"
                   size="large"
-                  href={LINKS.demo.max}
+                  href={LINKS.demo.fromLanding.max}
                   target="_blank"
                   className={styles.maxBtn}
                   block
@@ -207,7 +207,7 @@ export function TryDemoSection() {
                 <Button
                   type="primary"
                   size="large"
-                  href={LINKS.demo.telegram}
+                  href={LINKS.demo.fromLanding.telegram}
                   target="_blank"
                   className={styles.tgBtn}
                   block

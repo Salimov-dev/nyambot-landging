@@ -1,4 +1,5 @@
 import { htmlResponse } from "@/lib/messenger-chooser/chooser-response";
+import { qrPagePoweredByUrl } from "@/lib/messenger-chooser/chooser-tracking";
 import {
   renderChooserMessagePage,
   renderChooserPage,
@@ -69,7 +70,7 @@ export async function GET(_request: Request, context: IRouteContext) {
     renderChooserPage({
       title: data.title,
       targets,
-      poweredBy: true,
+      poweredByUrl: qrPagePoweredByUrl(slug),
       logo: data.logo,
       colorScheme: data.colorScheme,
     }),

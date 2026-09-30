@@ -39,6 +39,7 @@ export function DemoQrBlock({
       <a
         href={LINKS.demo.chooser}
         target="_blank"
+        onClick={() => reachGoal("open_demo_chooser")}
         rel="noopener noreferrer"
         className={styles.qrImageWrap}
         aria-label={t("tryDemo.qrOpen")}
@@ -61,6 +62,7 @@ export function DemoQrBlock({
           <a
             href={LINKS.demo.chooser}
             target="_blank"
+            onClick={() => reachGoal("open_demo_chooser")}
             rel="noopener noreferrer"
             className={styles.qrPrimary}
           >

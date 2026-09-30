@@ -31,6 +31,9 @@ export type MetrikaGoal =
   // Демо-боты
   | "click_max_demo"
   | "click_tg_bot"
+  /** Демо-QR на лендинге открыт кнопкой или нажатием на картинку, а не
+   *  сканом — скан приходит на `/demo` с `utm_campaign=demo_qr` */
+  | "open_demo_chooser"
   /** Общий QR-код демо (`/demo`): гость выбрал мессенджер */
   | "click_qr_demo_max"
   | "click_qr_demo_tg"
