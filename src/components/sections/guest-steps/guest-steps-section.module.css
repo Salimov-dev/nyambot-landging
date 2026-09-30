@@ -132,9 +132,3 @@
     text-align: left;
   }
 }
-
-/* Короткие подписи в две строки — без одинокого слова в конце (Руслан 30.09). */
-.itemTitle,
-.itemText {
-  text-wrap: balance;
-}

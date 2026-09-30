@@ -40,7 +40,8 @@
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  text-wrap: balance;
+  /* Выровнен влево — balance сужал строки, заголовок «прижимался» (30.09). */
+  text-wrap: pretty;
 }
 
 .items {
@@ -180,6 +181,14 @@
 
   .card {
     padding: 28px 22px;
+  }
+
+  /* На телефоне заголовок по центру, как у соседних секций (Руслан 30.09):
+     слева он смотрелся прижатым. По центру balance делит строки ровно. */
+  .title {
+    text-align: center;
+    margin-inline: auto;
+    text-wrap: balance;
   }
 
   /* Текст целиком в одну строку: на 390 px с отступами по 36 px он

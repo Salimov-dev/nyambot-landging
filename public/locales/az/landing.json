@@ -16,7 +16,7 @@
     "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
     "cta": "Pulsuz başla",
     "ctaSecondary": "Demoya bax",
-    "trial": "30 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
+    "trial": "30 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
   },
   "freeReview": {
     "title": "Müəssisəni pulsuz təhlil edib botlarda nə olacağını göstərəcəyik",
@@ -43,7 +43,7 @@
     "title": "Burada nə fərqlidir",
     "subtitle": "Kanalın gəlirini təşkil edən altı şey",
     "notPrefix": "Lazım deyil",
-    "notNeeded": "kassanı dəyişmək · hər nöqtəyə ayrıca bot açmaq · qonaqdan tətbiq quraşdırmağı xahiş etmək · tətbiq üçün pul ödəmək",
+    "notNeeded": "kassanı dəyişmək · hər nöqtəyə ayrıca bot açmaq · qonaqdan tətbiq quraşdırmağı xahiş etmək · tətbiq üçün pul ödəmək",
     "items": {
       "network": {
         "title": "Bütün şəbəkəyə bir bot",
@@ -131,7 +131,7 @@
     "description": "Menyu, sifarişlər, analitika, marketinq və bütün şəbəkənin ümumi qonaq bazası — bir yerdə. İşə salmanı biz edirik, sonra özün proqramçısız idarə edirsən.",
     "ownDev": "Öz işləməmiz, konstruktor deyil — funksiyalara və etibarlılığa cavabdehik",
     "cta": "CRM açmaq — 30 gün pulsuz",
-    "ctaHint": "Tam giriş · Tam dəstək · Kart tələb olunmur",
+    "ctaHint": "Tam giriş · Tam dəstək · Kart tələb olunmur",
     "features": {
       "dashboard": "Gəlir dashboardu",
       "orders": "Real vaxtda sifarişlər",
@@ -152,7 +152,7 @@
     "maxCta": "MAX-da açın",
     "crmHint": "CRM-ni sahibin tərəfindən qiymətləndirmək istəyirsiniz?",
     "crmCta": "CRM-də qeydiyyatdan keçin",
-    "crmTrial": "30 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil",
+    "crmTrial": "30 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil",
     "qrTitle": "Hər iki messencer üçün bir QR-kod",
     "qrText": "Telefonun kamerasını tut — qonaqlarının görəcəyi eyni seçim səhifəsi açılacaq. Qablaşdırmada, zalda və reklamda iki əvəzinə bir kod çap edirsən.",
     "qrOpen": "Seçim səhifəsini aç",
@@ -187,7 +187,7 @@
     "customTitle": "Şəbəkən var?",
     "customSubtitle": "2 ticarət nöqtəsindən — miqyasına uyğun fərdi tarif. Sınaq dövrü də standart şərtlərlə: 1 nöqtə və 2 bot — şəbəkə üçün şərtləri ayrıca müzakirə edirik. Məktub yazmadan da yoxlaya bilərsən: qeydiyyat hamıya açıqdır",
     "emailCta": "Poçt",
-    "freeTrial": "0 ₽ · ilk 30 gün",
+    "freeTrial": "0 ₽ · ilk 30 gün",
     "connectTitle": "Sistemə qoşursan",
     "connectItems": [
       "1 ticarət nöqtəsi",
@@ -248,7 +248,7 @@
     "subtitle": "30 gün ödənişsiz. Tam funksionallıq, tam dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
     "button": "Pulsuz təhlil al",
     "docs": "Sənədləri oxuyun",
-    "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Başlanğıcda 1 nöqtə və 2 bot",
+    "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Başlanğıcda 1 nöqtə və 2 bot",
     "trialFeatures": ["30 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
@@ -268,7 +268,7 @@
     "cookies": "Cookies siyasəti",
     "tariffs": "Tariflər və standartlar",
     "allRights": "Bütün hüquqlar qorunur",
-    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
+    "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
     "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram və MAX adları və loqotipləri onların hüquq sahiblərinə məxsusdur və uyğunluğu göstərmək üçün istifadə olunub",
     "pageIiko": "Nyambot və iiko",
     "pageRkeeper": "Nyambot və R-Keeper",

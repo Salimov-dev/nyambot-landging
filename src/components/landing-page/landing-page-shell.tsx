@@ -47,7 +47,7 @@ export function LandingPageShell({
 
       <footer className={styles.footer}>
         <span>
-          © {new Date().getFullYear()} {BRAND_CONFIG.name} · {SHELL_TEXT.rights}
+          © {new Date().getFullYear()} {BRAND_CONFIG.name} · {SHELL_TEXT.rights}
         </span>
         <Link href={LINKS.legal.offer} className={styles.footerLink}>
           {SHELL_TEXT.legal}

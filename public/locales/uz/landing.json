@@ -16,7 +16,7 @@
     "subtitle": "Bitta nuqta va butun tarmoq uchun: kafelar, restoranlar, nonvoyxonalar, yetkazib berish. Mehmonlar bazasi, buyurtmalar tarixi va ballar ikkala messenjerda umumiy, menyu, narxlar va yetkazib berish hududi esa har bir nuqtaning oʻziniki",
     "cta": "Bepul boshlash",
     "ctaSecondary": "Demoni ko'rish",
-    "trial": "30 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz"
+    "trial": "30 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz"
   },
   "freeReview": {
     "title": "Muassasangizni bepul tahlil qilib, botlarda nima boʻlishini koʻrsatamiz",
@@ -43,7 +43,7 @@
     "title": "Bu yerda nima boshqacha",
     "subtitle": "Kanal daromadini tashkil etadigan oltita narsa",
     "notPrefix": "Shart emas",
-    "notNeeded": "kassani almashtirish · har bir nuqtaga alohida bot ochish · mehmondan ilova o‘rnatishni so‘rash · joriy etish uchun pul toʻlash",
+    "notNeeded": "kassani almashtirish · har bir nuqtaga alohida bot ochish · mehmondan ilova o‘rnatishni so‘rash · joriy etish uchun pul toʻlash",
     "items": {
       "network": {
         "title": "Butun tarmoqqa bitta bot",
@@ -131,7 +131,7 @@
     "description": "Menyu, buyurtmalar, tahlil, marketing va butun tarmoqning umumiy mehmonlar bazasi — bir joyda. Ishga tushirishni biz qilamiz, keyin oʻzing programmistlarsiz yuritasan.",
     "ownDev": "O'z ishlanmamiz, konstruktor emas — funksiyalar va ishonchlilik uchun javob beramiz",
     "cta": "CRM ni ochish — 30 kun bepul",
-    "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
+    "ctaHint": "To'liq kirish · To'liq qo'llab-quvvatlash · Karta talab qilinmaydi",
     "features": {
       "dashboard": "Daromad dashboardi",
       "orders": "Real vaqtda buyurtmalar",
@@ -152,7 +152,7 @@
     "maxCta": "MAX'da ochish",
     "crmHint": "CRM'ni egasi tomonidan baholamoqchimisiz?",
     "crmCta": "CRM'ga ro'yxatdan o'tish",
-    "crmTrial": "30 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas",
+    "crmTrial": "30 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas",
     "qrTitle": "Ikkala messenjer uchun bitta QR-kod",
     "qrText": "Telefon kamerasini to‘g‘rila — mehmonlaring ko‘radigan tanlash sahifasi ochiladi. Qadoqda, zalda va reklamada ikkita o‘rniga bitta kod chop etasan.",
     "qrOpen": "Tanlash sahifasini ochish",
@@ -187,7 +187,7 @@
     "customTitle": "Tarmog'ing bormi?",
     "customSubtitle": "2 ta savdo nuqtasidan — miqyosingizga mos individual tarif. Sinov muddati ham standart shartlarda: 1 nuqta va 2 bot — tarmoq uchun shartlarni alohida muhokama qilamiz. Xat yozmasdan ham sinab koʻrish mumkin: roʻyxatdan oʻtish hammaga ochiq",
     "emailCta": "Pochta",
-    "freeTrial": "0 ₽ · birinchi 30 kun",
+    "freeTrial": "0 ₽ · birinchi 30 kun",
     "connectTitle": "Tizimga ulaysan",
     "connectItems": [
       "1 savdo nuqtasi",
@@ -248,7 +248,7 @@
     "subtitle": "30 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
     "button": "Bepul tahlil olish",
     "docs": "Hujjatlarni o'qish",
-    "hint": "Faqat pochta kerak · Kartasiz · Boshida 1 nuqta va 2 bot",
+    "hint": "Faqat pochta kerak · Kartasiz · Boshida 1 nuqta va 2 bot",
     "trialFeatures": ["30 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
@@ -268,7 +268,7 @@
     "cookies": "Cookies siyosati",
     "tariffs": "Tariflar va standartlar",
     "allRights": "Barcha huquqlar himoyalangan",
-    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ",
+    "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ",
     "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram va MAX nomlari va logotiplari o'z huquq egalariga tegishli bo'lib, moslikni ko'rsatish uchun ishlatilgan",
     "pageIiko": "Nyambot va iiko",
     "pageRkeeper": "Nyambot va R-Keeper",

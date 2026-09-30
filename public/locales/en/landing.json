@@ -16,7 +16,7 @@
     "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors",
     "cta": "Start free",
     "ctaSecondary": "See demo",
-    "trial": "30 days free · only an email needed · no card, no sales call"
+    "trial": "30 days free · only an email needed · no card, no sales call"
   },
   "freeReview": {
     "title": "We'll review your venue for free and show what your bots will look like",
@@ -43,7 +43,7 @@
     "title": "What works differently here",
     "subtitle": "Six things that make up the channel's revenue",
     "notPrefix": "No need to",
-    "notNeeded": "switch your POS · set up a bot for every location · ask guests to install an app · pay for onboarding",
+    "notNeeded": "switch your POS · set up a bot for every location · ask guests to install an app · pay for onboarding",
     "items": {
       "network": {
         "title": "One bot for the whole chain",
@@ -131,7 +131,7 @@
     "description": "Menu, orders, analytics, marketing and a shared guest base for the whole chain — in one place. We launch it, then you run it yourself, no developers.",
     "ownDev": "Our own product, not a builder — we answer for features and reliability",
     "cta": "Open CRM — 30 days free",
-    "ctaHint": "Full access · Full support · No card required",
+    "ctaHint": "Full access · Full support · No card required",
     "features": {
       "dashboard": "Revenue dashboard",
       "orders": "Real-time orders",
@@ -152,7 +152,7 @@
     "maxCta": "Open in MAX",
     "crmHint": "Want to evaluate CRM from the owner's side?",
     "crmCta": "Register in CRM",
-    "crmTrial": "30 days free · Full access · Full support · No card",
+    "crmTrial": "30 days free · Full access · Full support · No card",
     "qrTitle": "One QR code for both messengers",
     "qrText": "Point your phone camera at it — the same choice page your guests will see opens. You print one code on packaging, in the hall and in ads instead of two.",
     "qrOpen": "Open the choice page",
@@ -187,7 +187,7 @@
     "customTitle": "Running a chain?",
     "customSubtitle": "From 2 locations — a custom plan for your scale. The trial runs on standard terms too: 1 location and 2 bots — for a chain we agree terms separately. You can try it without writing to us: sign-up is open to everyone",
     "emailCta": "Email",
-    "freeTrial": "0 ₽ · first 30 days",
+    "freeTrial": "0 ₽ · first 30 days",
     "connectTitle": "You connect to the system",
     "connectItems": [
       "1 venue",
@@ -248,7 +248,7 @@
     "subtitle": "30 days free. Full features, full support. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
     "button": "Get a free review",
     "docs": "Read documentation",
-    "hint": "Only an email needed · No card required · 1 location and 2 bots to start",
+    "hint": "Only an email needed · No card required · 1 location and 2 bots to start",
     "trialFeatures": ["30 days free", "Full access", "No card required"]
   },
   "footer": {
@@ -268,7 +268,7 @@
     "cookies": "Cookie Policy",
     "tariffs": "Plans and standards",
     "allRights": "All rights reserved",
-    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
+    "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
     "trademarks": "The names and logos of iiko, R-Keeper, YooKassa, Yandex Pay, Yandex Delivery, Telegram and MAX belong to their respective owners and are used to indicate compatibility",
     "pageIiko": "Nyambot and iiko",
     "pageRkeeper": "Nyambot and R-Keeper",

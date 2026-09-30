@@ -207,16 +207,19 @@
   min-width: 0;
 }
 
+/* Иконка — часть первой строки текста: во flex-ряду при переносе заголовка
+   на две строки она висела отдельно посередине слева (Руслан 30.09). */
 .qrTitle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: block;
   color: var(--text-primary);
   font-size: 20px;
   font-weight: 700;
 }
 
 .qrTitle svg {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: -3px;
   color: var(--accent);
 }
 
@@ -283,9 +286,4 @@
   .qrActions {
     justify-content: center;
   }
-}
-
-/* Короткие подписи в две строки — без одинокого слова в конце (Руслан 30.09). */
-.qrTitle {
-  text-wrap: balance;
 }
