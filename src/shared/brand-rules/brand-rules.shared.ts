@@ -8,7 +8,7 @@
 // Правка этого файла мимо источника падает тестом «копия совпадает с
 // источником» — обойти синхронизацию незаметно нельзя.
 //
-// SOURCE_SHA256: 31424ef56b2c375abd03e65864c1beebadf83ee9daba7c445806cf41a7d62a3e
+// SOURCE_SHA256: 60e7add9c578b1d79e3fd090291245bac742ca23704b82fe26fb65b449b3802c
 // ────────────────────────────────────────────────────────────────────────────
 
 /**
@@ -68,6 +68,14 @@ export interface BrandPalette {
   onAccent: string;
   /** Плотный фон активного элемента в плоском режиме MAX: `"r, g, b"`. */
   flatRgb: string;
+  /**
+   * Акцентный текст и иконки на тёмном и подкрашенном акцентом фоне. У тёмных
+   * схем светлее акцента: красный текст на красной подложке не читается
+   * (находка Руслана 30.09 на «Кусочке»). У Нямбота = акцент.
+   */
+  accentText: string;
+  /** Текст выбранного сегмента и пункта списка — у Нямбота мягче акцента. */
+  accentTextSoft: string;
 }
 
 /**
@@ -75,7 +83,7 @@ export interface BrandPalette {
  * не здесь: каталог общий для четырёх проектов и живёт без языка.
  */
 export interface BrandColorScheme {
-  key: BrandColorSchemeKey;
+  key: BrandColorSchemeKey | CustomColorSchemeKey;
   palette: BrandPalette;
 }
 
@@ -88,6 +96,8 @@ export const NYAMBOT_COLOR_SCHEME: BrandColorScheme = {
     accentRgb: "255, 140, 0",
     onAccent: "#ffffff",
     flatRgb: "120, 66, 0",
+    accentText: "#ff8c00",
+    accentTextSoft: "#ffb45a",
   },
 };
 
@@ -102,6 +112,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "229, 57, 53",
       onAccent: "#ffffff",
       flatRgb: "112, 24, 22",
+      accentText: "#ed7472",
+      accentTextSoft: "#ed7472",
     },
   },
   {
@@ -112,6 +124,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "184, 50, 80",
       onAccent: "#ffffff",
       flatRgb: "92, 22, 38",
+      accentText: "#d17a8d",
+      accentTextSoft: "#d17a8d",
     },
   },
   {
@@ -122,6 +136,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "236, 64, 122",
       onAccent: "#ffffff",
       flatRgb: "112, 26, 56",
+      accentText: "#f1709b",
+      accentTextSoft: "#f1709b",
     },
   },
   {
@@ -132,6 +148,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "156, 92, 255",
       onAccent: "#ffffff",
       flatRgb: "66, 34, 118",
+      accentText: "#b585ff",
+      accentTextSoft: "#b585ff",
     },
   },
   {
@@ -142,6 +160,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "47, 128, 237",
       onAccent: "#ffffff",
       flatRgb: "20, 56, 110",
+      accentText: "#63a0f2",
+      accentTextSoft: "#63a0f2",
     },
   },
   {
@@ -152,6 +172,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "20, 184, 166",
       onAccent: "#ffffff",
       flatRgb: "8, 78, 70",
+      accentText: "#20bcaa",
+      accentTextSoft: "#20bcaa",
     },
   },
   {
@@ -162,6 +184,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "67, 160, 71",
       onAccent: "#ffffff",
       flatRgb: "26, 72, 28",
+      accentText: "#69b36c",
+      accentTextSoft: "#69b36c",
     },
   },
   {
@@ -172,6 +196,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "224, 168, 0",
       onAccent: "#1a1a1a",
       flatRgb: "104, 76, 0",
+      accentText: "#e0a800",
+      accentTextSoft: "#e0a800",
     },
   },
   {
@@ -182,6 +208,8 @@ export const BRAND_COLOR_SCHEMES: readonly BrandColorScheme[] = [
       accentRgb: "176, 122, 79",
       onAccent: "#ffffff",
       flatRgb: "80, 52, 30",
+      accentText: "#c09572",
+      accentTextSoft: "#c09572",
     },
   },
 ];
@@ -190,20 +218,57 @@ const SCHEME_BY_KEY: ReadonlyMap<string, BrandColorScheme> = new Map(
   BRAND_COLOR_SCHEMES.map((scheme) => [scheme.key, scheme]),
 );
 
-/** Ключ из каталога? Для проверки ввода API и формы. */
+/**
+ * «Свой цвет» (Руслан 30.09): ключ `custom:#rrggbb`. Палитра считается из
+ * одного цвета (`derivePaletteFromColor`), читаемость проверяется тем же
+ * порогом, что у готовых схем: акцент на фоне витрины — не ниже 3:1.
+ */
+export const CUSTOM_COLOR_SCHEME_PREFIX = "custom:";
+
+export type CustomColorSchemeKey = `custom:#${string}`;
+
+const HEX_COLOR = /^#[0-9a-f]{6}$/i;
+
+/** Цвет из ключа `custom:#rrggbb` (в нижнем регистре) или `null`. */
+export const parseCustomColor = (
+  key: string | null | undefined,
+): string | null => {
+  if (!key?.startsWith(CUSTOM_COLOR_SCHEME_PREFIX)) return null;
+  const hex = key.slice(CUSTOM_COLOR_SCHEME_PREFIX.length);
+  return HEX_COLOR.test(hex) ? hex.toLowerCase() : null;
+};
+
+export const toCustomColorSchemeKey = (hex: string): CustomColorSchemeKey =>
+  `${CUSTOM_COLOR_SCHEME_PREFIX}${hex.toLowerCase()}` as CustomColorSchemeKey;
+
+/** Ключ из каталога или читаемый свой цвет? Для проверки ввода API и формы. */
 export const isColorSchemeKey = (
   value: unknown,
-): value is BrandColorSchemeKey =>
-  typeof value === "string" && SCHEME_BY_KEY.has(value);
+): value is BrandColorSchemeKey | CustomColorSchemeKey => {
+  if (typeof value !== "string") return false;
+  if (SCHEME_BY_KEY.has(value)) return true;
+  const custom = parseCustomColor(value);
+  return custom !== null && isCustomColorReadable(custom);
+};
 
 /**
  * Схема по ключу из базы. `null`, пустой и неизвестный ключ → Нямбот (Р4):
  * убранная из каталога схема не ломает витрину, а возвращает цвета по умолчанию.
+ * Свой цвет, который не читается, витрина берёт ближайшим читаемым оттенком.
  */
 export const resolveColorScheme = (
   key: string | null | undefined,
-): BrandColorScheme =>
-  (key ? SCHEME_BY_KEY.get(key) : undefined) ?? NYAMBOT_COLOR_SCHEME;
+): BrandColorScheme => {
+  const custom = parseCustomColor(key);
+  if (custom) {
+    const readable = nearestReadableColor(custom);
+    return {
+      key: toCustomColorSchemeKey(readable),
+      palette: derivePaletteFromColor(readable),
+    };
+  }
+  return (key ? SCHEME_BY_KEY.get(key) : undefined) ?? NYAMBOT_COLOR_SCHEME;
+};
 
 /**
  * Ключ для записи в базу: схема Нямбота хранится как `null` — «бренд не
@@ -211,7 +276,7 @@ export const resolveColorScheme = (
  */
 export const toStoredColorScheme = (
   key: string | null | undefined,
-): BrandColorSchemeKey | null => {
+): BrandColorSchemeKey | CustomColorSchemeKey | null => {
   const scheme = resolveColorScheme(key);
   return scheme.key === BRAND_COLOR_SCHEME.NYAMBOT ? null : scheme.key;
 };
@@ -264,4 +329,107 @@ export const rgbChannelsToHex = (channels: string): string => {
   }
 
   return `#${parts.map((part) => part.toString(16).padStart(2, "0")).join("")}`;
+};
+
+/** Порог читаемости акцента на фоне витрины — у готовых схем и у своего цвета. */
+export const ACCENT_ON_BACKGROUND_MIN = 3;
+/** Порог светлого текста на подкрашенном акцентом фоне. */
+export const ACCENT_TEXT_ON_TINT_MIN = 4.5;
+/** Насколько акцент подкрашивает подложку чипа и сегмента в витрине. */
+export const ACCENT_TINT_ALPHA = 0.32;
+
+const hexToChannels = (hex: string): [number, number, number] => [
+  Number.parseInt(hex.slice(1, 3), 16),
+  Number.parseInt(hex.slice(3, 5), 16),
+  Number.parseInt(hex.slice(5, 7), 16),
+];
+
+const channelsToHex = (channels: readonly number[]): string =>
+  `#${channels
+    .map((value) =>
+      Math.round(Math.min(255, Math.max(0, value)))
+        .toString(16)
+        .padStart(2, "0"),
+    )
+    .join("")}`;
+
+/** Цвет, смешанный с `target` на долю `share` (0 — исходный, 1 — target). */
+const mixColors = (hex: string, target: string, share: number): string => {
+  const from = hexToChannels(hex);
+  const to = hexToChannels(target);
+  return channelsToHex(
+    from.map((value, index) => value + ((to[index] ?? 0) - value) * share),
+  );
+};
+
+/** Цвет поверх фона с прозрачностью — как его видит глаз. */
+export const blendOver = (
+  hex: string,
+  alpha: number,
+  background: string,
+): string => mixColors(background, hex, alpha);
+
+const WHITE = "#ffffff";
+const BLACK = "#000000";
+const DARK_TEXT = "#1a1a1a";
+const MIX_STEP = 0.05;
+
+/** Осветлять белым, пока контраст с `against` не дорастёт до `min`. */
+const lightenUntil = (
+  hex: string,
+  against: (color: string) => string,
+  min: number,
+): string => {
+  let color = hex;
+  for (
+    let share = MIX_STEP;
+    contrastRatio(color, against(color)) < min && share <= 1;
+    share += MIX_STEP
+  ) {
+    color = mixColors(hex, WHITE, share);
+  }
+  return color;
+};
+
+/** Читается ли свой цвет на фоне витрины. */
+export const isCustomColorReadable = (hex: string): boolean =>
+  HEX_COLOR.test(hex) &&
+  contrastRatio(hex, BRAND_SURFACE_BACKGROUND) >= ACCENT_ON_BACKGROUND_MIN;
+
+/** Ближайший читаемый оттенок: тот же цвет, осветлённый ровно настолько, насколько нужно. */
+export const nearestReadableColor = (hex: string): string =>
+  lightenUntil(
+    hex.toLowerCase(),
+    () => BRAND_SURFACE_BACKGROUND,
+    ACCENT_ON_BACKGROUND_MIN,
+  );
+
+/**
+ * Палитра из одного цвета — для «Своего цвета». Готовые схемы подобраны руками,
+ * здесь то же самое считается: тёмный конец градиента — на 15 % темнее, текст
+ * на кнопке — белый или тёмный, что читается лучше, плоский фон MAX — глубокая
+ * тень цвета, светлый текст — осветление до порога на подкрашенном фоне.
+ */
+export const derivePaletteFromColor = (input: string): BrandPalette => {
+  const accent = input.toLowerCase();
+  const channels = hexToChannels(accent);
+  const accentText = lightenUntil(
+    accent,
+    () => blendOver(accent, ACCENT_TINT_ALPHA, BRAND_SURFACE_BACKGROUND),
+    ACCENT_TEXT_ON_TINT_MIN,
+  );
+  const flat = hexToChannels(mixColors(accent, BLACK, 0.6));
+
+  return {
+    accent,
+    accentDark: mixColors(accent, BLACK, 0.15),
+    accentRgb: channels.join(", "),
+    onAccent:
+      contrastRatio(WHITE, accent) >= contrastRatio(DARK_TEXT, accent)
+        ? WHITE
+        : DARK_TEXT,
+    flatRgb: flat.join(", "),
+    accentText,
+    accentTextSoft: accentText,
+  };
 };

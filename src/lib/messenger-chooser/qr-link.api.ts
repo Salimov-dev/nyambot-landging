@@ -128,11 +128,7 @@ const fetchLogoDataUri = async (
   config: { apiUrl: string; apiKey: string },
   logoUrl: string | null,
 ): Promise<string | null> => {
-  if (
-    !logoUrl ||
-    !LOGO_PATH_PATTERN.test(logoUrl) ||
-    logoUrl.includes("..")
-  ) {
+  if (!logoUrl || !LOGO_PATH_PATTERN.test(logoUrl) || logoUrl.includes("..")) {
     return null;
   }
 

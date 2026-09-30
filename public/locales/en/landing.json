@@ -13,7 +13,7 @@
   },
   "hero": {
     "title": "Orders and food delivery <em>in&nbsp;MAX&nbsp;and&nbsp;Telegram</em>&nbsp;— one bot for your whole chain",
-    "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location",
+    "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors",
     "cta": "Start free",
     "ctaSecondary": "See demo",
     "trial": "30 days free · only an email needed · no card, no sales call"
@@ -51,7 +51,7 @@
       },
       "guest": {
         "title": "Guests order without signing up",
-        "text": "They open the mini app right inside the messenger and start browsing the menu and filling the cart. The phone number is only asked at checkout"
+        "text": "They open a branded mini app right inside the messenger and start filling the cart. The phone number is only asked at checkout"
       },
       "pos": {
         "title": "Works with your POS — and without one",
@@ -144,7 +144,7 @@
   "tryDemo": {
     "tag": "Demo",
     "title": "Try it right now",
-    "subtitle": "Open the demo bot in Telegram or MAX and experience how your guests order",
+    "subtitle": "Open the demo bot in Telegram or MAX and see how a branded app looks to your guests — with the venue logo and colors",
     "noAuth": "No sign-up, no phone number",
     "tgDesc": "Mini-app demo in Telegram",
     "tgCta": "Open in Telegram",

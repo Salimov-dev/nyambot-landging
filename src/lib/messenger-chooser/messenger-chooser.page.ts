@@ -47,8 +47,8 @@ const STYLES = `
 html,body{min-height:100%}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px 16px;min-height:100vh}
 .card{width:100%;max-width:400px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.06)}
-h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word}
-.lead{margin-top:8px;color:var(--muted);font-size:16px;line-height:1.4}
+h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wrap:balance}
+.lead{margin-top:8px;color:var(--muted);font-size:16px;line-height:1.4;text-wrap:balance}
 .buttons{display:flex;flex-direction:column;gap:12px;margin-top:24px}
 .btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;min-height:60px;padding:14px 20px;border-radius:14px;color:#fff;font-size:18px;font-weight:600;text-decoration:none;transition:transform .1s ease,filter .15s ease}
 .btn:active{transform:scale(.98)}
@@ -57,7 +57,7 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word}
 .btn-telegram{background:#229ed9}
 .badge{position:absolute;top:-9px;right:12px;padding:2px 8px;border-radius:999px;background:var(--text);color:var(--card);font-size:12px;font-weight:600;display:none}
 .btn.is-last .badge{display:inline-block}
-.note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.4}
+.note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.4;text-wrap:balance}
 .powered{display:inline-block;margin-top:24px;color:var(--muted);font-size:12px;text-decoration:none}
 .powered:hover{text-decoration:underline}
 .brand{color:#ff8c00;font-weight:600}

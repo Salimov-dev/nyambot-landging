@@ -150,3 +150,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Короткие подписи в две строки — без одинокого слова в конце (Руслан 30.09). */
+.subtitle {
+  text-wrap: balance;
+}

@@ -141,3 +141,8 @@
 .moreLink:hover {
   text-decoration: underline;
 }
+
+/* Короткие подписи в две строки — без одинокого слова в конце (Руслан 30.09). */
+.noPos {
+  text-wrap: balance;
+}

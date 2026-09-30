@@ -1,3 +1,4 @@
+import { noWidow } from "@/lib/typography/no-widow";
 import {
   BLOCK_ICON,
   type IBlockIcon,
@@ -77,8 +78,8 @@ export function LandingPage({ content }: IProps) {
     <LandingPageShell>
       <main className={styles.main}>
         <span className={styles.label}>{content.label}</span>
-        <h1 className={styles.heading}>{content.heading}</h1>
-        <p className={styles.lead}>{content.lead}</p>
+        <h1 className={styles.heading}>{noWidow(content.heading)}</h1>
+        <p className={styles.lead}>{noWidow(content.lead)}</p>
 
         <LandingPageCta />
 
@@ -103,7 +104,7 @@ export function LandingPage({ content }: IProps) {
                   <Icon size={20} />
                 </span>
                 <h2 className={styles.blockTitle}>{block.title}</h2>
-                <p className={styles.blockText}>{block.text}</p>
+                <p className={styles.blockText}>{noWidow(block.text)}</p>
                 {block.points ? (
                   <ul className={styles.blockPoints}>
                     {block.points.map((point) => (
@@ -129,7 +130,7 @@ export function LandingPage({ content }: IProps) {
             <ul className={styles.notNeededList}>
               {content.notNeeded.map((item) => (
                 <li key={item} className={styles.notNeededItem}>
-                  {item}
+                  {noWidow(item)}
                 </li>
               ))}
             </ul>
@@ -145,8 +146,8 @@ export function LandingPage({ content }: IProps) {
           <div className={styles.faqList}>
             {content.faq.map((item) => (
               <div key={item.question} className={styles.faqItem}>
-                <h3 className={styles.faqQuestion}>{item.question}</h3>
-                <p className={styles.faqAnswer}>{item.answer}</p>
+                <h3 className={styles.faqQuestion}>{noWidow(item.question)}</h3>
+                <p className={styles.faqAnswer}>{noWidow(item.answer)}</p>
               </div>
             ))}
           </div>
@@ -159,7 +160,9 @@ export function LandingPage({ content }: IProps) {
           className={styles.guideCard}
         >
           <span className={styles.guideLabel}>{PAGE_TEXT.guideTitle}</span>
-          <span className={styles.guideText}>{content.guide.label}</span>
+          <span className={styles.guideText}>
+            {noWidow(content.guide.label)}
+          </span>
           <span className={styles.guideArrow} aria-hidden="true">
             →
           </span>

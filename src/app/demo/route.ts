@@ -4,7 +4,6 @@ import type { MetrikaGoal } from "@/config/metrika";
 import { htmlResponse } from "@/lib/messenger-chooser/chooser-response";
 import { DEMO_LOGO_DATA_URI } from "@/lib/messenger-chooser/demo-logo.generated";
 import { renderChooserPage } from "@/lib/messenger-chooser/messenger-chooser.page";
-import { BRAND_COLOR_SCHEME } from "@/shared/brand-rules/brand-rules.shared";
 import {
   CHOOSER_MESSENGER,
   type IChooserMessenger,
@@ -22,11 +21,10 @@ import {
 const DEMO_TITLE = "Демо Нямбота — кафе «Кусочек»";
 
 /**
- * Демо показывает брендирование так же, как его увидит гость заведения: лого
- * «Кусочка» и его цветовая схема (план «Брендирование», Ф6). Та же схема стоит у
- * бренда «Кусочка» в базе — страница и витрина демо в одних цветах.
+ * Лого «Кусочка» на странице демо (план «Брендирование», Ф6). Цвета — Нямбота:
+ * бренд «Кусочка» на проде остаётся в цветах Нямбота (Руслан 30.09), страница
+ * и витрина демо должны совпадать.
  */
-const DEMO_COLOR_SCHEME = BRAND_COLOR_SCHEME.RED;
 
 const DEMO_GOALS: Record<IChooserMessenger, MetrikaGoal> = {
   [CHOOSER_MESSENGER.MAX]: "click_qr_demo_max",
@@ -45,7 +43,6 @@ export function GET() {
       },
       poweredBy: true,
       logo: DEMO_LOGO_DATA_URI,
-      colorScheme: DEMO_COLOR_SCHEME,
       metrika: counterId ? { counterId, goals: DEMO_GOALS } : undefined,
     }),
   );

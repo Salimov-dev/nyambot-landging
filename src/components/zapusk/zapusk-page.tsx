@@ -1,3 +1,4 @@
+import { noWidow } from "@/lib/typography/no-widow";
 import { LINKS } from "@/config/links.config";
 import { ZAPUSK_PAGE } from "@/config/zapusk-page.config";
 import { LandingPageShell } from "@/components/landing-page/landing-page-shell";
@@ -18,7 +19,7 @@ export function ZapuskPage() {
     <LandingPageShell wide>
       <main className={landingStyles.main}>
         <h1 className={`${landingStyles.heading} ${styles.heading}`}>
-          {ZAPUSK_PAGE.heading}
+          {noWidow(ZAPUSK_PAGE.heading)}
         </h1>
         <p className={`${landingStyles.lead} ${styles.lead}`}>
           {ZAPUSK_PAGE.lead}
@@ -38,7 +39,7 @@ export function ZapuskPage() {
                   {index + 1}
                 </span>
                 <h3 className={landingStyles.blockTitle}>{step.title}</h3>
-                <p className={landingStyles.blockText}>{step.text}</p>
+                <p className={landingStyles.blockText}>{noWidow(step.text)}</p>
                 {"link" in step ? (
                   <a
                     href={step.link.href}
