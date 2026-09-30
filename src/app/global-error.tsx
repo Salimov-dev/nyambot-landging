@@ -1,16 +1,67 @@
 "use client";
 
 import { useEffect } from "react";
+import { BRAND_CONFIG } from "@/config/brand.config";
+import { LINKS } from "@/config/links.config";
+import { antdLandingDarkTheme } from "@/theme/antd.theme";
 
 type IProps = {
   error: Error & { digest?: string };
-  reset: () => void;
 };
 
-export default function GlobalError({ error, reset }: IProps) {
+/**
+ * Файлы страницы не догрузились. Так бывает, когда между загрузкой HTML и его
+ * скриптов лендинг выкатили заново: робот Яндекса выполняет JS спустя часы и
+ * однажды проиндексировал этот экран как главную — сниппетом стали кнопки
+ * «Попробовать снова / Перезагрузить страницу» (30.09.2026). Старые сборки
+ * теперь хранятся рядом с новой (`docker-entrypoint.sh`), а этот экран —
+ * последняя страховка.
+ */
+const CHUNK_LOAD_ERROR =
+  /ChunkLoadError|Loading (CSS )?chunk [\w-]+ failed|Failed to fetch dynamically imported module|Importing a module script failed/i;
+
+/** Не чаще одной автоперезагрузки за это окно — иначе при стойкой поломке страница уйдёт в цикл. */
+const RELOAD_GUARD_KEY = "nyambot:chunk-reload-at";
+const RELOAD_GUARD_MS = 30_000;
+
+const TEXTS = {
+  title: "Страница не загрузилась",
+  hint: "Обычно помогает обновить страницу. Если не выйдет — напиши нам, разберёмся.",
+  reload: "Обновить страницу",
+  telegram: "Телеграм",
+  max: "MAX",
+  email: "Почта",
+} as const;
+
+/** Цвета лендинга: корневой layout с темой здесь не действует. */
+const { colorPrimary, colorBgBase, colorText, colorTextSecondary } =
+  antdLandingDarkTheme.token ?? {};
+
+const isChunkLoadError = (error: Error): boolean =>
+  CHUNK_LOAD_ERROR.test(`${error.name} ${error.message}`);
+
+/** true — перезагрузку можно делать; хранилище недоступно — не рискуем циклом. */
+const takeReloadSlot = (): boolean => {
+  try {
+    const last = Number(sessionStorage.getItem(RELOAD_GUARD_KEY));
+    if (last && Date.now() - last < RELOAD_GUARD_MS) return false;
+    sessionStorage.setItem(RELOAD_GUARD_KEY, String(Date.now()));
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+export default function GlobalError({ error }: IProps) {
   useEffect(() => {
     console.error("[GlobalError]", error);
+
+    if (isChunkLoadError(error) && takeReloadSlot()) {
+      window.location.reload();
+    }
   }, [error]);
+
+  const linkStyle = { color: colorPrimary, fontWeight: 600 };
 
   return (
     <html lang="ru">
@@ -18,98 +69,66 @@ export default function GlobalError({ error, reset }: IProps) {
         style={{
           fontFamily:
             "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          padding: 24,
           margin: 0,
-          background: "#fff",
-          color: "#000",
+          padding: "48px 16px",
+          background: colorBgBase,
+          color: colorText,
           minHeight: "100vh",
+          boxSizing: "border-box",
         }}
       >
-        <h1 style={{ color: "#cf1322", fontSize: 22, margin: "0 0 12px" }}>
-          Ошибка приложения
-        </h1>
+        <title>{BRAND_CONFIG.name}</title>
 
-        <p style={{ margin: "8px 0" }}>
-          <strong>Сообщение:</strong>{" "}
-          <span style={{ wordBreak: "break-word" }}>
-            {error.message || "Неизвестная ошибка"}
-          </span>
-        </p>
+        <main style={{ maxWidth: 480, margin: "0 auto", textAlign: "center" }}>
+          <h1 style={{ fontSize: 24, margin: "0 0 8px" }}>{TEXTS.title}</h1>
 
-        {error.name ? (
-          <p style={{ margin: "8px 0" }}>
-            <strong>Тип:</strong> {error.name}
-          </p>
-        ) : null}
-
-        {error.digest ? (
-          <p style={{ margin: "8px 0" }}>
-            <strong>Digest:</strong> <code>{error.digest}</code>
-          </p>
-        ) : null}
-
-        {error.stack ? (
-          <details open style={{ marginTop: 16 }}>
-            <summary style={{ cursor: "pointer", marginBottom: 8 }}>
-              Stack
-            </summary>
-            <pre
-              style={{
-                background: "#f5f5f5",
-                padding: 12,
-                overflow: "auto",
-                fontSize: 12,
-                lineHeight: 1.4,
-                whiteSpace: "pre-wrap",
-                wordBreak: "break-word",
-                border: "1px solid #e0e0e0",
-                borderRadius: 4,
-                margin: 0,
-              }}
-            >
-              {error.stack}
-            </pre>
-          </details>
-        ) : null}
-
-        <div
-          style={{
-            marginTop: 20,
-            display: "flex",
-            gap: 8,
-            flexWrap: "wrap",
-          }}
-        >
-          <button
-            onClick={() => reset()}
+          <p
             style={{
-              padding: "10px 18px",
-              cursor: "pointer",
-              border: "1px solid #1677ff",
-              background: "#1677ff",
-              color: "#fff",
-              borderRadius: 6,
-              fontSize: 14,
+              color: colorTextSecondary,
+              lineHeight: 1.5,
+              margin: "0 0 24px",
             }}
           >
-            Попробовать снова
-          </button>
+            {TEXTS.hint}
+          </p>
 
           <button
+            type="button"
             onClick={() => window.location.reload()}
             style={{
-              padding: "10px 18px",
+              padding: "12px 24px",
               cursor: "pointer",
-              border: "1px solid #d9d9d9",
-              background: "#fff",
-              color: "#000",
-              borderRadius: 6,
-              fontSize: 14,
+              border: "none",
+              background: colorPrimary,
+              color: "#fff",
+              borderRadius: 8,
+              fontSize: 16,
+              fontWeight: 600,
             }}
           >
-            Перезагрузить страницу
+            {TEXTS.reload}
           </button>
-        </div>
+
+          <p
+            style={{
+              display: "flex",
+              gap: 16,
+              justifyContent: "center",
+              flexWrap: "wrap",
+              margin: "24px 0 0",
+            }}
+          >
+            <a href={LINKS.support.max} style={linkStyle}>
+              {TEXTS.max}
+            </a>
+            <a href={LINKS.support.telegram} style={linkStyle}>
+              {TEXTS.telegram}
+            </a>
+            <a href={LINKS.support.email} style={linkStyle}>
+              {TEXTS.email}
+            </a>
+          </p>
+        </main>
       </body>
     </html>
   );

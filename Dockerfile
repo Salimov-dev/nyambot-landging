@@ -48,8 +48,15 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY version.json* ./
+COPY docker-entrypoint.sh ./
 
-RUN chown -R nextjs:nodejs /app
+# static-archive — точка монтирования тома с файлами прошлых сборок
+# (см. docker-entrypoint.sh). Каталог создаётся в образе, чтобы новый том
+# унаследовал владельца nextjs. sed — страховка от CRLF из Windows-копии.
+RUN sed -i 's/\r$//' docker-entrypoint.sh && \
+    chmod +x docker-entrypoint.sh && \
+    mkdir -p static-archive && \
+    chown -R nextjs:nodejs /app
 
 USER nextjs
 
@@ -62,4 +69,4 @@ EXPOSE 3200
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3200/ || exit 1
 
-CMD ["node", "server.js"]
+CMD ["./docker-entrypoint.sh"]
