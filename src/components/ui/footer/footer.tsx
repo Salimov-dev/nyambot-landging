@@ -118,6 +118,9 @@ export function Footer() {
               <Link href={LINKS.pages.qrCode} className={styles.footerLink}>
                 {t("solutions.items.qrCode.title")}
               </Link>
+              <Link href={LINKS.pages.branding} className={styles.footerLink}>
+                {t("solutions.items.branding.title")}
+              </Link>
               <Link href={LINKS.pages.security} className={styles.footerLink}>
                 {t("solutions.items.security.title")}
               </Link>

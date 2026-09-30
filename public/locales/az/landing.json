@@ -372,6 +372,10 @@
         "title": "Ümumi QR-kod",
         "text": "Qablaşdırmada və reklamda bir kod: qonaq messenceri özü seçir, öz domenində isə kod səninki qalır"
       },
+      "branding": {
+        "title": "Brendinq",
+        "text": "Vitrin və QR-kod səhifəsi müəssisənin rənglərində, kodun mərkəzində loqo — bütün nöqtələr üçün bir lövhə"
+      },
       "security": {
         "title": "Məlumatların təhlükəsizliyi",
         "text": "152-FZ, Rusiyada saxlama, qonağın məlumatları kimə verilir və kimə — heç vaxt"

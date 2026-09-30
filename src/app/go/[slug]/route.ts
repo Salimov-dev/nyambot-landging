@@ -66,6 +66,12 @@ export async function GET(_request: Request, context: IRouteContext) {
   }
 
   return htmlResponse(
-    renderChooserPage({ title: data.title, targets, poweredBy: true }),
+    renderChooserPage({
+      title: data.title,
+      targets,
+      poweredBy: true,
+      logo: data.logo,
+      colorScheme: data.colorScheme,
+    }),
   );
 }

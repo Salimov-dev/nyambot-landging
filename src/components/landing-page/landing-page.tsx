@@ -16,6 +16,8 @@ import {
   MegaphoneIcon,
   ChartIcon,
   BulbIcon,
+  StoreIcon,
+  QrCodeIcon,
 } from "@/components/ui/icons/icons";
 import Link from "next/link";
 import { FreeReviewSection } from "@/components/sections/free-review/free-review-section";
@@ -43,6 +45,8 @@ const ICONS: Record<IBlockIcon, typeof ListIcon> = {
   [BLOCK_ICON.BROADCAST]: MegaphoneIcon,
   [BLOCK_ICON.METRICS]: ChartIcon,
   [BLOCK_ICON.INSIGHT]: BulbIcon,
+  [BLOCK_ICON.BRAND]: StoreIcon,
+  [BLOCK_ICON.QR]: QrCodeIcon,
 };
 
 type IProps = {
@@ -78,8 +82,8 @@ export function LandingPage({ content }: IProps) {
 
         <LandingPageCta />
 
-        {/* Страница про общий QR-код показывает сам код: навести телефон
-            убедительнее любого описания */}
+        {/* Страницы про общий QR-код и брендирование показывают сам код:
+            навести телефон убедительнее любого описания */}
         {content.demoQr ? <DemoQrBlock showMore={false} inPage /> : null}
 
         <div className={styles.blocks}>

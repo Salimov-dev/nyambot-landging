@@ -38,6 +38,8 @@ export const LINKS = {
     zapusk: "/zapusk",
     /** Один QR-код на MAX и Телеграм — посадочная под рекламу */
     qrCode: "/odin-qr-kod",
+    /** Витрина и страница QR-кода в цветах заведения — лого и цветовая схема бренда */
+    branding: "/brendirovanie",
   },
 
   legal: {

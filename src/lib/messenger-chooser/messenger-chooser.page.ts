@@ -1,3 +1,7 @@
+import {
+  resolveColorScheme,
+  toStoredColorScheme,
+} from "@/shared/brand-rules/brand-rules.shared";
 import { escapeHtml } from "./html-escape";
 import { CHOOSER_BUTTON_TEXT, CHOOSER_TEXT } from "./messenger-chooser.text";
 import {
@@ -22,6 +26,9 @@ const NYAMBOT_URL = "https://nyambot.ru";
 
 /** Имя метки скачанного файла — то же читает проверка домена в main-server. */
 const FILE_MARKER_META = "nyambot-qr";
+
+/** Класс `<body>` страницы бренда с выбранной схемой. */
+const BRANDED_BODY_CLASS = "branded";
 
 /** Ключ последнего выбора гостя — только в его браузере. */
 const LAST_CHOICE_STORAGE_KEY = "nyambot_chooser_last";
@@ -54,7 +61,30 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word}
 .powered{display:inline-block;margin-top:24px;color:var(--muted);font-size:12px;text-decoration:none}
 .powered:hover{text-decoration:underline}
 .brand{color:#ff8c00;font-weight:600}
+.logo{display:block;width:88px;height:88px;margin:0 auto 16px;border-radius:50%;object-fit:cover;background:var(--card);border:1px solid var(--border)}
+body.branded{background:radial-gradient(120% 60% at 50% 0%,rgba(var(--accent-rgb),.22),transparent 60%),var(--bg)}
+.branded .card{border-top:4px solid var(--accent)}
+.branded .logo{border:none;box-shadow:0 0 0 3px var(--accent),0 8px 24px rgba(var(--accent-rgb),.28)}
 `.trim();
+
+/** Только вклеенная растровая картинка — никакой внешней ссылки в файле клиента. */
+const LOGO_DATA_URI = /^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/;
+
+/**
+ * Акцент бренда (план «Брендирование», Ф4) — лёгкий: свечение фона, полоска
+ * над карточкой, кольцо лого. Кнопки MAX и Телеграм остаются в своих цветах
+ * (Р7), слово «Нямбот» — в цвете Нямбота. Схемы нет — страница прежняя.
+ */
+const renderBrandStyle = (colorScheme: string | null | undefined): string => {
+  if (!toStoredColorScheme(colorScheme)) return "";
+  const { palette } = resolveColorScheme(colorScheme);
+  return `<style>:root{--accent:${palette.accent};--accent-rgb:${palette.accentRgb}}</style>`;
+};
+
+const renderLogo = (logo: string | null | undefined): string =>
+  logo && LOGO_DATA_URI.test(logo)
+    ? `<img class="logo" src="${logo}" alt="">`
+    : "";
 
 const availableMessengers = (params: IChooserPageParams): IChooserMessenger[] =>
   CHOOSER_MESSENGERS.filter((messenger) => Boolean(params.targets[messenger]));
@@ -85,8 +115,9 @@ const renderDocument = (
   body: string,
   head = "",
   script = "",
+  bodyClass = "",
 ): string =>
-  `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${escapeHtml(title)}</title>${head}<style>${STYLES}</style></head><body>${body}${script ? `<script>${script}</script>` : ""}</body></html>`;
+  `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${escapeHtml(title)}</title>${head}<style>${STYLES}</style></head><body${bodyClass ? ` class="${bodyClass}"` : ""}>${body}${script ? `<script>${script}</script>` : ""}</body></html>`;
 
 /** Страница выбора мессенджера. С одной кнопкой — сразу уводит в мессенджер. */
 export const renderChooserPage = (params: IChooserPageParams): string => {
@@ -112,7 +143,7 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     ? `<a class="powered" href="${NYAMBOT_URL}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_TEXT.poweredByPrefix)} <span class="brand">${escapeHtml(CHOOSER_TEXT.poweredByBrand)}</span></a>`
     : "";
 
-  const body = `<main class="card"><h1>${escapeHtml(params.title)}</h1><p class="lead">${lead}</p><div class="buttons">${buttons}</div>${note}${powered}</main>`;
+  const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1><p class="lead">${lead}</p><div class="buttons">${buttons}</div>${note}${powered}</main>`;
 
   const head = [
     params.fileMarker
@@ -124,9 +155,16 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     params.metrika
       ? `<script>${renderMetrikaInit(params.metrika)}</script>`
       : "",
+    renderBrandStyle(params.colorScheme),
   ].join("");
 
-  return renderDocument(params.title, body, head, renderScript(params.metrika));
+  return renderDocument(
+    params.title,
+    body,
+    head,
+    renderScript(params.metrika),
+    toStoredColorScheme(params.colorScheme) ? BRANDED_BODY_CLASS : "",
+  );
 };
 
 /** Ответ вместо страницы выбора: ссылка не найдена или сервер недоступен. */

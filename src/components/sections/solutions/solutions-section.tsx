@@ -27,6 +27,7 @@ const SOLUTIONS = [
   { id: "network", href: LINKS.pages.network },
   { id: "ownChannels", href: LINKS.pages.ownChannels },
   { id: "qrCode", href: LINKS.pages.qrCode },
+  { id: "branding", href: LINKS.pages.branding },
   { id: "security", href: LINKS.pages.security },
   { id: "faq", href: LINKS.pages.faq },
 ] as const;

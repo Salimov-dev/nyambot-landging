@@ -372,6 +372,10 @@
         "title": "Shared QR code",
         "text": "One code on packaging and in ads: the guest picks the messenger, and on your own domain the code stays yours"
       },
+      "branding": {
+        "title": "Branding",
+        "text": "Ordering app and QR page in your venue's colors, your logo in the center of the code — one look for all locations"
+      },
       "security": {
         "title": "Data security",
         "text": "152-FZ, storage in Russia, who guest data is shared with — and who never gets it"

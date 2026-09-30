@@ -48,6 +48,9 @@ export async function GET(_request: Request, context: IRouteContext) {
       targets: result.data.targets,
       poweredBy: false,
       fileMarker: slug,
+      // Лого вклеено data-URI — файл на домене клиента от нас не зависит.
+      logo: result.data.logo,
+      colorScheme: result.data.colorScheme,
     }),
     `${slug}.html`,
   );

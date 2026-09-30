@@ -22,7 +22,14 @@ const SLUG_PATTERN = /^[a-z0-9](?:[a-z0-9-]{1,38}[a-z0-9])$/;
 export type IQrLinkData = {
   title: string;
   targets: IChooserTargets;
+  /** Лого заведения data-URI (бренд, иначе бот) или `null`. */
+  logo: string | null;
+  /** Ключ цветовой схемы бренда; `null` — цвета Нямбота. */
+  colorScheme: string | null;
 };
+
+/** Ответ main-server до того, как лого превратилось в data-URI. */
+type IQrLinkRaw = Omit<IQrLinkData, "logo"> & { logoUrl: string | null };
 
 export const QR_LINK_RESULT = {
   OK: "ok",
@@ -62,11 +69,19 @@ const readConfig = (): { apiUrl: string; apiKey: string } | null => {
 const readTarget = (value: unknown): string | null =>
   typeof value === "string" && value.startsWith("https://") ? value : null;
 
-const parseData = (raw: unknown): IQrLinkData | null => {
+const readOptionalString = (value: unknown): string | null =>
+  typeof value === "string" && value.trim() ? value.trim() : null;
+
+const parseData = (raw: unknown): IQrLinkRaw | null => {
   if (!raw || typeof raw !== "object") return null;
   const data = (raw as { data?: unknown }).data;
   if (!data || typeof data !== "object") return null;
-  const record = data as { title?: unknown; targets?: unknown };
+  const record = data as {
+    title?: unknown;
+    targets?: unknown;
+    logoUrl?: unknown;
+    colorScheme?: unknown;
+  };
   if (typeof record.title !== "string") return null;
   const targets =
     record.targets && typeof record.targets === "object"
@@ -80,7 +95,76 @@ const parseData = (raw: unknown): IQrLinkData | null => {
         targets[CHOOSER_MESSENGER.TELEGRAM],
       ),
     },
+    // Поля брендирования необязательные: старый ответ сервера страницу не ломает.
+    logoUrl: readOptionalString(record.logoUrl),
+    colorScheme: readOptionalString(record.colorScheme),
   };
+};
+
+/**
+ * Лого для страницы — data-URI, а не ссылка (план «Брендирование», Ф4).
+ *
+ * 🔴 Страница уходит и файлом на домен клиента, где нашего сервера картинок
+ * может не быть вовсе; ссылка на `nyambot.ru` сделала бы файл зависимым от
+ * нас. Поэтому картинку вклеиваем. Берём только свои загрузки (`/uploads/…`,
+ * `/api/files/…`): внешний адрес лендинг не качает.
+ *
+ * Имя файла на сервере уникально (время + случайная часть), значит картинка по
+ * адресу не меняется — помним её, пока жив процесс.
+ */
+const LOGO_PATH_PATTERN = /^\/?(?:api\/files\/)?uploads\/[A-Za-z0-9/_.-]+$/;
+const LOGO_PATH_PREFIX = /^\/?(?:api\/files\/)?/;
+const LOGO_MAX_BYTES = 512 * 1024;
+/** Растровые форматы загрузок; SVG не вклеиваем — у нас его не бывает. */
+const LOGO_MIME_TYPES: ReadonlySet<string> = new Set([
+  "image/png",
+  "image/jpeg",
+  "image/webp",
+]);
+const LOGO_CACHE_LIMIT = 200;
+const logoCache = new Map<string, string>();
+
+const fetchLogoDataUri = async (
+  config: { apiUrl: string; apiKey: string },
+  logoUrl: string | null,
+): Promise<string | null> => {
+  if (
+    !logoUrl ||
+    !LOGO_PATH_PATTERN.test(logoUrl) ||
+    logoUrl.includes("..")
+  ) {
+    return null;
+  }
+
+  const cached = logoCache.get(logoUrl);
+  if (cached) return cached;
+
+  const path = logoUrl.replace(LOGO_PATH_PREFIX, "");
+
+  try {
+    const response = await fetch(`${config.apiUrl}/api/files/${path}`, {
+      headers: { "x-api-key": config.apiKey },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+      cache: "no-store",
+    });
+    const mime = (response.headers.get("content-type") ?? "")
+      .split(";")[0]
+      ?.trim()
+      .toLowerCase();
+    if (!response.ok || !mime || !LOGO_MIME_TYPES.has(mime)) return null;
+
+    const bytes = Buffer.from(await response.arrayBuffer());
+    if (bytes.length === 0 || bytes.length > LOGO_MAX_BYTES) return null;
+
+    const dataUri = `data:${mime};base64,${bytes.toString("base64")}`;
+    if (logoCache.size >= LOGO_CACHE_LIMIT) logoCache.clear();
+    logoCache.set(logoUrl, dataUri);
+    return dataUri;
+  } catch (error) {
+    // Без лого страница работает — это украшение, а не путь гостя в бота.
+    console.error("Общая ссылка QR: лого не загрузилось", error);
+    return null;
+  }
 };
 
 const fallback = (slug: string): IQrLinkResult => {
@@ -118,8 +202,14 @@ export const fetchQrLink = async (
       return fallback(slug);
     }
 
-    const data = parseData(await response.json().catch(() => null));
-    if (!data) return fallback(slug);
+    const raw = parseData(await response.json().catch(() => null));
+    if (!raw) return fallback(slug);
+
+    const { logoUrl, ...rest } = raw;
+    const data: IQrLinkData = {
+      ...rest,
+      logo: await fetchLogoDataUri(config, logoUrl),
+    };
 
     lastKnown.set(slug, data);
     return { kind: QR_LINK_RESULT.OK, data };

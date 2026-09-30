@@ -67,6 +67,11 @@ const SOLUTION_LINKS = [
     href: LINKS.pages.qrCode,
   },
   {
+    id: "branding",
+    labelKey: "solutions.items.branding.title",
+    href: LINKS.pages.branding,
+  },
+  {
     id: "security",
     labelKey: "solutions.items.security.title",
     href: LINKS.pages.security,

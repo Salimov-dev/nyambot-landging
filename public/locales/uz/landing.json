@@ -372,6 +372,10 @@
         "title": "Umumiy QR-kod",
         "text": "Qadoq va reklamada bitta kod: mehmon messenjerni o‘zi tanlaydi, o‘z domeningda esa kod seniki bo‘lib qoladi"
       },
+      "branding": {
+        "title": "Brending",
+        "text": "Vitrina va QR-kod sahifasi muassasa ranglarida, kod markazida logotip — barcha nuqtalar uchun bitta peshlavha"
+      },
       "security": {
         "title": "Ma’lumotlar xavfsizligi",
         "text": "152-FZ, Rossiyada saqlash, mehmon ma’lumotlari kimga beriladi va kimga — hech qachon"
