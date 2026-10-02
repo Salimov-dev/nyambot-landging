@@ -1,6 +1,9 @@
 import {
+  CHOOSER_EXTRAS,
   CHOOSER_MESSENGER,
-  type IChooserMessenger,
+  isChooserMessenger,
+  type IChooserExtras,
+  type IChooserTarget,
   type IChooserTargets,
 } from "./messenger-chooser.types";
 
@@ -22,6 +25,8 @@ const SLUG_PATTERN = /^[a-z0-9](?:[a-z0-9-]{1,38}[a-z0-9])$/;
 export type IQrLinkData = {
   title: string;
   targets: IChooserTargets;
+  /** Сайт и приложение заведения — уже перепроверенные main-server. */
+  extras: IChooserExtras;
   /** Лого заведения data-URI (бренд, иначе бот) или `null`. */
   logo: string | null;
   /** Ключ цветовой схемы бренда; `null` — цвета Нямбота. */
@@ -79,6 +84,7 @@ const parseData = (raw: unknown): IQrLinkRaw | null => {
   const record = data as {
     title?: unknown;
     targets?: unknown;
+    extras?: unknown;
     logoUrl?: unknown;
     colorScheme?: unknown;
   };
@@ -86,6 +92,10 @@ const parseData = (raw: unknown): IQrLinkRaw | null => {
   const targets =
     record.targets && typeof record.targets === "object"
       ? (record.targets as Record<string, unknown>)
+      : {};
+  const extras =
+    record.extras && typeof record.extras === "object"
+      ? (record.extras as Record<string, unknown>)
       : {};
   return {
     title: record.title,
@@ -95,7 +105,10 @@ const parseData = (raw: unknown): IQrLinkRaw | null => {
         targets[CHOOSER_MESSENGER.TELEGRAM],
       ),
     },
-    // Поля брендирования необязательные: старый ответ сервера страницу не ломает.
+    // Ресурсы и брендирование необязательные: старый ответ сервера страницу не ломает.
+    extras: Object.fromEntries(
+      CHOOSER_EXTRAS.map((extra) => [extra, readTarget(extras[extra])]),
+    ) as IChooserExtras,
     logoUrl: readOptionalString(record.logoUrl),
     colorScheme: readOptionalString(record.colorScheme),
   };
@@ -215,17 +228,26 @@ export const fetchQrLink = async (
   }
 };
 
+/** Последняя известная ссылка кнопки — на случай, если main-server не ответил. */
+const cachedTarget = (slug: string, target: IChooserTarget): string | null => {
+  const known = lastKnown.get(slug);
+  if (!known) return null;
+  return isChooserMessenger(target)
+    ? known.targets[target]
+    : known.extras[target];
+};
+
 /**
- * Выбор мессенджера: main-server засчитывает переход и отдаёт свежую ссылку на
- * бота. Не ответил — ведём по последней известной: гость уходит в мессенджер
- * при любом исходе счётчика. `null` — у заведения нет бота в этом мессенджере
- * (или адрес неизвестен вовсе).
+ * Переход со страницы — в мессенджер, на сайт или в магазин приложений:
+ * main-server засчитывает его и отдаёт свежую ссылку. Не ответил — ведём по
+ * последней известной: гость уходит при любом исходе счётчика. `null` — такой
+ * кнопки у заведения нет (или адрес неизвестен вовсе).
  */
 export const clickQrLink = async (
   slug: string,
-  messenger: IChooserMessenger,
+  target: IChooserTarget,
 ): Promise<string | null> => {
-  const cached = lastKnown.get(slug)?.targets[messenger] ?? null;
+  const cached = cachedTarget(slug, target);
   const config = readConfig();
   if (!config) return cached;
 
@@ -238,7 +260,7 @@ export const clickQrLink = async (
           "Content-Type": "application/json",
           "x-api-key": config.apiKey,
         },
-        body: JSON.stringify({ messenger }),
+        body: JSON.stringify({ target }),
         signal: AbortSignal.timeout(TIMEOUT_MS),
         cache: "no-store",
       },

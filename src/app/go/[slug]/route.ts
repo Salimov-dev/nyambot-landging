@@ -6,7 +6,9 @@ import {
 } from "@/lib/messenger-chooser/messenger-chooser.page";
 import { CHOOSER_TEXT } from "@/lib/messenger-chooser/messenger-chooser.text";
 import {
+  CHOOSER_EXTRAS,
   CHOOSER_MESSENGERS,
+  type IChooserExtras,
   type IChooserTargets,
 } from "@/lib/messenger-chooser/messenger-chooser.types";
 import {
@@ -18,10 +20,10 @@ import {
 
 /**
  * `nyambot.ru/go/<slug>` — куда ведёт общий QR-код заведения: гость выбирает
- * MAX или Телеграм.
+ * MAX или Телеграм, а ниже — сайт и приложение заведения, если они указаны.
  *
- * Кнопки ведут не прямо в мессенджер, а на `/go/<slug>/<мессенджер>`: там
- * засчитывается выбор и берётся свежая ссылка на бота. Метрики Нямбота здесь
+ * Кнопки ведут не прямо по ссылке, а на `/go/<slug>/<куда>`: там
+ * засчитывается переход и берётся свежая ссылка. Метрики Нямбота здесь
  * нет — это гость заведения, а не наш посетитель.
  */
 
@@ -61,7 +63,15 @@ export async function GET(_request: Request, context: IRouteContext) {
     ]),
   ) as IChooserTargets;
 
-  // Ни одного живого бота — для гостя это та же «ссылка не работает».
+  const extras = Object.fromEntries(
+    CHOOSER_EXTRAS.map((extra) => [
+      extra,
+      data.extras[extra] ? `/go/${slug}/${extra}` : null,
+    ]),
+  ) as IChooserExtras;
+
+  // Ни одного живого бота — для гостя это та же «ссылка не работает»: код
+  // ведёт к боту, сайт и приложение без него страницу не держат.
   if (CHOOSER_MESSENGERS.every((messenger) => !targets[messenger])) {
     return notFound();
   }
@@ -70,6 +80,7 @@ export async function GET(_request: Request, context: IRouteContext) {
     renderChooserPage({
       title: data.title,
       targets,
+      extras,
       poweredByUrl: qrPagePoweredByUrl(slug),
       logo: data.logo,
       colorScheme: data.colorScheme,

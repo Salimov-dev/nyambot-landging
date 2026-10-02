@@ -3,10 +3,18 @@ import {
   toStoredColorScheme,
 } from "@/shared/brand-rules/brand-rules.shared";
 import { escapeHtml } from "./html-escape";
-import { CHOOSER_BUTTON_TEXT, CHOOSER_TEXT } from "./messenger-chooser.text";
 import {
+  CHOOSER_BUTTON_TEXT,
+  CHOOSER_EXTRA_BUTTON_TEXT,
+  CHOOSER_TEXT,
+} from "./messenger-chooser.text";
+import {
+  CHOOSER_EXTRA_PLATFORM,
+  CHOOSER_EXTRAS,
   CHOOSER_MESSENGER,
   CHOOSER_MESSENGERS,
+  CHOOSER_PLATFORM,
+  type IChooserExtra,
   type IChooserMessenger,
   type IChooserMetrika,
   type IChooserPageParams,
@@ -14,6 +22,9 @@ import {
 
 /**
  * Страница «Открыть в MAX / Открыть в Телеграм» — куда ведёт общий QR-код.
+ * Под мессенджерами — выгоды заказа в чате и, если ресторатор их указал,
+ * блок «Ещё у заведения»: сайт и приложение (план «Страница /go: сайт и
+ * приложение»). Мессенджеры всегда выше и крупнее.
  *
  * 🔴 Голый HTML строкой, а не страница Next: корневой layout лендинга вешает
  * на всё Метрику Нямбота и кнопку связи с НАШЕЙ поддержкой. Гостю заведения ни
@@ -39,8 +50,9 @@ const ICONS: Record<IChooserMessenger, string> = {
 };
 
 const STYLES = `
-:root{--bg:#f6f6f9;--card:#fff;--text:#16161d;--muted:#6b6b78;--border:rgba(0,0,0,.08)}
-@media (prefers-color-scheme:dark){:root{--bg:#0f0f14;--card:#1a1a22;--text:#f4f4f7;--muted:#a0a0ad;--border:rgba(255,255,255,.08)}}
+:root{--bg:#f6f6f9;--card:#fff;--text:#16161d;--muted:#6b6b78;--border:rgba(0,0,0,.08);--outline:rgba(0,0,0,.18);--check:#1f9d55}
+@media (prefers-color-scheme:dark){:root{--bg:#0f0f14;--card:#1a1a22;--text:#f4f4f7;--muted:#a0a0ad;--border:rgba(255,255,255,.08);--outline:rgba(255,255,255,.22);--check:#4ade80}}
+[hidden]{display:none!important}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px 16px;min-height:100vh}
@@ -55,6 +67,15 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wra
 .btn-telegram{background:#229ed9}
 .badge{position:absolute;top:-9px;right:12px;padding:2px 8px;border-radius:999px;background:var(--text);color:var(--card);font-size:12px;font-weight:600;display:none}
 .btn.is-last .badge{display:inline-block}
+.benefits{display:inline-flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:20px;list-style:none;text-align:left}
+.benefits li{position:relative;padding-left:26px;font-size:15px;line-height:1.4}
+.benefits li::before{content:"✓";position:absolute;left:2px;top:0;color:var(--check);font-weight:700}
+.extras{margin-top:24px}
+.extras-title{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}
+.extras-title::before,.extras-title::after{content:"";flex:1;height:1px;background:var(--border)}
+.extras .buttons{margin-top:12px;gap:10px}
+.btn-extra{min-height:48px;padding:10px 16px;color:var(--text);background:transparent;border:1px solid var(--outline);font-size:16px}
+.btn-extra:hover{filter:none;border-color:var(--muted)}
 .note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.4;text-wrap:balance}
 .powered{display:inline-block;margin-top:24px;color:var(--muted);font-size:12px;text-decoration:none}
 .powered:hover{text-decoration:underline}
@@ -62,6 +83,8 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wra
 .logo{display:block;width:88px;height:88px;margin:0 auto 16px;border-radius:50%;object-fit:cover;background:var(--card);border:1px solid var(--border)}
 body.branded{background:radial-gradient(120% 60% at 50% 0%,rgba(var(--accent-rgb),.22),transparent 60%),var(--bg)}
 .branded .card{border-top:4px solid var(--accent)}
+.branded .benefits li::before{color:var(--accent)}
+.branded .btn-extra:hover{border-color:var(--accent)}
 .branded .logo{border:none;box-shadow:0 0 0 3px var(--accent),0 8px 24px rgba(var(--accent-rgb),.28)}
 `.trim();
 
@@ -90,6 +113,28 @@ const availableMessengers = (params: IChooserPageParams): IChooserMessenger[] =>
 const renderButton = (messenger: IChooserMessenger, href: string): string =>
   `<a class="btn btn-${messenger}" href="${escapeHtml(href)}" data-messenger="${messenger}">${ICONS[messenger]}<span>${escapeHtml(CHOOSER_BUTTON_TEXT[messenger])}</span><span class="badge">${escapeHtml(CHOOSER_TEXT.lastChoice)}</span></a>`;
 
+const availableExtras = (params: IChooserPageParams): IChooserExtra[] =>
+  CHOOSER_EXTRAS.filter((extra) => Boolean(params.extras?.[extra]));
+
+/** Второстепенная кнопка: контур, цвет текста страницы, ниже мессенджеров. */
+const renderExtraButton = (extra: IChooserExtra, href: string): string =>
+  `<a class="btn btn-extra" href="${escapeHtml(href)}" data-extra="${extra}" data-platform="${CHOOSER_EXTRA_PLATFORM[extra]}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_EXTRA_BUTTON_TEXT[extra])}</a>`;
+
+const renderExtras = (
+  extras: IChooserExtra[],
+  params: IChooserPageParams,
+): string =>
+  extras.length === 0
+    ? ""
+    : `<section class="extras"><p class="extras-title">${escapeHtml(CHOOSER_TEXT.extrasTitle)}</p><div class="buttons">${extras
+        .map((extra) => renderExtraButton(extra, params.extras?.[extra] ?? ""))
+        .join("")}</div></section>`;
+
+const renderBenefits = (): string =>
+  `<ul class="benefits">${CHOOSER_TEXT.benefits
+    .map((line) => `<li>${escapeHtml(line)}</li>`)
+    .join("")}</ul>`;
+
 const renderMetrikaInit = (metrika: IChooserMetrika): string => {
   const id = JSON.stringify(metrika.counterId);
   return `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(Number(${id}),"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});`;
@@ -99,13 +144,19 @@ const renderMetrikaInit = (metrika: IChooserMetrika): string => {
  * Скрипт страницы: пометить прошлый выбор гостя и запомнить новый. Хранилище
  * может быть закрыто (приватный режим, встроенный браузер) — тогда страница
  * просто работает без пометки.
+ *
+ * Магазины — по устройству: iPhone и iPad (в том числе iPad, назвавшийся
+ * компьютером Mac) видят App Store, Android — Google Play и RuStore, остальные
+ * — всё. Не осталось ни одной кнопки — прячем и заголовок блока.
  */
 const renderScript = (metrika: IChooserMetrika | undefined): string => {
   const goals = metrika ? JSON.stringify(metrika.goals) : "null";
   const counterId = metrika ? JSON.stringify(metrika.counterId) : "null";
   const key = JSON.stringify(LAST_CHOICE_STORAGE_KEY);
 
-  return `(function(){var key=${key},goals=${goals},counterId=${counterId};var last=null;try{last=localStorage.getItem(key)}catch(e){}var buttons=document.querySelectorAll("[data-messenger]");for(var i=0;i<buttons.length;i++){(function(button){var messenger=button.getAttribute("data-messenger");if(buttons.length>1&&messenger===last){button.className+=" is-last"}button.addEventListener("click",function(){try{localStorage.setItem(key,messenger)}catch(e){}if(goals&&counterId&&window.ym){window.ym(Number(counterId),"reachGoal",goals[messenger])}})})(buttons[i])}})();`;
+  const platform = `(function(){var ua=navigator.userAgent||"",ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),android=/Android/.test(ua),hide=ios?${JSON.stringify(CHOOSER_PLATFORM.ANDROID)}:android?${JSON.stringify(CHOOSER_PLATFORM.IOS)}:null;if(!hide)return;var extras=document.querySelectorAll("[data-platform]"),visible=0;for(var i=0;i<extras.length;i++){if(extras[i].getAttribute("data-platform")===hide){extras[i].hidden=true}else{visible++}}if(!visible){var block=document.querySelector(".extras");if(block)block.hidden=true}})();`;
+
+  return `${platform}(function(){var key=${key},goals=${goals},counterId=${counterId};var last=null;try{last=localStorage.getItem(key)}catch(e){}var buttons=document.querySelectorAll("[data-messenger]");for(var i=0;i<buttons.length;i++){(function(button){var messenger=button.getAttribute("data-messenger");if(buttons.length>1&&messenger===last){button.className+=" is-last"}button.addEventListener("click",function(){try{localStorage.setItem(key,messenger)}catch(e){}if(goals&&counterId&&window.ym){window.ym(Number(counterId),"reachGoal",goals[messenger])}})})(buttons[i])}})();`;
 };
 
 const renderDocument = (
@@ -117,10 +168,15 @@ const renderDocument = (
 ): string =>
   `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${escapeHtml(title)}</title>${head}<style>${STYLES}</style></head><body${bodyClass ? ` class="${bodyClass}"` : ""}>${body}${script ? `<script>${script}</script>` : ""}</body></html>`;
 
-/** Страница выбора мессенджера. С одной кнопкой — сразу уводит в мессенджер. */
+/**
+ * Страница выбора мессенджера. С одной кнопкой и без сайта и приложения —
+ * сразу уводит в мессенджер; есть что ещё показать — показывает страницу (Р4).
+ */
 export const renderChooserPage = (params: IChooserPageParams): string => {
   const messengers = availableMessengers(params);
-  const single = messengers.length === 1 ? messengers[0] : null;
+  const extras = availableExtras(params);
+  const single =
+    messengers.length === 1 && extras.length === 0 ? messengers[0] : null;
   const singleHref = single ? params.targets[single] : null;
 
   const buttons = messengers
@@ -133,15 +189,18 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     ? `${escapeHtml(CHOOSER_TEXT.single)}<br>${escapeHtml(CHOOSER_TEXT.singleFallback)}`
     : escapeHtml(CHOOSER_TEXT.lead);
 
-  const note = single
-    ? ""
-    : `<p class="note">${escapeHtml(CHOOSER_TEXT.sameEverywhere)}</p>`;
+  const benefits = single ? "" : renderBenefits();
+
+  const note =
+    messengers.length > 1
+      ? `<p class="note">${escapeHtml(CHOOSER_TEXT.sameEverywhere)}</p>`
+      : "";
 
   const powered = params.poweredByUrl
     ? `<a class="powered" href="${escapeHtml(params.poweredByUrl)}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_TEXT.poweredByPrefix)} <span class="brand">${escapeHtml(CHOOSER_TEXT.poweredByBrand)}</span></a>`
     : "";
 
-  const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1><p class="lead">${lead}</p><div class="buttons">${buttons}</div>${note}${powered}</main>`;
+  const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1><p class="lead">${lead}</p><div class="buttons">${buttons}</div>${benefits}${note}${renderExtras(extras, params)}${powered}</main>`;
 
   const head = [
     params.fileMarker

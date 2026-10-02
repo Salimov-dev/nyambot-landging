@@ -1,5 +1,7 @@
 import {
+  CHOOSER_EXTRA,
   CHOOSER_MESSENGER,
+  type IChooserExtra,
   type IChooserMessenger,
 } from "./messenger-chooser.types";
 
@@ -14,6 +16,17 @@ import {
 export const CHOOSER_TEXT = {
   lead: "Выбери, где тебе удобнее заказывать",
   sameEverywhere: "Меню и заказ одинаковые в обоих мессенджерах",
+  /**
+   * Чем удобен заказ в чате. 🔴 Только утвердительно и без сравнения: рядом
+   * могут стоять сайт и приложение заведения, их не принижаем. Про бонусы не
+   * пишем — программа лояльности есть не у каждой точки.
+   */
+  benefits: [
+    "Статус заказа приходит сообщением в чат",
+    "Повторить прошлый заказ — в пару касаний",
+    "Новости и акции заведения — в том же чате",
+  ],
+  extrasTitle: "Ещё у заведения",
   lastChoice: "В прошлый раз",
   single: "Открываем мессенджер…",
   singleFallback: "Если ничего не открылось, нажми кнопку",
@@ -29,4 +42,11 @@ export const CHOOSER_TEXT = {
 export const CHOOSER_BUTTON_TEXT: Record<IChooserMessenger, string> = {
   [CHOOSER_MESSENGER.MAX]: "Открыть в MAX",
   [CHOOSER_MESSENGER.TELEGRAM]: "Открыть в Телеграм",
+};
+
+export const CHOOSER_EXTRA_BUTTON_TEXT: Record<IChooserExtra, string> = {
+  [CHOOSER_EXTRA.SITE]: "Сайт заведения",
+  [CHOOSER_EXTRA.APP_IOS]: "Приложение в App Store",
+  [CHOOSER_EXTRA.APP_ANDROID]: "Приложение в Google Play",
+  [CHOOSER_EXTRA.APP_RUSTORE]: "Приложение в RuStore",
 };
