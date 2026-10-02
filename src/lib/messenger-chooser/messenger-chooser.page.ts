@@ -50,8 +50,8 @@ const ICONS: Record<IChooserMessenger, string> = {
 };
 
 const STYLES = `
-:root{--bg:#f6f6f9;--card:#fff;--text:#16161d;--muted:#6b6b78;--border:rgba(0,0,0,.08);--outline:rgba(0,0,0,.18);--check:#1f9d55}
-@media (prefers-color-scheme:dark){:root{--bg:#0f0f14;--card:#1a1a22;--text:#f4f4f7;--muted:#a0a0ad;--border:rgba(255,255,255,.08);--outline:rgba(255,255,255,.22);--check:#4ade80}}
+:root{--bg:#f6f6f9;--card:#fff;--text:#16161d;--muted:#6b6b78;--border:rgba(0,0,0,.08);--outline:rgba(0,0,0,.18)}
+@media (prefers-color-scheme:dark){:root{--bg:#0f0f14;--card:#1a1a22;--text:#f4f4f7;--muted:#a0a0ad;--border:rgba(255,255,255,.08);--outline:rgba(255,255,255,.22)}}
 [hidden]{display:none!important}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
@@ -67,23 +67,19 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wra
 .btn-telegram{background:#229ed9}
 .badge{position:absolute;top:-9px;right:12px;padding:2px 8px;border-radius:999px;background:var(--text);color:var(--card);font-size:12px;font-weight:600;display:none}
 .btn.is-last .badge{display:inline-block}
-.benefits{display:inline-flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:20px;list-style:none;text-align:left}
-.benefits li{position:relative;padding-left:26px;font-size:15px;line-height:1.4}
-.benefits li::before{content:"✓";position:absolute;left:2px;top:0;color:var(--check);font-weight:700}
 .extras{margin-top:24px}
 .extras-title{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}
 .extras-title::before,.extras-title::after{content:"";flex:1;height:1px;background:var(--border)}
 .extras .buttons{margin-top:12px;gap:10px}
 .btn-extra{min-height:48px;padding:10px 16px;color:var(--text);background:transparent;border:1px solid var(--outline);font-size:16px}
 .btn-extra:hover{filter:none;border-color:var(--muted)}
-.note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.4;text-wrap:balance}
+.note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.45;text-wrap:pretty}
 .powered{display:inline-block;margin-top:24px;color:var(--muted);font-size:12px;text-decoration:none}
 .powered:hover{text-decoration:underline}
 .brand{color:#ff8c00;font-weight:600}
 .logo{display:block;width:88px;height:88px;margin:0 auto 16px;border-radius:50%;object-fit:cover;background:var(--card);border:1px solid var(--border)}
 body.branded{background:radial-gradient(120% 60% at 50% 0%,rgba(var(--accent-rgb),.22),transparent 60%),var(--bg)}
 .branded .card{border-top:4px solid var(--accent)}
-.branded .benefits li::before{color:var(--accent)}
 .branded .btn-extra:hover{border-color:var(--accent)}
 .branded .logo{border:none;box-shadow:0 0 0 3px var(--accent),0 8px 24px rgba(var(--accent-rgb),.28)}
 `.trim();
@@ -129,11 +125,6 @@ const renderExtras = (
     : `<section class="extras"><p class="extras-title">${escapeHtml(CHOOSER_TEXT.extrasTitle)}</p><div class="buttons">${extras
         .map((extra) => renderExtraButton(extra, params.extras?.[extra] ?? ""))
         .join("")}</div></section>`;
-
-const renderBenefits = (): string =>
-  `<ul class="benefits">${CHOOSER_TEXT.benefits
-    .map((line) => `<li>${escapeHtml(line)}</li>`)
-    .join("")}</ul>`;
 
 const renderMetrikaInit = (metrika: IChooserMetrika): string => {
   const id = JSON.stringify(metrika.counterId);
@@ -189,18 +180,19 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     ? `${escapeHtml(CHOOSER_TEXT.single)}<br>${escapeHtml(CHOOSER_TEXT.singleFallback)}`
     : escapeHtml(CHOOSER_TEXT.lead);
 
-  const benefits = single ? "" : renderBenefits();
-
-  const note =
-    messengers.length > 1
-      ? `<p class="note">${escapeHtml(CHOOSER_TEXT.sameEverywhere)}</p>`
-      : "";
+  const pitch = single
+    ? ""
+    : `<p class="note">${escapeHtml(
+        messengers.length > 1
+          ? CHOOSER_TEXT.pitchBothMessengers
+          : CHOOSER_TEXT.pitchOneMessenger,
+      )}</p>`;
 
   const powered = params.poweredByUrl
     ? `<a class="powered" href="${escapeHtml(params.poweredByUrl)}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_TEXT.poweredByPrefix)} <span class="brand">${escapeHtml(CHOOSER_TEXT.poweredByBrand)}</span></a>`
     : "";
 
-  const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1><p class="lead">${lead}</p><div class="buttons">${buttons}</div>${benefits}${note}${renderExtras(extras, params)}${powered}</main>`;
+  const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1><p class="lead">${lead}</p><div class="buttons">${buttons}</div>${pitch}${renderExtras(extras, params)}${powered}</main>`;
 
   const head = [
     params.fileMarker
