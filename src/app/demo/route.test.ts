@@ -21,7 +21,9 @@ describe("GET /demo", () => {
     ).text();
     expect(html).toContain("Ещё у заведения");
     for (const extra of CHOOSER_EXTRAS) {
-      expect(html).toContain(`href="${LINKS.demo.chooser}/${extra}"`);
+      expect(html).toContain(
+        `<a class="extra-tile" href="${LINKS.demo.chooser}/${extra}"`,
+      );
     }
   });
 
@@ -45,6 +47,11 @@ describe("GET /demo/<ресурс>", () => {
     const html = await res.text();
     expect(html).toContain("Здесь будет сайт заведения");
     expect(html).toContain(`href="${LINKS.pages.qrCode}"`);
+    // У заглушки — обычная кнопка, ярлыки только в блоке «Ещё у заведения».
+    expect(html).toContain(
+      `<a class="btn btn-extra" href="${LINKS.pages.qrCode}">`,
+    );
+    expect(html).not.toContain('class="extra-tile"');
   });
 
   it("каждый магазин — заглушка приложения", async () => {

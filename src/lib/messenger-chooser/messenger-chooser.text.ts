@@ -56,3 +56,15 @@ export const CHOOSER_EXTRA_BUTTON_TEXT: Record<IChooserExtra, string> = {
   [CHOOSER_EXTRA.APP_ANDROID]: "Приложение в Google Play",
   [CHOOSER_EXTRA.APP_RUSTORE]: "Приложение в RuStore",
 };
+
+/**
+ * Подписи ярлыков «Ещё у заведения» — коротко, как под иконкой приложения на
+ * телефоне. Полный текст (`CHOOSER_EXTRA_BUTTON_TEXT`) уходит в `aria-label`:
+ * короткая подпись входит в него, голосовое управление находит ярлык по ней.
+ */
+export const CHOOSER_EXTRA_TILE_TEXT: Record<IChooserExtra, string> = {
+  [CHOOSER_EXTRA.SITE]: "Сайт",
+  [CHOOSER_EXTRA.APP_IOS]: "App Store",
+  [CHOOSER_EXTRA.APP_ANDROID]: "Google Play",
+  [CHOOSER_EXTRA.APP_RUSTORE]: "RuStore",
+};

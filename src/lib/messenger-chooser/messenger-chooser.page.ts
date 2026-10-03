@@ -6,9 +6,11 @@ import { escapeHtml } from "./html-escape";
 import {
   CHOOSER_BUTTON_TEXT,
   CHOOSER_EXTRA_BUTTON_TEXT,
+  CHOOSER_EXTRA_TILE_TEXT,
   CHOOSER_TEXT,
 } from "./messenger-chooser.text";
 import {
+  CHOOSER_EXTRA,
   CHOOSER_EXTRA_PLATFORM,
   CHOOSER_EXTRAS,
   CHOOSER_MESSENGER,
@@ -49,6 +51,19 @@ const ICONS: Record<IChooserMessenger, string> = {
   [CHOOSER_MESSENGER.TELEGRAM]: `<svg width="28" height="28" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#fff" fill-opacity=".18"/><path d="M34.9 13.4 30.4 35.2c-.3 1.3-1.1 1.6-2.2 1l-6.5-4.8-3.1 3c-.4.4-.7.7-1.4.7l.5-6.7 11.9-10.7c.5-.4-.1-.7-.8-.3L14 26.7l-6.3-2c-1.3-.4-1.4-1.3.2-2l25.2-10c1.1-.4 2.1.3 1.8.7Z" fill="#fff"/></svg>`,
 };
 
+/**
+ * Значки ярлыков «Ещё у заведения» — одноцветные, `currentColor`: цвет текста
+ * страницы, работают и в светлой, и в тёмной схеме. Apple и Google Play —
+ * контуры simple-icons (CC0); глобус и знак RuStore нарисованы руками
+ * (ромб с прорезью в скруглённом квадрате — вырезом, evenodd).
+ */
+const EXTRA_ICONS: Record<IChooserExtra, string> = {
+  [CHOOSER_EXTRA.SITE]: `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>`,
+  [CHOOSER_EXTRA.APP_IOS]: `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>`,
+  [CHOOSER_EXTRA.APP_ANDROID]: `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>`,
+  [CHOOSER_EXTRA.APP_RUSTORE]: `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 2h8a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V8a6 6 0 0 1 6-6Zm3.2 5.3L6.5 12l4.7 4.7Zm1.6 0v9.4l4.7-4.7Z"/></svg>`,
+};
+
 const STYLES = `
 :root{--bg:#f6f6f9;--card:#fff;--text:#16161d;--muted:#6b6b78;--border:rgba(0,0,0,.08);--outline:rgba(0,0,0,.18)}
 @media (prefers-color-scheme:dark){:root{--bg:#0f0f14;--card:#1a1a22;--text:#f4f4f7;--muted:#a0a0ad;--border:rgba(255,255,255,.08);--outline:rgba(255,255,255,.22)}}
@@ -70,7 +85,12 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wra
 .extras{margin-top:24px}
 .extras-title{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}
 .extras-title::before,.extras-title::after{content:"";flex:1;height:1px;background:var(--border)}
-.extras .buttons{margin-top:12px;gap:10px}
+.extra-tiles{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:12px}
+.extra-tile{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:72px;color:var(--text);text-decoration:none}
+.extra-tile-icon{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:transparent;border:1px solid var(--outline);transition:border-color .15s ease,transform .1s ease}
+.extra-tile:hover .extra-tile-icon{border-color:var(--muted)}
+.extra-tile:active .extra-tile-icon{transform:scale(.96)}
+.extra-tile-label{font-size:12px;line-height:1.3;white-space:nowrap}
 .btn-extra{min-height:48px;padding:10px 16px;color:var(--text);background:transparent;border:1px solid var(--outline);font-size:16px}
 .btn-extra:hover{filter:none;border-color:var(--muted)}
 .note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.45;text-wrap:pretty}
@@ -80,7 +100,7 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wra
 .logo{display:block;width:88px;height:88px;margin:0 auto 16px;border-radius:50%;object-fit:cover;background:var(--card);border:1px solid var(--border)}
 body.branded{background:radial-gradient(120% 60% at 50% 0%,rgba(var(--accent-rgb),.22),transparent 60%),var(--bg)}
 .branded .card{border-top:4px solid var(--accent)}
-.branded .btn-extra:hover{border-color:var(--accent)}
+.branded .extra-tile:hover .extra-tile-icon{border-color:var(--accent)}
 .branded .logo{border:none;box-shadow:0 0 0 3px var(--accent),0 8px 24px rgba(var(--accent-rgb),.28)}
 `.trim();
 
@@ -112,9 +132,13 @@ const renderButton = (messenger: IChooserMessenger, href: string): string =>
 const availableExtras = (params: IChooserPageParams): IChooserExtra[] =>
   CHOOSER_EXTRAS.filter((extra) => Boolean(params.extras?.[extra]));
 
-/** Второстепенная кнопка: контур, цвет текста страницы, ниже мессенджеров. */
-const renderExtraButton = (extra: IChooserExtra, href: string): string =>
-  `<a class="btn btn-extra" href="${escapeHtml(href)}" data-extra="${extra}" data-platform="${CHOOSER_EXTRA_PLATFORM[extra]}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_EXTRA_BUTTON_TEXT[extra])}</a>`;
+/**
+ * Ярлык ресурса заведения — как иконка приложения на телефоне: плашка с
+ * контуром и узнаваемым значком, под ней короткая подпись. Мессенджеры
+ * остаются крупными кнопками выше. Полное название — в `aria-label`.
+ */
+const renderExtraTile = (extra: IChooserExtra, href: string): string =>
+  `<a class="extra-tile" href="${escapeHtml(href)}" data-extra="${extra}" data-platform="${CHOOSER_EXTRA_PLATFORM[extra]}" target="_blank" rel="noopener" aria-label="${escapeHtml(CHOOSER_EXTRA_BUTTON_TEXT[extra])}"><span class="extra-tile-icon">${EXTRA_ICONS[extra]}</span><span class="extra-tile-label">${escapeHtml(CHOOSER_EXTRA_TILE_TEXT[extra])}</span></a>`;
 
 const renderExtras = (
   extras: IChooserExtra[],
@@ -122,8 +146,8 @@ const renderExtras = (
 ): string =>
   extras.length === 0
     ? ""
-    : `<section class="extras"><p class="extras-title">${escapeHtml(CHOOSER_TEXT.extrasTitle)}</p><div class="buttons">${extras
-        .map((extra) => renderExtraButton(extra, params.extras?.[extra] ?? ""))
+    : `<section class="extras"><p class="extras-title">${escapeHtml(CHOOSER_TEXT.extrasTitle)}</p><div class="extra-tiles">${extras
+        .map((extra) => renderExtraTile(extra, params.extras?.[extra] ?? ""))
         .join("")}</div></section>`;
 
 const renderMetrikaInit = (metrika: IChooserMetrika): string => {

@@ -1,13 +1,18 @@
 import { describe, expect, it } from "vitest";
-import { renderChooserPage } from "./messenger-chooser.page";
+import {
+  renderChooserMessagePage,
+  renderChooserPage,
+} from "./messenger-chooser.page";
 import {
   CHOOSER_EXTRA,
+  CHOOSER_EXTRAS,
   CHOOSER_MESSENGER,
   EMPTY_CHOOSER_EXTRAS,
   type IChooserPageParams,
 } from "./messenger-chooser.types";
 import {
   CHOOSER_EXTRA_BUTTON_TEXT,
+  CHOOSER_EXTRA_TILE_TEXT,
   CHOOSER_TEXT,
 } from "./messenger-chooser.text";
 
@@ -22,6 +27,13 @@ const BOTH = {
   [CHOOSER_MESSENGER.TELEGRAM]: "/go/kafe/telegram",
 };
 
+const ALL_EXTRAS = {
+  [CHOOSER_EXTRA.SITE]: "/go/kafe/site",
+  [CHOOSER_EXTRA.APP_IOS]: "/go/kafe/app-ios",
+  [CHOOSER_EXTRA.APP_ANDROID]: "/go/kafe/app-android",
+  [CHOOSER_EXTRA.APP_RUSTORE]: "/go/kafe/app-rustore",
+};
+
 const page = (overrides: Partial<IChooserPageParams> = {}): string =>
   renderChooserPage({
     title: "Пиццерия",
@@ -30,6 +42,12 @@ const page = (overrides: Partial<IChooserPageParams> = {}): string =>
     poweredByUrl: null,
     ...overrides,
   });
+
+/** Разметка одного ярлыка блока «Ещё у заведения» — от `<a` до `</a>`. */
+const tileMarkup = (html: string, extra: string): string => {
+  const attr = html.indexOf(`data-extra="${extra}"`);
+  return html.slice(html.lastIndexOf("<a ", attr), html.indexOf("</a>", attr));
+};
 
 describe("страница выбора /go", () => {
   it("два мессенджера — обе кнопки, MAX первым, без мгновенной переадресации", () => {
@@ -69,14 +87,7 @@ describe("страница выбора /go", () => {
   });
 
   it("блок «Ещё у заведения» — ниже мессенджеров, сайт первым, магазины с платформой", () => {
-    const html = page({
-      extras: {
-        [CHOOSER_EXTRA.SITE]: "/go/kafe/site",
-        [CHOOSER_EXTRA.APP_IOS]: "/go/kafe/app-ios",
-        [CHOOSER_EXTRA.APP_ANDROID]: "/go/kafe/app-android",
-        [CHOOSER_EXTRA.APP_RUSTORE]: "/go/kafe/app-rustore",
-      },
-    });
+    const html = page({ extras: ALL_EXTRAS });
     const messengers = html.indexOf('data-messenger="telegram"');
     const extras = html.indexOf('class="extras"');
     expect(messengers).toBeGreaterThan(0);
@@ -95,6 +106,38 @@ describe("страница выбора /go", () => {
     expect(html).toMatch(
       /data-extra="site"[^>]*target="_blank" rel="noopener"/u,
     );
+  });
+
+  it("ярлыки одной строкой: видна короткая подпись, полное название — в aria-label, значок не озвучивается", () => {
+    const html = page({ extras: ALL_EXTRAS });
+    expect(html).toContain('<div class="extra-tiles">');
+    // Крупные кнопки остались только у мессенджеров.
+    expect(html).not.toContain('class="btn btn-extra"');
+    for (const extra of CHOOSER_EXTRAS) {
+      const tile = tileMarkup(html, extra);
+      expect(tile).toContain('<a class="extra-tile"');
+      expect(tile).toContain(
+        `aria-label="${CHOOSER_EXTRA_BUTTON_TEXT[extra]}"`,
+      );
+      expect(tile).toContain(
+        `<span class="extra-tile-label">${CHOOSER_EXTRA_TILE_TEXT[extra]}</span>`,
+      );
+      expect(tile).toMatch(/<svg[^>]*aria-hidden="true"/u);
+      // Значок встроен: ни картинки, ни ссылки на чужой файл.
+      expect(tile).not.toMatch(/<(?:img|use)\b/u);
+      // Видимая подпись входит в название для экранного диктора и
+      // голосового управления — ярлык находится по тому, что гость видит.
+      expect(CHOOSER_EXTRA_BUTTON_TEXT[extra]).toContain(
+        CHOOSER_EXTRA_TILE_TEXT[extra],
+      );
+    }
+  });
+
+  it("🔴 скрипт прячет чужой магазин по [data-platform], а пустой блок — по .extras", () => {
+    const html = page({ extras: ALL_EXTRAS });
+    expect(html).toContain('document.querySelectorAll("[data-platform]")');
+    expect(html).toContain('document.querySelector(".extras")');
+    expect(html).toContain('<section class="extras">');
   });
 
   it("🔴 ссылки и название экранируются — чужой HTML в страницу не попадает", () => {
@@ -121,5 +164,18 @@ describe("страница выбора /go", () => {
 
   it("страница гостя заведения — без Метрики Нямбота, если её не передали", () => {
     expect(page()).not.toContain("mc.yandex.ru");
+  });
+});
+
+describe("страница-сообщение", () => {
+  it("кнопка действия — обычная кнопка во всю ширину, не ярлык", () => {
+    const html = renderChooserMessagePage("Заголовок", "Текст", {
+      href: "/qr-code",
+      label: "Подробнее",
+    });
+    expect(html).toContain(
+      '<a class="btn btn-extra" href="/qr-code">Подробнее</a>',
+    );
+    expect(html).not.toContain('class="extra-tile"');
   });
 });
