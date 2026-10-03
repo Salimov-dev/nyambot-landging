@@ -13,14 +13,28 @@ ARCHIVE=/app/static-archive
 CURRENT=/app/.next/static
 KEEP_DAYS=14
 
+# Прошлые сборки — к текущей, не перезаписывая её файлы. По файлу, а не
+# `cp -Rn`: у BusyBox `cp -Rn архив/. текущая/` не копирует НИЧЕГО и отвечает 0,
+# а `cp -Rn архив/* …` пропускает целиком каталоги, которые уже есть (`chunks`).
+# Так защита от 30.09 молча не работала до 03.10.2026: на проде в текущей
+# статике было 60 файлов из 112 архивных (план docker-obrazy, приёмка Ф5).
+# `tar -xk` тоже не годится — BusyBox обрывает распаковку на первом
+# существующем файле.
+merge_archive_into_current() {
+  (cd "$ARCHIVE" && find . -type f) | while IFS= read -r file; do
+    [ -e "$CURRENT/$file" ] && continue
+    mkdir -p "$(dirname "$CURRENT/$file")" &&
+      cp -p "$ARCHIVE/$file" "$CURRENT/$file" || exit 1
+  done
+}
+
 archive_static() {
   # Текущая сборка — в архив. Перезапись обновляет дату у файлов текущей
   # сборки, поэтому чистка ниже их не тронет.
   cp -R "$CURRENT/." "$ARCHIVE/" &&
     find "$ARCHIVE" -type f -mtime +"$KEEP_DAYS" -delete &&
     find "$ARCHIVE" -mindepth 1 -type d -empty -delete &&
-    # Прошлые сборки — к текущей, не перезаписывая её файлы.
-    cp -Rn "$ARCHIVE/." "$CURRENT/"
+    merge_archive_into_current
 }
 
 archive_static || echo "[entrypoint] архив статики не обновлён — старые файлы сборок недоступны" >&2
