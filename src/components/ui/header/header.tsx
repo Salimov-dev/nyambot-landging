@@ -37,6 +37,16 @@ const SOLUTION_LINKS = [
     href: LINKS.pages.features,
   },
   {
+    id: "komanda",
+    labelKey: "solutions.items.komanda.title",
+    href: LINKS.pages.komanda,
+  },
+  {
+    id: "loyalty",
+    labelKey: "solutions.items.loyalty.title",
+    href: LINKS.pages.loyalty,
+  },
+  {
     id: "iiko",
     labelKey: "solutions.items.iiko.title",
     href: LINKS.pages.iiko,

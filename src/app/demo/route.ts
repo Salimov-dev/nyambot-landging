@@ -6,6 +6,7 @@ import {
   demoPagePoweredByUrl,
   demoStartSourceFromUrl,
 } from "@/lib/messenger-chooser/chooser-tracking";
+import { DEMO_EXTRAS } from "@/lib/messenger-chooser/demo-extras";
 import { DEMO_LOGO_DATA_URI } from "@/lib/messenger-chooser/demo-logo.generated";
 import { renderChooserPage } from "@/lib/messenger-chooser/messenger-chooser.page";
 import {
@@ -52,6 +53,8 @@ export function GET(request: Request) {
           startSource,
         ),
       },
+      // Сайт и приложение — заглушки: интересант видит блок «Ещё у заведения».
+      extras: DEMO_EXTRAS,
       poweredByUrl: demoPagePoweredByUrl(),
       logo: DEMO_LOGO_DATA_URI,
       metrika: counterId ? { counterId, goals: DEMO_GOALS } : undefined,

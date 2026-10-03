@@ -348,13 +348,21 @@
         "title": "Bütün imkanlar",
         "text": "Nyambot tam olaraq nələri bacarır: loyallıq, yemək konstruktoru, çatdırılma, komanda, analitika"
       },
+      "komanda": {
+        "title": "«Komanda» tətbiqi",
+        "text": "Növbə administratoru, aşpaz, öz kuryerlərin və Yandex.Dostavka — telefonda, planşetdə və kompüterdə"
+      },
+      "loyalty": {
+        "title": "Loyallıq",
+        "text": "Ballar, saatlara görə aksiyalar, promokodlar, hədiyyələr və günün təklifi — sifariş tətbiqində"
+      },
       "iiko": {
         "title": "iiko ilə inteqrasiya",
         "text": "Menyu və stop-listlər kassadan gəlir, sifariş iiko-ya çatdırılma kimi düşür, aksiyalar — iikoCard-dan"
       },
       "rkeeper": {
         "title": "R-Keeper ilə inteqrasiya",
-        "text": "Menyu və stop-listlər kassadan gəlir, sifariş R-Keeper-ə düşür, qonaqda status özü yenilənir"
+        "text": "Menyu və stop-listlər kassadan, öz kuryerlərin və ya kassanın çatdırılma modulu, Nyambot endirimləri çekdə"
       },
       "integrations": {
         "title": "Bütün inteqrasiyalar",

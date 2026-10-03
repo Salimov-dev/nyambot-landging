@@ -216,9 +216,23 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
   );
 };
 
-/** Ответ вместо страницы выбора: ссылка не найдена или сервер недоступен. */
-export const renderChooserMessagePage = (title: string, text: string): string =>
+/** Кнопка под текстом страницы-сообщения. */
+export type IChooserMessageAction = { href: string; label: string };
+
+/**
+ * Ответ вместо страницы выбора: ссылка не найдена, сервер недоступен или
+ * заглушка ресурса демо. Кнопка — по желанию.
+ */
+export const renderChooserMessagePage = (
+  title: string,
+  text: string,
+  action?: IChooserMessageAction,
+): string =>
   renderDocument(
     title,
-    `<main class="card"><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(text)}</p></main>`,
+    `<main class="card"><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(text)}</p>${
+      action
+        ? `<div class="buttons"><a class="btn btn-extra" href="${escapeHtml(action.href)}">${escapeHtml(action.label)}</a></div>`
+        : ""
+    }</main>`,
   );

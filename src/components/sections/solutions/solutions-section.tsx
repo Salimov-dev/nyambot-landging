@@ -21,6 +21,8 @@ const { Title, Text } = Typography;
  */
 const SOLUTIONS = [
   { id: "features", href: LINKS.pages.features },
+  { id: "komanda", href: LINKS.pages.komanda },
+  { id: "loyalty", href: LINKS.pages.loyalty },
   { id: "iiko", href: LINKS.pages.iiko },
   { id: "rkeeper", href: LINKS.pages.rkeeper },
   { id: "integrations", href: LINKS.pages.integrations },

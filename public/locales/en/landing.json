@@ -348,13 +348,21 @@
         "title": "All features",
         "text": "Everything Nyambot can do: loyalty, dish builder, delivery, team, analytics"
       },
+      "komanda": {
+        "title": "Team app",
+        "text": "Shift admin, cook, your own couriers and Yandex.Delivery — on a phone, tablet or computer"
+      },
+      "loyalty": {
+        "title": "Loyalty",
+        "text": "Points, time-based promos, promo codes, gifts and dish of the day — right in the ordering app"
+      },
       "iiko": {
         "title": "iiko integration",
         "text": "Menu and stop lists come from the POS, orders go to iiko as delivery, promos from iikoCard"
       },
       "rkeeper": {
         "title": "R-Keeper integration",
-        "text": "Menu and stop lists come from the POS, orders go to R-Keeper, the guest sees status updates"
+        "text": "Menu and stop lists from the POS, your couriers or its delivery module, Nyambot discounts on the receipt"
       },
       "integrations": {
         "title": "All integrations",

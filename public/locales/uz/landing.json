@@ -348,13 +348,21 @@
         "title": "Barcha imkoniyatlar",
         "text": "Nyambot nimalarni qila oladi: sodiqlik, taom konstruktori, yetkazib berish, jamoa, tahlil"
       },
+      "komanda": {
+        "title": "«Komanda» ilovasi",
+        "text": "Smena administratori, oshpaz, o‘z kuryerlaring va Yandex.Delivery — telefon, planshet va kompyuterda"
+      },
+      "loyalty": {
+        "title": "Sodiqlik",
+        "text": "Ballar, soatlar bo‘yicha aksiyalar, promokodlar, sovg‘alar va kun taklifi — buyurtma ilovasida"
+      },
       "iiko": {
         "title": "iiko bilan integratsiya",
         "text": "Menyu va stop-listlar kassadan olinadi, buyurtma iiko’ga yetkazib berish sifatida tushadi, aksiyalar — iikoCard’dan"
       },
       "rkeeper": {
         "title": "R-Keeper bilan integratsiya",
-        "text": "Menyu va stop-listlar kassadan olinadi, buyurtma R-Keeper’ga tushadi, mehmonda holat o‘zi yangilanadi"
+        "text": "Menyu va stop-listlar kassadan, o‘z kuryerlaring yoki kassaning yetkazish moduli, Nyambot chegirmalari chekda"
       },
       "integrations": {
         "title": "Barcha integratsiyalar",

@@ -106,6 +106,12 @@ export function Footer() {
               <Link href={LINKS.pages.features} className={styles.footerLink}>
                 {t("solutions.items.features.title")}
               </Link>
+              <Link href={LINKS.pages.komanda} className={styles.footerLink}>
+                {t("solutions.items.komanda.title")}
+              </Link>
+              <Link href={LINKS.pages.loyalty} className={styles.footerLink}>
+                {t("solutions.items.loyalty.title")}
+              </Link>
               <Link href={LINKS.pages.network} className={styles.footerLink}>
                 {t("solutions.items.network.title")}
               </Link>
