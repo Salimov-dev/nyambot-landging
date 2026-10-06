@@ -1,9 +1,11 @@
 /* ===== Чем отличается =====
-   Две колонки: как устроены другие сервисы заказа в мессенджерах и как у нас.
-   На телефоне колонки складываются в пары «обычно → у нас» с подписью в каждой
-   строке: шапка таблицы к третьей строке уже вне экрана. */
+   Живые блоки (Руслан 06.10.2026): слева заголовки пар, справа карточка —
+   картинка «обычно → у нас» и тексты пары. Пары идут сами, по 4 с.
+   На телефоне — одна карточка с точками, листается свайпом. */
 
 .section {
+  /* 4 с не хватало дочитать пару — +18 % (Руслан 06.10.2026) */
+  --scene: 4.7s;
   padding: 72px 0;
   background: var(--bg-section);
   border-top: 1px solid var(--border-light);
@@ -37,39 +39,135 @@
   text-wrap: balance;
 }
 
-.table {
+.board {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) 1.5fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Пока блок не на экране — всё стоит, и пара не сменится незамеченной */
+.paused,
+.paused * {
+  animation-play-state: paused !important;
+}
+
+/* ----- Заголовки пар ----- */
+.tabs {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
-.colHead {
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.tab:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tabActive {
+  color: var(--text-primary);
+  border-color: var(--accent-border);
+  background: var(--accent-bg-light);
+}
+
+/* ----- Карточка ----- */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 28px 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  overflow: hidden;
+  /* Нажатие на карточку — пауза */
+  cursor: pointer;
+}
+
+/* Пауза в углу карточки: на паузе — заметная «играть», иначе тихая «пауза» */
+.hold {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hold:hover {
+  color: #fff;
+}
+
+.holdOn {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 4px 18px var(--accent-shadow);
+}
+
+.stage {
+  display: flex;
+  justify-content: center;
+}
+
+.scene {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  overflow: visible;
+}
+
+.texts {
+  display: grid;
+}
+
+.pair {
+  grid-area: 1 / 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  padding: 0 4px;
+  visibility: hidden;
 }
 
-.headUsual {
-  color: var(--text-tertiary);
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.headOur {
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.pairActive {
+  visibility: visible;
 }
 
 .usual,
@@ -77,8 +175,8 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 18px 20px;
-  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  border-radius: 12px;
 }
 
 .usual {
@@ -91,19 +189,26 @@
   border: 1px solid var(--accent-border);
 }
 
-/* Подпись колонки внутри строки — только для узких экранов */
-.rowLabel {
-  display: none;
+.usualLabel,
+.ourLabel {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
+.usualLabel {
+  color: var(--text-tertiary);
+}
+
+.ourLabel {
+  color: var(--accent);
+}
+
 .usualText {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.5;
   /* Зачёркивания нет: перечёркнутый текст читается как «этого не бывает»,
      а описанное в колонке — рабочая практика, просто чужая */
 }
@@ -115,7 +220,7 @@
   color: var(--text-primary);
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .check {
@@ -124,7 +229,316 @@
   color: var(--accent);
 }
 
-/* Итог под таблицей — второй заказ быстрее первого. Перенесён из снятой
+/* Текст пары повторяет ритм картинки: «обычно» гаснет, «у нас» проявляется */
+.pairActive .usual {
+  animation: usualDim var(--scene) ease both;
+}
+
+.pairActive .our {
+  animation: oursIn var(--scene) ease both;
+}
+
+.progress {
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progressBar {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  animation: progress var(--scene) linear both;
+}
+
+.dots {
+  display: none;
+}
+
+/* ----- Ритм сцены: 0–1,3 с «обычно», 1,3–2 с превращение, дальше «у нас» ----- */
+/* Линии — только у групп сцены: значки MAX и Телеграма залиты атрибутами,
+   а CSS перебил бы их. :where — без веса, заливки ниже (.accentFill и др.)
+   перекрывают правило без гонки за специфичностью */
+.scene :where(.gray, .accent, .neutral) :where(path, rect, circle, ellipse) {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scene .faint path {
+  stroke-width: 2;
+}
+
+.neutral {
+  stroke: rgba(255, 255, 255, 0.55);
+}
+
+.gray {
+  stroke: rgba(255, 255, 255, 0.42);
+}
+
+.accent {
+  stroke: var(--accent);
+}
+
+.faint {
+  stroke: rgba(255, 140, 0, 0.22);
+  stroke-width: 2;
+}
+
+.scene .grayFill {
+  fill: rgba(255, 255, 255, 0.12);
+}
+
+.scene .accentFill {
+  fill: var(--accent);
+}
+
+.scene .knobOn {
+  fill: #fff;
+  stroke: none;
+}
+
+.grayText,
+.accentText {
+  font: 800 34px/1 var(--font-sans, sans-serif);
+  stroke: none;
+}
+
+.grayText {
+  fill: rgba(255, 255, 255, 0.42);
+}
+
+.accentText {
+  fill: var(--accent);
+}
+
+.uFade,
+.uMergeDown,
+.uMergeUp,
+.uSlideIn,
+.oIn,
+.oDrop,
+.trackFlip,
+.knobFlip {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-duration: var(--scene);
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.uFade {
+  animation-name: uFade;
+}
+
+.uMergeDown {
+  animation-name: uMergeDown;
+}
+
+.uMergeUp {
+  animation-name: uMergeUp;
+}
+
+.uSlideIn {
+  animation-name: uSlideIn;
+}
+
+.oIn {
+  animation-name: oIn;
+}
+
+.oDrop {
+  animation-name: oDrop;
+}
+
+.scene .trackFlip {
+  animation-name: trackFlip;
+  stroke: none;
+}
+
+.scene .knobFlip {
+  animation-name: knobFlip;
+  fill: #fff;
+  stroke: none;
+}
+
+@keyframes uFade {
+  0%,
+  32% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Две базы съезжаются к середине и сливаются в одну */
+@keyframes uMergeDown {
+  0%,
+  32% {
+    opacity: 1;
+    transform: none;
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(-8px, 44px);
+  }
+}
+
+@keyframes uMergeUp {
+  0%,
+  32% {
+    opacity: 1;
+    transform: none;
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(-8px, -44px);
+  }
+}
+
+/* Второй бот появляется — «новая точка, новый бот» — и уходит вместе со всем «обычно» */
+@keyframes uSlideIn {
+  0%,
+  6% {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  16%,
+  32% {
+    opacity: 1;
+    transform: none;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes oIn {
+  0%,
+  40% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  55%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes oDrop {
+  0%,
+  50% {
+    opacity: 0;
+    transform: translateY(-34px);
+  }
+  62% {
+    opacity: 1;
+    transform: translateY(3px);
+  }
+  68%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes trackFlip {
+  0%,
+  58% {
+    fill: rgba(255, 255, 255, 0.16);
+  }
+  66%,
+  100% {
+    fill: var(--accent);
+  }
+}
+
+@keyframes knobFlip {
+  0%,
+  58% {
+    transform: none;
+  }
+  66%,
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes usualDim {
+  0%,
+  32% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes oursIn {
+  0%,
+  40% {
+    opacity: 0.25;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* «Уменьшить движение»: сразу итог «у нас», пары листаются только руками */
+@media (prefers-reduced-motion: reduce) {
+  .uFade,
+  .uMergeDown,
+  .uMergeUp,
+  .uSlideIn {
+    animation: none;
+    opacity: 0;
+  }
+
+  .oIn,
+  .oDrop,
+  .trackFlip,
+  .knobFlip,
+  .pairActive .usual,
+  .pairActive .our,
+  .progressBar {
+    animation: none;
+  }
+
+  .scene .trackFlip {
+    fill: var(--accent);
+  }
+
+  .scene .knobFlip {
+    transform: translateX(20px);
+  }
+
+  .progress {
+    display: none;
+  }
+}
+
+/* Итог под блоком — второй заказ быстрее первого. Перенесён из снятой
    секции «Как это работает» вместе с её оформлением (Руслан 06.10.2026) */
 .outcome {
   margin: 24px 0 0;
@@ -135,32 +549,44 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .colHead {
+@media (max-width: 860px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+
+  /* На телефоне и планшете заголовков нет — их место занимают точки */
+  .tabs {
     display: none;
   }
 
-  .row {
+  .pair {
     grid-template-columns: 1fr;
     gap: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border-light);
   }
 
-  .row:last-child {
-    border-bottom: none;
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
   }
 
-  .rowLabel {
-    display: block;
+  .dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition:
+      width 0.25s ease,
+      background 0.25s ease;
   }
 
-  .usual .rowLabel {
-    color: var(--text-tertiary);
-  }
-
-  .our .rowLabel {
-    color: var(--accent);
+  .dotActive {
+    width: 22px;
+    border-radius: 4px;
+    background: var(--accent);
   }
 }
 
@@ -177,8 +603,13 @@
     margin-bottom: 24px;
   }
 
+  .card {
+    padding: 18px 16px 16px;
+    gap: 14px;
+  }
+
   .usual,
   .our {
-    padding: 14px 16px;
+    padding: 12px 14px;
   }
 }

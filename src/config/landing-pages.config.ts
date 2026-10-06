@@ -30,8 +30,126 @@ export const BLOCK_ICON = {
 
 export type IBlockIcon = (typeof BLOCK_ICON)[keyof typeof BLOCK_ICON];
 
+/** Живой первый экран подстраницы — ролик продукта (Руслан 06.10.2026: «на
+ *  всех страницах — видео живого продукта, а не статика»). Ролики общие с
+ *  главной: пересобрал — обновились все страницы. */
+export const PAGE_VISUAL = {
+  /** Телефон: путь заказа гостя (hero главной) */
+  ORDER_FLOW: "orderFlow",
+  /** Телефон: выбор мессенджера → заставка → меню (демо главной) */
+  DEMO: "demo",
+  /** Телефон: акции → «Добери и получи» → баллы */
+  LOYALTY: "loyalty",
+  /** Ноутбук: кабинет сети */
+  KABINET: "kabinet",
+  /** 16:10 с подписями шагов: заказ в iiko и R-Keeper */
+  KASSY: "kassy",
+  KASSY_IIKO: "kassyIiko",
+  KASSY_RKEEPER: "kassyRkeeper",
+  /** 16:10 с подписями шагов: смена в «Команде» */
+  KOMANDA: "komanda",
+} as const;
+
+export type IPageVisual = (typeof PAGE_VISUAL)[keyof typeof PAGE_VISUAL];
+
+const PHONE_VISUALS: ReadonlySet<IPageVisual> = new Set([
+  PAGE_VISUAL.ORDER_FLOW,
+  PAGE_VISUAL.DEMO,
+  PAGE_VISUAL.LOYALTY,
+]);
+
+/** Телефонный ролик стоит рядом с заголовком, широкий — под кнопками */
+export const isPhoneVisual = (visual: IPageVisual) => PHONE_VISUALS.has(visual);
+
+/** Живая сцена карточки вместо значка — из сцен главной («Главное»,
+ *  «Возможности», «Сравнение»). У карточки без сцены остаётся значок. */
+export const PAGE_SCENE = {
+  QR: "qr",
+  NETWORK: "network",
+  CART: "cart",
+  LOYALTY: "loyalty",
+  MONEY: "money",
+  POS: "pos",
+  RETENTION: "retention",
+  GROWTH: "growth",
+  BROADCAST: "broadcast",
+  CONSTRUCTOR: "constructor",
+  CHAT: "chat",
+  DELIVERY: "delivery",
+  ONE_BOT: "oneBot",
+  NEW_POINT: "newPoint",
+  NO_SIGNUP: "noSignup",
+  SETUP: "setup",
+  PRICES: "prices",
+  /* Свои сцены карточек подстраниц (page-scenes.tsx): на странице ни одна
+     сцена не повторяется — ни между карточками, ни с секциями главной */
+  SYNC: "sync",
+  MENU_EDIT: "menuEdit",
+  STATUS: "status",
+  DASHBOARD: "dashboard",
+  TEAM: "team",
+  KITCHEN: "kitchen",
+  COURIER: "courier",
+  ALERT: "alert",
+  SEARCH: "search",
+  ACCESS: "access",
+  FRANCHISE: "franchise",
+  SITE: "site",
+  CHOOSER: "chooser",
+  DOMAIN: "domain",
+  CHOICE_STATS: "choiceStats",
+  SWAP_BOT: "swapBot",
+  PRINT: "print",
+  QR_LOGO: "qrLogo",
+  BRAND: "brand",
+  KEEP: "keep",
+  PALETTE: "palette",
+  DATA_OWN: "dataOwn",
+  SHARE: "share",
+  SECURE: "secure",
+  ERASE: "erase",
+  SERVER: "server",
+  CLOCK: "clock",
+  PROMO_CODE: "promoCode",
+  GIFT: "gift",
+  FIRST_ORDER: "firstOrder",
+  ORDER_IN: "orderIn",
+  POS_PROMO: "posPromo",
+  KEY: "key",
+  RECEIPT_LINES: "receiptLines",
+  CARD_PAY: "cardPay",
+  MENU_SCROLL: "menuScroll",
+  QR_SCAN: "qrScan",
+  MERGE: "merge",
+  TOGETHER: "together",
+  POINTS_LIST: "pointsList",
+  CITY: "city",
+  ACCOUNTS: "accounts",
+  QUICK: "quick",
+  FORK: "fork",
+  POINTS: "points",
+} as const;
+
+export type IPageScene = (typeof PAGE_SCENE)[keyof typeof PAGE_SCENE];
+
+/** Секции главной, которые подстраница показывает под своим ответом: человек
+ *  из выдачи на главную почти не переходит — весь смысл должен быть здесь */
+export const HOME_SECTION = {
+  KILLER: "killer",
+  COMPARE: "compare",
+  DEMO: "demo",
+  KOMANDA: "komanda",
+  INTEGRATIONS: "integrations",
+  FEATURES: "features",
+  CRM: "crm",
+} as const;
+
+export type IHomeSection = (typeof HOME_SECTION)[keyof typeof HOME_SECTION];
+
 export type ILandingPageBlock = {
   icon: IBlockIcon;
+  /** Живая сцена вместо значка */
+  scene?: IPageScene;
   title: string;
   text: string;
   /** Пункты под текстом — границы возможности, о которых ресторатор
@@ -68,6 +186,10 @@ export type ILandingPageContent = {
   /** Показать под кнопками общий QR-код демо — у страниц про общий QR-код и
    *  брендирование (у демо лого в центре кода). */
   demoQr?: boolean;
+  /** Ролик первого экрана */
+  visual?: IPageVisual;
+  /** Секции главной под ответом страницы — в этом порядке */
+  homeSections?: IHomeSection[];
 };
 
 const GUIDE = LINKS.docs;
@@ -103,6 +225,12 @@ export const LANDING_PAGE = {
 export const LANDING_PAGES: Record<string, ILandingPageContent> = {
   [LANDING_PAGE.IIKO]: {
     path: "/iiko",
+    visual: PAGE_VISUAL.KASSY_IIKO,
+    homeSections: [
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+      HOME_SECTION.DEMO,
+    ],
     label: "Интеграция с iiko",
     metaTitle: "Нямбот и iiko — заказы из MAX и Телеграм прямо в кассу",
     metaDescription:
@@ -112,21 +240,25 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.SYNC,
         title: "Что уезжает из кассы в бот",
         text: "Внешнее меню, цены, модификаторы и стоп-листы. Стоп-лист приезжает из кассы сразу: чего сегодня нет, того нет и в боте. Поправил меню — обновляешь кнопкой в СРМ, ночью оно синхронизируется само.",
       },
       {
         icon: BLOCK_ICON.ORDER,
+        scene: PAGE_SCENE.ORDER_IN,
         title: "Что приезжает из бота в кассу",
         text: "Заказ с составом, модификаторами, комментарием и адресом — обычным заказом доставки. Оплата проходит до кассы: деньги идут напрямую на твой счёт в ЮKassa или Яндекс.Пэй.",
       },
       {
         icon: BLOCK_ICON.PROMO,
+        scene: PAGE_SCENE.POS_PROMO,
         title: "Акции считает сама касса",
         text: "С iikoCard скидки, бонусы, подарки и промокоды работают у гостя в мини-приложении, а программа общая для точек одной iikoCard: копит в одной — тратит в другой.",
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.KEY,
         title: "Что нужно для подключения",
         text: "API-ключ из iikoWeb — подскажем, где его взять. Остальное настроим сами.",
         link: {
@@ -183,6 +315,13 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
 
   [LANDING_PAGE.RKEEPER]: {
     path: "/rkeeper",
+    visual: PAGE_VISUAL.KASSY_RKEEPER,
+    homeSections: [
+      HOME_SECTION.KOMANDA,
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+      HOME_SECTION.DEMO,
+    ],
     label: "Интеграция с R-Keeper",
     metaTitle: "Нямбот и R-Keeper — заказы из MAX и Телеграм в кассу",
     metaDescription:
@@ -195,33 +334,39 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.SYNC,
         title: "Меню и стоп-листы — из кассы",
         text: "Состав, цены и модификаторы берутся из R-Keeper, а стоп-лист подтягивается каждые пару минут: то, чего сегодня нет, гость в корзину не положит.",
       },
       {
         icon: BLOCK_ICON.MONEY,
+        scene: PAGE_SCENE.CARD_PAY,
         title: "Заказ и оплата",
         text: "Заказ уходит в кассу, оплата онлайн приходит на твой счёт напрямую. Возврат делаешь только ты — ни касса, ни сотрудник онлайн-платёж не вернут.",
       },
       {
         icon: BLOCK_ICON.DELIVERY,
+        scene: PAGE_SCENE.COURIER,
         title: "Доставка: свои курьеры или модуль кассы",
         text: "Везут твои курьеры в приложении «Команда» или Яндекс.Доставка — или модуль доставки кассы. Курьер и «доставлен» приходят кассиру пометкой, заказ закрывает он.",
         link: { label: "Приложение «Команда»", href: LINKS.pages.komanda },
       },
       {
         icon: BLOCK_ICON.PROMO,
+        scene: PAGE_SCENE.RECEIPT_LINES,
         title: "Скидки, баллы и промокоды Нямбота прямо в чеке кассы",
         text: "Акции, промокоды, подарки и баллы считает Нямбот, а касса получает их строками чека — суммы сходятся до копейки. В кассе один раз заводятся пять служебных скидок.",
         link: { label: "Лояльность Нямбота", href: LINKS.pages.loyalty },
       },
       {
         icon: BLOCK_ICON.ORDER,
+        scene: PAGE_SCENE.STATUS,
         title: "Статус меняется сам",
         text: "Что касса сообщает о заказе, гость видит в мессенджере сам. Везут курьеры Нямбота — «В пути» и «Доставлен» ставят они, и гость узнаёт об этом сразу.",
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.KEY,
         title: "Что нужно для подключения",
         text: "Код объекта в White Server и данные точки, для лояльности Нямбота — пять скидок в кассе, для модуля доставки кассы — его ключи. Остальное настроим сами.",
         link: {
@@ -294,6 +439,12 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
    */
   [LANDING_PAGE.INTEGRACII]: {
     path: LINKS.pages.integrations,
+    visual: PAGE_VISUAL.KASSY,
+    homeSections: [
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+      HOME_SECTION.DEMO,
+    ],
     label: "Интеграции",
     metaTitle:
       "Интеграции Нямбота — iiko, R-Keeper, ЮKassa, Яндекс.Пэй и Яндекс.Доставка",
@@ -304,34 +455,40 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.ORDER,
+        scene: PAGE_SCENE.ORDER_IN,
         title: "iiko",
         text: "Меню, цены и стоп-листы берутся из кассы, заказ приходит в iiko обычной доставкой. С iikoCard скидки, бонусы и промокоды считает сама касса.",
         link: { label: "Подробнее об iiko", href: LINKS.pages.iiko },
       },
       {
         icon: BLOCK_ICON.ORDER,
+        scene: PAGE_SCENE.RECEIPT_LINES,
         title: "R-Keeper",
         text: "Меню и стоп-листы приходят из кассы, заказ уходит в R-Keeper. Везут твои курьеры или модуль доставки кассы, а скидки и баллы Нямбота ложатся прямо в чек.",
         link: { label: "Подробнее об R-Keeper", href: LINKS.pages.rkeeper },
       },
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.MENU_EDIT,
         title: "Касса другая или её нет",
         text: "Нямбот сам ведёт меню, модификаторы, лояльность, доставку и заказы — на своей СРМ, без кассы. Подключишь кассу позже — данные останутся на месте.",
         link: FREE_REVIEW_LINK,
       },
       {
         icon: BLOCK_ICON.MONEY,
+        scene: PAGE_SCENE.CARD_PAY,
         title: "ЮKassa и Яндекс.Пэй",
         text: "Гость платит прямо в мессенджере картой, по СБП или бонусами. Деньги идут напрямую на твой счёт, возврат отправляешь только ты. Оплата при получении тоже работает.",
       },
       {
         icon: BLOCK_ICON.DELIVERY,
+        scene: PAGE_SCENE.DELIVERY,
         title: "Яндекс.Доставка",
         text: "Курьера Яндекс.Доставки вызываешь в один тап из приложения «Команда» или из СРМ. Платишь за фактические доставки, а не за штат. Свои курьеры тоже поддерживаются.",
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.KEY,
         title: "Что нужно для подключения",
         text: "Для iiko — API-ключ из iikoWeb, для R-Keeper — код объекта в White Server, для оплаты — магазин в ЮKassa или Яндекс.Пэй. Остальное настроим сами.",
       },
@@ -376,6 +533,14 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
 
   [LANDING_PAGE.MESSENGERS]: {
     path: "/zakazy-v-max-i-telegram",
+    visual: PAGE_VISUAL.ORDER_FLOW,
+    homeSections: [
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+      HOME_SECTION.DEMO,
+      HOME_SECTION.KOMANDA,
+      HOME_SECTION.CRM,
+    ],
     label: "Заказы в мессенджерах",
     metaTitle: "Заказы и доставка еды в MAX и Телеграм — приложение заведения",
     metaDescription:
@@ -385,11 +550,13 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.GUEST,
+        scene: PAGE_SCENE.MENU_SCROLL,
         title: "Как это выглядит для гостя",
         text: "Открыл мини-приложение в мессенджере, выбрал точку, собрал корзину, оплатил. Ни установки приложения, ни регистрации: номер спрашиваем один раз, на оформлении.",
       },
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.QR_SCAN,
         title: "Меню по QR-коду",
         text: "Один QR-код в зале или на упаковке — гость сам выбирает MAX или Телеграм и открывает твоё меню. Без установки приложения, сразу к доставке или самовывозу.",
         link: {
@@ -399,26 +566,31 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       },
       {
         icon: BLOCK_ICON.STAFF,
+        scene: PAGE_SCENE.DASHBOARD,
         title: "Как это выглядит для тебя",
         text: "Заказ приходит в приложение «Команда» — на телефон, планшет или компьютер. Есть iiko или R-Keeper — заказ уходит прямо в кассу, переписывать его руками не нужно.",
       },
       {
         icon: BLOCK_ICON.ORDER,
+        scene: PAGE_SCENE.MERGE,
         title: "Два мессенджера, одна база",
         text: "Гость нашёл тебя в MAX, а в следующий раз заказал в Телеграм — это тот же гость, с той же историей заказов и теми же баллами. Узнаём его по номеру телефона.",
       },
       {
         icon: BLOCK_ICON.DELIVERY,
+        scene: PAGE_SCENE.DELIVERY,
         title: "Доставка",
         text: "Без кассы доставку ведёт Нямбот: свои курьеры или Яндекс.Доставка в один тап. С iiko везёт касса своими средствами, с R-Keeper выбираешь сам — Нямбот или модуль доставки кассы.",
       },
       {
         icon: BLOCK_ICON.MONEY,
+        scene: PAGE_SCENE.RETENTION,
         title: "Вместо процента с заказа — подписка",
         text: "Агрегатор берёт 25–35% с каждого заказа, и с повторного тоже. Здесь оплата фиксированная, а гость остаётся в твоей базе: следующий заказ он делает в твоём канале и без комиссии.",
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.TOGETHER,
         title: "Настроим вместе",
         text: "Заведём боты в MAX и Телеграм, загрузим меню, нарисуем зоны доставки, подключим кассу и приём оплаты. Разбираться в одиночку не придётся — скажи, что нужно.",
         link: FREE_REVIEW_LINK,
@@ -470,6 +642,13 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
 
   [LANDING_PAGE.VOZMOZHNOSTI]: {
     path: "/vozmozhnosti",
+    visual: PAGE_VISUAL.KABINET,
+    homeSections: [
+      HOME_SECTION.KOMANDA,
+      HOME_SECTION.INTEGRATIONS,
+      HOME_SECTION.COMPARE,
+      HOME_SECTION.DEMO,
+    ],
     label: "Возможности",
     metaTitle:
       "Возможности Нямбота — приложение заказа для кафе, ресторана и сети",
@@ -480,75 +659,89 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: "money",
+        scene: PAGE_SCENE.RETENTION,
         title: "Повторный заказ — в свой канал, а не агрегатору",
         text: "Агрегатор берёт 25–35% с заказа и оставляет повторного гостя себе. Нямбот переводит его в твой канал: следующий заказ — без комиссии, а контакт и история остаются в твоей базе.",
       },
       {
         icon: "guest",
+        scene: PAGE_SCENE.NETWORK,
         title: "Один бот на всю сеть — и одна база гостей",
         text: "Одна точка или сеть — один бот. Гость выбирает точку и видит её меню и доставку, а заказы и баллы общие в MAX и Телеграм. Новая точка подключается без отдельного запуска.",
       },
       {
         icon: BLOCK_ICON.BRAND,
+        scene: PAGE_SCENE.BRAND,
         title: "Приложение в цветах заведения",
         text: "Лого и цветовая схема заведения — на кнопках, в корзине и ценах мини-приложения, на странице выбора мессенджера и в центре QR-кода. Задаёшь один раз — и так на всех точках.",
         link: { label: "Брендирование", href: LINKS.pages.branding },
       },
       {
         icon: "promo",
+        scene: PAGE_SCENE.LOYALTY,
         title: "Акции, баллы и промокоды — из коробки",
         text: "Скидки, подарки, промокоды и баллы работают сразу: гость копит и платит баллами в корзине. Акция включается по дням и часам сама. С iiko применяются акции самой кассы.",
         link: { label: "Лояльность", href: LINKS.pages.loyalty },
       },
       {
         icon: BLOCK_ICON.BROADCAST,
+        scene: PAGE_SCENE.BROADCAST,
         title: "Рассылка — вернуть уснувших",
         text: "Нямбот сам делит гостей на сегменты по заказам. Выбираешь «Уснувших», пишешь сообщение с кнопкой в меню — днём, не чаще раза в 7 дней. Через неделю видно, сколько заказали.",
       },
       {
         icon: BLOCK_ICON.METRICS,
+        scene: PAGE_SCENE.GROWTH,
         title: "Видно, возвращаются ли гости",
         text: "В СРМ — новые и повторные гости, второй заказ за 14 и 30 дней, частота заказов и возвращаемость по месяцам. Видно, работает ли канал на повторные заказы и кого пора позвать обратно.",
       },
       {
         icon: "menu",
+        scene: PAGE_SCENE.CONSTRUCTOR,
         title: "Гость собирает блюдо под себя — а кухня не путается",
         text: "Гость убирает лук, добавляет сыр и собирает комбо в карточке с картинками. Состав уходит в чек той строкой, которую печатает касса iiko или R-Keeper, — или во встроенный движок.",
       },
       {
         icon: "staff",
+        scene: PAGE_SCENE.TEAM,
         title: "Вся команда в одном приложении",
         text: "Администратор принимает заказы, курьер видит адрес на карте, повар отмечает готовность — с телефона, планшета или компьютера. Каждый видит только то, что нужно его роли.",
         link: { label: "Приложение «Команда»", href: LINKS.pages.komanda },
       },
       {
         icon: BLOCK_ICON.GUEST,
+        scene: PAGE_SCENE.CHAT,
         title: "Гость спрашивает — бот отвечает",
         text: "«Где мой заказ?», «До скольки работаете?» — отвечает ИИ по данным твоей точки. Жалоба, возврат или аллергия — бот зовёт администратора, и тот отвечает прямо в мессенджере.",
       },
       {
         icon: BLOCK_ICON.INSIGHT,
+        scene: PAGE_SCENE.SEARCH,
         title: "Что гости ищут — и чего не находят",
         text: "СРМ показывает, что гости ищут в меню бота и чего не нашли: блюда нет или его называют по-своему. Добавь блюдо или слово в описание. Там же вопросы, на которые ИИ не ответил.",
       },
       {
         icon: BLOCK_ICON.ALERT,
+        scene: PAGE_SCENE.ALERT,
         title: "Сбой — узнаёшь первым",
         text: "Касса не принимает заказы, нужен возврат, гость зовёт человека — Нямбот пишет администратору и управляющим в Телеграм или MAX. Ночью — только срочное, итоги дня — туда же.",
       },
       {
         icon: "delivery",
+        scene: PAGE_SCENE.DELIVERY,
         title: "Доставка без своего штата курьеров",
         text: "Курьера Яндекс.Доставки вызываешь в один тап из «Команды» или СРМ — туда, куда свои не доезжают. Платишь за доставки, а не за штат; свои курьеры тоже поддерживаются.",
       },
       {
         icon: "order",
+        scene: PAGE_SCENE.POS,
         title: "iiko и R-Keeper — заказ сразу в кассу",
         text: "Меню, цены и стоп-листы подтягиваются из кассы сами, а заказ из мессенджера сразу уходит в кассу и на кухню — без двойного ввода. Кассы нет — Нямбот ведёт всё сам.",
         link: ALL_INTEGRATIONS_LINK,
       },
       {
         icon: "setup",
+        scene: PAGE_SCENE.TOGETHER,
         title: "Запустим за тебя",
         text: "Боты, меню, зоны, кассу и приём оплаты настроим сами. Оплата от гостей приходит автоматически на твой счёт, а возврат — только твоё решение: ни касса, ни сотрудник онлайн-платёж не вернут.",
         link: FREE_REVIEW_LINK,
@@ -605,21 +798,25 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: "order",
+        scene: PAGE_SCENE.POS,
         title: "Про кассу",
         text: "Нямбот не заменяет кассу и не требует её. Есть iiko или R-Keeper — подключается интеграция, и меню, стоп-листы и заказы синхронизируются сами. Кассы нет — Нямбот ведёт меню, лояльность и заказы самостоятельно.",
       },
       {
         icon: "money",
+        scene: PAGE_SCENE.MONEY,
         title: "Про деньги",
         text: "Фиксированная подписка без процента с заказа. Онлайн-оплата через ЮKassa и Яндекс.Пэй идёт напрямую на твой счёт, возврат отправляешь только ты.",
       },
       {
         icon: "setup",
+        scene: PAGE_SCENE.SETUP,
         title: "Про старт",
         text: "Оставь заявку — разберём заведение и запустим ботов за тебя. 30 дней полного доступа бесплатно, карту привязывать не нужно.",
       },
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.QR,
         title: "Про QR-код",
         text: "Один QR-код на MAX и Телеграм: гость сам выбирает мессенджер. Адрес кода можно держать на своём домене — тогда код твой, даже если уйдёшь от Нямбота.",
         link: { label: "Как работает общий QR-код", href: LINKS.pages.qrCode },
@@ -765,6 +962,12 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
 
   [LANDING_PAGE.SET_I_FRANSHIZA]: {
     path: "/set-i-franshiza",
+    visual: PAGE_VISUAL.KABINET,
+    homeSections: [
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+      HOME_SECTION.DEMO,
+    ],
     label: "Сеть и франшиза",
     metaTitle: "Приложение заказа для сети кафе и франшизы — Нямбот",
     metaDescription:
@@ -774,31 +977,37 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: "menu",
+        scene: PAGE_SCENE.POINTS_LIST,
         title: "Все точки в одном кабинете",
         text: "Одна база гостей и общие баллы на всю сеть. Новые точки заводятся списком из файла, настройки копируются с готовой точки — меню, зоны, расписание и акции не нужно заводить заново.",
       },
       {
         icon: "staff",
+        scene: PAGE_SCENE.TEAM,
         title: "Каждому своё",
         text: "Управляющий ведёт свою точку, территориальный — свой куст. Роль выдаётся на группу точек: открылась новая — доступ появился сам, руками раздавать не надо.",
       },
       {
         icon: "guest",
+        scene: PAGE_SCENE.ACCESS,
         title: "Права режутся по людям",
         text: "Кто может вернуть деньги, кто видит телефон и адрес гостя, кто только цифры. Доступ к телефонам гостей — отдельное решение по каждому сотруднику, а не следствие должности.",
       },
       {
         icon: "delivery",
+        scene: PAGE_SCENE.CITY,
         title: "Гость видит свой город",
         text: "В приложении он выбирает город и находит ближайшую точку, а не листает список из трёхсот. Меню, цены и зона доставки — той точки, куда он заказывает.",
       },
       {
         icon: "promo",
+        scene: PAGE_SCENE.FRANCHISE,
         title: "Франшиза",
         text: "Головной офис ведёт вывеску: меню, акции, витрину и бота. По точкам франчайзи он видит сводные цифры — гости, деньги и персонал остаются у франчайзи.",
       },
       {
         icon: "money",
+        scene: PAGE_SCENE.ACCOUNTS,
         title: "Один счёт или несколько",
         text: "Точки объединяются в расчётные группы: счета и закрывающие приходят на разные юрлица, а кабинет остаётся один.",
       },
@@ -831,6 +1040,8 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
 
   [LANDING_PAGE.SAYT_ILI_PRILOZHENIE]: {
     path: "/sayt-ili-prilozhenie",
+    visual: PAGE_VISUAL.DEMO,
+    homeSections: [HOME_SECTION.KILLER, HOME_SECTION.COMPARE],
     label: "Уже есть сайт",
     metaTitle:
       "Сайт, своё приложение или бот — зачем заведению канал в мессенджере",
@@ -841,47 +1052,56 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.GUEST,
+        scene: PAGE_SCENE.QR_SCAN,
         title: "Как гость к тебе попадает",
         text: "На сайт нужно прийти: вспомнить адрес, открыть, войти. Чат бота лежит в мессенджере, который открыт и так, — и открывается из ссылки в рекламе, из соцсетей и с QR-кода в зале, не выходя из мессенджера.",
       },
       {
         icon: BLOCK_ICON.ORDER,
+        scene: PAGE_SCENE.MENU_SCROLL,
         title: "Вход и заказ",
         text: "Своё приложение нужно скачать, и доходят единицы — обычно самые лояльные. Мини-приложение открывается сразу: гость листает меню и собирает корзину без регистрации, телефон спрашиваем один раз, на оформлении.",
       },
       {
         icon: BLOCK_ICON.PROMO,
+        scene: PAGE_SCENE.PROMO_CODE,
         title: "Акции, баллы, промокоды",
         text: "На сайте это отдельный модуль или плагин, свой у каждого канала, и про кассу он ничего не знает. В Нямботе скидки, подарки, промокоды и баллы в комплекте: гость платит баллами прямо в корзине, а с iiko работают акции самой кассы. У акции свои дни и часы — включается и гаснет сама.",
       },
       {
         icon: BLOCK_ICON.MONEY,
+        scene: PAGE_SCENE.CARD_PAY,
         title: "Оплата и курьер",
         text: "Каждый сервис на сайте подключается отдельной доработкой. Здесь ЮKassa и Яндекс.Пэй — деньги сразу на твой счёт, курьер Яндекс.Доставки вызывается в один тап.",
       },
       {
         icon: BLOCK_ICON.DELIVERY,
+        scene: PAGE_SCENE.CHAT,
         title: "Связь после заказа",
         text: "Письмо или звонок гость может и не дождаться. Сообщение в мессенджере он видит сразу: принят, готовится, готов, курьер в пути — со ссылкой на отслеживание.",
       },
       {
         icon: BLOCK_ICON.MONEY,
+        scene: PAGE_SCENE.RETENTION,
         title: "Вместо процента с заказа — подписка",
         text: "Агрегатор берёт 25–35% с каждого заказа, и с повторного тоже. Здесь оплата фиксированная и не зависит от оборота: чем больше заказов уходит в свой канал, тем дешевле обходится каждый.",
       },
       {
         icon: BLOCK_ICON.STAFF,
+        scene: PAGE_SCENE.TOGETHER,
         title: "Настроим вместе",
         text: "Разбираться в одиночку не придётся: заведём боты в MAX и Телеграм, загрузим меню, нарисуем зоны доставки, подключим кассу и приём оплаты. Хочешь сам — всё делается в СРМ без программистов.",
         link: FREE_REVIEW_LINK,
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.SITE,
         title: "Сайт остаётся",
         text: "Выключать сайт не нужно: он работает на тех, кто ищет. Нямбот работает на тех, кто уже заказал, — их заказы, контакты и баллы остаются твоими. При этом почти половина коммерческих запросов в Яндексе теперь закрывается ответом нейросети, с которого на сайт никто не переходит.",
       },
       {
         icon: BLOCK_ICON.QR,
+        scene: PAGE_SCENE.CHOOSER,
         title: "Сайт или приложение уже есть?",
         text: "Поставь их на одну страницу с мессенджерами — гостю один код. Он сканирует и сам выбирает MAX, Телеграм, сайт или приложение, а ты видишь, сколько людей ушло в каждый канал.",
         link: {
@@ -934,31 +1154,37 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: "guest",
+        scene: PAGE_SCENE.DATA_OWN,
         title: "Данные принадлежат заведению",
         text: "Гости, их телефоны, адреса и история заказов — твоя база, а не наша витрина. Мы не продаём эти данные, не используем их для своей рекламы и не передаём никому, кроме исполнителей конкретного заказа.",
       },
       {
         icon: "order",
+        scene: PAGE_SCENE.SHARE,
         title: "Кому данные уходят по делу",
         text: "Касса получает состав заказа, служба доставки — адрес и телефон, чтобы передать заказ, платёжный сервис — сумму и данные платежа. Больше никому и ничего: список исполнителей закрыт и описан в политике конфиденциальности.",
       },
       {
         icon: "setup",
+        scene: PAGE_SCENE.SECURE,
         title: "Хранение и передача",
         text: "Серверы и резервные копии расположены в России. Передача — по HTTPS и TLS, чувствительные данные шифруются при хранении. Доступ сотрудников к персональным данным гостей выдаётся отдельно по каждому человеку, а не по должности.",
       },
       {
         icon: "money",
+        scene: PAGE_SCENE.MONEY,
         title: "Деньги и возвраты",
         text: "Мы не держим твою выручку: онлайн-оплата идёт напрямую на твой счёт в ЮKassa или Яндекс.Пэй. Реквизиты карт гостя к нам не попадают — их обрабатывает платёжный сервис. Возврат отправляешь только ты: ни касса, ни сотрудник этого сделать не могут.",
       },
       {
         icon: "menu",
+        scene: PAGE_SCENE.ERASE,
         title: "Минимум данных и удаление по запросу",
         text: "Собираем только то, без чего заказ не выполнить: имя, телефон, адрес доставки. Гость может попросить удалить свои данные — удаляем. Политика конфиденциальности и оферта опубликованы и написаны человеческим языком.",
       },
       {
         icon: "staff",
+        scene: PAGE_SCENE.SERVER,
         title: "Российская разработка",
         text: "СРМ, боты и приложение «Команда» сделаны нашей командой с нуля, а не собраны из стороннего конструктора. Поддержка отвечает из России. ООО «Нямбот» — участник проекта «Сколково», ОРН 1129172: статус проверяется в реестре Фонда.",
       },
@@ -991,6 +1217,8 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
 
   [LANDING_PAGE.QR_KOD]: {
     path: LINKS.pages.qrCode,
+    visual: PAGE_VISUAL.DEMO,
+    homeSections: [HOME_SECTION.KILLER, HOME_SECTION.COMPARE],
     label: "Общий QR-код",
     metaTitle: "Один QR-код на MAX и Телеграм — гость сам выбирает мессенджер",
     metaDescription:
@@ -1001,26 +1229,31 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.GUEST,
+        scene: PAGE_SCENE.QR_SCAN,
         title: "Что видит гость",
         text: "Страницу с кнопками «Открыть в MAX» и «Открыть в Телеграм». Нажал — и открылся бот заведения, меню в нём одной кнопкой. У кода только бот в одном мессенджере — гость попадает туда сразу.",
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.DOMAIN,
         title: "Код на твоём домене",
         text: "Адрес кода можно держать на своём сайте, например твойсайт.ru/app. Тогда код твой, даже если перестанешь работать с Нямботом, и упаковку перепечатывать не придётся.",
       },
       {
         icon: BLOCK_ICON.METRICS,
+        scene: PAGE_SCENE.CHOICE_STATS,
         title: "Видно, что выбирают гости",
         text: "В СРМ видно, сколько раз открыли страницу по коду и сколько раз выбрали MAX, Телеграм, сайт или приложение. Без адресов и телефонов гостей, только числа.",
       },
       {
         icon: BLOCK_ICON.BROADCAST,
+        scene: PAGE_SCENE.SWAP_BOT,
         title: "Сменил бота — код тот же",
         text: "Перешёл на другого бота или добавил второй мессенджер — страница сама поведёт к новому, напечатанные коды продолжают работать. Страницу-файл на своём сайте скачай заново.",
       },
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.PRINT,
         title: "Файлы для печати",
         text: "Код скачивается из СРМ в PNG и в векторе SVG для типографии. Перед тиражом проверь пробный отпечаток двумя телефонами — и в печать.",
         link: {
@@ -1030,6 +1263,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       },
       {
         icon: BLOCK_ICON.QR,
+        scene: PAGE_SCENE.QR_LOGO,
         title: "Лого в центре кода",
         text: "Загрузи лого заведения — оно встанет в центр кода и над названием на странице выбора, а её акценты примут цвет заведения. Сам код — чёрный на белом.",
         link: {
@@ -1039,6 +1273,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       },
       {
         icon: BLOCK_ICON.BRAND,
+        scene: PAGE_SCENE.CHOOSER,
         title: "Сайт и приложение — рядом с мессенджерами",
         text: "Мессенджеры, сайт и приложение — за одним QR-кодом. Гость выбирает сам, а ты видишь, сколько людей ушло в каждый канал.",
         /* Карточек семь — последняя во всю ширину, чтобы не стоять одной */
@@ -1097,6 +1332,8 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
    */
   [LANDING_PAGE.BRENDIROVANIE]: {
     path: LINKS.pages.branding,
+    visual: PAGE_VISUAL.DEMO,
+    homeSections: [HOME_SECTION.KILLER, HOME_SECTION.COMPARE],
     label: "Брендирование",
     metaTitle:
       "Приложение заказа в цветах заведения — лого и цвета в MAX и Телеграм",
@@ -1108,11 +1345,13 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.BRAND,
         title: "Витрина в твоих цветах",
         text: "Кнопки, корзина, нижнее меню, цены и статус заказа в мини-приложении окрашиваются в цвет заведения. Гость заказывает в приложении, которое выглядит как твоё, а не как чужой сервис.",
       },
       {
         icon: BLOCK_ICON.QR,
+        scene: PAGE_SCENE.QR_LOGO,
         title: "Лого на странице выбора и в QR-коде",
         text: "Гость сканирует код с твоим лого в центре и видит страницу с лого над названием заведения. Сам код остаётся чёрным на белом, чтобы камера читала его с первого раза.",
         link: {
@@ -1122,21 +1361,25 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.QUICK,
         title: "Настройка — за пару минут",
         text: "В СРМ загружаешь лого и выбираешь одну из десяти схем или свой цвет. Макеты экранов рядом с настройками перекрашиваются сразу — видно, как будет у гостя, ещё до сохранения.",
       },
       {
         icon: BLOCK_ICON.PROMO,
+        scene: PAGE_SCENE.PALETTE,
         title: "Готовые схемы или свой цвет",
         text: "Схемы подобраны и проверены: текст читается, цены видны. Свой цвет проверим сами и подскажем читаемый оттенок. Передумал — «Вернуть цвета по умолчанию» вернёт цвета Нямбота.",
       },
       {
         icon: BLOCK_ICON.GUEST,
+        scene: PAGE_SCENE.KEEP,
         title: "Что остаётся прежним",
         text: "Вёрстка, шрифты, тёмный фон и кнопки мессенджеров не меняются — гость видит знакомое приложение в твоих цветах. Стартовый экран — в цветах Нямбота с твоим лого, подпись Нямбота внизу.",
       },
       {
         icon: BLOCK_ICON.BRAND,
+        scene: PAGE_SCENE.FRANCHISE,
         title: "Одна вывеска на всю сеть",
         text: "Лого и цвета задаются один раз на бренд, и все его точки и боты выглядят одинаково. У франшизы вывеску ведёт головной офис: франчайзи видит его лого и цвета, но не меняет их.",
         link: { label: "Сеть и франшиза", href: LINKS.pages.network },
@@ -1196,6 +1439,12 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
    */
   [LANDING_PAGE.KOMANDA]: {
     path: LINKS.pages.komanda,
+    visual: PAGE_VISUAL.KOMANDA,
+    homeSections: [
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+      HOME_SECTION.DEMO,
+    ],
     label: "Приложение «Команда»",
     metaTitle: "Приложение «Команда» для кафе — заказы, кухня и свои курьеры",
     metaDescription:
@@ -1206,31 +1455,37 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.GUEST,
+        scene: PAGE_SCENE.DASHBOARD,
         title: "Администратор смены",
         text: "Видит все заказы точки, ведёт их по статусам, назначает курьера и отменяет заказ. Вопросы гостей и уведомления точки получает в MAX или Телеграм, пока он на смене.",
       },
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.KITCHEN,
         title: "Повар",
         text: "На точке без кассы повар видит заказы на кухонном экране, отмечает готовность и снимает с продажи блюдо или ингредиент — гость сразу перестаёт видеть его в меню.",
       },
       {
         icon: BLOCK_ICON.DELIVERY,
+        scene: PAGE_SCENE.COURIER,
         title: "Свои курьеры",
         text: "Администратор назначает курьера — тот видит заказ с адресом на карте, телефоном гостя, суммой и сдачей. Курьер отмечает «Доставлен», и гость сразу получает статус в мессенджере.",
       },
       {
         icon: BLOCK_ICON.DELIVERY,
+        scene: PAGE_SCENE.DELIVERY,
         title: "Яндекс.Доставка",
         text: "Своих курьеров мало или нет — вызываешь курьера Яндекс.Доставки в один тап из карточки заказа. Цена видна заранее, заявка и трекинг — там же. Платишь за доставки, а не за штат.",
       },
       {
         icon: BLOCK_ICON.SETUP,
+        scene: PAGE_SCENE.FORK,
         title: "Когда она нужна",
         text: "Кассы нет — «Команда» ведёт заказы, кухню и курьеров. Касса R-Keeper без модуля доставки — заказ и кухня в кассе, а курьеров ведёт «Команда». На пробном периоде — с первого дня.",
       },
       {
         icon: BLOCK_ICON.STAFF,
+        scene: PAGE_SCENE.TEAM,
         title: "Телефон, планшет, компьютер",
         text: "На телефоне — лента заказов, на планшете — две колонки, на компьютере — список слева и карточка заказа справа. Из магазина приложений ставить не нужно: открывается в браузере.",
       },
@@ -1283,6 +1538,12 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
    */
   [LANDING_PAGE.LOYALNOST]: {
     path: LINKS.pages.loyalty,
+    visual: PAGE_VISUAL.LOYALTY,
+    homeSections: [
+      HOME_SECTION.FEATURES,
+      HOME_SECTION.KILLER,
+      HOME_SECTION.DEMO,
+    ],
     label: "Лояльность",
     metaTitle:
       "Баллы, акции и промокоды для кафе — лояльность в MAX и Телеграм",
@@ -1294,26 +1555,31 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     blocks: [
       {
         icon: BLOCK_ICON.PROMO,
+        scene: PAGE_SCENE.POINTS,
         title: "Баллы за заказы",
         text: "Гость копит баллы за заказ или за отдельные блюда и платит ими прямо в корзине. Сколько можно оплатить баллами, решаешь сам; баланс общий в MAX и Телеграм.",
       },
       {
         icon: BLOCK_ICON.PROMO,
+        scene: PAGE_SCENE.CLOCK,
         title: "Акции по дням и часам",
         text: "Скидка или баллы к заказу от нужной суммы — в будни с 12 до 16 или по выходным. Акция включается и гаснет сама по часам точки, следить за временем не нужно.",
       },
       {
         icon: BLOCK_ICON.BROADCAST,
+        scene: PAGE_SCENE.PROMO_CODE,
         title: "Промокоды",
         text: "Код для рекламы, блогера или упаковки: процент, сумма, подарок или баллы. Гость вводит его в корзине, а ты задаёшь срок, лимит использований и точки.",
       },
       {
         icon: BLOCK_ICON.MENU,
+        scene: PAGE_SCENE.GIFT,
         title: "Подарки и предложение дня",
         text: "Подарок к заказу от суммы или за выбранное блюдо — сколько бургеров, столько соусов. Блюдо дня — по особой цене в выбранные дни, с рассылкой гостям.",
       },
       {
         icon: BLOCK_ICON.GUEST,
+        scene: PAGE_SCENE.FIRST_ORDER,
         title: "Скидка на первый заказ",
         text: "Любую акцию можно сделать только для новых гостей — первый заказ в этой точке или во всей сети. Хороший повод для QR-кода в зале, на упаковке и в рекламе.",
         link: {
@@ -1323,6 +1589,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       },
       {
         icon: BLOCK_ICON.ORDER,
+        scene: PAGE_SCENE.FORK,
         title: "С кассой и без неё",
         text: "Без кассы и на R-Keeper считает Нямбот, а на R-Keeper его скидки ложатся прямо в чек кассы. На iiko работает программа лояльности кассы — гость видит её в приложении.",
         link: { label: "Все интеграции", href: LINKS.pages.integrations },

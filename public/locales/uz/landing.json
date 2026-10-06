@@ -253,7 +253,37 @@
     },
     "moreIiko": "iiko haqida batafsil",
     "moreRkeeper": "R-Keeper haqida batafsil",
-    "moreAll": "Barcha integratsiyalar"
+    "moreAll": "Barcha integratsiyalar",
+    "video": {
+      "iikoOrder": "Mehmon MAX yoki Telegram'da buyurtma berdi",
+      "iikoArrived": "Buyurtma iiko'da oʻzi paydo boʻldi",
+      "iikoConfirm": "Kassir tasdiqlaydi — buyurtma oshxonaga ketadi",
+      "rkeeperOrder": "Mehmon promokod va ballar bilan buyurtma berdi",
+      "rkeeperArrived": "Buyurtma R-Keeper'da oʻzi paydo boʻldi",
+      "rkeeperCheck": "Chegirmalar, ballar, sovgʻa va toʻlov — chekda qatorlar bilan"
+    }
+  },
+  "media": {
+    "pause": "Pauza",
+    "resume": "Davom ettirish"
+  },
+  "komanda": {
+    "label": "Komanda",
+    "title": "Butun smena — bitta ilovada",
+    "subtitle": "Administrator buyurtmalarni yuritadi, oshpaz tayyorligini belgilaydi, kuryer yetkazadi — har kim oʻz telefoni, plansheti yoki kompyuteridan. Brauzerda ochiladi va tarifga kiradi",
+    "roles": {
+      "cook": "Oshpaz",
+      "admin": "Administrator",
+      "courier": "Kuryer"
+    },
+    "video": {
+      "cook": "Oshpaz oshxona ekranida tayyorligini belgilaydi",
+      "admin": "Administrator bir bosishda kuryer tayinlaydi",
+      "courier": "Kuryer «Yetkazildi»ni belgilaydi — mehmon holatni MAX yoki Telegram'da darhol koʻradi",
+      "all": "Har kim — oʻz qurilmasidan, hech narsa oʻrnatish shart emas"
+    },
+    "note": "Kassasiz va R-Keeper bilan — oshxona va oʻz kuryerlaring. iiko bilan — smena administratori uchun buyurtmalar",
+    "more": "«Komanda» haqida batafsil"
   },
   "forWhom": {
     "title": "Har qanday ovqatlanish formati uchun",

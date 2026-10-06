@@ -1,9 +1,13 @@
 import { noWidow } from "@/lib/typography/no-widow";
 import {
   BLOCK_ICON,
+  isPhoneVisual,
   type IBlockIcon,
   type ILandingPageContent,
 } from "@/config/landing-pages.config";
+import { PageVisual } from "./page-visual";
+import { PageScene } from "./page-scene";
+import { HomeSections } from "./home-sections";
 import {
   ListIcon,
   CartIcon,
@@ -74,21 +78,36 @@ export function LandingPage({ content }: IProps) {
     })),
   };
 
+  const phoneVisual = content.visual && isPhoneVisual(content.visual);
+
   return (
     <LandingPageShell>
       <main className={styles.main}>
-        <span className={styles.label}>{content.label}</span>
-        <h1 className={styles.heading}>{noWidow(content.heading)}</h1>
-        <p className={styles.lead}>{noWidow(content.lead)}</p>
+        {/* Живой первый экран (Руслан 06.10.2026): телефон — рядом с
+            заголовком, широкий ролик — под кнопками */}
+        <div className={phoneVisual ? styles.intro : undefined}>
+          <div>
+            <span className={styles.label}>{content.label}</span>
+            <h1 className={styles.heading}>{noWidow(content.heading)}</h1>
+            <p className={styles.lead}>{noWidow(content.lead)}</p>
 
-        <LandingPageCta />
+            <LandingPageCta />
+          </div>
+          {phoneVisual && content.visual ? (
+            <PageVisual visual={content.visual} />
+          ) : null}
+        </div>
+
+        {content.visual && !phoneVisual ? (
+          <PageVisual visual={content.visual} />
+        ) : null}
 
         {/* Страницы про общий QR-код и брендирование показывают сам код:
             навести телефон убедительнее любого описания */}
         {content.demoQr ? <DemoQrBlock showMore={false} inPage /> : null}
 
         <div className={styles.blocks}>
-          {content.blocks.map((block) => {
+          {content.blocks.map((block, index) => {
             const Icon = ICONS[block.icon];
 
             return (
@@ -100,9 +119,13 @@ export function LandingPage({ content }: IProps) {
                     : styles.block
                 }
               >
-                <span className={styles.blockIcon}>
-                  <Icon size={20} />
-                </span>
+                {block.scene ? (
+                  <PageScene scene={block.scene} index={index} />
+                ) : (
+                  <span className={styles.blockIcon}>
+                    <Icon size={20} />
+                  </span>
+                )}
                 <h2 className={styles.blockTitle}>{block.title}</h2>
                 <p className={styles.blockText}>{noWidow(block.text)}</p>
                 {block.points ? (
@@ -136,7 +159,13 @@ export function LandingPage({ content }: IProps) {
             </ul>
           </section>
         ) : null}
+      </main>
 
+      {content.homeSections?.length ? (
+        <HomeSections sections={content.homeSections} />
+      ) : null}
+
+      <div className={`${styles.main} ${styles.mainTail}`}>
         {/* Бесплатный разбор — на каждой посадочной, как на главной: страница
             отвечает на запрос, а блок даёт следующий шаг (28.09.2026) */}
         <FreeReviewSection embedded />
@@ -169,7 +198,7 @@ export function LandingPage({ content }: IProps) {
         </a>
 
         <LandingPageCta />
-      </main>
+      </div>
 
       <script
         type="application/ld+json"

@@ -1,0 +1,126 @@
+.section {
+  padding: 72px 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 32px;
+}
+
+/* Роли из ролика — подсветка у той, чей шаг идёт */
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.role {
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-border);
+  background: var(--surface);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.roleActive {
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 4px 20px rgba(255, 122, 0, 0.3);
+}
+
+.videoWrap {
+  margin-top: 24px;
+}
+
+.noteRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.note svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.moreLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.moreLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  /* Плашка переносится в несколько строк — галочка сбоку выглядит съехавшей */
+  .note svg {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .inner {
+    padding: 0 16px;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .role {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .videoWrap {
+    margin-top: 20px;
+  }
+
+  .note {
+    font-size: 14px;
+  }
+}

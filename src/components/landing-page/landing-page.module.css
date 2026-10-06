@@ -90,9 +90,54 @@
   border-color: var(--accent);
 }
 
+/* Страница — две узкие части вокруг секций главной во всю ширину:
+   ответ на запрос сверху, разбор, вопросы и справочник снизу */
 .main {
+  flex: none;
+  padding: 24px 24px 56px;
+}
+
+.mainTail {
   flex: 1;
-  padding: 24px 24px 72px;
+  padding-top: 0;
+  padding-bottom: 72px;
+}
+
+/* ===== Живой первый экран ===== */
+
+/* Телефон рядом с заголовком; макет 280 × 520 */
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 40px;
+  align-items: center;
+  --phone-mockup-width: 280px;
+  --phone-mockup-height: 520px;
+}
+
+.visualPhone {
+  display: flex;
+  justify-content: center;
+}
+
+/* Широкий ролик — под кнопками, во всю ширину колонки */
+.visualWide {
+  margin: 8px 0 36px;
+}
+
+/* ===== Секции главной ===== */
+
+/* Фон через одну, как на главной: секции не сливаются в одну полосу */
+.homeSections > section:nth-of-type(odd) {
+  background: var(--bg-section) !important;
+}
+
+.homeSections > section:nth-of-type(even) {
+  background: var(--bg) !important;
+}
+
+.homeSections {
+  margin-bottom: 40px;
 }
 
 .label {
@@ -278,6 +323,26 @@
   border-radius: var(--radius-md);
   background: var(--accent-bg);
   color: var(--accent);
+}
+
+/* Живая сцена карточки вместо значка — по центру, как в «Главном» */
+.blockScene {
+  display: flex;
+  justify-content: center;
+  height: 112px;
+  margin: -4px 0 18px;
+}
+
+.blockScene > div {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.blockScene svg {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
 }
 
 .blockTitle {
@@ -499,7 +564,25 @@
   color: var(--text-tertiary);
 }
 
+/* Телефон: ролик под текстом, сцены карточек чуть ниже */
+@media (max-width: 760px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    --phone-mockup-width: 240px;
+    --phone-mockup-height: 446px;
+  }
+
+  .visualPhone {
+    margin-bottom: 28px;
+  }
+}
+
 @media (max-width: 720px) {
+  .blockScene {
+    height: 96px;
+  }
+
   .blocks {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;

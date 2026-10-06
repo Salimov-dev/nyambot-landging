@@ -381,6 +381,23 @@ export function CloseIcon({ size = DEFAULT_SIZE, className }: IconProps) {
   );
 }
 
+/** Пауза / продолжить — у живых блоков и роликов: стоит пауза — показывает «играть» */
+export function PlayPauseIcon({
+  size = DEFAULT_SIZE,
+  className,
+  paused,
+}: IconProps & { paused: boolean }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      {paused ? (
+        <path d="M7 4.5v15l12-7.5z" fill="currentColor" />
+      ) : (
+        <path d="M9 5v14M15 5v14" strokeWidth={3} />
+      )}
+    </svg>
+  );
+}
+
 /** Общий QR-код на MAX и Телеграм: три угловых маркера и точка данных. */
 export function QrCodeIcon({ size = DEFAULT_SIZE, className }: IconProps) {
   return (

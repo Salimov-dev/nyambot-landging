@@ -1,0 +1,83 @@
+/* Ролик продукта 16:10 (сцены «Интеграций» и «Команды») */
+.wrap {
+  max-width: 880px;
+  /* Только по бокам: отступ сверху задаёт секция (className) — без спора
+     одинаковых по весу правил о порядке подключения CSS */
+  margin-inline: auto;
+}
+
+.frame {
+  position: relative;
+}
+
+/* Пауза в углу ролика; нажатие на сам ролик делает то же */
+.hold {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(10, 12, 20, 0.55);
+  backdrop-filter: blur(6px);
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hold:hover {
+  color: #fff;
+}
+
+.holdOn {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 4px 18px var(--accent-shadow);
+}
+
+.video {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid var(--glass-border);
+  /* Цвет края фона сцены — до загрузки нет тёмной рамки */
+  background: #161925;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+}
+
+.caption {
+  margin: 16px 0 0;
+  min-height: 1.5em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-wrap: balance;
+  animation: captionIn 0.35s ease-out;
+}
+
+@keyframes captionIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .caption {
+    font-size: 15px;
+  }
+}

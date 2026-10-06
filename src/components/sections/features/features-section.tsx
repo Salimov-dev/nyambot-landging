@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -9,23 +10,22 @@ import { reachGoal } from "@/config/metrika";
 import { LINKS } from "@/config/links.config";
 import { theme } from "@/config/theme";
 import {
-  WalletIcon,
-  TargetIcon,
-  UtensilsIcon,
-  PackageIcon,
-  MessageIcon,
-  MegaphoneIcon,
-} from "@/components/ui/icons/icons";
+  BroadcastScene,
+  ChatScene,
+  ConstructorScene,
+  DeliveryScene,
+  GrowthScene,
+  RetentionScene,
+} from "./features-scenes";
 import styles from "./features-section.module.css";
 
 const { Title, Text } = Typography;
 
-type BenefitIcon = (props: {
-  size?: number;
-  className?: string;
-}) => React.ReactElement;
-
-type Benefit = { id: string; icon: BenefitIcon; accentColor: string };
+type Benefit = {
+  id: string;
+  scene: () => React.ReactElement;
+  accentColor: string;
+};
 
 /**
  * Плитки вместо раскрывающихся блоков.
@@ -41,23 +41,33 @@ type Benefit = { id: string; icon: BenefitIcon; accentColor: string };
  * блюдо под себя, ответы ИИ, доставка. «Приложение „Команда“» (есть в составе
  * тарифа), «Запустим за тебя» (сказано в «Сравнении», расписано на /zapusk),
  * метрики гостей, «чего не хватает в меню» и оповещения о сбоях сняты с главной
- * — все они на /vozmozhnosti по кнопке ниже. На телефоне плитка — иконка
+ * — все они на /vozmozhnosti по кнопке ниже. На телефоне плитка — сцена
  * и заголовок одной строкой, без текста: абзацы подряд давали самую длинную
  * секцию страницы.
+ *
+ * Живые сцены вместо значков (Руслан 06.10.2026): в каждой плитке крутится
+ * своя маленькая сцена выгоды — монеты в кошельке, растущий чек, письмо
+ * уснувшему гостю, лук долой и сыр сверху, ответ бота, машина до метки.
+ * Подсветки по очереди нет — она уже у «Что это даёт заведению»; сцены идут
+ * разом, со сдвигом по кругу, чтобы не двигались в такт.
  */
 const BENEFITS: readonly Benefit[] = [
-  { id: "retention", icon: WalletIcon, accentColor: theme.colors.success },
-  { id: "growth", icon: TargetIcon, accentColor: "#14c4a2" },
-  { id: "segmentBroadcast", icon: MegaphoneIcon, accentColor: "#be4bdb" },
-  { id: "constructor", icon: UtensilsIcon, accentColor: "#e64980" },
-  { id: "guestChat", icon: MessageIcon, accentColor: "#7950f2" },
-  { id: "delivery", icon: PackageIcon, accentColor: "#f76707" },
+  { id: "retention", scene: RetentionScene, accentColor: theme.colors.success },
+  { id: "growth", scene: GrowthScene, accentColor: "#14c4a2" },
+  { id: "segmentBroadcast", scene: BroadcastScene, accentColor: "#be4bdb" },
+  { id: "constructor", scene: ConstructorScene, accentColor: "#e64980" },
+  { id: "guestChat", scene: ChatScene, accentColor: "#7950f2" },
+  { id: "delivery", scene: DeliveryScene, accentColor: "#f76707" },
 ] as const;
+
+/** Сдвиг сцен по кругу между плитками, с */
+const TILE_OFFSET_S = 0.7;
 
 function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
   const base = `benefits.items.${benefit.id}`;
+  const Scene = benefit.scene;
 
   return (
     <motion.article
@@ -66,23 +76,24 @@ function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
       className={`${styles.tile} landing-glass-card`}
+      style={
+        {
+          "--tile": benefit.accentColor,
+          "--offset": `${-index * TILE_OFFSET_S}s`,
+        } as CSSProperties
+      }
     >
-      <span
-        className={styles.tileIcon}
-        style={{
-          color: benefit.accentColor,
-          background: `${benefit.accentColor}18`,
-          border: `1px solid ${benefit.accentColor}44`,
-        }}
-      >
-        <benefit.icon size={22} />
-      </span>
+      <div className={styles.illo}>
+        <Scene />
+      </div>
 
-      <Title level={3} className={styles.tileTitle}>
-        {t(`${base}.title`)}
-      </Title>
+      <div className={styles.tileBody}>
+        <Title level={3} className={styles.tileTitle}>
+          {t(`${base}.title`)}
+        </Title>
 
-      <Text className={styles.tileText}>{t(`${base}.text`)}</Text>
+        <Text className={styles.tileText}>{t(`${base}.text`)}</Text>
+      </div>
     </motion.article>
   );
 }
@@ -90,6 +101,22 @@ function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
 export function FeaturesSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
+  // Сцены крутятся, только пока сетка на экране
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [onScreen, setOnScreen] = useState(false);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setOnScreen(entry.isIntersecting),
+      {
+        threshold: 0.15,
+      },
+    );
+    observer.observe(grid);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="features" className={styles.section}>
@@ -108,7 +135,10 @@ export function FeaturesSection() {
           <Text className={styles.subtitle}>{t("benefits.subtitle")}</Text>
         </motion.div>
 
-        <div className={styles.tileGrid}>
+        <div
+          ref={gridRef}
+          className={`${styles.tileGrid} ${onScreen ? "" : styles.paused}`}
+        >
           {BENEFITS.map((benefit, i) => (
             <BenefitCard key={benefit.id} benefit={benefit} index={i} />
           ))}

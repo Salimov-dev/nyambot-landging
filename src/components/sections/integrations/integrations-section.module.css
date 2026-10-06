@@ -142,6 +142,33 @@
   text-decoration: underline;
 }
 
+/* Логотипы касс из ролика — кнопки: подсветка у той, чья часть идёт */
+.logoButton {
+  display: block;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.logoCardActive {
+  border-color: var(--accent);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.14),
+    0 0 0 2px var(--accent),
+    0 4px 28px rgba(255, 122, 0, 0.35);
+}
+
+/* Ролик «заказ сам приходит в кассу» — отступ от логотипов */
+.videoWrap {
+  margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+  .videoWrap {
+    margin-top: 24px;
+  }
+}
+
 /* Короткие подписи в две строки — без одинокого слова в конце (Руслан 30.09). */
 .noPos {
   text-wrap: balance;

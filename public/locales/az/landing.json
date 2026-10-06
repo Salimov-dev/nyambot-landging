@@ -253,7 +253,37 @@
     },
     "moreIiko": "iiko haqqında ətraflı",
     "moreRkeeper": "R-Keeper haqqında ətraflı",
-    "moreAll": "Bütün inteqrasiyalar"
+    "moreAll": "Bütün inteqrasiyalar",
+    "video": {
+      "iikoOrder": "Qonaq MAX və ya Telegram-da sifariş verdi",
+      "iikoArrived": "Sifariş iiko-da özü göründü",
+      "iikoConfirm": "Kassir təsdiqləyir — sifariş mətbəxə gedir",
+      "rkeeperOrder": "Qonaq promokod və ballarla sifariş verdi",
+      "rkeeperArrived": "Sifariş R-Keeper-də özü göründü",
+      "rkeeperCheck": "Endirimlər, ballar, hədiyyə və ödəniş — çekdə sətirlərlə"
+    }
+  },
+  "media": {
+    "pause": "Pauza",
+    "resume": "Davam et"
+  },
+  "komanda": {
+    "label": "Komanda",
+    "title": "Bütün növbə — bir tətbiqdə",
+    "subtitle": "Administrator sifarişləri idarə edir, aşpaz hazır olduğunu qeyd edir, kuryer çatdırır — hər kəs öz telefonundan, planşetindən və ya kompüterindən. Brauzerdə açılır və tarifə daxildir",
+    "roles": {
+      "cook": "Aşpaz",
+      "admin": "Administrator",
+      "courier": "Kuryer"
+    },
+    "video": {
+      "cook": "Aşpaz mətbəx ekranında hazır olduğunu qeyd edir",
+      "admin": "Administrator bir toxunuşla kuryer təyin edir",
+      "courier": "Kuryer «Çatdırıldı» qeyd edir — qonaq statusu dərhal MAX və ya Telegram-da görür",
+      "all": "Hər kəs — öz cihazından, heç nə quraşdırmaq lazım deyil"
+    },
+    "note": "Kassasız və R-Keeper ilə — mətbəx və öz kuryerlərin. iiko ilə — növbə administratoru üçün sifarişlər",
+    "more": "«Komanda» haqqında ətraflı"
   },
   "forWhom": {
     "title": "İstənilən iaşə formatı üçün",

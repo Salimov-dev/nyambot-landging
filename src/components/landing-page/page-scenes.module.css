@@ -1,0 +1,430 @@
+/* ===== Сцены карточек подстраниц =====
+   Линейные значки цвета карточки (currentColor), петля --cycle. Движения —
+   общий словарь классов; сдвиг элемента внутри круга — --d (доля круга, позже
+   на столько), смещения — --dx/--dy. Задержка отрицательная: петля с первого
+   кадра идёт с нужной фазы, без «стоп-кадра» до старта.
+   Базовые стили (без анимации) — итог сцены: так она стоит при «уменьшить
+   движение». */
+
+.scene {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.scene :where(.ln, .ln *) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scene :where(.faint, .faint *) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.3;
+}
+
+.scene .solid {
+  fill: currentColor;
+  stroke: none;
+}
+
+.scene .onSolid {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scene .glyph {
+  fill: #fff;
+  stroke: none;
+  font: 800 15px/1 var(--font-sans, sans-serif);
+}
+
+.scene .glyphLine {
+  fill: currentColor;
+  stroke: none;
+  font: 800 16px/1 var(--font-sans, sans-serif);
+}
+
+/* ----- Словарь движений ----- */
+.appear,
+.vanish,
+.travel,
+.pop,
+.draw,
+.pulse,
+.spin,
+.wiggle,
+.flip,
+.early,
+.late,
+.third,
+.grow,
+.steps,
+.tint {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-duration: var(--cycle, 4.4s);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  /* --offset — сдвиг карточки (отрицательный): соседние карточки не в такт */
+  animation-delay: calc(
+    var(--cycle, 4.4s) * (var(--d, 0) - 1) + var(--offset, 0s)
+  );
+}
+
+.appear {
+  animation-name: psAppear;
+}
+
+.vanish {
+  opacity: 0;
+  animation-name: psVanish;
+}
+
+.travel {
+  opacity: 0;
+  animation-name: psTravel;
+}
+
+.pop {
+  animation-name: psPop;
+}
+
+.draw {
+  stroke-dasharray: 100;
+  animation-name: psDraw;
+}
+
+.pulse {
+  animation-name: psPulse;
+  animation-duration: calc(var(--cycle, 4.4s) / 3);
+}
+
+.spin {
+  animation-name: psSpin;
+  animation-timing-function: linear;
+}
+
+.wiggle {
+  transform-origin: 50% 0;
+  animation-name: psWiggle;
+}
+
+.flip {
+  transform: translateX(var(--dx, 0));
+  animation-name: psFlip;
+}
+
+.early {
+  opacity: 0;
+  animation-name: psEarly;
+}
+
+.late {
+  animation-name: psLate;
+}
+
+.third {
+  opacity: 0;
+  animation-name: psThird;
+  animation-timing-function: linear;
+}
+
+.grow {
+  transform-origin: 50% 100%;
+  animation-name: psGrow;
+}
+
+.steps {
+  animation-name: psSteps;
+}
+
+.tint {
+  animation-name: psTint;
+}
+
+/* Появилось → держится → погасло к концу круга */
+@keyframes psAppear {
+  0%,
+  25% {
+    opacity: 0;
+    transform: translate(var(--dx, 0), var(--dy, 8px));
+  }
+  36%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+/* Было → ушло → вернулось к началу круга */
+@keyframes psVanish {
+  0%,
+  25% {
+    opacity: 1;
+    transform: none;
+  }
+  36%,
+  88% {
+    opacity: 0;
+    transform: translate(var(--dx, 0), var(--dy, 0));
+  }
+  96%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Пакет / человек едет к цели и пропадает у неё */
+@keyframes psTravel {
+  0%,
+  6% {
+    opacity: 0;
+    transform: none;
+  }
+  12% {
+    opacity: 1;
+    transform: none;
+  }
+  46% {
+    opacity: 1;
+    transform: translate(var(--dx, 0), var(--dy, 0));
+  }
+  54%,
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx, 0), var(--dy, 0));
+  }
+}
+
+@keyframes psPop {
+  0%,
+  30% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  38% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  44%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes psDraw {
+  0%,
+  15% {
+    opacity: 1;
+    stroke-dashoffset: 100;
+  }
+  45%,
+  88% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes psPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes psSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes psWiggle {
+  0%,
+  14%,
+  40%,
+  100% {
+    transform: none;
+  }
+  20% {
+    transform: rotate(14deg);
+  }
+  27% {
+    transform: rotate(-12deg);
+  }
+  34% {
+    transform: rotate(6deg);
+  }
+}
+
+/* Переключатель: щёлкнул во «вкл» и вернулся к концу круга */
+@keyframes psFlip {
+  0%,
+  30% {
+    transform: none;
+  }
+  38%,
+  90% {
+    transform: translateX(var(--dx, 0));
+  }
+  98%,
+  100% {
+    transform: none;
+  }
+}
+
+/* Пара «сначала / потом»: early виден в первой половине, late — во второй */
+@keyframes psEarly {
+  0%,
+  18% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  26%,
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+  56%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes psLate {
+  0%,
+  54% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  62% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  68%,
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+  97%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+/* Одна треть круга — для смены из трёх (цвета витрины) */
+@keyframes psThird {
+  0%,
+  31% {
+    opacity: 1;
+  }
+  34%,
+  97% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes psGrow {
+  0% {
+    transform: scaleY(0);
+  }
+  30%,
+  88% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+/* Три остановки по --dx: выбор кольцом */
+@keyframes psSteps {
+  0%,
+  26% {
+    transform: none;
+  }
+  33%,
+  59% {
+    transform: translateX(var(--dx, 0));
+  }
+  66%,
+  92% {
+    transform: translateX(calc(var(--dx, 0px) * 2));
+  }
+  99%,
+  100% {
+    transform: none;
+  }
+}
+
+/* Серое → цвет карточки */
+@keyframes psTint {
+  0%,
+  28% {
+    stroke: rgba(255, 255, 255, 0.35);
+  }
+  38%,
+  88% {
+    stroke: currentColor;
+  }
+  98%,
+  100% {
+    stroke: rgba(255, 255, 255, 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .appear,
+  .vanish,
+  .travel,
+  .pop,
+  .draw,
+  .pulse,
+  .spin,
+  .wiggle,
+  .flip,
+  .early,
+  .late,
+  .third,
+  .grow,
+  .steps,
+  .tint {
+    animation: none;
+  }
+}

@@ -56,13 +56,28 @@
   border-radius: var(--radius-xl);
 }
 
-.tileIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
+.tileBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Живая сцена плитки — на месте прежнего значка */
+.illo {
+  width: 100%;
+  padding: 6px 0 4px;
+  color: var(--tile);
+}
+
+/* Сцена по центру плитки, как в «Главном» (Руслан 06.10.2026) */
+.scene {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin-inline: auto;
+  overflow: visible;
 }
 
 .tileTitle {
@@ -151,21 +166,21 @@
     gap: 10px;
   }
 
-  /* Телефон: иконка и заголовок одной строкой, без текста — девять абзацев
+  /* Телефон: сцена и заголовок одной строкой, без текста — девять абзацев
      подряд были самой длинной секцией страницы (Руслан 06.10.2026).
      Подробности — на странице возможностей по кнопке под плитками. */
   .tile {
     flex-direction: row;
     align-items: center;
     gap: 14px;
-    padding: 14px 16px;
+    padding: 12px 16px 12px 12px;
     border-radius: var(--radius-lg);
   }
 
-  .tileIcon {
+  .illo {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 104px;
+    padding: 0;
   }
 
   .tileTitle {
@@ -180,4 +195,410 @@
 /* Короткие подписи в две строки — без одинокого слова в конце (Руслан 30.09). */
 .subtitle {
   text-wrap: balance;
+}
+
+/* ===== Сцены плиток =====
+   Круг --cycle, сдвиг плитки --offset (отрицательный: сцены не в такт),
+   сдвиг элемента внутри круга --d (доля круга). Пока сетка за экраном —
+   всё стоит. Базовые стили — итог сцены: так она стоит без анимации. */
+.tileGrid {
+  --cycle: 4.4s;
+}
+
+.paused,
+.paused * {
+  animation-play-state: paused !important;
+}
+
+.scene :where(.ln, .ln *) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scene .solid {
+  fill: currentColor;
+  stroke: none;
+}
+
+.scene .onSolid {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.badgeText {
+  fill: #fff;
+  stroke: none;
+  font: 800 15px/1 var(--font-sans, sans-serif);
+}
+
+.scene .sceneText,
+.scene .sceneTextSmall {
+  fill: currentColor;
+  stroke: none;
+  font: 800 18px/1 var(--font-sans, sans-serif);
+}
+
+.scene .sceneTextSmall {
+  font-size: 13px;
+}
+
+/* Итог в покое */
+.coin,
+.envelope,
+.zz,
+.onion,
+.typing {
+  opacity: 0;
+}
+
+.car {
+  transform: translateX(72px);
+}
+
+.trend {
+  stroke-dasharray: 100;
+}
+
+.coin,
+.pulse,
+.bar,
+.envelope,
+.popLoop,
+.cheese,
+.onion,
+.reply,
+.car {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.bar {
+  transform-origin: 50% 100%;
+}
+
+.coin,
+.pulse,
+.bar,
+.trend,
+.envelope,
+.zz,
+.popLoop,
+.onion,
+.cheese,
+.typing,
+.reply,
+.car {
+  animation-duration: var(--cycle);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  animation-delay: calc(var(--cycle) * var(--d, 0) + var(--offset, 0s));
+}
+
+.coin {
+  animation-name: coinIn;
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+.bar {
+  animation-name: barGrow;
+}
+
+.trend {
+  animation-name: trendDraw;
+}
+
+.envelope {
+  animation-name: flyRight;
+}
+
+.zz {
+  animation-name: zzFade;
+}
+
+.popLoop {
+  animation-name: popLoop;
+}
+
+.onion {
+  animation-name: onionOut;
+}
+
+.cheese {
+  animation-name: cheeseIn;
+}
+
+.typing {
+  animation-name: typing;
+}
+
+.reply {
+  animation-name: replyIn;
+}
+
+.car {
+  animation-name: carDrive;
+}
+
+/* Точки «бот печатает» мигают своим быстрым ритмом */
+.dot {
+  animation: blink 0.9s ease-in-out infinite;
+}
+
+@keyframes coinIn {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  6% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+    transform: translate(126px, -16px) scale(0.8);
+  }
+  34%,
+  100% {
+    opacity: 0;
+    transform: translate(126px, -16px) scale(0.8);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  30% {
+    transform: none;
+  }
+  38% {
+    transform: scale(1.15);
+  }
+  46%,
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes barGrow {
+  0% {
+    opacity: 1;
+    transform: scaleY(0);
+  }
+  18%,
+  86% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes trendDraw {
+  0%,
+  30% {
+    opacity: 1;
+    stroke-dashoffset: 100;
+  }
+  50%,
+  86% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes flyRight {
+  0%,
+  10% {
+    opacity: 0;
+    transform: none;
+  }
+  16% {
+    opacity: 1;
+  }
+  44% {
+    opacity: 1;
+    transform: translateX(62px) scale(0.7);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translateX(62px) scale(0.7);
+  }
+}
+
+@keyframes zzFade {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  50%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popLoop {
+  0%,
+  48% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  56% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  62%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes onionOut {
+  0%,
+  14% {
+    opacity: 1;
+    transform: none;
+  }
+  32%,
+  90% {
+    opacity: 0;
+    transform: translateX(64px);
+  }
+  91% {
+    opacity: 0;
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cheeseIn {
+  0%,
+  36% {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+  46% {
+    opacity: 1;
+    transform: translateY(2px);
+  }
+  50%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes typing {
+  0%,
+  6% {
+    opacity: 0;
+  }
+  10%,
+  40% {
+    opacity: 1;
+  }
+  44%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes replyIn {
+  0%,
+  44% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  52%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes carDrive {
+  0%,
+  8% {
+    opacity: 0;
+    transform: none;
+  }
+  12% {
+    opacity: 1;
+  }
+  56% {
+    opacity: 1;
+    transform: translateX(72px);
+  }
+  62%,
+  100% {
+    opacity: 0;
+    transform: translateX(72px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* «Уменьшить движение»: сцены стоят в итоге */
+@media (prefers-reduced-motion: reduce) {
+  .coin,
+  .pulse,
+  .bar,
+  .trend,
+  .envelope,
+  .zz,
+  .popLoop,
+  .onion,
+  .cheese,
+  .typing,
+  .reply,
+  .car,
+  .dot {
+    animation: none;
+  }
 }

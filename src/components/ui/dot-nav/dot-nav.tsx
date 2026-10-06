@@ -14,6 +14,7 @@ const SECTIONS: { id: string; label: string }[] = [
   { id: "compare", label: "Сравнение" },
   { id: "try-demo", label: "Демо" },
   { id: "guests-path", label: "Гости" },
+  { id: "komanda", label: "Команда" },
   { id: "features", label: "Возможности" },
   { id: "crm-demo", label: "СРМ" },
   { id: "pricing", label: "Тарифы" },

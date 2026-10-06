@@ -253,7 +253,37 @@
     },
     "moreIiko": "More about iiko",
     "moreRkeeper": "More about R-Keeper",
-    "moreAll": "All integrations"
+    "moreAll": "All integrations",
+    "video": {
+      "iikoOrder": "The guest placed an order in MAX or Telegram",
+      "iikoArrived": "The order showed up in iiko on its own",
+      "iikoConfirm": "The cashier confirms — the order goes to the kitchen",
+      "rkeeperOrder": "The guest placed an order with a promo code and points",
+      "rkeeperArrived": "The order showed up in R-Keeper on its own",
+      "rkeeperCheck": "Discounts, points, a gift and payment — as receipt lines"
+    }
+  },
+  "media": {
+    "pause": "Pause",
+    "resume": "Resume"
+  },
+  "komanda": {
+    "label": "Team",
+    "title": "The whole shift in one app",
+    "subtitle": "The admin runs the orders, the cook marks them ready, the courier delivers — each from their own phone, tablet or computer. Opens in the browser and is included in the plan",
+    "roles": {
+      "cook": "Cook",
+      "admin": "Admin",
+      "courier": "Courier"
+    },
+    "video": {
+      "cook": "The cook marks the order ready on the kitchen screen",
+      "admin": "The admin assigns a courier in one tap",
+      "courier": "The courier taps “Delivered” — the guest sees the status in MAX or Telegram right away",
+      "all": "Everyone on their own device, nothing to install"
+    },
+    "note": "No POS or R-Keeper — kitchen and your own couriers. With iiko — orders for the shift admin",
+    "more": "More about the Team app"
   },
   "forWhom": {
     "title": "For any food service format",

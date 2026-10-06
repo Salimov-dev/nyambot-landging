@@ -17,6 +17,7 @@ import { TryDemoSection } from "@/components/sections/try-demo/try-demo-section"
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { GuestsPathSection } from "@/components/sections/guests-path/guests-path-section";
+import { KomandaSection } from "@/components/sections/komanda/komanda-section";
 import { SolutionsSection } from "@/components/sections/solutions/solutions-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
@@ -70,6 +71,9 @@ export default function LandingPage() {
             к моей кассе» спрашивают вместе с «подойдёт ли моему формату» */}
         <IntegrationsSection />
         <GuestsPathSection />
+        {/* «Команда» — между гостями и возможностями (Руслан 06.10.2026): гость
+            пришёл — дальше заказ ведёт смена */}
+        <KomandaSection />
         <FeaturesSection />
         <CrmDemoSection />
         <PricingSection plans={PRICING_PLANS} />
