@@ -12,7 +12,7 @@
     "alt": "«Skolkovo» loyihasi ishtirokchisi"
   },
   "hero": {
-    "title": "Buyurtmalar va ovqat yetkazib berish <em>MAX&nbsp;va&nbsp;Telegram'da</em>&nbsp;— butun tarmoqqa bitta bot bilan",
+    "title": "Buyurtmalar va ovqat yetkazib berish <em>MAX&nbsp;va&nbsp;Telegram'da</em>&nbsp;— butun tarmoqqa bittadan bot bilan",
     "subtitle": "Bitta nuqta va butun tarmoq uchun: kafelar, restoranlar, nonvoyxonalar, yetkazib berish. Mehmonlar bazasi, buyurtmalar tarixi va ballar ikkala messenjerda umumiy, menyu, narxlar va yetkazib berish hududi esa har bir nuqtaning oʻziniki",
     "cta": "Bepul boshlash",
     "ctaSecondary": "Demoni ko'rish",
@@ -46,7 +46,7 @@
     "notNeeded": "kassani almashtirish · har bir nuqtaga alohida bot ochish · mehmondan ilova o‘rnatishni so‘rash · joriy etish uchun pul toʻlash",
     "items": {
       "network": {
-        "title": "Butun tarmoqqa bitta bot",
+        "title": "Butun tarmoqqa bittadan bot",
         "text": "Mehmon nuqtani tanlaydi va uning menyusi, narxlari va yetkazib berish hududini koʻradi. Mehmonlar bazasi, buyurtmalar tarixi va ballar MAX va Telegramda umumiy"
       },
       "guest": {
@@ -168,7 +168,7 @@
     "items": [
       {
         "question": "Har bir nuqta uchun alohida bot kerakmi?",
-        "answer": "Yo'q. Bitta bot butun tarmoqqa ishlaydi: mehmon nuqtani — joylashuvi bo'yicha yoki ro'yxatdan — tanlaydi va aynan o'sha nuqtaning menyusi, narxlari va yetkazib berish zonasini ko'radi. Siz bitta kanalni targ'ib qilasiz, yangi nuqta esa alohida ishga tushirilmasdan ulanadi. Mehmonlar bazasi, buyurtmalar tarixi va ballar butun tarmoq bo'ylab umumiy qoladi"
+        "answer": "Yo'q. Har bir messenjerda bitta bot butun tarmoqqa ishlaydi: mehmon nuqtani — joylashuvi bo'yicha yoki ro'yxatdan — tanlaydi va aynan o'sha nuqtaning menyusi, narxlari va yetkazib berish zonasini ko'radi. Siz bitta kanalni targ'ib qilasiz, yangi nuqta esa alohida ishga tushirilmasdan ulanadi. Mehmonlar bazasi, buyurtmalar tarixi va ballar butun tarmoq bo'ylab umumiy qoladi"
       },
       {
         "question": "Menyuni koʻrish uchun mehmon roʻyxatdan oʻtishi kerakmi?",
@@ -213,7 +213,7 @@
     "trialFeatures": ["30 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
   },
   "footer": {
-    "description": "Butun tarmoq uchun bitta bot: MAX va Telegram'da buyurtmalar, yetkazib berish va sodiqlik. O'z mehmonlar bazangiz va tahlilingiz",
+    "description": "MAX va Telegram'da butun tarmoq uchun bittadan bot: buyurtmalar, yetkazib berish va sodiqlik. O'z mehmonlar bazangiz va tahlilingiz",
     "product": "Mahsulot",
     "crm": "CRM ochish",
     "crew": "Xodimlar uchun ilova",

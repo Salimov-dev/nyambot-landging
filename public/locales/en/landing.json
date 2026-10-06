@@ -12,7 +12,7 @@
     "alt": "Skolkovo project participant"
   },
   "hero": {
-    "title": "Orders and food delivery <em>in&nbsp;MAX&nbsp;and&nbsp;Telegram</em>&nbsp;— one bot for your whole chain",
+    "title": "Orders and food delivery <em>in&nbsp;MAX&nbsp;and&nbsp;Telegram</em>&nbsp;— one bot per messenger for your whole chain",
     "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors",
     "cta": "Start free",
     "ctaSecondary": "See demo",
@@ -46,7 +46,7 @@
     "notNeeded": "switch your POS · set up a bot for every location · ask guests to install an app · pay for onboarding",
     "items": {
       "network": {
-        "title": "One bot for the whole chain",
+        "title": "One bot per messenger for the whole chain",
         "text": "The guest picks a location and sees its menu, prices and delivery zone. Guest base, order history and points are shared across MAX and Telegram"
       },
       "guest": {
@@ -168,7 +168,7 @@
     "items": [
       {
         "question": "Do I need a separate bot for each location?",
-        "answer": "No. One bot serves the whole chain: the guest picks a location — by geolocation or from a list — and sees the menu, prices and delivery zone of exactly that location. You promote one channel, and a new location goes live without a separate launch. The guest base, order history and points stay shared across the whole chain"
+        "answer": "No. In each messenger, one bot serves the whole chain: the guest picks a location — by geolocation or from a list — and sees the menu, prices and delivery zone of exactly that location. You promote one channel, and a new location goes live without a separate launch. The guest base, order history and points stay shared across the whole chain"
       },
       {
         "question": "Do guests have to sign up to see the menu?",
@@ -213,7 +213,7 @@
     "trialFeatures": ["30 days free", "Full access", "No card required"]
   },
   "footer": {
-    "description": "One bot for the whole chain: orders, delivery and loyalty in MAX and Telegram. Your own guest base and analytics",
+    "description": "One bot in MAX and one in Telegram for the whole chain: orders, delivery and loyalty. Your own guest base and analytics",
     "product": "Product",
     "crm": "Open CRM",
     "crew": "Staff app",

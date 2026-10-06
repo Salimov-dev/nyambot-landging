@@ -12,7 +12,7 @@
     "alt": "«Skolkovo» layihəsinin iştirakçısı"
   },
   "hero": {
-    "title": "Sifarişlər və yemək çatdırılması <em>MAX&nbsp;və&nbsp;Telegram-da</em>&nbsp;— bütün şəbəkəyə bir botla",
+    "title": "Sifarişlər və yemək çatdırılması <em>MAX&nbsp;və&nbsp;Telegram-da</em>&nbsp;— hər messencerdə bütün şəbəkəyə bir botla",
     "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
     "cta": "Pulsuz başla",
     "ctaSecondary": "Demoya bax",
@@ -46,7 +46,7 @@
     "notNeeded": "kassanı dəyişmək · hər nöqtəyə ayrıca bot açmaq · qonaqdan tətbiq quraşdırmağı xahiş etmək · tətbiq üçün pul ödəmək",
     "items": {
       "network": {
-        "title": "Bütün şəbəkəyə bir bot",
+        "title": "Hər messencerdə bütün şəbəkəyə bir bot",
         "text": "Qonaq nöqtəni seçir və onun menyusunu, qiymətlərini və çatdırılma zonasını görür. Qonaq bazası, sifariş tarixi və ballar MAX və Telegramda ortaqdır"
       },
       "guest": {
@@ -168,7 +168,7 @@
     "items": [
       {
         "question": "Hər nöqtə üçün ayrı bot lazımdırmı?",
-        "answer": "Xeyr. Bir bot bütün şəbəkəyə işləyir: qonaq nöqtəni — geolokasiya ilə və ya siyahıdan — seçir və məhz o nöqtənin menyusunu, qiymətlərini və çatdırılma zonasını görür. Siz bir kanal tanıdırsınız, yeni nöqtə isə ayrı start olmadan qoşulur. Qonaq bazası, sifariş tarixçəsi və ballar bütün şəbəkə üzrə ümumi qalır"
+        "answer": "Xeyr. Hər messencerdə bir bot bütün şəbəkəyə işləyir: qonaq nöqtəni — geolokasiya ilə və ya siyahıdan — seçir və məhz o nöqtənin menyusunu, qiymətlərini və çatdırılma zonasını görür. Siz bir kanal tanıdırsınız, yeni nöqtə isə ayrı start olmadan qoşulur. Qonaq bazası, sifariş tarixçəsi və ballar bütün şəbəkə üzrə ümumi qalır"
       },
       {
         "question": "Menyuya baxmaq üçün qonaq qeydiyyatdan keçməlidir?",
@@ -213,7 +213,7 @@
     "trialFeatures": ["30 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
   },
   "footer": {
-    "description": "Bütün şəbəkə üçün bir bot: MAX və Telegram-da sifarişlər, çatdırılma və loyallıq. Öz qonaq bazanız və analitikanız",
+    "description": "MAX və Telegram-ın hər birində bütün şəbəkə üçün bir bot: sifarişlər, çatdırılma və loyallıq. Öz qonaq bazanız və analitikanız",
     "product": "Məhsul",
     "crm": "CRM-i aç",
     "crew": "Personal üçün tətbiq",
