@@ -22,11 +22,17 @@ type Row = { usual: string; our: string };
  * Пары строк не переставлять по вкусу: первая — про один бот на оба
  * мессенджера и на всю сеть, это главное отличие, и на телефоне видна
  * только она.
+ *
+ * Третья пара и строка под таблицей вобрали секцию «Как это работает»
+ * (Руслан 06.10.2026): путь гостя от тапа до заказа уложился в одну пару
+ * «обычно → у нас», второй заказ — в итог под ней. Пять отдельных шагов
+ * пересказывали то же самое ещё на экран вниз.
  */
 export function CompareSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
   const hasText = useHasTranslation("compare.title");
+  const hasOutcome = useHasTranslation("compare.outcome");
 
   if (!hasText) return null;
 
@@ -80,6 +86,17 @@ export function CompareSection() {
             </motion.div>
           ))}
         </div>
+
+        {hasOutcome ? (
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.38 }}
+            className={styles.outcome}
+          >
+            {t("compare.outcome")}
+          </motion.p>
+        ) : null}
       </div>
     </section>
   );

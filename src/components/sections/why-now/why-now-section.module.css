@@ -57,6 +57,8 @@
   font-size: clamp(30px, 4vw, 42px);
   font-weight: 800;
   line-height: 1.1;
+  /* Цифры одной ширины: пока счётчик бежит, плитка не дрожит */
+  font-variant-numeric: tabular-nums;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   background-clip: text;
@@ -136,7 +138,6 @@
 
   .body {
     margin-top: 22px;
-    text-align: left;
   }
 
   .text {

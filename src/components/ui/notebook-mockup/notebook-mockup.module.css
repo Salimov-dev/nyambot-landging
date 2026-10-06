@@ -9,8 +9,8 @@
   position: relative;
   width: 100%;
   max-width: 640px;
-  /* Соотношение совпадает с viewBox SVG 640×390 */
-  aspect-ratio: 680 / 390;
+  /* Соотношение совпадает с viewBox SVG 560×353 (только крышка) */
+  aspect-ratio: 560 / 353;
   filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.65))
     drop-shadow(0 4px 16px rgba(255, 140, 0, 0.08));
 }
@@ -24,16 +24,18 @@
   pointer-events: none;
 }
 
-/* Экран — внутренняя зона для контента / видео
-   Координаты точно по маске SVG: x=44 y=4 w=552 h=342 из viewBox 640×390 */
+/* Экран — внутренняя зона для контента / видео.
+   Координаты точно по маске SVG: x=4 y=4 w=552 h=345 из viewBox 560×353 —
+   ровно 16:10, как снимки и ролики кабинета (1440×900) */
 .screen {
   position: absolute;
-  top: 1.026%; /* 4/390 */
-  left: 6.875%; /* 44/640 */
-  right: 6.875%; /* 44/640 */
-  bottom: 11.282%; /* 44/390 */
+  top: 1.133%; /* 4/353 */
+  left: 0.714%; /* 4/560 */
+  right: 0.714%; /* 4/560 */
+  bottom: 1.133%; /* 4/353 */
   z-index: 1;
   overflow: hidden;
+  border-radius: 6px;
 }
 
 @media (max-width: 900px) {

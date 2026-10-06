@@ -39,8 +39,8 @@
 }
 
 /* ===== Плитки возможностей =====
-   Три в ряд на десктопе, одна на телефоне: заголовок и строка текста, без
-   раскрывашек. Поверхность — .landing-glass-card (глянец без blur). */
+   Три в ряд на десктопе: заголовок и строка текста, без раскрывашек. На
+   телефоне одна в ряд и без текста — см. медиазапрос ниже. Поверхность — .landing-glass-card (глянец без blur). */
 .tileGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -148,6 +148,32 @@
 
   .tileGrid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Телефон: иконка и заголовок одной строкой, без текста — девять абзацев
+     подряд были самой длинной секцией страницы (Руслан 06.10.2026).
+     Подробности — на странице возможностей по кнопке под плитками. */
+  .tile {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .tileIcon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .tileTitle {
+    font-size: 17px !important;
+  }
+
+  .tileText {
+    display: none;
   }
 }
 

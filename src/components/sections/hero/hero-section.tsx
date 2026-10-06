@@ -14,6 +14,7 @@ import {
   SKOLKOVO_LOGO_KIND,
 } from "@/config/skolkovo.config";
 import { CheckIcon } from "@/components/ui/icons/icons";
+import { TypedAccent, splitAccent } from "./typed-accent";
 import styles from "./hero-section.module.css";
 
 const { Title, Text } = Typography;
@@ -21,6 +22,7 @@ const { Title, Text } = Typography;
 export function HeroSection() {
   const { t, i18n } = useTranslation("landing");
   const videoRef = useRef<HTMLVideoElement>(null);
+  const titleParts = splitAccent(t("hero.title"));
   const skolkovoLogo = getSkolkovoLogo(
     i18n.language,
     SKOLKOVO_LOGO_KIND.HORIZONTAL,
@@ -70,7 +72,19 @@ export function HeroSection() {
                 подзаголовок, чтобы одиночная точка не решила, что сервис не про неё */}
             <div>
               <Title level={1} className={styles.title}>
-                <span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
+                {titleParts ? (
+                  <>
+                    <span
+                      dangerouslySetInnerHTML={{ __html: titleParts.before }}
+                    />
+                    <TypedAccent text={titleParts.accent} />
+                    <span
+                      dangerouslySetInnerHTML={{ __html: titleParts.after }}
+                    />
+                  </>
+                ) : (
+                  <span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
+                )}
               </Title>
             </div>
 
@@ -138,15 +152,20 @@ export function HeroSection() {
             <div className={styles.phoneWrapper}>
               <div className={styles.phoneGlow} />
               <PhoneMockup>
+                {/* autoPlay — чтобы ролик стартовал сам, не дожидаясь гидрации:
+                    на медленном телефоне скрипт оживает через секунды, и гость
+                    листал дальше, видя застывший первый кадр. Наблюдатель выше
+                    только ставит на паузу за экраном и возобновляет */}
                 <video
                   ref={videoRef}
-                  src="/videos/phone/hero-intro.mp4"
-                  poster="/videos/phone/hero-intro-poster.jpg"
+                  src="/videos/home/hero/order-flow.mp4"
+                  poster="/videos/home/hero/order-flow-poster.jpg"
                   className={styles.phoneScreenImage}
+                  autoPlay
                   muted
                   loop
                   playsInline
-                  preload="metadata"
+                  preload="auto"
                 />
               </PhoneMockup>
             </div>

@@ -76,7 +76,7 @@
   "benefits": {
     "label": "İmkanlar",
     "title": "Eyni qonaqlardan daha çox qazan",
-    "subtitle": "Gəlir gətirən on bir şey — qalanı imkanlar səhifəsində",
+    "subtitle": "Gəlir gətirən altı şey — qalanı imkanlar səhifəsində",
     "moreCta": "Bütün imkanlar",
     "items": {
       "retention": {
@@ -91,37 +91,17 @@
         "title": "Yatmış qonaqları geri qaytar",
         "text": "Seqment seçirsən — «Yatmış», «Gedənlər» və ya «Daimi» — və şəkil və menyu düyməsi ilə mesaj yazırsan. Sonra neçə nəfərin sifariş verdiyi görünür"
       },
-      "guestMetrics": {
-        "title": "Qonaqların qayıtdığı görünür",
-        "text": "Yeni və təkrar qonaqlar, 14 və 30 gün ərzində ikinci sifariş, sifariş tezliyi və aylar üzrə qayıdış — botdakı sifarişlər üzrə"
-      },
       "constructor": {
         "title": "Qonaq yeməyi özünə uyğun yığır",
         "text": "Soğanı çıxar, pendir əlavə et, ikiqat kotlet götür. Tərkib çekə kassanın çap etdiyi eyni sətirlə düşür"
-      },
-      "team": {
-        "title": "«Komanda» tətbiqi",
-        "text": "Administrator, kuryer və aşpaz smartfondan işləyir: sifarişin qəbulu, xəritədə ünvan, hazırlıq qeydi"
       },
       "guestChat": {
         "title": "Qonaq soruşur — bot cavab verir",
         "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot növbədəki administratoru çağırır"
       },
-      "guestSearches": {
-        "title": "Qonaqlara menyuda nə çatmır",
-        "text": "Qonaqlar bot menyusunda nə axtarır, nəyi tapmayıb və çatda hansı suallar cavabsız qalıb — hamısı CRM-də"
-      },
-      "teamAlerts": {
-        "title": "Nasazlıq — ilk sən bilirsən",
-        "text": "Kassa sifariş qəbul etmir, qonaq insan çağırır — Nyambot növbədəki administratora və idarəçilərə Telegram və ya MAX-da yazır"
-      },
       "delivery": {
         "title": "Öz ştatın olmadan çatdırılma",
         "text": "Yandex.Delivery kuryeri bir toxunuşla çağırılır. Öz kuryerlərin də dəstəklənir — özün seçirsən"
-      },
-      "autopilot": {
-        "title": "Sənin üçün işə salırıq",
-        "text": "Menyu, zonalar, ödəniş və kassanı özümüz qururuq. Sonra CRM-də özün idarə edirsən, dəstək yanındadır."
       }
     }
   },
@@ -146,13 +126,9 @@
     "title": "İndi sınayın",
     "subtitle": "Telegram və ya MAX-da demo botu açın və qonaqlarınızın necə sifariş verdiyini hiss edin",
     "noAuth": "Qeydiyyatsız və telefon nömrəsi olmadan",
-    "tgDesc": "Telegram-da mini-tətbiq demosu",
     "tgCta": "Telegram-da açın",
-    "maxDesc": "MAX-da mini-tətbiq demosu",
+    "appDemo": "Mini-tətbiq demosu",
     "maxCta": "MAX-da açın",
-    "crmHint": "CRM-ni sahibin tərəfindən qiymətləndirmək istəyirsiniz?",
-    "crmCta": "CRM-də qeydiyyatdan keçin",
-    "crmTrial": "30 gün pulsuz · Tam giriş · Tam dəstək · Kart lazım deyil",
     "qrTitle": "Hər iki messencer üçün bir QR-kod",
     "qrText": "Telefonun kamerasını tut — qonaqlarının görəcəyi eyni seçim səhifəsi açılacaq. Qablaşdırmada, zalda və reklamda iki əvəzinə bir kod çap edirsən.",
     "qrOpen": "Seçim səhifəsini aç",
@@ -162,7 +138,7 @@
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
     "subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
-    "trialNote": "Qeydiyyatdan sonra 30 gün tam giriş — bütün funksiyalar və dəstək, məhdudlaşdırılmış funksiyalar olmadan və kart bağlamadan. Sınaq dövrü standart şərtlərlə işləyir: 1 ticarət nöqtəsi və 2 bot. Tarifi sınaq dövrü bitəndə seçib ödəyirsən",
+    "trialNote": "30 gün pulsuz və kartsız — bütün funksiyalar, 1 nöqtə və 2 bot",
     "popular": "Optimal",
     "bestValue": "Sərfəli",
     "perMonth": "aylıq",
@@ -174,28 +150,13 @@
       "12": "12 ay"
     },
     "cta": "Qoşul",
-    "included": "Nə əldə edirsən",
-    "includedItems": [
-      "Mini-tətbiq",
-      "CRM",
-      "«Komanda» tətbiqi",
-      "Loyallıq və aksiyalar",
-      "Bütün inteqrasiyalar",
-      "Dəstək"
-    ],
-    "registrationHint": "«Qoşul» düyməsini basdıqdan sonra CRM açılacaq. Qeydiyyatdan keçin, «Lisenziya» bölməsinə keçin və seçilmiş tarifi ödəyin — bundan sonra işə başlaya bilərsiniz",
     "customTitle": "Şəbəkən var?",
-    "customSubtitle": "2 ticarət nöqtəsindən — miqyasına uyğun fərdi tarif. Sınaq dövrü də standart şərtlərlə: 1 nöqtə və 2 bot — şəbəkə üçün şərtləri ayrıca müzakirə edirik. Məktub yazmadan da yoxlaya bilərsən: qeydiyyat hamıya açıqdır",
+    "customSubtitle": "2 nöqtədən — fərdi tarif, bizə yaz:",
     "emailCta": "Poçt",
-    "freeTrial": "0 ₽ · ilk 30 gün",
-    "connectTitle": "Sistemə qoşursan",
-    "connectItems": [
-      "1 ticarət nöqtəsi",
-      "MAX-da 1 bot",
-      "Telegram-da 1 bot",
-      "Menyuda 200-ə qədər mövqe"
-    ],
-    "switchNote": "Sifariş qəbulu və ya çatdırılma üçün başqa ödənişli xidmətdən istifadə edirsən? İlk 3 ay — iki dəfə ucuz: ödənişdən əvvəl yaz, təsdiqləyib endirimi sabitləyəcəyik",
+    "includesLabel": "Tarifə daxildir",
+    "includesShort": "1 nöqtə, MAX və Telegram-da botlar — mini-tətbiq, CRM, «Komanda», loyallıq, inteqrasiyalar və dəstək",
+    "switchTitle": "Başqa xidmətdən keçirsən?",
+    "switchNote": "İlk 3 ay — iki dəfə ucuz",
     "switchCta": "50% endirim al"
   },
   "faq": {
@@ -337,7 +298,7 @@
       }
     },
     "outcome": "Sonra qonaq müəssisənin botuna abunədir: onun sifarişləri, kontaktları və bonusları sənindir, platformanın deyil",
-    "note": "Botunun keçidini və QR-kodunu kabinetdə alırsan və özün yerləşdirirsən"
+    "note": "Linki və MAX ilə Telegram üçün ümumi QR-kodu CRM-də götürürsən və istədiyin yerə qoyursan: xəritədəki kartaya, sosial şəbəkələrin başlığına, saytın düyməsinə, qablaşdırmaya və çekə"
   },
   "solutions": {
     "label": "Həllər",

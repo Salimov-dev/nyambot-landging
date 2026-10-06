@@ -124,6 +124,17 @@
   color: var(--accent);
 }
 
+/* Итог под таблицей — второй заказ быстрее первого. Перенесён из снятой
+   секции «Как это работает» вместе с её оформлением (Руслан 06.10.2026) */
+.outcome {
+  margin: 24px 0 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .colHead {
     display: none;

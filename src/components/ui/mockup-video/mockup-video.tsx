@@ -16,7 +16,8 @@ interface MockupVideoProps {
 
 /**
  * Видео-компонент для мокапов телефона и ноутбука.
- * - autoplay + muted + loop + playsInline
+ * - muted + loop + playsInline; запуск — наблюдателем, не атрибутом autoPlay:
+ *   autoPlay грузит ролик сразу с открытием страницы, даже если блок далеко внизу
  * - Lazy loading через IntersectionObserver (загружает видео только при появлении в viewport)
  * - Ставит на паузу когда выходит из viewport
  *
@@ -61,7 +62,6 @@ export function MockupVideo({
     <video
       ref={videoRef}
       className={`${styles.video} ${className ?? ""}`}
-      autoPlay
       muted
       loop
       playsInline

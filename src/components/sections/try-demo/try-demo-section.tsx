@@ -2,9 +2,9 @@
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Button, Col, Flex, Row, Tag, Typography } from "antd";
+import { Button, Flex, Tag, Typography } from "antd";
 import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
-import { ImageWithSkeleton } from "@/components/ui/image-with-skeleton/image-with-skeleton";
+import { MockupVideo } from "@/components/ui/mockup-video/mockup-video";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { TelegramIcon } from "@/components/ui/messenger-icons/telegram-icon";
 import { MaxIcon } from "@/components/ui/messenger-icons/max-icon";
@@ -16,6 +16,12 @@ import { DemoQrBlock } from "./demo-qr-block";
 import styles from "./try-demo-section.module.css";
 
 const { Title, Text } = Typography;
+
+/** Ролик собирается в docs-nyambot/marketing/video/roliki/glavnaya/demo-otkrytie */
+const DEMO_VIDEO = {
+  src: "/videos/home/demo/otkrytie.mp4",
+  poster: "/videos/home/demo/otkrytie-poster.jpg",
+} as const;
 
 export function TryDemoSection() {
   const { t } = useTranslation("landing");
@@ -82,183 +88,65 @@ export function TryDemoSection() {
           </span>
         </motion.div>
 
-        <Row gutter={[32, 32]} justify="center" style={{ marginTop: 56 }}>
-          {/* MAX demo */}
-          <Col xs={24} sm={20} md={10}>
-            <motion.div
-              initial={{ opacity: 0, y: 32, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ duration: 0.65, ease: "easeOut", delay: 0.1 }}
-            >
-              <Flex
-                vertical
-                align="center"
-                gap={24}
-                className={styles.demoCard}
-              >
-                <Flex vertical align="center" gap={8}>
-                  <MaxIcon size={48} />
-                  <Text
-                    style={{
-                      color: theme.colors.textPrimary,
-                      fontSize: 18,
-                      fontWeight: 700,
-                    }}
-                  >
-                    MAX
-                  </Text>
-                  <Text
-                    style={{
-                      color: theme.colors.textSecondary,
-                      fontSize: 14,
-                      textAlign: "center",
-                    }}
-                  >
-                    {t("tryDemo.maxDesc")}
-                  </Text>
-                </Flex>
-
-                <div className={styles.phoneWrap}>
-                  <div
-                    className={styles.phoneGlow}
-                    style={{
-                      background:
-                        "radial-gradient(circle, rgba(255,140,0,0.2) 0%, transparent 65%)",
-                    }}
-                  />
-                  <PhoneMockup>
-                    <ImageWithSkeleton
-                      src="/images/sections/demo_bot_max.png"
-                      alt="MAX демо"
-                      sizes="280px"
-                      className={styles.phoneScreenImage}
-                    />
-                  </PhoneMockup>
-                </div>
-
-                <Button
-                  type="primary"
-                  size="large"
-                  href={LINKS.demo.fromLanding.max}
-                  target="_blank"
-                  className={styles.maxBtn}
-                  block
-                  onClick={() => reachGoal("click_max_demo")}
-                >
-                  {t("tryDemo.maxCta")}
-                </Button>
-              </Flex>
-            </motion.div>
-          </Col>
-
-          {/* Telegram demo */}
-          <Col xs={24} sm={20} md={10}>
-            <motion.div
-              initial={{ opacity: 0, y: 32, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ duration: 0.65, ease: "easeOut", delay: 0.2 }}
-            >
-              <Flex
-                vertical
-                align="center"
-                gap={24}
-                className={styles.demoCard}
-              >
-                <Flex vertical align="center" gap={8}>
-                  <TelegramIcon size={48} />
-                  <Text
-                    style={{
-                      color: theme.colors.textPrimary,
-                      fontSize: 18,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Telegram
-                  </Text>
-                  <Text
-                    style={{
-                      color: theme.colors.textSecondary,
-                      fontSize: 14,
-                      textAlign: "center",
-                    }}
-                  >
-                    {t("tryDemo.tgDesc")}
-                  </Text>
-                </Flex>
-
-                <div className={styles.phoneWrap}>
-                  <div
-                    className={styles.phoneGlow}
-                    style={{
-                      background:
-                        "radial-gradient(circle, rgba(39,161,232,0.2) 0%, transparent 65%)",
-                    }}
-                  />
-                  <PhoneMockup>
-                    <ImageWithSkeleton
-                      src="/images/sections/demo_bot_tg.png"
-                      alt="Телеграм демо"
-                      sizes="280px"
-                      className={styles.phoneScreenImage}
-                    />
-                  </PhoneMockup>
-                </div>
-
-                <Button
-                  type="primary"
-                  size="large"
-                  href={LINKS.demo.fromLanding.telegram}
-                  target="_blank"
-                  className={styles.tgBtn}
-                  block
-                  onClick={() => reachGoal("click_tg_bot")}
-                >
-                  {t("tryDemo.tgCta")}
-                </Button>
-              </Flex>
-            </motion.div>
-          </Col>
-        </Row>
-
-        {/* Общий QR-код демо: с компьютера — навести телефон, с телефона — нажать */}
-        <DemoQrBlock />
-
-        {/* CRM CTA */}
+        {/* Один телефон с роликом «как гость открывает демо» вместо двух
+            одинаковых статичных скриншотов (план «Видео продукта на лендинге»,
+            Ф7): ролик начинается со страницы выбора — той самой, что открывает
+            QR-код справа. Рядом — настоящие кнопки демо и QR */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 32 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.35 }}
+          transition={{ duration: 0.65, ease: "easeOut", delay: 0.1 }}
+          className={styles.demoLayout}
         >
-          <Flex vertical align="center" gap={12} className={styles.crmCta}>
-            <Text
-              style={{
-                color: theme.colors.textSecondary,
-                fontSize: 15,
-                textAlign: "center",
-              }}
-            >
-              {t("tryDemo.crmHint")}
-            </Text>
-            <Button
-              size="large"
-              href={LINKS.crmRegister}
-              target="_blank"
-              className={styles.crmBtn}
-              onClick={() => reachGoal("click_trial")}
-            >
-              {t("tryDemo.crmCta")}
-            </Button>
-            <Text
-              style={{
-                color: theme.colors.textTertiary,
-                fontSize: 13,
-                textAlign: "center",
-              }}
-            >
-              {t("tryDemo.crmTrial")}
-            </Text>
-          </Flex>
+          <div className={styles.phoneWrap}>
+            <div className={styles.phoneGlow} />
+            <PhoneMockup>
+              <MockupVideo src={DEMO_VIDEO.src} poster={DEMO_VIDEO.poster} />
+            </PhoneMockup>
+          </div>
+
+          <div className={styles.demoSide}>
+            <div className={styles.messengerCard}>
+              <MaxIcon size={40} />
+              {/* Мессенджер называют иконка и кнопка — в подписи не повторяем */}
+              <span className={styles.messengerDesc}>
+                {t("tryDemo.appDemo")}
+              </span>
+              <Button
+                type="primary"
+                size="large"
+                href={LINKS.demo.fromLanding.max}
+                target="_blank"
+                className={styles.maxBtn}
+                onClick={() => reachGoal("click_max_demo")}
+              >
+                {t("tryDemo.maxCta")}
+              </Button>
+            </div>
+
+            <div className={styles.messengerCard}>
+              <TelegramIcon size={40} />
+              <span className={styles.messengerDesc}>
+                {t("tryDemo.appDemo")}
+              </span>
+              <Button
+                type="primary"
+                size="large"
+                href={LINKS.demo.fromLanding.telegram}
+                target="_blank"
+                className={styles.tgBtn}
+                onClick={() => reachGoal("click_tg_bot")}
+              >
+                {t("tryDemo.tgCta")}
+              </Button>
+            </div>
+
+            {/* Общий QR-код демо: с компьютера — навести телефон, с телефона — нажать */}
+            <DemoQrBlock inSide scanning />
+          </div>
         </motion.div>
+        {/* Приглашение в CRM отсюда убрано (Руслан 06.10.2026): у секции
+            «CRM собственной разработки» своя кнопка с тем же предложением */}
       </div>
     </section>
   );

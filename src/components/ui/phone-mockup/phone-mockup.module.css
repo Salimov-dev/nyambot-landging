@@ -12,7 +12,8 @@
   height: var(--phone-mockup-height, 594px);
   filter: drop-shadow(0 32px 80px rgba(0, 0, 0, 0.6))
     drop-shadow(0 8px 32px rgba(255, 140, 0, 0.1));
-  animation: float 4s ease-in-out infinite;
+  /* Без покачивания (Руслан 06.10.2026): телефон, который ходит вверх-вниз,
+     утомляет глаза, а живое в нём — само видео */
 }
 
 .frame {
@@ -35,16 +36,6 @@
   background: #191e36;
   border-radius: 23px;
   overflow: hidden;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
 
 @media (max-width: 900px) {

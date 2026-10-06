@@ -14,7 +14,7 @@ import {
   FactoryIcon,
 } from "@/components/ui/icons/icons";
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 const SEGMENTS = [
   { id: "cafe", icon: UtensilsIcon },
@@ -24,6 +24,14 @@ const SEGMENTS = [
   { id: "production", icon: FactoryIcon },
 ] as const;
 
+/**
+ * Форматы заведений — одним рядом «иконка + название», без карточек.
+ *
+ * 🔴 Пять плиток с рамками занимали экран телефона ради пяти коротких слов
+ * (Руслан 06.10.2026). Блок отвечает на «это для меня?» с одного взгляда,
+ * читать в нём нечего — поэтому ряд, который на телефоне переносится в две-три
+ * строки.
+ */
 export function ForWhomSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
@@ -51,32 +59,22 @@ export function ForWhomSection() {
           </Title>
         </motion.div>
 
-        <div className={styles.grid}>
+        <ul className={styles.row}>
           {SEGMENTS.map((segment, i) => (
-            <motion.div
+            <motion.li
               key={segment.id}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className={styles.card}
+              transition={{ duration: 0.45, delay: i * 0.06 }}
+              className={styles.item}
             >
-              <span className={styles.icon}>
-                <segment.icon size={26} />
+              <span className={styles.icon} aria-hidden="true">
+                <segment.icon size={18} />
               </span>
-              <Title
-                level={4}
-                style={{
-                  color: theme.colors.textPrimary,
-                  fontSize: 17,
-                  fontWeight: 700,
-                  margin: 0,
-                }}
-              >
-                {t(`forWhom.items.${segment.id}.title`)}
-              </Title>
-            </motion.div>
+              {t(`forWhom.items.${segment.id}.title`)}
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

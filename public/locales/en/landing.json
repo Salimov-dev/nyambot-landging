@@ -76,7 +76,7 @@
   "benefits": {
     "label": "Features",
     "title": "Earn more from the same guests",
-    "subtitle": "Eleven things that drive revenue — the rest is on the features page",
+    "subtitle": "Six things that drive revenue — the rest is on the features page",
     "moreCta": "All features",
     "items": {
       "retention": {
@@ -91,37 +91,17 @@
         "title": "Bring dormant guests back",
         "text": "Pick a segment — «Dormant», «Lost» or «Loyal» — and write a message with an image and a button to the menu. Then see how many ordered"
       },
-      "guestMetrics": {
-        "title": "See whether guests come back",
-        "text": "New and returning guests, second order within 14 and 30 days, order frequency and monthly retention — based on bot orders"
-      },
       "constructor": {
         "title": "The guest builds the dish their way",
         "text": "Hold the onion, add cheese, make it a double patty. The build lands on the receipt in the same line the POS prints"
-      },
-      "team": {
-        "title": "Team app",
-        "text": "Admin, courier and cook work from a smartphone: accept the order, see the address on a map, mark it ready"
       },
       "guestChat": {
         "title": "The guest asks — the bot answers",
         "text": "«Where's my order?», «How late are you open?» — AI answers questions like these. If the guest needs a person, the bot calls the admin on shift"
       },
-      "guestSearches": {
-        "title": "What guests miss in the menu",
-        "text": "What guests search for in the bot's menu, what they didn't find and which chat questions went unanswered — all in the CRM"
-      },
-      "teamAlerts": {
-        "title": "Something breaks — you're the first to know",
-        "text": "The POS isn't accepting orders, a guest is calling for a person — Nyambot messages the admin on shift and managers in Telegram or MAX"
-      },
       "delivery": {
         "title": "Delivery without your own couriers",
         "text": "Call a Yandex.Delivery courier in one tap. Your own couriers work too — you choose"
-      },
-      "autopilot": {
-        "title": "We launch it for you",
-        "text": "We set up the menu, zones, payments and POS ourselves. Then you run it in the CRM, with support at hand."
       }
     }
   },
@@ -146,13 +126,9 @@
     "title": "Try it right now",
     "subtitle": "Open the demo bot in Telegram or MAX and see how a branded app looks to your guests — with the venue logo and colors",
     "noAuth": "No sign-up, no phone number",
-    "tgDesc": "Mini-app demo in Telegram",
     "tgCta": "Open in Telegram",
-    "maxDesc": "Mini-app demo in MAX",
+    "appDemo": "Mini-app demo",
     "maxCta": "Open in MAX",
-    "crmHint": "Want to evaluate CRM from the owner's side?",
-    "crmCta": "Register in CRM",
-    "crmTrial": "30 days free · Full access · Full support · No card",
     "qrTitle": "One QR code for both messengers",
     "qrText": "Point your phone camera at it — the same choice page your guests will see opens. You print one code on packaging, in the hall and in ads instead of two.",
     "qrOpen": "Open the choice page",
@@ -162,7 +138,7 @@
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",
     "subtitle": "Fixed payment. One plan — all features without functional limits",
-    "trialNote": "30 days of full access after signup — all features and support, nothing stripped out and no card required. The trial runs on standard terms: 1 location and 2 bots. You choose and pay for a plan when the trial ends",
+    "trialNote": "30 days free, no card — all features, 1 location and 2 bots",
     "popular": "Best balance",
     "bestValue": "Best value",
     "perMonth": "per month",
@@ -174,28 +150,13 @@
       "12": "12 months"
     },
     "cta": "Get started",
-    "included": "What you get",
-    "includedItems": [
-      "Mini app",
-      "CRM",
-      "Team app",
-      "Loyalty and promos",
-      "All integrations",
-      "Support"
-    ],
-    "registrationHint": "Clicking «Connect» will open the CRM. Complete registration, go to «License» section and pay for the selected plan — then you are ready to start",
     "customTitle": "Running a chain?",
-    "customSubtitle": "From 2 locations — a custom plan for your scale. The trial runs on standard terms too: 1 location and 2 bots — for a chain we agree terms separately. You can try it without writing to us: sign-up is open to everyone",
+    "customSubtitle": "From 2 locations — a custom plan, write to us:",
     "emailCta": "Email",
-    "freeTrial": "0 ₽ · first 30 days",
-    "connectTitle": "You connect to the system",
-    "connectItems": [
-      "1 venue",
-      "1 bot in MAX",
-      "1 bot in Telegram",
-      "Up to 200 menu items"
-    ],
-    "switchNote": "Using another paid ordering or delivery service? Your first 3 months are half price: message us before paying, we'll confirm and lock in the discount",
+    "includesLabel": "Included",
+    "includesShort": "1 location, bots in MAX and Telegram — mini-app, CRM, Team app, loyalty, integrations and support",
+    "switchTitle": "Switching from another service?",
+    "switchNote": "Your first 3 months are half price",
     "switchCta": "Get 50% off"
   },
   "faq": {
@@ -337,7 +298,7 @@
       }
     },
     "outcome": "From there the guest follows your venue's bot: their orders, contacts and points are yours, not a marketplace's",
-    "note": "You get your bot's link and QR code in the dashboard and place them yourself"
+    "note": "You get the link and one QR code for MAX and Telegram in the CRM and place them anywhere: in your map listing, social media header, website button, on packaging and receipts"
   },
   "solutions": {
     "label": "Solutions",

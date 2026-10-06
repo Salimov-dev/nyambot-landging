@@ -7,6 +7,8 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
+import { NotebookMockup } from "@/components/ui/notebook-mockup/notebook-mockup";
+import { MockupVideo } from "@/components/ui/mockup-video/mockup-video";
 import styles from "./crm-demo-section.module.css";
 import {
   ChartIcon,
@@ -18,6 +20,13 @@ import {
   MonitorIcon,
   ToolsIcon,
 } from "@/components/ui/icons/icons";
+
+/** Ролик собирается в docs-nyambot/marketing/video/roliki/glavnaya/kabinet:
+ *  настоящий кабинет демо-сети — заказы, продажи, маркетинг */
+const CRM_VIDEO = {
+  src: "/videos/home/kabinet/obzor.mp4",
+  poster: "/videos/home/kabinet/obzor-poster.jpg",
+} as const;
 
 const { Title, Text } = Typography;
 
@@ -44,7 +53,7 @@ export function CrmDemoSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <Flex vertical align="center" gap={20} className={styles.header}>
+          <Flex vertical align="center" gap={16} className={styles.header}>
             <Tag
               style={{
                 background: theme.colors.accentBg,
@@ -58,7 +67,10 @@ export function CrmDemoSection() {
                 marginInlineEnd: 0,
               }}
             >
-              🖥️ {t("crmDemo.tag")}
+              <Flex align="center" gap={6}>
+                <MonitorIcon size={14} />
+                {t("crmDemo.tag")}
+              </Flex>
             </Tag>
 
             <Title
@@ -88,7 +100,7 @@ export function CrmDemoSection() {
 
             {/* Own development badge */}
             <Flex align="center" gap={10} className={styles.ownDevBadge}>
-              <Text style={{ fontSize: 18 }}>🏗️</Text>
+              <ToolsIcon size={18} />
               <Text
                 style={{
                   color: theme.colors.textSecondary,
@@ -102,33 +114,28 @@ export function CrmDemoSection() {
           </Flex>
         </motion.div>
 
-        <div className={styles.featureGrid}>
-          {CRM_FEATURES.map((f, i) => (
-            <motion.div
-              key={f.key}
-              initial={{ opacity: 0, y: 24 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-              className={styles.featureCard}
-            >
-              <span className={styles.featureIcon}>
-                <f.icon size={18} />
-              </span>
-              <Title
-                level={4}
-                style={{
-                  color: theme.colors.textPrimary,
-                  fontSize: 14,
-                  fontWeight: 600,
-                  lineHeight: 1.3,
-                  margin: 0,
-                }}
-              >
-                {t(f.key)}
-              </Title>
-            </motion.div>
+        {/* Настоящий кабинет в ноутбуке вместо шести плиток с иконками (план
+            «Видео продукта на лендинге», Ф5). Разделы — строкой подписей под
+            ним: текст остаётся, места почти не занимает */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className={styles.notebookWrap}
+        >
+          <NotebookMockup>
+            <MockupVideo src={CRM_VIDEO.src} poster={CRM_VIDEO.poster} />
+          </NotebookMockup>
+        </motion.div>
+
+        <ul className={styles.featureList}>
+          {CRM_FEATURES.map((f) => (
+            <li key={f.key} className={styles.featureItem}>
+              <f.icon size={16} />
+              {t(f.key)}
+            </li>
           ))}
-        </div>
+        </ul>
 
         <Flex vertical align="center" gap={12} className={styles.ctaBlock}>
           <Button

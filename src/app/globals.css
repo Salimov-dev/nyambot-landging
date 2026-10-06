@@ -414,3 +414,14 @@ a {
   scrollbar-width: thin;
   scrollbar-color: var(--accent) rgba(255, 255, 255, 0.03);
 }
+
+/* Фон секций главной — в шахматном порядке, через одну (Руслан 06.10.2026):
+   порядок секций меняется, и фон каждой, прописанный в её модуле, сбивал
+   чередование. Hero — со своим градиентом, считается первой. */
+.landing-main > section:not(#hero):nth-of-type(even) {
+  background: var(--bg) !important;
+}
+
+.landing-main > section:not(#hero):nth-of-type(odd) {
+  background: var(--bg-section) !important;
+}

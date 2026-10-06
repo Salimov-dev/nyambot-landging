@@ -85,12 +85,13 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wra
 .extras{margin-top:24px}
 .extras-title{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}
 .extras-title::before,.extras-title::after{content:"";flex:1;height:1px;background:var(--border)}
-.extra-tiles{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:12px}
-.extra-tile{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:72px;color:var(--text);text-decoration:none}
+.extra-tiles{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,84px);justify-content:center;gap:8px;margin-top:12px}
+.extra-tile{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;color:var(--text);text-decoration:none}
 .extra-tile-icon{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:transparent;border:1px solid var(--outline);transition:border-color .15s ease,transform .1s ease}
 .extra-tile:hover .extra-tile-icon{border-color:var(--muted)}
 .extra-tile:active .extra-tile-icon{transform:scale(.96)}
-.extra-tile-label{font-size:12px;line-height:1.3;white-space:nowrap}
+.extra-tile-label{font-size:12px;line-height:1.25;text-align:center}
+@media (max-width:360px){.extra-tile-icon{width:46px;height:46px}.extra-tile-label{font-size:11px}}
 .btn-extra{min-height:48px;padding:10px 16px;color:var(--text);background:transparent;border:1px solid var(--outline);font-size:16px}
 .btn-extra:hover{filter:none;border-color:var(--muted)}
 .note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.45;text-wrap:pretty}

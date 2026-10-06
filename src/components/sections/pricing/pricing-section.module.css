@@ -1,5 +1,7 @@
+/* Отступы уплотнены на всех ширинах (Руслан 06.10.2026): секция шла почти
+   на три экрана телефона и полтора — компьютера. */
 .section {
-  padding: 100px 0;
+  padding: 72px 0;
   background: var(--bg-section);
 }
 
@@ -11,7 +13,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 36px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -77,161 +79,228 @@
   color: var(--text-primary) !important;
 }
 
-.includes {
-  margin-top: 56px;
-  text-align: center;
-  padding: 32px;
-  background: var(--gradient-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-}
-
 @media (max-width: 768px) {
   .section {
-    padding: 64px 0;
+    padding: 48px 0;
   }
   .inner {
     padding: 0 16px;
   }
   .header {
-    margin-bottom: 40px;
-  }
-  .includes {
-    padding: 20px 16px;
+    margin-bottom: 28px;
   }
 }
 
-/* ===== Состав тарифа: «подключаешь» и «получаешь» рядом, ниже — сеть ===== */
-.includesGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-  gap: 32px;
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: left;
+/* ===== Тарифы на телефоне: список вместо карточек (Руслан 06.10.2026) =====
+   Карточки — с 641 px, список — до 640 px. Оба в разметке, переключает CSS:
+   так нет расхождения серверной и клиентской разметки. */
+.compact {
+  display: none;
 }
 
-.includesTitle {
-  display: block;
-  margin-bottom: 14px;
-  color: var(--text-tertiary) !important;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.includesList {
+.planList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 0;
+  gap: 8px;
+  margin: 0 0 16px;
   padding: 0;
   list-style: none;
 }
 
-.includesItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  white-space: nowrap;
-  color: var(--text-primary);
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.includeIcon {
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-/* Сеть — не отдельная секция, а строка того же блока */
-.networkRow {
+.planRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  max-width: 760px;
-  margin: 28px auto 0;
-  padding-top: 24px;
-  border-top: 1px solid var(--border-light);
-  text-align: left;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--glass-card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
 }
 
-.networkTitle {
-  display: block;
-  color: var(--text-primary) !important;
+.planRowPopular {
+  background: var(--gradient-card-accent);
+  border-color: var(--accent-border);
+}
+
+.planMain {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.planHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.planMonths {
+  color: var(--text-primary);
   font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.planRowPopular .planMonths {
+  color: var(--accent);
+}
+
+.planTag {
+  padding: 1px 7px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.planTagSuccess {
+  background: var(--success-bg);
+  border: 1px solid rgba(82, 196, 26, 0.27);
+  color: var(--success);
+}
+
+.planTagAccent {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+}
+
+.planBilled {
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+.planPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.planPriceValue {
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.planRowPopular .planPriceValue {
+  color: var(--accent);
+}
+
+.planPerMonth {
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .cards {
+    display: none !important;
+  }
+
+  .compact {
+    display: block;
+  }
+}
+
+/* Условие пробного периода — строкой под подзаголовком */
+/* Иконка — часть первой строки текста, а не отдельная колонка flex: при
+   переносе текста она уезжала к левому краю (Руслан 06.10.2026) */
+.trialNote {
+  display: block;
+  text-align: center;
+  max-width: 760px;
+  margin: 16px auto 0;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.trialNote svg {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: -2px;
+  color: var(--accent);
+}
+
+/* Под ценами — три короткие карточки в ряд: в тарифе, переезд, сеть */
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px auto 0;
+}
+
+.detailCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 18px 18px 16px;
+  background: var(--glass-card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+.detailIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+}
+
+.detailTitle {
+  color: var(--text-primary);
+  font-size: 15px;
   font-weight: 700;
 }
 
-.networkSubtitle {
-  display: block;
-  margin-top: 4px;
-  color: var(--text-secondary) !important;
+.detailText {
+  color: rgba(255, 255, 255, 0.74);
   font-size: 14px;
   line-height: 1.5;
 }
 
-.networkActions {
-  flex-shrink: 0;
-}
-
-@media (max-width: 640px) {
-  .includesGrid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .networkRow {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* «Что получаешь» — в два столбца: шесть пунктов колонкой выглядели длинно */
-.includesListTwo {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 20px;
-}
-
-@media (max-width: 640px) {
-  .includesListTwo {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Переезд со скидкой 50%: строка в тарифах вместо отдельной секции */
-.switchNote {
+.detailLinks {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  max-width: 820px;
-  margin: 24px auto 0;
-  padding: 16px 20px;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  text-align: center;
+  gap: 16px;
+  margin-top: auto;
 }
 
-.switchNoteText {
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.switchNoteLink {
+.detailLink {
+  margin-top: auto;
   color: var(--accent);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.switchNoteLink:hover {
+.detailLink:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* По центру, как заголовок над ним (Руслан 06.10.2026) */
+  .trialNote {
+    font-size: 14px;
+  }
 }

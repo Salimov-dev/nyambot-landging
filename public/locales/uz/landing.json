@@ -76,7 +76,7 @@
   "benefits": {
     "label": "Imkoniyatlar",
     "title": "O'sha mehmonlardan ko'proq daromad ol",
-    "subtitle": "Tushum keltiradigan oʻn bitta narsa — qolgani imkoniyatlar sahifasida",
+    "subtitle": "Tushum keltiradigan oltita narsa — qolgani imkoniyatlar sahifasida",
     "moreCta": "Barcha imkoniyatlar",
     "items": {
       "retention": {
@@ -91,37 +91,17 @@
         "title": "Uxlab qolgan mehmonlarni qaytar",
         "text": "Segment tanlaysan — «Uxlab qolganlar», «Ketganlar» yoki «Doimiy» — va rasm hamda menyu tugmasi bilan xabar yozasan. Keyin nechta mehmon buyurtma berganini koʻrasan"
       },
-      "guestMetrics": {
-        "title": "Mehmonlar qaytishi koʻrinadi",
-        "text": "Yangi va takroriy mehmonlar, 14 va 30 kun ichida ikkinchi buyurtma, buyurtmalar chastotasi va oylar boʻyicha qaytish — botdagi buyurtmalar boʻyicha"
-      },
       "constructor": {
         "title": "Mehmon taomni o‘ziga moslab yig‘adi",
         "text": "Piyozni olib tashlash, pishloq qo‘shish, ikki qavat kotlet olish. Tarkib chekka kassa chop etadigan satrning aynan o‘zi bilan tushadi"
-      },
-      "team": {
-        "title": "«Komanda» ilovasi",
-        "text": "Administrator, kuryer va oshpaz smartfondan ishlaydi: buyurtmani qabul qilish, xaritadagi manzil, tayyorlik belgisi"
       },
       "guestChat": {
         "title": "Mehmon soʻraydi — bot javob beradi",
         "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — bunday savollarga SI javob beradi. Agar mehmonga odam kerak boʻlsa, bot smenadagi administratorni chaqiradi"
       },
-      "guestSearches": {
-        "title": "Mehmonlarga menyuda nima yetishmaydi",
-        "text": "Mehmonlar bot menyusida nimani qidiradi, nimani topmadi va chatda qaysi savollar javobsiz qoldi — hammasi CRMda"
-      },
-      "teamAlerts": {
-        "title": "Nosozlik — birinchi boʻlib sen bilasan",
-        "text": "Kassa buyurtma qabul qilmayapti, mehmon odam chaqiryapti — Nyambot smenadagi administratorga va boshqaruvchilarga Telegram yoki MAXda yozadi"
-      },
       "delivery": {
         "title": "O‘z xodimlarisiz yetkazib berish",
         "text": "Yandex.Delivery kuryeri bir teginishda chaqiriladi. O‘z kuryerlaring ham qo‘llab-quvvatlanadi — o‘zing tanlaysan"
-      },
-      "autopilot": {
-        "title": "Sen uchun ishga tushiramiz",
-        "text": "Menyu, hududlar, toʻlov va kassani oʻzimiz sozlaymiz. Keyin CRMda oʻzing yuritasan, yordam doim yonida."
       }
     }
   },
@@ -146,13 +126,9 @@
     "title": "Hoziroq sinab ko'ring",
     "subtitle": "Telegram yoki MAX'da demo-botni oching va mehmonlaringiz qanday buyurtma berishini his qiling",
     "noAuth": "Roʻyxatdan oʻtmasdan va telefon raqamisiz",
-    "tgDesc": "Telegram'da mini-ilova demosi",
     "tgCta": "Telegram'da ochish",
-    "maxDesc": "MAX'da mini-ilova demosi",
+    "appDemo": "Mini-ilova demosi",
     "maxCta": "MAX'da ochish",
-    "crmHint": "CRM'ni egasi tomonidan baholamoqchimisiz?",
-    "crmCta": "CRM'ga ro'yxatdan o'tish",
-    "crmTrial": "30 kun bepul · To'liq kirish · To'liq qo'llab-quvvatlash · Karta kerak emas",
     "qrTitle": "Ikkala messenjer uchun bitta QR-kod",
     "qrText": "Telefon kamerasini to‘g‘rila — mehmonlaring ko‘radigan tanlash sahifasi ochiladi. Qadoqda, zalda va reklamada ikkita o‘rniga bitta kod chop etasan.",
     "qrOpen": "Tanlash sahifasini ochish",
@@ -162,7 +138,7 @@
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
     "subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
-    "trialNote": "Ro'yxatdan o'tgach 30 kun to'liq kirish — barcha funksiyalar va qo'llab-quvvatlash, cheklangan funksiyalarsiz va kartasiz. Sinov muddati standart shartlarda: 1 savdo nuqtasi va 2 bot. Tarifni sinov muddati tugagach tanlaysan va to'laysan",
+    "trialNote": "30 kun bepul va kartasiz — barcha funksiyalar, 1 nuqta va 2 bot",
     "popular": "Optimal",
     "bestValue": "Foydali",
     "perMonth": "oyiga",
@@ -174,28 +150,13 @@
       "12": "12 oy"
     },
     "cta": "Ulash",
-    "included": "Nima olasan",
-    "includedItems": [
-      "Mini-ilova",
-      "CRM",
-      "«Komanda» ilovasi",
-      "Sodiqlik va aksiyalar",
-      "Barcha integratsiyalar",
-      "Qo'llab-quvvatlash"
-    ],
-    "registrationHint": "«Ulash» tugmasini bosganingizdan so'ng CRM ochiladi. Ro'yxatdan o'ting, «Litsenziya» bo'limiga o'ting va tanlangan tarifni to'lang — shundan keyin ishni boshlashingiz mumkin",
     "customTitle": "Tarmog'ing bormi?",
-    "customSubtitle": "2 ta savdo nuqtasidan — miqyosingizga mos individual tarif. Sinov muddati ham standart shartlarda: 1 nuqta va 2 bot — tarmoq uchun shartlarni alohida muhokama qilamiz. Xat yozmasdan ham sinab koʻrish mumkin: roʻyxatdan oʻtish hammaga ochiq",
+    "customSubtitle": "2 nuqtadan — individual tarif, bizga yoz:",
     "emailCta": "Pochta",
-    "freeTrial": "0 ₽ · birinchi 30 kun",
-    "connectTitle": "Tizimga ulaysan",
-    "connectItems": [
-      "1 savdo nuqtasi",
-      "MAXda 1 bot",
-      "Telegramda 1 bot",
-      "Menyuda 200 tagacha pozitsiya"
-    ],
-    "switchNote": "Buyurtma qabul qilish yoki yetkazib berishning boshqa pullik xizmatidan foydalanyapsanmi? Dastlabki 3 oy — ikki baravar arzon: to‘lovdan oldin yoz, tasdiqlaymiz va chegirmani qayd etamiz",
+    "includesLabel": "Tarifda",
+    "includesShort": "1 nuqta, MAX va Telegram'dagi botlar — mini-ilova, CRM, «Jamoa», sodiqlik, integratsiyalar va qo'llab-quvvatlash",
+    "switchTitle": "Boshqa xizmatdan o'tyapsanmi?",
+    "switchNote": "Dastlabki 3 oy — ikki baravar arzon",
     "switchCta": "50% chegirma olish"
   },
   "faq": {
@@ -337,7 +298,7 @@
       }
     },
     "outcome": "Keyin mehmon muassasa botiga obuna boʻladi: uning buyurtmalari, kontaktlari va ballari — seniki, maydoncha emas",
-    "note": "Botingning havolasi va QR-kodini kabinetda olasan va oʻzing joylashtirasan"
+    "note": "Havolani va MAX hamda Telegram uchun umumiy QR-kodni CRMdan olasan va xohlagan joyga qo'yasan: xaritadagi kartochkaga, ijtimoiy tarmoqlar sarlavhasiga, sayt tugmasiga, qadoqqa va chekka"
   },
   "solutions": {
     "label": "Yechimlar",

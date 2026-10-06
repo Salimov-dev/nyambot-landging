@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
-import { theme } from "@/config/theme";
 import {
   MegaphoneIcon,
   StoreIcon,
@@ -24,12 +23,17 @@ type PathIcon = (props: {
  * Путь гостя в приложение — ответ на первый вопрос ресторатора: «а откуда
  * возьмутся гости?».
  *
- * 🔴 Порядок карточек не декоративный: от самого частого канала к самому
- * недооценённому. Третья карточка — QR на упаковке — единственная, которая
- * возвращает гостя, пришедшего через агрегатор, и ради неё блок и написан.
+ * 🔴 Порядок каналов не декоративный: от самого частого к самому
+ * недооценённому. Третий — QR на упаковке — единственный, который
+ * возвращает гостя, пришедшего через агрегатор, и ради него блок и написан.
  *
  * 🔴 Блок отвечает УТВЕРДИТЕЛЬНО. Отрицания («мы не агрегатор», «мы не покупаем
  * трафик») объясняют то, о чём не спрашивали, и читаются как оправдание.
+ *
+ * Без плиток (Руслан 06.10.2026): четыре канала одним рядом через разделитель,
+ * на телефоне — строками списка. Пояснение канала осталось мелко под
+ * названием: других страниц с ним нет, а «гость из агрегатора возвращается
+ * без комиссии» — главный довод блока.
  */
 const CHANNELS: readonly { id: string; icon: PathIcon; accent: string }[] = [
   { id: "link", icon: MegaphoneIcon, accent: "#1677ff" },
@@ -59,52 +63,47 @@ export function GuestsPathSection() {
           <Text className={styles.subtitle}>{t("guestsPath.subtitle")}</Text>
         </motion.div>
 
-        <div className={styles.grid}>
+        <ul className={styles.chain}>
           {CHANNELS.map((channel, index) => (
-            <motion.div
+            <motion.li
               key={channel.id}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              className={`${styles.card} landing-glass-card`}
+              transition={{ duration: 0.45, delay: index * 0.07 }}
+              className={styles.channel}
             >
               <span
-                className={styles.cardIcon}
+                className={styles.channelIcon}
+                aria-hidden="true"
                 style={{
                   color: channel.accent,
                   background: `${channel.accent}18`,
                   border: `1px solid ${channel.accent}44`,
                 }}
               >
-                <channel.icon size={22} />
+                <channel.icon size={18} />
               </span>
-              <Title level={3} className={styles.cardTitle}>
-                {t(`guestsPath.items.${channel.id}.title`)}
-              </Title>
-              <Text className={styles.cardText}>
-                {t(`guestsPath.items.${channel.id}.text`)}
-              </Text>
-            </motion.div>
+              <span className={styles.channelBody}>
+                <span className={styles.channelTitle}>
+                  {t(`guestsPath.items.${channel.id}.title`)}
+                </span>
+                <span className={styles.channelText}>
+                  {t(`guestsPath.items.${channel.id}.text`)}
+                </span>
+              </span>
+            </motion.li>
           ))}
-        </div>
+        </ul>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.34 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className={styles.outcome}
         >
-          <Text
-            style={{
-              color: theme.colors.textPrimary,
-              fontSize: 17,
-              fontWeight: 600,
-            }}
-          >
-            {t("guestsPath.outcome")}
-          </Text>
+          <Text className={styles.outcomeText}>{t("guestsPath.outcome")}</Text>
           {/* 🔴 Раздаточные материалы мы не готовим и не передаём — приписка
-              стоит здесь, чтобы обещание не дочиталось из карточек про QR */}
+              стоит здесь, чтобы обещание не дочиталось из пунктов про QR */}
           <Text className={styles.note}>{t("guestsPath.note")}</Text>
         </motion.div>
       </div>

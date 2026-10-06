@@ -21,27 +21,56 @@ const DEMO_QR_SIZE = 168;
 export function DemoQrBlock({
   showMore = true,
   inPage = false,
+  inSide = false,
+  scanning = false,
 }: {
   /** Ссылка на страницу про общий QR-код — не нужна на самой этой странице. */
   showMore?: boolean;
   /** Внутри посадочной: во всю ширину контента и с отступом до карточек, а
    *  не узкой плашкой по центру секции демо. */
   inPage?: boolean;
+  /** В колонке рядом с роликом демо на главной: во всю ширину колонки. */
+  inSide?: boolean;
+  /** По коду проходит линия сканирования — будто на него навели камеру. */
+  scanning?: boolean;
 }) {
   const { t } = useTranslation("landing");
 
-  return (
-    <div
-      className={
-        inPage ? `${styles.qrBlock} ${styles.qrBlockInPage}` : styles.qrBlock
+  const title = (
+    <span className={styles.qrTitle}>
+      <QrCodeIcon size={20} />
+      {t("tryDemo.qrTitle")}
+    </span>
+  );
+  const more = showMore ? (
+    <Link
+      href={LINKS.pages.qrCode}
+      className={styles.qrSecondary}
+      onClick={() =>
+        reachGoal("click_solution", { page: "qr", from: "try_demo" })
       }
     >
+      {t("tryDemo.qrMore")} →
+    </Link>
+  ) : null;
+
+  return (
+    <div
+      className={[
+        styles.qrBlock,
+        inPage ? styles.qrBlockInPage : "",
+        inSide ? styles.qrBlockSide : "",
+      ].join(" ")}
+    >
+      {/* В колонке демо: заголовок сверху и «Как это работает» снизу — по
+          центру, между ними код и текст одной высоты (Руслан 06.10.2026) */}
+      {inSide ? title : null}
       <a
         href={LINKS.demo.chooser}
         target="_blank"
         onClick={() => reachGoal("open_demo_chooser")}
         rel="noopener noreferrer"
-        className={styles.qrImageWrap}
+        className={`${styles.qrImageWrap} ${scanning ? styles.qrScanning : ""}`}
         aria-label={t("tryDemo.qrOpen")}
       >
         <Image
@@ -53,10 +82,7 @@ export function DemoQrBlock({
         />
       </a>
       <div className={styles.qrContent}>
-        <span className={styles.qrTitle}>
-          <QrCodeIcon size={20} />
-          {t("tryDemo.qrTitle")}
-        </span>
+        {inSide ? null : title}
         <p className={styles.qrText}>{t("tryDemo.qrText")}</p>
         <div className={styles.qrActions}>
           <a
@@ -68,19 +94,10 @@ export function DemoQrBlock({
           >
             {t("tryDemo.qrOpen")}
           </a>
-          {showMore ? (
-            <Link
-              href={LINKS.pages.qrCode}
-              className={styles.qrSecondary}
-              onClick={() =>
-                reachGoal("click_solution", { page: "qr", from: "try_demo" })
-              }
-            >
-              {t("tryDemo.qrMore")} →
-            </Link>
-          ) : null}
+          {inSide ? null : more}
         </div>
       </div>
+      {inSide ? more : null}
     </div>
   );
 }

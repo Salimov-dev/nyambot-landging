@@ -228,15 +228,6 @@ export function PackageIcon({ size = DEFAULT_SIZE, className }: IconProps) {
   );
 }
 
-export function SettingsIcon({ size = DEFAULT_SIZE, className }: IconProps) {
-  return (
-    <svg {...baseProps(size, className)}>
-      <circle cx="12" cy="12" r="3" />
-      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
-    </svg>
-  );
-}
-
 export function FactoryIcon({ size = DEFAULT_SIZE, className }: IconProps) {
   return (
     <svg {...baseProps(size, className)}>
@@ -325,14 +316,6 @@ export function ServerIcon({ size = DEFAULT_SIZE, className }: IconProps) {
       <rect x="3" y="4" width="18" height="7" rx="2" />
       <rect x="3" y="13" width="18" height="7" rx="2" />
       <path d="M7 7.5h.01M7 16.5h.01" />
-    </svg>
-  );
-}
-
-export function HandshakeIcon({ size = DEFAULT_SIZE, className }: IconProps) {
-  return (
-    <svg {...baseProps(size, className)}>
-      <path d="M2 12l4-4 4 3 4-3 4 4-5 5-3-2.5L7 17z" />
     </svg>
   );
 }

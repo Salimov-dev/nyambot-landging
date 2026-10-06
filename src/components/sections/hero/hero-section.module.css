@@ -120,6 +120,90 @@
   background-clip: text;
 }
 
+/* Печать акцентной фразы (typed-accent.tsx). Буква до своей очереди невидима,
+   но место держит — строки не прыгают. Курсор — тень справа у последней
+   напечатанной буквы: «переезжает» вместе с печатью, у последней мигает и
+   гаснет.
+   🔴 Появление буквы — linear, не steps(1, end): браузер заканчивает
+   анимацию на «1010,9999 мс» вместо 1011, ступенька на таком прогрессе ещё
+   не наступила, и буквы «грам» оставались невидимыми навсегда. Видимость
+   дискретна сама: visible при любом прогрессе больше нуля (06.10.2026).
+   🔴 Буквам нельзя давать position: градиент фразы рисуется через
+   background-clip: text родителя, а позиционированных потомков он не
+   заливает — буквы становились прозрачными (06.10.2026) */
+/* Курсор — без заливки до и после своего окна (fill none): по той же
+   погрешности окончания он оставался висеть на «г», «р», «а» */
+.typedChar {
+  animation:
+    typeReveal 1ms linear var(--type-delay) both,
+    caretStep var(--type-step) linear var(--type-delay) none;
+}
+
+.typedCharLast {
+  animation:
+    typeReveal 1ms linear var(--type-delay) both,
+    caretBlink 1.6s steps(1, end) var(--type-delay) none;
+}
+
+@keyframes typeReveal {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes caretStep {
+  from,
+  to {
+    box-shadow: 0.06em 0 0 0 var(--accent);
+  }
+}
+
+@keyframes caretBlink {
+  0%,
+  50% {
+    box-shadow: 0.06em 0 0 0 var(--accent);
+  }
+  25%,
+  75%,
+  100% {
+    box-shadow: none;
+  }
+}
+
+/* «Смотреть демо» — когда фраза допечатана, кнопка один раз мягко
+   вспыхивает и возвращается к обычному виду (Руслан 06.10.2026). Один раз:
+   повторяющееся мигание утомляет. Начало — конец печати и мигания курсора */
+.secondaryBtn {
+  animation: demoGlow 1.4s ease-in-out 2.2s 1 both;
+}
+
+/* Рамка и цвет кнопки заданы с !important — анимация их не перебивает,
+   поэтому подсветка — кольцом тени и яркостью */
+@keyframes demoGlow {
+  0%,
+  100% {
+    box-shadow: none;
+    filter: none;
+  }
+  45% {
+    box-shadow:
+      0 0 0 2px var(--accent),
+      0 0 28px rgba(255, 140, 0, 0.45);
+    filter: brightness(1.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typedChar,
+  .typedCharLast,
+  .secondaryBtn {
+    animation: none;
+  }
+}
+
 .subtitle {
   display: block;
   font-size: 17px !important;
@@ -226,21 +310,6 @@
   object-fit: cover;
   object-position: center top;
   background: #0c1524;
-}
-
-/* Floating animation */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-.phoneWrapper {
-  animation: float 4s ease-in-out infinite;
 }
 
 /* Trial pill */

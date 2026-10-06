@@ -1,11 +1,15 @@
+/* ===== Для любого формата =====
+   Один ряд «иконка + название» без карточек и рамок (Руслан 06.10.2026): на
+   телефоне ряд переносится в две-три строки, а не в пять плиток. */
+
 .section {
-  padding: 72px 0;
+  padding: 56px 0;
   background: var(--bg-section);
   border-top: 1px solid var(--border-light);
 }
 
 .inner {
-  max-width: 1080px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -13,35 +17,28 @@
 .header {
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 48px;
+  margin: 0 auto 28px;
+  text-wrap: balance;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-}
-
-.card {
+.row {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 28px 20px;
-  background: var(--gradient-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  text-align: center;
-  align-items: center;
-  transition:
-    border-color 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.card:hover {
-  border-color: var(--accent-border);
-  background: var(--gradient-card-accent);
-  transform: translateY(-4px);
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 /* Иконка формата — в бренд-круге: бесцветный контур на тёмном терялся */
@@ -49,30 +46,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-pill);
   background: var(--accent-bg);
   border: 1px solid var(--accent-border);
   color: var(--accent);
-  line-height: 1;
 }
 
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Пять плиток в две колонки: последняя — во всю ширину, пустой ячейки
-     рядом с ней быть не должно */
-  .grid > :last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .section {
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .inner {
@@ -80,23 +65,24 @@
   }
 
   .header {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 
-  .grid {
-    gap: 14px;
+  /* Две колонки: свободным переносом каждый формат вставал отдельной
+     строкой — пять строк вместо трёх */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 14px;
   }
 
-  .card {
-    padding: 22px 16px;
+  .item {
+    gap: 8px;
+    font-size: 14px;
   }
-}
 
-/* Заголовок карточки — резерв под две строки, чтобы описания начинались
-   на одном уровне во всех карточках и на всех языках */
-.card h4 {
-  min-height: 2.7em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
 }

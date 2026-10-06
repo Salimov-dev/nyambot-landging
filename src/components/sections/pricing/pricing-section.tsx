@@ -3,25 +3,38 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Badge, Button, Card, Col, Flex, Row, Tag, Typography } from "antd";
+import {
+  CheckIcon,
+  GiftIcon,
+  PercentIcon,
+  StoreIcon,
+} from "@/components/ui/icons/icons";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import type { PricingPlan } from "@/types/landing.types";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import { theme } from "@/config/theme";
 import styles from "./pricing-section.module.css";
-import { CheckIcon } from "@/components/ui/icons/icons";
 
 const { Title, Text } = Typography;
 
-const MONTH_LABELS: Record<number, string> = {
-  1: "mo1",
-  3: "mo3",
-  6: "mo6",
-  12: "mo12",
-};
+type Translate = (key: string, opts?: Record<string, unknown>) => string;
 
 interface PricingSectionProps {
   plans: PricingPlan[];
+}
+
+/** Цены на странице — в русской записи с неразрывными пробелами (4 900),
+ *  как и раньше в карточках, на любом языке страницы. */
+function formatRub(value: number): string {
+  return value.toLocaleString("ru-RU");
+}
+
+/** Ключ ленты над тарифом: «Оптимально» или «Выгодно», у остальных — нет. */
+function planBadgeKey(plan: PricingPlan): string | null {
+  if (plan.isPopular) return "pricing.popular";
+  if (plan.isBestValue) return "pricing.bestValue";
+  return null;
 }
 
 export function PricingSection({ plans }: PricingSectionProps) {
@@ -69,171 +82,128 @@ export function PricingSection({ plans }: PricingSectionProps) {
           >
             {t("pricing.subtitle")}
           </Text>
-          <Text
-            style={{
-              display: "block",
-              maxWidth: 860,
-              margin: "28px auto 0",
-              padding: "20px 28px",
-              borderRadius: theme.radius.xl,
-              background: theme.colors.accentBg,
-              border: `1px solid ${theme.colors.accentBorder}`,
-              color: theme.colors.textPrimary,
-              fontSize: 17,
-              fontWeight: 500,
-              lineHeight: 1.65,
-            }}
-          >
-            🎁 {t("pricing.trialNote")}
-          </Text>
+          {/* Условие пробного периода — строкой, без отдельной плашки
+              (Руслан 06.10.2026: «слишком много всего»). Текст условия тот же */}
+          <p className={styles.trialNote}>
+            <GiftIcon size={16} />
+            {t("pricing.trialNote")}
+          </p>
         </motion.div>
 
-        <Row gutter={[20, 20]} justify="center">
-          {plans.map((plan, i) => (
-            <Col key={plan.code} xs={24} sm={12} lg={6}>
-              <motion.div
-                initial={{ opacity: 0, y: 32 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.55, delay: i * 0.1 }}
-                style={{ height: "100%" }}
-              >
-                {plan.isPopular || plan.isBestValue ? (
-                  <Badge.Ribbon
-                    text={t(
-                      plan.isPopular ? "pricing.popular" : "pricing.bestValue",
-                    )}
-                    color={
-                      plan.isPopular
-                        ? theme.colors.accent
-                        : theme.colors.success
-                    }
-                    className={styles.popularBadge}
-                  >
+        {/* Подсказки «оплати тариф — после этого можно начинать работу» под
+            карточками больше нет (Руслан 06.10.2026): она спорила с 30 днями
+            без карты из trialNote прямо над ней. */}
+        <Row gutter={[20, 20]} justify="center" className={styles.cards}>
+          {plans.map((plan, i) => {
+            const badgeKey = planBadgeKey(plan);
+
+            return (
+              <Col key={plan.code} xs={24} sm={12} lg={6}>
+                <motion.div
+                  initial={{ opacity: 0, y: 32 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.55, delay: i * 0.1 }}
+                  style={{ height: "100%" }}
+                >
+                  {badgeKey ? (
+                    <Badge.Ribbon
+                      text={t(badgeKey)}
+                      color={
+                        plan.isPopular
+                          ? theme.colors.accent
+                          : theme.colors.success
+                      }
+                      className={styles.popularBadge}
+                    >
+                      <PricingCard plan={plan} t={t} />
+                    </Badge.Ribbon>
+                  ) : (
                     <PricingCard plan={plan} t={t} />
-                  </Badge.Ribbon>
-                ) : (
-                  <PricingCard plan={plan} t={t} />
-                )}
-              </motion.div>
-            </Col>
-          ))}
+                  )}
+                </motion.div>
+              </Col>
+            );
+          })}
         </Row>
 
-        {/* Registration hint — прямо под карточками */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.45 }}
-          style={{ textAlign: "center", marginTop: 20 }}
-        >
-          <Text
-            style={{
-              color: theme.colors.textTertiary,
-              fontSize: 13,
-              lineHeight: 1.6,
-            }}
-          >
-            💡 {t("pricing.registrationHint")}
-          </Text>
-        </motion.div>
-
-        {/* Переезд со скидкой 50% — строкой в тарифах вместо отдельной секции:
-            до неё доходили единицы, а условие важно тем, кто уже платит
-            другому сервису. Подробности — в чате поддержки, скидку фиксируем
-            до оплаты. */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className={styles.switchNote}
-        >
-          <Text className={styles.switchNoteText}>
-            {t("pricing.switchNote")}
-          </Text>
-          <a
-            href={LINKS.support.telegram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.switchNoteLink}
-            onClick={() => reachGoal("click_switch")}
-          >
-            {t("pricing.switchCta")} →
-          </a>
-        </motion.div>
-
-        {/* Состав тарифа одной карточкой: сначала что подключаешь,
-            потом что получаешь, и тут же вариант для сети — раньше эти три
-            куска висели по отдельности и не читались как одно предложение */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className={styles.includes}
+          transition={{ duration: 0.55, delay: 0.1 }}
+          className={styles.compact}
         >
-          <div className={styles.includesGrid}>
-            <div className={styles.includesCol}>
-              <Text className={styles.includesTitle}>
-                {t("pricing.connectTitle")}
-              </Text>
-              <ul className={styles.includesList}>
-                {(
-                  t("pricing.connectItems", { returnObjects: true }) as string[]
-                ).map((item) => (
-                  <li key={item} className={styles.includesItem}>
-                    <CheckIcon size={15} className={styles.includeIcon} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <PricingList plans={plans} t={t} />
+        </motion.div>
 
-            <div className={styles.includesCol}>
-              <Text className={styles.includesTitle}>
-                {t("pricing.included")}
-              </Text>
-              <ul
-                className={`${styles.includesList} ${styles.includesListTwo}`}
-              >
-                {(
-                  t("pricing.includedItems", {
-                    returnObjects: true,
-                  }) as string[]
-                ).map((item) => (
-                  <li key={item} className={styles.includesItem}>
-                    <CheckIcon size={15} className={styles.includeIcon} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* Под ценами — три короткие карточки в ряд: что в тарифе, переезд со
+            скидкой и сеть (Руслан 06.10.2026: раньше это были три больших
+            блока, потом сплошной текст — «не просто текстом»). */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className={styles.details}
+        >
+          <div className={styles.detailCard}>
+            <span className={styles.detailIcon}>
+              <CheckIcon size={18} />
+            </span>
+            <span className={styles.detailTitle}>
+              {t("pricing.includesLabel")}
+            </span>
+            <span className={styles.detailText}>
+              {t("pricing.includesShort")}
+            </span>
           </div>
 
-          <div className={styles.networkRow}>
-            <div className={styles.networkText}>
-              <Text className={styles.networkTitle}>
-                {t("pricing.customTitle")}
-              </Text>
-              <Text className={styles.networkSubtitle}>
-                {t("pricing.customSubtitle")}
-              </Text>
-            </div>
-            <Flex gap={10} className={styles.networkActions}>
-              <Button
+          {/* Переезд со скидкой 50%: скидку фиксируем до оплаты в чате поддержки */}
+          <div className={styles.detailCard}>
+            <span className={styles.detailIcon}>
+              <PercentIcon size={18} />
+            </span>
+            <span className={styles.detailTitle}>
+              {t("pricing.switchTitle")}
+            </span>
+            <span className={styles.detailText}>{t("pricing.switchNote")}</span>
+            <a
+              href={LINKS.support.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.detailLink}
+              onClick={() => reachGoal("click_switch")}
+            >
+              {t("pricing.switchCta")} →
+            </a>
+          </div>
+
+          <div className={styles.detailCard}>
+            <span className={styles.detailIcon}>
+              <StoreIcon size={18} />
+            </span>
+            <span className={styles.detailTitle}>
+              {t("pricing.customTitle")}
+            </span>
+            <span className={styles.detailText}>
+              {t("pricing.customSubtitle")}
+            </span>
+            <span className={styles.detailLinks}>
+              <a
                 href={LINKS.support.telegram}
                 target="_blank"
-                className={styles.defaultBtn}
+                rel="noopener noreferrer"
+                className={styles.detailLink}
                 onClick={() => reachGoal("click_tg_support")}
               >
                 Telegram
-              </Button>
-              <Button
+              </a>
+              <a
                 href={LINKS.support.email}
-                className={styles.defaultBtn}
+                className={styles.detailLink}
                 onClick={() => reachGoal("click_email_support")}
               >
                 {t("pricing.emailCta")}
-              </Button>
-            </Flex>
+              </a>
+            </span>
           </div>
         </motion.div>
       </div>
@@ -241,21 +211,93 @@ export function PricingSection({ plans }: PricingSectionProps) {
   );
 }
 
-function PricingCard({
-  plan,
-  t,
-}: {
-  plan: PricingPlan;
-  t: (key: string, opts?: Record<string, unknown>) => string;
-}) {
+/**
+ * Тарифы на телефоне — список из четырёх строк и одна кнопка под ним.
+ *
+ * 🔴 Четыре карточки друг под другом занимали около двух экранов, и каждая
+ * повторяла одну и ту же кнопку «Подключить» — а условия у тарифов одни,
+ * различаются только срок и цена (Руслан 06.10.2026). Кнопка та же: ссылка на
+ * регистрацию и цель click_trial, как у карточек на компьютере.
+ */
+function PricingList({ plans, t }: { plans: PricingPlan[]; t: Translate }) {
+  return (
+    <>
+      <ul className={styles.planList}>
+        {plans.map((plan) => {
+          const badgeKey = planBadgeKey(plan);
+
+          return (
+            <li
+              key={plan.code}
+              className={`${styles.planRow} ${plan.isPopular ? styles.planRowPopular : ""}`}
+            >
+              <span className={styles.planMain}>
+                <span className={styles.planHead}>
+                  <span className={styles.planMonths}>
+                    {t(`pricing.months.${plan.months}`)}
+                  </span>
+                  {plan.discountPercent > 0 && (
+                    <span
+                      className={`${styles.planTag} ${styles.planTagSuccess}`}
+                    >
+                      −{plan.discountPercent}%
+                    </span>
+                  )}
+                  {badgeKey && (
+                    <span
+                      className={`${styles.planTag} ${plan.isPopular ? styles.planTagAccent : styles.planTagSuccess}`}
+                    >
+                      {t(badgeKey)}
+                    </span>
+                  )}
+                </span>
+                {plan.months > 1 && (
+                  <span className={styles.planBilled}>
+                    {t("pricing.totalBilled", {
+                      total: formatRub(plan.priceRub),
+                    })}{" "}
+                    ₽
+                  </span>
+                )}
+              </span>
+
+              <span className={styles.planPrice}>
+                <span className={styles.planPriceValue}>
+                  {formatRub(plan.pricePerMonth)} ₽
+                </span>
+                <span className={styles.planPerMonth}>
+                  {t("pricing.perMonth")}
+                </span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+
+      <Button
+        type="primary"
+        block
+        size="large"
+        href={LINKS.crmRegister}
+        target="_blank"
+        className={styles.primaryBtn}
+        onClick={() => reachGoal("click_trial")}
+      >
+        {t("pricing.cta")}
+      </Button>
+    </>
+  );
+}
+
+function PricingCard({ plan, t }: { plan: PricingPlan; t: Translate }) {
   const isPopular = plan.isPopular;
 
   return (
     <Card
       className={`${styles.card} ${isPopular ? styles.cardPopular : ""}`}
-      styles={{ body: { padding: 28, height: "100%" } }}
+      styles={{ body: { padding: "22px 22px 20px", height: "100%" } }}
     >
-      <Flex vertical gap={20} style={{ height: "100%" }}>
+      <Flex vertical gap={14} style={{ height: "100%" }}>
         {/* Duration */}
         <Flex align="center" justify="space-between">
           <Text
@@ -285,25 +327,10 @@ function PricingCard({
           )}
         </Flex>
 
-        {/* Price */}
+        {/* Price. Тега «0 ₽ · первые 30 дней» в карточке больше нет
+            (Руслан 06.10.2026): четыре одинаковых тега повторяли trialNote
+            над карточками и ничем тарифы не различали. */}
         <Flex vertical gap={4}>
-          <Tag
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              background: theme.colors.successBg,
-              border: `1px solid ${theme.colors.success}44`,
-              color: theme.colors.success,
-              borderRadius: "var(--radius-pill)",
-              fontSize: 12,
-              fontWeight: 700,
-              padding: "3px 10px",
-              marginBottom: 4,
-              width: "fit-content",
-            }}
-          >
-            🎁 {t("pricing.freeTrial")}
-          </Tag>
           <Flex align="baseline" gap={4}>
             <Title
               level={2}
@@ -312,12 +339,12 @@ function PricingCard({
                   ? theme.colors.accent
                   : theme.colors.textPrimary,
                 margin: 0,
-                fontSize: 36,
+                fontSize: 34,
                 fontWeight: 800,
                 lineHeight: 1,
               }}
             >
-              {plan.pricePerMonth.toLocaleString("ru-RU")} ₽
+              {formatRub(plan.pricePerMonth)} ₽
             </Title>
           </Flex>
           <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
@@ -326,7 +353,7 @@ function PricingCard({
           {plan.months > 1 && (
             <Text style={{ color: theme.colors.textTertiary, fontSize: 12 }}>
               {t("pricing.totalBilled", {
-                total: plan.priceRub.toLocaleString("ru-RU"),
+                total: formatRub(plan.priceRub),
               })}{" "}
               ₽
             </Text>

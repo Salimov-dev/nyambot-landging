@@ -9,8 +9,6 @@ import { KillerSection } from "@/components/sections/killer/killer-section";
 import { FreeReviewSection } from "@/components/sections/free-review/free-review-section";
 import { WhyNowSection } from "@/components/sections/why-now/why-now-section";
 import { CompareSection } from "@/components/sections/compare/compare-section";
-import { GuestStepsSection } from "@/components/sections/guest-steps/guest-steps-section";
-import { OurWaySection } from "@/components/sections/our-way/our-way-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
 import { ForWhomSection } from "@/components/sections/for-whom/for-whom-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
@@ -50,22 +48,31 @@ export default function LandingPage() {
           до четверти прежней страницы доходили 5,5% визитов с рекламы. Разделы
           «Сайт или приложение», «Сеть и франшиза», «Безопасность», «Почему мы»,
           «Как работает» и «Переезд» уехали на собственные адреса — это входы из
-          выдачи, а ссылки на них собраны в секции «Решения». */}
-      <main>
+          выдачи, а ссылки на них собраны в секции «Решения».
+
+          Сокращение 06.10.2026 (Руслан): «Как это работает» (путь гостя по
+          шагам) свёрнута в третью строку «Сравнения» и строку под ним,
+          «Как мы работаем» перед тарифами снята — открытые цены и регистрация
+          без менеджера уже сказаны в «Сравнении» и «Тарифах», а помощь
+          с настройкой расписана шагами на /zapusk. «Для любого формата»
+          и «Откуда гости» — рядами без плиток, «Зарабатывай больше» —
+          шесть плиток, «Тарифы» на телефоне — списком. */}
+      <main className="landing-main">
         <HeroSection />
         <FreeReviewSection />
         <WhyNowSection />
+        {/* Форматы — до «Главного» (Руслан 06.10.2026): сначала «это для меня?», потом что это даёт */}
+        <ForWhomSection />
         <KillerSection />
         <CompareSection />
         <TryDemoSection />
-        <ForWhomSection />
-        <GuestStepsSection />
+        {/* Интеграции — сразу после форматов (Руслан 06.10.2026): «подойдёт ли
+            к моей кассе» спрашивают вместе с «подойдёт ли моему формату» */}
+        <IntegrationsSection />
         <GuestsPathSection />
         <FeaturesSection />
         <CrmDemoSection />
-        <OurWaySection />
         <PricingSection plans={PRICING_PLANS} />
-        <IntegrationsSection />
         <SolutionsSection />
         <FaqSection />
         <CtaSection />

@@ -61,22 +61,18 @@
   }
 }
 
-.demoCard {
-  padding: 32px 24px;
-  background: var(--surface);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg, 20px);
-  transition: border-color 0.25s ease;
-  position: relative;
-}
-
-.demoCard:hover {
-  border-color: rgba(255, 140, 0, 0.25);
+/* Телефон с роликом слева, кнопки демо и QR справа; на телефоне — столбиком */
+.demoLayout {
+  display: grid;
+  grid-template-columns: auto minmax(0, 520px);
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  margin-top: 56px;
 }
 
 .phoneWrap {
   position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -86,21 +82,41 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
+  width: 340px;
+  height: 340px;
   pointer-events: none;
   border-radius: 50%;
   z-index: 0;
+  background: radial-gradient(
+    circle,
+    rgba(255, 140, 0, 0.18) 0%,
+    transparent 65%
+  );
 }
 
-.phoneScreen {
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
+.demoSide {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.phoneScreenImage {
-  object-fit: fill;
+.messengerCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg, 20px);
+}
+
+.messengerDesc {
+  flex: 1;
+  min-width: 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .tgBtn {
@@ -134,26 +150,30 @@
   filter: brightness(1.08);
 }
 
-.crmCta {
-  margin-top: 56px;
-  padding: 32px;
-  background: var(--surface);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg, 20px);
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 900px) {
+  .demoLayout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+  }
 }
 
-.crmBtn {
-  border-color: var(--accent) !important;
-  color: var(--accent) !important;
-  font-weight: 600;
-  padding: 0 32px;
-}
-
-.crmBtn:hover {
-  background: var(--accent-bg) !important;
+/* Узкий экран: кнопка — под подписью во всю ширину, иначе она сжимала текст
+   до слова в строке и наезжала на него */
+@media (max-width: 560px) {
+  .messengerCard {
+    flex-wrap: wrap;
+  }
+  .messengerCard > a {
+    flex-basis: 100%;
+  }
+  /* Иконка и подпись — по центру над кнопкой (Руслан 06.10.2026) */
+  .messengerCard {
+    justify-content: center;
+  }
+  .messengerDesc {
+    flex: 0 1 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -162,13 +182,6 @@
   }
   .inner {
     padding: 0 16px;
-  }
-  .demoCard {
-    padding: 24px 16px;
-  }
-  .crmCta {
-    padding: 24px 16px;
-    margin-top: 40px;
   }
 }
 
@@ -191,6 +204,46 @@
   margin: 0 0 36px;
 }
 
+/* В колонке рядом с роликом демо — во всю её ширину, без своего отступа.
+   Заголовок и «Как это работает» — по центру сверху и снизу, между ними код
+   и текст: код увеличен до высоты текста */
+.qrBlockSide {
+  max-width: none;
+  margin: 0;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "title title"
+    "code content"
+    "more more";
+  gap: 16px 20px;
+  align-items: center;
+}
+
+.qrBlockSide > .qrTitle {
+  grid-area: title;
+  text-align: center;
+}
+
+.qrBlockSide > .qrImageWrap {
+  grid-area: code;
+}
+
+.qrBlockSide > .qrImageWrap img {
+  width: 184px;
+  height: 184px;
+}
+
+.qrBlockSide > .qrContent {
+  grid-area: content;
+}
+
+.qrBlockSide > .qrSecondary {
+  grid-area: more;
+  justify-self: center;
+}
+
 .qrImageWrap {
   flex-shrink: 0;
   display: block;
@@ -198,6 +251,52 @@
   background: #fff;
   border-radius: 16px;
   line-height: 0;
+}
+
+/* Линия сканирования: проходит по коду, будто на него навели камеру. Один
+   спокойный проход и пауза — без мельтешения (Руслан 06.10.2026) */
+.qrScanning {
+  position: relative;
+  overflow: hidden;
+}
+
+.qrScanning::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 14px 4px rgba(255, 140, 0, 0.45);
+  opacity: 0;
+  animation: qrScan 5s ease-in-out 1s infinite;
+}
+
+@keyframes qrScan {
+  0% {
+    top: 6%;
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  34% {
+    top: 92%;
+    opacity: 1;
+  }
+  40%,
+  100% {
+    top: 92%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qrScanning::after {
+    animation: none;
+  }
 }
 
 .qrContent {
@@ -276,6 +375,18 @@
   }
   .qrBlockInPage {
     margin: 0 0 28px;
+  }
+  .qrBlockSide {
+    margin: 0;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "title"
+      "code"
+      "content"
+      "more";
+  }
+  .qrBlockSide > .qrImageWrap {
+    justify-self: center;
   }
   .qrImageWrap {
     align-self: center;

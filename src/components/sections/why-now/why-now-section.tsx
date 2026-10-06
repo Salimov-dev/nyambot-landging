@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { useHasTranslation } from "@/hooks/use-has-translation.hook";
+import { CountUpValue } from "./count-up-value";
 import styles from "./why-now-section.module.css";
 
 const { Title, Text } = Typography;
@@ -57,7 +58,7 @@ export function WhyNowSection() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className={`${styles.stat} landing-glass-card`}
             >
-              <span className={styles.statValue}>{stat.value}</span>
+              <CountUpValue value={stat.value} className={styles.statValue} />
               <Text className={styles.statText}>{stat.text}</Text>
             </motion.div>
           ))}
