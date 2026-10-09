@@ -14,12 +14,13 @@
   "hero": {
     "title": "Buyurtmalar va ovqat yetkazib berish <em>MAX&nbsp;va&nbsp;Telegram'da</em>&nbsp;— butun tarmoqqa bittadan bot bilan",
     "subtitle": "Bitta nuqta va butun tarmoq uchun: kafelar, restoranlar, nonvoyxonalar, yetkazib berish. Mehmonlar bazasi, buyurtmalar tarixi va ballar ikkala messenjerda umumiy, menyu, narxlar va yetkazib berish hududi esa har bir nuqtaning oʻziniki",
-    "cta": "Bepul boshlash",
+    "cta": "Sen uchun bepul ishga tushiramiz",
+    "ctaSelf": "Oʻzim sozlayman",
     "ctaSecondary": "Demoni ko'rish",
     "trial": "30 kun bepul · faqat pochta kerak · kartasiz va menejer qoʻngʻirogʻisiz"
   },
   "freeReview": {
-    "title": "Muassasangizni bepul tahlil qilib, botlarda nima boʻlishini koʻrsatamiz",
+    "title": "Toʻliq ishga tushirish — bepul",
     "items": [
       {
         "title": "Menyu va rasmlar",
@@ -35,8 +36,9 @@
       }
     ],
     "guarantee": "Ishga tushirishdan oldin barcha sozlamalarni avtomatik tekshiramiz. Mehmonlarni faqat tekshiruvdan keyin kiritamiz.",
-    "note": "Bir ish kuni ichida javob beramiz. Qoʻngʻiroqlarsiz va majburiyatlarsiz.",
-    "button": "Bepul tahlil olish"
+    "note": "24 soat ichida senga qulay joyda bogʻlanamiz. Majburiyatlarsiz.",
+    "button": "Sen uchun bepul ishga tushiramiz",
+    "selfButton": "Oʻzim sozlayman"
   },
   "killer": {
     "label": "Asosiysi",
@@ -71,7 +73,8 @@
       }
     },
     "pricingNote": "Bitta tarif — barcha imkoniyatlar cheklovsiz. Narxlar shu sahifada, «soʻrov boʻyicha» emas",
-    "pricingCta": "Tariflarni koʻrish"
+    "pricingCta": "Tariflarni koʻrish",
+    "category": "Oʻrnatish kerak boʻlgan alohida ilova emas. Kirib kelish kerak boʻlgan sayt emas. Foiz olib, mehmonni oʻzida qoldiradigan agregator emas. Oʻz brendlangan buyurtma ilovang — dasturlashsiz"
   },
   "benefits": {
     "label": "Imkoniyatlar",
@@ -154,7 +157,7 @@
     "customSubtitle": "2 nuqtadan — individual tarif, bizga yoz:",
     "emailCta": "Pochta",
     "includesLabel": "Tarifda",
-    "includesShort": "1 nuqta, MAX va Telegram'dagi botlar — mini-ilova, CRM, «Jamoa», sodiqlik, integratsiyalar va qo'llab-quvvatlash",
+    "includesShort": "1 nuqta, MAX va Telegram'dagi botlar — mini-ilova, CRM, «Komanda», sodiqlik, integratsiyalar va qo'llab-quvvatlash. Ishga tushirish — bepul",
     "switchTitle": "Boshqa xizmatdan o'tyapsanmi?",
     "switchNote": "Dastlabki 3 oy — ikki baravar arzon",
     "switchCta": "50% chegirma olish"
@@ -167,28 +170,20 @@
     "moreCta": "Barcha savollar",
     "items": [
       {
+        "question": "Kassani almashtirishga toʻgʻri keladimi?",
+        "answer": "Yoʻq, kassa seniki boʻlib qoladi. Nyambot uni almashtirmaydi va talab qilmaydi. iiko yoki R-Keeper boʻlsa, integratsiya ulanadi va menyu, stop-roʻyxatlar hamda buyurtmalar avtomatik sinxronlanadi. Kassa boshqa yoki umuman yoʻq boʻlsa, Nyambot menyu, modifikatorlar, sodiqlik va buyurtmalarni oʻz CRMida mustaqil yuritadi. Keyinroq kassani ulasang — maʼlumotlar joyida qoladi"
+      },
+      {
         "question": "Har bir nuqta uchun alohida bot kerakmi?",
-        "answer": "Yo'q. Har bir messenjerda bitta bot butun tarmoqqa ishlaydi: mehmon nuqtani — joylashuvi bo'yicha yoki ro'yxatdan — tanlaydi va aynan o'sha nuqtaning menyusi, narxlari va yetkazib berish zonasini ko'radi. Siz bitta kanalni targ'ib qilasiz, yangi nuqta esa alohida ishga tushirilmasdan ulanadi. Mehmonlar bazasi, buyurtmalar tarixi va ballar butun tarmoq bo'ylab umumiy qoladi"
-      },
-      {
-        "question": "Menyuni koʻrish uchun mehmon roʻyxatdan oʻtishi kerakmi?",
-        "answer": "Yoʻq. Mehmon messenjerda mini-ilovani ochadi va darhol menyuni koʻradi, narxlarni tekshiradi va savatni toʻldiradi — roʻyxatdan oʻtmasdan, telefon raqamisiz va joylashuvsiz. Telefon va manzil faqat buyurtmani rasmiylashtirishda kerak boʻladi"
-      },
-      {
-        "question": "Mehmonlar ilova haqida qanday biladi?",
-        "answer": "Hozir sen haqingda qanday bilsalar, xuddi shunday — faqat ular sening oʻz buyurtma kanalingga kelishadi. Reklamadagi, ijtimoiy tarmoqlardagi, blogerdagi yoki qidiruvdagi havola darhol menyungni ochadi, hech narsa oʻrnatmasdan. Zaldagi QR-kod tashrifni obunaga aylantiradi, qadoqdagi QR esa birinchi marta agregator orqali buyurtma bergan mehmonni toʻgʻridan-toʻgʻri qaytaradi. Eng arzoni — kassadagi ibora: «skanerlang, keyingi tashrifingizga bonus oling»"
+        "answer": "Yoʻq. Har bir messenjerda bitta bot butun tarmoqqa ishlaydi: mehmon nuqtani — joylashuvi boʻyicha yoki roʻyxatdan — tanlaydi va aynan oʻsha nuqtaning menyusi, narxlari va yetkazib berish hududini koʻradi. Sen bitta kanalni targʻib qilasan, yangi nuqta esa alohida ishga tushirilmasdan ulanadi. Mehmonlar bazasi, buyurtmalar tarixi va ballar butun tarmoq boʻylab umumiy qoladi"
       },
       {
         "question": "Nyambot mehmon olib keladimi?",
-        "answer": "Nyambot — muassasaning oʻz nomi ostidagi buyurtma ilovasi. Biz trafik quvmaymiz — sening trafikingni qoʻndiramiz: reklamani, ijtimoiy tarmoqlarni, blogerlarni, qidiruvni, peshtaxtani va qadoqni. Agregatordan farqi mehmon qayerdan kelganida emas, keyin kimning mehmoni boʻlishida: maydonchada buyurtma bergan uning mehmoni boʻlib qoladi — har keyingi buyurtma uchun komissiya bilan, — Nyambotga kelgan esa muassasa botiga obuna va takroran toʻgʻridan-toʻgʻri buyurtma beradi"
-      },
-      {
-        "question": "Kassani almashtirishga toʻgʻri keladimi?",
-        "answer": "Yoʻq. Nyambot kassani almashtirmaydi va uni talab qilmaydi. iiko yoki R-Keeper boʻlsa, integratsiya ulanadi va menyu, stop-roʻyxatlar hamda buyurtmalar avtomatik sinxronlanadi. Kassa boshqa yoki umuman yoʻq boʻlsa, Nyambot menyu, modifikatorlar, sodiqlik va buyurtmalarni oʻz CRMida mustaqil yuritadi. Keyinroq kassani ulasangiz — maʼlumotlar joyida qoladi"
+        "answer": "Yoʻq, gap ham shunda. Nyambot — muassasaning sening noming ostidagi oʻz buyurtma ilovasi. Biz trafik quvmaymiz — sening trafikingni qoʻndiramiz: reklamani, ijtimoiy tarmoqlarni, blogerlarni, qidiruvni, peshtaxtani va qadoqni. Agregatordan farqi mehmon qayerdan kelganida emas, keyin kimning mehmoni boʻlishida: maydonchada buyurtma bergan uning mehmoni boʻlib qoladi — har keyingi buyurtma uchun 25–35% komissiya bilan, — Nyambotga kelgan esa muassasa botiga obuna va takroran toʻgʻridan-toʻgʻri buyurtma beradi"
       },
       {
         "question": "Hammasini kim sozlaydi?",
-        "answer": "Biz. Muassasani tahlil qilamiz, botlarni ulaymiz, menyuni yuklaymiz, kassa va toʻlov bilan bogʻlaymiz, ishga tushirishni tekshiramiz. Joriy etish bepul, barcha narxlar shu sahifada. Keyin hammasini CRMda oʻzing yuritasan, Anya va yordam xizmati koʻmaklashadi."
+        "answer": "Biz — bepul. Ishga tushirishga ariza qoldir: 24 soat ichida bogʻlanamiz, kabinet, menyu, kassa va yetkazib berishni sozlaymiz, Telegram'da bot ochamiz va test buyurtmalari bilan tekshiramiz. MAX'dagi botni esa oʻzing oʻz YaTT yoki MChJ nomingga havola orqali ochasan — biz uni ulaymiz. Barcha narxlar shu sahifada. Keyin hammasini CRMda oʻzing yuritasan, Anya va yordam xizmati koʻmaklashadi."
       },
       {
         "question": "Mehmon muassasaga yoza oladimi?",
@@ -201,13 +196,22 @@
       {
         "question": "Kassa buyurtma qabul qilishni toʻxtatganini qanday bilsa boʻladi?",
         "answer": "CRMda bildirishnomalarni yoq: «Profil» → «Bildirishnomalar». Kassa javob berishni toʻxtatishi bilan Telegram yoki MAXga xabar keladi, yana ishlay boshlaganda esa yana bittasi"
+      },
+      {
+        "question": "Sinov muddati va boshlangʻich toʻlov qanday tashkil etilgan?",
+        "answer": "30 kun bepul, kartasiz va funksiyalar qisqartirilmasdan. Roʻyxatdan oʻtgandan keyin toʻliq kirish beramiz: toʻliq CRM, «Komanda» ilovasi, kassa va yetkazib berish bilan integratsiyalar. Hammasini oʻzing sozlashing yoki ishga tushirishni bizga ishonib topshirishing mumkin — bu bepul, yordam xizmati esa har bir qadamda savollarga javob beradi. Sinov muddati standart shartlarda oʻtadi — bitta savdo nuqtasi va ikkita bot; integratsiyalar cheklovsiz ulanadi. Tarmoqlar va katta hajmlarni alohida muhokama qilamiz"
+      },
+      {
+        "question": "50% chegirmani qanday olish mumkin?",
+        "answer": "Birinchi toʻlovgacha yoz — narxni belgilab qoʻyamiz. Dastlabki 3 oy uchun chegirma buyurtma qabul qilish yoki yetkazib berishning pullik xizmatidan allaqachon foydalanayotganlarga beriladi. Toʻlovgacha bizga yoz, qaysi xizmatdan foydalanayotganingni tasdiqla — biz narxni belgilab qoʻyamiz va u CRMda «Litsenziya» boʻlimida koʻrinadi. Chegirma tarifning toʻliq narxidan hisoblanadi, boshqa chegirmalar va uzoq muddatli tariflar foydasi bilan qoʻshilmaydi, uch oy esa birinchi toʻlovdan boshlab hisoblanadi — sinov muddati ularga kirmaydi va ulardan oldin keladi"
       }
     ]
   },
   "cta": {
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
     "subtitle": "30 kun bepul. To'liq funksional, to'liq qo'llab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
-    "button": "Bepul tahlil olish",
+    "button": "Sen uchun bepul ishga tushiramiz",
+    "self": "Oʻzim sozlayman",
     "docs": "Hujjatlarni o'qish",
     "hint": "Faqat pochta kerak · Kartasiz · Boshida 1 nuqta va 2 bot",
     "trialFeatures": ["30 kun bepul", "Toʻliq kirish", "Karta kerak emas"]
@@ -228,6 +232,7 @@
     "offer": "Ommaviy oferta",
     "cookies": "Cookies siyosati",
     "tariffs": "Tariflar va standartlar",
+    "briefConsent": "Ishga tushirish arizasi uchun rozilik",
     "allRights": "Barcha huquqlar himoyalangan",
     "madeInRussia": "Rossiyada ishlab chiqilgan · ma'lumotlar RFda saqlanadi · 152-FZ",
     "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram va MAX nomlari va logotiplari o'z huquq egalariga tegishli bo'lib, moslikni ko'rsatish uchun ishlatilgan",
@@ -384,6 +389,65 @@
         "text": "Kassa, to‘lov, yetkazib berish, sinov muddati va 50% chegirma haqida yigirma beshta savol"
       }
     }
+  },
+  "whyNow": {
+    "label": "Nega aynan hozir",
+    "title": "Mehmonlar messenjerlarga koʻchib oʻtdi",
+    "stats": [
+      {
+        "value": "85 mln",
+        "text": "har oy MAXga kiradi"
+      },
+      {
+        "value": "72 mln",
+        "text": "har kuni MAXga kiradi"
+      },
+      {
+        "value": "75 mln",
+        "text": "har oy Telegramga kiradi"
+      }
+    ],
+    "text": "Yangi ilovalarni mehmon deyarli oʻrnatmaydi. Saytga esa avval kelish kerak: manzilni eslash, ochish, kirish. Messenjer esa unda baribir ochiq, kuniga oʻnlab marta, sening boting esa chatlar roʻyxatida doʻstlari yonida turadi. Shuning uchun buyurtma kanali mehmon allaqachon bor joyga koʻchmoqda",
+    "outcome": "Buyurtma yozishma bor joyning oʻzida — va buyurtmadan keyin mehmon bilan aloqa uzilmaydi"
+  },
+  "compare": {
+    "label": "Taqqoslash",
+    "title": "Bu messenjerlardagi boshqa buyurtma xizmatlaridan nimasi bilan farq qiladi",
+    "usualLabel": "Odatda",
+    "ourLabel": "Bizda",
+    "titles": [
+      "Ikkala messenjer uchun bitta tizim",
+      "Yangi nuqta — oʻsha kabinetda",
+      "Roʻyxatdan oʻtmasdan",
+      "Ishga tushirish bepul",
+      "Narxlar ochiq"
+    ],
+    "rows": [
+      {
+        "usual": "Telegramda alohida bot va MAXda alohida bot: ikkita mehmonlar bazasi, ikkita kabinet, ikkita hisob",
+        "our": "MAX va Telegramdagi botlar bitta tizimga ulangan: mehmonlar bazasi, buyurtmalar tarixi va ballar umumiy"
+      },
+      {
+        "usual": "Yangi nuqta — yangi ishga tushirish va yangi bot",
+        "our": "Yangi nuqta oʻsha kabinetda qoʻshiladi, mehmon uni menyuda tanlaydi"
+      },
+      {
+        "usual": "Mehmon kirishdayoq roʻyxatdan oʻtadi va taomlarni koʻrmasdan turib telefonini qoldiradi",
+        "our": "Havola yoki QR-kodga bir teginish — va menyu toʻgʻridan-toʻgʻri messenjerda ochiladi. Telefon va manzilni mehmon bir marta, buyurtmani rasmiylashtirishda qoldiradi — keyin ular oʻzi qoʻyiladi"
+      },
+      {
+        "usual": "Ishga tushirish uchun — alohida bir martalik toʻlov, oʻzgartirishlar — xizmat dasturchilari orqali",
+        "our": "Ishga tushirish bepul: menyu, narxlar, hududlar, toʻlov va kassani oʻzimiz sozlaymiz. Keyin CRMda dasturchilarsiz oʻzing yuritasan"
+      },
+      {
+        "usual": "Narxni arizadan keyin qoʻngʻiroqda aytishadi",
+        "our": "Narxlar eʼlon qilingan, roʻyxatdan oʻtish pochta orqali, 30 kun bepul"
+      }
+    ],
+    "outcome": "Ikkinchi buyurtma — yanada tezroq: bot allaqachon chatlar roʻyxatida, manzil va telefon joyida"
+  },
+  "trust": {
+    "line": "«Skolkovo» loyihasi ishtirokchisi · Rossiyada ishlab chiqilgan · Mehmonlar maʼlumotlari 152‑FZ boʻyicha RFda saqlanadi"
   },
   "contactWidget": {
     "ariaLabel": "Bizga yozing",

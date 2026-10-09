@@ -1,216 +1,278 @@
 import { LINKS } from "@/config/links.config";
+import {
+  BRIEF_ERROR,
+  BRIEF_FIELD,
+  BRIEF_ONLINE_PAYMENT,
+  BRIEF_POS,
+  type BriefChoiceField,
+  type BriefChoiceValue,
+  type BriefErrorCode,
+  type BriefTextInputField,
+} from "@/lib/launch-brief/launch-brief.model";
+import {
+  BRIEF_MISSING,
+  type BriefMissing,
+} from "@/lib/launch-brief/launch-brief.validation";
 
 /**
- * Страница «Запустим твоё заведение» (`/zapusk`) и форма заявки на
- * бесплатный разбор сайта.
+ * Страница «Заявка на запуск» (`/zapusk`) и её форма — план
+ * `docs-nyambot/PLANS/brif-zapuska-2026-10-09`, Ф2 (только ru, Р14).
  *
- * Повод — разбор рекламы 28.09.2026: «Начать бесплатно» вело в СРМ на форму
- * входа, и человек, ждавший, что его запустят, уходил. Живые клиенты идут
- * путём «мы разбираем сайт — от вас только регистрация»; страница выносит его
- * на сайт. Тексты утверждены Русланом 28.09.2026.
+ * История: 28.09.2026 «Начать бесплатно» вело в СРМ на форму входа, и
+ * человек, ждавший, что его запустят, уходил — появилась страница с заявкой
+ * на разбор сайта. 09.10.2026 заявка выросла в полную «Заявку на запуск»
+ * (Р5): одна форма вместо разбора, запуск делает наша команда бесплатно,
+ * связываемся в течение 24 часов (Р2). На главной теперь две кнопки (Р15):
+ * «Запустим за тебя бесплатно» ведёт сюда, «Настрою сам» — на регистрацию.
+ *
+ * 🔴 Слово «бриф» в интерфейсе не используем — только «Заявка на запуск» (Р24).
+ * 🔴 Нигде не пишем «настроим ботов в MAX» (Р26): бота в Телеграм заводим мы
+ * и передаём права, бота в MAX открывает сам клиент на своё ИП или ООО по
+ * ссылке — мы подключаем; ЮKassa — после запуска в Телеграм. Сроков
+ * запуска в днях не обещаем.
  *
  * Заявка уходит на сервер лендинга (`src/app/api/lead/route.ts`), оттуда — на
- * main-server письмом на support@. План — `docs-nyambot/PLANS/zayavka-na-razbor-sayta-28-09-2026/`.
- *
- * Шаги «Собираем ботов» и «30 дней бесплатно» дополнены пунктами из снятой
- * с главной секции «Как мы работаем» (Руслан 06.10.2026): боты в обоих
- * мессенджерах, зоны доставки, показ акций и рассылок — обещание помощи
- * с настройкой теперь живёт здесь целиком.
+ * main-server `POST /api/leads/launch-brief` и в базу.
  */
 
 export const ZAPUSK_PAGE = {
   path: LINKS.pages.zapusk,
-  metaTitle: "Бесплатный разбор сайта и запуск в MAX и Телеграм — Нямбот",
+  metaTitle: "Заявка на запуск — запустим за тебя бесплатно | Нямбот",
   metaDescription:
-    "Пришли сайт заведения — разберём меню, доставку и акции и соберём ботов в MAX и Телеграм. 30 дней бесплатно, ответим в течение рабочего дня",
-  heading: "Сами запустим твоё заведение в MAX и Телеграм",
-  lead: "Оставь заявку: разберём меню, доставку и акции и покажем, что будет у тебя в ботах. Бесплатно и без звонков.",
-  stepsTitle: "Как это устроено",
-  steps: [
-    {
-      title: "Оставляешь заявку",
-      text: "Название, город и как с тобой удобнее связаться. Сайт или страницу заведения — если есть.",
-    },
-    {
-      title: "Разбираем заведение",
-      text: "Меню и фото, доставку, акции и бизнес-ланчи, кассу и оплату. Присылаем, что возьмём сами и о чём спросить.",
-    },
-    {
-      title: "Регистрируешься",
-      text: "Пара минут: по почте, карта не нужна. В кабинете СРМ появятся твои боты, меню и заказы.",
-      /** Ссылкой прямо в плитке: без неё было непонятно, где это сделать */
-      link: { label: "Зарегистрироваться", href: LINKS.crmRegister },
-    },
-    {
-      title: "Собираем ботов",
-      text: "Подключаем ботов в MAX и Телеграм, наполняем меню твоими фото, настраиваем зоны доставки и акции; связываем с iiko или R-Keeper и приёмом оплаты.",
-    },
-    {
-      title: "Проверяем запуск",
-      text: "Перед приходом гостей проверяем все настройки: подтверждаем запуск или подсказываем, что донастроить.",
-    },
-    {
-      title: "30 дней бесплатно",
-      text: "Смотришь на живых заказах, нужен ли канал. Покажем, как вести акции и рассылки, дальше ведёшь сам — поддержка и ИИ-ассистент подскажут.",
-    },
-  ],
-  replyPromise: "Ответим в течение рабочего дня.",
-  selfServe: "Хочешь сам?",
+    "Расскажи о заведении — бесплатно настроим меню, кассу и доставку и заведём бота в Телеграм. Свяжемся в течение 24 часов",
+  label: "Заявка на запуск",
+  /** Заголовок — двумя строками (Руслан 10.10). */
+  headingLines: ["Расскажи о заведении —", "запустим за тебя бесплатно"],
+  selfServe: "Хочешь настроить сам?",
   selfServeLink: "Зарегистрироваться",
 } as const;
 
-/** Поля формы — имена совпадают с телом `POST /api/leads/site-review`. */
-export const LEAD_FIELD = {
-  VENUE: "venue",
-  CITY: "city",
-  SITE: "site",
-  NAME: "name",
-  EMAIL: "email",
-  TELEGRAM: "telegram",
-  MAX: "max",
-  COMMENT: "comment",
-} as const;
-
-export type LeadField = (typeof LEAD_FIELD)[keyof typeof LEAD_FIELD];
-
 /**
- * Вопросы с вариантами — то, от чего зависит маршрут подключения
- * (`docs-nyambot/podklyuchenie/tipy/`). Значения совпадают с
- * `config/leads/site-review-lead.config.ts` main-server.
+ * «Что будет после заявки» — под формой, шесть шагов текстом Ф0 (Руслан
+ * 10.10: «распиши подробнее, как в первый раз»). Правило ботов (Р26):
+ * Телеграм — мы, MAX — клиент сам по ссылке.
  */
-export const LEAD_CHOICE = {
-  POS: "pos",
-  OUTLETS: "outlets",
-  PAYMENT: "payment",
-} as const;
-
-export type LeadChoice = (typeof LEAD_CHOICE)[keyof typeof LEAD_CHOICE];
-
-export const LEAD_CHOICE_QUESTIONS: ReadonlyArray<{
-  name: LeadChoice;
-  title: string;
-  options: ReadonlyArray<{ value: string; label: string }>;
-}> = [
-  {
-    name: LEAD_CHOICE.POS,
-    title: "Какая у тебя касса",
-    options: [
-      { value: "iiko", label: "iiko" },
-      { value: "rkeeper", label: "R-Keeper" },
-      { value: "other", label: "Другая" },
-      { value: "none", label: "Нет кассы" },
-      { value: "unknown", label: "Не знаю" },
-    ],
-  },
-  {
-    name: LEAD_CHOICE.OUTLETS,
-    title: "Сколько точек",
-    options: [
-      { value: "one", label: "Одна" },
-      { value: "few", label: "2–5" },
-      { value: "many", label: "6 и больше" },
-    ],
-  },
-  {
-    name: LEAD_CHOICE.PAYMENT,
-    title: "Как принимаешь онлайн-оплату",
-    options: [
-      { value: "yookassa", label: "ЮKassa" },
-      { value: "yandexPay", label: "Яндекс Пэй" },
-      { value: "otherBank", label: "Другой банк" },
-      { value: "none", label: "Пока не принимаю" },
-    ],
-  },
-];
-
-/** Что у заведения уже есть — флажками, можно несколько. */
-export const LEAD_HAVE_QUESTION = {
-  title: "Что уже есть — можно несколько",
-  options: [
-    { value: "telegramBot", label: "Свой бот в Телеграм" },
-    { value: "orderService", label: "Другой сервис заказов" },
-    { value: "app", label: "Своё приложение" },
-    { value: "nothing", label: "Пока ничего" },
+export const ZAPUSK_AFTER = {
+  title: "Что будет после заявки",
+  /** Отметка у пройденного шага — после отправки отмечен первый. */
+  doneMark: "✓",
+  /** Для экранного диктора: шаг пройден. */
+  doneLabel: " (сделано)",
+  steps: [
+    {
+      title: "Сразу",
+      text: "письмо «Заявка у нас» на почту, если ты её указал.",
+    },
+    {
+      title: "В течение 24 часов",
+      text: "свяжемся там, где тебе удобно: уточним, чего не хватает, и скажем, сколько займёт запуск — это зависит от кассы и меню.",
+    },
+    {
+      title: "Настраиваем мы",
+      text: "кабинет, точки, меню, кассу и доставку; заводим бота в Телеграм и проверяем тестовыми заказами. Пробный период в это время не тратится.",
+    },
+    {
+      title: "Передаём тебе",
+      text: "придёт письмо: задаёшь пароль, принимаешь условия и входишь в кабинет; права на бота в Телеграм передаём тебе. С этого дня — 30 дней бесплатно, все функции.",
+    },
+    {
+      title: "MAX и онлайн-оплата",
+      text: "бота в MAX открываешь ты сам на своё ИП или ООО по ссылке (business.max.ru) — мы его подключим. Платёжную систему для онлайн-оплаты подключаем после запуска в Телеграм: для проверки магазина нужен работающий бот.",
+    },
+    {
+      title: "Дальше",
+      text: "оплата по тарифу, без привязки карты и автосписаний. Несколько точек — договоримся об условиях под твою сеть.",
+    },
   ],
 } as const;
 
-export const LEAD_FORM_TEXT = {
-  title: "Заявка на бесплатный разбор",
-  venueLabel: "Название заведения",
-  venueHint: "например, Ромашка",
-  cityLabel: "Город",
-  cityHint: "например, Казань",
-  siteLabel: "Сайт или страница заведения",
-  siteHint: "сайт, ВКонтакте или Телеграм-канал",
-  nameLabel: "Как тебя зовут",
-  nameHint: "Имя",
-  contactsTitle: "Как с тобой связаться — выбери удобное, можно несколько",
-  emailLabel: "Почта",
-  emailHint: "name@mail.ru",
-  telegramLabel: "Телеграм",
-  telegramHint: "ник или номер телефона",
-  maxLabel: "MAX",
-  maxHint: "номер телефона",
-  optionalTitle: "Необязательно, но ускорит разбор",
-  commentLabel: "Комментарий",
-  commentHint:
-    "Всё, что поможет разбору — например, к какому сервису сейчас подключён бот",
-  consentBefore: "Согласен на обработку персональных данных по ",
-  consentLink: "политике",
-  submit: "Получить разбор",
+/**
+ * Канал связи: одно поле и переключатель. MAX — раньше
+ * Телеграма, как везде в продукте.
+ */
+export const BRIEF_CONTACT_CHANNEL = {
+  PHONE: "phone",
+  MAX: "max",
+  TELEGRAM: "telegram",
+} as const;
+
+export type BriefContactChannel =
+  (typeof BRIEF_CONTACT_CHANNEL)[keyof typeof BRIEF_CONTACT_CHANNEL];
+
+/** В какое поле заявки ложится контакт выбранного канала. */
+export const BRIEF_CONTACT_CHANNEL_FIELD = {
+  [BRIEF_CONTACT_CHANNEL.PHONE]: BRIEF_FIELD.PHONE,
+  [BRIEF_CONTACT_CHANNEL.MAX]: BRIEF_FIELD.MAX,
+  [BRIEF_CONTACT_CHANNEL.TELEGRAM]: BRIEF_FIELD.TELEGRAM,
+} as const satisfies Record<BriefContactChannel, BriefTextInputField>;
+
+/**
+ * Тексты формы. Форма — только основное (Руслан 10.10): детали выясняем в
+ * диалоге, остальное оператор заполняет в карточке админки.
+ */
+export const BRIEF_FORM_TEXT = {
+  /** Одно поле контакта и переключатель канала. */
+  contactLabel: "Как с тобой связаться",
+  /** Метка обязательного поля рядом с подписью. */
+  requiredMark: "*",
+  draftRestored: "Продолжаем с того места, где ты остановился",
+  draftReset: "Начать заново",
+  submit: "Отправить заявку",
   sending: "Отправляем…",
+  replyPromise: "Свяжемся в течение 24 часов",
   successTitle: "Спасибо!",
-  successText: "Заявка у нас — разберём сайт и ответим в течение рабочего дня.",
+  successText: "Заявка у нас — свяжемся в течение 24 часов",
+  consentBefore: "Даю согласие на обработку персональных данных на условиях ",
+  consentLink: "Согласия",
+  consentMiddle: " и ",
+  consentPolicyLink: "Политики обработки персональных данных",
   errorBefore:
     "Не получилось отправить. Попробуй ещё раз или напиши нам в Телеграм: ",
   errorSupport: "@nyambot_support",
   rateLimited: "Слишком много заявок подряд — попробуй через минуту",
 } as const;
 
+type InputCopy = {
+  label: string;
+  /** Пример в пустом поле. */
+  hint?: string;
+};
+
+export const BRIEF_INPUT_TEXT: Record<BriefTextInputField, InputCopy> = {
+  [BRIEF_FIELD.NAME]: { label: "Как тебя зовут", hint: "Имя" },
+  [BRIEF_FIELD.EMAIL]: { label: "Почта", hint: "name@mail.ru" },
+  [BRIEF_FIELD.PHONE]: { label: "Телефон", hint: "+7 (999) 123-45-67" },
+  [BRIEF_FIELD.MAX]: { label: "MAX", hint: "номер или ссылка" },
+  [BRIEF_FIELD.TELEGRAM]: {
+    label: "Телеграм",
+    hint: "ник или номер телефона",
+  },
+  [BRIEF_FIELD.VENUE]: { label: "Название заведения", hint: "Название" },
+  [BRIEF_FIELD.SITE]: {
+    label: "Сайт или страница заведения",
+    hint: "Сайт, группа, канал",
+  },
+  [BRIEF_FIELD.OUTLETS_TOTAL]: { label: "Сколько точек", hint: "2–5" },
+  [BRIEF_FIELD.COMMENT]: {
+    label: "Комментарий",
+    hint: "Если хочешь что-то добавить",
+  },
+};
+
+type Option<TValue extends string> = { value: TValue; label: string };
+
+/** Вопросы с одним ответом — значения ровно enum main-server. */
+export const BRIEF_CHOICE_QUESTION: {
+  [TField in BriefChoiceField]: {
+    label: string;
+    options: ReadonlyArray<Option<BriefChoiceValue<TField>>>;
+  };
+} = {
+  [BRIEF_FIELD.POS]: {
+    label: "Какая у тебя касса",
+    options: [
+      { value: BRIEF_POS.IIKO, label: "iiko" },
+      { value: BRIEF_POS.RKEEPER, label: "R-Keeper" },
+      { value: BRIEF_POS.OTHER, label: "Другая" },
+      { value: BRIEF_POS.NONE, label: "Нет кассы" },
+      { value: BRIEF_POS.UNKNOWN, label: "Не знаю" },
+    ],
+  },
+  [BRIEF_FIELD.ONLINE_PAYMENT]: {
+    label: "Платёжная система",
+    options: [
+      { value: BRIEF_ONLINE_PAYMENT.YOOKASSA, label: "ЮKassa" },
+      { value: BRIEF_ONLINE_PAYMENT.YANDEX_PAY, label: "Яндекс Пэй" },
+      { value: BRIEF_ONLINE_PAYMENT.OTHER_BANK, label: "Другой банк" },
+      { value: BRIEF_ONLINE_PAYMENT.NONE, label: "Пока нет" },
+    ],
+  },
+};
+
 /** Над серой кнопкой — первое, чего не хватает (правило «серая кнопка говорит, что сделать»). */
-export const LEAD_MISSING_TEXT = {
-  venue: "Укажи название заведения",
-  city: "Укажи город",
-  name: "Напиши, как тебя зовут",
-  contact: "Оставь хотя бы один способ связи",
-  consent: "Отметь согласие на обработку данных",
+export const BRIEF_MISSING_TEXT: Record<BriefMissing, string> = {
+  [BRIEF_MISSING.NAME]: "Напиши, как тебя зовут",
+  [BRIEF_MISSING.CONTACT]: "Оставь телефон, MAX или Телеграм",
+  [BRIEF_MISSING.VENUE]: "Укажи название заведения",
+  [BRIEF_MISSING.POS]: "Выбери кассу — или «Не знаю»",
+  [BRIEF_MISSING.CONSENT]: "Отметь согласие на обработку данных",
+};
+
+/** Где показать ошибку: под полем, под полем контакта или у галочки. */
+export const BRIEF_ERROR_TARGET = {
+  NAME: "name",
+  EMAIL: "email",
+  CONTACT: "contact",
+  PHONE: "phone",
+  MAX: "max",
+  TELEGRAM: "telegram",
+  VENUE: "venue",
+  SITE: "site",
+  OUTLETS: "outlets",
+  POS: "pos",
+  CONSENT: "consent",
 } as const;
 
-/** Коды отказа main-server (`config/leads/site-review-lead.config.ts`). */
-export const LEAD_ERROR_CODE = {
-  INVALID_SITE: "invalid_site",
-  INVALID_EMAIL: "invalid_email",
-  INVALID_TELEGRAM: "invalid_telegram",
-  INVALID_MAX: "invalid_max",
-  RATE_LIMITED: "rate_limited",
-} as const;
+export type BriefErrorTarget =
+  (typeof BRIEF_ERROR_TARGET)[keyof typeof BRIEF_ERROR_TARGET];
 
-/** Ошибка формата — под своим полем. */
-export const LEAD_FIELD_ERROR: Partial<
-  Record<string, { field: LeadField; text: string }>
+/**
+ * Код отказа (проверка в браузере или ответ main-server) → текст под полем.
+ * Чего здесь нет, показывается общей ошибкой у кнопки.
+ */
+export const BRIEF_FIELD_ERROR: Partial<
+  Record<BriefErrorCode, { target: BriefErrorTarget; text: string }>
 > = {
-  [LEAD_ERROR_CODE.INVALID_SITE]: {
-    field: LEAD_FIELD.SITE,
-    text: "Проверь ссылку — например, mycafe.ru или vk.com/mycafe",
+  [BRIEF_ERROR.NAME_REQUIRED]: {
+    target: BRIEF_ERROR_TARGET.NAME,
+    text: "Напиши имя — без ссылок",
   },
-  [LEAD_ERROR_CODE.INVALID_EMAIL]: {
-    field: LEAD_FIELD.EMAIL,
-    text: "Проверь почту",
+  [BRIEF_ERROR.CONTACT_REQUIRED]: {
+    target: BRIEF_ERROR_TARGET.CONTACT,
+    text: BRIEF_MISSING_TEXT[BRIEF_MISSING.CONTACT],
   },
-  [LEAD_ERROR_CODE.INVALID_TELEGRAM]: {
-    field: LEAD_FIELD.TELEGRAM,
+  [BRIEF_ERROR.INVALID_PHONE]: {
+    target: BRIEF_ERROR_TARGET.PHONE,
+    text: "Проверь номер — нужно не меньше 10 цифр",
+  },
+  [BRIEF_ERROR.INVALID_TELEGRAM]: {
+    target: BRIEF_ERROR_TARGET.TELEGRAM,
     text: "Проверь ник или номер телефона",
   },
-  [LEAD_ERROR_CODE.INVALID_MAX]: {
-    field: LEAD_FIELD.MAX,
-    text: "Проверь номер телефона",
+  [BRIEF_ERROR.INVALID_MAX]: {
+    target: BRIEF_ERROR_TARGET.MAX,
+    text: "Проверь номер телефона или ссылку max.ru",
+  },
+  [BRIEF_ERROR.INVALID_EMAIL]: {
+    target: BRIEF_ERROR_TARGET.EMAIL,
+    text: "Проверь почту",
+  },
+  [BRIEF_ERROR.VENUE_REQUIRED]: {
+    target: BRIEF_ERROR_TARGET.VENUE,
+    text: BRIEF_MISSING_TEXT[BRIEF_MISSING.VENUE],
+  },
+  [BRIEF_ERROR.INVALID_SITE]: {
+    target: BRIEF_ERROR_TARGET.SITE,
+    text: "Проверь ссылку — например, mycafe.ru или vk.com/mycafe",
+  },
+  [BRIEF_ERROR.INVALID_OUTLETS]: {
+    target: BRIEF_ERROR_TARGET.OUTLETS,
+    text: "Точек — целое число от 1 до 1000",
+  },
+  [BRIEF_ERROR.POS_REQUIRED]: {
+    target: BRIEF_ERROR_TARGET.POS,
+    text: BRIEF_MISSING_TEXT[BRIEF_MISSING.POS],
+  },
+  [BRIEF_ERROR.CONSENT_REQUIRED]: {
+    target: BRIEF_ERROR_TARGET.CONSENT,
+    text: BRIEF_MISSING_TEXT[BRIEF_MISSING.CONSENT],
   },
 };
 
 /** Путь формы на сервере лендинга и заявки на main-server. */
 export const LEAD_API = {
   LANDING_ROUTE: "/api/lead",
-  MAIN_SERVER_PATH: "/api/leads/site-review",
-  /** Не короче серверного: заявка ждёт отправку письма по SMTP. */
+  MAIN_SERVER_PATH: "/api/leads/launch-brief",
+  /** Не короче серверного: заявка ждёт запись в базу и отправку писем. */
   TIMEOUT_MS: 30_000,
 } as const;

@@ -66,6 +66,9 @@ export function CtaSection() {
               ))}
             </Flex>
 
+            {/* Две дороги (Р15 плана «Заявка на запуск»): запуск нашими
+                руками или регистрация и настройка самому. Документация —
+                ссылкой под ними, третьей кнопкой она спорила бы с выбором */}
             <Flex gap={12} wrap justify="center">
               <Button
                 type="primary"
@@ -79,17 +82,28 @@ export function CtaSection() {
               <Button
                 type="default"
                 size="large"
-                href={LINKS.docs}
+                href={LINKS.crmRegister}
                 target="_blank"
+                rel="noopener noreferrer"
                 className={styles.secondaryBtn}
+                onClick={() => reachGoal("click_trial", { to: "crm" })}
               >
-                {t("cta.docs")}
+                {t("cta.self")}
               </Button>
             </Flex>
 
             <Text style={{ color: theme.colors.textTertiary, fontSize: 13 }}>
               {t("cta.hint")}
             </Text>
+
+            <a
+              href={LINKS.docs}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.docsLink}
+            >
+              {t("cta.docs")} →
+            </a>
 
             {/* Сколково, российское происхождение и 152-ФЗ — здесь, а не только
                 мелким шрифтом в подвале: для сетей это аргумент уровня цены,

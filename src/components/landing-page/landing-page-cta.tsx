@@ -6,7 +6,10 @@ import { reachGoal } from "@/config/metrika";
 import styles from "./landing-page.module.css";
 
 const CTA_TEXT = {
-  primary: "Начать бесплатно",
+  /** Две дороги, как на главной (Р15 плана «Заявка на запуск»): запуск
+   *  нашими руками или регистрация и настройка самому. */
+  primary: "Запустим за тебя бесплатно",
+  self: "Настрою сам",
   /** MAX стоит первым везде в продукте — здесь тоже. */
   demoMax: "Демо в MAX",
   demoTelegram: "Демо в Телеграм",
@@ -14,7 +17,7 @@ const CTA_TEXT = {
    *  один запрос, а тарифы, возможности и вопросы живут на главной. */
   home: "Все возможности Нямбота",
   trial:
-    "30 дней бесплатно · нужна только почта · без карты и звонка менеджера",
+    "30 дней бесплатно · нужна только почта · без карты и звонка менеджера",
 } as const;
 
 /** Кнопки посадочной страницы: те же цели Метрики, что на главной, — иначе
@@ -30,6 +33,15 @@ export function LandingPageCta() {
         >
           {CTA_TEXT.primary}
         </Link>
+        <a
+          href={LINKS.crmRegister}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.secondaryBtn}
+          onClick={() => reachGoal("click_trial", { to: "crm" })}
+        >
+          {CTA_TEXT.self}
+        </a>
         <a
           href={LINKS.demo.fromLanding.max}
           target="_blank"

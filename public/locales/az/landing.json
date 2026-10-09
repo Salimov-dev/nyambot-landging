@@ -14,12 +14,13 @@
   "hero": {
     "title": "Sifarişlər və yemək çatdırılması <em>MAX&nbsp;və&nbsp;Telegram-da</em>&nbsp;— hər messencerdə bütün şəbəkəyə bir botla",
     "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
-    "cta": "Pulsuz başla",
+    "cta": "Sənin yerinə pulsuz işə salarıq",
+    "ctaSelf": "Özüm quraram",
     "ctaSecondary": "Demoya bax",
     "trial": "30 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
   },
   "freeReview": {
-    "title": "Müəssisəni pulsuz təhlil edib botlarda nə olacağını göstərəcəyik",
+    "title": "Açar təhvil işə salma — pulsuz",
     "items": [
       {
         "title": "Menyu və şəkillər",
@@ -35,8 +36,9 @@
       }
     ],
     "guarantee": "İşə salmazdan əvvəl bütün ayarları avtomatik yoxlayırıq. Qonaqları yalnız yoxlamadan sonra buraxırıq.",
-    "note": "Bir iş günü ərzində cavab veririk. Zənglərsiz və öhdəliksiz.",
-    "button": "Pulsuz təhlil al"
+    "note": "24 saat ərzində sənə rahat olan yerdə əlaqə saxlayacağıq. Öhdəliksiz.",
+    "button": "Sənin yerinə pulsuz işə salarıq",
+    "selfButton": "Özüm quraram"
   },
   "killer": {
     "label": "Əsas məqamlar",
@@ -71,7 +73,8 @@
       }
     },
     "pricingNote": "Bir tarif — bütün imkanlar məhdudiyyətsiz. Qiymətlər bu səhifədədir, «sorğu ilə» deyil",
-    "pricingCta": "Tariflərə bax"
+    "pricingCta": "Tariflərə bax",
+    "category": "Quraşdırılmalı olan ayrıca tətbiq deyil. Gəlib girilməli olan sayt deyil. Faiz alan və qonağı özündə saxlayan aqreqator deyil. Öz brendli sifariş tətbiqin — proqramlaşdırma olmadan"
   },
   "benefits": {
     "label": "İmkanlar",
@@ -154,7 +157,7 @@
     "customSubtitle": "2 nöqtədən — fərdi tarif, bizə yaz:",
     "emailCta": "Poçt",
     "includesLabel": "Tarifə daxildir",
-    "includesShort": "1 nöqtə, MAX və Telegram-da botlar — mini-tətbiq, CRM, «Komanda», loyallıq, inteqrasiyalar və dəstək",
+    "includesShort": "1 nöqtə, MAX və Telegram-da botlar — mini-tətbiq, CRM, «Komanda», loyallıq, inteqrasiyalar və dəstək. İşə salma — pulsuz",
     "switchTitle": "Başqa xidmətdən keçirsən?",
     "switchNote": "İlk 3 ay — iki dəfə ucuz",
     "switchCta": "50% endirim al"
@@ -167,28 +170,20 @@
     "moreCta": "Bütün suallar",
     "items": [
       {
+        "question": "Kassanı dəyişmək lazım gələcək?",
+        "answer": "Xeyr, kassa səninki qalır. Nyambot onu əvəz etmir və tələb etmir. iiko və ya R-Keeper varsa, inteqrasiya qoşulur və menyu, stop-siyahılar və sifarişlər avtomatik sinxronlaşır. Kassa başqadırsa və ya heç yoxdursa, Nyambot menyunu, modifikatorları, loyallığı və sifarişləri öz CRM-ində müstəqil aparır. Kassanı sonra qoşsan — məlumatlar yerində qalır"
+      },
+      {
         "question": "Hər nöqtə üçün ayrı bot lazımdırmı?",
-        "answer": "Xeyr. Hər messencerdə bir bot bütün şəbəkəyə işləyir: qonaq nöqtəni — geolokasiya ilə və ya siyahıdan — seçir və məhz o nöqtənin menyusunu, qiymətlərini və çatdırılma zonasını görür. Siz bir kanal tanıdırsınız, yeni nöqtə isə ayrı start olmadan qoşulur. Qonaq bazası, sifariş tarixçəsi və ballar bütün şəbəkə üzrə ümumi qalır"
-      },
-      {
-        "question": "Menyuya baxmaq üçün qonaq qeydiyyatdan keçməlidir?",
-        "answer": "Xeyr. Qonaq messencerdə mini-tətbiqi açır və dərhal menyuya baxır, qiymətləri görür və səbəti yığır — qeydiyyatsız, telefon nömrəsi və məkan olmadan. Telefon və ünvan yalnız sifarişi rəsmiləşdirərkən lazım olur"
-      },
-      {
-        "question": "Qonaqlar tətbiq haqqında necə biləcək?",
-        "answer": "Sənin haqqında indi necə öyrənirlərsə, elə də — sadəcə onlar sənin öz sifariş kanalına gəlirlər. Reklamdakı, sosial şəbəkələrdəki, blogerdəki və ya axtarışdakı keçid dərhal menyunu açır, heç nə quraşdırmadan. Zaldakı QR-kod ziyarəti abunəliyə çevirir, qablaşdırmadakı QR isə ilk dəfə aqreqator vasitəsilə sifariş vermiş qonağı birbaşa geri qaytarır. Ən ucuz kanal isə kassadakı cümlədir: «skan edin, növbəti gəlişinizə bonus qazanın»"
+        "answer": "Xeyr. Hər messencerdə bir bot bütün şəbəkəyə işləyir: qonaq nöqtəni — geolokasiya ilə və ya siyahıdan — seçir və məhz o nöqtənin menyusunu, qiymətlərini və çatdırılma zonasını görür. Sən bir kanalı tanıdırsan, yeni nöqtə isə ayrı start olmadan qoşulur. Qonaq bazası, sifariş tarixçəsi və ballar bütün şəbəkə üzrə ümumi qalır"
       },
       {
         "question": "Nyambot qonaq gətirir?",
-        "answer": "Nyambot — müəssisənin öz adı altında olan sifariş tətbiqidir. Biz trafik qovmuruq — sənin trafikini endiririk: reklamı, sosial şəbəkələri, blogerləri, axtarışı, lövhəni və qablaşdırmanı. Aqreqatordan fərq qonağın haradan gəlməsində deyil, sonra kimin qonağı olmasındadır: platformada sifariş verən onun qonağı olaraq qalır — hər növbəti sifariş üçün komissiya ilə, — Nyambota gələn isə müəssisənin botuna abunədir və təkrar sifarişi birbaşa verir"
-      },
-      {
-        "question": "Kassanı dəyişmək lazım gələcək?",
-        "answer": "Xeyr. Nyambot kassanı əvəz etmir və onu tələb etmir. iiko və ya R-Keeper varsa, inteqrasiya qoşulur və menyu, stop-siyahılar və sifarişlər avtomatik sinxronlaşır. Kassa başqadırsa və ya heç yoxdursa, Nyambot menyunu, modifikatorları, loyallığı və sifarişləri öz CRM-ində müstəqil aparır. Kassanı sonra qoşsan — məlumatlar yerində qalır"
+        "answer": "Xeyr, məqsəd də elə budur. Nyambot — müəssisənin öz sifariş tətbiqidir, sənin adın altında. Biz trafik qovmuruq — sənin trafikini endiririk: reklamı, sosial şəbəkələri, blogerləri, axtarışı, lövhəni və qablaşdırmanı. Aqreqatordan fərq qonağın haradan gəlməsində deyil, sonra kimin qonağı olmasındadır: platformada sifariş verən onun qonağı olaraq qalır — hər növbəti sifariş üçün 25–35% komissiya ilə, — Nyambota gələn isə müəssisənin botuna abunədir və təkrar sifarişi birbaşa verir"
       },
       {
         "question": "Hər şeyi kim quracaq?",
-        "answer": "Biz. Müəssisəni təhlil edirik, botları qoşuruq, menyunu yükləyirik, kassa və ödənişi inteqrasiya edirik, işə salmanı yoxlayırıq. Tətbiq pulsuzdur, bütün qiymətlər bu səhifədədir. Sonra hər şeyi CRM-də özün idarə edirsən, Anya və dəstək kömək edir."
+        "answer": "Biz — pulsuz. İşə salma üçün sorğu qoy: 24 saat ərzində əlaqə saxlayacağıq, kabineti, menyunu, kassanı və çatdırılmanı quracağıq, Telegram-da botu yaradacağıq və test sifarişləri ilə yoxlayacağıq. MAX-da botu isə sən özün öz fərdi sahibkarlığının və ya MMC-nin adına link üzrə açırsan — biz onu qoşacağıq. Bütün qiymətlər bu səhifədədir. Sonra hər şeyi CRM-də özün idarə edirsən, Anya və dəstək kömək edir."
       },
       {
         "question": "Qonaq müəssisəyə yaza bilərmi?",
@@ -201,13 +196,22 @@
       {
         "question": "Kassanın sifariş qəbul etməyi dayandırdığını necə bilmək olar?",
         "answer": "CRM-də bildirişləri qoş: «Profil» → «Bildirişlər». Kassa cavab verməyi dayandıran kimi Telegram və ya MAX-a mesaj gələcək, yenidən işləyəndə isə daha biri"
+      },
+      {
+        "question": "Sınaq dövrü və başlanğıcda ödəniş necə qurulub?",
+        "answer": "30 gün pulsuz, kartsız və funksiyalar kəsilmədən. Qeydiyyatdan sonra tam giriş veririk: tam CRM, «Komanda» tətbiqi, kassa və çatdırılma ilə inteqrasiyalar. Hər şeyi özün qura bilərsən və ya işə salmanı bizə həvalə edə bilərsən — bu pulsuzdur, dəstək isə hər addımda suallara cavab verir. Sınaq dövrü standart şərtlərlə keçir — bir satış nöqtəsi və iki bot; inteqrasiyalar məhdudiyyətsiz qoşulur. Şəbəkələri və böyük həcmləri ayrıca müzakirə edirik"
+      },
+      {
+        "question": "50% endirimi necə almaq olar?",
+        "answer": "İlk ödənişdən əvvəl yaz — sabitləyəcəyik. İlk 3 ay üçün endirim artıq ödənişli sifariş qəbulu və ya çatdırılma xidmətindən istifadə edənlərə verilir. Ödənişdən əvvəl bizə yaz, hansı xidmətdən istifadə etdiyini təsdiqlə — qiyməti sabitləyəcəyik və o, CRM-də «Lisenziya» bölməsində görünəcək. Endirim tarifin tam qiymətindən hesablanır, digər endirimlərlə və uzun tariflərin sərfəliliyi ilə toplanmır, üç ay isə ilk ödənişdən hesablanır — sınaq dövrü onlara daxil deyil və onlardan əvvəl gəlir"
       }
     ]
   },
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
     "subtitle": "30 gün ödənişsiz. Tam funksionallıq, tam dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
-    "button": "Pulsuz təhlil al",
+    "button": "Sənin yerinə pulsuz işə salarıq",
+    "self": "Özüm quraram",
     "docs": "Sənədləri oxuyun",
     "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Başlanğıcda 1 nöqtə və 2 bot",
     "trialFeatures": ["30 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
@@ -228,6 +232,7 @@
     "offer": "İctimai oferta",
     "cookies": "Cookies siyasəti",
     "tariffs": "Tariflər və standartlar",
+    "briefConsent": "İşə salma sorğusu üçün razılıq",
     "allRights": "Bütün hüquqlar qorunur",
     "madeInRussia": "Rusiyada hazırlanıb · məlumatlar RF-də saxlanılır · 152-FZ",
     "trademarks": "iiko, R-Keeper, ЮKassa, Yandex.Pay, Yandex.Delivery, Telegram və MAX adları və loqotipləri onların hüquq sahiblərinə məxsusdur və uyğunluğu göstərmək üçün istifadə olunub",
@@ -384,6 +389,65 @@
         "text": "Kassa, ödəniş, çatdırılma, sınaq dövrü və 50% endirim barədə iyirmi beş sual"
       }
     }
+  },
+  "whyNow": {
+    "label": "Niyə indi",
+    "title": "Qonaqlar messencerlərə köçüb",
+    "stats": [
+      {
+        "value": "85 mln",
+        "text": "hər ay MAX-a daxil olur"
+      },
+      {
+        "value": "72 mln",
+        "text": "hər gün MAX-a daxil olur"
+      },
+      {
+        "value": "75 mln",
+        "text": "hər ay Telegram-a daxil olur"
+      }
+    ],
+    "text": "Qonaq yeni tətbiqləri demək olar ki, quraşdırmır. Sayta isə hələ gəlmək lazımdır: ünvanı xatırlamaq, açmaq, daxil olmaq. Messencer isə onsuz da açıqdır, gündə onlarla dəfə, sənin botun da çat siyahısında dostlarının yanındadır. Buna görə sifariş kanalı qonağın artıq olduğu yerə köçür",
+    "outcome": "Sifariş yazışmanın olduğu yerdədir — və sifarişdən sonra qonaqla əlaqə qırılmır"
+  },
+  "compare": {
+    "label": "Müqayisə",
+    "title": "Messencerlərdə sifariş üçün digər xidmətlərdən fərqi nədir",
+    "usualLabel": "Adətən",
+    "ourLabel": "Bizdə",
+    "titles": [
+      "Hər iki messencer üçün bir sistem",
+      "Yeni nöqtə — eyni kabinetdə",
+      "Qeydiyyatsız",
+      "İşə salma pulsuzdur",
+      "Qiymətlər açıqdır"
+    ],
+    "rows": [
+      {
+        "usual": "Telegram-da ayrıca bot, MAX-da ayrıca bot: iki qonaq bazası, iki kabinet, iki hesab",
+        "our": "MAX və Telegram-dakı botlar bir sistemə qoşulub: qonaq bazası, sifariş tarixi və ballar ortaqdır"
+      },
+      {
+        "usual": "Yeni nöqtə — yeni işə salma və yeni bot",
+        "our": "Yeni nöqtə eyni kabinetdə əlavə olunur, qonaq onu menyuda seçir"
+      },
+      {
+        "usual": "Qonaq girişdə qeydiyyatdan keçir və yeməkləri görmədən telefonunu qoyur",
+        "our": "Keçidə və ya QR-koda bir toxunuş — və menyu birbaşa messencerdə açılır. Telefonu və ünvanı qonaq bir dəfə, sifarişi rəsmiləşdirərkən qoyur — sonra onlar özü doldurulur"
+      },
+      {
+        "usual": "İşə salma üçün ayrıca birdəfəlik ödəniş, əlavə işlər — xidmətin proqramçıları vasitəsilə",
+        "our": "İşə salma pulsuzdur: menyunu, qiymətləri, zonaları, ödənişi və kassanı özümüz quraşdırırıq. Sonra CRM-də proqramçısız özün idarə edirsən"
+      },
+      {
+        "usual": "Qiyməti sorğudan sonra zəngdə deyirlər",
+        "our": "Qiymətlər dərc olunub, qeydiyyat e-poçtla, 30 gün pulsuz"
+      }
+    ],
+    "outcome": "İkinci sifariş daha da sürətlidir: bot artıq çat siyahısındadır, ünvan və telefon yerindədir"
+  },
+  "trust": {
+    "line": "«Skolkovo» layihəsinin iştirakçısı · Rusiyada hazırlanıb · Qonaq məlumatları 152‑FZ-yə uyğun olaraq RF-də saxlanılır"
   },
   "contactWidget": {
     "ariaLabel": "Bizə yaz",

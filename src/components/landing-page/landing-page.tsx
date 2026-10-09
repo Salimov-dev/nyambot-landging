@@ -166,7 +166,7 @@ export function LandingPage({ content }: IProps) {
       ) : null}
 
       <div className={`${styles.main} ${styles.mainTail}`}>
-        {/* Бесплатный разбор — на каждой посадочной, как на главной: страница
+        {/* Бесплатный запуск — на каждой посадочной, как на главной: страница
             отвечает на запрос, а блок даёт следующий шаг (28.09.2026) */}
         <FreeReviewSection embedded />
 

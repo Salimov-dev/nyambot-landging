@@ -173,25 +173,41 @@
   }
 }
 
-/* «Смотреть демо» — когда фраза допечатана, кнопка один раз мягко
-   вспыхивает и возвращается к обычному виду (Руслан 06.10.2026). Один раз:
+/* «Смотреть демо» — ссылка под кнопками (Р15 плана «Заявка на запуск»).
+   Когда фраза допечатана, ссылка один раз мягко вспыхивает и возвращается к
+   обычному виду (Руслан 06.10.2026, тогда это была кнопка). Один раз:
    повторяющееся мигание утомляет. Начало — конец печати и мигания курсора */
-.secondaryBtn {
+.demoLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
   animation: demoGlow 1.4s ease-in-out 2.2s 1 both;
 }
 
-/* Рамка и цвет кнопки заданы с !important — анимация их не перебивает,
-   поэтому подсветка — кольцом тени и яркостью */
+.demoLink:hover {
+  text-decoration: underline;
+}
+
+.demoLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Подсветка ссылки — свечением текста и яркостью */
 @keyframes demoGlow {
   0%,
   100% {
-    box-shadow: none;
+    text-shadow: none;
     filter: none;
   }
   45% {
-    box-shadow:
-      0 0 0 2px var(--accent),
-      0 0 28px rgba(255, 140, 0, 0.45);
+    text-shadow: 0 0 18px rgba(255, 140, 0, 0.75);
     filter: brightness(1.35);
   }
 }
@@ -199,7 +215,7 @@
 @media (prefers-reduced-motion: reduce) {
   .typedChar,
   .typedCharLast,
-  .secondaryBtn {
+  .demoLink {
     animation: none;
   }
 }
@@ -218,7 +234,8 @@
 .ctaRow {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  /* Под кнопками — ссылка «Смотреть демо», она и держит отступ до пилюли */
+  margin-bottom: 4px;
 }
 
 /**

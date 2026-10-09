@@ -52,6 +52,18 @@ export function Footer() {
               >
                 {t("freeReview.button")}
               </Link>
+              {/* Вторая дорога (Р15 плана «Заявка на запуск»): регистрация и
+                  настройка самому */}
+              <Link
+                href={LINKS.crmRegister}
+                target="_blank"
+                className={styles.footerLink}
+                onClick={() =>
+                  reachGoal("click_trial", { to: "crm", from: "footer" })
+                }
+              >
+                {t("freeReview.selfButton")}
+              </Link>
               <Link
                 href={LINKS.crm}
                 target="_blank"
@@ -185,6 +197,12 @@ export function Footer() {
               </Link>
               <Link href={LINKS.legal.tariffs} className={styles.footerLink}>
                 {t("footer.tariffs")}
+              </Link>
+              <Link
+                href={LINKS.legal.briefConsent}
+                className={styles.footerLink}
+              >
+                {t("footer.briefConsent")}
               </Link>
             </Flex>
           </Col>

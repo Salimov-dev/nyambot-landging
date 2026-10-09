@@ -91,6 +91,19 @@
   border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
+/* Документация — ссылкой под кнопками: две кнопки — это выбор «запустите
+   меня» или «настрою сам», третья с ним спорила бы */
+.docsLink {
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.docsLink:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 56px 0;

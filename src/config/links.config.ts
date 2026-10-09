@@ -50,7 +50,7 @@ export const LINKS = {
     network: "/set-i-franshiza",
     ownChannels: "/sayt-ili-prilozhenie",
     security: "/bezopasnost",
-    /** Бесплатный разбор сайта и запуск — куда ведёт «Начать бесплатно» */
+    /** Заявка на запуск — куда ведёт «Запустим за тебя бесплатно» */
     zapusk: "/zapusk",
     /** Один QR-код на MAX и Телеграм — посадочная под рекламу */
     qrCode: "/odin-qr-kod",
@@ -68,6 +68,8 @@ export const LINKS = {
     offer: "/legal/offer",
     cookies: "/legal/cookies",
     tariffs: "/legal/tariffs",
+    /** Согласие на обработку ПДн при отправке заявки на запуск */
+    briefConsent: "/legal/brief-consent",
   },
 
   social: {

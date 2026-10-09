@@ -11,9 +11,11 @@ import styles from "./free-review-section.module.css";
 type FreeReviewItem = { title: string; text: string };
 
 /**
- * Бесплатный разбор заведения — главное предложение для новых лидов
- * (решение Руслана 28.09.2026: «не между строк, а явно и чтобы хотелось
- * воспользоваться»). Стоит сразу под первым экраном и ведёт на `/zapusk`.
+ * Бесплатный запуск — главное предложение для новых лидов (решение Руслана
+ * 28.09.2026: «не между строк, а явно и чтобы хотелось воспользоваться»;
+ * 09.10.2026 разбор сайта сменился заявкой на запуск). Стоит сразу под первым
+ * экраном: основная кнопка ведёт на `/zapusk`, вторая — «Настрою сам» — на
+ * регистрацию (Р15 плана «Заявка на запуск»).
  *
  * Своя вёрстка без кнопки antd: блок стоит на первом экране прокрутки, а
  * стили antd приезжают после первой отрисовки — кнопка вспыхивала бы.
@@ -66,6 +68,17 @@ export function FreeReviewSection({
             >
               {t("freeReview.button")}
             </Link>
+            <a
+              href={LINKS.crmRegister}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.selfButton}
+              onClick={() =>
+                reachGoal("click_trial", { to: "crm", from: "free_review" })
+              }
+            >
+              {t("freeReview.selfButton")}
+            </a>
             <p className={styles.note}>{t("freeReview.note")}</p>
           </div>
         </motion.div>

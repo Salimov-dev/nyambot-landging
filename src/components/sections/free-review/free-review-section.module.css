@@ -1,4 +1,4 @@
-/* Бесплатный разбор — акцентная карточка сразу под первым экраном: это
+/* Бесплатный запуск — акцентная карточка сразу под первым экраном: это
    предложение, а не абзац, и оно обязано читаться с первого взгляда */
 
 .section {
@@ -97,7 +97,7 @@
 
 /* Проверка перед запуском — отвечает на главный страх ресторатора перед
    новым каналом. Строкой с отметкой, а не четвёртой карточкой: это обещание
-   про запуск, а не пункт разбора (решение Руслана 28.09.2026) */
+   про запуск, а не пункт списка (решение Руслана 28.09.2026) */
 .guarantee {
   text-wrap: balance;
   display: flex;
@@ -119,7 +119,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 16px 24px;
+  /* Кнопки рядом — одна пара (Руслан 09.10: промежуток был велик) */
+  gap: 12px 8px;
   margin-top: 32px;
 }
 
@@ -158,10 +159,49 @@
   outline-offset: 3px;
 }
 
-.note {
-  margin: 0;
-  /* По центру и на телефоне (Руслан 06.10.2026) */
+/* «Настрою сам» — вторая дорога (Р15): та же высота, но без заливки, чтобы
+   главным оставался бесплатный запуск */
+.selfButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.2s var(--ease-out-quart),
+    border-color 0.2s ease;
+}
+
+.selfButton:hover,
+.selfButton:focus,
+.selfButton:active,
+.selfButton:visited {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.selfButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.selfButton:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.note {
+  margin: 0 0 0 auto;
+  /* Прижата к правому краю карточки (Руслан 09.10.2026); на телефоне — по
+     центру, см. ниже */
+  text-align: right;
   color: rgba(255, 255, 255, 0.78);
   font-size: 15px;
 }
@@ -193,9 +233,15 @@
     text-wrap: balance;
   }
 
+  .note {
+    margin: 0 auto;
+    text-align: center;
+  }
+
   /* Текст целиком в одну строку: на 390 px с отступами по 36 px он
      переносился и прижимался влево */
-  .button {
+  .button,
+  .selfButton {
     width: 100%;
     height: auto;
     min-height: 56px;

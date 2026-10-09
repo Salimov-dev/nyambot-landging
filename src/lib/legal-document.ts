@@ -15,6 +15,9 @@ export const LEGAL_DOCUMENT = {
   PRIVACY: "nyambot-personal-data-processing-policy.md",
   COOKIES: "nyambot-cookie-policy.md",
   TARIFFS: "nyambot-tariffs-and-standards.md",
+  /** Согласие на обработку ПДн при отправке заявки на запуск (план
+   *  `brif-zapuska-2026-10-09`, Р13) — галочка формы на `/zapusk`. */
+  LAUNCH_BRIEF_CONSENT: "nyambot-launch-brief-consent.md",
 } as const;
 
 export type LegalDocumentName =

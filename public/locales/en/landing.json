@@ -14,12 +14,13 @@
   "hero": {
     "title": "Orders and food delivery <em>in&nbsp;MAX&nbsp;and&nbsp;Telegram</em>&nbsp;— one bot per messenger for your whole chain",
     "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors",
-    "cta": "Start free",
+    "cta": "We'll launch it for you — free",
+    "ctaSelf": "I'll set it up myself",
     "ctaSecondary": "See demo",
     "trial": "30 days free · only an email needed · no card, no sales call"
   },
   "freeReview": {
-    "title": "We'll review your venue for free and show what your bots will look like",
+    "title": "Turnkey launch — free",
     "items": [
       {
         "title": "Menu and photos",
@@ -35,8 +36,9 @@
       }
     ],
     "guarantee": "Before launch we automatically check all settings. Guests come in only after the check.",
-    "note": "We reply within one business day. No calls, no obligations.",
-    "button": "Get a free review"
+    "note": "We'll get in touch within 24 hours wherever suits you. No obligations.",
+    "button": "We'll launch it for you — free",
+    "selfButton": "I'll set it up myself"
   },
   "killer": {
     "label": "Key points",
@@ -71,7 +73,8 @@
       }
     },
     "pricingNote": "One plan — every feature, no limits. Prices are on this page, not «on request»",
-    "pricingCta": "See pricing"
+    "pricingCta": "See pricing",
+    "category": "Not a separate app guests have to install. Not a website they have to visit. Not an aggregator that takes a cut and keeps the guest for itself. Your own branded ordering app — no development needed"
   },
   "benefits": {
     "label": "Features",
@@ -154,7 +157,7 @@
     "customSubtitle": "From 2 locations — a custom plan, write to us:",
     "emailCta": "Email",
     "includesLabel": "Included",
-    "includesShort": "1 location, bots in MAX and Telegram — mini-app, CRM, Team app, loyalty, integrations and support",
+    "includesShort": "1 location, bots in MAX and Telegram — mini-app, CRM, Team app, loyalty, integrations and support. Launch is free",
     "switchTitle": "Switching from another service?",
     "switchNote": "Your first 3 months are half price",
     "switchCta": "Get 50% off"
@@ -167,28 +170,20 @@
     "moreCta": "All questions",
     "items": [
       {
+        "question": "Will I have to replace my POS?",
+        "answer": "No, the POS stays yours. Nyambot doesn't replace it and doesn't require one. With iiko or R-Keeper you connect the integration, and the menu, stop lists and orders sync automatically. With a different POS or none at all, Nyambot runs the menu, modifiers, loyalty and orders on its own, in its own CRM. Connect a POS later — your data stays in place"
+      },
+      {
         "question": "Do I need a separate bot for each location?",
         "answer": "No. In each messenger, one bot serves the whole chain: the guest picks a location — by geolocation or from a list — and sees the menu, prices and delivery zone of exactly that location. You promote one channel, and a new location goes live without a separate launch. The guest base, order history and points stay shared across the whole chain"
       },
       {
-        "question": "Do guests have to sign up to see the menu?",
-        "answer": "No. A guest opens the mini app in the messenger and immediately browses the menu, checks prices and fills the cart — no sign-up, no phone number, no location. The phone number and address are only needed at checkout"
-      },
-      {
-        "question": "How will guests find out about the app?",
-        "answer": "The same way they find out about you today — except they land in your own ordering channel. A link from an ad, social media, a blogger or search opens your menu right away, with nothing to install. A QR code in the dining room turns a visit into a subscription, and a QR code on the packaging brings back the guest who first ordered through an aggregator. And the cheapest channel of all is a line at the counter: “scan this and get a bonus on your next visit”"
-      },
-      {
-        "question": "Do you bring guests in?",
-        "answer": "Nyambot is the venue's own ordering app, under your name. We don't drive traffic — we land yours: ads, social media, bloggers, search, your sign and your packaging. The difference from an aggregator is not where the guest came from, but whose guest they are afterwards: someone who orders on a marketplace stays its guest — with its commission on every next order — while someone who comes to Nyambot follows your venue's bot and orders again directly"
-      },
-      {
-        "question": "Will I have to replace my POS?",
-        "answer": "No. Nyambot doesn't replace your POS and doesn't require one. With iiko or R-Keeper you connect the integration, and the menu, stop lists and orders sync automatically. With a different POS or none at all, Nyambot runs the menu, modifiers, loyalty and orders on its own CRM. Connect a POS later — nothing is lost"
+        "question": "Does Nyambot bring in guests?",
+        "answer": "No — and that's the point. Nyambot is the venue's own ordering app, under your name. We don't drive traffic — we land yours: ads, social media, bloggers, search, your sign and your packaging. The difference from an aggregator is not where the guest came from, but whose guest they are afterwards: someone who orders on a marketplace stays its guest — with a 25–35% commission on every next order — while someone who comes to Nyambot follows your venue's bot and orders again directly"
       },
       {
         "question": "Who will set everything up?",
-        "answer": "We will. We review your venue, connect the bots, load the menu, link up the POS and payments, and check the launch. Onboarding is free, and all prices are on this page. After that you run everything in the CRM, with Anya and support to help."
+        "answer": "We do — for free. Leave a launch request: we'll get in touch within 24 hours, set up your account, menu, POS and delivery, create your Telegram bot and check everything with test orders. You open the MAX bot yourself, on your own sole proprietorship or LLC, via a link we send — and we'll connect it. All prices are on this page. After that you run everything in the CRM, with Anya and support to help."
       },
       {
         "question": "Can a guest message the venue?",
@@ -201,13 +196,22 @@
       {
         "question": "How do I find out that the POS has stopped accepting orders?",
         "answer": "Turn on notifications in the CRM: «Profile» → «Notifications». A message arrives in Telegram or MAX as soon as the POS stops responding, and another one when it's working again"
+      },
+      {
+        "question": "How do the trial period and payment at the start work?",
+        "answer": "30 days free, no card and no cut-down features. After sign-up you get full access: the full CRM, the Team app, POS and delivery integrations. You can set everything up yourself or leave the launch to us — it's free, and support answers your questions at every step. The trial runs on standard terms — one location and two bots; integrations connect without limits. Chains and large volumes are discussed separately"
+      },
+      {
+        "question": "How do I get 50% off?",
+        "answer": "Write to us before your first payment — we'll lock it in. The discount for the first 3 months is for those who already use a paid ordering or delivery service. Write to us before paying and confirm which service you use — we'll lock in the price, and you'll see it in the CRM under «License». The discount is calculated from the full plan price, doesn't stack with other discounts or the savings of longer plans, and the three months count from your first payment — the trial isn't part of them and comes before them"
       }
     ]
   },
   "cta": {
     "title": "Start taking orders in your own channel",
     "subtitle": "30 days free. Full features, full support. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
-    "button": "Get a free review",
+    "button": "We'll launch it for you — free",
+    "self": "I'll set it up myself",
     "docs": "Read documentation",
     "hint": "Only an email needed · No card required · 1 location and 2 bots to start",
     "trialFeatures": ["30 days free", "Full access", "No card required"]
@@ -228,6 +232,7 @@
     "offer": "Public Offer",
     "cookies": "Cookie Policy",
     "tariffs": "Plans and standards",
+    "briefConsent": "Launch request consent",
     "allRights": "All rights reserved",
     "madeInRussia": "Made in Russia · data stored in Russia · 152-FZ",
     "trademarks": "The names and logos of iiko, R-Keeper, YooKassa, Yandex Pay, Yandex Delivery, Telegram and MAX belong to their respective owners and are used to indicate compatibility",
@@ -384,6 +389,65 @@
         "text": "Twenty-five questions about the POS, payments, delivery, the trial period and the 50% discount"
       }
     }
+  },
+  "whyNow": {
+    "label": "Why now",
+    "title": "Guests have moved to messengers",
+    "stats": [
+      {
+        "value": "85M",
+        "text": "use MAX every month"
+      },
+      {
+        "value": "72M",
+        "text": "use MAX every day"
+      },
+      {
+        "value": "75M",
+        "text": "use Telegram every month"
+      }
+    ],
+    "text": "Guests hardly install new apps anymore. A website has to be visited first: remember the address, open it, sign in. But the messenger is already open, dozens of times a day, and your bot sits in the chat list right next to their friends. That's why the ordering channel is moving to where the guest already is",
+    "outcome": "The order happens right where the chats are — and the connection with the guest doesn't end after the order"
+  },
+  "compare": {
+    "label": "Comparison",
+    "title": "How this differs from other messenger ordering services",
+    "usualLabel": "Usually",
+    "ourLabel": "With us",
+    "titles": [
+      "One system for both messengers",
+      "A new location — in the same dashboard",
+      "No sign-up",
+      "Free launch",
+      "Open prices"
+    ],
+    "rows": [
+      {
+        "usual": "A separate bot in Telegram and another one in MAX: two guest bases, two dashboards, two bills",
+        "our": "Bots in MAX and Telegram are connected to one system: guest base, order history and points are shared"
+      },
+      {
+        "usual": "A new location means a new launch and a new bot",
+        "our": "A new location is added in the same dashboard, and the guest picks it in the menu"
+      },
+      {
+        "usual": "The guest signs up at the door and leaves a phone number before seeing a single dish",
+        "our": "One tap on a link or QR code — and the menu opens right in the messenger. The guest enters their phone and address once, at checkout — after that they fill in on their own"
+      },
+      {
+        "usual": "A separate one-off fee for the launch, and changes go through the service's developers",
+        "our": "The launch is free: we set up the menu, prices, zones, payments and POS ourselves. After that you run it in the CRM, no developers needed"
+      },
+      {
+        "usual": "The price is named on a call after you apply",
+        "our": "Prices are published, sign-up by email, 30 days free"
+      }
+    ],
+    "outcome": "The second order is even faster: the bot is already in the chat list, the address and phone are already there"
+  },
+  "trust": {
+    "line": "Skolkovo project participant · Made in Russia · Guest data stored in Russia under 152‑FZ"
   },
   "contactWidget": {
     "ariaLabel": "Contact us",
