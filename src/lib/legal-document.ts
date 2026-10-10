@@ -18,6 +18,10 @@ export const LEGAL_DOCUMENT = {
   /** Согласие на обработку ПДн при отправке заявки на запуск (план
    *  `brif-zapuska-2026-10-09`, Р13) — галочка формы на `/zapusk`. */
   LAUNCH_BRIEF_CONSENT: "nyambot-launch-brief-consent.md",
+  /** Согласие на обработку ПДн пользователя СРМ — отдельная галочка при
+   *  регистрации, приглашении и активации кабинета (Ф5 п. 7 плана
+   *  `brif-zapuska-2026-10-09`, вариант А). */
+  CRM_USER_CONSENT: "nyambot-crm-user-consent.md",
 } as const;
 
 export type LegalDocumentName =

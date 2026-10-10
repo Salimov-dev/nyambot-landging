@@ -70,6 +70,8 @@ export const LINKS = {
     tariffs: "/legal/tariffs",
     /** Согласие на обработку ПДн при отправке заявки на запуск */
     briefConsent: "/legal/brief-consent",
+    /** Согласие на обработку ПДн пользователя СРМ — галочка регистрации */
+    crmConsent: "/legal/crm-consent",
   },
 
   social: {

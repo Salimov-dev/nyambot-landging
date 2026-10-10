@@ -204,6 +204,9 @@ export function Footer() {
               >
                 {t("footer.briefConsent")}
               </Link>
+              <Link href={LINKS.legal.crmConsent} className={styles.footerLink}>
+                {t("footer.crmConsent")}
+              </Link>
             </Flex>
           </Col>
         </Row>
