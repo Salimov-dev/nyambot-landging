@@ -10,6 +10,7 @@ import { FreeReviewSection } from "@/components/sections/free-review/free-review
 import { WhyNowSection } from "@/components/sections/why-now/why-now-section";
 import { CompareSection } from "@/components/sections/compare/compare-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
+import { LoyaltySection } from "@/components/sections/loyalty/loyalty-section";
 import { ForWhomSection } from "@/components/sections/for-whom/for-whom-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
@@ -70,6 +71,9 @@ export default function LandingPage() {
         {/* Интеграции — сразу после форматов (Руслан 06.10.2026): «подойдёт ли
             к моей кассе» спрашивают вместе с «подойдёт ли моему формату» */}
         <IntegrationsSection />
+        {/* Лояльность — сразу под интеграциями (Руслан 11.10.2026): узнав
+            свою кассу, спрашивают, подойдёт ли и своя программа лояльности */}
+        <LoyaltySection />
         <GuestsPathSection />
         {/* «Команда» — между гостями и возможностями (Руслан 06.10.2026): гость
             пришёл — дальше заказ ведёт смена */}

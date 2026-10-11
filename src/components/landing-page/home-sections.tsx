@@ -4,6 +4,7 @@ import { CompareSection } from "@/components/sections/compare/compare-section";
 import { TryDemoSection } from "@/components/sections/try-demo/try-demo-section";
 import { KomandaSection } from "@/components/sections/komanda/komanda-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
+import { LoyaltySection } from "@/components/sections/loyalty/loyalty-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
 import styles from "./landing-page.module.css";
@@ -17,6 +18,7 @@ const SECTIONS: Record<IHomeSection, () => React.ReactElement | null> = {
   [HOME_SECTION.DEMO]: TryDemoSection,
   [HOME_SECTION.KOMANDA]: KomandaSection,
   [HOME_SECTION.INTEGRATIONS]: IntegrationsSection,
+  [HOME_SECTION.LOYALTY]: LoyaltySection,
   [HOME_SECTION.FEATURES]: FeaturesSection,
   [HOME_SECTION.CRM]: CrmDemoSection,
 };
