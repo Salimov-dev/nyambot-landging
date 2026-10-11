@@ -5,8 +5,9 @@ import { LANDING_PAGES } from "@/config/landing-pages.config";
 
 /**
  * Сторож секции «Лояльность» (план «Лендинг: блок Лояльность», 11.10.2026).
- * Секция заведена только в ru: в других языках её ключей нет, и секция там
- * не рисуется. r_k Friends — фактом: без «скоро» и без ссылки на гайд по Friends.
+ * Секция переведена на все языки лендинга (11.10.2026): язык без её ключей
+ * секцию молча не покажет — сторож ловит это раньше. r_k Friends — фактом:
+ * без «скоро» и без ссылки на гайд по Friends.
  */
 const LOCALES_DIR = resolve(import.meta.dirname, "../../../../public/locales");
 const RU = "ru";
@@ -37,29 +38,42 @@ const languages = readdirSync(LOCALES_DIR, { withFileTypes: true })
   .map((entry) => entry.name);
 
 describe("секция «Лояльность» в локалях", () => {
-  it("в ru есть заголовок и все три карточки", () => {
-    const block = readLanding(RU)[SECTION] as {
-      title: string;
-      items: Record<string, { name: string; note: string }>;
-    };
-    expect(block.title).toBeTruthy();
-    for (const id of CARD_IDS) {
-      expect(block.items[id]?.name).toBeTruthy();
-      expect(block.items[id]?.note).toBeTruthy();
-    }
+  it("языки найдены", () => {
+    expect(languages).toContain(RU);
+    expect(languages.length).toBeGreaterThan(1);
   });
 
-  it.each(languages.filter((lng) => lng !== RU))(
-    "%s — ключей секции нет, секция не рисуется",
-    (lng) => {
-      expect(readLanding(lng)[SECTION]).toBeUndefined();
-    },
-  );
+  it.each(languages)("%s — заголовок, ссылка и все три карточки", (lng) => {
+    const block = readLanding(lng)[SECTION] as
+      | {
+          title: string;
+          subtitle: string;
+          badgeNew: string;
+          more: string;
+          items: Record<string, { name: string; note: string }>;
+        }
+      | undefined;
+    expect(block?.title).toBeTruthy();
+    expect(block?.subtitle).toBeTruthy();
+    expect(block?.badgeNew).toBeTruthy();
+    expect(block?.more).toBeTruthy();
+    for (const id of CARD_IDS) {
+      expect(block?.items[id]?.name).toBeTruthy();
+      expect(block?.items[id]?.note).toBeTruthy();
+    }
+    // Названия программ касс не переводятся
+    expect(block?.items.iikoCard?.name).toBe("iikoCard");
+    expect(block?.items.rkFriends?.name).toBe(FRIENDS);
+  });
 
-  it("тексты секции — без «скоро» и без ссылки на гайд по Friends", () => {
-    const text = JSON.stringify(readLanding(RU)[SECTION]);
-    expect(text).not.toMatch(SOON);
-    expect(text).not.toMatch(FRIENDS_GUIDE);
+  it.each(languages)("%s — без ссылки на гайд по Friends", (lng) => {
+    expect(JSON.stringify(readLanding(lng)[SECTION])).not.toMatch(
+      FRIENDS_GUIDE,
+    );
+  });
+
+  it("ru — тексты секции без «скоро»", () => {
+    expect(JSON.stringify(readLanding(RU)[SECTION])).not.toMatch(SOON);
   });
 });
 

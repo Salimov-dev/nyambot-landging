@@ -15,7 +15,6 @@
     "title": "Sifarişlər və yemək çatdırılması <em>MAX&nbsp;və&nbsp;Telegram-da</em>&nbsp;— hər messencerdə bütün şəbəkəyə bir botla",
     "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
     "cta": "Sənin yerinə pulsuz işə salarıq",
-    "ctaSelf": "Özüm quraram",
     "ctaSecondary": "Demoya bax",
     "trial": "30 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
   },
@@ -60,8 +59,8 @@
         "text": "iiko və ya R-Keeper var — menyu və stop-siyahılar kassadan gəlir, qonağın tərkibə etdiyi dəyişikliklər isə çekə çatır. Kassa yoxdur və ya başqadır — Nyambot menyunu və loyallığı özü aparır"
       },
       "loyalty": {
-        "title": "Kassandakı aksiyalar — birbaşa messencerdə",
-        "text": "iiko-nu iikoCard ilə qoşdun — kassanın endirimləri, bonusları, hədiyyələri və promokodları birbaşa qonaqda işləyir. Proqram bütün şəbəkə üçün birdir: qonaq istənilən nöqtədə yığır və xərcləyir"
+        "title": "Aksiyalar və ballar daxildir",
+        "text": "NyamClub-ın endirimləri, hədiyyələri, promokodları və balları dərhal işləyir, kassa ilə isə — iikoCard və ya r_k Friends"
       },
       "money": {
         "title": "Sifarişin pulu — birbaşa sənə, geri qaytarma — yalnız sənin qərarınla",
@@ -253,6 +252,7 @@
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
+      "rkDelivery": "r_k Delivery",
       "yookassa": "YuKassa",
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Dostavka"
@@ -267,6 +267,27 @@
       "rkeeperOrder": "Qonaq promokod və ballarla sifariş verdi",
       "rkeeperArrived": "Sifariş R-Keeper-də özü göründü",
       "rkeeperCheck": "Endirimlər, ballar, hədiyyə və ödəniş — çekdə sətirlərlə"
+    }
+  },
+  "loyaltyBlock": {
+    "label": "Loyallıq",
+    "title": "Loyallıq — sənin, ya da bizim",
+    "subtitle": "Bonuslar, aksiyalar və promokodlar birbaşa MAX və Telegram-dakı sifarişdə işləyir. Kassada proqram var — onu qoşarıq, yoxdursa — NyamClub-ı işə salarıq",
+    "badgeNew": "Yeni",
+    "more": "Loyallıq haqqında ətraflı",
+    "items": {
+      "nyambot": {
+        "name": "NyamClub",
+        "note": "Kassasız və R-Keeper ilə. Abunəyə daxildir"
+      },
+      "iikoCard": {
+        "name": "iikoCard",
+        "note": "iiko üçün: proqramının endirimləri, bonusları və promokodları"
+      },
+      "rkFriends": {
+        "name": "r_k Friends",
+        "note": "R-Keeper üçün: Friends bonusları, aksiyaları və promokodları"
+      }
     }
   },
   "media": {
@@ -351,7 +372,7 @@
       },
       "loyalty": {
         "title": "Loyallıq",
-        "text": "Ballar, saatlara görə aksiyalar, promokodlar, hədiyyələr və günün təklifi — sifariş tətbiqində"
+        "text": "NyamClub, iikoCard və ya r_k Friends: ballar, aksiyalar, promokodlar və hədiyyələr — birbaşa sifariş tətbiqində"
       },
       "iiko": {
         "title": "iiko ilə inteqrasiya",
@@ -359,11 +380,11 @@
       },
       "rkeeper": {
         "title": "R-Keeper ilə inteqrasiya",
-        "text": "Menyu və stop-listlər kassadan, öz kuryerlərin və ya kassanın çatdırılma modulu, Nyambot endirimləri çekdə"
+        "text": "Menyu və stop-listlər kassadan, öz kuryerlərin və ya r_k Delivery, NyamClub çekdə və ya r_k Friends"
       },
       "integrations": {
         "title": "Bütün inteqrasiyalar",
-        "text": "Kassa, ödəniş və çatdırılma: iiko, R-Keeper, YuKassa, Yandex.Pay, Yandex.Dostavka"
+        "text": "Kassa, loyallıq, ödəniş və çatdırılma: iiko, R-Keeper, r_k Delivery, iikoCard, r_k Friends, YuKassa, Yandex.Pay, Yandex.Dostavka"
       },
       "network": {
         "title": "Şəbəkə və françayzinq",

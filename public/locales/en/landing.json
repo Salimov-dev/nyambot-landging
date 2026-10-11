@@ -15,7 +15,6 @@
     "title": "Orders and food delivery <em>in&nbsp;MAX&nbsp;and&nbsp;Telegram</em>&nbsp;— one bot per messenger for your whole chain",
     "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors",
     "cta": "We'll launch it for you — free",
-    "ctaSelf": "I'll set it up myself",
     "ctaSecondary": "See demo",
     "trial": "30 days free · only an email needed · no card, no sales call"
   },
@@ -60,8 +59,8 @@
         "text": "Got iiko or R-Keeper — menu and stop lists come from the till, and the guest's changes to a dish reach the receipt. No till or a different one — Nyambot runs the menu and loyalty on its own"
       },
       "loyalty": {
-        "title": "Your till's promos — right in the messenger",
-        "text": "Connect iiko with iikoCard and the till's discounts, bonuses, gifts and promo codes work right for the guest. One programme across the whole chain: earn and spend at any venue"
+        "title": "Promos and points included",
+        "text": "NyamClub discounts, gifts, promo codes and points work from day one, and with a POS — iikoCard or r_k Friends"
       },
       "money": {
         "title": "Order money goes straight to you — refunds only by your call",
@@ -253,6 +252,7 @@
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
+      "rkDelivery": "r_k Delivery",
       "yookassa": "YooKassa",
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Delivery"
@@ -267,6 +267,27 @@
       "rkeeperOrder": "The guest placed an order with a promo code and points",
       "rkeeperArrived": "The order showed up in R-Keeper on its own",
       "rkeeperCheck": "Discounts, points, a gift and payment — as receipt lines"
+    }
+  },
+  "loyaltyBlock": {
+    "label": "Loyalty",
+    "title": "Loyalty — yours or ours",
+    "subtitle": "Bonuses, promos and promo codes work right in the order in MAX and Telegram. Have a programme in your POS — we'll connect it; if not, we'll switch on NyamClub",
+    "badgeNew": "New",
+    "more": "More about loyalty",
+    "items": {
+      "nyambot": {
+        "name": "NyamClub",
+        "note": "Without a POS and with R-Keeper. Included in the subscription"
+      },
+      "iikoCard": {
+        "name": "iikoCard",
+        "note": "For iiko: your programme's discounts, bonuses and promo codes"
+      },
+      "rkFriends": {
+        "name": "r_k Friends",
+        "note": "For R-Keeper: Friends bonuses, promos and promo codes"
+      }
     }
   },
   "media": {
@@ -351,7 +372,7 @@
       },
       "loyalty": {
         "title": "Loyalty",
-        "text": "Points, time-based promos, promo codes, gifts and dish of the day — right in the ordering app"
+        "text": "NyamClub, iikoCard or r_k Friends: points, promos, promo codes and gifts — right in the ordering app"
       },
       "iiko": {
         "title": "iiko integration",
@@ -359,11 +380,11 @@
       },
       "rkeeper": {
         "title": "R-Keeper integration",
-        "text": "Menu and stop lists from the POS, your couriers or its delivery module, Nyambot discounts on the receipt"
+        "text": "Menu and stop lists from the POS, your couriers or r_k Delivery, NyamClub on the receipt or r_k Friends"
       },
       "integrations": {
         "title": "All integrations",
-        "text": "POS, payments and delivery: iiko, R-Keeper, YooKassa, Yandex.Pay, Yandex.Delivery"
+        "text": "POS, loyalty, payments and delivery: iiko, R-Keeper, r_k Delivery, iikoCard, r_k Friends, YooKassa, Yandex.Pay, Yandex.Delivery"
       },
       "network": {
         "title": "Chains and franchises",

@@ -95,12 +95,12 @@ export function HeroSection() {
               <Text className={styles.subtitle}>{t("hero.subtitle")}</Text>
             </div>
 
-            {/* Две дороги (Р15 плана «Заявка на запуск»): основная — запуск
-                нашими руками на `/zapusk`, вторая — регистрация и настройка
-                самому. Демо — ссылкой под кнопками, третьей кнопкой оно
-                спорило бы с выбором */}
+            {/* Основная дорога — запуск нашими руками на `/zapusk`, вторая
+                кнопка — демо (Руслан 11.10.2026: «Настрою сам» на первом
+                экране смысла не несёт — она стоит в блоке «Запуск под ключ»
+                сразу под хиро, а живое демо убеждает раньше выбора) */}
             <div>
-              <Flex gap={8} wrap className={styles.ctaRow}>
+              <Flex gap={12} wrap className={styles.ctaRow}>
                 <Button
                   type="primary"
                   size="large"
@@ -113,22 +113,13 @@ export function HeroSection() {
                 <Button
                   type="default"
                   size="large"
-                  href={LINKS.crmRegister}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#try-demo"
                   className={styles.secondaryBtn}
-                  onClick={() => reachGoal("click_trial", { to: "crm" })}
+                  onClick={() => reachGoal("click_features")}
                 >
-                  {t("hero.ctaSelf")}
+                  {t("hero.ctaSecondary")}
                 </Button>
               </Flex>
-              <a
-                href="#try-demo"
-                className={styles.demoLink}
-                onClick={() => reachGoal("click_features")}
-              >
-                {t("hero.ctaSecondary")} →
-              </a>
             </div>
 
             <div>

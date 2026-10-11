@@ -28,6 +28,7 @@ const isVideoCash = (id: string): id is VideoCash => VIDEO_CASHES.has(id);
 const LOGOS = [
   { id: "iiko", src: "/images/integrations/iiko.png" },
   { id: "rkeeper", src: "/images/integrations/r-keeper.png" },
+  { id: "rkDelivery", src: "/images/integrations/r-delivery.png" },
   { id: "yookassa", src: "/images/integrations/ukassa.png" },
   { id: "yandexPay", src: "/images/integrations/y-pay.png" },
   { id: "yandexDelivery", src: "/images/integrations/y-delivery.png" },

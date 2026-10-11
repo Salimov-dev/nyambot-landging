@@ -14,7 +14,8 @@ import styles from "./loyalty-section.module.css";
 
 const { Title, Text } = Typography;
 
-/** Секция заведена только в русской локали — без своего заголовка в языке её нет */
+/** Секция переведена на все языки (11.10.2026); язык без своего заголовка
+ *  её не покажет — по-русски она на чужой странице не вылезет */
 const SECTION_KEY = "loyaltyBlock.title";
 
 const LOYALTY_CARD = {
