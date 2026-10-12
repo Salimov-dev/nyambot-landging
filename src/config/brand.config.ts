@@ -8,7 +8,7 @@ export const BRAND_CONFIG = {
   supportEmail: "support@nyambot.ru",
   supportTelegram: "https://t.me/nyambot_support",
   /** Поддержка в MAX: номер — подпись, ссылка на профиль — куда ведёт кнопка. */
-  supportMaxPhoneDisplay: "+7 931 530-25-07",
+  supportMaxPhoneDisplay: "+7 958 178-19-19",
   /** Ник поддержки в Телеграм — подпись в кнопке связи. */
   supportTelegramHandle: "@nyambot_support",
 } as const;

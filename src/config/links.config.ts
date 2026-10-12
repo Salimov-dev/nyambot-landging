@@ -21,8 +21,8 @@ export const LINKS = {
   support: {
     telegram: "https://t.me/nyambot_support",
     email: "mailto:support@nyambot.ru",
-    /** Профиль поддержки в MAX (ссылка «Поделиться» из приложения, Руслан 28.09.2026). */
-    max: "https://max.ru/u/f9LHodD0cOIEY0GDPfsGpWhJb0oMXHpqNWIh2EfxTGCwHvC648GiAWyHL0A",
+    /** Профиль поддержки в MAX (ссылка «Поделиться» из приложения; аккаунт ООО — Руслан 12.10.2026). */
+    max: "https://max.ru/u/f9LHodD0cOKBz2QXi9CSIAU7TfoRLFn7tBg1EtSL9PkMlcIb5Bqe4Fu8U4k",
   },
 
   demo: {
