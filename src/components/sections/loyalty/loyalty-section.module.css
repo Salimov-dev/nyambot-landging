@@ -158,12 +158,47 @@
     margin-bottom: 32px;
   }
 
-  /* На телефоне карточки столбиком во всю ширину — по одной на строку */
+  /* На телефоне карточки столбиком по одной на строку — ниже и мельче, чем
+     на компьютере: три плиты по 96 px с подписями занимали весь экран */
+  .cards {
+    gap: 20px;
+  }
+
   .item {
-    width: min(100%, 320px);
+    width: min(100%, 300px);
+  }
+
+  .card {
+    height: 68px;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .markCompact {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .badge {
+    top: -9px;
+    right: -6px;
+    padding: 3px 10px;
+    font-size: 12px;
   }
 
   .note {
     min-height: 0;
+    margin-top: 8px;
+    font-size: 14px;
   }
 }

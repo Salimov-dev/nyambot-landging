@@ -401,9 +401,12 @@
 
 @media (max-width: 900px) {
   /* Обе колонки глав сливаются в одну сетку таблеток под роликом */
+  /* Таблетки ряда — одной высоты: при `start` короткая «Промокод» стояла
+     ниже соседки в две строки, и сетка рассыпалась */
   .layout {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+    align-items: stretch;
   }
 
   .phoneCol {
@@ -443,6 +446,7 @@
   }
 
   .chapter {
+    height: 100%;
     align-items: center;
     gap: 10px;
     padding: 10px 12px;
@@ -487,9 +491,32 @@
     padding: 56px 0;
   }
 
+  .chapter {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  /* На узком экране текст рядом с кодом сжимался в столбик: заголовок и
+     бейдж в три строки. Столбиком по центру: код, текст, кнопки */
+  .demo {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 14px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .demoMain {
+    align-items: center;
+  }
+
+  .demoButtons {
+    width: 100%;
+  }
+
   .demoQr img {
-    width: 104px;
-    height: 104px;
+    width: 136px;
+    height: 136px;
   }
 
   .demoTitle {
