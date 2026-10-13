@@ -62,6 +62,11 @@ export const LINKS = {
     loyalty: "/loyalnost",
   },
 
+  /** Якоря секций главной */
+  anchors: {
+    tryDemo: "#try-demo",
+  },
+
   legal: {
     privacy: "/legal/privacy",
     terms: "/legal/terms",

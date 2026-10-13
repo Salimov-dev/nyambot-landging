@@ -137,7 +137,9 @@ export type IPageScene = (typeof PAGE_SCENE)[keyof typeof PAGE_SCENE];
 export const HOME_SECTION = {
   KILLER: "killer",
   COMPARE: "compare",
-  DEMO: "demo",
+  /** «Витрина»: ролик витрины гостя и полоса «Попробуй сам» (QR и кнопки
+   *  демо) — заменила прежнюю секцию демо (Руслан 13.10.2026) */
+  VITRINA: "vitrina",
   KOMANDA: "komanda",
   INTEGRATIONS: "integrations",
   LOYALTY: "loyalty",
@@ -232,7 +234,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       HOME_SECTION.LOYALTY,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
     ],
     label: "Интеграция с iiko",
     metaTitle: "Нямбот и iiko — заказы из MAX и Телеграм прямо в кассу",
@@ -324,7 +326,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       HOME_SECTION.LOYALTY,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
     ],
     label: "Интеграция с R-Keeper",
     metaTitle: "Нямбот и R-Keeper — заказы из MAX и Телеграм в кассу",
@@ -456,7 +458,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       HOME_SECTION.LOYALTY,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
     ],
     label: "Интеграции",
     metaTitle:
@@ -550,7 +552,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     homeSections: [
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
       HOME_SECTION.KOMANDA,
       HOME_SECTION.CRM,
     ],
@@ -661,7 +663,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       HOME_SECTION.INTEGRATIONS,
       HOME_SECTION.LOYALTY,
       HOME_SECTION.COMPARE,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
     ],
     label: "Возможности",
     metaTitle:
@@ -980,7 +982,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     homeSections: [
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
     ],
     label: "Сеть и франшиза",
     metaTitle: "Приложение заказа для сети кафе и франшизы — Нямбот",
@@ -1055,7 +1057,11 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
   [LANDING_PAGE.SAYT_ILI_PRILOZHENIE]: {
     path: "/sayt-ili-prilozhenie",
     visual: PAGE_VISUAL.DEMO,
-    homeSections: [HOME_SECTION.KILLER, HOME_SECTION.COMPARE],
+    homeSections: [
+      HOME_SECTION.VITRINA,
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+    ],
     label: "Уже есть сайт",
     metaTitle:
       "Сайт, своё приложение или бот — зачем заведению канал в мессенджере",
@@ -1232,7 +1238,11 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
   [LANDING_PAGE.QR_KOD]: {
     path: LINKS.pages.qrCode,
     visual: PAGE_VISUAL.DEMO,
-    homeSections: [HOME_SECTION.KILLER, HOME_SECTION.COMPARE],
+    homeSections: [
+      HOME_SECTION.VITRINA,
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+    ],
     label: "Общий QR-код",
     metaTitle: "Один QR-код на MAX и Телеграм — гость сам выбирает мессенджер",
     metaDescription:
@@ -1347,7 +1357,11 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
   [LANDING_PAGE.BRENDIROVANIE]: {
     path: LINKS.pages.branding,
     visual: PAGE_VISUAL.DEMO,
-    homeSections: [HOME_SECTION.KILLER, HOME_SECTION.COMPARE],
+    homeSections: [
+      HOME_SECTION.VITRINA,
+      HOME_SECTION.KILLER,
+      HOME_SECTION.COMPARE,
+    ],
     label: "Брендирование",
     metaTitle:
       "Приложение заказа в цветах заведения — лого и цвета в MAX и Телеграм",
@@ -1457,7 +1471,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     homeSections: [
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
     ],
     label: "Приложение «Команда»",
     metaTitle: "Приложение «Команда» для кафе — заказы, кухня и свои курьеры",
@@ -1558,7 +1572,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       HOME_SECTION.LOYALTY,
       HOME_SECTION.FEATURES,
       HOME_SECTION.KILLER,
-      HOME_SECTION.DEMO,
+      HOME_SECTION.VITRINA,
     ],
     label: "Лояльность",
     metaTitle:

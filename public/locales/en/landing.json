@@ -124,12 +124,9 @@
     }
   },
   "tryDemo": {
-    "tag": "Demo",
     "title": "Try it right now",
-    "subtitle": "Open the demo bot in Telegram or MAX and see how a branded app looks to your guests — with the venue logo and colors",
     "noAuth": "No sign-up, no phone number",
     "tgCta": "Open in Telegram",
-    "appDemo": "Mini-app demo",
     "maxCta": "Open in MAX",
     "qrTitle": "One QR code for both messengers",
     "qrText": "Point your phone camera at it — the same choice page your guests will see opens. You print one code on packaging, in the hall and in ads instead of two.",
@@ -431,6 +428,54 @@
     ],
     "text": "Guests hardly install new apps anymore. A website has to be visited first: remember the address, open it, sign in. But the messenger is already open, dozens of times a day, and your bot sits in the chat list right next to their friends. That's why the ordering channel is moving to where the guest already is",
     "outcome": "The order happens right where the chats are — and the connection with the guest doesn't end after the order"
+  },
+  "vitrina": {
+    "label": "Storefront",
+    "title": "A storefront guests want to order from",
+    "subtitle": "This is what your guest gets: a bright, modern venue app right inside MAX and Telegram. Dish photos, a dish builder, promos, points and payment — it opens from the chat in two taps, nothing to install",
+    "chapters": {
+      "loading": {
+        "title": "Your splash screen",
+        "text": "Your logo and colors from the first second — the guest knows right away where they are"
+      },
+      "store": {
+        "title": "Choosing a venue",
+        "text": "The whole chain in one bot: the guest picks a location from the list or finds the nearest one"
+      },
+      "promo": {
+        "title": "Promos on entry",
+        "text": "Bright banners with your offers greet the guest and swipe like stories"
+      },
+      "cards": {
+        "title": "Dishes as cards",
+        "text": "Big photos, weight and ingredients, swipe between dishes like in a feed"
+      },
+      "constructor": {
+        "title": "Make it your way",
+        "text": "Remove an ingredient, add cheese or a sauce — the price updates instantly"
+      },
+      "cart": {
+        "title": "A cart that suggests",
+        "text": "How much is left to free delivery and a gift, and what to add to the order"
+      },
+      "promocode": {
+        "title": "Promo code",
+        "text": "The guest enters a code — the discount shows in the cart before checkout"
+      },
+      "delivery": {
+        "title": "Courier or pickup",
+        "text": "Address on the map, delivery ASAP or at a set time, a pickup discount"
+      },
+      "payment": {
+        "title": "Points and payment",
+        "text": "Points cover part of the order; pay in cash, by card on delivery or online"
+      },
+      "done": {
+        "title": "Order placed",
+        "text": "The guest instantly gets a message in MAX or Telegram — and then sees every status"
+      }
+    },
+    "demoQr": "One QR code for MAX and Telegram — point your phone camera or tap a button"
   },
   "compare": {
     "label": "Comparison",

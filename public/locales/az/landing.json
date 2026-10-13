@@ -124,12 +124,9 @@
     }
   },
   "tryDemo": {
-    "tag": "Demo",
     "title": "İndi sınayın",
-    "subtitle": "Telegram və ya MAX-da demo botu açın və qonaqlarınızın necə sifariş verdiyini hiss edin",
     "noAuth": "Qeydiyyatsız və telefon nömrəsi olmadan",
     "tgCta": "Telegram-da açın",
-    "appDemo": "Mini-tətbiq demosu",
     "maxCta": "MAX-da açın",
     "qrTitle": "Hər iki messencer üçün bir QR-kod",
     "qrText": "Telefonun kamerasını tut — qonaqlarının görəcəyi eyni seçim səhifəsi açılacaq. Qablaşdırmada, zalda və reklamda iki əvəzinə bir kod çap edirsən.",
@@ -431,6 +428,54 @@
     ],
     "text": "Qonaq yeni tətbiqləri demək olar ki, quraşdırmır. Sayta isə hələ gəlmək lazımdır: ünvanı xatırlamaq, açmaq, daxil olmaq. Messencer isə onsuz da açıqdır, gündə onlarla dəfə, sənin botun da çat siyahısında dostlarının yanındadır. Buna görə sifariş kanalı qonağın artıq olduğu yerə köçür",
     "outcome": "Sifariş yazışmanın olduğu yerdədir — və sifarişdən sonra qonaqla əlaqə qırılmır"
+  },
+  "vitrina": {
+    "label": "Vitrin",
+    "title": "Sifariş vermək istədiyin vitrin",
+    "subtitle": "Qonağın bunu alır: birbaşa MAX və Telegram-da müəssisənin parlaq, müasir tətbiqi. Yemək şəkilləri, konstruktor, aksiyalar, ballar və ödəniş — çatdan iki toxunuşla açılır, heç nə quraşdırmaq lazım deyil",
+    "chapters": {
+      "loading": {
+        "title": "Sənin açılış ekranın",
+        "text": "Müəssisənin loqosu və rəngləri ilk saniyədən — qonaq dərhal hara gəldiyini görür"
+      },
+      "store": {
+        "title": "Müəssisə seçimi",
+        "text": "Bütün şəbəkə bir botda: qonaq siyahıdan filial seçir və ya ən yaxınını tapır"
+      },
+      "promo": {
+        "title": "Girişdə aksiyalar",
+        "text": "Təkliflərinin parlaq bannerləri qonağı qarşılayır və sürüşdürməklə dəyişir"
+      },
+      "cards": {
+        "title": "Kartlarda yeməklər",
+        "text": "Böyük şəkillər, çəki və tərkib, yeməklər arasında lentdəki kimi sürüşdürmə"
+      },
+      "constructor": {
+        "title": "Yemək öz zövqünə",
+        "text": "İnqrediyenti çıxar, pendir və ya sous əlavə et — qiymət dərhal yenilənir"
+      },
+      "cart": {
+        "title": "Səbət özü məsləhət verir",
+        "text": "Pulsuz çatdırılmaya və hədiyyəyə nə qədər qaldığını və sifarişə nə əlavə etməyi göstərir"
+      },
+      "promocode": {
+        "title": "Promokod",
+        "text": "Qonaq kodu daxil edir — endirim rəsmiləşdirmədən əvvəl səbətdə görünür"
+      },
+      "delivery": {
+        "title": "Kuryer və ya özün götür",
+        "text": "Xəritədə ünvan, ən tez və ya vaxta görə çatdırılma, özün götürəndə endirim"
+      },
+      "payment": {
+        "title": "Ballar və ödəniş",
+        "text": "Sifarişin bir hissəsi ballarla, ödəniş nağd, alanda kartla və ya onlayn"
+      },
+      "done": {
+        "title": "Sifariş qəbul olundu",
+        "text": "Qonaq dərhal MAX və ya Telegram çatında bildiriş alır — sonra hər statusu görür"
+      }
+    },
+    "demoQr": "MAX və Telegram üçün bir QR-kod — telefonun kamerasını tut və ya düyməyə bas"
   },
   "compare": {
     "label": "Müqayisə",

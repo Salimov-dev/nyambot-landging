@@ -14,7 +14,6 @@ import { reachGoal, type MetrikaGoal } from "@/config/metrika";
  * страницу к той же секции, и наблюдатель срабатывает следом.
  */
 const WATCHED_SECTIONS: { id: string; goal: MetrikaGoal }[] = [
-  { id: "features", goal: "scroll_features" },
   { id: "pricing", goal: "scroll_pricing" },
 ];
 

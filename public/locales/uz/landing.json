@@ -124,12 +124,9 @@
     }
   },
   "tryDemo": {
-    "tag": "Demo",
     "title": "Hoziroq sinab ko'ring",
-    "subtitle": "Telegram yoki MAX'da demo-botni oching va mehmonlaringiz qanday buyurtma berishini his qiling",
     "noAuth": "Roʻyxatdan oʻtmasdan va telefon raqamisiz",
     "tgCta": "Telegram'da ochish",
-    "appDemo": "Mini-ilova demosi",
     "maxCta": "MAX'da ochish",
     "qrTitle": "Ikkala messenjer uchun bitta QR-kod",
     "qrText": "Telefon kamerasini to‘g‘rila — mehmonlaring ko‘radigan tanlash sahifasi ochiladi. Qadoqda, zalda va reklamada ikkita o‘rniga bitta kod chop etasan.",
@@ -431,6 +428,54 @@
     ],
     "text": "Yangi ilovalarni mehmon deyarli oʻrnatmaydi. Saytga esa avval kelish kerak: manzilni eslash, ochish, kirish. Messenjer esa unda baribir ochiq, kuniga oʻnlab marta, sening boting esa chatlar roʻyxatida doʻstlari yonida turadi. Shuning uchun buyurtma kanali mehmon allaqachon bor joyga koʻchmoqda",
     "outcome": "Buyurtma yozishma bor joyning oʻzida — va buyurtmadan keyin mehmon bilan aloqa uzilmaydi"
+  },
+  "vitrina": {
+    "label": "Vitrina",
+    "title": "Buyurtma bergingiz keladigan vitrina",
+    "subtitle": "Mehmoning mana shuni oladi: toʻgʻridan-toʻgʻri MAX va Telegram ichida muassasaning yorqin, zamonaviy ilovasi. Taom suratlari, konstruktor, aksiyalar, ballar va toʻlov — chatdan ikki teginishda ochiladi, hech narsa oʻrnatish shart emas",
+    "chapters": {
+      "loading": {
+        "title": "Sening zastavkang",
+        "text": "Muassasa logotipi va ranglari birinchi soniyadan — mehmon qayerga kelganini darhol koʻradi"
+      },
+      "store": {
+        "title": "Muassasani tanlash",
+        "text": "Butun tarmoq bitta botda: mehmon roʻyxatdan filialni tanlaydi yoki eng yaqinini topadi"
+      },
+      "promo": {
+        "title": "Kirishdagi aksiyalar",
+        "text": "Takliflaringning yorqin bannerlari mehmonni kutib oladi va svayp bilan almashadi"
+      },
+      "cards": {
+        "title": "Kartochkalarda taomlar",
+        "text": "Katta suratlar, ogʻirligi va tarkibi, taomlar orasida — lentadagidek svayp"
+      },
+      "constructor": {
+        "title": "Taom oʻzingga moslab",
+        "text": "Ingrediyentni olib tashla, pishloq yoki sous qoʻsh — narx darhol qayta hisoblanadi"
+      },
+      "cart": {
+        "title": "Savat oʻzi maslahat beradi",
+        "text": "Bepul yetkazishga va sovgʻaga qancha qolgani hamda buyurtmaga nima qoʻshish mumkinligi"
+      },
+      "promocode": {
+        "title": "Promokod",
+        "text": "Mehmon kodni kiritadi — chegirma rasmiylashtirishdan oldin savatda koʻrinadi"
+      },
+      "delivery": {
+        "title": "Kuryer yoki olib ketish",
+        "text": "Xaritadagi manzil, iloji boricha tez yoki belgilangan vaqtda yetkazish, olib ketishga chegirma"
+      },
+      "payment": {
+        "title": "Ballar va toʻlov",
+        "text": "Buyurtmaning bir qismi ballar bilan, toʻlov naqd, olganda karta bilan yoki onlayn"
+      },
+      "done": {
+        "title": "Buyurtma qabul qilindi",
+        "text": "Mehmon darhol MAX yoki Telegram chatida xabarnoma oladi — keyin har bir holatni koʻradi"
+      }
+    },
+    "demoQr": "MAX va Telegram uchun bitta QR-kod — telefon kamerasini toʻgʻrila yoki tugmani bos"
   },
   "compare": {
     "label": "Taqqoslash",

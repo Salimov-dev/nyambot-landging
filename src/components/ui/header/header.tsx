@@ -20,9 +20,10 @@ import styles from "./header.module.css";
 const { Text } = Typography;
 
 /** Целей на пунктах нет: показ секции отмечает SectionViewTracker — клик по
- *  пункту всё равно прокручивает страницу к ней. */
+ *  пункту всё равно прокручивает страницу к ней. «Возможности» — страница:
+ *  секцию с главной сняли 13.10.2026 (после пути заказа она повторялась) */
 const NAV_ITEMS = [
-  { labelKey: "nav.features", href: "#features" },
+  { labelKey: "nav.features", href: LINKS.pages.features },
   { labelKey: "nav.pricing", href: "#pricing" },
   { labelKey: "nav.faq", href: "#faq" },
 ] as const;
@@ -95,7 +96,7 @@ const SOLUTION_LINKS = [
 
 /** На телефоне «Решения» — якорь на блок карточек внизу страницы */
 const MOBILE_NAV_ITEMS = [
-  { labelKey: "nav.features", href: "#features" },
+  { labelKey: "nav.features", href: LINKS.pages.features },
   { labelKey: "nav.solutions", href: "#solutions" },
   { labelKey: "nav.pricing", href: "#pricing" },
   { labelKey: "nav.faq", href: "#faq" },
@@ -119,11 +120,11 @@ export function Header() {
 
         {/* Desktop nav */}
         <Flex align="center" gap={4} className={styles.nav}>
-          <a href="#features" className={styles.navLink}>
+          <Link href={LINKS.pages.features} className={styles.navLink}>
             <Text style={{ fontSize: 14, fontWeight: 500 }}>
               {t("nav.features")}
             </Text>
-          </a>
+          </Link>
 
           <div className={styles.navDropdown}>
             <button type="button" className={styles.navLink}>
@@ -153,13 +154,15 @@ export function Header() {
             </div>
           </div>
 
-          {NAV_ITEMS.filter((item) => item.href !== "#features").map((item) => (
-            <a key={item.href} href={item.href} className={styles.navLink}>
-              <Text style={{ fontSize: 14, fontWeight: 500 }}>
-                {t(item.labelKey)}
-              </Text>
-            </a>
-          ))}
+          {NAV_ITEMS.filter((item) => item.href !== LINKS.pages.features).map(
+            (item) => (
+              <a key={item.href} href={item.href} className={styles.navLink}>
+                <Text style={{ fontSize: 14, fontWeight: 500 }}>
+                  {t(item.labelKey)}
+                </Text>
+              </a>
+            ),
+          )}
         </Flex>
 
         <Flex align="center" gap={8} className={styles.actions}>

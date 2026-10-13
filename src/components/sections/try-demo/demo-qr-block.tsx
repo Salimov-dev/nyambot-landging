@@ -6,11 +6,11 @@ import { useTranslation } from "react-i18next";
 import { QrCodeIcon } from "@/components/ui/icons/icons";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
-import styles from "./try-demo-section.module.css";
+import styles from "./demo-qr-block.module.css";
 
 /** Картинка — готовый SVG на `nyambot.ru/demo`: код не меняется, рисовать
  *  его в браузере незачем, а оптимизатору Next в векторе сжимать нечего. */
-const DEMO_QR_IMAGE = "/images/qr/demo-qr.svg";
+export const DEMO_QR_IMAGE = "/images/qr/demo-qr.svg";
 const DEMO_QR_SIZE = 168;
 
 /**
@@ -21,18 +21,12 @@ const DEMO_QR_SIZE = 168;
 export function DemoQrBlock({
   showMore = true,
   inPage = false,
-  inSide = false,
-  scanning = false,
 }: {
   /** Ссылка на страницу про общий QR-код — не нужна на самой этой странице. */
   showMore?: boolean;
   /** Внутри посадочной: во всю ширину контента и с отступом до карточек, а
    *  не узкой плашкой по центру секции демо. */
   inPage?: boolean;
-  /** В колонке рядом с роликом демо на главной: во всю ширину колонки. */
-  inSide?: boolean;
-  /** По коду проходит линия сканирования — будто на него навели камеру. */
-  scanning?: boolean;
 }) {
   const { t } = useTranslation("landing");
 
@@ -56,21 +50,14 @@ export function DemoQrBlock({
 
   return (
     <div
-      className={[
-        styles.qrBlock,
-        inPage ? styles.qrBlockInPage : "",
-        inSide ? styles.qrBlockSide : "",
-      ].join(" ")}
+      className={[styles.qrBlock, inPage ? styles.qrBlockInPage : ""].join(" ")}
     >
-      {/* В колонке демо: заголовок сверху и «Как это работает» снизу — по
-          центру, между ними код и текст одной высоты (Руслан 06.10.2026) */}
-      {inSide ? title : null}
       <a
         href={LINKS.demo.chooser}
         target="_blank"
         onClick={() => reachGoal("open_demo_chooser")}
         rel="noopener noreferrer"
-        className={`${styles.qrImageWrap} ${scanning ? styles.qrScanning : ""}`}
+        className={styles.qrImageWrap}
         aria-label={t("tryDemo.qrOpen")}
       >
         <Image
@@ -82,7 +69,7 @@ export function DemoQrBlock({
         />
       </a>
       <div className={styles.qrContent}>
-        {inSide ? null : title}
+        {title}
         <p className={styles.qrText}>{t("tryDemo.qrText")}</p>
         <div className={styles.qrActions}>
           <a
@@ -94,10 +81,9 @@ export function DemoQrBlock({
           >
             {t("tryDemo.qrOpen")}
           </a>
-          {inSide ? null : more}
+          {more}
         </div>
       </div>
-      {inSide ? more : null}
     </div>
   );
 }

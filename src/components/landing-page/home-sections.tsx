@@ -1,7 +1,7 @@
 import { HOME_SECTION, type IHomeSection } from "@/config/landing-pages.config";
 import { KillerSection } from "@/components/sections/killer/killer-section";
 import { CompareSection } from "@/components/sections/compare/compare-section";
-import { TryDemoSection } from "@/components/sections/try-demo/try-demo-section";
+import { VitrinaSection } from "@/components/sections/vitrina/vitrina-section";
 import { KomandaSection } from "@/components/sections/komanda/komanda-section";
 import { IntegrationsSection } from "@/components/sections/integrations/integrations-section";
 import { LoyaltySection } from "@/components/sections/loyalty/loyalty-section";
@@ -15,7 +15,7 @@ const HOME_PRICING = "/#pricing";
 const SECTIONS: Record<IHomeSection, () => React.ReactElement | null> = {
   [HOME_SECTION.KILLER]: () => <KillerSection pricingHref={HOME_PRICING} />,
   [HOME_SECTION.COMPARE]: CompareSection,
-  [HOME_SECTION.DEMO]: TryDemoSection,
+  [HOME_SECTION.VITRINA]: VitrinaSection,
   [HOME_SECTION.KOMANDA]: KomandaSection,
   [HOME_SECTION.INTEGRATIONS]: IntegrationsSection,
   [HOME_SECTION.LOYALTY]: LoyaltySection,
