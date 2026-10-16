@@ -36,8 +36,7 @@
     ],
     "guarantee": "İşə salmazdan əvvəl bütün ayarları avtomatik yoxlayırıq. Qonaqları yalnız yoxlamadan sonra buraxırıq.",
     "note": "24 saat ərzində sənə rahat olan yerdə əlaqə saxlayacağıq. Öhdəliksiz.",
-    "button": "Sənin yerinə pulsuz işə salarıq",
-    "selfButton": "Özüm quraram"
+    "button": "Sənin yerinə pulsuz işə salarıq"
   },
   "killer": {
     "label": "Əsas məqamlar",
@@ -195,7 +194,7 @@
       },
       {
         "question": "İşə salma necə keçir və nə vaxt ödəmək lazımdır?",
-        "answer": "Sənin yerinə pulsuz işə salırıq: botu və vitrini yığıb yoxlayırıq, kabineti sənə təhvil veririk — sən onlayn ödənişi, MAX botunu və bildirişləri qoşursan. Sonra kassada sifarişi və ödənişi birlikdə yoxlayırıq — və işə salırıq. İlk 14 gün sınaq dövrüdür: hər gün hər şeyin işlədiyini yoxlayırıq. Hesab işə salma günü gəlir — işə salma tarixindən başlayan dövr üçün, ödəniş isə bu 14 gün ərzində, kart bağlamadan və avtomatik silinmə olmadan. R-Keeper kassası üçün Nyambot ilə inteqrasiya lisenziyasını quraşdırma başlamazdan əvvəl öz R-Keeper dilerindən alırsan. Özün quraşdırırsan — həmin 14 gün e-poçtun təsdiqindən, hesab da bu tarixdən"
+        "answer": "Sənin yerinə pulsuz işə salırıq: botu və vitrini yığıb yoxlayırıq, kabineti sənə təhvil veririk — sən onlayn ödənişi, MAX botunu və bildirişləri qoşursan. Sonra kassada sifarişi və ödənişi birlikdə yoxlayırıq — və işə salırıq. İlk 14 gün sınaq dövrüdür: hər gün hər şeyin işlədiyini yoxlayırıq. Hesab işə salma günü gəlir — işə salma tarixindən başlayan dövr üçün, ödəniş isə bu 14 gün ərzində, kart bağlamadan və avtomatik silinmə olmadan. R-Keeper kassası üçün Nyambot ilə inteqrasiya lisenziyasını quraşdırma başlamazdan əvvəl öz R-Keeper dilerindən alırsan."
       },
       {
         "question": "50% endirimi necə almaq olar?",
@@ -207,7 +206,6 @@
     "title": "Öz kanalında sifariş qəbuluna başla",
     "subtitle": "İşə salma pulsuzdur: hər şeyi sənin yerinə yığıb yoxlayırıq, sonra — tam funksionallıq və hər addımda dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
     "button": "Sənin yerinə pulsuz işə salarıq",
-    "self": "Özüm quraram",
     "docs": "Sənədləri oxu",
     "hint": "24 saat ərzində əlaqə saxlayırıq · Kart bağlamadan · Tarifdə 1 nöqtə və 2 bot",
     "trialFeatures": [

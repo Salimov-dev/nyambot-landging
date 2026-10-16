@@ -121,7 +121,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* Кнопки рядом — одна пара (Руслан 09.10: промежуток был велик) */
+  /* Одна кнопка и строка под ней: «Настрою сам» убрана — саморегистрация
+     закрыта (Руслан 17.10.2026) */
   gap: 12px 8px;
   margin-top: 32px;
 }
@@ -157,44 +158,6 @@
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-/* «Настрою сам» — вторая дорога (Р15): та же высота, но без заливки, чтобы
-   главным оставался бесплатный запуск */
-.selfButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  padding: 0 28px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  transition:
-    transform 0.2s var(--ease-out-quart),
-    border-color 0.2s ease;
-}
-
-.selfButton:hover,
-.selfButton:focus,
-.selfButton:active,
-.selfButton:visited {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.selfButton:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.selfButton:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -245,8 +208,7 @@
 
   /* Текст целиком в одну строку: на 390 px с отступами по 36 px он
      переносился и прижимался влево */
-  .button,
-  .selfButton {
+  .button {
     width: 100%;
     height: auto;
     min-height: 56px;

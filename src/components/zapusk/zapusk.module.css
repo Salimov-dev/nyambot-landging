@@ -29,27 +29,3 @@
   max-width: 820px;
   margin-bottom: 24px;
 }
-
-.selfServe {
-  margin: 20px 0 0;
-  font-size: 15px;
-  color: var(--text-secondary);
-  text-align: center;
-}
-
-.selfServeLink {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.selfServeLink:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 720px) {
-  /* В СРМ с телефона не поработать — только форма (решение Руслана 28.09) */
-  .selfServe {
-    display: none;
-  }
-}

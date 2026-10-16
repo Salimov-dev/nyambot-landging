@@ -52,18 +52,6 @@ export function Footer() {
               >
                 {t("freeReview.button")}
               </Link>
-              {/* Вторая дорога (Р15 плана «Заявка на запуск»): регистрация и
-                  настройка самому */}
-              <Link
-                href={LINKS.crmRegister}
-                target="_blank"
-                className={styles.footerLink}
-                onClick={() =>
-                  reachGoal("click_trial", { to: "crm", from: "footer" })
-                }
-              >
-                {t("freeReview.selfButton")}
-              </Link>
               <Link
                 href={LINKS.crm}
                 target="_blank"

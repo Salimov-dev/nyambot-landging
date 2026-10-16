@@ -11,9 +11,6 @@ const DEMO_BOTS = {
 
 export const LINKS = {
   crm: "https://crm.nyambot.ru",
-  /** СРМ сразу на регистрации — для кнопок, которые обещают «зарегистрироваться»:
-   *  обычная ссылка открывает форму ВХОДА, и новичок с неё уходил. */
-  crmRegister: "https://crm.nyambot.ru/login?mode=register",
   crew: "https://crew.nyambot.ru",
   docs: "https://guide.nyambot.ru",
   /** Логотип участника проекта обязан вести на сайт Фонда (Положение № 165-Пр, ст. 4) */

@@ -36,8 +36,7 @@
     ],
     "guarantee": "Before launch we automatically check all settings. Guests come in only after the check.",
     "note": "We'll get in touch within 24 hours wherever suits you. No obligations.",
-    "button": "We'll launch it for you — free",
-    "selfButton": "I'll set it up myself"
+    "button": "We'll launch it for you — free"
   },
   "killer": {
     "label": "Key points",
@@ -195,7 +194,7 @@
       },
       {
         "question": "How does the launch work and when do I pay?",
-        "answer": "We launch it for you, free: we build and test the bot and the storefront and hand the account over to you — you connect online payments, the MAX bot and notifications. Then we check an order in the POS and a payment together — and you're live. The first 14 days are a test period: we check every day that everything works. The invoice comes on launch day — for the period from the launch date, to be paid within those 14 days, with no card on file and no auto-charges. On R-Keeper, you buy the Nyambot integration license from your R-Keeper dealer before setup starts. Setting it up yourself — the same 14 days from email confirmation, billed from that date"
+        "answer": "We launch it for you, free: we build and test the bot and the storefront and hand the account over to you — you connect online payments, the MAX bot and notifications. Then we check an order in the POS and a payment together — and you're live. The first 14 days are a test period: we check every day that everything works. The invoice comes on launch day — for the period from the launch date, to be paid within those 14 days, with no card on file and no auto-charges. On R-Keeper, you buy the Nyambot integration license from your R-Keeper dealer before setup starts."
       },
       {
         "question": "How do I get 50% off?",
@@ -207,7 +206,6 @@
     "title": "Start taking orders in your own channel",
     "subtitle": "Free launch: we build and test everything for you, then you get full features and support at every step. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
     "button": "We'll launch it for you — free",
-    "self": "I'll set it up myself",
     "docs": "Read documentation",
     "hint": "We'll get back within 24 hours · No card required · 1 location and 2 bots in the plan",
     "trialFeatures": ["Free launch", "All features", "No card required"]

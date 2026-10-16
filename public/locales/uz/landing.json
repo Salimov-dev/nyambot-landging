@@ -36,8 +36,7 @@
     ],
     "guarantee": "Ishga tushirishdan oldin barcha sozlamalarni avtomatik tekshiramiz. Mehmonlarni faqat tekshiruvdan keyin kiritamiz.",
     "note": "24 soat ichida senga qulay joyda bogʻlanamiz. Majburiyatlarsiz.",
-    "button": "Sen uchun bepul ishga tushiramiz",
-    "selfButton": "Oʻzim sozlayman"
+    "button": "Sen uchun bepul ishga tushiramiz"
   },
   "killer": {
     "label": "Asosiysi",
@@ -195,7 +194,7 @@
       },
       {
         "question": "Ishga tushirish qanday oʻtadi va qachon toʻlash kerak?",
-        "answer": "Sen uchun bepul ishga tushiramiz: bot va vitrinani yigʻib, tekshiramiz, kabinetni senga topshiramiz — sen onlayn toʻlovni, MAX dagi botni va bildirishnomalarni ulaysan. Keyin kassadagi buyurtma va toʻlovni birga tekshiramiz — va ishga tushiramiz. Dastlabki 14 kun — sinov muddati: hammasi ishlayotganini har kuni tekshiramiz. Hisob ishga tushirish kuni keladi — ishga tushirish sanasidan boshlanadigan davr uchun, toʻlov — shu 14 kun ichida, karta bogʻlamasdan va avtomatik yechib olishsiz. Kassa R-Keeper boʻlsa, Nyambot bilan integratsiya litsenziyasini sozlash boshlanishidan oldin oʻz R-Keeper dileringdan sotib olasan. Oʻzing sozlasang — xuddi shu 14 kun pochtani tasdiqlagan kundan, hisob shu sanadan"
+        "answer": "Sen uchun bepul ishga tushiramiz: bot va vitrinani yigʻib, tekshiramiz, kabinetni senga topshiramiz — sen onlayn toʻlovni, MAX dagi botni va bildirishnomalarni ulaysan. Keyin kassadagi buyurtma va toʻlovni birga tekshiramiz — va ishga tushiramiz. Dastlabki 14 kun — sinov muddati: hammasi ishlayotganini har kuni tekshiramiz. Hisob ishga tushirish kuni keladi — ishga tushirish sanasidan boshlanadigan davr uchun, toʻlov — shu 14 kun ichida, karta bogʻlamasdan va avtomatik yechib olishsiz. Kassa R-Keeper boʻlsa, Nyambot bilan integratsiya litsenziyasini sozlash boshlanishidan oldin oʻz R-Keeper dileringdan sotib olasan."
       },
       {
         "question": "50% chegirmani qanday olish mumkin?",
@@ -207,7 +206,6 @@
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
     "subtitle": "Ishga tushirish bepul: hammasini sen uchun yigʻib, tekshiramiz, keyin — toʻliq funksional va har qadamda qoʻllab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
     "button": "Sen uchun bepul ishga tushiramiz",
-    "self": "Oʻzim sozlayman",
     "docs": "Hujjatlarni o'qish",
     "hint": "24 soat ichida bogʻlanamiz · Kartasiz · Tarifda 1 nuqta va 2 bot",
     "trialFeatures": [

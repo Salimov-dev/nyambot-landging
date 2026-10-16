@@ -66,9 +66,9 @@ export function CtaSection() {
               ))}
             </Flex>
 
-            {/* Две дороги (Р15 плана «Заявка на запуск»): запуск нашими
-                руками или регистрация и настройка самому. Документация —
-                ссылкой под ними, третьей кнопкой она спорила бы с выбором */}
+            {/* Одна дорога — запуск нашими руками: саморегистрация в СРМ
+                закрыта (Руслан 17.10.2026), «Настрою сам» убрана.
+                Документация — ссылкой под кнопкой */}
             <Flex gap={12} wrap justify="center">
               <Button
                 type="primary"
@@ -78,17 +78,6 @@ export function CtaSection() {
                 onClick={() => reachGoal("click_trial", { to: "zapusk" })}
               >
                 {t("cta.button")}
-              </Button>
-              <Button
-                type="default"
-                size="large"
-                href={LINKS.crmRegister}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.secondaryBtn}
-                onClick={() => reachGoal("click_trial", { to: "crm" })}
-              >
-                {t("cta.self")}
               </Button>
             </Flex>
 

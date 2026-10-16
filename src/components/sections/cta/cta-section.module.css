@@ -75,24 +75,8 @@
   box-shadow: var(--shadow-button) !important;
 }
 
-.secondaryBtn {
-  height: 52px !important;
-  padding: 0 28px !important;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  border-radius: var(--radius-md) !important;
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  color: var(--text-secondary) !important;
-}
-
-.secondaryBtn:hover {
-  color: var(--text-primary) !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-/* Документация — ссылкой под кнопками: две кнопки — это выбор «запустите
-   меня» или «настрою сам», третья с ним спорила бы */
+/* Документация — ссылкой под кнопкой: второй кнопкой она спорила бы с
+   главным действием — заявкой на запуск */
 .docsLink {
   color: var(--accent);
   font-size: 15px;
@@ -114,8 +98,7 @@
   .card {
     padding: 40px 24px;
   }
-  .primaryBtn,
-  .secondaryBtn {
+  .primaryBtn {
     width: 100% !important;
     justify-content: center !important;
   }
