@@ -182,7 +182,7 @@ export function Header() {
             rel="noopener noreferrer"
             className={styles.ctaBtn}
             size="middle"
-            onClick={() => reachGoal("click_trial")}
+            onClick={() => reachGoal("click_crm_login")}
           >
             {/* Короткое «CRM»: рядом со знаком Фонда кнопка «Открыть CRM» была
                 с ним одной длины, и два блока сливались в один. В бургер-меню
@@ -277,7 +277,7 @@ export function Header() {
               className={styles.mobileCtaBtn}
               block
               size="large"
-              onClick={() => reachGoal("click_trial")}
+              onClick={() => reachGoal("click_crm_login")}
             >
               {t("nav.openCrm")}
             </Button>

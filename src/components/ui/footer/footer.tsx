@@ -56,7 +56,7 @@ export function Footer() {
                 href={LINKS.crm}
                 target="_blank"
                 className={styles.footerLink}
-                onClick={() => reachGoal("click_trial")}
+                onClick={() => reachGoal("click_crm_login")}
               >
                 {t("footer.crm")}
               </Link>
