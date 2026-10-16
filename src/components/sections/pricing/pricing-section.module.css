@@ -211,21 +211,28 @@
 /* Условие пробного периода — строкой под подзаголовком */
 /* Иконка — часть первой строки текста, а не отдельная колонка flex: при
    переносе текста она уезжала к левому краю (Руслан 06.10.2026) */
+/* «Запуск бесплатно» — плашкой с акцентом, а не мелкой строкой: её почти не
+   было видно (Руслан 16.10.2026). `display: table` — по ширине текста и по
+   центру без лишней обёртки */
 .trialNote {
-  display: block;
+  display: table;
   text-align: center;
   max-width: 760px;
-  margin: 16px auto 0;
+  margin: 24px auto 0;
+  padding: 10px 24px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: var(--accent-bg);
   color: var(--text-primary);
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.55;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .trialNote svg {
   display: inline-block;
-  margin-right: 8px;
-  vertical-align: -2px;
+  margin-right: 10px;
+  vertical-align: -3px;
   color: var(--accent);
 }
 
@@ -274,7 +281,8 @@
 
 .detailLinks {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 8px 16px;
   margin-top: auto;
 }
 
@@ -285,6 +293,16 @@
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
+}
+
+/* Призыв, который открывает кнопку связи, — кнопка, но выглядит как ссылка */
+.detailLinkButton {
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
 .detailLink:hover {
@@ -301,6 +319,7 @@
 @media (max-width: 640px) {
   /* По центру, как заголовок над ним (Руслан 06.10.2026) */
   .trialNote {
-    font-size: 14px;
+    padding: 8px 18px;
+    font-size: 17px;
   }
 }

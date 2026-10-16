@@ -12,6 +12,9 @@ import { theme } from "@/config/theme";
 import ruLanding from "../../../../public/locales/ru/landing.json";
 import styles from "./faq-section.module.css";
 
+/** Откуда пришла цель Метрики: отличает FAQ от подвала и кнопки связи. */
+const GOAL_SOURCE = { from: "faq" } as const;
+
 const { Title, Text } = Typography;
 
 /**
@@ -133,13 +136,27 @@ export function FaqSection() {
             <Text style={{ color: theme.colors.textTertiary, fontSize: 14 }}>
               {t("faq.notFound")}
             </Text>
+            <Text style={{ color: theme.colors.textTertiary, fontSize: 14 }}>
+              {t("faq.askSupport")}
+            </Text>
+            {/* MAX раньше Телеграма — правило продукта */}
+            <a
+              href={LINKS.support.max}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.supportLink}
+              onClick={() => reachGoal("click_max_support", GOAL_SOURCE)}
+            >
+              {t("contactWidget.max")}
+            </a>
             <a
               href={LINKS.support.telegram}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.supportLink}
+              onClick={() => reachGoal("click_tg_support", GOAL_SOURCE)}
             >
-              {t("faq.askSupport")}
+              {t("contactWidget.telegram")}
             </a>
           </Flex>
         </motion.div>

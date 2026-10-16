@@ -154,20 +154,20 @@ export function Footer() {
                 {t("footer.support")}
               </Text>
               <Link
-                href={LINKS.support.telegram}
-                target="_blank"
-                className={styles.footerLink}
-                onClick={() => reachGoal("click_tg_support")}
-              >
-                {t("footer.telegram")}
-              </Link>
-              <Link
                 href={LINKS.support.max}
                 target="_blank"
                 className={styles.footerLink}
                 onClick={() => reachGoal("click_max_support")}
               >
                 {t("footer.max")}
+              </Link>
+              <Link
+                href={LINKS.support.telegram}
+                target="_blank"
+                className={styles.footerLink}
+                onClick={() => reachGoal("click_tg_support")}
+              >
+                {t("footer.telegram")}
               </Link>
               <Link
                 href={`mailto:${BRAND_CONFIG.supportEmail}`}

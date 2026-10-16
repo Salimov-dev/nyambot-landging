@@ -18,11 +18,12 @@ export const LINKS = {
   docs: "https://guide.nyambot.ru",
   /** Логотип участника проекта обязан вести на сайт Фонда (Положение № 165-Пр, ст. 4) */
   skolkovo: "https://sk.ru",
+  /** Каналы поддержки. Порядок показа везде — MAX → Телеграм → почта. */
   support: {
-    telegram: "https://t.me/nyambot_support",
-    email: "mailto:support@nyambot.ru",
     /** Профиль поддержки в MAX (ссылка «Поделиться» из приложения; аккаунт ООО — Руслан 12.10.2026). */
     max: "https://max.ru/u/f9LHodD0cOKBz2QXi9CSIAU7TfoRLFn7tBg1EtSL9PkMlcIb5Bqe4Fu8U4k",
+    telegram: "https://t.me/nyambot_support",
+    email: "mailto:support@nyambot.ru",
   },
 
   demo: {

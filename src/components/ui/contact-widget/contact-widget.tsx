@@ -8,6 +8,10 @@ import { reachGoal } from "@/config/metrika";
 import { TelegramIcon } from "@/components/ui/messenger-icons/telegram-icon";
 import { MaxIcon } from "@/components/ui/messenger-icons/max-icon";
 import { CloseIcon, MailIcon, MessageIcon } from "@/components/ui/icons/icons";
+import {
+  CONTACT_WIDGET_OPEN_EVENT,
+  type ContactWidgetOpenDetail,
+} from "./contact-widget.events";
 import styles from "./contact-widget.module.css";
 
 /** Откуда пришла цель Метрики: отличает кнопку связи от подвала и FAQ. */
@@ -17,10 +21,11 @@ const CHANNEL_ICON_SIZE = 28;
 
 /**
  * Плавающая кнопка связи (план аудита Гуляша, С7, Руслан 28.09.2026): видна
- * при любой прокрутке, по нажатию — Телеграм, MAX и почта.
+ * при любой прокрутке, по нажатию — MAX, Телеграм и почта. Порядок — правило
+ * продукта: MAX раньше Телеграма (Руслан 16.10.2026).
  *
- * Все три канала открываются сразу: Телеграм и MAX — профилем поддержки,
- * почта — письмом.
+ * Все три канала открываются сразу: MAX и Телеграм — профилем поддержки,
+ * почта — письмом. Открыть панель можно и снаружи — `openContactWidget`.
  *
  * Закрывается повторным нажатием, кликом мимо и Esc.
  */
@@ -31,6 +36,18 @@ export function ContactWidget() {
   const panelId = useId();
 
   const close = useCallback(() => setIsOpen(false), []);
+
+  useEffect(() => {
+    const onOpenRequest = (event: Event) => {
+      const { detail } = event as CustomEvent<ContactWidgetOpenDetail>;
+      reachGoal("open_contact_widget", { from: detail.from });
+      setIsOpen(true);
+    };
+
+    window.addEventListener(CONTACT_WIDGET_OPEN_EVENT, onOpenRequest);
+    return () =>
+      window.removeEventListener(CONTACT_WIDGET_OPEN_EVENT, onOpenRequest);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -63,24 +80,6 @@ export function ContactWidget() {
 
           <a
             className={styles.channel}
-            href={LINKS.support.telegram}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => reachGoal("click_tg_support", GOAL_SOURCE)}
-          >
-            <TelegramIcon size={CHANNEL_ICON_SIZE} />
-            <span className={styles.channelText}>
-              <span className={styles.channelName}>
-                {t("contactWidget.telegram")}
-              </span>
-              <span className={styles.channelValue}>
-                {BRAND_CONFIG.supportTelegramHandle}
-              </span>
-            </span>
-          </a>
-
-          <a
-            className={styles.channel}
             href={LINKS.support.max}
             target="_blank"
             rel="noopener noreferrer"
@@ -93,6 +92,24 @@ export function ContactWidget() {
               </span>
               <span className={styles.channelValue}>
                 {BRAND_CONFIG.supportMaxPhoneDisplay}
+              </span>
+            </span>
+          </a>
+
+          <a
+            className={styles.channel}
+            href={LINKS.support.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => reachGoal("click_tg_support", GOAL_SOURCE)}
+          >
+            <TelegramIcon size={CHANNEL_ICON_SIZE} />
+            <span className={styles.channelText}>
+              <span className={styles.channelName}>
+                {t("contactWidget.telegram")}
+              </span>
+              <span className={styles.channelValue}>
+                {BRAND_CONFIG.supportTelegramHandle}
               </span>
             </span>
           </a>

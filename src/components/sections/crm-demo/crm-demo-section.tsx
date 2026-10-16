@@ -141,9 +141,10 @@ export function CrmDemoSection() {
           <Button
             type="primary"
             size="large"
-            href={LINKS.crmRegister}
-            target="_blank"
-            onClick={() => reachGoal("click_trial")}
+            href={LINKS.pages.zapusk}
+            onClick={() =>
+              reachGoal("click_trial", { to: "zapusk", from: "crm_demo" })
+            }
             style={{
               background: theme.gradients.primary,
               border: "none",

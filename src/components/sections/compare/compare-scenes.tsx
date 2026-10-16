@@ -160,7 +160,7 @@ export function SetupScene() {
   );
 }
 
-/** 5. Цена на созвоне → открытая цена и 30 дней бесплатно */
+/** 5. Цена на созвоне → открытая цена: ценник и прайс со знаком рубля */
 export function PricesScene() {
   return (
     <svg viewBox={VIEW} className={styles.scene} aria-hidden="true">
@@ -176,9 +176,9 @@ export function PricesScene() {
         <circle cx="160" cy="76" r="6" />
         <path d="M118 104 l12 12 22 -24" />
         <rect x="206" y="62" width="84" height="80" rx="12" />
-        <path d="M206 84 H290 M228 54 V70 M268 54 V70" />
-        <text x="248" y="126" textAnchor="middle" className={styles.accentText}>
-          30
+        <path d="M222 86 H274 M222 128 H258" />
+        <text x="248" y="116" textAnchor="middle" className={styles.accentText}>
+          ₽
         </text>
       </g>
     </svg>

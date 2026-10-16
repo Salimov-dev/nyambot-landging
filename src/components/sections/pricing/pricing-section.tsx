@@ -13,6 +13,10 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import type { PricingPlan } from "@/types/landing.types";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
+import {
+  CONTACT_WIDGET_SOURCE,
+  openContactWidget,
+} from "@/components/ui/contact-widget/contact-widget.events";
 import { theme } from "@/config/theme";
 import styles from "./pricing-section.module.css";
 
@@ -82,17 +86,17 @@ export function PricingSection({ plans }: PricingSectionProps) {
           >
             {t("pricing.subtitle")}
           </Text>
-          {/* Условие пробного периода — строкой, без отдельной плашки
-              (Руслан 06.10.2026: «слишком много всего»). Текст условия тот же */}
+          {/* «Запуск бесплатно» — строкой, без отдельной плашки
+              (Руслан 06.10.2026: «слишком много всего»); срок оплаты здесь не
+              пишем (Руслан 16.10.2026) — он в FAQ и на /zapusk. */}
           <p className={styles.trialNote}>
-            <GiftIcon size={16} />
+            <GiftIcon size={20} />
             {t("pricing.trialNote")}
           </p>
         </motion.div>
 
-        {/* Подсказки «оплати тариф — после этого можно начинать работу» под
-            карточками больше нет (Руслан 06.10.2026): она спорила с 30 днями
-            без карты из trialNote прямо над ней. */}
+        {/* Под карточками подсказок нет (Руслан 06.10.2026): «Запуск
+            бесплатно» — одной строкой trialNote над ними. */}
         <Row gutter={[20, 20]} justify="center" className={styles.cards}>
           {plans.map((plan, i) => {
             const badgeKey = planBadgeKey(plan);
@@ -165,15 +169,17 @@ export function PricingSection({ plans }: PricingSectionProps) {
               {t("pricing.switchTitle")}
             </span>
             <span className={styles.detailText}>{t("pricing.switchNote")}</span>
-            <a
-              href={LINKS.support.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.detailLink}
-              onClick={() => reachGoal("click_switch")}
+            {/* Канал гость выбирает сам: кнопка связи — MAX, Телеграм и почта */}
+            <button
+              type="button"
+              className={`${styles.detailLink} ${styles.detailLinkButton}`}
+              onClick={() => {
+                reachGoal("click_switch");
+                openContactWidget(CONTACT_WIDGET_SOURCE.PRICING_SWITCH);
+              }}
             >
               {t("pricing.switchCta")} →
-            </a>
+            </button>
           </div>
 
           <div className={styles.detailCard}>
@@ -188,13 +194,22 @@ export function PricingSection({ plans }: PricingSectionProps) {
             </span>
             <span className={styles.detailLinks}>
               <a
+                href={LINKS.support.max}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.detailLink}
+                onClick={() => reachGoal("click_max_support")}
+              >
+                {t("contactWidget.max")}
+              </a>
+              <a
                 href={LINKS.support.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.detailLink}
                 onClick={() => reachGoal("click_tg_support")}
               >
-                Telegram
+                {t("contactWidget.telegram")}
               </a>
               <a
                 href={LINKS.support.email}
@@ -278,10 +293,11 @@ function PricingList({ plans, t }: { plans: PricingPlan[]; t: Translate }) {
         type="primary"
         block
         size="large"
-        href={LINKS.crmRegister}
-        target="_blank"
+        href={LINKS.pages.zapusk}
         className={styles.primaryBtn}
-        onClick={() => reachGoal("click_trial")}
+        onClick={() =>
+          reachGoal("click_trial", { to: "zapusk", from: "pricing" })
+        }
       >
         {t("pricing.cta")}
       </Button>
@@ -327,9 +343,8 @@ function PricingCard({ plan, t }: { plan: PricingPlan; t: Translate }) {
           )}
         </Flex>
 
-        {/* Price. Тега «0 ₽ · первые 30 дней» в карточке больше нет
-            (Руслан 06.10.2026): четыре одинаковых тега повторяли trialNote
-            над карточками и ничем тарифы не различали. */}
+        {/* Price. Общих для всех тарифов тегов в карточке нет (Руслан
+            06.10.2026): условия — строкой trialNote над карточками. */}
         <Flex vertical gap={4}>
           <Flex align="baseline" gap={4}>
             <Title
@@ -365,11 +380,12 @@ function PricingCard({ plan, t }: { plan: PricingPlan; t: Translate }) {
           type={isPopular ? "primary" : "default"}
           block
           size="large"
-          href={LINKS.crmRegister}
-          target="_blank"
+          href={LINKS.pages.zapusk}
           className={isPopular ? styles.primaryBtn : styles.defaultBtn}
           style={{ marginTop: "auto" }}
-          onClick={() => reachGoal("click_trial")}
+          onClick={() =>
+            reachGoal("click_trial", { to: "zapusk", from: "pricing" })
+          }
         >
           {t("pricing.cta")}
         </Button>

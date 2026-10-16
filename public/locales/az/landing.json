@@ -16,7 +16,7 @@
     "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
     "cta": "Sənin yerinə pulsuz işə salarıq",
     "ctaSecondary": "Demoya bax",
-    "trial": "30 gün pulsuz · yalnız e-poçt lazımdır · kartsız və menecer zəngi olmadan"
+    "trial": "Qiymətlər açıqdır · sifarişdən faiz yoxdur · kart bağlamadan və avtomatik silinmə olmadan"
   },
   "freeReview": {
     "title": "Açar təhvil işə salma — pulsuz",
@@ -112,7 +112,7 @@
     "title": "Bütün şəbəkə bir kabinetdə",
     "description": "Menyu, sifarişlər, analitika, marketinq və bütün şəbəkənin ümumi qonaq bazası — bir yerdə. İşə salmanı biz edirik, sonra özün proqramçısız idarə edirsən.",
     "ownDev": "Öz işləməmiz, konstruktor deyil — funksiyalara və etibarlılığa cavabdehik",
-    "cta": "CRM açmaq — 30 gün pulsuz",
+    "cta": "Sənin yerinə pulsuz işə salarıq",
     "ctaHint": "Tam giriş · Tam dəstək · Kart tələb olunmur",
     "features": {
       "dashboard": "Gəlir dashboardu",
@@ -124,10 +124,10 @@
     }
   },
   "tryDemo": {
-    "title": "İndi sınayın",
+    "title": "İndi sına",
     "noAuth": "Qeydiyyatsız və telefon nömrəsi olmadan",
-    "tgCta": "Telegram-da açın",
-    "maxCta": "MAX-da açın",
+    "tgCta": "Telegram-da aç",
+    "maxCta": "MAX-da aç",
     "qrTitle": "Hər iki messencer üçün bir QR-kod",
     "qrText": "Telefonun kamerasını tut — qonaqlarının görəcəyi eyni seçim səhifəsi açılacaq. Qablaşdırmada, zalda və reklamda iki əvəzinə bir kod çap edirsən.",
     "qrOpen": "Seçim səhifəsini aç",
@@ -137,7 +137,7 @@
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
     "subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
-    "trialNote": "30 gün pulsuz və kartsız — bütün funksiyalar, 1 nöqtə və 2 bot",
+    "trialNote": "İşə salma pulsuzdur",
     "popular": "Optimal",
     "bestValue": "Sərfəli",
     "perMonth": "aylıq",
@@ -153,16 +153,16 @@
     "customSubtitle": "2 nöqtədən — fərdi tarif, bizə yaz:",
     "emailCta": "Poçt",
     "includesLabel": "Tarifə daxildir",
-    "includesShort": "1 nöqtə, MAX və Telegram-da botlar — mini-tətbiq, CRM, «Komanda», loyallıq, inteqrasiyalar və dəstək. İşə salma — pulsuz",
+    "includesShort": "1 nöqtə, MAX və Telegram-da botlar — mini-tətbiq, CRM, «Komanda», loyallıq, inteqrasiyalar və dəstək. İşə salma — pulsuz",
     "switchTitle": "Başqa xidmətdən keçirsən?",
     "switchNote": "İlk 3 ay — iki dəfə ucuz",
     "switchCta": "50% endirim al"
   },
   "faq": {
     "label": "Tez-tez verilən suallar",
-    "title": "Suallarınız qaldı?",
-    "notFound": "Cavab tapmadınız?",
-    "askSupport": "Dəstəkdən soruşun",
+    "title": "Sualların qaldı?",
+    "notFound": "Cavab tapmadın?",
+    "askSupport": "Dəstəkdən soruş:",
     "moreCta": "Bütün suallar",
     "items": [
       {
@@ -194,26 +194,30 @@
         "answer": "CRM-də bildirişləri qoş: «Profil» → «Bildirişlər». Kassa cavab verməyi dayandıran kimi Telegram və ya MAX-a mesaj gələcək, yenidən işləyəndə isə daha biri"
       },
       {
-        "question": "Sınaq dövrü və başlanğıcda ödəniş necə qurulub?",
-        "answer": "30 gün pulsuz, kartsız və funksiyalar kəsilmədən. Qeydiyyatdan sonra tam giriş veririk: tam CRM, «Komanda» tətbiqi, kassa və çatdırılma ilə inteqrasiyalar. Hər şeyi özün qura bilərsən və ya işə salmanı bizə həvalə edə bilərsən — bu pulsuzdur, dəstək isə hər addımda suallara cavab verir. Sınaq dövrü standart şərtlərlə keçir — bir satış nöqtəsi və iki bot; inteqrasiyalar məhdudiyyətsiz qoşulur. Şəbəkələri və böyük həcmləri ayrıca müzakirə edirik"
+        "question": "İşə salma necə keçir və nə vaxt ödəmək lazımdır?",
+        "answer": "Sənin yerinə pulsuz işə salırıq: botu və vitrini yığıb yoxlayırıq, kabineti sənə təhvil veririk — sən onlayn ödənişi, MAX botunu və bildirişləri qoşursan. Sonra kassada sifarişi və ödənişi birlikdə yoxlayırıq — və işə salırıq. İlk 14 gün sınaq dövrüdür: hər gün hər şeyin işlədiyini yoxlayırıq. Hesab işə salma günü gəlir — işə salma tarixindən başlayan dövr üçün, ödəniş isə bu 14 gün ərzində, kart bağlamadan və avtomatik silinmə olmadan. R-Keeper kassası üçün Nyambot ilə inteqrasiya lisenziyasını quraşdırma başlamazdan əvvəl öz R-Keeper dilerindən alırsan. Özün quraşdırırsan — həmin 14 gün e-poçtun təsdiqindən, hesab da bu tarixdən"
       },
       {
         "question": "50% endirimi necə almaq olar?",
-        "answer": "İlk ödənişdən əvvəl yaz — sabitləyəcəyik. İlk 3 ay üçün endirim artıq ödənişli sifariş qəbulu və ya çatdırılma xidmətindən istifadə edənlərə verilir. Ödənişdən əvvəl bizə yaz, hansı xidmətdən istifadə etdiyini təsdiqlə — qiyməti sabitləyəcəyik və o, CRM-də «Lisenziya» bölməsində görünəcək. Endirim tarifin tam qiymətindən hesablanır, digər endirimlərlə və uzun tariflərin sərfəliliyi ilə toplanmır, üç ay isə ilk ödənişdən hesablanır — sınaq dövrü onlara daxil deyil və onlardan əvvəl gəlir"
+        "answer": "İlk ödənişdən əvvəl yaz — sabitləyəcəyik. İlk 3 ay üçün endirim artıq ödənişli sifariş qəbulu və ya çatdırılma xidmətindən istifadə edənlərə verilir. Ödənişdən əvvəl bizə yaz, hansı xidmətdən istifadə etdiyini təsdiqlə — qiyməti sabitləyəcəyik və o, CRM-də «Lisenziya» bölməsində görünəcək. Endirim tarifin tam qiymətindən hesablanır, digər endirimlərlə və uzun tariflərin sərfəliliyi ilə toplanmır, üç ay isə işə salma tarixindən — ilk ödənişli dövrdən hesablanır"
       }
     ]
   },
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
-    "subtitle": "30 gün ödənişsiz. Tam funksionallıq, tam dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
+    "subtitle": "İşə salma pulsuzdur: hər şeyi sənin yerinə yığıb yoxlayırıq, sonra — tam funksionallıq və hər addımda dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
     "button": "Sənin yerinə pulsuz işə salarıq",
     "self": "Özüm quraram",
-    "docs": "Sənədləri oxuyun",
-    "hint": "Yalnız e-poçt lazımdır · Kart bağlamadan · Başlanğıcda 1 nöqtə və 2 bot",
-    "trialFeatures": ["30 gün pulsuz", "Tam giriş", "Kart tələb olunmur"]
+    "docs": "Sənədləri oxu",
+    "hint": "24 saat ərzində əlaqə saxlayırıq · Kart bağlamadan · Tarifdə 1 nöqtə və 2 bot",
+    "trialFeatures": [
+      "Pulsuz işə salma",
+      "Bütün funksiyalar",
+      "Kart tələb olunmur"
+    ]
   },
   "footer": {
-    "description": "MAX və Telegram-ın hər birində bütün şəbəkə üçün bir bot: sifarişlər, çatdırılma və loyallıq. Öz qonaq bazanız və analitikanız",
+    "description": "MAX və Telegram-ın hər birində bütün şəbəkə üçün bir bot: sifarişlər, çatdırılma və loyallıq. Öz qonaq bazan və analitikan",
     "product": "Məhsul",
     "crm": "CRM-i aç",
     "crew": "Personal üçün tətbiq",
@@ -221,7 +225,7 @@
     "pricing": "Tariflər",
     "support": "Dəstək",
     "telegram": "Teleqrama yaz",
-    "max": "MAX-a yazın",
+    "max": "MAX-a yaz",
     "legal": "Hüquqi",
     "privacy": "Məxfilik siyasəti",
     "terms": "İstifadə şərtləri",
@@ -405,7 +409,7 @@
       },
       "faq": {
         "title": "Bütün suallar",
-        "text": "Kassa, ödəniş, çatdırılma, sınaq dövrü və 50% endirim barədə iyirmi beş sual"
+        "text": "Kassa, ödəniş, çatdırılma, işə salma və 50% endirim barədə suallar"
       }
     }
   },
@@ -508,7 +512,7 @@
       },
       {
         "usual": "Qiyməti sorğudan sonra zəngdə deyirlər",
-        "our": "Qiymətlər dərc olunub, qeydiyyat e-poçtla, 30 gün pulsuz"
+        "our": "Qiymətlər saytda dərc olunub: bütün funksiyalarla bir tarif, kart bağlamadan və avtomatik silinmə olmadan"
       }
     ],
     "outcome": "İkinci sifariş daha da sürətlidir: bot artıq çat siyahısındadır, ünvan və telefon yerindədir"

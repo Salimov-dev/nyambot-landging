@@ -325,12 +325,21 @@ export function BriefForm({ onSuccess }: { onSuccess: () => void }) {
             <p className={styles.formError}>
               {BRIEF_FORM_TEXT.errorBefore}
               <a
+                href={LINKS.support.max}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.consentLink}
+              >
+                {BRIEF_FORM_TEXT.errorSupportMax}
+              </a>
+              {BRIEF_FORM_TEXT.errorSupportOr}
+              <a
                 href={LINKS.support.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.consentLink}
               >
-                {BRIEF_FORM_TEXT.errorSupport}
+                {BRIEF_FORM_TEXT.errorSupportTelegram}
               </a>
             </p>
           ) : null}

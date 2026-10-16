@@ -1,4 +1,4 @@
-import { noWidow } from "@/lib/typography/no-widow";
+import { typograph } from "@/lib/typography/typograph";
 import {
   BLOCK_ICON,
   isPhoneVisual,
@@ -88,8 +88,8 @@ export function LandingPage({ content }: IProps) {
         <div className={phoneVisual ? styles.intro : undefined}>
           <div>
             <span className={styles.label}>{content.label}</span>
-            <h1 className={styles.heading}>{noWidow(content.heading)}</h1>
-            <p className={styles.lead}>{noWidow(content.lead)}</p>
+            <h1 className={styles.heading}>{typograph(content.heading)}</h1>
+            <p className={styles.lead}>{typograph(content.lead)}</p>
 
             <LandingPageCta />
           </div>
@@ -127,7 +127,7 @@ export function LandingPage({ content }: IProps) {
                   </span>
                 )}
                 <h2 className={styles.blockTitle}>{block.title}</h2>
-                <p className={styles.blockText}>{noWidow(block.text)}</p>
+                <p className={styles.blockText}>{typograph(block.text)}</p>
                 {block.points ? (
                   <ul className={styles.blockPoints}>
                     {block.points.map((point) => (
@@ -153,7 +153,7 @@ export function LandingPage({ content }: IProps) {
             <ul className={styles.notNeededList}>
               {content.notNeeded.map((item) => (
                 <li key={item} className={styles.notNeededItem}>
-                  {noWidow(item)}
+                  {typograph(item)}
                 </li>
               ))}
             </ul>
@@ -175,8 +175,10 @@ export function LandingPage({ content }: IProps) {
           <div className={styles.faqList}>
             {content.faq.map((item) => (
               <div key={item.question} className={styles.faqItem}>
-                <h3 className={styles.faqQuestion}>{noWidow(item.question)}</h3>
-                <p className={styles.faqAnswer}>{noWidow(item.answer)}</p>
+                <h3 className={styles.faqQuestion}>
+                  {typograph(item.question)}
+                </h3>
+                <p className={styles.faqAnswer}>{typograph(item.answer)}</p>
               </div>
             ))}
           </div>
@@ -190,7 +192,7 @@ export function LandingPage({ content }: IProps) {
         >
           <span className={styles.guideLabel}>{PAGE_TEXT.guideTitle}</span>
           <span className={styles.guideText}>
-            {noWidow(content.guide.label)}
+            {typograph(content.guide.label)}
           </span>
           <span className={styles.guideArrow} aria-hidden="true">
             →

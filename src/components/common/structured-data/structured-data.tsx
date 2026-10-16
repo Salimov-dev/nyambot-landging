@@ -53,8 +53,8 @@ export function StructuredData({ withFaq = false }: IProps) {
         },
         identifier: "ОРН 1129172",
         sameAs: [
-          LINKS.social.telegram,
           LINKS.social.max,
+          LINKS.social.telegram,
           LINKS.social.vk,
           LINKS.social.youtube,
           LINKS.social.rutube,

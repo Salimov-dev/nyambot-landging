@@ -16,7 +16,7 @@
     "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors",
     "cta": "We'll launch it for you — free",
     "ctaSecondary": "See demo",
-    "trial": "30 days free · only an email needed · no card, no sales call"
+    "trial": "Open prices · no commission per order · no card on file, no auto-charges"
   },
   "freeReview": {
     "title": "Turnkey launch — free",
@@ -112,7 +112,7 @@
     "title": "Your whole chain in one dashboard",
     "description": "Menu, orders, analytics, marketing and a shared guest base for the whole chain — in one place. We launch it, then you run it yourself, no developers.",
     "ownDev": "Our own product, not a builder — we answer for features and reliability",
-    "cta": "Open CRM — 30 days free",
+    "cta": "We'll launch it for you — free",
     "ctaHint": "Full access · Full support · No card required",
     "features": {
       "dashboard": "Revenue dashboard",
@@ -137,7 +137,7 @@
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",
     "subtitle": "Fixed payment. One plan — all features without functional limits",
-    "trialNote": "30 days free, no card — all features, 1 location and 2 bots",
+    "trialNote": "Launch is free",
     "popular": "Best balance",
     "bestValue": "Best value",
     "perMonth": "per month",
@@ -153,7 +153,7 @@
     "customSubtitle": "From 2 locations — a custom plan, write to us:",
     "emailCta": "Email",
     "includesLabel": "Included",
-    "includesShort": "1 location, bots in MAX and Telegram — mini-app, CRM, Team app, loyalty, integrations and support. Launch is free",
+    "includesShort": "1 location, bots in MAX and Telegram — mini-app, CRM, Team app, loyalty, integrations and support. Launch is free",
     "switchTitle": "Switching from another service?",
     "switchNote": "Your first 3 months are half price",
     "switchCta": "Get 50% off"
@@ -162,7 +162,7 @@
     "label": "FAQ",
     "title": "Still have questions?",
     "notFound": "Didn't find an answer?",
-    "askSupport": "Ask support",
+    "askSupport": "Ask support:",
     "moreCta": "All questions",
     "items": [
       {
@@ -194,23 +194,23 @@
         "answer": "Turn on notifications in the CRM: «Profile» → «Notifications». A message arrives in Telegram or MAX as soon as the POS stops responding, and another one when it's working again"
       },
       {
-        "question": "How do the trial period and payment at the start work?",
-        "answer": "30 days free, no card and no cut-down features. After sign-up you get full access: the full CRM, the Team app, POS and delivery integrations. You can set everything up yourself or leave the launch to us — it's free, and support answers your questions at every step. The trial runs on standard terms — one location and two bots; integrations connect without limits. Chains and large volumes are discussed separately"
+        "question": "How does the launch work and when do I pay?",
+        "answer": "We launch it for you, free: we build and test the bot and the storefront and hand the account over to you — you connect online payments, the MAX bot and notifications. Then we check an order in the POS and a payment together — and you're live. The first 14 days are a test period: we check every day that everything works. The invoice comes on launch day — for the period from the launch date, to be paid within those 14 days, with no card on file and no auto-charges. On R-Keeper, you buy the Nyambot integration license from your R-Keeper dealer before setup starts. Setting it up yourself — the same 14 days from email confirmation, billed from that date"
       },
       {
         "question": "How do I get 50% off?",
-        "answer": "Write to us before your first payment — we'll lock it in. The discount for the first 3 months is for those who already use a paid ordering or delivery service. Write to us before paying and confirm which service you use — we'll lock in the price, and you'll see it in the CRM under «License». The discount is calculated from the full plan price, doesn't stack with other discounts or the savings of longer plans, and the three months count from your first payment — the trial isn't part of them and comes before them"
+        "answer": "Write to us before your first payment — we'll lock it in. The discount for the first 3 months is for those who already use a paid ordering or delivery service. Write to us before paying and confirm which service you use — we'll lock in the price, and you'll see it in the CRM under «License». The discount is calculated from the full plan price, doesn't stack with other discounts or the savings of longer plans, and the three months count from the launch date — the first billed period"
       }
     ]
   },
   "cta": {
     "title": "Start taking orders in your own channel",
-    "subtitle": "30 days free. Full features, full support. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
+    "subtitle": "Free launch: we build and test everything for you, then you get full features and support at every step. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
     "button": "We'll launch it for you — free",
     "self": "I'll set it up myself",
     "docs": "Read documentation",
-    "hint": "Only an email needed · No card required · 1 location and 2 bots to start",
-    "trialFeatures": ["30 days free", "Full access", "No card required"]
+    "hint": "We'll get back within 24 hours · No card required · 1 location and 2 bots in the plan",
+    "trialFeatures": ["Free launch", "All features", "No card required"]
   },
   "footer": {
     "description": "One bot in MAX and one in Telegram for the whole chain: orders, delivery and loyalty. Your own guest base and analytics",
@@ -405,7 +405,7 @@
       },
       "faq": {
         "title": "All questions",
-        "text": "Twenty-five questions about the POS, payments, delivery, the trial period and the 50% discount"
+        "text": "Questions about the POS, payments, delivery, launch and the 50% discount"
       }
     }
   },
@@ -508,7 +508,7 @@
       },
       {
         "usual": "The price is named on a call after you apply",
-        "our": "Prices are published, sign-up by email, 30 days free"
+        "our": "Prices are published on the site: one plan with all features, no card on file, no auto-charges"
       }
     ],
     "outcome": "The second order is even faster: the bot is already in the chat list, the address and phone are already there"
