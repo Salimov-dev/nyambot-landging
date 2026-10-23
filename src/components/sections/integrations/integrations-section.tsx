@@ -29,7 +29,13 @@ const LOGOS = [
   { id: "iiko", src: "/images/integrations/iiko.png" },
   { id: "rkeeper", src: "/images/integrations/r-keeper.png" },
   { id: "rkDelivery", src: "/images/integrations/rk-delivery-card.png" },
-  { id: "yookassa", src: "/images/integrations/ukassa.png" },
+  // Логотип ЮKassa ведёт на регистрацию магазина по реферальной ссылке
+  // Нямбота (Руслан 23.10.2026)
+  {
+    id: "yookassa",
+    src: "/images/integrations/ukassa.png",
+    href: LINKS.yookassaReferral,
+  },
   { id: "yandexPay", src: "/images/integrations/y-pay.png" },
   { id: "yandexDelivery", src: "/images/integrations/y-delivery.png" },
 ] as const;
@@ -129,6 +135,15 @@ export function IntegrationsSection() {
                   >
                     {image}
                   </button>
+                ) : "href" in logo ? (
+                  <a
+                    href={logo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.logoCard} ${styles.logoLink}`}
+                  >
+                    {image}
+                  </a>
                 ) : (
                   <div className={styles.logoCard}>{image}</div>
                 )}

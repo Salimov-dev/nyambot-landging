@@ -5,6 +5,7 @@ import {
   type IBlockIcon,
   type ILandingPageContent,
 } from "@/config/landing-pages.config";
+import { LinkedText } from "./linked-text";
 import { PageVisual } from "./page-visual";
 import { PageScene } from "./page-scene";
 import { HomeSections } from "./home-sections";
@@ -127,7 +128,9 @@ export function LandingPage({ content }: IProps) {
                   </span>
                 )}
                 <h2 className={styles.blockTitle}>{block.title}</h2>
-                <p className={styles.blockText}>{typograph(block.text)}</p>
+                <p className={styles.blockText}>
+                  <LinkedText text={block.text} />
+                </p>
                 {block.points ? (
                   <ul className={styles.blockPoints}>
                     {block.points.map((point) => (
@@ -178,7 +181,9 @@ export function LandingPage({ content }: IProps) {
                 <h3 className={styles.faqQuestion}>
                   {typograph(item.question)}
                 </h3>
-                <p className={styles.faqAnswer}>{typograph(item.answer)}</p>
+                <p className={styles.faqAnswer}>
+                  <LinkedText text={item.answer} />
+                </p>
               </div>
             ))}
           </div>
