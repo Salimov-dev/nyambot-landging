@@ -427,7 +427,7 @@
       }
     ],
     "text": "Yangi ilovalarni mehmon deyarli oʻrnatmaydi. Saytga esa avval kelish kerak: manzilni eslash, ochish, kirish. Messenjer esa unda baribir ochiq, kuniga oʻnlab marta, sening boting esa chatlar roʻyxatida doʻstlari yonida turadi. Shuning uchun buyurtma kanali mehmon allaqachon bor joyga koʻchmoqda",
-    "outcome": "Buyurtma yozishma bor joyning oʻzida — va buyurtmadan keyin mehmon bilan aloqa uzilmaydi"
+    "outcome": "Buyurtma yozishma bor joyning oʻzida va buyurtmadan keyin mehmon bilan aloqa uzilmaydi"
   },
   "vitrina": {
     "label": "Vitrina",
@@ -472,7 +472,7 @@
       },
       "done": {
         "title": "Buyurtma qabul qilindi",
-        "text": "Mehmon darhol MAX yoki Telegram chatida xabarnoma oladi — keyin har bir holatni koʻradi"
+        "text": "Mehmon darhol MAX yoki Telegram chatida xabarnoma oladi, keyin har bir holatni koʻradi"
       }
     },
     "demoQr": "MAX va Telegram uchun bitta QR-kod — telefon kamerasini toʻgʻrila yoki tugmani bos"

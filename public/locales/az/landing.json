@@ -427,7 +427,7 @@
       }
     ],
     "text": "Qonaq yeni tətbiqləri demək olar ki, quraşdırmır. Sayta isə hələ gəlmək lazımdır: ünvanı xatırlamaq, açmaq, daxil olmaq. Messencer isə onsuz da açıqdır, gündə onlarla dəfə, sənin botun da çat siyahısında dostlarının yanındadır. Buna görə sifariş kanalı qonağın artıq olduğu yerə köçür",
-    "outcome": "Sifariş yazışmanın olduğu yerdədir — və sifarişdən sonra qonaqla əlaqə qırılmır"
+    "outcome": "Sifariş yazışmanın olduğu yerdədir və sifarişdən sonra qonaqla əlaqə qırılmır"
   },
   "vitrina": {
     "label": "Vitrin",
@@ -472,7 +472,7 @@
       },
       "done": {
         "title": "Sifariş qəbul olundu",
-        "text": "Qonaq dərhal MAX və ya Telegram çatında bildiriş alır — sonra hər statusu görür"
+        "text": "Qonaq dərhal MAX və ya Telegram çatında bildiriş alır, sonra hər statusu görür"
       }
     },
     "demoQr": "MAX və Telegram üçün bir QR-kod — telefonun kamerasını tut və ya düyməyə bas"
