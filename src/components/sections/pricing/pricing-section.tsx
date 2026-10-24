@@ -3,21 +3,13 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Badge, Button, Card, Col, Flex, Row, Tag, Typography } from "antd";
-import {
-  CheckIcon,
-  GiftIcon,
-  PercentIcon,
-  StoreIcon,
-} from "@/components/ui/icons/icons";
+import { CheckIcon, GiftIcon, StoreIcon } from "@/components/ui/icons/icons";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import type { PricingPlan } from "@/types/landing.types";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
-import {
-  CONTACT_WIDGET_SOURCE,
-  openContactWidget,
-} from "@/components/ui/contact-widget/contact-widget.events";
 import { theme } from "@/config/theme";
+import { PricingModules } from "./pricing-modules";
 import styles from "./pricing-section.module.css";
 
 const { Title, Text } = Typography;
@@ -32,6 +24,11 @@ interface PricingSectionProps {
  *  как и раньше в карточках, на любом языке страницы. */
 function formatRub(value: number): string {
   return value.toLocaleString("ru-RU");
+}
+
+/** Самая низкая цена в месяц — «от 3 675 ₽» в заголовке тарифов. */
+function lowestMonthly(plans: PricingPlan[]): number {
+  return Math.min(...plans.map((plan) => plan.pricePerMonth));
 }
 
 /** Ключ ленты над тарифом: «Оптимально» или «Выгодно», у остальных — нет. */
@@ -75,7 +72,7 @@ export function PricingSection({ plans }: PricingSectionProps) {
               margin: "12px 0 16px",
             }}
           >
-            {t("pricing.title")}
+            {t("pricing.title", { price: formatRub(lowestMonthly(plans)) })}
           </Title>
           <Text
             style={{
@@ -139,9 +136,10 @@ export function PricingSection({ plans }: PricingSectionProps) {
           <PricingList plans={plans} t={t} />
         </motion.div>
 
-        {/* Под ценами — три короткие карточки в ряд: что в тарифе, переезд со
-            скидкой и сеть (Руслан 06.10.2026: раньше это были три больших
-            блока, потом сплошной текст — «не просто текстом»). */}
+        {/* Под ценами — короткие карточки в ряд: что в тарифе и сеть (Руслан
+            06.10.2026: раньше это были большие блоки, потом сплошной текст —
+            «не просто текстом»). Карточка скидки при переходе снята вместе с
+            акцией (тарифы, раздел 4: акции не проводятся, 24.10.2026). */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -158,28 +156,6 @@ export function PricingSection({ plans }: PricingSectionProps) {
             <span className={styles.detailText}>
               {t("pricing.includesShort")}
             </span>
-          </div>
-
-          {/* Переезд со скидкой 50%: скидку фиксируем до оплаты в чате поддержки */}
-          <div className={styles.detailCard}>
-            <span className={styles.detailIcon}>
-              <PercentIcon size={18} />
-            </span>
-            <span className={styles.detailTitle}>
-              {t("pricing.switchTitle")}
-            </span>
-            <span className={styles.detailText}>{t("pricing.switchNote")}</span>
-            {/* Канал гость выбирает сам: кнопка связи — MAX, Телеграм и почта */}
-            <button
-              type="button"
-              className={`${styles.detailLink} ${styles.detailLinkButton}`}
-              onClick={() => {
-                reachGoal("click_switch");
-                openContactWidget(CONTACT_WIDGET_SOURCE.PRICING_SWITCH);
-              }}
-            >
-              {t("pricing.switchCta")} →
-            </button>
           </div>
 
           <div className={styles.detailCard}>
@@ -221,6 +197,10 @@ export function PricingSection({ plans }: PricingSectionProps) {
             </span>
           </div>
         </motion.div>
+
+        {/* Модули — отдельным блоком под тарифами (Ф10б п. 2): лицензия выше —
+            это сам Нямбот, модули — по желанию и за доплату */}
+        <PricingModules isInView={isInView} />
       </div>
     </section>
   );

@@ -8,8 +8,8 @@ export const CONTACT_WIDGET_OPEN_EVENT = "nyambot:contact-widget-open";
 
 /** Откуда открыли — уходит параметром `from` в цель `open_contact_widget`. */
 export const CONTACT_WIDGET_SOURCE = {
-  /** «Получить скидку 50%» в тарифах: скидку фиксируем в чате поддержки. */
-  PRICING_SWITCH: "pricing_switch",
+  /** «Спросить про модули» под тарифами: вопрос — в любой канал на выбор. */
+  PRICING_MODULES: "pricing_modules",
 } as const;
 
 export type ContactWidgetSource =

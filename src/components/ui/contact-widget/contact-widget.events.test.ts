@@ -7,8 +7,9 @@ import {
 } from "./contact-widget.events";
 
 /**
- * Призыв «Получить скидку 50%» открывает кнопку связи — выбор MAX, Телеграм
- * или почта, — а не ведёт в один мессенджер (Руслан 16.10.2026).
+ * Призыв «Спросить про модули» под тарифами открывает кнопку связи — выбор
+ * MAX, Телеграм или почта, — а не ведёт в один мессенджер (Руслан 16.10.2026;
+ * прежний призыв скидки при переходе снят вместе с акцией 24.10.2026).
  */
 describe("openContactWidget", () => {
   afterEach(() => {
@@ -23,16 +24,16 @@ describe("openContactWidget", () => {
       received.push((event as CustomEvent<ContactWidgetOpenDetail>).detail);
     });
 
-    openContactWidget(CONTACT_WIDGET_SOURCE.PRICING_SWITCH);
+    openContactWidget(CONTACT_WIDGET_SOURCE.PRICING_MODULES);
 
-    expect(received).toEqual([{ from: CONTACT_WIDGET_SOURCE.PRICING_SWITCH }]);
+    expect(received).toEqual([{ from: CONTACT_WIDGET_SOURCE.PRICING_MODULES }]);
   });
 
   it("без window (рендер на сервере) — ничего не делает", () => {
     vi.stubGlobal("window", undefined);
 
     expect(() =>
-      openContactWidget(CONTACT_WIDGET_SOURCE.PRICING_SWITCH),
+      openContactWidget(CONTACT_WIDGET_SOURCE.PRICING_MODULES),
     ).not.toThrow();
   });
 });

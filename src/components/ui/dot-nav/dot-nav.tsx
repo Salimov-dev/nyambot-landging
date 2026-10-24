@@ -12,6 +12,7 @@ const SECTIONS: { id: string; label: string }[] = [
   { id: "why-now", label: "Почему сейчас" },
   { id: "vitrina", label: "Витрина" },
   { id: "guests-path", label: "Гости" },
+  { id: "hall", label: "Зал" },
   { id: "komanda", label: "Команда" },
   { id: "crm-demo", label: "СРМ" },
   { id: "killer", label: "Главное" },

@@ -98,7 +98,7 @@
       },
       "guestChat": {
         "title": "Qonaq soruşur — bot cavab verir",
-        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot növbədəki administratoru çağırır"
+        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — «Çatda Sİ» modulu ilə belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot növbədəki administratoru çağırır"
       },
       "delivery": {
         "title": "Öz ştatın olmadan çatdırılma",
@@ -135,7 +135,7 @@
   "pricing": {
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
-    "subtitle": "Sabit ödəniş. Bir tarif — bütün imkanlar",
+    "subtitle": "Çatdırılma, özün götürmə, MAX və Telegram-da vitrin, loyallıq və «Komanda» — hamısı daxildir. Hər sifarişdən faiz əvəzinə sabit ödəniş",
     "trialNote": "İşə salma pulsuzdur",
     "popular": "Optimal",
     "bestValue": "Sərfəli",
@@ -152,10 +152,7 @@
     "customSubtitle": "2 nöqtədən — fərdi tarif, bizə yaz:",
     "emailCta": "Poçt",
     "includesLabel": "Tarifə daxildir",
-    "includesShort": "1 nöqtə, MAX və Telegram-da botlar — mini-tətbiq, CRM, «Komanda», loyallıq, inteqrasiyalar və dəstək. İşə salma — pulsuz",
-    "switchTitle": "Başqa xidmətdən keçirsən?",
-    "switchNote": "İlk 3 ay — iki dəfə ucuz",
-    "switchCta": "50% endirim al"
+    "includesShort": "1 nöqtə, MAX və Telegram-da botlar — mini-tətbiq, CRM, «Komanda», loyallıq, inteqrasiyalar və dəstək. İşə salma — pulsuz"
   },
   "faq": {
     "label": "Tez-tez verilən suallar",
@@ -182,7 +179,7 @@
       },
       {
         "question": "Qonaq müəssisəyə yaza bilərmi?",
-        "answer": "Bəli, əgər nöqtədə qonaqlarla çat qoşulubsa. Qonaq bota yazır, adi suallara Sİ, qalanlarına isə Telegram və ya MAX-dan növbədəki administrator cavab verir"
+        "answer": "Bəli, nöqtədə qonaqlarla çat açıqdırsa. Qonaq bota yazır, növbədəki administrator isə Telegram və ya MAX-dan cavab verir; tez-tez verilən suallara bot hazır cavablarla cavab verir. «Çatda Sİ» modulu ilə adi suallara Sİ cavab verir, mürəkkəb suallar administratora gedir"
       },
       {
         "question": "Sİ artıq söz deməz ki?",
@@ -195,10 +192,6 @@
       {
         "question": "İşə salma necə keçir və nə vaxt ödəmək lazımdır?",
         "answer": "Sənin yerinə pulsuz işə salırıq: botu və vitrini yığıb yoxlayırıq, kabineti sənə təhvil veririk — sən onlayn ödənişi, MAX botunu və bildirişləri qoşursan. Sonra kassada sifarişi və ödənişi birlikdə yoxlayırıq — və işə salırıq. İlk 14 gün sınaq dövrüdür: hər gün hər şeyin işlədiyini yoxlayırıq. Hesab işə salma günü gəlir — işə salma tarixindən başlayan dövr üçün, ödəniş isə bu 14 gün ərzində, kart bağlamadan və avtomatik silinmə olmadan. R-Keeper kassası üçün Nyambot ilə inteqrasiya lisenziyasını quraşdırma başlamazdan əvvəl öz R-Keeper dilerindən alırsan."
-      },
-      {
-        "question": "50% endirimi necə almaq olar?",
-        "answer": "İlk ödənişdən əvvəl yaz — sabitləyəcəyik. İlk 3 ay üçün endirim artıq ödənişli sifariş qəbulu və ya çatdırılma xidmətindən istifadə edənlərə verilir. Ödənişdən əvvəl bizə yaz, hansı xidmətdən istifadə etdiyini təsdiqlə — qiyməti sabitləyəcəyik və o, CRM-də «Lisenziya» bölməsində görünəcək. Endirim tarifin tam qiymətindən hesablanır, digər endirimlərlə və uzun tariflərin sərfəliliyi ilə toplanmır, üç ay isə işə salma tarixindən — ilk ödənişli dövrdən hesablanır"
       }
     ]
   },
@@ -365,6 +358,10 @@
         "title": "Bütün imkanlar",
         "text": "Nyambot tam olaraq nələri bacarır: loyallıq, yemək konstruktoru, çatdırılma, komanda, analitika"
       },
+      "hall": {
+        "title": "Zalla iş",
+        "text": "Öncədən sifarişlə masa bronu, zalda vaxtına sifariş və masada QR — birbaşa iiko və R-Keeper kassasına"
+      },
       "komanda": {
         "title": "«Komanda» tətbiqi",
         "text": "Növbə administratoru, aşpaz, öz kuryerlərin və Yandex.Dostavka — telefonda, planşetdə və kompüterdə"
@@ -407,7 +404,7 @@
       },
       "faq": {
         "title": "Bütün suallar",
-        "text": "Kassa, ödəniş, çatdırılma, işə salma və 50% endirim barədə suallar"
+        "text": "Kassa, ödəniş, çatdırılma, işə salma, zal və modullar barədə suallar"
       }
     }
   },

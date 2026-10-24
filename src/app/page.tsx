@@ -18,6 +18,7 @@ import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { FaqSection } from "@/components/sections/faq/faq-section";
 import { GuestsPathSection } from "@/components/sections/guests-path/guests-path-section";
 import { KomandaSection } from "@/components/sections/komanda/komanda-section";
+import { HallSection } from "@/components/sections/hall/hall-section";
 import { SolutionsSection } from "@/components/sections/solutions/solutions-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
@@ -51,9 +52,10 @@ export default function LandingPage() {
             себе по ходу чтения, чтобы картина сервиса складывалась по шагам:
             А. Что это и зачем мне — Hero → «Почему сейчас» → «Для любого формата».
             Б. Путь одного заказа — что видит гость («Витрина» с «попробуй сам»)
-               → откуда он приходит → куда уходит заказ (интеграции) → кто его
-               готовит и везёт («Команда») → почему гость вернётся (лояльность)
-               → что видишь ты (кабинет).
+               → откуда он приходит → а ещё зал («Работа с залом», модуль: QR на
+               столе, бронь, заказ ко времени — Ф10б, 21.10.2026) → куда уходит
+               заказ (интеграции) → кто его готовит и везёт («Команда») →
+               почему гость вернётся (лояльность) → что видишь ты (кабинет).
             В. Почему мы и сколько — запуск бесплатно → выгоды и сравнение →
                тарифы → решения → вопросы → действие.
             «Попробуй прямо сейчас» живёт внутри «Витрины» (два телефона с
@@ -64,6 +66,7 @@ export default function LandingPage() {
         <ForWhomSection />
         <VitrinaSection />
         <GuestsPathSection />
+        <HallSection />
         <IntegrationsSection />
         <KomandaSection />
         <LoyaltySection />

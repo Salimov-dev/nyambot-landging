@@ -351,6 +351,26 @@ const SCENES: Record<IPageScene, ISceneEntry> = {
     motion: MOTION.loop,
     color: "#fab005",
   },
+  [PAGE_SCENE.TABLE_QR]: {
+    Scene: own.TableQrScene,
+    motion: MOTION.loop,
+    color: "#14c4a2",
+  },
+  [PAGE_SCENE.BOOKING]: {
+    Scene: own.BookingScene,
+    motion: MOTION.loop,
+    color: "#4dabf7",
+  },
+  [PAGE_SCENE.WAITER]: {
+    Scene: own.WaiterScene,
+    motion: MOTION.loop,
+    color: "#f76707",
+  },
+  [PAGE_SCENE.CALL_WAITER]: {
+    Scene: own.CallWaiterScene,
+    motion: MOTION.loop,
+    color: "#be4bdb",
+  },
 };
 
 /** Ритм сцен — как в их секциях главной */

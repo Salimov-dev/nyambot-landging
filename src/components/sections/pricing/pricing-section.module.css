@@ -239,7 +239,7 @@
 /* Под ценами — три короткие карточки в ряд: в тарифе, переезд, сеть */
 .details {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin: 24px auto 0;
 }
@@ -293,16 +293,6 @@
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
-}
-
-/* Призыв, который открывает кнопку связи, — кнопка, но выглядит как ссылка */
-.detailLinkButton {
-  padding: 0;
-  border: none;
-  background: none;
-  font-family: inherit;
-  text-align: left;
-  cursor: pointer;
 }
 
 .detailLink:hover {

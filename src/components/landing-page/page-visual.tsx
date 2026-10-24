@@ -15,6 +15,7 @@ import {
   RKEEPER_VIDEO,
 } from "@/components/sections/integrations/integrations-video.config";
 import { KOMANDA_VIDEO } from "@/components/sections/komanda/komanda-video.config";
+import { HallPhoneScreen } from "@/components/sections/hall/hall-phone-screen";
 import styles from "./landing-page.module.css";
 
 type IClip = { src: string; poster: string };
@@ -57,6 +58,17 @@ export function PageVisual({ visual }: { visual: IPageVisual }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   // Подсветки групп на подстранице нет — шаги только подписывают ролик
   const onGroupChange = useCallback(() => undefined, []);
+
+  /* «Работа с залом»: ролик — отдельная задача, пока кадр бота за столом */
+  if (visual === PAGE_VISUAL.HALL) {
+    return (
+      <div className={styles.visualPhone}>
+        <PhoneMockup>
+          <HallPhoneScreen />
+        </PhoneMockup>
+      </div>
+    );
+  }
 
   const phone = PHONE[visual];
   if (phone) {

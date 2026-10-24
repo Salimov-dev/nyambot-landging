@@ -1184,3 +1184,106 @@ export function PointsScene() {
     </Svg>
   );
 }
+
+/* ----- Работа с залом (план «Работа с залом», Ф10б): бронь, QR на столе,
+   подача заказа и вызов официанта ----- */
+
+/** Стол с подставкой-QR: скан уходит в телефон — бот знает номер стола */
+export function TableQrScene() {
+  return (
+    <Svg>
+      <g className={s.ln}>
+        <path d="M14 78 H130 M32 78 V102 M112 78 V102" />
+        <path d="M50 78 L60 30 H90 L100 78" />
+      </g>
+      <QrMini x={63} y={40} size={24} />
+      <Phone x={170} y={8} h={94} />
+      <circle
+        cx="104"
+        cy="52"
+        r="5"
+        className={cx(s.solid, s.travel)}
+        style={v(0, 66, 0)}
+      />
+      <g className={s.pop} style={v(0.15)}>
+        <circle cx="197" cy="55" r="15" className={s.solid} />
+        <text x="197" y="61" textAnchor="middle" className={s.glyph}>
+          12
+        </text>
+      </g>
+    </Svg>
+  );
+}
+
+/** Бронь стола: в календаре отмечается свой день и время */
+export function BookingScene() {
+  return (
+    <Svg>
+      <g className={s.ln}>
+        <rect x="56" y="16" width="128" height="88" rx="10" />
+        <path d="M56 38 H184 M86 8 V22 M154 8 V22" />
+      </g>
+      {[0, 1, 2].flatMap((row) =>
+        [0, 1, 2, 3]
+          .filter((col) => !(row === 1 && col === 2))
+          .map((col) => (
+            <rect
+              key={`${row}-${col}`}
+              x={70 + col * 28}
+              y={48 + row * 18}
+              width="16"
+              height="10"
+              rx="3"
+              className={s.faint}
+            />
+          )),
+      )}
+      <Check x={134} y={71} r={10} d={0.05} />
+    </Svg>
+  );
+}
+
+/** Заказ несут к столу: блюдо под крышкой едет от кухни к столу */
+export function WaiterScene() {
+  return (
+    <Svg>
+      <Pos x={14} />
+      <g className={s.ln}>
+        <path d="M140 84 H226 M156 84 V104 M210 84 V104" />
+      </g>
+      <g className={cx(s.ln, s.travel)} style={v(0, 96, 0)}>
+        <path d="M68 78 H104 M72 78 a14 14 0 0 1 28 0 M86 60 v4" />
+      </g>
+      <g className={cx(s.ln, s.appear)} style={v(0.2, 0, 0)}>
+        <path d="M164 84 H200 M168 84 a14 14 0 0 1 28 0 M182 66 v4" />
+      </g>
+      <Check x={212} y={36} r={10} d={0.2} />
+    </Svg>
+  );
+}
+
+/** «Позвать официанта»: кнопка в чате — вызов сразу у администратора */
+export function CallWaiterScene() {
+  return (
+    <Svg>
+      <Phone x={24} y={8} h={94} />
+      <rect
+        x="32"
+        y="62"
+        width="38"
+        height="16"
+        rx="8"
+        className={cx(s.solid, s.pulse)}
+      />
+      <circle
+        cx="86"
+        cy="70"
+        r="5"
+        className={cx(s.solid, s.travel)}
+        style={v(0, 92, -24)}
+      />
+      <Person x={190} y={34} r={11} />
+      <Check x={214} y={22} r={10} d={0.18} />
+    </Svg>
+  );
+}

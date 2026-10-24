@@ -29,8 +29,6 @@ export type MetrikaGoal =
   | "scroll_50"
   | "scroll_75"
   | "scroll_100"
-  // Переезд с агрегатора
-  | "click_switch"
   // Демо-боты
   | "click_max_demo"
   | "click_tg_bot"

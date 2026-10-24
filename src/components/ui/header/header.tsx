@@ -38,6 +38,11 @@ const SOLUTION_LINKS = [
     href: LINKS.pages.features,
   },
   {
+    id: "hall",
+    labelKey: "solutions.items.hall.title",
+    href: LINKS.pages.hall,
+  },
+  {
     id: "komanda",
     labelKey: "solutions.items.komanda.title",
     href: LINKS.pages.komanda,

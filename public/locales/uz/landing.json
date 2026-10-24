@@ -98,7 +98,7 @@
       },
       "guestChat": {
         "title": "Mehmon soʻraydi — bot javob beradi",
-        "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — bunday savollarga SI javob beradi. Agar mehmonga odam kerak boʻlsa, bot smenadagi administratorni chaqiradi"
+        "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — «Chatda SI» moduli bilan bunday savollarga SI javob beradi. Agar mehmonga odam kerak boʻlsa, bot smenadagi administratorni chaqiradi"
       },
       "delivery": {
         "title": "O‘z xodimlarisiz yetkazib berish",
@@ -135,7 +135,7 @@
   "pricing": {
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
-    "subtitle": "Belgilangan to'lov. Bitta tarif — barcha imkoniyatlar",
+    "subtitle": "Yetkazib berish, olib ketish, MAX va Telegram'dagi vitrina, sodiqlik va «Komanda» — hammasi kiritilgan. Har bir buyurtmadan foiz o'rniga belgilangan to'lov",
     "trialNote": "Ishga tushirish bepul",
     "popular": "Optimal",
     "bestValue": "Foydali",
@@ -152,10 +152,7 @@
     "customSubtitle": "2 nuqtadan — individual tarif, bizga yoz:",
     "emailCta": "Pochta",
     "includesLabel": "Tarifda",
-    "includesShort": "1 nuqta, MAX va Telegram'dagi botlar — mini-ilova, CRM, «Komanda», sodiqlik, integratsiyalar va qo'llab-quvvatlash. Ishga tushirish — bepul",
-    "switchTitle": "Boshqa xizmatdan o'tyapsanmi?",
-    "switchNote": "Dastlabki 3 oy — ikki baravar arzon",
-    "switchCta": "50% chegirma olish"
+    "includesShort": "1 nuqta, MAX va Telegram'dagi botlar — mini-ilova, CRM, «Komanda», sodiqlik, integratsiyalar va qo'llab-quvvatlash. Ishga tushirish — bepul"
   },
   "faq": {
     "label": "Ko'p so'raladigan savollar",
@@ -182,7 +179,7 @@
       },
       {
         "question": "Mehmon muassasaga yoza oladimi?",
-        "answer": "Ha, agar nuqtada mehmonlar bilan chat yoqilgan boʻlsa. Mehmon botga yozadi, oddiy savollarga SI, qolganlariga esa Telegram yoki MAXdan smenadagi administrator javob beradi"
+        "answer": "Ha, agar nuqtada mehmonlar bilan chat yoqilgan boʻlsa. Mehmon botga yozadi, smenadagi administrator Telegram yoki MAX'dan javob beradi; koʻp beriladigan savollarga bot tayyor javoblar bilan javob beradi. «Chatda SI» moduli bilan oddiy savollarga SI javob beradi, murakkablari administratorga oʻtadi"
       },
       {
         "question": "SI ortiqcha gapirib qoʻymaydimi?",
@@ -195,10 +192,6 @@
       {
         "question": "Ishga tushirish qanday oʻtadi va qachon toʻlash kerak?",
         "answer": "Sen uchun bepul ishga tushiramiz: bot va vitrinani yigʻib, tekshiramiz, kabinetni senga topshiramiz — sen onlayn toʻlovni, MAX dagi botni va bildirishnomalarni ulaysan. Keyin kassadagi buyurtma va toʻlovni birga tekshiramiz — va ishga tushiramiz. Dastlabki 14 kun — sinov muddati: hammasi ishlayotganini har kuni tekshiramiz. Hisob ishga tushirish kuni keladi — ishga tushirish sanasidan boshlanadigan davr uchun, toʻlov — shu 14 kun ichida, karta bogʻlamasdan va avtomatik yechib olishsiz. Kassa R-Keeper boʻlsa, Nyambot bilan integratsiya litsenziyasini sozlash boshlanishidan oldin oʻz R-Keeper dileringdan sotib olasan."
-      },
-      {
-        "question": "50% chegirmani qanday olish mumkin?",
-        "answer": "Birinchi toʻlovgacha yoz — narxni belgilab qoʻyamiz. Dastlabki 3 oy uchun chegirma buyurtma qabul qilish yoki yetkazib berishning pullik xizmatidan allaqachon foydalanayotganlarga beriladi. Toʻlovgacha bizga yoz, qaysi xizmatdan foydalanayotganingni tasdiqla — biz narxni belgilab qoʻyamiz va u CRMda «Litsenziya» boʻlimida koʻrinadi. Chegirma tarifning toʻliq narxidan hisoblanadi, boshqa chegirmalar va uzoq muddatli tariflar foydasi bilan qoʻshilmaydi, uch oy esa ishga tushirish sanasidan — birinchi toʻlanadigan davrdan boshlab hisoblanadi"
       }
     ]
   },
@@ -365,6 +358,10 @@
         "title": "Barcha imkoniyatlar",
         "text": "Nyambot nimalarni qila oladi: sodiqlik, taom konstruktori, yetkazib berish, jamoa, tahlil"
       },
+      "hall": {
+        "title": "Zal bilan ishlash",
+        "text": "Oldindan buyurtma bilan stol bron qilish, zalda vaqtiga buyurtma va stoldagi QR — toʻgʻridan-toʻgʻri iiko va R-Keeper kassasiga"
+      },
       "komanda": {
         "title": "«Komanda» ilovasi",
         "text": "Smena administratori, oshpaz, o‘z kuryerlaring va Yandex.Delivery — telefon, planshet va kompyuterda"
@@ -407,7 +404,7 @@
       },
       "faq": {
         "title": "Barcha savollar",
-        "text": "Kassa, to‘lov, yetkazib berish, ishga tushirish va 50% chegirma haqida savollar"
+        "text": "Kassa, to‘lov, yetkazib berish, ishga tushirish, zal va modullar haqida savollar"
       }
     }
   },

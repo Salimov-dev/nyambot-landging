@@ -98,7 +98,7 @@
       },
       "guestChat": {
         "title": "The guest asks — the bot answers",
-        "text": "«Where's my order?», «How late are you open?» — AI answers questions like these. If the guest needs a person, the bot calls the admin on shift"
+        "text": "«Where's my order?», «How late are you open?» — with the AI in Chat module, AI answers questions like these. If the guest needs a person, the bot calls the admin on shift"
       },
       "delivery": {
         "title": "Delivery without your own couriers",
@@ -135,7 +135,7 @@
   "pricing": {
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",
-    "subtitle": "Fixed payment. One plan — all features without functional limits",
+    "subtitle": "Delivery, pickup, a storefront in MAX and Telegram, loyalty and the Team app — all included. A fixed fee instead of a cut of every order",
     "trialNote": "Launch is free",
     "popular": "Best balance",
     "bestValue": "Best value",
@@ -152,10 +152,7 @@
     "customSubtitle": "From 2 locations — a custom plan, write to us:",
     "emailCta": "Email",
     "includesLabel": "Included",
-    "includesShort": "1 location, bots in MAX and Telegram — mini-app, CRM, Team app, loyalty, integrations and support. Launch is free",
-    "switchTitle": "Switching from another service?",
-    "switchNote": "Your first 3 months are half price",
-    "switchCta": "Get 50% off"
+    "includesShort": "1 location, bots in MAX and Telegram — mini-app, CRM, Team app, loyalty, integrations and support. Launch is free"
   },
   "faq": {
     "label": "FAQ",
@@ -182,7 +179,7 @@
       },
       {
         "question": "Can a guest message the venue?",
-        "answer": "Yes, if guest chat is turned on for the location. The guest writes to the bot: AI answers the usual questions, and the admin on shift handles the rest from Telegram or MAX"
+        "answer": "Yes, if guest chat is on for the location. The guest writes to the bot and the admin on shift replies — from Telegram or MAX; common questions get ready-made answers. With the AI in Chat module, AI answers everyday questions and passes tricky ones to the admin"
       },
       {
         "question": "Won't the AI say too much?",
@@ -195,10 +192,6 @@
       {
         "question": "How does the launch work and when do I pay?",
         "answer": "We launch it for you, free: we build and test the bot and the storefront and hand the account over to you — you connect online payments, the MAX bot and notifications. Then we check an order in the POS and a payment together — and you're live. The first 14 days are a test period: we check every day that everything works. The invoice comes on launch day — for the period from the launch date, to be paid within those 14 days, with no card on file and no auto-charges. On R-Keeper, you buy the Nyambot integration license from your R-Keeper dealer before setup starts."
-      },
-      {
-        "question": "How do I get 50% off?",
-        "answer": "Write to us before your first payment — we'll lock it in. The discount for the first 3 months is for those who already use a paid ordering or delivery service. Write to us before paying and confirm which service you use — we'll lock in the price, and you'll see it in the CRM under «License». The discount is calculated from the full plan price, doesn't stack with other discounts or the savings of longer plans, and the three months count from the launch date — the first billed period"
       }
     ]
   },
@@ -361,6 +354,10 @@
         "title": "All features",
         "text": "Everything Nyambot can do: loyalty, dish builder, delivery, team, analytics"
       },
+      "hall": {
+        "title": "Dine-in service",
+        "text": "Table booking with pre-orders, dine-in orders for a set time and a QR code on every table — straight into iiko and R-Keeper"
+      },
       "komanda": {
         "title": "Team app",
         "text": "Shift admin, cook, your own couriers and Yandex.Delivery — on a phone, tablet or computer"
@@ -403,7 +400,7 @@
       },
       "faq": {
         "title": "All questions",
-        "text": "Questions about the POS, payments, delivery, launch and the 50% discount"
+        "text": "Questions about the POS, payments, delivery, launch, dine-in and modules"
       }
     }
   },
