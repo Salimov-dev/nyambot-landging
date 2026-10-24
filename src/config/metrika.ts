@@ -53,6 +53,30 @@ export type MetrikaGoal =
   | "click_social_max"
   | "click_social_dzen";
 
+/**
+ * С какой посадочной пришёл человек (Руслан 25.10.2026): кнопка «Запустим за
+ * тебя бесплатно» на вынесенной странице ведёт на `/zapusk?from=<страница>`, а
+ * цели `click_trial`, демо и `lead_form` несут параметр `page` — заявки и
+ * клики видно по каждой странице. Имена целей не меняются: на них опираются
+ * кампании Директа.
+ */
+export const LANDING_FROM_PARAM = "from";
+
+/** Страница — slug адреса без «/»: «rabota-s-zalom». Кривое значение — `null`. */
+const LANDING_PAGE_SLUG = /^[a-z0-9-]{1,48}$/;
+
+/** Slug посадочной из её адреса: «/rabota-s-zalom» → «rabota-s-zalom». */
+export const landingPageSlug = (path: string): string | null => {
+  const slug = path.replace(/^\/+/, "");
+  return LANDING_PAGE_SLUG.test(slug) ? slug : null;
+};
+
+/** Откуда пришёл человек на `/zapusk`: `?from=…` из адреса, иначе `null`. */
+export const readLandingFrom = (search: string): string | null => {
+  const value = new URLSearchParams(search).get(LANDING_FROM_PARAM);
+  return value && LANDING_PAGE_SLUG.test(value) ? value : null;
+};
+
 /** Отправить цель в Яндекс.Метрику */
 export function reachGoal(goal: MetrikaGoal, params?: Record<string, unknown>) {
   const id = ANALYTICS_CONFIG.yandexMetrikaId;

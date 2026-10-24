@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { LINKS } from "@/config/links.config";
-import { reachGoal } from "@/config/metrika";
+import { reachGoal, readLandingFrom } from "@/config/metrika";
 import {
   BRIEF_ERROR_TARGET,
   BRIEF_FIELD_ERROR,
@@ -232,7 +232,9 @@ export function BriefForm({ onSuccess }: { onSuccess: () => void }) {
 
       if (response.ok && reply.ok) {
         clearBriefDraft(storage.current);
-        reachGoal("lead_form");
+        // С какой посадочной пришла заявка — параметром цели (Руслан 25.10).
+        const from = readLandingFrom(window.location.search);
+        reachGoal("lead_form", from ? { page: from } : undefined);
         onSuccess();
         return;
       }

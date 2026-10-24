@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { LINKS } from "@/config/links.config";
-import { reachGoal } from "@/config/metrika";
+import { LANDING_FROM_PARAM, reachGoal } from "@/config/metrika";
 import styles from "./landing-page.module.css";
 
 const CTA_TEXT = {
@@ -19,16 +19,27 @@ const CTA_TEXT = {
   trial: "Цены открыты · без процента с заказа · QR-код на столах",
 } as const;
 
-/** Кнопки посадочной страницы: те же цели Метрики, что на главной, — иначе
- *  конверсии этих страниц не отличить от прямых заходов. */
-export function LandingPageCta() {
+type IProps = {
+  /** Slug страницы («rabota-s-zalom») — в цели и в адрес `/zapusk`; нет — без него. */
+  page: string | null;
+};
+
+/** Кнопки посадочной страницы: те же цели Метрики, что на главной, плюс
+ *  страница — иначе конверсии этих страниц не отличить друг от друга. */
+export function LandingPageCta({ page }: IProps) {
+  const pageParam = page ? { page } : {};
+  const zapuskHref = page
+    ? `${LINKS.pages.zapusk}?${LANDING_FROM_PARAM}=${page}`
+    : LINKS.pages.zapusk;
   return (
     <div className={styles.ctaBlock}>
       <div className={styles.ctaRow}>
         <Link
-          href={LINKS.pages.zapusk}
+          href={zapuskHref}
           className={styles.primaryBtn}
-          onClick={() => reachGoal("click_trial", { to: "zapusk" })}
+          onClick={() =>
+            reachGoal("click_trial", { to: "zapusk", ...pageParam })
+          }
         >
           {CTA_TEXT.primary}
         </Link>
@@ -37,7 +48,7 @@ export function LandingPageCta() {
           target="_blank"
           rel="noopener noreferrer"
           className={styles.secondaryBtn}
-          onClick={() => reachGoal("click_max_demo")}
+          onClick={() => reachGoal("click_max_demo", pageParam)}
         >
           {CTA_TEXT.demoMax}
         </a>
@@ -46,7 +57,7 @@ export function LandingPageCta() {
           target="_blank"
           rel="noopener noreferrer"
           className={styles.secondaryBtn}
-          onClick={() => reachGoal("click_tg_bot")}
+          onClick={() => reachGoal("click_tg_bot", pageParam)}
         >
           {CTA_TEXT.demoTelegram}
         </a>

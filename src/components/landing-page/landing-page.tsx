@@ -9,6 +9,7 @@ import { LandingBlock } from "./landing-block";
 import { HomeSections } from "./home-sections";
 import { FreeReviewSection } from "@/components/sections/free-review/free-review-section";
 import { DemoQrBlock } from "@/components/sections/try-demo/demo-qr-block";
+import { landingPageSlug } from "@/config/metrika";
 import { LandingPageCta } from "./landing-page-cta";
 import { LandingPageShell } from "./landing-page-shell";
 import styles from "./landing-page.module.css";
@@ -56,7 +57,7 @@ export function LandingPage({ content }: IProps) {
             <h1 className={styles.heading}>{typograph(content.heading)}</h1>
             <p className={styles.lead}>{typograph(content.lead)}</p>
 
-            <LandingPageCta />
+            <LandingPageCta page={landingPageSlug(content.path)} />
           </div>
           {phoneVisual && content.visual ? (
             <PageVisual visual={content.visual} />
@@ -131,7 +132,7 @@ export function LandingPage({ content }: IProps) {
           </span>
         </a>
 
-        <LandingPageCta />
+        <LandingPageCta page={landingPageSlug(content.path)} />
       </div>
 
       <script
