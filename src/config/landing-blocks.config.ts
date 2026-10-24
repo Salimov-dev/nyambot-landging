@@ -136,7 +136,7 @@ export const MODULE_BLOCKS: Record<ILicenseModule, ILandingPageBlock> = {
     icon: BLOCK_ICON.QR,
     scene: PAGE_SCENE.TABLE_QR,
     title: "«Работа с залом»",
-    text: "Гость сканирует QR на столе и заказывает сам, не дожидаясь официанта, — заказ сразу уходит в кассу и на кухню, а официанты успевают обслужить больше столов. И бронь стола без звонков — сразу в кассе iiko или R-Keeper.",
+    text: "Гость сканирует QR на столе и заказывает сам, не дожидаясь официанта, — заказ сразу в кассе на его столе, а официанты успевают обслужить больше столов. И бронь стола без звонков — сразу в кассе iiko или R-Keeper.",
     module: LICENSE_MODULE.HALL,
     link: { label: "Подробнее о работе с залом", href: LINKS.pages.hall },
   },
