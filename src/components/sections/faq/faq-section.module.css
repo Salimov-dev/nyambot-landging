@@ -12,6 +12,8 @@
 .header {
   text-align: center;
   margin-bottom: 48px;
+  /* Подзаголовок по центру — строки поровну, без «вдовы» (24.10.2026) */
+  text-wrap: balance;
 }
 
 .collapseWrapper {

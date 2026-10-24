@@ -51,6 +51,15 @@
   transition: transform 0.2s var(--ease-out-quart);
 }
 
+/* Цвет текста закреплён во всех состояниях: сброс стилей antd красит ссылки
+   при наведении в оранжевый — на оранжевой кнопке текст пропадал */
+.button:hover,
+.button:focus,
+.button:active,
+.button:visited {
+  color: #fff;
+}
+
 .button:hover {
   transform: translateY(-2px);
 }
