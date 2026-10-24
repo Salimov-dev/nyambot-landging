@@ -163,15 +163,16 @@ describe("«Как проходит запуск и когда платить»"
     );
   });
 
-  it("цена в ответе «Сколько это стоит?» — из тарифов", () => {
+  it("цена в ответе «Сколько это стоит?» — из тарифов, без помесячной", () => {
     const year = PRICING_PLANS.find((plan) => plan.months === 12);
     const month = PRICING_PLANS.find((plan) => plan.months === 1);
     expect(LICENSE_PRICE_TERMS).toContain(
       `${formatRub(year?.pricePerMonth ?? 0)} ₽`,
     );
-    expect(LICENSE_PRICE_TERMS).toContain(
-      `${formatRub(month?.priceRub ?? 0)} ₽`,
-    );
+    // Руслан 25.10: помесячную цену в ответах не называем.
+    const monthly = `${formatRub(month?.priceRub ?? 0)} ₽`;
+    expect(LICENSE_PRICE_TERMS).not.toContain(monthly);
+    expect(JSON.stringify(LANDING_PAGES)).not.toContain(monthly);
   });
 });
 

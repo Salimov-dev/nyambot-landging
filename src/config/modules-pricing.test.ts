@@ -103,7 +103,7 @@ describe("цены модулей — одна константа", () => {
       LANDING_PAGE.BRON_STOLOV,
       LANDING_PAGE.MODULI,
     ].map((key) => JSON.stringify(LANDING_PAGES[key]));
-    const licenseRub = /3 675|4 900/u;
+    const licenseRub = /3 675/u;
     for (const text of moduleTexts) {
       const prices = [...text.matchAll(/(\d[\d ]*) ₽/gu)].map((match) =>
         match[1].trim(),
