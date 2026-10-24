@@ -16,6 +16,9 @@ interface StepVideoProps<G extends string> {
   videoRef: RefObject<HTMLVideoElement | null>;
   onGroupChange: (group: G | null) => void;
   className?: string;
+  /** Подпись шага под роликом. Выключают, когда шаг подсвечивает сама секция
+   *  своим списком («Работа с залом») — подпись повторила бы пункт рядом */
+  showCaption?: boolean;
 }
 
 /** Ролик продукта 16:10 и подпись текущего шага под ним. Запуск — наблюдателем,
@@ -28,6 +31,7 @@ export function StepVideo<G extends string>({
   videoRef,
   onGroupChange,
   className,
+  showCaption = true,
 }: StepVideoProps<G>) {
   const { t } = useTranslation("landing");
   const { step, held, toggle } = useVideoSteps(videoRef, steps);
@@ -61,9 +65,11 @@ export function StepVideo<G extends string>({
           <PlayPauseIcon paused={held} />
         </button>
       </div>
-      <p key={step} className={styles.caption}>
-        {t(steps[step].key)}
-      </p>
+      {showCaption ? (
+        <p key={step} className={styles.caption}>
+          {t(steps[step].key)}
+        </p>
+      ) : null}
     </div>
   );
 }

@@ -15,7 +15,7 @@ import {
   RKEEPER_VIDEO,
 } from "@/components/sections/integrations/integrations-video.config";
 import { KOMANDA_VIDEO } from "@/components/sections/komanda/komanda-video.config";
-import { HallPhoneScreen } from "@/components/sections/hall/hall-phone-screen";
+import { HALL_VIDEO } from "@/components/sections/hall/hall-section.config";
 import styles from "./landing-page.module.css";
 
 type IClip = { src: string; poster: string };
@@ -51,6 +51,8 @@ const STEPS: Partial<
   [PAGE_VISUAL.KASSY_IIKO]: IIKO_VIDEO,
   [PAGE_VISUAL.KASSY_RKEEPER]: RKEEPER_VIDEO,
   [PAGE_VISUAL.KOMANDA]: KOMANDA_VIDEO,
+  /* QR на столе, заказ и бронь сразу в кассе; подпись шага — пункт блока главной */
+  [PAGE_VISUAL.HALL]: HALL_VIDEO,
 };
 
 /** Ролик первого экрана подстраницы */
@@ -58,17 +60,6 @@ export function PageVisual({ visual }: { visual: IPageVisual }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   // Подсветки групп на подстранице нет — шаги только подписывают ролик
   const onGroupChange = useCallback(() => undefined, []);
-
-  /* «Работа с залом»: ролик — отдельная задача, пока кадр бота за столом */
-  if (visual === PAGE_VISUAL.HALL) {
-    return (
-      <div className={styles.visualPhone}>
-        <PhoneMockup>
-          <HallPhoneScreen />
-        </PhoneMockup>
-      </div>
-    );
-  }
 
   const phone = PHONE[visual];
   if (phone) {
