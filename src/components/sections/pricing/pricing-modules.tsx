@@ -9,10 +9,9 @@ import { LINKS } from "@/config/links.config";
 import {
   LICENSE_MODULE,
   LICENSE_MODULES,
-  MODULES_PRICING,
   type ILicenseModule,
 } from "@/config/modules-pricing.config";
-import { ModuleTerms } from "@/components/landing-page/module-terms";
+import { ModulePrice } from "@/components/landing-page/module-price";
 import {
   CONTACT_WIDGET_SOURCE,
   openContactWidget,
@@ -59,8 +58,6 @@ const MODULE_RULE = {
 
 const MODULE_RULES = Object.values(MODULE_RULE);
 
-const formatRub = (value: number): string => value.toLocaleString("ru-RU");
-
 /**
  * Модули под тарифами (план «Работа с залом», Ф10б п. 2, Р21: понятно с
  * первого взгляда). Тарифы выше — это сам Нямбот, модули расширяют его: тексты
@@ -68,11 +65,10 @@ const formatRub = (value: number): string => value.toLocaleString("ru-RU");
  * фактом, без «по желанию» и «за доплату» (Руслан 24.10.2026). Цены — из
  * `modules-pricing.config.ts`, одной константы с остальным лендингом.
  *
- * Цены за 3, 6 и 12 месяцев — строками, как на странице /moduli, с бейджем
- * выгоды «−10%» тем же зелёным, что у тарифов лицензии (`ModuleTerms`; месяц
- * не повторяем — он крупно выше). Карточки — на общей сетке (subgrid): тег,
- * название, цена, пункты, сроки, условие и «Подробнее» у обеих стоят на одних
- * уровнях, «Подробнее» прижата к низу.
+ * Цена — крупно за месяц за точку и тихой строкой срок (`ModulePrice`, как на
+ * /moduli); скидки за срок у модулей нет (Руслан 24.10.2026). Карточки — на
+ * общей сетке (subgrid): тег, название, цена, пункты, условие и «Подробнее» у
+ * обеих стоят на одних уровнях, «Подробнее» прижата к низу.
  *
  * Тексты пока только в ru-локали: на другом языке блок не рисуется.
  */
@@ -102,14 +98,7 @@ export function PricingModules({ isInView }: { isInView: boolean }) {
             <h4 className={styles.name}>
               {t(`pricing.modules.items.${licenseModule}.name`)}
             </h4>
-            <p className={styles.price}>
-              <span className={styles.priceValue}>
-                {formatRub(MODULES_PRICING[licenseModule].priceRub[1])} ₽
-              </span>
-              <span className={styles.perMonth}>
-                {t("pricing.modules.perMonth")}
-              </span>
-            </p>
+            <ModulePrice module={licenseModule} className={styles.price} />
 
             <ul className={styles.points}>
               {MODULE_POINTS[licenseModule].map((point) => (
@@ -119,12 +108,6 @@ export function PricingModules({ isInView }: { isInView: boolean }) {
                 </li>
               ))}
             </ul>
-
-            <ModuleTerms
-              module={licenseModule}
-              longTermsOnly
-              className={styles.terms}
-            />
 
             <p className={styles.note}>
               {t(`pricing.modules.items.${licenseModule}.note`)}

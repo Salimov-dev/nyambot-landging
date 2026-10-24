@@ -4,13 +4,11 @@ import { describe, expect, it } from "vitest";
 import {
   LICENSE_MODULE,
   LICENSE_MODULES,
-  MODULE_TERM_MONTHS,
   MODULES_PRICING,
   formatRubSpaced,
   moduleMonthlyRub,
-  moduleTermDiscountPercent,
+  modulePriceForMonthsRub,
 } from "@/config/modules-pricing.config";
-import { PRICING_PLANS } from "@/config/pricing.config";
 import {
   HALL_PRICE_TERMS,
   LANDING_PAGE,
@@ -24,6 +22,10 @@ import {
  * каталог main-server показывают одни и те же цены, а одна правка константы
  * меняет все места лендинга.
  *
+ * 🔴 Скидки за срок у модулей нет (Руслан 24.10.2026): цена за срок —
+ * месячная, умноженная на число месяцев; лендинг цен за 3, 6 и 12 месяцев и
+ * процентов выгоды у модулей не показывает.
+ *
  * Тарифы лежат в соседнем репозитории main-server — сверяем с ними, когда
  * рабочее пространство собрано целиком (локально); в одиночной сборке
  * лендинга файла нет, и сверка с ним пропускается.
@@ -35,12 +37,17 @@ const TARIFFS_FILE = resolve(
 );
 const LOCALES_DIR = join(LANDING_DIR, "public/locales");
 
+/** Сроки модуля в таблице тарифов */
+const TERM_LABEL: Record<number, string> = {
+  1: "1 месяц",
+  3: "3 месяца",
+  6: "6 месяцев",
+  12: "12 месяцев",
+};
+const TERMS = [1, 3, 6, 12] as const;
+
 type IRuModules = {
-  pricing: {
-    modules: {
-      rules: Record<string, string>;
-    };
-  };
+  pricing: { modules: { rules: Record<string, string> } };
   hallBlock: { label: string };
 };
 
@@ -52,64 +59,42 @@ const readRu = (): IRuModules =>
 /** «2 490 ₽» в тексте тарифов → 2490 */
 const parseRub = (cell: string): number => Number(cell.replace(/[^\d]/gu, ""));
 
-/** Название срока в таблице тарифов */
-const TERM_LABEL: Record<number, string> = {
-  1: "1 месяц",
-  3: "3 месяца",
-  6: "6 месяцев",
-  12: "12 месяцев",
+const collectStrings = (value: unknown): string[] => {
+  if (typeof value === "string") return [value];
+  if (value && typeof value === "object")
+    return Object.values(value).flatMap(collectStrings);
+  return [];
 };
 
 describe("цены модулей — одна константа", () => {
-  it.each(LICENSE_MODULES)(
-    "%s — все сроки, длинный срок выгоднее",
-    (licenseModule) => {
-      const prices = MODULES_PRICING[licenseModule].priceRub;
-      for (const months of MODULE_TERM_MONTHS)
-        expect(prices[months]).toBeGreaterThan(0);
-      for (const months of MODULE_TERM_MONTHS.filter((term) => term > 1))
-        expect(prices[months] / months).toBeLessThan(prices[1]);
-    },
-  );
-
   it("цены — как в каталоге 24.10.2026", () => {
-    expect(MODULES_PRICING[LICENSE_MODULE.HALL].priceRub).toEqual({
-      1: 2490,
-      3: 6700,
-      6: 12650,
-      12: 22400,
-    });
-    expect(MODULES_PRICING[LICENSE_MODULE.AI_CHAT].priceRub).toEqual({
-      1: 990,
-      3: 2670,
-      6: 5030,
-      12: 8900,
-    });
+    expect(moduleMonthlyRub(LICENSE_MODULE.HALL)).toBe(2490);
+    expect(moduleMonthlyRub(LICENSE_MODULE.AI_CHAT)).toBe(990);
   });
 
-  it("страницы берут цены из константы", () => {
-    const hall = MODULES_PRICING[LICENSE_MODULE.HALL].priceRub;
-    for (const months of MODULE_TERM_MONTHS)
-      expect(HALL_PRICE_TERMS).toContain(`${formatRubSpaced(hall[months])} ₽`);
+  it("скидки за срок нет: цена за срок = месяц × число месяцев", () => {
+    expect(
+      TERMS.map((m) => modulePriceForMonthsRub(LICENSE_MODULE.HALL, m)),
+    ).toEqual([2490, 7470, 14940, 29880]);
+    expect(
+      TERMS.map((m) => modulePriceForMonthsRub(LICENSE_MODULE.AI_CHAT, m)),
+    ).toEqual([990, 2970, 5940, 11880]);
+  });
+
+  it("страницы берут цену из константы", () => {
     for (const licenseModule of LICENSE_MODULES)
       expect(MODULES_PRICE_TERMS).toContain(
         `${formatRubSpaced(moduleMonthlyRub(licenseModule))} ₽ в месяц за точку`,
       );
-
-    const modulesPage = JSON.stringify(LANDING_PAGES[LANDING_PAGE.MODULI]);
-    for (const licenseModule of LICENSE_MODULES)
-      for (const months of MODULE_TERM_MONTHS)
-        expect(modulesPage).toContain(
-          `${formatRubSpaced(MODULES_PRICING[licenseModule].priceRub[months])} ₽`,
-        );
+    expect(HALL_PRICE_TERMS).toContain(
+      `${formatRubSpaced(moduleMonthlyRub(LICENSE_MODULE.HALL))} ₽ в месяц за точку`,
+    );
   });
 
-  it("на страницах нет цен модулей мимо константы", () => {
+  it("на страницах модулей нет цен мимо константы", () => {
     const allowed = new Set(
-      LICENSE_MODULES.flatMap((licenseModule) =>
-        MODULE_TERM_MONTHS.map((months) =>
-          formatRubSpaced(MODULES_PRICING[licenseModule].priceRub[months]),
-        ),
+      LICENSE_MODULES.map((licenseModule) =>
+        formatRubSpaced(moduleMonthlyRub(licenseModule)),
       ),
     );
     const moduleTexts = [
@@ -126,6 +111,16 @@ describe("цены модулей — одна константа", () => {
       for (const price of prices)
         if (!licenseRub.test(price)) expect(allowed).toContain(price);
     }
+  });
+
+  it("о модулях нет «выгоднее на срок» и процентов выгоды", () => {
+    const ruTexts = collectStrings([
+      JSON.parse(readFileSync(join(LOCALES_DIR, "ru", "landing.json"), "utf8")),
+      LANDING_PAGES,
+    ]);
+    const termDiscount =
+      /тем выгоднее|дешевле при оплате за срок|выгоднее на срок|срок дольше — выгоднее/iu;
+    expect(ruTexts.filter((text) => termDiscount.test(text))).toEqual([]);
   });
 
   it("названия модулей те же, что в константе", () => {
@@ -145,21 +140,6 @@ describe("цены модулей — одна константа", () => {
       /подключаются к лицензии Нямбота/u,
     );
   });
-
-  /* Выгода срока — бейджем «−10%» у цены срока, как у тарифов лицензии:
-     числа считаются из цен вниз и совпадают с выгодой лицензии на тот же
-     срок; у месяца выгоды нет */
-  it.each(LICENSE_MODULES)(
-    "%s — выгода сроков как у лицензии",
-    (licenseModule) => {
-      for (const months of MODULE_TERM_MONTHS) {
-        const plan = PRICING_PLANS.find((item) => item.months === months);
-        expect(moduleTermDiscountPercent(licenseModule, months)).toBe(
-          plan?.discountPercent,
-        );
-      }
-    },
-  );
 });
 
 describe.skipIf(!existsSync(TARIFFS_FILE))(
@@ -175,17 +155,17 @@ describe.skipIf(!existsSync(TARIFFS_FILE))(
       expect(section).toContain("«ИИ в чате»");
     });
 
-    it.each(MODULE_TERM_MONTHS)("срок %i мес — те же цены", (months) => {
+    it.each(TERMS)("срок %i мес — месяц × срок", (months) => {
       const row = section
         .split("\n")
         .find((line) => line.startsWith(`| ${TERM_LABEL[months]} `));
       const cells = row?.split("|").map((cell) => cell.trim()) ?? [];
       // | Срок | «Работа с залом» | «ИИ в чате» |
       expect(parseRub(cells[2] ?? "")).toBe(
-        MODULES_PRICING[LICENSE_MODULE.HALL].priceRub[months],
+        modulePriceForMonthsRub(LICENSE_MODULE.HALL, months),
       );
       expect(parseRub(cells[3] ?? "")).toBe(
-        MODULES_PRICING[LICENSE_MODULE.AI_CHAT].priceRub[months],
+        modulePriceForMonthsRub(LICENSE_MODULE.AI_CHAT, months),
       );
     });
 

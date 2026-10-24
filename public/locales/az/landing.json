@@ -70,7 +70,7 @@
         "text": "Qonaq kodu skan edir və messenceri özü seçir. Kodu öz domenində saxla — Nyambotdan getsən belə, o səninki qalacaq"
       }
     },
-    "pricingNote": "Bir tarif — bütün imkanlar məhdudiyyətsiz. Qiymətlər bu səhifədədir, «sorğu ilə» deyil",
+    "pricingNote": "Çatdırılma və özün götürmə üçün hər şey lisenziyadadır — sifarişdən faiz yoxdur. Qiymətlər bu səhifədədir, «sorğu ilə» deyil",
     "pricingCta": "Tariflərə bax",
     "category": "Quraşdırılmalı olan ayrıca tətbiq deyil. Gəlib girilməli olan sayt deyil. Faiz alan və qonağı özündə saxlayan aqreqator deyil. Öz brendli sifariş tətbiqin — proqramlaşdırma olmadan"
   },
@@ -135,7 +135,7 @@
   "pricing": {
     "label": "Tariflər",
     "title": "Gizli komissiyasız şəffaf qiymətlər",
-    "subtitle": "Çatdırılma, özün götürmə, MAX və Telegram-da vitrin, loyallıq və «Komanda» — hamısı daxildir. Hər sifarişdən faiz əvəzinə sabit ödəniş",
+    "subtitle": "Lisenziyaya daxildir: çatdırılma, özün götürmə, MAX və Telegram-da vitrin, loyallıq və «Komanda». Zalla iş və «Çatda Sİ» — modullarla. Hər sifarişdən faiz əvəzinə sabit ödəniş",
     "trialNote": "İşə salma pulsuzdur",
     "popular": "Optimal",
     "bestValue": "Sərfəli",
@@ -197,13 +197,13 @@
   },
   "cta": {
     "title": "Öz kanalında sifariş qəbuluna başla",
-    "subtitle": "İşə salma pulsuzdur: hər şeyi sənin yerinə yığıb yoxlayırıq, sonra — tam funksionallıq və hər addımda dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
+    "subtitle": "İşə salma pulsuzdur: hər şeyi sənin yerinə yığıb yoxlayırıq, sonra — çatdırılma və özün götürmə üçün hər şey lisenziyada və hər addımda dəstək. MAX və Telegram-da öz sifariş kanalın: qonaqlar, onların tarixçəsi və təkrar sifarişləri səndə qalır. Bir neçə nöqtə? Yaz — miqyasına uyğun şərtlər seçərik",
     "button": "Sənin yerinə pulsuz işə salarıq",
     "docs": "Sənədləri oxu",
     "hint": "24 saat ərzində əlaqə saxlayırıq · Kart bağlamadan · Tarifdə 1 nöqtə və 2 bot",
     "trialFeatures": [
       "Pulsuz işə salma",
-      "Bütün funksiyalar",
+      "Sifarişdən faiz yoxdur",
       "Kart tələb olunmur"
     ]
   },
@@ -507,7 +507,7 @@
       },
       {
         "usual": "Qiyməti sorğudan sonra zəngdə deyirlər",
-        "our": "Qiymətlər saytda dərc olunub: bütün funksiyalarla bir tarif, kart bağlamadan və avtomatik silinmə olmadan"
+        "our": "Qiymətlər saytda dərc olunub: lisenziya və modullar, kart bağlamadan və avtomatik silinmə olmadan"
       }
     ],
     "outcome": "İkinci sifariş daha da sürətlidir: bot artıq çat siyahısındadır, ünvan və telefon yerindədir"

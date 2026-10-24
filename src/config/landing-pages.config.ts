@@ -7,7 +7,6 @@ import {
 } from "@/config/landing-blocks.config";
 import {
   LICENSE_MODULE,
-  MODULES_PRICING,
   formatRubSpaced,
   moduleMonthlyRub,
 } from "@/config/modules-pricing.config";
@@ -151,9 +150,6 @@ export const LICENSE_PRICE_TERMS =
    Цены — из `modules-pricing.config.ts`: одна правка цены меняет все страницы.
    🔴 Причину цены «ИИ в чате» не называем нигде (Р10). */
 
-const HALL_PRICES = MODULES_PRICING[LICENSE_MODULE.HALL].priceRub;
-const AI_CHAT_PRICES = MODULES_PRICING[LICENSE_MODULE.AI_CHAT].priceRub;
-
 /** «2 490 ₽» */
 const rub = (value: number): string => `${formatRubSpaced(value)} ₽`;
 
@@ -167,7 +163,7 @@ const AI_CHAT_MONTHLY = `${rub(moduleMonthlyRub(LICENSE_MODULE.AI_CHAT))} в м�
  * Ответ «Сколько стоит работа с залом?» — одним текстом на всех страницах
  * зала. Условия — раздел 1А тарифов: только к лицензии, срок — в её пределах.
  */
-export const HALL_PRICE_TERMS = `«Работа с залом» подключается к лицензии Нямбота: ${HALL_MONTHLY}, на 3, 6 и 12 месяцев — ${rub(HALL_PRICES[3])}, ${rub(HALL_PRICES[6])} и ${rub(HALL_PRICES[12])}: чем дольше срок, тем выгоднее месяц. Подключим вместе с запуском Нямбота или в любой момент позже — напиши нам; срок модуля — в пределах оплаченной лицензии.`;
+export const HALL_PRICE_TERMS = `«Работа с залом» подключается к лицензии Нямбота: ${HALL_MONTHLY}, оплата — за месяц или сразу на срок до конца лицензии. Подключим вместе с запуском Нямбота или в любой момент позже — напиши нам; срок модуля — в пределах оплаченной лицензии.`;
 
 /** Оба модуля и их цены — для FAQ «Вопросов» и страницы модулей */
 export const MODULES_PRICE_TERMS = `Модули расширяют Нямбот: «Работа с залом» — гость сам бронирует стол и заказывает со стола, а бронь и заказ сразу в кассе, ${HALL_MONTHLY}; «ИИ в чате» — гость сразу получает ответ про меню и свой заказ, ${AI_CHAT_MONTHLY}. Модули подключаются к лицензии Нямбота — подключим вместе с запуском или в любой момент позже, срок модуля — в пределах лицензии.`;
@@ -999,7 +995,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       {
         question: "Что такое MAX и нужен ли он мне?",
         answer:
-          "MAX — российский мессенджер с растущей аудиторией и поддержкой мини-приложений. Бот в MAX — ещё один канал продаж без доплаты: боты в MAX и Телеграм уже входят в тариф, а гости из MAX попадают в ту же базу, что и гости из Телеграм, — отдельной базы и отдельной настройки не нужно",
+          "MAX — российский мессенджер с растущей аудиторией и поддержкой мини-приложений. Бот в MAX — ещё один канал продаж: боты в MAX и Телеграм уже входят в тариф, а гости из MAX попадают в ту же базу, что и гости из Телеграм, — отдельной базы и отдельной настройки не нужно",
       },
       {
         question: "Как быстро можно начать принимать заказы?",
@@ -1798,8 +1794,8 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       {
         icon: BLOCK_ICON.MONEY,
         scene: PAGE_SCENE.PRICES,
-        title: "Чем дольше срок — тем выгоднее",
-        text: "«Работа с залом» подключается к лицензии Нямбота для точек с кассой iiko или R-Keeper — подключим вместе с запуском или в любой момент позже. Цена — за одну точку, срок — в пределах лицензии.",
+        title: "Одна цена за точку",
+        text: "«Работа с залом» подключается к лицензии Нямбота для точек с кассой iiko или R-Keeper — подключим вместе с запуском или в любой момент позже, на одну точку или на всю сеть.",
         module: LICENSE_MODULE.HALL,
         link: { label: "Все модули и цены", href: LINKS.pages.modules },
       },
@@ -2106,7 +2102,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       },
       {
         question: "Сколько стоят модули?",
-        answer: `«Работа с залом» — ${HALL_MONTHLY}, на 3, 6 и 12 месяцев — ${rub(HALL_PRICES[3])}, ${rub(HALL_PRICES[6])} и ${rub(HALL_PRICES[12])}. «ИИ в чате» — ${AI_CHAT_MONTHLY}, на 3, 6 и 12 месяцев — ${rub(AI_CHAT_PRICES[3])}, ${rub(AI_CHAT_PRICES[6])} и ${rub(AI_CHAT_PRICES[12])}. Чем дольше срок, тем выгоднее месяц. ${LICENSE_PRICE_TERMS}`,
+        answer: `«Работа с залом» — ${HALL_MONTHLY}, «ИИ в чате» — ${AI_CHAT_MONTHLY}. Оплата — за месяц или сразу на срок до конца лицензии: цена — месячная, умноженная на число месяцев. ${LICENSE_PRICE_TERMS}`,
       },
       {
         question: "Как подключить модуль?",

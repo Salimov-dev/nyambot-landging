@@ -70,7 +70,7 @@
         "text": "The guest scans the code and picks the messenger. Keep the code on your own domain and it stays yours even if you leave Nyambot"
       }
     },
-    "pricingNote": "One plan — every feature, no limits. Prices are on this page, not «on request»",
+    "pricingNote": "Everything for delivery and pickup is in the license — no cut of orders. Prices are on this page, not «on request»",
     "pricingCta": "See pricing",
     "category": "Not a separate app guests have to install. Not a website they have to visit. Not an aggregator that takes a cut and keeps the guest for itself. Your own branded ordering app — no development needed"
   },
@@ -135,7 +135,7 @@
   "pricing": {
     "label": "Pricing",
     "title": "Transparent prices with no hidden fees",
-    "subtitle": "Delivery, pickup, a storefront in MAX and Telegram, loyalty and the Team app — all included. A fixed fee instead of a cut of every order",
+    "subtitle": "Included in the license: delivery, pickup, a storefront in MAX and Telegram, loyalty and the Team app. Dine-in and AI in Chat come as modules. A fixed fee instead of a cut of every order",
     "trialNote": "Launch is free",
     "popular": "Best balance",
     "bestValue": "Best value",
@@ -197,11 +197,11 @@
   },
   "cta": {
     "title": "Start taking orders in your own channel",
-    "subtitle": "Free launch: we build and test everything for you, then you get full features and support at every step. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
+    "subtitle": "Free launch: we build and test everything for you, then everything for delivery and pickup comes with the license, plus support at every step. Your own ordering channel in MAX and Telegram: the guests, their history and their repeat orders stay with you. More than one location? Write to us — we'll tailor terms to your scale",
     "button": "We'll launch it for you — free",
     "docs": "Read documentation",
     "hint": "We'll get back within 24 hours · No card required · 1 location and 2 bots in the plan",
-    "trialFeatures": ["Free launch", "All features", "No card required"]
+    "trialFeatures": ["Free launch", "No cut of orders", "No card required"]
   },
   "footer": {
     "description": "One bot in MAX and one in Telegram for the whole chain: orders, delivery and loyalty. Your own guest base and analytics",
@@ -503,7 +503,7 @@
       },
       {
         "usual": "The price is named on a call after you apply",
-        "our": "Prices are published on the site: one plan with all features, no card on file, no auto-charges"
+        "our": "Prices are published on the site: the license and modules, no card on file, no auto-charges"
       }
     ],
     "outcome": "The second order is even faster: the bot is already in the chat list, the address and phone are already there"

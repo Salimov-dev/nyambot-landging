@@ -70,7 +70,7 @@
         "text": "Mehmon kodni skanerlaydi va messenjerni o‘zi tanlaydi. Kodni o‘z domeningda saqlasang, Nyambotdan ketsang ham u seniki bo‘lib qoladi"
       }
     },
-    "pricingNote": "Bitta tarif — barcha imkoniyatlar cheklovsiz. Narxlar shu sahifada, «soʻrov boʻyicha» emas",
+    "pricingNote": "Yetkazib berish va olib ketish uchun hammasi litsenziyada — buyurtmadan foiz yoʻq. Narxlar shu sahifada, «soʻrov boʻyicha» emas",
     "pricingCta": "Tariflarni koʻrish",
     "category": "Oʻrnatish kerak boʻlgan alohida ilova emas. Kirib kelish kerak boʻlgan sayt emas. Foiz olib, mehmonni oʻzida qoldiradigan agregator emas. Oʻz brendlangan buyurtma ilovang — dasturlashsiz"
   },
@@ -135,7 +135,7 @@
   "pricing": {
     "label": "Tariflar",
     "title": "Yashirin komissiyalarsiz shaffof narxlar",
-    "subtitle": "Yetkazib berish, olib ketish, MAX va Telegram'dagi vitrina, sodiqlik va «Komanda» — hammasi kiritilgan. Har bir buyurtmadan foiz o'rniga belgilangan to'lov",
+    "subtitle": "Litsenziyada: yetkazib berish, olib ketish, MAX va Telegram'dagi vitrina, sodiqlik va «Komanda». Zal bilan ishlash va «Chatda SI» — modullar bilan. Har bir buyurtmadan foiz o'rniga belgilangan to'lov",
     "trialNote": "Ishga tushirish bepul",
     "popular": "Optimal",
     "bestValue": "Foydali",
@@ -197,13 +197,13 @@
   },
   "cta": {
     "title": "O'z kanalingda buyurtma qabul qilishni boshla",
-    "subtitle": "Ishga tushirish bepul: hammasini sen uchun yigʻib, tekshiramiz, keyin — toʻliq funksional va har qadamda qoʻllab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
+    "subtitle": "Ishga tushirish bepul: hammasini sen uchun yigʻib, tekshiramiz, keyin — yetkazib berish va olib ketish uchun hammasi litsenziyada va har qadamda qoʻllab-quvvatlash. MAX va Telegram'da o'z buyurtma kanaling: mehmonlar, ularning tarixi va takroriy buyurtmalari sende qoladi. Bir nechta nuqtami? Yoz — miqyosingga mos shartlarni tanlaymiz",
     "button": "Sen uchun bepul ishga tushiramiz",
     "docs": "Hujjatlarni o'qish",
     "hint": "24 soat ichida bogʻlanamiz · Kartasiz · Tarifda 1 nuqta va 2 bot",
     "trialFeatures": [
       "Bepul ishga tushirish",
-      "Barcha funksiyalar",
+      "Buyurtmadan foiz yoʻq",
       "Karta kerak emas"
     ]
   },
@@ -507,7 +507,7 @@
       },
       {
         "usual": "Narxni arizadan keyin qoʻngʻiroqda aytishadi",
-        "our": "Narxlar saytda eʼlon qilingan: barcha funksiyalar bilan bitta tarif, karta bogʻlamasdan va avtomatik yechib olishsiz"
+        "our": "Narxlar saytda eʼlon qilingan: litsenziya va modullar, karta bogʻlamasdan va avtomatik yechib olishsiz"
       }
     ],
     "outcome": "Ikkinchi buyurtma — yanada tezroq: bot allaqachon chatlar roʻyxatida, manzil va telefon joyida"

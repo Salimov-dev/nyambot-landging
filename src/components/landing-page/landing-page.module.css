@@ -416,70 +416,42 @@
   list-style: none;
 }
 
-/* Цены модуля по срокам (ModuleTerms) — отдельным блоком под тонкой линией,
-   без галочек выгод: срок слева, цена и бейдж выгоды справа, цифры одной
-   ширины (Руслан 24.10.2026: «отдели стоимость от преимуществ»). Блок прижат
+/* Цена модуля (ModulePrice) — крупно за месяц, под ней тихо срок. Прижата
    к низу карточки: у соседей в ряду цены стоят на одном уровне */
-.moduleTerms {
+.modulePrice {
   margin-top: auto;
   padding-top: 18px;
 }
 
-.moduleTermsBody {
-  padding-top: 14px;
-  border-top: 1px solid var(--border-light);
+.modulePriceMain {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0;
 }
 
-.moduleTermsLabel {
-  display: block;
-  margin-bottom: 8px;
+.modulePriceValue {
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.modulePricePer {
   color: var(--text-tertiary);
   font-size: 13px;
-  font-weight: 600;
 }
 
-.moduleTermsList {
-  display: grid;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.modulePriceTerm {
+  margin: 6px 0 0;
+  color: var(--text-tertiary);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
-.moduleTerm {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto 52px;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  line-height: 1.5;
-  font-variant-numeric: tabular-nums;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.moduleTermPrice {
-  color: var(--text-primary);
-  font-weight: 700;
-  text-align: right;
-  white-space: nowrap;
-}
-
-/* Выгода срока — тот же зелёный бейдж «−10%», что у тарифов лицензии
-   (pricing-section: planTagSuccess) */
-.moduleTermBadge {
-  justify-self: start;
-  padding: 1px 7px;
-  border: 1px solid rgba(82, 196, 26, 0.27);
-  border-radius: var(--radius-pill);
-  background: var(--success-bg);
-  color: var(--success);
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.5;
-  white-space: nowrap;
-}
-
-.moduleTerms + .blockLink {
+.modulePrice + .blockLink {
   margin-top: 0;
 }
 

@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/icons/icons";
 import { LinkedText } from "./linked-text";
 import { PageScene } from "./page-scene";
-import { ModuleTerms } from "./module-terms";
+import { ModulePrice } from "./module-price";
 import styles from "./landing-page.module.css";
 
 const ICONS: Record<IBlockIcon, typeof ListIcon> = {
@@ -43,9 +43,9 @@ const ICONS: Record<IBlockIcon, typeof ListIcon> = {
 };
 
 /**
- * Карточка посадочной: сцена или значок, заголовок, текст, пункты или цены
- * модуля по срокам, ссылка. Пункты и ссылка прижаты к низу: у соседей в ряду
- * они на одном уровне (Руслан 24.10.2026: «текст пляшет по высоте»).
+ * Карточка посадочной: сцена или значок, заголовок, текст, пункты или цена
+ * модуля, ссылка. Цена и ссылка прижаты к низу: у соседей в ряду они на
+ * одном уровне (Руслан 24.10.2026: «текст пляшет по высоте»).
  */
 export function LandingBlock({
   block,
@@ -82,7 +82,7 @@ export function LandingBlock({
           ))}
         </ul>
       ) : null}
-      {block.module ? <ModuleTerms module={block.module} /> : null}
+      {block.module ? <ModulePrice module={block.module} /> : null}
       {block.link ? (
         <Link href={block.link.href} className={styles.blockLink}>
           {block.link.label} →

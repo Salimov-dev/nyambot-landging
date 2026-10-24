@@ -11,8 +11,9 @@
  * лендинг, тарифы и СРМ обязаны показывать одно и то же. Совпадение с
  * тарифами держит сторож `modules-pricing.test.ts`.
  *
- * Цена — за одну торговую точку. Модуль подключается только к действующей
- * лицензии и не бывает дольше её оплаченного периода.
+ * Цена — за одну торговую точку в месяц, скидки за срок нет. Модуль
+ * подключается только к действующей лицензии и не бывает дольше её
+ * оплаченного периода.
  */
 
 /** Модули — ключи текстов лендинга (`pricing.modules.items.<ключ>`). */
@@ -24,30 +25,25 @@ export const LICENSE_MODULE = {
 export type ILicenseModule =
   (typeof LICENSE_MODULE)[keyof typeof LICENSE_MODULE];
 
-/** Сроки модуля, как у тарифов лицензии. */
-export const MODULE_TERM_MONTHS = [1, 3, 6, 12] as const;
-
-export type IModuleTermMonths = (typeof MODULE_TERM_MONTHS)[number];
-
 export type IModulePricing = {
   /** Код модуля в каталоге main-server (`license_module_plans.module_code`). */
   catalogCode: string;
   /** Название — одно везде: лендинг, тарифы, СРМ, гайд (Ф10 п. 4). */
   name: string;
-  /** Стоимость за одну точку на срок, ₽. */
-  priceRub: Record<IModuleTermMonths, number>;
+  /** Стоимость за одну точку в месяц, ₽. */
+  monthlyRub: number;
 };
 
 export const MODULES_PRICING: Record<ILicenseModule, IModulePricing> = {
   [LICENSE_MODULE.HALL]: {
     catalogCode: "HALL_SERVICE",
     name: "Работа с залом",
-    priceRub: { 1: 2490, 3: 6700, 6: 12650, 12: 22400 },
+    monthlyRub: 2490,
   },
   [LICENSE_MODULE.AI_CHAT]: {
     catalogCode: "AI_CHAT",
     name: "ИИ в чате",
-    priceRub: { 1: 990, 3: 2670, 6: 5030, 12: 8900 },
+    monthlyRub: 990,
   },
 };
 
@@ -59,28 +55,16 @@ export const LICENSE_MODULES: readonly ILicenseModule[] = [
 
 /** Цена модуля за месяц — то, что пишем в заголовках «… ₽ в месяц». */
 export const moduleMonthlyRub = (module: ILicenseModule): number =>
-  MODULES_PRICING[module].priceRub[1];
-
-/** Название срока в текстах посадочных — как у тарифов лицензии: «3 месяца». */
-export const MODULE_TERM_LABEL: Record<IModuleTermMonths, string> = {
-  1: "1 месяц",
-  3: "3 месяца",
-  6: "6 месяцев",
-  12: "12 месяцев",
-};
+  MODULES_PRICING[module].monthlyRub;
 
 /**
- * Выгода срока к помесячной цене, % — бейдж «−10%» у цены срока, как у
- * тарифов лицензии; у месяца — 0. Округляем вниз: обещаем не больше, чем есть
- * на самом деле (6 700 ₽ за 3 месяца против 3 × 2 490 ₽ — это 10,3 %, пишем 10).
+ * Цена модуля за N месяцев. 🔴 Скидки за срок у модулей нет (Руслан
+ * 24.10.2026): цена — месячная, умноженная на число месяцев.
  */
-export const moduleTermDiscountPercent = (
+export const modulePriceForMonthsRub = (
   module: ILicenseModule,
-  months: IModuleTermMonths,
-): number => {
-  const prices = MODULES_PRICING[module].priceRub;
-  return Math.floor((1 - prices[months] / (prices[1] * months)) * 100);
-};
+  months: number,
+): number => moduleMonthlyRub(module) * months;
 
 /** Разряды — пробелом, как в остальных текстах посадочных: «2 490». */
 export const formatRubSpaced = (value: number): string =>

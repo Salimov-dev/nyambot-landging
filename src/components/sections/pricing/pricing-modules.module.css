@@ -39,13 +39,13 @@
   gap: 16px;
 }
 
-/* Карточка — на строках общей сетки (subgrid): семь частей (тег, название,
-   цена, пункты, цены по срокам, условие, «Подробнее») у соседей стоят на
+/* Карточка — на строках общей сетки (subgrid): шесть частей (тег, название,
+   цена, пункты, условие, «Подробнее») у соседей стоят на
    одних уровнях, высота карточек одна (Руслан 24.10.2026: «текст пляшет по
    высоте»). Без subgrid — обычная колонка, просто без выравнивания */
 .card {
   display: grid;
-  grid-row: span 7;
+  grid-row: span 6;
   grid-template-rows: subgrid;
   justify-items: start;
   align-content: start;
@@ -76,24 +76,10 @@
   font-weight: 800;
 }
 
-.price {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 4px 8px;
+/* Цена (ModulePrice) — сразу под названием: отступы задаёт сетка карточки */
+.card .price {
   margin: 0;
-}
-
-.priceValue {
-  color: var(--accent);
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.perMonth {
-  color: var(--text-tertiary);
-  font-size: 13px;
+  padding: 0;
 }
 
 .points {
@@ -118,13 +104,6 @@
   flex-shrink: 0;
   margin-top: 3px;
   color: var(--accent);
-}
-
-/* Цены по срокам (ModuleTerms) — без верхнего отступа списка посадочной:
-   промежутки здесь задаёт сетка карточки */
-.card .terms {
-  margin: 0;
-  padding: 0;
 }
 
 .note {
