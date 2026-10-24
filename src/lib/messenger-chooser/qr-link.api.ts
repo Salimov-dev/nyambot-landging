@@ -59,7 +59,7 @@ const lastKnown = new Map<string, IQrLinkData>();
 
 export const isQrLinkSlug = (slug: string): boolean => SLUG_PATTERN.test(slug);
 
-const readConfig = (): { apiUrl: string; apiKey: string } | null => {
+export const readConfig = (): { apiUrl: string; apiKey: string } | null => {
   const apiUrl = process.env.MAIN_SERVER_API_URL;
   const apiKey = process.env.MAIN_SERVER_API_KEY;
   if (!apiUrl || !apiKey) {
@@ -71,7 +71,7 @@ const readConfig = (): { apiUrl: string; apiKey: string } | null => {
   return { apiUrl, apiKey };
 };
 
-const readTarget = (value: unknown): string | null =>
+export const readTarget = (value: unknown): string | null =>
   typeof value === "string" && value.startsWith("https://") ? value : null;
 
 const readOptionalString = (value: unknown): string | null =>
@@ -137,7 +137,7 @@ const LOGO_MIME_TYPES: ReadonlySet<string> = new Set([
 const LOGO_CACHE_LIMIT = 200;
 const logoCache = new Map<string, string>();
 
-const fetchLogoDataUri = async (
+export const fetchLogoDataUri = async (
   config: { apiUrl: string; apiKey: string },
   logoUrl: string | null,
 ): Promise<string | null> => {

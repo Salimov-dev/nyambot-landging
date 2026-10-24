@@ -201,9 +201,12 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     )
     .join("");
 
+  const table = params.tableLabel
+    ? `<strong>${escapeHtml(params.tableLabel)}</strong><br>`
+    : "";
   const lead = single
-    ? `${escapeHtml(CHOOSER_TEXT.single)}<br>${escapeHtml(CHOOSER_TEXT.singleFallback)}`
-    : escapeHtml(CHOOSER_TEXT.lead);
+    ? `${table}${escapeHtml(CHOOSER_TEXT.single)}<br>${escapeHtml(CHOOSER_TEXT.singleFallback)}`
+    : `${table}${escapeHtml(params.tableLabel ? CHOOSER_TEXT.tableLead : CHOOSER_TEXT.lead)}`;
 
   const pitch = single
     ? ""

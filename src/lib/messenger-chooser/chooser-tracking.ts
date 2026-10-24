@@ -27,6 +27,17 @@ export const qrPagePoweredByUrl = (slug: string): string =>
     content: UTM_CLIENT.qr(slug),
   });
 
+/**
+ * Подпись на странице QR стола `/t/<токен>` (Ф8). Без метки клиента: токен
+ * стола в метки не кладём — по нему открывается стол заведения.
+ */
+export const tablePagePoweredByUrl = (): string =>
+  buildTrackedUrl(BRAND_CONFIG.siteUrl, {
+    source: UTM_SOURCE.QR_PAGE,
+    medium: UTM_MEDIUM.POWERED_BY,
+    campaign: UTM_CAMPAIGN.CHOOSER,
+  });
+
 /** Подпись на странице демо `/demo`. */
 export const demoPagePoweredByUrl = (): string =>
   buildTrackedUrl(BRAND_CONFIG.siteUrl, {

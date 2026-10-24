@@ -107,4 +107,9 @@ export type IChooserPageParams = {
   logo?: string | null;
   /** Ключ цветовой схемы бренда; `null` — страница в прежнем виде. */
   colorScheme?: string | null;
+  /**
+   * QR стола (`/t/<токен>`, план «Работа с залом», Ф8): «Стол 12 · Зал» под
+   * названием и свой призыв. Нет — страница общего QR, как была.
+   */
+  tableLabel?: string | null;
 };
