@@ -7,7 +7,10 @@ import Link from "next/link";
 import { Button, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { useHasTranslation } from "@/hooks/use-has-translation.hook";
-import { StepVideo } from "@/components/ui/step-video/step-video";
+import {
+  StepVideo,
+  playVideoFrom,
+} from "@/components/ui/step-video/step-video";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import {
@@ -35,7 +38,8 @@ export function HallSection() {
   const { ref, isInView } = useScrollAnimation();
   const hasText = useHasTranslation("hallBlock.title");
   const videoRef = useRef<HTMLVideoElement>(null);
-  // Пункт, чей шаг идёт в ролике, подсвечен — как роли у «Команды»
+  // Пункт, чей шаг идёт в ролике, подсвечен; нажатие — переход к его сцене
+  // (как роли «Команды» и главы «Витрины»)
   const [activePoint, setActivePoint] = useState<HallPoint | null>(
     HallPoint.table,
   );
@@ -69,8 +73,9 @@ export function HallSection() {
         </motion.div>
 
         <div className={styles.layout}>
-          {/* Ролик: QR на столе → заказ на столе в кассе → бронь в кассе.
-              Подписи под ним нет — пункт его шага подсвечен в списке */}
+          {/* Ролик: QR на столе → заказ на столе в кассе → бронь в кассе →
+              бизнес-ланч к приходу. Подписи под ним нет — пункт его шага
+              подсвечен в списке */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -94,20 +99,25 @@ export function HallSection() {
             className={styles.points}
           >
             {HALL_POINTS.map((point, index) => (
-              <li
-                key={point}
-                className={`${styles.point} ${activePoint === point ? styles.pointActive : ""}`}
-                aria-current={activePoint === point ? "step" : undefined}
-              >
-                <span className={styles.num}>{index + 1}</span>
-                <span className={styles.pointBody}>
-                  <span className={styles.pointTitle}>
-                    {t(`hallBlock.points.${point}.title`)}
+              <li key={point}>
+                <button
+                  type="button"
+                  className={`${styles.point} ${activePoint === point ? styles.pointActive : ""}`}
+                  aria-current={activePoint === point ? "step" : undefined}
+                  onClick={() =>
+                    playVideoFrom(videoRef.current, HALL_VIDEO.from[point])
+                  }
+                >
+                  <span className={styles.num}>{index + 1}</span>
+                  <span className={styles.pointBody}>
+                    <span className={styles.pointTitle}>
+                      {t(`hallBlock.points.${point}.title`)}
+                    </span>
+                    <span className={styles.pointText}>
+                      {t(`hallBlock.points.${point}.text`)}
+                    </span>
                   </span>
-                  <span className={styles.pointText}>
-                    {t(`hallBlock.points.${point}.text`)}
-                  </span>
-                </span>
+                </button>
               </li>
             ))}
           </motion.ol>

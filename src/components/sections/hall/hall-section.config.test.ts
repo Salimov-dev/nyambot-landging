@@ -27,6 +27,13 @@ describe("HALL_VIDEO", () => {
     }
   });
 
+  it("у каждого пункта своя сцена: нажатие ведёт к первому шагу этого пункта", () => {
+    for (const point of HALL_POINTS) {
+      const first = HALL_VIDEO.steps.find((s) => s.group === point);
+      expect(first?.from).toBe(HALL_VIDEO.from[point]);
+    }
+  });
+
   it("ролик и постер лежат в public", () => {
     expect(existsSync(resolve(PUBLIC_DIR, `.${HALL_VIDEO.src}`))).toBe(true);
     expect(existsSync(resolve(PUBLIC_DIR, `.${HALL_VIDEO.poster}`))).toBe(true);

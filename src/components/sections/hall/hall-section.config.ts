@@ -20,25 +20,41 @@ export const HALL_POINTS: readonly HallPoint[] = Object.values(HallPoint);
  *  нет, на главной подпись выключена: пункт подсвечен рядом) */
 const pointTitleKey = (point: HallPoint) => `hallBlock.points.${point}.title`;
 
+/** С какой секунды ролика идёт пункт — нажатие на пункт переводит ролик сюда */
+const POINT_FROM: Record<HallPoint, number> = {
+  [HallPoint.table]: 0,
+  [HallPoint.serve]: 11,
+  [HallPoint.booking]: 15.3,
+  [HallPoint.scheduled]: 23.9,
+};
+
+/** В конце петли — снова стол с QR: подсветка возвращается к пункту 1 */
+const LOOP_BACK_TO_TABLE = 30.3;
+
 /**
  * Ролик собирается в docs-nyambot/marketing/video/roliki/glavnaya/zal (16:10,
- * петля 25 с, Ф10б п. 6): скан QR на столе → бот «Ты за столом 12» → меню,
+ * петля 31 с, Ф10б п. 6): скан QR на столе → бот «Ты за столом 12» → меню,
  * корзина, оформление с оплатой онлайн → заказ на столе 12 в iiko с
  * «Предоплата: Онлайн» → бронь стола в мессенджере → бронь «Действует» в
- * кассе. Секунды шагов — из раскадровки scene.html; пункт «ко времени» в
- * ролике не показан и не подсвечивается.
+ * кассе → бизнес-ланч «В зале» к 13:00 → заказ ко времени в кассе. Секунды
+ * шагов — из раскадровки scene.html, у каждого пункта блока — своя сцена.
  */
 export const HALL_VIDEO = {
   src: "/videos/home/zal/stol-i-bron.mp4",
   poster: "/videos/home/zal/stol-i-bron-poster.jpg",
+  from: POINT_FROM,
   steps: [
-    { from: 0, group: HallPoint.table, key: pointTitleKey(HallPoint.table) },
-    { from: 11, group: HallPoint.serve, key: pointTitleKey(HallPoint.serve) },
+    ...HALL_POINTS.map(
+      (point): VideoStep<HallPoint> => ({
+        from: POINT_FROM[point],
+        group: point,
+        key: pointTitleKey(point),
+      }),
+    ),
     {
-      from: 15.3,
-      group: HallPoint.booking,
-      key: pointTitleKey(HallPoint.booking),
+      from: LOOP_BACK_TO_TABLE,
+      group: HallPoint.table,
+      key: pointTitleKey(HallPoint.table),
     },
-    { from: 23.9, group: HallPoint.table, key: pointTitleKey(HallPoint.table) },
-  ] satisfies VideoStep<HallPoint>[],
+  ],
 };
