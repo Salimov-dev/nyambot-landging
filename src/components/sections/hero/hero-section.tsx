@@ -13,7 +13,7 @@ import {
   getSkolkovoLogoSize,
   SKOLKOVO_LOGO_KIND,
 } from "@/config/skolkovo.config";
-import { CheckIcon } from "@/components/ui/icons/icons";
+import { CheckIcon, QrCodeIcon } from "@/components/ui/icons/icons";
 import { TypedAccent, splitAccent } from "./typed-accent";
 import styles from "./hero-section.module.css";
 
@@ -93,6 +93,12 @@ export function HeroSection() {
                 интеграции живут в своей секции с пометкой «по желанию» */}
             <div>
               <Text className={styles.subtitle}>{t("hero.subtitle")}</Text>
+              {/* QR на столе — главное УТП зала: своей строкой, а не хвостом
+                  абзаца, где оно терялось (Руслан 24.10.2026) */}
+              <p className={styles.hallLine}>
+                <QrCodeIcon size={20} />
+                {t("hero.hall")}
+              </p>
             </div>
 
             {/* Основная дорога — запуск нашими руками на `/zapusk`, вторая

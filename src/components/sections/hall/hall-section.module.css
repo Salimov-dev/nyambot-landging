@@ -50,6 +50,10 @@
   font-weight: 800 !important;
   margin: 12px 0 14px !important;
   text-wrap: balance;
+  /* Строки заголовка задаёт словарь (перенос строки в тексте): «…QR на
+     столе» / «и заказывает сам…» — висячее «и» в конце строки читалось
+     плохо (Руслан 24.10.2026) */
+  white-space: pre-line;
 }
 
 .subtitle {
@@ -57,6 +61,7 @@
   color: rgba(255, 255, 255, 0.78);
   font-size: 17px;
   line-height: 1.6;
+  white-space: pre-line;
 }
 
 .layout {

@@ -216,6 +216,22 @@
   max-width: 560px;
 }
 
+.hallLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -12px 0 26px;
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.hallLine svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
 .ctaRow {
   display: flex;
   flex-wrap: wrap;

@@ -161,12 +161,16 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   text-wrap: balance;
+  /* Перенос строки из текста страницы — управляемый: «…QR на столе» /
+     «и заказывает сам…» (Руслан 24.10.2026) */
+  white-space: pre-line;
 }
 
 .lead {
   margin: 18px 0 0;
   font-size: 18px;
   line-height: 1.55;
+  white-space: pre-line;
   /* 0.78, а не 0.6: ядро аудитории 35–44 года и три четверти — с телефона */
   color: rgba(255, 255, 255, 0.78);
   max-width: 660px;

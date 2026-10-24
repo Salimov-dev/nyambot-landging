@@ -13,10 +13,11 @@
   },
   "hero": {
     "title": "Sifarişlər və yemək çatdırılması <em>MAX&nbsp;və&nbsp;Telegram-da</em>&nbsp;— hər messencerdə bütün şəbəkəyə bir botla",
-    "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur. Zalda isə qonaq masadan QR ilə sifariş verir — sifariş dərhal kassaya gedir",
+    "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
     "cta": "Sənin yerinə pulsuz işə salarıq",
     "ctaSecondary": "Demoya bax",
-    "trial": "Qiymətlər açıqdır · sifarişdən faiz yoxdur · kart bağlamadan və avtomatik silinmə olmadan"
+    "trial": "Qiymətlər açıqdır · sifarişdən faiz yoxdur · masalarda QR-kod",
+    "hall": "Zalda — masadan QR ilə sifariş, birbaşa kassaya"
   },
   "freeReview": {
     "title": "Açar təhvil işə salma — pulsuz",
