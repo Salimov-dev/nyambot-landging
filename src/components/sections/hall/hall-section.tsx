@@ -1,26 +1,28 @@
 "use client";
 
+import { useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { useHasTranslation } from "@/hooks/use-has-translation.hook";
-import { PhoneMockup } from "@/components/ui/phone-mockup/phone-mockup";
+import { StepVideo } from "@/components/ui/step-video/step-video";
 import { LINKS } from "@/config/links.config";
 import { reachGoal } from "@/config/metrika";
 import {
   LICENSE_MODULE,
   moduleMonthlyRub,
 } from "@/config/modules-pricing.config";
-import { HallPhoneScreen } from "./hall-phone-screen";
-import { HALL_POINTS } from "./hall-section.config";
+import { HALL_POINTS, HALL_VIDEO, HallPoint } from "./hall-section.config";
 import styles from "./hall-section.module.css";
 
 const { Title, Text } = Typography;
 
 /**
  * «Работа с залом» — после «Пути гостя» (Ф10б п. 1, Руслан 21.10.2026: «важный
- * блок»): кроме доставки и самовывоза, Нямбот работает и в зале — QR на столе,
+ * блок»; 24.10.2026: QR на столе — главное УТП после доставки, идёт первым,
+ * бронь — второй): кроме доставки и самовывоза, Нямбот работает и в зале — QR на столе,
  * официант или «заберу сам», бронь с предзаказом сразу в кассе, заказ ко
  * времени. Это модуль — так и написано, без мелкого шрифта, а тексты — через
  * выгоду ресторатора: больше заказов, без звонков и ожидания (24.10.2026).
@@ -32,6 +34,15 @@ export function HallSection() {
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
   const hasText = useHasTranslation("hallBlock.title");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  // Пункт, чей шаг идёт в ролике, подсвечен — как роли у «Команды»
+  const [activePoint, setActivePoint] = useState<HallPoint | null>(
+    HallPoint.table,
+  );
+  const onPointChange = useCallback(
+    (point: HallPoint | null) => setActivePoint(point),
+    [],
+  );
 
   if (!hasText) return null;
 
@@ -58,16 +69,22 @@ export function HallSection() {
         </motion.div>
 
         <div className={styles.layout}>
-          {/* Место ролика: пока он не собран — кадр бота за столом */}
+          {/* Ролик: QR на столе → заказ на столе в кассе → бронь в кассе.
+              Подписи под ним нет — пункт его шага подсвечен в списке */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className={styles.phoneCol}
+            className={styles.videoCol}
           >
-            <PhoneMockup>
-              <HallPhoneScreen />
-            </PhoneMockup>
+            <StepVideo
+              src={HALL_VIDEO.src}
+              poster={HALL_VIDEO.poster}
+              steps={HALL_VIDEO.steps}
+              videoRef={videoRef}
+              onGroupChange={onPointChange}
+              showCaption={false}
+            />
           </motion.div>
 
           <motion.ol
@@ -77,7 +94,11 @@ export function HallSection() {
             className={styles.points}
           >
             {HALL_POINTS.map((point, index) => (
-              <li key={point} className={styles.point}>
+              <li
+                key={point}
+                className={`${styles.point} ${activePoint === point ? styles.pointActive : ""}`}
+                aria-current={activePoint === point ? "step" : undefined}
+              >
                 <span className={styles.num}>{index + 1}</span>
                 <span className={styles.pointBody}>
                   <span className={styles.pointTitle}>
@@ -112,6 +133,11 @@ export function HallSection() {
           >
             {t("hallBlock.more")}
           </Button>
+          {/* QR на столе — главное в зале: отдельная дорога на страницу
+              QR-меню с заказом (Руслан 24.10.2026) */}
+          <Link href={LINKS.pages.electronicMenu} className={styles.menuLink}>
+            {t("hallBlock.menuLink")} →
+          </Link>
         </motion.div>
       </div>
     </section>

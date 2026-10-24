@@ -13,7 +13,7 @@
   },
   "hero": {
     "title": "Sifarişlər və yemək çatdırılması <em>MAX&nbsp;və&nbsp;Telegram-da</em>&nbsp;— hər messencerdə bütün şəbəkəyə bir botla",
-    "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur",
+    "subtitle": "Bir nöqtə üçün və bütün şəbəkə üçün: kafelər, restoranlar, çörək evləri, çatdırılma. Qonaq bazası, sifariş tarixi və ballar hər iki messencerdə ortaqdır, menyu, qiymətlər və çatdırılma zonası isə hər nöqtənin özünəməxsusdur. Zalda isə qonaq masadan QR ilə sifariş verir — sifariş dərhal kassaya gedir",
     "cta": "Sənin yerinə pulsuz işə salarıq",
     "ctaSecondary": "Demoya bax",
     "trial": "Qiymətlər açıqdır · sifarişdən faiz yoxdur · kart bağlamadan və avtomatik silinmə olmadan"
@@ -360,7 +360,7 @@
       },
       "hall": {
         "title": "Zalla iş",
-        "text": "Qonaq masanı özü bron edir və masadan sifariş verir — zəngsiz və ofisiantı gözləmədən, bron və sifariş birbaşa iiko və R-Keeper kassasına"
+        "text": "Qonaq masadakı QR-u skan edir və ofisiantsız özü sifariş verir — sifariş birbaşa iiko və R-Keeper kassasına. Üstəlik zəngsiz masa bronu"
       },
       "komanda": {
         "title": "«Komanda» tətbiqi",

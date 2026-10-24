@@ -13,7 +13,7 @@
   },
   "hero": {
     "title": "Buyurtmalar va ovqat yetkazib berish <em>MAX&nbsp;va&nbsp;Telegram'da</em>&nbsp;— butun tarmoqqa bittadan bot bilan",
-    "subtitle": "Bitta nuqta va butun tarmoq uchun: kafelar, restoranlar, nonvoyxonalar, yetkazib berish. Mehmonlar bazasi, buyurtmalar tarixi va ballar ikkala messenjerda umumiy, menyu, narxlar va yetkazib berish hududi esa har bir nuqtaning oʻziniki",
+    "subtitle": "Bitta nuqta va butun tarmoq uchun: kafelar, restoranlar, nonvoyxonalar, yetkazib berish. Mehmonlar bazasi, buyurtmalar tarixi va ballar ikkala messenjerda umumiy, menyu, narxlar va yetkazib berish hududi esa har bir nuqtaning oʻziniki. Zalda esa mehmon stoldan QR orqali buyurtma beradi — buyurtma darhol kassaga ketadi",
     "cta": "Sen uchun bepul ishga tushiramiz",
     "ctaSecondary": "Demoni ko'rish",
     "trial": "Narxlar ochiq · buyurtmadan foiz yoʻq · karta bogʻlamasdan va avtomatik yechib olishsiz"
@@ -360,7 +360,7 @@
       },
       "hall": {
         "title": "Zal bilan ishlash",
-        "text": "Mehmon stolni oʻzi bron qiladi va stoldan buyurtma beradi — qoʻngʻiroqsiz va ofitsiantni kutmasdan, bron va buyurtma toʻgʻridan-toʻgʻri iiko va R-Keeper kassasiga"
+        "text": "Mehmon stoldagi QR'ni skanerlaydi va ofitsiantsiz oʻzi buyurtma beradi — buyurtma toʻgʻridan-toʻgʻri iiko va R-Keeper kassasiga. Yana qoʻngʻiroqsiz stol bron qilish"
       },
       "komanda": {
         "title": "«Komanda» ilovasi",

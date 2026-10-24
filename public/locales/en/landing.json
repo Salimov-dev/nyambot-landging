@@ -13,7 +13,7 @@
   },
   "hero": {
     "title": "Orders and food delivery <em>in&nbsp;MAX&nbsp;and&nbsp;Telegram</em>&nbsp;— one bot per messenger for your whole chain",
-    "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors",
+    "subtitle": "For a single venue and for a whole chain: cafés, restaurants, bakeries, delivery. Guest base, order history and points are shared across both messengers, while menu, prices and delivery zone stay unique to each location. Guests open a branded app with your logo and colors. In the dining room, guests order from the table by QR — straight into your POS",
     "cta": "We'll launch it for you — free",
     "ctaSecondary": "See demo",
     "trial": "Open prices · no commission per order · no card on file, no auto-charges"
@@ -356,7 +356,7 @@
       },
       "hall": {
         "title": "Dine-in service",
-        "text": "Guests book a table and order from it themselves — no phone calls, no waiting for a waiter; bookings and orders go straight into iiko and R-Keeper"
+        "text": "Guests scan the QR on the table and order themselves, no waiter needed — the order goes straight into iiko and R-Keeper. Plus table booking with no phone calls"
       },
       "komanda": {
         "title": "Team app",

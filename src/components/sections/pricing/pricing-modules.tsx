@@ -31,10 +31,11 @@ const MODULE_POINT = {
 type IModulePoint = (typeof MODULE_POINT)[keyof typeof MODULE_POINT];
 
 const MODULE_POINTS: Record<ILicenseModule, readonly IModulePoint[]> = {
+  /* QR-заказ со стола — первым: главное в зале (Руслан 24.10.2026) */
   [LICENSE_MODULE.HALL]: [
+    MODULE_POINT.TABLE,
     MODULE_POINT.BOOKING,
     MODULE_POINT.SCHEDULED,
-    MODULE_POINT.TABLE,
   ],
   [LICENSE_MODULE.AI_CHAT]: [
     MODULE_POINT.ANSWERS,

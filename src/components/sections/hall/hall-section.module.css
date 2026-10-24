@@ -1,7 +1,7 @@
 /* ===== Работа с залом =====
-   Телефон с кадром бота за столом слева, четыре пункта справа; под ними —
-   цена модуля и «Подробнее». На телефоне — столбиком: заголовок, телефон,
-   пункты. */
+   Ролик 16:10 во всю ширину (телефон гостя и касса), под ним четыре пункта в
+   две колонки — пункт текущего шага ролика подсвечен; ниже — цена модуля и
+   «Подробнее». На телефоне пункты — столбиком. */
 
 .section {
   padding: 72px 0;
@@ -60,21 +60,19 @@
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
-  gap: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 
-.phoneCol {
-  display: flex;
-  justify-content: center;
+.videoCol {
+  width: 100%;
 }
 
 .points {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -100,6 +98,17 @@
   font-size: 13px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Шаг ролика про этот пункт — номер горит акцентом */
+.pointActive .num {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-bg);
 }
 
 .pointBody {
@@ -144,6 +153,19 @@
   text-wrap: balance;
 }
 
+.menuLink {
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menuLink:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .moreBtn {
   background: var(--gradient-primary) !important;
   border: none !important;
@@ -156,8 +178,11 @@
 
 @media (max-width: 900px) {
   .layout {
+    gap: 28px;
+  }
+
+  .points {
     grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
   }
 }
 
