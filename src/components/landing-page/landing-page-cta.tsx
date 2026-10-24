@@ -53,6 +53,9 @@ export function LandingPageCta() {
         </a>
         <Link href="/" className={styles.tertiaryBtn}>
           {CTA_TEXT.home}
+          <span className={styles.tertiaryArrow} aria-hidden="true">
+            →
+          </span>
         </Link>
       </div>
       <p className={styles.trial}>{CTA_TEXT.trial}</p>

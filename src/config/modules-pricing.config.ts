@@ -61,6 +61,27 @@ export const LICENSE_MODULES: readonly ILicenseModule[] = [
 export const moduleMonthlyRub = (module: ILicenseModule): number =>
   MODULES_PRICING[module].priceRub[1];
 
+/** Название срока в текстах посадочных — как у тарифов лицензии: «3 месяца». */
+export const MODULE_TERM_LABEL: Record<IModuleTermMonths, string> = {
+  1: "1 месяц",
+  3: "3 месяца",
+  6: "6 месяцев",
+  12: "12 месяцев",
+};
+
+/**
+ * Выгода срока к помесячной цене, % — бейдж «−10%» у цены срока, как у
+ * тарифов лицензии; у месяца — 0. Округляем вниз: обещаем не больше, чем есть
+ * на самом деле (6 700 ₽ за 3 месяца против 3 × 2 490 ₽ — это 10,3 %, пишем 10).
+ */
+export const moduleTermDiscountPercent = (
+  module: ILicenseModule,
+  months: IModuleTermMonths,
+): number => {
+  const prices = MODULES_PRICING[module].priceRub;
+  return Math.floor((1 - prices[months] / (prices[1] * months)) * 100);
+};
+
 /** Разряды — пробелом, как в остальных текстах посадочных: «2 490». */
 export const formatRubSpaced = (value: number): string =>
   String(value).replace(/\B(?=(\d{3})+(?!\d))/gu, " ");

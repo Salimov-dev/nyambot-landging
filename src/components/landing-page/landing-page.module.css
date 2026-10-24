@@ -208,17 +208,40 @@
   font-weight: 700;
 }
 
-.secondaryBtn {
+/* «Все возможности Нямбота» — того же вида, что и кнопки демо: тёмная
+   кнопка со светлым текстом. Прежняя рамка с оранжевым текстом терялась в
+   ряду (Руслан 24.10.2026) */
+.secondaryBtn,
+.tertiaryBtn {
+  gap: 8px;
   background: var(--surface);
   border: 1px solid var(--border);
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.86);
 }
 
-.tertiaryBtn {
-  padding: 0 26px;
-  border: 1px solid var(--border-light);
+.tertiaryArrow {
   color: var(--accent);
-  font-weight: 500;
+}
+
+/* Цвет текста закреплён во всех состояниях: сброс стилей antd красит ссылки
+   при наведении и нажатии в оранжевый (`a:hover` сильнее одного класса) — на
+   оранжевой кнопке текст сливался с фоном. Так же сделано у кнопки
+   «Бесплатный запуск» (free-review-section) */
+.primaryBtn,
+.primaryBtn:hover,
+.primaryBtn:focus,
+.primaryBtn:active,
+.primaryBtn:visited {
+  color: #fff;
+}
+
+.secondaryBtn:hover,
+.secondaryBtn:focus,
+.secondaryBtn:active,
+.tertiaryBtn:hover,
+.tertiaryBtn:focus,
+.tertiaryBtn:active {
+  color: #fff;
 }
 
 .primaryBtn:hover,
@@ -227,12 +250,9 @@
   transform: translateY(-2px);
 }
 
-.secondaryBtn:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
+.secondaryBtn:hover,
 .tertiaryBtn:hover {
-  border-color: var(--accent-border);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Строка условий — отдельная мысль, а не подпись под кнопкой: вплотную она
@@ -394,6 +414,73 @@
   margin: 16px 0 0;
   padding: 0;
   list-style: none;
+}
+
+/* Цены модуля по срокам (ModuleTerms) — отдельным блоком под тонкой линией,
+   без галочек выгод: срок слева, цена и бейдж выгоды справа, цифры одной
+   ширины (Руслан 24.10.2026: «отдели стоимость от преимуществ»). Блок прижат
+   к низу карточки: у соседей в ряду цены стоят на одном уровне */
+.moduleTerms {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.moduleTermsBody {
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.moduleTermsLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-tertiary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.moduleTermsList {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.moduleTerm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 52px;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.moduleTermPrice {
+  color: var(--text-primary);
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Выгода срока — тот же зелёный бейдж «−10%», что у тарифов лицензии
+   (pricing-section: planTagSuccess) */
+.moduleTermBadge {
+  justify-self: start;
+  padding: 1px 7px;
+  border: 1px solid rgba(82, 196, 26, 0.27);
+  border-radius: var(--radius-pill);
+  background: var(--success-bg);
+  color: var(--success);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.moduleTerms + .blockLink {
+  margin-top: 0;
 }
 
 .blockPoint {

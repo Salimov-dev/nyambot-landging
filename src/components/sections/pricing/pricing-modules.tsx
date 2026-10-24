@@ -9,23 +9,24 @@ import { LINKS } from "@/config/links.config";
 import {
   LICENSE_MODULE,
   LICENSE_MODULES,
-  MODULE_TERM_MONTHS,
   MODULES_PRICING,
   type ILicenseModule,
 } from "@/config/modules-pricing.config";
+import { ModuleTerms } from "@/components/landing-page/module-terms";
 import {
   CONTACT_WIDGET_SOURCE,
   openContactWidget,
 } from "@/components/ui/contact-widget/contact-widget.events";
 import styles from "./pricing-modules.module.css";
 
-/** Что входит в модуль — ключи `pricing.modules.items.<модуль>.points.<ключ>` */
+/** Что даёт модуль — ключи `pricing.modules.items.<модуль>.points.<ключ>`:
+ *  каждый пункт — «выгода: как» (Руслан 24.10.2026) */
 const MODULE_POINT = {
   BOOKING: "booking",
   SCHEDULED: "scheduled",
   TABLE: "table",
   ANSWERS: "answers",
-  LIMITS: "limits",
+  MENU: "menu",
   ADMIN: "admin",
 } as const;
 type IModulePoint = (typeof MODULE_POINT)[keyof typeof MODULE_POINT];
@@ -38,7 +39,7 @@ const MODULE_POINTS: Record<ILicenseModule, readonly IModulePoint[]> = {
   ],
   [LICENSE_MODULE.AI_CHAT]: [
     MODULE_POINT.ANSWERS,
-    MODULE_POINT.LIMITS,
+    MODULE_POINT.MENU,
     MODULE_POINT.ADMIN,
   ],
 };
@@ -58,17 +59,20 @@ const MODULE_RULE = {
 
 const MODULE_RULES = Object.values(MODULE_RULE);
 
-/** Сроки дольше месяца — цена за весь срок, как «Списывается …» у лицензии */
-const LONG_TERMS = MODULE_TERM_MONTHS.filter((months) => months > 1);
-
 const formatRub = (value: number): string => value.toLocaleString("ru-RU");
 
 /**
- * «Модули — по желанию, за доплату» под тарифами (план «Работа с залом»,
- * Ф10б п. 2, Р21: понятно с первого взгляда). Тарифы выше — это сам Нямбот;
- * модули — отдельно, с ценой за одну точку и прямым «отдельно от лицензии не
- * продаются». Цены — из `modules-pricing.config.ts`, одной константы с
- * остальным лендингом.
+ * Модули под тарифами (план «Работа с залом», Ф10б п. 2, Р21: понятно с
+ * первого взгляда). Тарифы выше — это сам Нямбот, модули расширяют его: тексты
+ * — через выгоду ресторатора, условия (к лицензии, цена за точку) — спокойным
+ * фактом, без «по желанию» и «за доплату» (Руслан 24.10.2026). Цены — из
+ * `modules-pricing.config.ts`, одной константы с остальным лендингом.
+ *
+ * Цены за 3, 6 и 12 месяцев — строками, как на странице /moduli, с бейджем
+ * выгоды «−10%» тем же зелёным, что у тарифов лицензии (`ModuleTerms`; месяц
+ * не повторяем — он крупно выше). Карточки — на общей сетке (subgrid): тег,
+ * название, цена, пункты, сроки, условие и «Подробнее» у обеих стоят на одних
+ * уровнях, «Подробнее» прижата к низу.
  *
  * Тексты пока только в ru-локали: на другом языке блок не рисуется.
  */
@@ -92,59 +96,48 @@ export function PricingModules({ isInView }: { isInView: boolean }) {
       </div>
 
       <div className={styles.grid}>
-        {LICENSE_MODULES.map((licenseModule) => {
-          const { priceRub } = MODULES_PRICING[licenseModule];
+        {LICENSE_MODULES.map((licenseModule) => (
+          <article key={licenseModule} className={styles.card}>
+            <span className={styles.tag}>{t("pricing.modules.tag")}</span>
+            <h4 className={styles.name}>
+              {t(`pricing.modules.items.${licenseModule}.name`)}
+            </h4>
+            <p className={styles.price}>
+              <span className={styles.priceValue}>
+                {formatRub(MODULES_PRICING[licenseModule].priceRub[1])} ₽
+              </span>
+              <span className={styles.perMonth}>
+                {t("pricing.modules.perMonth")}
+              </span>
+            </p>
 
-          return (
-            <article key={licenseModule} className={styles.card}>
-              <span className={styles.tag}>{t("pricing.modules.tag")}</span>
-              <h4 className={styles.name}>
-                {t(`pricing.modules.items.${licenseModule}.name`)}
-              </h4>
-              <p className={styles.price}>
-                <span className={styles.priceValue}>
-                  {formatRub(priceRub[1])} ₽
-                </span>
-                <span className={styles.perMonth}>
-                  {t("pricing.modules.perMonth")}
-                </span>
-              </p>
+            <ul className={styles.points}>
+              {MODULE_POINTS[licenseModule].map((point) => (
+                <li key={point} className={styles.point}>
+                  <CheckIcon size={16} />
+                  {t(`pricing.modules.items.${licenseModule}.points.${point}`)}
+                </li>
+              ))}
+            </ul>
 
-              <ul className={styles.points}>
-                {MODULE_POINTS[licenseModule].map((point) => (
-                  <li key={point} className={styles.point}>
-                    <CheckIcon size={16} />
-                    {t(
-                      `pricing.modules.items.${licenseModule}.points.${point}`,
-                    )}
-                  </li>
-                ))}
-              </ul>
+            <ModuleTerms
+              module={licenseModule}
+              longTermsOnly
+              className={styles.terms}
+            />
 
-              <p className={styles.terms}>
-                {LONG_TERMS.map((months) => (
-                  <span key={months} className={styles.term}>
-                    {t("pricing.modules.termPrice", {
-                      term: t(`pricing.months.${months}`),
-                      price: formatRub(priceRub[months]),
-                    })}
-                  </span>
-                ))}
-              </p>
+            <p className={styles.note}>
+              {t(`pricing.modules.items.${licenseModule}.note`)}
+            </p>
 
-              <p className={styles.note}>
-                {t(`pricing.modules.items.${licenseModule}.note`)}
-              </p>
-
-              <Link
-                href={MODULE_MORE_HREF[licenseModule]}
-                className={styles.more}
-              >
-                {t("pricing.modules.more")} →
-              </Link>
-            </article>
-          );
-        })}
+            <Link
+              href={MODULE_MORE_HREF[licenseModule]}
+              className={styles.more}
+            >
+              {t("pricing.modules.more")} →
+            </Link>
+          </article>
+        ))}
       </div>
 
       <ul className={styles.rules}>

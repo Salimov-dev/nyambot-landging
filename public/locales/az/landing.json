@@ -58,7 +58,7 @@
         "text": "iiko və ya R-Keeper var — menyu və stop-siyahılar kassadan gəlir, qonağın tərkibə etdiyi dəyişikliklər isə çekə çatır. Kassa yoxdur və ya başqadır — Nyambot menyunu və loyallığı özü aparır"
       },
       "loyalty": {
-        "title": "Aksiyalar və ballar daxildir",
+        "title": "Qonaq ballar və aksiyalar üçün qayıdır",
         "text": "NyamClub-ın endirimləri, hədiyyələri, promokodları və balları dərhal işləyir, kassa ilə isə — iikoCard və ya r_k Friends"
       },
       "money": {
@@ -85,7 +85,7 @@
         "text": "Aqreqator hər sifarişdən 25–35% alır — həm birincidən, həm də sonrakıların hamısından. Nyambot sabit abunə haqqı alır, faiz almır. Qonaq sənin kanalına qayıdır və sənin bazanda qalır"
       },
       "growth": {
-        "title": "Orta çek və qayıdışlar",
+        "title": "Daha yüksək orta çek, daha çox təkrar sifariş",
         "text": "Modifikatorlar, kombolar, aksiyalar, ballar və göndərişlər çeki artırır və qonağı geri qaytarır — əl işi olmadan"
       },
       "segmentBroadcast": {
@@ -97,8 +97,8 @@
         "text": "Soğanı çıxar, pendir əlavə et, ikiqat kotlet götür. Tərkib çekə kassanın çap etdiyi eyni sətirlə düşür"
       },
       "guestChat": {
-        "title": "Qonaq soruşur — bot cavab verir",
-        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — «Çatda Sİ» modulu ilə belə suallara Sİ cavab verir. Qonağa insan lazımdırsa, bot növbədəki administratoru çağırır"
+        "title": "Qonaq soruşur — bot dərhal cavab verir",
+        "text": "«Sifarişim haradadır?», «Saat neçəyədək işləyirsiniz?» — bot dərhal cavab verir, «Çatda Sİ» modulu ilə isə menyu üzrə də məsləhət verir: yeməkləri qiyməti ilə adlandırır və menyunu açır, qonaq administratoru gözləmədən sifariş verir. Qonağa insan lazımdırsa, bot növbədəki administratoru çağırır"
       },
       "delivery": {
         "title": "Öz ştatın olmadan çatdırılma",
@@ -179,7 +179,7 @@
       },
       {
         "question": "Qonaq müəssisəyə yaza bilərmi?",
-        "answer": "Bəli, nöqtədə qonaqlarla çat açıqdırsa. Qonaq bota yazır, növbədəki administrator isə Telegram və ya MAX-dan cavab verir; tez-tez verilən suallara bot hazır cavablarla cavab verir. «Çatda Sİ» modulu ilə adi suallara Sİ cavab verir, mürəkkəb suallar administratora gedir"
+        "answer": "Bəli, nöqtədə qonaqlarla çat açıqdırsa. Qonaq birbaşa bota yazır, növbədəki administrator isə MAX və ya Telegram-dan cavab verir — sual itmir, qonaq sifarişə qədər çatır. «Çatda Sİ» modulu ilə qonaq menyu və öz sifarişləri barədə cavabı dərhal alır, administratora isə yalnız mürəkkəb suallar qalır"
       },
       {
         "question": "Sİ artıq söz deməz ki?",
@@ -238,8 +238,8 @@
   },
   "integrations": {
     "label": "İnteqrasiyalar",
-    "title": "İnteqrasiyalar — istəyə görə",
-    "subtitle": "Nyambot özü müstəqil işləyir. Əgər kassan, ekvayrinqin və ya kuryer xidmətin varsa — özümüz qoşuruq, proqramçısız və əlavə işlərsiz",
+    "title": "Səndə artıq olanlarla işləyir",
+    "subtitle": "Kassa, onlayn ödəniş və kuryerlər Nyambota qoşulur: sifariş özü kassaya və mətbəxə gedir, pul isə sənin hesabına. Özümüz qoşuruq, proqramçısız və əlavə işlərsiz",
     "noPos": "Kassa yoxdur? Heç nə qoşmaq lazım deyil — Nyambot tam müstəqil işləyir",
     "items": {
       "iiko": "iiko",
@@ -263,7 +263,7 @@
   },
   "loyaltyBlock": {
     "label": "Loyallıq",
-    "title": "Loyallıq — sənin, ya da bizim",
+    "title": "Qonaqları geri qaytaran bonuslar — sənin, ya da bizim",
     "subtitle": "Bonuslar, aksiyalar və promokodlar birbaşa MAX və Telegram-dakı sifarişdə işləyir. Kassada proqram var — onu qoşarıq, yoxdursa — NyamClub-ı işə salarıq",
     "badgeNew": "Yeni",
     "more": "Loyallıq haqqında ətraflı",
@@ -326,7 +326,7 @@
   },
   "guestsPath": {
     "label": "Qonaqlar",
-    "title": "Qonaqlar tətbiqə necə düşür",
+    "title": "Hər qonaq səndə qalır",
     "subtitle": "Nyambot trafik qovmur — o, qonağı sənin öz sifariş kanalına oturdur. Bunun baş verdiyi dörd yol",
     "items": {
       "link": {
@@ -360,7 +360,7 @@
       },
       "hall": {
         "title": "Zalla iş",
-        "text": "Öncədən sifarişlə masa bronu, zalda vaxtına sifariş və masada QR — birbaşa iiko və R-Keeper kassasına"
+        "text": "Qonaq masanı özü bron edir və masadan sifariş verir — zəngsiz və ofisiantı gözləmədən, bron və sifariş birbaşa iiko və R-Keeper kassasına"
       },
       "komanda": {
         "title": "«Komanda» tətbiqi",

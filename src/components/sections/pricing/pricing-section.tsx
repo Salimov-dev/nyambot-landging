@@ -199,7 +199,7 @@ export function PricingSection({ plans }: PricingSectionProps) {
         </motion.div>
 
         {/* Модули — отдельным блоком под тарифами (Ф10б п. 2): лицензия выше —
-            это сам Нямбот, модули — по желанию и за доплату */}
+            это сам Нямбот, модули расширяют его для зала и чата */}
         <PricingModules isInView={isInView} />
       </div>
     </section>

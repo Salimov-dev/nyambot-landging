@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import { PAGE_SCENE, type IPageScene } from "@/config/landing-pages.config";
+import { PAGE_SCENE, type IPageScene } from "@/config/landing-blocks.config";
 import {
   CartScene,
   LoyaltyScene,

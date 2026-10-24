@@ -8,11 +8,14 @@ import {
   MODULES_PRICING,
   formatRubSpaced,
   moduleMonthlyRub,
+  moduleTermDiscountPercent,
 } from "@/config/modules-pricing.config";
+import { PRICING_PLANS } from "@/config/pricing.config";
 import {
   HALL_PRICE_TERMS,
   LANDING_PAGE,
   LANDING_PAGES,
+  MODULE_BLOCKS,
   MODULES_PRICE_TERMS,
 } from "@/config/landing-pages.config";
 
@@ -35,7 +38,6 @@ const LOCALES_DIR = join(LANDING_DIR, "public/locales");
 type IRuModules = {
   pricing: {
     modules: {
-      items: Record<string, { name: string }>;
       rules: Record<string, string>;
     };
   };
@@ -126,20 +128,38 @@ describe("цены модулей — одна константа", () => {
     }
   });
 
-  it("ru — названия модулей те же, что в константе", () => {
-    const ru = readRu();
-    for (const licenseModule of LICENSE_MODULES)
-      expect(ru.pricing.modules.items[licenseModule]?.name).toBe(
-        MODULES_PRICING[licenseModule].name,
+  it("названия модулей те же, что в константе", () => {
+    for (const licenseModule of LICENSE_MODULES) {
+      expect(MODULE_BLOCKS[licenseModule].title).toBe(
+        `«${MODULES_PRICING[licenseModule].name}»`,
       );
-    expect(ru.hallBlock.label).toBe(MODULES_PRICING[LICENSE_MODULE.HALL].name);
-  });
-
-  it("ru — «отдельно от лицензии не продаются» сказано прямо", () => {
-    expect(Object.values(readRu().pricing.modules.rules).join(" ")).toMatch(
-      /отдельно от неё не продаются/u,
+      expect(MODULE_BLOCKS[licenseModule].module).toBe(licenseModule);
+    }
+    expect(readRu().hallBlock.label).toBe(
+      MODULES_PRICING[LICENSE_MODULE.HALL].name,
     );
   });
+
+  it("ru — условие «подключаются к лицензии» сказано прямо", () => {
+    expect(Object.values(readRu().pricing.modules.rules).join(" ")).toMatch(
+      /подключаются к лицензии Нямбота/u,
+    );
+  });
+
+  /* Выгода срока — бейджем «−10%» у цены срока, как у тарифов лицензии:
+     числа считаются из цен вниз и совпадают с выгодой лицензии на тот же
+     срок; у месяца выгоды нет */
+  it.each(LICENSE_MODULES)(
+    "%s — выгода сроков как у лицензии",
+    (licenseModule) => {
+      for (const months of MODULE_TERM_MONTHS) {
+        const plan = PRICING_PLANS.find((item) => item.months === months);
+        expect(moduleTermDiscountPercent(licenseModule, months)).toBe(
+          plan?.discountPercent,
+        );
+      }
+    },
+  );
 });
 
 describe.skipIf(!existsSync(TARIFFS_FILE))(

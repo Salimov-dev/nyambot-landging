@@ -58,7 +58,7 @@
         "text": "iiko yoki R-Keeper bor — menyu va stop-roʻyxatlar kassadan keladi, mehmonning tarkibga kiritgan oʻzgarishlari esa chekkacha yetib boradi. Kassa yoʻq yoki boshqa — Nyambot menyu va sodiqlik dasturini oʻzi yuritadi"
       },
       "loyalty": {
-        "title": "Aksiyalar va ballar — tayyor",
+        "title": "Mehmon ballar va aksiyalar uchun qaytadi",
         "text": "NyamClub chegirmalari, sovgʻalari, promokodlari va ballari darhol ishlaydi, kassa bilan esa — iikoCard yoki r_k Friends"
       },
       "money": {
@@ -85,7 +85,7 @@
         "text": "Agregator har bir buyurtmadan 25–35% oladi — birinchisidan ham, keyingi hammasidan ham. Nyambot qat’iy obuna oladi va foiz olmaydi. Mehmon sening kanalingga qaytadi va sening bazangda qoladi"
       },
       "growth": {
-        "title": "O‘rtacha chek va qaytishlar",
+        "title": "Oʻrtacha chek yuqoriroq, takroriy buyurtmalar koʻproq",
         "text": "Modifikatorlar, kombo, aksiyalar, ballar va tarqatmalar chekni oshiradi va mehmonni qaytaradi — qo‘l mehnatisiz"
       },
       "segmentBroadcast": {
@@ -97,8 +97,8 @@
         "text": "Piyozni olib tashlash, pishloq qo‘shish, ikki qavat kotlet olish. Tarkib chekka kassa chop etadigan satrning aynan o‘zi bilan tushadi"
       },
       "guestChat": {
-        "title": "Mehmon soʻraydi — bot javob beradi",
-        "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — «Chatda SI» moduli bilan bunday savollarga SI javob beradi. Agar mehmonga odam kerak boʻlsa, bot smenadagi administratorni chaqiradi"
+        "title": "Mehmon soʻraydi — bot darhol javob beradi",
+        "text": "«Buyurtmam qayerda?», «Soat nechagacha ishlaysizlar?» — bot darhol javob beradi, «Chatda SI» moduli bilan esa menyu boʻyicha ham maslahat beradi: taomlarni narxi bilan aytadi va menyuni ochadi — mehmon administratorni kutmasdan buyurtma beradi. Agar mehmonga odam kerak boʻlsa, bot smenadagi administratorni chaqiradi"
       },
       "delivery": {
         "title": "O‘z xodimlarisiz yetkazib berish",
@@ -179,7 +179,7 @@
       },
       {
         "question": "Mehmon muassasaga yoza oladimi?",
-        "answer": "Ha, agar nuqtada mehmonlar bilan chat yoqilgan boʻlsa. Mehmon botga yozadi, smenadagi administrator Telegram yoki MAX'dan javob beradi; koʻp beriladigan savollarga bot tayyor javoblar bilan javob beradi. «Chatda SI» moduli bilan oddiy savollarga SI javob beradi, murakkablari administratorga oʻtadi"
+        "answer": "Ha, agar nuqtada mehmonlar bilan chat yoqilgan boʻlsa. Mehmon toʻgʻridan-toʻgʻri botga yozadi, smenadagi administrator esa MAX yoki Telegram'dan javob beradi — savol yoʻqolmaydi, mehmon buyurtmagacha yetib boradi. «Chatda SI» moduli bilan mehmon menyu va oʻz buyurtmalari haqida javobni darhol oladi, administratorga esa faqat murakkab savollar qoladi"
       },
       {
         "question": "SI ortiqcha gapirib qoʻymaydimi?",
@@ -238,8 +238,8 @@
   },
   "integrations": {
     "label": "Integratsiyalar",
-    "title": "Integratsiyalar — xohishga koʻra",
-    "subtitle": "Nyambot oʻzi mustaqil ishlaydi. Agar kassa, ekvayring yoki kuryerlik xizmating boʻlsa — ularni oʻzimiz ulaymiz, dasturchilarsiz va qoʻshimcha ishlarsiz",
+    "title": "Sendagi bor narsalar bilan ishlaydi",
+    "subtitle": "Kassa, onlayn toʻlov va kuryerlar Nyambotga ulanadi: buyurtma oʻzi kassaga va oshxonaga ketadi, pul — sening hisobingga. Oʻzimiz ulaymiz, dasturchilarsiz va qoʻshimcha ishlarsiz",
     "noPos": "Kassa yoʻqmi? Hech narsa ulash shart emas — Nyambot toʻliq mustaqil ishlaydi",
     "items": {
       "iiko": "iiko",
@@ -263,7 +263,7 @@
   },
   "loyaltyBlock": {
     "label": "Sodiqlik",
-    "title": "Sodiqlik — seniki yoki bizniki",
+    "title": "Mehmonlarni qaytaradigan bonuslar — seniki yoki bizniki",
     "subtitle": "Bonuslar, aksiyalar va promokodlar MAX va Telegram'dagi buyurtmaning oʻzida ishlaydi. Kassada dastur bor — uni ulaymiz, yoʻq — NyamClub'ni yoqamiz",
     "badgeNew": "Yangi",
     "more": "Sodiqlik haqida batafsil",
@@ -326,7 +326,7 @@
   },
   "guestsPath": {
     "label": "Mehmonlar",
-    "title": "Mehmonlar ilovaga qanday keladi",
+    "title": "Har bir mehmon senda qoladi",
     "subtitle": "Nyambot trafik quvmaydi — u mehmonni sening oʻz buyurtma kanalingga oʻtqazadi. Buning toʻrtta yoʻli",
     "items": {
       "link": {
@@ -360,7 +360,7 @@
       },
       "hall": {
         "title": "Zal bilan ishlash",
-        "text": "Oldindan buyurtma bilan stol bron qilish, zalda vaqtiga buyurtma va stoldagi QR — toʻgʻridan-toʻgʻri iiko va R-Keeper kassasiga"
+        "text": "Mehmon stolni oʻzi bron qiladi va stoldan buyurtma beradi — qoʻngʻiroqsiz va ofitsiantni kutmasdan, bron va buyurtma toʻgʻridan-toʻgʻri iiko va R-Keeper kassasiga"
       },
       "komanda": {
         "title": "«Komanda» ilovasi",

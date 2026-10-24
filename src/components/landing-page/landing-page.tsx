@@ -1,31 +1,12 @@
 import { typograph } from "@/lib/typography/typograph";
 import {
-  BLOCK_ICON,
   isPhoneVisual,
-  type IBlockIcon,
   type ILandingPageContent,
 } from "@/config/landing-pages.config";
 import { LinkedText } from "./linked-text";
 import { PageVisual } from "./page-visual";
-import { PageScene } from "./page-scene";
+import { LandingBlock } from "./landing-block";
 import { HomeSections } from "./home-sections";
-import {
-  ListIcon,
-  CartIcon,
-  WalletIcon,
-  PercentIcon,
-  ToolsIcon,
-  MessageIcon,
-  MonitorIcon,
-  MapIcon,
-  ZapIcon,
-  MegaphoneIcon,
-  ChartIcon,
-  BulbIcon,
-  StoreIcon,
-  QrCodeIcon,
-} from "@/components/ui/icons/icons";
-import Link from "next/link";
 import { FreeReviewSection } from "@/components/sections/free-review/free-review-section";
 import { DemoQrBlock } from "@/components/sections/try-demo/demo-qr-block";
 import { LandingPageCta } from "./landing-page-cta";
@@ -37,23 +18,6 @@ const PAGE_TEXT = {
   guideTitle: "Как это настроить",
   faqTitle: "Частые вопросы",
 } as const;
-
-const ICONS: Record<IBlockIcon, typeof ListIcon> = {
-  [BLOCK_ICON.MENU]: ListIcon,
-  [BLOCK_ICON.ORDER]: CartIcon,
-  [BLOCK_ICON.MONEY]: WalletIcon,
-  [BLOCK_ICON.PROMO]: PercentIcon,
-  [BLOCK_ICON.SETUP]: ToolsIcon,
-  [BLOCK_ICON.GUEST]: MessageIcon,
-  [BLOCK_ICON.STAFF]: MonitorIcon,
-  [BLOCK_ICON.DELIVERY]: MapIcon,
-  [BLOCK_ICON.ALERT]: ZapIcon,
-  [BLOCK_ICON.BROADCAST]: MegaphoneIcon,
-  [BLOCK_ICON.METRICS]: ChartIcon,
-  [BLOCK_ICON.INSIGHT]: BulbIcon,
-  [BLOCK_ICON.BRAND]: StoreIcon,
-  [BLOCK_ICON.QR]: QrCodeIcon,
-};
 
 type IProps = {
   content: ILandingPageContent;
@@ -108,46 +72,9 @@ export function LandingPage({ content }: IProps) {
         {content.demoQr ? <DemoQrBlock showMore={false} inPage /> : null}
 
         <div className={styles.blocks}>
-          {content.blocks.map((block, index) => {
-            const Icon = ICONS[block.icon];
-
-            return (
-              <section
-                key={block.title}
-                className={
-                  block.wide
-                    ? `${styles.block} ${styles.blockWide}`
-                    : styles.block
-                }
-              >
-                {block.scene ? (
-                  <PageScene scene={block.scene} index={index} />
-                ) : (
-                  <span className={styles.blockIcon}>
-                    <Icon size={20} />
-                  </span>
-                )}
-                <h2 className={styles.blockTitle}>{block.title}</h2>
-                <p className={styles.blockText}>
-                  <LinkedText text={block.text} />
-                </p>
-                {block.points ? (
-                  <ul className={styles.blockPoints}>
-                    {block.points.map((point) => (
-                      <li key={point} className={styles.blockPoint}>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-                {block.link ? (
-                  <Link href={block.link.href} className={styles.blockLink}>
-                    {block.link.label} →
-                  </Link>
-                ) : null}
-              </section>
-            );
-          })}
+          {content.blocks.map((block, index) => (
+            <LandingBlock key={block.title} block={block} index={index} />
+          ))}
         </div>
 
         {content.notNeeded ? (

@@ -58,7 +58,7 @@
         "text": "Got iiko or R-Keeper — menu and stop lists come from the till, and the guest's changes to a dish reach the receipt. No till or a different one — Nyambot runs the menu and loyalty on its own"
       },
       "loyalty": {
-        "title": "Promos and points included",
+        "title": "Guests come back for points and promos",
         "text": "NyamClub discounts, gifts, promo codes and points work from day one, and with a POS — iikoCard or r_k Friends"
       },
       "money": {
@@ -85,7 +85,7 @@
         "text": "An aggregator takes 25–35% of every order — the first one and every one after. Nyambot charges a flat subscription and takes no percentage. The guest comes back to your channel and stays in your database"
       },
       "growth": {
-        "title": "Average check and repeat visits",
+        "title": "A bigger average check, more repeat orders",
         "text": "Modifiers, combos, promos, points and mailings raise the average check and bring guests back — no manual work"
       },
       "segmentBroadcast": {
@@ -97,8 +97,8 @@
         "text": "Hold the onion, add cheese, make it a double patty. The build lands on the receipt in the same line the POS prints"
       },
       "guestChat": {
-        "title": "The guest asks — the bot answers",
-        "text": "«Where's my order?», «How late are you open?» — with the AI in Chat module, AI answers questions like these. If the guest needs a person, the bot calls the admin on shift"
+        "title": "The guest asks — the bot answers right away",
+        "text": "«Where's my order?», «How late are you open?» — the bot answers right away, and with the AI in Chat module it also advises on the menu: it names dishes with prices and opens the menu, so the guest orders without waiting for the admin. If the guest needs a person, the bot calls the admin on shift"
       },
       "delivery": {
         "title": "Delivery without your own couriers",
@@ -179,7 +179,7 @@
       },
       {
         "question": "Can a guest message the venue?",
-        "answer": "Yes, if guest chat is on for the location. The guest writes to the bot and the admin on shift replies — from Telegram or MAX; common questions get ready-made answers. With the AI in Chat module, AI answers everyday questions and passes tricky ones to the admin"
+        "answer": "Yes, if guest chat is on for the location. The guest writes straight to the bot and the admin on shift replies from MAX or Telegram — no question gets lost, and the guest gets to the order. With the AI in Chat module, the guest gets an answer about the menu and their orders right away, and only tricky questions are left for the admin"
       },
       {
         "question": "Won't the AI say too much?",
@@ -234,8 +234,8 @@
   },
   "integrations": {
     "label": "Integrations",
-    "title": "Integrations — optional",
-    "subtitle": "Nyambot works on its own. And if you already have a POS, a payment provider or a courier service — we connect them ourselves, no developers or custom work",
+    "title": "Works with what you already have",
+    "subtitle": "Your POS, online payments and couriers connect to Nyambot: the order goes into the POS and to the kitchen by itself, and the money goes to your account. We connect everything ourselves, no developers or custom work",
     "noPos": "No POS? Nothing to connect — Nyambot works entirely on its own",
     "items": {
       "iiko": "iiko",
@@ -259,7 +259,7 @@
   },
   "loyaltyBlock": {
     "label": "Loyalty",
-    "title": "Loyalty — yours or ours",
+    "title": "Rewards that bring guests back — yours or ours",
     "subtitle": "Bonuses, promos and promo codes work right in the order in MAX and Telegram. Have a programme in your POS — we'll connect it; if not, we'll switch on NyamClub",
     "badgeNew": "New",
     "more": "More about loyalty",
@@ -322,7 +322,7 @@
   },
   "guestsPath": {
     "label": "Guests",
-    "title": "How guests reach the app",
+    "title": "Every guest stays with you",
     "subtitle": "Nyambot doesn't drive traffic — it lands your guests in your own ordering channel. Four routes that make it happen",
     "items": {
       "link": {
@@ -356,7 +356,7 @@
       },
       "hall": {
         "title": "Dine-in service",
-        "text": "Table booking with pre-orders, dine-in orders for a set time and a QR code on every table — straight into iiko and R-Keeper"
+        "text": "Guests book a table and order from it themselves — no phone calls, no waiting for a waiter; bookings and orders go straight into iiko and R-Keeper"
       },
       "komanda": {
         "title": "Team app",
