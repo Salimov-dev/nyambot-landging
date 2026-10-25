@@ -96,10 +96,12 @@ describe("страницы зала и модулей", () => {
     },
   );
 
+  // Слова «предоплата» на страницах почти нет — с 25.10 пишем «оплата блюд к брони».
   it("онлайн-предоплату брони на R-Keeper не обещаем", () => {
     const rkeeperPrepay = sentences.filter(
       (sentence) =>
-        sentence.includes("R-Keeper") && /предоплат/iu.test(sentence),
+        sentence.includes("R-Keeper") &&
+        /предоплат|оплатS* (?:блюд|онлайн)|оплачива/iu.test(sentence),
     );
     expect(rkeeperPrepay.length).toBeGreaterThan(0);
     for (const sentence of rkeeperPrepay)

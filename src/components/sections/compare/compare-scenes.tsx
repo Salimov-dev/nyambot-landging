@@ -47,7 +47,39 @@ export function OneBotScene() {
   );
 }
 
-/** 2. Новая точка — новый бот → вторая метка в том же кабинете */
+/** 2. QR-картинка меню и ожидание официанта → QR открывает заказ, он сразу в кассе */
+export function TableOrderScene() {
+  return (
+    <svg viewBox={VIEW} className={styles.scene} aria-hidden="true">
+      {/* QR на столе — общий для обоих состояний */}
+      <rect x="44" y="64" width="72" height="72" rx="8" />
+      <rect x="56" y="76" width="18" height="18" rx="2" />
+      <rect x="86" y="76" width="18" height="18" rx="2" />
+      <rect x="56" y="106" width="18" height="18" rx="2" />
+      <path d="M90 110 h10 M90 120 h6 M100 116 v8" />
+      <g className={`${styles.gray} ${styles.uFade}`}>
+        {/* Ждём официанта: человечек и многоточие */}
+        <path d="M126 100 H196" strokeDasharray="6 7" />
+        <circle cx="250" cy="72" r="14" />
+        <path d="M224 132 a26 22 0 0 1 52 0" />
+        <circle cx="236" cy="160" r="3" />
+        <circle cx="250" cy="160" r="3" />
+        <circle cx="264" cy="160" r="3" />
+      </g>
+      <g className={`${styles.accent} ${styles.oIn}`}>
+        {/* Заказ сразу в кассе: стрелка к кассе и галочка */}
+        <path d="M126 100 H210" />
+        <path d="M200 90 L212 100 L200 110" />
+        <rect x="222" y="62" width="96" height="62" rx="8" />
+        <path d="M234 76 H306 M234 90 H290" />
+        <path d="M244 104 l10 10 20 -22" />
+        <rect x="236" y="130" width="68" height="16" rx="4" />
+      </g>
+    </svg>
+  );
+}
+
+/** 3. Новая точка — новый бот → вторая метка в том же кабинете */
 export function NewPointScene() {
   return (
     <svg viewBox={VIEW} className={styles.scene} aria-hidden="true">
@@ -78,7 +110,7 @@ export function NewPointScene() {
   );
 }
 
-/** 3. Регистрация на входе → сразу меню */
+/** 4. Регистрация на входе → сразу меню */
 export function NoSignupScene() {
   return (
     <svg viewBox={VIEW} className={styles.scene} aria-hidden="true">
@@ -115,7 +147,7 @@ export function NoSignupScene() {
   );
 }
 
-/** 4. Задача разработчикам сервиса → переключатель в кабинете */
+/** 5. Задача разработчикам сервиса → переключатель в кабинете */
 export function SetupScene() {
   return (
     <svg viewBox={VIEW} className={styles.scene} aria-hidden="true">
@@ -160,7 +192,7 @@ export function SetupScene() {
   );
 }
 
-/** 5. Цена на созвоне → открытая цена: ценник и прайс со знаком рубля */
+/** 6. Цена на созвоне → открытая цена: ценник и прайс со знаком рубля */
 export function PricesScene() {
   return (
     <svg viewBox={VIEW} className={styles.scene} aria-hidden="true">
@@ -187,6 +219,7 @@ export function PricesScene() {
 
 export const COMPARE_SCENES = [
   OneBotScene,
+  TableOrderScene,
   NewPointScene,
   NoSignupScene,
   SetupScene,

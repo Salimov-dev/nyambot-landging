@@ -484,6 +484,7 @@
     "ourLabel": "Bizda",
     "titles": [
       "Ikkala messenjer uchun bitta tizim",
+      "Stoldan buyurtma — darhol kassaga",
       "Yangi nuqta — oʻsha kabinetda",
       "Roʻyxatdan oʻtmasdan",
       "Ishga tushirish bepul",
@@ -493,6 +494,10 @@
       {
         "usual": "Telegramda alohida bot va MAXda alohida bot: ikkita mehmonlar bazasi, ikkita kabinet, ikkita hisob",
         "our": "MAX va Telegramdagi botlar bitta tizimga ulangan: mehmonlar bazasi, buyurtmalar tarixi va ballar umumiy"
+      },
+      {
+        "usual": "Stoldagi QR menyuning rasmini ochadi, buyurtma esa baribir ofitsiantni kutadi. Bron — telefon orqali",
+        "our": "Stoldagi QR buyurtmani ochadi: mehmon o‘zi buyurtma beradi va buyurtma darhol iiko yoki R-Keeper kassasida uning stoliga tushadi. Bron ham shunday — qo‘ng‘iroqsiz"
       },
       {
         "usual": "Yangi nuqta — yangi ishga tushirish va yangi bot",

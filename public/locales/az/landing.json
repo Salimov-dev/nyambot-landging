@@ -484,6 +484,7 @@
     "ourLabel": "Bizdə",
     "titles": [
       "Hər iki messencer üçün bir sistem",
+      "Masadan sifariş — birbaşa kassaya",
       "Yeni nöqtə — eyni kabinetdə",
       "Qeydiyyatsız",
       "İşə salma pulsuzdur",
@@ -493,6 +494,10 @@
       {
         "usual": "Telegram-da ayrıca bot, MAX-da ayrıca bot: iki qonaq bazası, iki kabinet, iki hesab",
         "our": "MAX və Telegram-dakı botlar bir sistemə qoşulub: qonaq bazası, sifariş tarixi və ballar ortaqdır"
+      },
+      {
+        "usual": "Masadakı QR menyunun şəklini açır, sifariş isə yenə ofisiantı gözləyir. Bron — telefonla",
+        "our": "Masadakı QR sifarişi açır: qonaq özü sifariş edir və sifariş dərhal iiko və ya R-Keeper kassasında onun masasına düşür. Bron da belədir — zəngsiz"
       },
       {
         "usual": "Yeni nöqtə — yeni işə salma və yeni bot",

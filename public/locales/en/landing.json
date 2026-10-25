@@ -480,6 +480,7 @@
     "ourLabel": "With us",
     "titles": [
       "One system for both messengers",
+      "Table orders go straight to the POS",
       "A new location — in the same dashboard",
       "No sign-up",
       "Free launch",
@@ -489,6 +490,10 @@
       {
         "usual": "A separate bot in Telegram and another one in MAX: two guest bases, two dashboards, two bills",
         "our": "Bots in MAX and Telegram are connected to one system: guest base, order history and points are shared"
+      },
+      {
+        "usual": "A QR code on the table opens a picture of the menu, and the order still waits for a waiter. Bookings are by phone",
+        "our": "The QR code on the table opens ordering: the guest orders on their own, and the order goes straight to iiko or R-Keeper on their table. Bookings work the same way, no calls"
       },
       {
         "usual": "A new location means a new launch and a new bot",
