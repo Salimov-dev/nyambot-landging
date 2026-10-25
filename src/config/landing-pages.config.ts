@@ -79,6 +79,9 @@ export const HOME_SECTION = {
   LOYALTY: "loyalty",
   FEATURES: "features",
   CRM: "crm",
+  /** «Работа с залом»: ролик QR на столе → заказ и бронь в кассе и пункты
+   *  модуля. Не ставим на страницы зала — их первый экран уже этот ролик */
+  HALL: "hall",
 } as const;
 
 export type IHomeSection = (typeof HOME_SECTION)[keyof typeof HOME_SECTION];
@@ -205,6 +208,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     path: "/iiko",
     visual: PAGE_VISUAL.KASSY_IIKO,
     homeSections: [
+      HOME_SECTION.HALL,
       HOME_SECTION.LOYALTY,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
@@ -311,6 +315,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     path: "/rkeeper",
     visual: PAGE_VISUAL.KASSY_RKEEPER,
     homeSections: [
+      HOME_SECTION.HALL,
       HOME_SECTION.KOMANDA,
       HOME_SECTION.LOYALTY,
       HOME_SECTION.KILLER,
@@ -469,6 +474,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     path: LINKS.pages.integrations,
     visual: PAGE_VISUAL.KASSY,
     homeSections: [
+      HOME_SECTION.HALL,
       HOME_SECTION.LOYALTY,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
@@ -673,6 +679,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     visual: PAGE_VISUAL.KABINET,
     homeSections: [
       HOME_SECTION.KOMANDA,
+      HOME_SECTION.HALL,
       HOME_SECTION.INTEGRATIONS,
       HOME_SECTION.LOYALTY,
       HOME_SECTION.COMPARE,
@@ -1027,6 +1034,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     path: "/set-i-franshiza",
     visual: PAGE_VISUAL.KABINET,
     homeSections: [
+      HOME_SECTION.HALL,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
       HOME_SECTION.VITRINA,
@@ -1108,6 +1116,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       HOME_SECTION.VITRINA,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
+      HOME_SECTION.HALL,
     ],
     label: "Уже есть сайт",
     metaTitle:
@@ -1286,6 +1295,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
     path: LINKS.pages.qrCode,
     visual: PAGE_VISUAL.DEMO,
     homeSections: [
+      HOME_SECTION.HALL,
       HOME_SECTION.VITRINA,
       HOME_SECTION.KILLER,
       HOME_SECTION.COMPARE,
@@ -2067,6 +2077,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
    */
   [LANDING_PAGE.MODULI]: {
     path: LINKS.pages.modules,
+    homeSections: [HOME_SECTION.HALL],
     label: "Модули",
     metaTitle: "Модули Нямбота — «Работа с залом» и «ИИ в чате»: цены",
     metaDescription: `Модули расширяют Нямбот: «Работа с залом» — гость заказывает со стола по QR и сам бронирует стол, заказ и бронь сразу в кассе, ${HALL_MONTHLY}; «ИИ в чате» — гость сразу получает ответ про меню и свой заказ, ${AI_CHAT_MONTHLY}. Подключим вместе с запуском или в любой момент позже`,

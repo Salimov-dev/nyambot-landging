@@ -7,6 +7,7 @@ import { IntegrationsSection } from "@/components/sections/integrations/integrat
 import { LoyaltySection } from "@/components/sections/loyalty/loyalty-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
+import { HallSection } from "@/components/sections/hall/hall-section";
 import styles from "./landing-page.module.css";
 
 /** Тарифы живут на главной — с подстраницы кнопка ведёт туда */
@@ -21,6 +22,7 @@ const SECTIONS: Record<IHomeSection, () => React.ReactElement | null> = {
   [HOME_SECTION.LOYALTY]: LoyaltySection,
   [HOME_SECTION.FEATURES]: FeaturesSection,
   [HOME_SECTION.CRM]: CrmDemoSection,
+  [HOME_SECTION.HALL]: HallSection,
 };
 
 /**

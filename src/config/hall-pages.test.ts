@@ -5,8 +5,10 @@ import sitemap from "@/app/sitemap";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { LINKS } from "@/config/links.config";
 import {
+  HOME_SECTION,
   LANDING_PAGE,
   LANDING_PAGES,
+  PAGE_VISUAL,
   type ILandingPageContent,
 } from "@/config/landing-pages.config";
 
@@ -34,6 +36,25 @@ const LINKED_TO_HALL = [
   LANDING_PAGE.RKEEPER,
   LANDING_PAGE.VOPROSY,
   LANDING_PAGE.QR_KOD,
+  LANDING_PAGE.ELEKTRONNOE_MENYU,
+  LANDING_PAGE.BRON_STOLOV,
+] as const;
+
+/** Страницы с блоком «Работа с залом» из главной (Руслан 25.10.2026) */
+const WITH_HALL_SECTION = [
+  LANDING_PAGE.IIKO,
+  LANDING_PAGE.RKEEPER,
+  LANDING_PAGE.INTEGRACII,
+  LANDING_PAGE.QR_KOD,
+  LANDING_PAGE.VOZMOZHNOSTI,
+  LANDING_PAGE.SET_I_FRANSHIZA,
+  LANDING_PAGE.MODULI,
+  LANDING_PAGE.SAYT_ILI_PRILOZHENIE,
+] as const;
+
+/** Первый экран — уже ролик зала: блок повторил бы его */
+const HALL_VISUAL_PAGES = [
+  LANDING_PAGE.RABOTA_S_ZALOM,
   LANDING_PAGE.ELEKTRONNOE_MENYU,
   LANDING_PAGE.BRON_STOLOV,
 ] as const;
@@ -77,6 +98,17 @@ describe("страницы зала и модулей", () => {
   it.each(LINKED_TO_HALL)("%s — ссылка на «Работу с залом»", (key) => {
     const links = LANDING_PAGES[key].blocks.map((block) => block.link?.href);
     expect(links).toContain(LINKS.pages.hall);
+  });
+
+  it.each(WITH_HALL_SECTION)("%s — блок «Работа с залом» из главной", (key) => {
+    expect(LANDING_PAGES[key].homeSections).toContain(HOME_SECTION.HALL);
+  });
+
+  it.each(HALL_VISUAL_PAGES)("%s — ролик зала не повторяется блоком", (key) => {
+    expect(LANDING_PAGES[key].visual).toBe(PAGE_VISUAL.HALL);
+    expect(LANDING_PAGES[key].homeSections ?? []).not.toContain(
+      HOME_SECTION.HALL,
+    );
   });
 
   it("общий QR-код и QR стола связаны ссылками", () => {
