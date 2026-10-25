@@ -51,12 +51,15 @@ export function OneBotScene() {
 export function TableOrderScene() {
   return (
     <svg viewBox={VIEW} className={styles.scene} aria-hidden="true">
-      {/* QR на столе — общий для обоих состояний */}
-      <rect x="44" y="64" width="72" height="72" rx="8" />
-      <rect x="56" y="76" width="18" height="18" rx="2" />
-      <rect x="86" y="76" width="18" height="18" rx="2" />
-      <rect x="56" y="106" width="18" height="18" rx="2" />
-      <path d="M90 110 h10 M90 120 h6 M100 116 v8" />
+      {/* QR на столе — общий для обоих состояний; без класса группы
+          браузер заливает фигуры чёрным */}
+      <g className={styles.neutral}>
+        <rect x="44" y="64" width="72" height="72" rx="8" />
+        <rect x="56" y="76" width="18" height="18" rx="2" />
+        <rect x="86" y="76" width="18" height="18" rx="2" />
+        <rect x="56" y="106" width="18" height="18" rx="2" />
+        <path d="M90 110 h10 M90 120 h6 M100 116 v8" />
+      </g>
       <g className={`${styles.gray} ${styles.uFade}`}>
         {/* Ждём официанта: человечек и многоточие */}
         <path d="M126 100 H196" strokeDasharray="6 7" />
