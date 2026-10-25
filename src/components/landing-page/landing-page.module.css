@@ -112,6 +112,9 @@
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: 40px;
   align-items: center;
+  /* Телефон выше текстовой колонки — без отступа он упирался в карточку
+     под ним (QR-код демо, карточки страницы) */
+  margin-bottom: 40px;
   --phone-mockup-width: 280px;
   --phone-mockup-height: 520px;
 }
@@ -644,6 +647,8 @@
   .intro {
     grid-template-columns: 1fr;
     gap: 8px;
+    /* Отступ здесь даёт сам телефон (`.visualPhone`) */
+    margin-bottom: 0;
     --phone-mockup-width: 240px;
     --phone-mockup-height: 446px;
   }
