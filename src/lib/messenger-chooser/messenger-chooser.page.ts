@@ -203,12 +203,21 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     )
     .join("");
 
-  const table = params.tableLabel
-    ? `<strong>${escapeHtml(params.tableLabel)}</strong><br>`
+  // Где гость: «Бронь стола» (ссылка на бронь) или «Твой стол № 12 · Зал».
+  const placeLabel = params.booking
+    ? CHOOSER_TEXT.bookingLabel
+    : params.tableLabel || null;
+  const table = placeLabel
+    ? `<strong>${escapeHtml(placeLabel)}</strong><br>`
     : "";
+  const leadText = params.booking
+    ? CHOOSER_TEXT.bookingLead
+    : params.tableLabel
+      ? CHOOSER_TEXT.tableLead
+      : CHOOSER_TEXT.lead;
   const lead = single
     ? `${table}${escapeHtml(CHOOSER_TEXT.single)}<br>${escapeHtml(CHOOSER_TEXT.singleFallback)}`
-    : `${table}${escapeHtml(params.tableLabel ? CHOOSER_TEXT.tableLead : CHOOSER_TEXT.lead)}`;
+    : `${table}${escapeHtml(leadText)}`;
 
   const pitch = single
     ? ""
