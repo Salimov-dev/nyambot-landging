@@ -50,6 +50,24 @@ const tileMarkup = (html: string, extra: string): string => {
 };
 
 describe("страница выбора /go", () => {
+  it("бронь есть хотя бы в одной точке — одна строка под кнопками, без кнопок брони (Ф10в)", () => {
+    const html = page({ bookingNote: true });
+    expect(html).toContain(
+      '<p class="booking-note">📅 В меню можно забронировать стол</p>',
+    );
+    expect(html.indexOf('<p class="booking-note">')).toBeGreaterThan(
+      html.indexOf('data-messenger="telegram"'),
+    );
+    // Без брони и по умолчанию (скачанный файл) — строки нет.
+    expect(page()).not.toContain("забронировать");
+  });
+
+  it("адрес точки — строкой «📍» под названием", () => {
+    const html = page({ address: "Невский, 1" });
+    expect(html).toContain('<p class="address">📍 Невский, 1</p>');
+    expect(page()).not.toContain('class="address"');
+  });
+
   it("два мессенджера — обе кнопки, MAX первым, без мгновенной переадресации", () => {
     const html = page();
     expect(html.indexOf('data-messenger="max"')).toBeLessThan(

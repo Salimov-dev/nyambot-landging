@@ -84,6 +84,7 @@ export async function GET(_request: Request, context: IRouteContext) {
       poweredByUrl: qrPagePoweredByUrl(slug),
       logo: data.logo,
       colorScheme: data.colorScheme,
+      bookingNote: data.bookingOffered,
     }),
   );
 }

@@ -31,6 +31,8 @@ export type IQrLinkData = {
   logo: string | null;
   /** Ключ цветовой схемы бренда; `null` — цвета Нямбота. */
   colorScheme: string | null;
+  /** Бронь есть хотя бы в одной точке бота — строка «📅 В меню можно забронировать стол» (Ф10в). */
+  bookingOffered: boolean;
 };
 
 /** Ответ main-server до того, как лого превратилось в data-URI. */
@@ -87,6 +89,7 @@ const parseData = (raw: unknown): IQrLinkRaw | null => {
     extras?: unknown;
     logoUrl?: unknown;
     colorScheme?: unknown;
+    bookingOffered?: unknown;
   };
   if (typeof record.title !== "string") return null;
   const targets =
@@ -111,6 +114,7 @@ const parseData = (raw: unknown): IQrLinkRaw | null => {
     ) as IChooserExtras,
     logoUrl: readOptionalString(record.logoUrl),
     colorScheme: readOptionalString(record.colorScheme),
+    bookingOffered: record.bookingOffered === true,
   };
 };
 

@@ -73,6 +73,7 @@ html,body{min-height:100%}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px 16px;min-height:100vh}
 .card{width:100%;max-width:400px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.06)}
 h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wrap:balance}
+.booking-note{margin-top:12px;font-size:15px;line-height:1.35;font-weight:600}
 .address{margin-top:6px;color:var(--muted);font-size:15px;line-height:1.35;text-wrap:balance}
 .lead{margin-top:8px;color:var(--muted);font-size:16px;line-height:1.4;text-wrap:balance}
 .buttons{display:flex;flex-direction:column;gap:12px;margin-top:24px}
@@ -217,6 +218,11 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
           : CHOOSER_TEXT.pitchOneMessenger,
       )}</p>`;
 
+  // Ф10в «Бронь — вход»: одна строка под кнопками, без кнопок брони.
+  const bookingNote = params.bookingNote
+    ? `<p class="booking-note">${escapeHtml(CHOOSER_TEXT.bookingNote)}</p>`
+    : "";
+
   // Где гость — адрес точки под названием (Ф10в «Общие правила»).
   const address = params.address
     ? `<p class="address">📍 ${escapeHtml(params.address)}</p>`
@@ -226,7 +232,7 @@ export const renderChooserPage = (params: IChooserPageParams): string => {
     ? `<a class="powered" href="${escapeHtml(params.poweredByUrl)}" target="_blank" rel="noopener">${escapeHtml(CHOOSER_TEXT.poweredByPrefix)} <span class="brand">${escapeHtml(CHOOSER_TEXT.poweredByBrand)}</span></a>`
     : "";
 
-  const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1>${address}<p class="lead">${lead}</p><div class="buttons">${buttons}</div>${pitch}${renderExtras(extras, params)}${powered}</main>`;
+  const body = `<main class="card">${renderLogo(params.logo)}<h1>${escapeHtml(params.title)}</h1>${address}<p class="lead">${lead}</p><div class="buttons">${buttons}</div>${bookingNote}${pitch}${renderExtras(extras, params)}${powered}</main>`;
 
   const head = [
     params.fileMarker
