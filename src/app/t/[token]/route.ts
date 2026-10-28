@@ -59,6 +59,7 @@ export async function GET(_request: Request, context: IRouteContext) {
     renderChooserPage({
       title: data.title,
       tableLabel: data.tableLabel || null,
+      address: data.address || null,
       targets: data.targets,
       poweredByUrl: tablePagePoweredByUrl(),
       logo: data.logo,

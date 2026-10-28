@@ -3,6 +3,7 @@ import {
   type IChooserTargets,
 } from "./messenger-chooser.types";
 import { fetchLogoDataUri, readConfig, readTarget } from "./qr-link.api";
+import { CHOOSER_TABLE_TEXT } from "./messenger-chooser.text";
 
 /**
  * Данные QR стола (`nyambot.ru/t/<токен>`, план «Работа с залом», Ф8) — с
@@ -22,6 +23,9 @@ const TABLE_TOKEN_PATTERN = /^[A-Za-z0-9]{12}$/;
 
 export type ITableQrData = {
   title: string;
+  /** «Адрес для гостей» точки (Ф10в п. 1); пусто — без строки адреса. */
+  address: string;
+  /** «Твой стол № 12 · Зал»; сервер прежней версии — «Стол 12 · Зал». */
   tableLabel: string;
   targets: IChooserTargets;
   logo: string | null;
@@ -47,6 +51,49 @@ export const isTableToken = (token: string): boolean =>
 const readOptionalString = (value: unknown): string | null =>
   typeof value === "string" && value.trim() ? value.trim() : null;
 
+const DIGITS_ONLY = /^\d+$/;
+
+/**
+ * «Твой стол № 12 · Зал» (Ф10в п. 1). Стол — как в боте и на сервере
+ * (`tableLabelOf`): имя совпадает с номером или пусто — номер; имя из цифр —
+ * оно; иначе имя в кавычках. Без зала — только стол.
+ */
+export const yourTableLabel = (table: {
+  number: number | null;
+  name: string;
+  hallName: string;
+}): string => {
+  const name = table.name.trim();
+  const numberText =
+    table.number !== null && (!name || name === String(table.number))
+      ? String(table.number)
+      : DIGITS_ONLY.test(name)
+        ? name
+        : null;
+  const title =
+    numberText !== null
+      ? `${CHOOSER_TABLE_TEXT.prefix} № ${numberText}`
+      : `${CHOOSER_TABLE_TEXT.prefix} «${name}»`;
+  return [title, table.hallName.trim()].filter(Boolean).join(" · ");
+};
+
+const readTable = (
+  value: unknown,
+): { number: number | null; name: string; hallName: string } | null => {
+  if (!value || typeof value !== "object") return null;
+  const table = value as {
+    number?: unknown;
+    name?: unknown;
+    hallName?: unknown;
+  };
+  if (typeof table.name !== "string") return null;
+  return {
+    number: typeof table.number === "number" ? table.number : null,
+    name: table.name,
+    hallName: typeof table.hallName === "string" ? table.hallName : "",
+  };
+};
+
 const parseData = (
   raw: unknown,
 ): (Omit<ITableQrData, "logo"> & { logoUrl: string | null }) | null => {
@@ -55,7 +102,9 @@ const parseData = (
   if (!data || typeof data !== "object") return null;
   const record = data as {
     title?: unknown;
+    address?: unknown;
     tableLabel?: unknown;
+    table?: unknown;
     targets?: unknown;
     logoUrl?: unknown;
     colorScheme?: unknown;
@@ -65,9 +114,13 @@ const parseData = (
     record.targets && typeof record.targets === "object"
       ? (record.targets as Record<string, unknown>)
       : {};
+  const table = readTable(record.table);
   return {
     title: record.title,
-    tableLabel: readOptionalString(record.tableLabel) ?? "",
+    address: readOptionalString(record.address) ?? "",
+    tableLabel: table
+      ? yourTableLabel(table)
+      : (readOptionalString(record.tableLabel) ?? ""),
     targets: {
       [CHOOSER_MESSENGER.MAX]: readTarget(targets.max),
       [CHOOSER_MESSENGER.TELEGRAM]: readTarget(targets.telegram),

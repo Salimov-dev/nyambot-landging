@@ -21,8 +21,9 @@ const PITCH_TAIL = "на связи прямо в чате";
 
 export const CHOOSER_TEXT = {
   lead: "Выбери, где тебе удобнее заказывать",
-  /** QR стола (Ф8): гость сидит за столом — заказ придёт к нему. */
-  tableLead: "Выбери, где заказать — заказ придёт на твой стол",
+  /** QR стола (Ф8, текст Ф10в п. 1): гость сидит за столом — заказ придёт к нему. */
+  tableLead:
+    "Выбери мессенджер — откроем меню этого заведения, заказ придёт прямо на твой стол",
   tableNotFoundTitle: "Стол недоступен",
   tableNotFoundText:
     "Этот QR сейчас не принимает заказы — спроси официанта или открой меню заведения в мессенджере.",
@@ -48,6 +49,11 @@ export const CHOOSER_TEXT = {
   notFoundText: "Спроси у заведения актуальный QR-код.",
   unavailableTitle: "Страница временно недоступна",
   unavailableText: "Попробуй открыть её ещё раз через минуту.",
+} as const;
+
+/** Строка стола на странице QR стола: «Твой стол № 12 · Зал» (Ф10в п. 1). */
+export const CHOOSER_TABLE_TEXT = {
+  prefix: "Твой стол",
 } as const;
 
 export const CHOOSER_BUTTON_TEXT: Record<IChooserMessenger, string> = {

@@ -31,7 +31,8 @@ const tableData = (targets: Record<string, string | null>) => ({
   kind: TABLE_QR_RESULT.OK,
   data: {
     title: "Кафе на углу",
-    tableLabel: "Стол 12 · Зал",
+    address: "ул. Малая Дмитровка, 6 с3",
+    tableLabel: "Твой стол № 12 · Зал",
     targets: {
       [CHOOSER_MESSENGER.MAX]: null,
       [CHOOSER_MESSENGER.TELEGRAM]: null,
@@ -67,7 +68,7 @@ describe("GET /t/<токен>", () => {
     expect((await GET(request, params(TOKEN))).status).toBe(503);
   });
 
-  it("два мессенджера — кнопки прямо в боты со столом, «Стол 12 · Зал» на странице", async () => {
+  it("два мессенджера — кнопки прямо в боты со столом; адрес, «Твой стол № 12 · Зал» и призыв (Ф10в п. 1)", async () => {
     api.fetchTableQr.mockResolvedValue(
       tableData({
         [CHOOSER_MESSENGER.TELEGRAM]: TG,
@@ -78,7 +79,11 @@ describe("GET /t/<токен>", () => {
     const html = await res.text();
     expect(res.status).toBe(200);
     expect(res.headers.get("Cache-Control")).toBe("no-store");
-    expect(html).toContain("Стол 12 · Зал");
+    expect(html).toContain("📍 ул. Малая Дмитровка, 6 с3");
+    expect(html).toContain("<strong>Твой стол № 12 · Зал</strong>");
+    expect(html).toContain(
+      "Выбери мессенджер — откроем меню этого заведения, заказ придёт прямо на твой стол",
+    );
     expect(html).toContain(`href="${MAX.replace(/&/g, "&amp;")}"`);
     expect(html).toContain(`href="${TG}"`);
     // Токен стола в метки «Работает на Нямботе» не уходит.
