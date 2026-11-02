@@ -5,12 +5,11 @@ import type { VideoStep } from "@/components/ui/step-video/step-video";
  * первого экрана /rabota-s-zalom, /elektronnoe-menyu, /bron-stolov.
  */
 
-/** Пункты блока — в порядке пути гостя: стол → подача → бронь → ко времени */
+/** Пункты блока — в порядке пути гостя: стол → подача → обычная бронь */
 export const HallPoint = {
   table: "table",
   serve: "serve",
   booking: "booking",
-  scheduled: "scheduled",
 } as const;
 export type HallPoint = (typeof HallPoint)[keyof typeof HallPoint];
 
@@ -25,19 +24,17 @@ const POINT_FROM: Record<HallPoint, number> = {
   [HallPoint.table]: 0,
   [HallPoint.serve]: 11,
   [HallPoint.booking]: 15.3,
-  [HallPoint.scheduled]: 23.9,
 };
 
 /** В конце петли — снова стол с QR: подсветка возвращается к пункту 1 */
-const LOOP_BACK_TO_TABLE = 30.3;
+const LOOP_BACK_TO_TABLE = 23.9;
 
 /**
  * Ролик собирается в docs-nyambot/marketing/video/roliki/glavnaya/zal (16:10,
- * петля 31 с, Ф10б п. 6): скан QR на столе → бот «Ты за столом 12» → меню,
- * корзина, оформление с оплатой онлайн → заказ на столе 12 в iiko с
- * «Предоплата: Онлайн» → бронь стола в мессенджере → бронь «Действует» в
- * кассе → бизнес-ланч «В зале» к 13:00 → заказ ко времени в кассе. Секунды
- * шагов — из раскадровки scene.html, у каждого пункта блока — своя сцена.
+ * петля 23,9 с): скан QR на столе → бот «Ты за столом 12» → меню, корзина,
+ * оформление с оплатой онлайн → заказ на столе 12 в iiko с «Предоплата:
+ * Онлайн» → обычная бронь стола в мессенджере → бронь «Действует» в кассе.
+ * Секунды шагов — из раскадровки scene.html, у каждого пункта — своя сцена.
  */
 export const HALL_VIDEO = {
   src: "/videos/home/zal/stol-i-bron.mp4",

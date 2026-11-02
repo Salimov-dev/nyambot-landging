@@ -22,7 +22,6 @@ import styles from "./pricing-modules.module.css";
  *  каждый пункт — «выгода: как» (Руслан 24.10.2026) */
 const MODULE_POINT = {
   BOOKING: "booking",
-  SCHEDULED: "scheduled",
   TABLE: "table",
   ANSWERS: "answers",
   MENU: "menu",
@@ -32,11 +31,7 @@ type IModulePoint = (typeof MODULE_POINT)[keyof typeof MODULE_POINT];
 
 const MODULE_POINTS: Record<ILicenseModule, readonly IModulePoint[]> = {
   /* QR-заказ со стола — первым: главное в зале (Руслан 24.10.2026) */
-  [LICENSE_MODULE.HALL]: [
-    MODULE_POINT.TABLE,
-    MODULE_POINT.BOOKING,
-    MODULE_POINT.SCHEDULED,
-  ],
+  [LICENSE_MODULE.HALL]: [MODULE_POINT.TABLE, MODULE_POINT.BOOKING],
   [LICENSE_MODULE.AI_CHAT]: [
     MODULE_POINT.ANSWERS,
     MODULE_POINT.MENU,
