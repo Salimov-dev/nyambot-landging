@@ -71,7 +71,7 @@ const STYLES = `
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px 16px;min-height:100vh}
-.card{width:100%;max-width:400px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.06)}
+.card{width:100%;max-width:400px;padding:32px 24px;text-align:center}
 h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wrap:balance}
 .booking-note{margin-top:12px;font-size:15px;line-height:1.35;font-weight:600}
 .address{margin-top:6px;color:var(--muted);font-size:15px;line-height:1.35;text-wrap:balance}
@@ -102,7 +102,6 @@ h1{font-size:24px;line-height:1.25;font-weight:700;word-wrap:break-word;text-wra
 .brand{color:#ff8c00;font-weight:600}
 .logo{display:block;width:88px;height:88px;margin:0 auto 16px;border-radius:50%;object-fit:cover;background:var(--card);border:1px solid var(--border)}
 body.branded{background:radial-gradient(120% 60% at 50% 0%,rgba(var(--accent-rgb),.22),transparent 60%),var(--bg)}
-.branded .card{border-top:4px solid var(--accent)}
 .branded .extra-tile:hover .extra-tile-icon{border-color:var(--accent)}
 .branded .logo{border:none;box-shadow:0 0 0 3px var(--accent),0 8px 24px rgba(var(--accent-rgb),.28)}
 `.trim();
@@ -111,8 +110,8 @@ body.branded{background:radial-gradient(120% 60% at 50% 0%,rgba(var(--accent-rgb
 const LOGO_DATA_URI = /^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/;
 
 /**
- * Акцент бренда (план «Брендирование», Ф4) — лёгкий: свечение фона, полоска
- * над карточкой, кольцо лого. Кнопки MAX и Телеграм остаются в своих цветах
+ * Акцент бренда (план «Брендирование», Ф4) — лёгкий: свечение фона и кольцо
+ * лого. Кнопки MAX и Телеграм остаются в своих цветах
  * (Р7), слово «Нямбот» — в цвете Нямбота. Схемы нет — страница прежняя.
  */
 const renderBrandStyle = (colorScheme: string | null | undefined): string => {

@@ -68,6 +68,15 @@ describe("страница выбора /go", () => {
     expect(page()).not.toContain('class="address"');
   });
 
+  it("содержимое — без рамки, которая упирается в панель браузера", () => {
+    const html = page();
+    expect(html).toContain(
+      ".card{width:100%;max-width:400px;padding:32px 24px;text-align:center}",
+    );
+    expect(html).not.toContain("box-shadow:0 8px 32px");
+    expect(html).not.toContain(".branded .card{border-top");
+  });
+
   it("два мессенджера — обе кнопки, MAX первым, без мгновенной переадресации", () => {
     const html = page();
     expect(html.indexOf('data-messenger="max"')).toBeLessThan(
