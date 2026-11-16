@@ -5,3 +5,6 @@ node_modules
 
 # TypeScript build cache (generated)
 *.tsbuildinfo
+
+# Local acceptance output; keep reports out of release sources.
+/corporate-*.log

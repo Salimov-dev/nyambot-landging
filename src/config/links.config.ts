@@ -64,6 +64,7 @@ export const LINKS = {
     loyalty: "/loyalnost",
     /** Модуль «Работа с залом»: обычная бронь стола и заказ по QR на столе */
     hall: "/rabota-s-zalom",
+    corporateLunches: "/korporativnye-obedy",
     /** Электронное меню с заказом со стола — под поисковый спрос «QR-меню» */
     electronicMenu: "/elektronnoe-menyu",
     /** Онлайн-бронь столов с iiko и R-Keeper */

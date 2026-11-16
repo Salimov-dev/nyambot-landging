@@ -19,6 +19,7 @@ import { FaqSection } from "@/components/sections/faq/faq-section";
 import { GuestsPathSection } from "@/components/sections/guests-path/guests-path-section";
 import { KomandaSection } from "@/components/sections/komanda/komanda-section";
 import { HallSection } from "@/components/sections/hall/hall-section";
+import { CorporateSection } from "@/components/sections/corporate/corporate-section";
 import { SolutionsSection } from "@/components/sections/solutions/solutions-section";
 import { CtaSection } from "@/components/sections/cta/cta-section";
 import { SocialSection } from "@/components/sections/social/social-section";
@@ -67,6 +68,7 @@ export default function LandingPage() {
         <VitrinaSection />
         <GuestsPathSection />
         <HallSection />
+        <CorporateSection />
         <IntegrationsSection />
         <KomandaSection />
         <LoyaltySection />

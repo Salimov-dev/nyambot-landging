@@ -16,6 +16,8 @@ interface StepVideoProps<G extends string> {
   videoRef: RefObject<HTMLVideoElement | null>;
   onGroupChange: (group: G | null) => void;
   className?: string;
+  /** Соотношение сторон исходного ролика; по умолчанию прежние 16:10. */
+  aspectRatio?: number;
   /** Подпись шага под роликом. Выключают, когда шаг подсвечивает сама секция
    *  своим списком («Работа с залом») — подпись повторила бы пункт рядом */
   showCaption?: boolean;
@@ -31,6 +33,7 @@ export function StepVideo<G extends string>({
   videoRef,
   onGroupChange,
   className,
+  aspectRatio,
   showCaption = true,
 }: StepVideoProps<G>) {
   const { t } = useTranslation("landing");
@@ -46,6 +49,7 @@ export function StepVideo<G extends string>({
         <video
           ref={videoRef}
           className={styles.video}
+          style={aspectRatio ? { aspectRatio } : undefined}
           muted
           loop
           playsInline

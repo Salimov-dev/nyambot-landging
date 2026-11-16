@@ -132,6 +132,17 @@ const GUIDE = LINKS.docs;
  * стоят ровно в ряд (Руслан 24.10.2026: «текст пляшет по высоте»).
  */
 export const MODULE_BLOCKS: Record<ILicenseModule, ILandingPageBlock> = {
+  [LICENSE_MODULE.CORPORATE]: {
+    icon: BLOCK_ICON.DELIVERY,
+    scene: PAGE_SCENE.TOGETHER,
+    title: "«Корпоративные обеды»",
+    text: "Сотрудники офиса выбирают обед из твоего меню и платят каждый за себя. Администратор собирает личные пакеты в общие сумки, а курьер передаёт всю партию одному получателю в офисе. Для сотрудника доставка бесплатная.",
+    module: LICENSE_MODULE.CORPORATE,
+    link: {
+      label: "Подробнее о корпоративных обедах",
+      href: LINKS.pages.corporateLunches,
+    },
+  },
   [LICENSE_MODULE.HALL]: {
     icon: BLOCK_ICON.QR,
     scene: PAGE_SCENE.TABLE_QR,

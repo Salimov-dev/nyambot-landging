@@ -26,10 +26,18 @@ const MODULE_POINT = {
   ANSWERS: "answers",
   MENU: "menu",
   ADMIN: "admin",
+  PERSONAL: "personal",
+  BATCH: "batch",
+  OFFICE: "office",
 } as const;
 type IModulePoint = (typeof MODULE_POINT)[keyof typeof MODULE_POINT];
 
 const MODULE_POINTS: Record<ILicenseModule, readonly IModulePoint[]> = {
+  [LICENSE_MODULE.CORPORATE]: [
+    MODULE_POINT.PERSONAL,
+    MODULE_POINT.BATCH,
+    MODULE_POINT.OFFICE,
+  ],
   /* QR-заказ со стола — первым: главное в зале (Руслан 24.10.2026) */
   [LICENSE_MODULE.HALL]: [MODULE_POINT.TABLE, MODULE_POINT.BOOKING],
   [LICENSE_MODULE.AI_CHAT]: [
@@ -41,6 +49,7 @@ const MODULE_POINTS: Record<ILicenseModule, readonly IModulePoint[]> = {
 
 /** Куда ведёт «Подробнее»: у зала свой хаб, у ИИ — раздел на странице модулей */
 const MODULE_MORE_HREF: Record<ILicenseModule, string> = {
+  [LICENSE_MODULE.CORPORATE]: LINKS.pages.corporateLunches,
   [LICENSE_MODULE.HALL]: LINKS.pages.hall,
   [LICENSE_MODULE.AI_CHAT]: LINKS.pages.modules,
 };

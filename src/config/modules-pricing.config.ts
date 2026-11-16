@@ -19,6 +19,7 @@
 /** Модули — ключи текстов лендинга (`pricing.modules.items.<ключ>`). */
 export const LICENSE_MODULE = {
   HALL: "hall",
+  CORPORATE: "corporate",
   AI_CHAT: "aiChat",
 } as const;
 
@@ -35,6 +36,11 @@ export type IModulePricing = {
 };
 
 export const MODULES_PRICING: Record<ILicenseModule, IModulePricing> = {
+  [LICENSE_MODULE.CORPORATE]: {
+    catalogCode: "CORPORATE_LUNCH",
+    name: "Корпоративные обеды",
+    monthlyRub: 1990,
+  },
   [LICENSE_MODULE.HALL]: {
     catalogCode: "HALL_SERVICE",
     name: "Работа с залом",
@@ -50,6 +56,7 @@ export const MODULES_PRICING: Record<ILicenseModule, IModulePricing> = {
 /** Порядок показа модулей — зал первым: это главный модуль. */
 export const LICENSE_MODULES: readonly ILicenseModule[] = [
   LICENSE_MODULE.HALL,
+  LICENSE_MODULE.CORPORATE,
   LICENSE_MODULE.AI_CHAT,
 ];
 

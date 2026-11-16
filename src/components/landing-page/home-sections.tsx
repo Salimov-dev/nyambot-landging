@@ -8,12 +8,14 @@ import { LoyaltySection } from "@/components/sections/loyalty/loyalty-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { CrmDemoSection } from "@/components/sections/crm-demo/crm-demo-section";
 import { HallSection } from "@/components/sections/hall/hall-section";
+import { CorporateSection } from "@/components/sections/corporate/corporate-section";
 import styles from "./landing-page.module.css";
 
 /** Тарифы живут на главной — с подстраницы кнопка ведёт туда */
 const HOME_PRICING = "/#pricing";
 
 const SECTIONS: Record<IHomeSection, () => React.ReactElement | null> = {
+  [HOME_SECTION.CORPORATE]: CorporateSection,
   [HOME_SECTION.KILLER]: () => <KillerSection pricingHref={HOME_PRICING} />,
   [HOME_SECTION.COMPARE]: CompareSection,
   [HOME_SECTION.VITRINA]: VitrinaSection,

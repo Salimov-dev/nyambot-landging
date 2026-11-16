@@ -70,6 +70,7 @@ describe("цены модулей — одна константа", () => {
   it("цены — как в каталоге 24.10.2026", () => {
     expect(moduleMonthlyRub(LICENSE_MODULE.HALL)).toBe(2490);
     expect(moduleMonthlyRub(LICENSE_MODULE.AI_CHAT)).toBe(990);
+    expect(moduleMonthlyRub(LICENSE_MODULE.CORPORATE)).toBe(1990);
   });
 
   it("скидки за срок нет: цена за срок = месяц × число месяцев", () => {
@@ -166,6 +167,9 @@ describe.skipIf(!existsSync(TARIFFS_FILE))(
       );
       expect(parseRub(cells[3] ?? "")).toBe(
         modulePriceForMonthsRub(LICENSE_MODULE.AI_CHAT, months),
+      );
+      expect(parseRub(cells[4] ?? "")).toBe(
+        modulePriceForMonthsRub(LICENSE_MODULE.CORPORATE, months),
       );
     });
 
