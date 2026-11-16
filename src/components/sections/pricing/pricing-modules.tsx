@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { PageLink as Link } from "@/components/ui/page-link/page-link";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { CheckIcon } from "@/components/ui/icons/icons";

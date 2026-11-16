@@ -3,7 +3,7 @@
 import { useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { PageLink as Link } from "@/components/ui/page-link/page-link";
 import { Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { theme } from "@/config/theme";

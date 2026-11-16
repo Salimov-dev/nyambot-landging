@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import Link from "next/link";
+import { PageLink as Link } from "@/components/ui/page-link/page-link";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Typography } from "antd";

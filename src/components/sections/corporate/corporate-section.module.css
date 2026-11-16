@@ -1,0 +1,5 @@
+.point {
+  cursor: default;
+  border-color: var(--border-light);
+  background: var(--surface);
+}

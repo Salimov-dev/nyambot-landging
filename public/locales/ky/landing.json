@@ -1,4 +1,29 @@
 {
+  "corporateBlock": {
+    "label": "Corporate lunches module",
+    "title": "Individual employee lunches, delivered to the office together",
+    "subtitle": "Everyone chooses and pays for their own meal. You pack individual orders and deliver the whole batch to the office.",
+    "price": "{{price}} RUB per month per location · the complete module for your Nyambot license",
+    "more": "More about corporate lunches",
+    "points": {
+      "order": {
+        "title": "Everyone orders independently",
+        "text": "Your regular menu, available promotions and personal points in MAX or Telegram. Same-day lunch and free delivery for the employee."
+      },
+      "pack": {
+        "title": "One production summary for the kitchen",
+        "text": "Dish totals, checked individual packages, bags, delivery notes and labels. Recheck packing whenever the contents change."
+      },
+      "delivery": {
+        "title": "All bags go to one recipient",
+        "text": "Your courier hands the batch to the office contact. The handover history keeps its author, time and contents."
+      },
+      "office": {
+        "title": "A schedule and minimum for each office",
+        "text": "Set order hours and a minimum personal order amount for each office. Lunch orders are for today only."
+      }
+    }
+  },
   "nav": {
     "features": "Мүмкүнчүлүктөр",
     "solutions": "Чечимдер",

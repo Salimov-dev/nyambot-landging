@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { PageLink as Link } from "@/components/ui/page-link/page-link";
 import {
   BLOCK_ICON,
   type IBlockIcon,

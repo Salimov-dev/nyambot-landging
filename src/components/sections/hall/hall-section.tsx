@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button, Typography } from "antd";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation.hook";
 import { useHasTranslation } from "@/hooks/use-has-translation.hook";
@@ -34,6 +35,7 @@ const { Title, Text } = Typography;
  * (`useHasTranslation`) — появится сам, когда придут переводы.
  */
 export function HallSection() {
+  const pathname = usePathname();
   const { t } = useTranslation("landing");
   const { ref, isInView } = useScrollAnimation();
   const hasText = useHasTranslation("hallBlock.title");
@@ -136,22 +138,26 @@ export function HallSection() {
           <span className={styles.note}>
             {t("hallBlock.moduleNote", { price })}
           </span>
-          <Button
-            type="primary"
-            size="large"
-            href={LINKS.pages.hall}
-            className={styles.moreBtn}
-            onClick={() =>
-              reachGoal("click_solution", { page: "hall", from: "home_hall" })
-            }
-          >
-            {t("hallBlock.more")}
-          </Button>
+          {pathname !== LINKS.pages.hall && (
+            <Button
+              type="primary"
+              size="large"
+              href={LINKS.pages.hall}
+              className={styles.moreBtn}
+              onClick={() =>
+                reachGoal("click_solution", { page: "hall", from: "home_hall" })
+              }
+            >
+              {t("hallBlock.more")}
+            </Button>
+          )}
           {/* QR на столе — главное в зале: отдельная дорога на страницу
               QR-меню с заказом (Руслан 24.10.2026) */}
-          <Link href={LINKS.pages.electronicMenu} className={styles.menuLink}>
-            {t("hallBlock.menuLink")} →
-          </Link>
+          {pathname !== LINKS.pages.electronicMenu && (
+            <Link href={LINKS.pages.electronicMenu} className={styles.menuLink}>
+              {t("hallBlock.menuLink")} →
+            </Link>
+          )}
         </motion.div>
       </div>
     </section>
