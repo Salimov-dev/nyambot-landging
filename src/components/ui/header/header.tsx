@@ -48,6 +48,11 @@ const SOLUTION_LINKS = [
     href: LINKS.pages.komanda,
   },
   {
+    id: "corporateLunches",
+    labelKey: "pricing.modules.items.corporate.name",
+    href: LINKS.pages.corporateLunches,
+  },
+  {
     id: "loyalty",
     labelKey: "solutions.items.loyalty.title",
     href: LINKS.pages.loyalty,

@@ -369,11 +369,11 @@
         "note": "Kassasız və R-Keeper ilə. Abunəyə daxildir"
       },
       "iikoCard": {
-        "name": "iiko loyallığı",
+        "name": "iikoCard",
         "note": "iiko üçün: proqramının endirimləri, bonusları və promokodları"
       },
       "rkFriends": {
-        "name": "R-keeper bulud loyallığı",
+        "name": "r_k Friends",
         "note": "R-Keeper üçün: bulud proqramının bonusları, aksiyaları və promokodları"
       }
     }

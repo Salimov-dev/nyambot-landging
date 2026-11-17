@@ -61,9 +61,9 @@ describe("секция «Лояльность» в локалях", () => {
       expect(block?.items[id]?.name).toBeTruthy();
       expect(block?.items[id]?.note).toBeTruthy();
     }
-    // Карточки объясняют источник лояльности; идентификаторы не меняются.
-    expect(block?.items.iikoCard?.name).toContain("iiko");
-    expect(block?.items.rkFriends?.name).toContain("R-keeper");
+    // Названия программ касс не переводятся.
+    expect(block?.items.iikoCard?.name).toBe("iikoCard");
+    expect(block?.items.rkFriends?.name).toBe(FRIENDS);
   });
 
   it.each(languages)("%s — без ссылки на гайд по Friends", (lng) => {

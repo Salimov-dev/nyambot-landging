@@ -365,11 +365,11 @@
         "note": "Without a POS and with R-Keeper. Included in the subscription"
       },
       "iikoCard": {
-        "name": "iiko loyalty",
+        "name": "iikoCard",
         "note": "For iiko: your programme's discounts, bonuses and promo codes"
       },
       "rkFriends": {
-        "name": "R-keeper cloud loyalty",
+        "name": "r_k Friends",
         "note": "For R-Keeper: cloud program points, promotions and promo codes"
       }
     }

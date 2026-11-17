@@ -369,11 +369,11 @@
         "note": "Kassasiz va R-Keeper bilan. Obunaga kiradi"
       },
       "iikoCard": {
-        "name": "iiko sodiqligi",
+        "name": "iikoCard",
         "note": "iiko uchun: dasturingning chegirmalari, bonuslari va promokodlari"
       },
       "rkFriends": {
-        "name": "R-keeper bulutli sodiqligi",
+        "name": "r_k Friends",
         "note": "R-Keeper uchun: bulutli dasturning bonuslari, aksiyalari va promokodlari"
       }
     }
