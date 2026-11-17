@@ -75,7 +75,7 @@ const MODULE_RULES = Object.values(MODULE_RULE);
  * общей сетке (subgrid): тег, название, цена, пункты, условие и «Подробнее» у
  * обеих стоят на одних уровнях, «Подробнее» прижата к низу.
  *
- * Тексты пока только в ru-локали: на другом языке блок не рисуется.
+ * Тексты и подписи цены переведены на все поддерживаемые языки.
  */
 export function PricingModules({ isInView }: { isInView: boolean }) {
   const { t } = useTranslation("landing");
@@ -103,7 +103,14 @@ export function PricingModules({ isInView }: { isInView: boolean }) {
             <h4 className={styles.name}>
               {t(`pricing.modules.items.${licenseModule}.name`)}
             </h4>
-            <ModulePrice module={licenseModule} className={styles.price} />
+            <ModulePrice
+              module={licenseModule}
+              className={styles.price}
+              labels={{
+                perMonth: t("pricing.modules.perMonth"),
+                term: t("pricing.modules.term"),
+              }}
+            />
 
             <ul className={styles.points}>
               {MODULE_POINTS[licenseModule].map((point) => (

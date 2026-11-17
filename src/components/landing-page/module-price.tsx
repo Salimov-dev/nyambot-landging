@@ -25,10 +25,12 @@ const rub = (value: number): string =>
 export function ModulePrice({
   module,
   className,
+  labels = TEXT,
 }: {
   module: ILicenseModule;
   /** Свои отступы там, где карточка не посадочной */
   className?: string;
+  labels?: { perMonth: string; term: string };
 }) {
   return (
     <div
@@ -40,9 +42,9 @@ export function ModulePrice({
         <span className={styles.modulePriceValue}>
           {rub(moduleMonthlyRub(module))}
         </span>
-        <span className={styles.modulePricePer}>{TEXT.perMonth}</span>
+        <span className={styles.modulePricePer}>{labels.perMonth}</span>
       </p>
-      <p className={styles.modulePriceTerm}>{TEXT.term}</p>
+      <p className={styles.modulePriceTerm}>{labels.term}</p>
     </div>
   );
 }

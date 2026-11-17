@@ -24,6 +24,29 @@
       }
     }
   },
+  "hallBlock": {
+    "label": "Dine-in",
+    "moduleTag": "module",
+    "title": "Guests scan the table QR\nand order without waiting for a waiter",
+    "subtitle": "QR table orders go straight to iiko or R-Keeper.\nGuests can also book a table in MAX or Telegram without calling",
+    "points": {
+      "table": {
+        "title": "More orders per table",
+        "text": "Guests scan a table QR to order and reorder. The bot confirms their table and the order reaches that table in the POS"
+      },
+      "serve": {
+        "title": "No more copying orders into the POS",
+        "text": "A waiter brings the food or guests collect it, according to your settings. Requests to call a waiter or ask for the bill reach the administrator in Telegram or MAX"
+      },
+      "booking": {
+        "title": "Table booking without phone calls",
+        "text": "Guests choose a date, time and table. The booking reaches iiko or R-Keeper; the bot sends confirmation and a reminder"
+      }
+    },
+    "moduleNote": "Add Dine-in to your Nyambot license for {{price}} ₽ per month per location with iiko or R-Keeper",
+    "more": "More about Dine-in",
+    "menuLink": "QR menu with table ordering"
+  },
   "nav": {
     "features": "Features",
     "solutions": "Solutions",
@@ -85,7 +108,7 @@
       },
       "loyalty": {
         "title": "Guests come back for points and promos",
-        "text": "NyamClub discounts, gifts, promo codes and points work from day one, and with a POS — iikoCard or r_k Friends"
+        "text": "NyamClub or POS loyalty: points, promotions, promo codes and gifts in the order"
       },
       "money": {
         "title": "Order money goes straight to you — refunds only by your call",
@@ -159,14 +182,57 @@
     "qrMore": "How it works"
   },
   "pricing": {
+    "modules": {
+      "title": "Modules for dine-in, office lunches and guest conversations",
+      "subtitle": "Table orders, office lunches and quick answers. Modules require a Nyambot license; prices are per location",
+      "tag": "Module",
+      "perMonth": "per month per location",
+      "term": "Term: from 1 month up to the end of the license",
+      "more": "Learn more",
+      "items": {
+        "corporate": {
+          "name": "Corporate lunches",
+          "points": {
+            "personal": "Employees choose from your menu and each pays for their own lunch",
+            "batch": "The administrator checks the batch summary and bags and prints labels",
+            "office": "All bags in a batch go to one office recipient; employee delivery costs ₽0"
+          },
+          "note": "For any location, with or without a POS"
+        },
+        "hall": {
+          "name": "Dine-in",
+          "points": {
+            "booking": "Guests choose a table and time without calling; the booking reaches the POS",
+            "table": "More orders per table: guests scan a QR to order and reorder without waiting for a waiter"
+          },
+          "note": "For locations with iiko or R-Keeper"
+        },
+        "aiChat": {
+          "name": "AI in Chat",
+          "points": {
+            "answers": "Instant answers about the menu, ingredients, delivery and the guest's order",
+            "menu": "Helps guests choose: suggests dishes with prices and opens the menu",
+            "admin": "The administrator handles questions that need a person: complaints, refunds and discounts"
+          },
+          "note": "For any location, with or without a POS"
+        }
+      },
+      "rules": {
+        "license": "Add modules to your Nyambot license for one location or the whole chain",
+        "term": "A module cannot outlast the license",
+        "anytime": "Connect at launch or any time later"
+      },
+      "allCta": "All modules",
+      "askCta": "Connect a module"
+    },
     "label": "Pricing",
-    "title": "Transparent prices with no hidden fees",
-    "subtitle": "Included in the license: delivery, pickup, a storefront in MAX and Telegram, loyalty and the Team app. Dine-in and AI in Chat come as modules. A fixed fee instead of a cut of every order",
+    "title": "Nyambot — from {{price}} ₽ per month",
+    "subtitle": "The license includes delivery, pickup, a storefront in MAX and Telegram, loyalty and Team. Dine-in, corporate lunches and AI chat are add-on modules. Fixed pricing instead of a fee per order",
     "trialNote": "Launch is free",
     "popular": "Best balance",
     "bestValue": "Best value",
     "perMonth": "per month",
-    "totalBilled": "Billed {{total}}",
+    "totalBilled": "Total to pay {{total}}",
     "months": {
       "1": "1 month",
       "3": "3 months",
@@ -201,7 +267,7 @@
       },
       {
         "question": "Who will set everything up?",
-        "answer": "We do — for free. Leave a launch request: we'll get in touch within 24 hours, set up your account, menu, POS and delivery, create your Telegram bot and check everything with test orders. You open the MAX bot yourself, on your own sole proprietorship or LLC, via a link we send — and we'll connect it. All prices are on this page. After that you run everything in the CRM, with Anya and support to help."
+        "answer": "We set up your account, bots, menu and payments at no setup charge."
       },
       {
         "question": "Can a guest message the venue?",
@@ -216,8 +282,12 @@
         "answer": "Turn on notifications in the CRM: «Profile» → «Notifications». A message arrives in Telegram or MAX as soon as the POS stops responding, and another one when it's working again"
       },
       {
+        "question": "Can guests order at a table and book a table?",
+        "answer": "Yes, with the Dine-in module. Guests scan the table QR and order directly; the order reaches iiko or R-Keeper. They can add another order, call a waiter and ask for the bill. Table booking works in MAX and Telegram without a phone call. The module requires a Nyambot license"
+      },
+      {
         "question": "How does the launch work and when do I pay?",
-        "answer": "We launch it for you, free: we build the account, the bot and the storefront and connect online payments, the MAX bot and notifications — you just register YooKassa and the MAX bot to your sole proprietorship or company and send us the details. We test everything automatically and hand the account over — you only fine-tune delivery zones and prices. Then we check an order in the POS and a payment together — and you're live. The first 14 days are a test period: we check every day that everything works. The invoice comes on launch day — for the period from the launch date, to be paid within those 14 days, with no card on file and no auto-charges. On R-Keeper, you buy the Nyambot integration license from your R-Keeper dealer before setup starts."
+        "answer": "We set up your account, bots, menu and payments at no setup charge. You register the payment service and MAX bot for your business and provide the connection details. We test an order together before launch. The 14-day test period starts at launch. Request an invoice in the CRM: we prepare the PDF within two business days. Pay for the license and modules by bank transfer from your company's or sole trader's account; the paid period starts at launch. An invoice request or issued invoice does not extend access; incoming funds are verified separately. For R-Keeper, buy the Nyambot integration license from your dealer before setup."
       }
     ]
   },
@@ -266,7 +336,7 @@
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
-      "rkDelivery": "r_k Delivery",
+      "rkDelivery": "POS delivery module",
       "yookassa": "YooKassa",
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Delivery"
@@ -295,12 +365,12 @@
         "note": "Without a POS and with R-Keeper. Included in the subscription"
       },
       "iikoCard": {
-        "name": "iikoCard",
+        "name": "iiko loyalty",
         "note": "For iiko: your programme's discounts, bonuses and promo codes"
       },
       "rkFriends": {
-        "name": "r_k Friends",
-        "note": "For R-Keeper: Friends bonuses, promos and promo codes"
+        "name": "R-keeper cloud loyalty",
+        "note": "For R-Keeper: cloud program points, promotions and promo codes"
       }
     }
   },
@@ -390,19 +460,19 @@
       },
       "loyalty": {
         "title": "Loyalty",
-        "text": "NyamClub, iikoCard or r_k Friends: points, promos, promo codes and gifts — right in the ordering app"
+        "text": "NyamClub or POS loyalty: points, promotions, promo codes and gifts in the order"
       },
       "iiko": {
         "title": "iiko integration",
-        "text": "Menu and stop lists come from the POS, orders go to iiko as delivery, promos from iikoCard"
+        "text": "Menus and stop lists from your POS; orders reach iiko as deliveries and the POS program calculates benefits"
       },
       "rkeeper": {
         "title": "R-Keeper integration",
-        "text": "Menu and stop lists from the POS, your couriers or r_k Delivery, NyamClub on the receipt or r_k Friends"
+        "text": "Menus and stop lists from your POS, your couriers or the POS delivery module, NyamClub or cloud loyalty"
       },
       "integrations": {
         "title": "All integrations",
-        "text": "POS, loyalty, payments and delivery: iiko, R-Keeper, r_k Delivery, iikoCard, r_k Friends, YooKassa, Yandex.Pay, Yandex.Delivery"
+        "text": "iiko and R-Keeper POS systems, loyalty programs, YooKassa, Yandex Pay and Yandex Delivery"
       },
       "network": {
         "title": "Chains and franchises",

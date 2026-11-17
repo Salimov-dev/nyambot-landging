@@ -24,6 +24,29 @@
       }
     }
   },
+  "hallBlock": {
+    "label": "Zalla iş",
+    "moduleTag": "modul",
+    "title": "Qonaq masadakı QR-ni skan edir\nvə ofisiantı gözləmədən sifariş verir",
+    "subtitle": "Masadan QR sifarişi birbaşa iiko və ya R-Keeper kassasına gedir.\nQonaq MAX və Telegram-da zəng etmədən masa bron edir",
+    "points": {
+      "table": {
+        "title": "Hər masadan daha çox sifariş",
+        "text": "Qonaq masadakı QR-ni skan edib sifariş və əlavə sifariş verir. Bot masanı təsdiqləyir, sifariş kassada həmin masaya gedir"
+      },
+      "serve": {
+        "title": "Sifarişi kassaya köçürməyə ehtiyac yoxdur",
+        "text": "Hazır yeməyi ofisiant gətirir və ya qonaq özü götürür — ayarından asılıdır. Ofisiant və hesab çağırışı administratora Telegram və ya MAX-da çatır"
+      },
+      "booking": {
+        "title": "Zəng etmədən masa bronu",
+        "text": "Qonaq tarixi, vaxtı və masanı seçir; bron iiko və ya R-Keeper-ə gedir. Bot təsdiq və xatırlatma göndərir"
+      }
+    },
+    "moduleNote": "«Zalla iş» Nyambot lisenziyasına qoşulur: iiko və ya R-Keeper-li hər nöqtə üçün ayda {{price}} ₽",
+    "more": "Zalla iş barədə ətraflı",
+    "menuLink": "Masadan sifarişli QR menyu"
+  },
   "nav": {
     "features": "İmkanlar",
     "solutions": "Həllər",
@@ -85,7 +108,7 @@
       },
       "loyalty": {
         "title": "Qonaq ballar və aksiyalar üçün qayıdır",
-        "text": "NyamClub-ın endirimləri, hədiyyələri, promokodları və balları dərhal işləyir, kassa ilə isə — iikoCard və ya r_k Friends"
+        "text": "NyamClub və ya kassa loyallığı: ballar, aksiyalar, promokodlar və hədiyyələr sifarişdə"
       },
       "money": {
         "title": "Sifarişin pulu — birbaşa sənə, geri qaytarma — yalnız sənin qərarınla",
@@ -159,14 +182,57 @@
     "qrMore": "Necə işləyir"
   },
   "pricing": {
+    "modules": {
+      "title": "Zal, ofis naharları və qonaqlarla ünsiyyət üçün modullar",
+      "subtitle": "Masadan sifarişlər, ofis naharları və sürətli cavablar. Modullar Nyambot lisenziyasına qoşulur, qiymət hər nöqtə üçündür",
+      "tag": "Modul",
+      "perMonth": "hər nöqtə üçün ayda",
+      "term": "Müddət: 1 aydan lisenziyanın sonunadək",
+      "more": "Ətraflı",
+      "items": {
+        "corporate": {
+          "name": "Korporativ naharlar",
+          "points": {
+            "personal": "Əməkdaşlar menyundan nahar seçir və hərəsi öz sifarişini ödəyir",
+            "batch": "Administrator ümumi xülasəni görür, paketləri yoxlayır və etiketləri çap edir",
+            "office": "Partiyanın bütün çantaları ofisdə bir məsul şəxsə verilir; əməkdaşa çatdırılma 0 ₽"
+          },
+          "note": "Kassalı və kassasız istənilən nöqtə üçün"
+        },
+        "hall": {
+          "name": "Zalla iş",
+          "points": {
+            "booking": "Qonaq zəng etmədən vaxtı və masanı özü seçir; bron kassaya gedir",
+            "table": "Hər masadan daha çox sifariş: qonaq ofisiantı gözləmədən QR ilə sifariş və əlavə sifariş verir"
+          },
+          "note": "iiko və ya R-Keeper kassalı nöqtələr üçün"
+        },
+        "aiChat": {
+          "name": "Çatda Sİ",
+          "points": {
+            "answers": "Menyu, tərkib, çatdırılma və qonağın sifarişi barədə dərhal cavab",
+            "menu": "Seçməyə kömək edir: qiymətləri ilə yeməklər təklif edir və menyunu açır",
+            "admin": "Administrator insana ehtiyac olan məsələləri həll edir: şikayətlər, geri ödənişlər və endirimlər"
+          },
+          "note": "Kassalı və kassasız istənilən nöqtə üçün"
+        }
+      },
+      "rules": {
+        "license": "Modullar Nyambot lisenziyasına bir nöqtə və ya bütün şəbəkə üçün qoşulur",
+        "term": "Modulun müddəti lisenziyanın müddətini keçmir",
+        "anytime": "İşə salınarkən və ya sonradan istənilən vaxt qoşuruq"
+      },
+      "allCta": "Bütün modullar",
+      "askCta": "Modul qoş"
+    },
     "label": "Tariflər",
-    "title": "Gizli komissiyasız şəffaf qiymətlər",
-    "subtitle": "Lisenziyaya daxildir: çatdırılma, özün götürmə, MAX və Telegram-da vitrin, loyallıq və «Komanda». Zalla iş və «Çatda Sİ» — modullarla. Hər sifarişdən faiz əvəzinə sabit ödəniş",
+    "title": "NyamBot — ayda {{price}} ₽-dan",
+    "subtitle": "Lisenziyaya çatdırılma, özü götürmə, MAX və Telegram vitrini, loyallıq və «Komanda» daxildir. Zal, korporativ naharlar və çatda Sİ əlavə modullardır. Hər sifarişdən faiz əvəzinə sabit ödəniş",
     "trialNote": "İşə salma pulsuzdur",
     "popular": "Optimal",
     "bestValue": "Sərfəli",
     "perMonth": "aylıq",
-    "totalBilled": "{{total}} silinir",
+    "totalBilled": "Ödəniləcək {{total}}",
     "months": {
       "1": "1 ay",
       "3": "3 ay",
@@ -201,7 +267,7 @@
       },
       {
         "question": "Hər şeyi kim quracaq?",
-        "answer": "Biz — pulsuz. İşə salma üçün sorğu qoy: 24 saat ərzində əlaqə saxlayacağıq, kabineti, menyunu, kassanı və çatdırılmanı quracağıq, Telegram-da botu yaradacağıq və test sifarişləri ilə yoxlayacağıq. MAX-da botu isə sən özün öz fərdi sahibkarlığının və ya MMC-nin adına link üzrə açırsan — biz onu qoşacağıq. Bütün qiymətlər bu səhifədədir. Sonra hər şeyi CRM-də özün idarə edirsən, Anya və dəstək kömək edir."
+        "answer": "Kabineti, botları, menyunu və ödənişi pulsuz quraşdırırıq."
       },
       {
         "question": "Qonaq müəssisəyə yaza bilərmi?",
@@ -216,8 +282,12 @@
         "answer": "CRM-də bildirişləri qoş: «Profil» → «Bildirişlər». Kassa cavab verməyi dayandıran kimi Telegram və ya MAX-a mesaj gələcək, yenidən işləyəndə isə daha biri"
       },
       {
+        "question": "Masadan sifariş vermək və masa bron etmək olar?",
+        "answer": "Bəli, «Zalla iş» modulu ilə. Qonaq masadakı QR-ni skan edib özü sifariş verir, sifariş iiko və ya R-Keeper-ə gedir. Əlavə sifariş vermək, ofisiant çağırmaq və hesab istəmək olar. Masa MAX və Telegram-da zəng etmədən bron edilir. Modul Nyambot lisenziyasına qoşulur"
+      },
+      {
         "question": "İşə salma necə keçir və nə vaxt ödəmək lazımdır?",
-        "answer": "Sənin yerinə pulsuz işə salırıq: kabineti, botu və vitrini yığırıq, onlayn ödənişi, MAX botunu və bildirişləri qoşuruq — sən yalnız YooKassa-nı və MAX botunu öz FŞ və ya MMC-nə rəsmiləşdirib bizə məlumatları göndərirsən. Hər şeyi avtomatik yoxlayıb kabineti sənə təhvil veririk — sənə yalnız çatdırılma zonalarını və qiymətlərini tənzimləmək qalır. Sonra kassada sifarişi və ödənişi birlikdə yoxlayırıq — və işə salırıq. İlk 14 gün sınaq dövrüdür: hər gün hər şeyin işlədiyini yoxlayırıq. Hesab işə salma günü gəlir — işə salma tarixindən başlayan dövr üçün, ödəniş isə bu 14 gün ərzində, kart bağlamadan və avtomatik silinmə olmadan. R-Keeper kassası üçün Nyambot ilə inteqrasiya lisenziyasını quraşdırma başlamazdan əvvəl öz R-Keeper dilerindən alırsan."
+        "answer": "Kabineti, botları, menyunu və ödənişi pulsuz quraşdırırıq. Ödəniş xidmətini və MAX botunu şirkətinin və ya fərdi sahibkarlığının adına rəsmiləşdirib qoşulma məlumatlarını verirsən. Sifarişi birlikdə yoxlayıb işə başlayırıq. 14 günlük sınaq müddəti işə salınan gündən başlayır. CRM-də hesab-faktura istə: PDF-ni iki iş günündə hazırlayırıq. Lisenziya və modullar şirkətin və ya fərdi sahibkarın hesabından bank köçürməsi ilə ödənilir; ödənişli müddət işə salınan gündən hesablanır. Müraciət və hesab-faktura girişi uzatmır; daxil olan vəsait ayrıca yoxlanılır. R-Keeper üçün Nyambot inteqrasiya lisenziyasını quraşdırmadan əvvəl dilerindən al."
       }
     ]
   },
@@ -270,7 +340,7 @@
     "items": {
       "iiko": "iiko",
       "rkeeper": "R-Keeper",
-      "rkDelivery": "r_k Delivery",
+      "rkDelivery": "Kassanın çatdırılma modulu",
       "yookassa": "YuKassa",
       "yandexPay": "Yandex.Pay",
       "yandexDelivery": "Yandex.Dostavka"
@@ -299,12 +369,12 @@
         "note": "Kassasız və R-Keeper ilə. Abunəyə daxildir"
       },
       "iikoCard": {
-        "name": "iikoCard",
+        "name": "iiko loyallığı",
         "note": "iiko üçün: proqramının endirimləri, bonusları və promokodları"
       },
       "rkFriends": {
-        "name": "r_k Friends",
-        "note": "R-Keeper üçün: Friends bonusları, aksiyaları və promokodları"
+        "name": "R-keeper bulud loyallığı",
+        "note": "R-Keeper üçün: bulud proqramının bonusları, aksiyaları və promokodları"
       }
     }
   },
@@ -394,19 +464,19 @@
       },
       "loyalty": {
         "title": "Loyallıq",
-        "text": "NyamClub, iikoCard və ya r_k Friends: ballar, aksiyalar, promokodlar və hədiyyələr — birbaşa sifariş tətbiqində"
+        "text": "NyamClub və ya kassa loyallığı: ballar, aksiyalar, promokodlar və hədiyyələr sifarişdə"
       },
       "iiko": {
         "title": "iiko ilə inteqrasiya",
-        "text": "Menyu və stop-listlər kassadan gəlir, sifariş iiko-ya çatdırılma kimi düşür, aksiyalar — iikoCard-dan"
+        "text": "Menyu və stop-siyahılar kassadan gəlir, sifariş iiko-ya çatdırılma kimi gedir, faydanı kassa proqramı hesablayır"
       },
       "rkeeper": {
         "title": "R-Keeper ilə inteqrasiya",
-        "text": "Menyu və stop-listlər kassadan, öz kuryerlərin və ya r_k Delivery, NyamClub çekdə və ya r_k Friends"
+        "text": "Menyu və stop-siyahılar kassadan, öz kuryerlərin və ya kassanın çatdırılma modulu, NyamClub və ya bulud loyallığı"
       },
       "integrations": {
         "title": "Bütün inteqrasiyalar",
-        "text": "Kassa, loyallıq, ödəniş və çatdırılma: iiko, R-Keeper, r_k Delivery, iikoCard, r_k Friends, YuKassa, Yandex.Pay, Yandex.Dostavka"
+        "text": "iiko və R-Keeper kassaları, loyallıq proqramları, YooKassa, Yandex Pay və Yandex Delivery"
       },
       "network": {
         "title": "Şəbəkə və françayzinq",
