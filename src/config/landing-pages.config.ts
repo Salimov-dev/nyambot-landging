@@ -1,4 +1,5 @@
 import { LINKS } from "@/config/links.config";
+import { ANNUAL_PRICING_PLAN } from "@/config/pricing.config";
 import {
   BLOCK_ICON,
   MODULE_BLOCKS,
@@ -147,15 +148,13 @@ export const LAUNCH_AND_PAYMENT_FAQ: ILandingPageQuestion = {
  * `launch-terms.test.ts`. 🔴 Помесячную цену (4 900 ₽) в ответах не называем
  * (Руслан 25.10: на месяц никто не берёт) — она есть в блоке тарифов.
  */
-export const LICENSE_PRICE_TERMS =
-  "Запуск бесплатно — соберём и проверим за тебя. Дальше лицензия от 3 675 ₽ в месяц для одного заведения — столько выходит при оплате сразу за год. С запуска идут 14 дней тестового периода. Счёт запрашиваешь в СРМ и оплачиваешь банковским переводом; оплачиваемый период считается с даты запуска.";
+const rub = (value: number): string => `${formatRubSpaced(value)} ₽`;
+
+export const LICENSE_PRICE_TERMS = `Запуск бесплатно. При оплате за год лицензия на одно заведение стоит ${rub(ANNUAL_PRICING_PLAN.priceRub)} одним платежом, в пересчёте — ${rub(ANNUAL_PRICING_PLAN.pricePerMonth)} в месяц. С запуска идут 14 дней тестового периода. Счёт запрашиваешь в СРМ и оплачиваешь банковским переводом. Оплачиваемый период считается с даты запуска.`;
 
 /* ----- Модули (план «Работа с залом», Ф10б) -----
    Цены — из `modules-pricing.config.ts`: одна правка цены меняет все страницы.
    🔴 Причину цены «ИИ в чате» не называем нигде (Р10). */
-
-/** «2 490 ₽» */
-const rub = (value: number): string => `${formatRubSpaced(value)} ₽`;
 
 /** «Работа с залом» — 2 490 ₽ в месяц за точку */
 const HALL_MONTHLY = `${rub(moduleMonthlyRub(LICENSE_MODULE.HALL))} в месяц за точку`;
@@ -274,7 +273,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       },
       {
         question: "Сколько стоит модуль?",
-        answer: `«Корпоративные обеды» — ${formatRubSpaced(moduleMonthlyRub(LICENSE_MODULE.CORPORATE))} ₽ в месяц за точку. В цену входят офисы, личные заказы, общая сборка, печать и передача партии. Модуль подключается к лицензии Нямбота, его срок — в пределах лицензии; скидки за срок у модуля нет.`,
+        answer: `«Корпоративные обеды» — ${rub(moduleMonthlyRub(LICENSE_MODULE.CORPORATE))} в месяц за точку дополнительно к лицензии. В модуль входят офисы, личные заказы, общая сборка, печать и передача партии. Срок модуля — в пределах лицензии. ${LICENSE_PRICE_TERMS}`,
       },
     ],
   },
@@ -1998,6 +1997,11 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
       label: "QR столов — как напечатать и настроить",
     },
     faq: [
+      {
+        question: "Мне нужен только просмотр меню по QR. Что посмотреть?",
+        answer:
+          "Открой демо и посмотри, как гость читает меню в MAX или Телеграм. Для привязки заказа к конкретному столу нужен модуль «Работа с залом» и подключение iiko или R-Keeper. В заявке укажи, если тебе достаточно просмотра меню, чтобы обсудить подходящий вариант.",
+      },
       {
         question: "Что это даёт заведению?",
         answer:

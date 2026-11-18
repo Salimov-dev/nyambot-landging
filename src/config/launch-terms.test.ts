@@ -169,6 +169,9 @@ describe("«Как проходит запуск и когда платить»"
     expect(LICENSE_PRICE_TERMS).toContain(
       `${formatRub(year?.pricePerMonth ?? 0)} ₽`,
     );
+    expect(LICENSE_PRICE_TERMS).toContain(
+      `${formatRub(year?.priceRub ?? 0)} ₽ одним платежом`,
+    );
     // Руслан 25.10: помесячную цену в ответах не называем.
     const monthly = `${formatRub(month?.priceRub ?? 0)} ₽`;
     expect(LICENSE_PRICE_TERMS).not.toContain(monthly);
@@ -185,7 +188,7 @@ describe("/zapusk — как мы работаем", () => {
     expect(texts.join(" ")).toMatch(/дозорный/u);
   });
 
-  it("шаги над и под формой не повторяются", () => {
+  it("подробный порядок работы и шаги после заявки не повторяются", () => {
     const howTitles = ZAPUSK_HOW.steps.map((step) => step.title);
     for (const step of ZAPUSK_AFTER.steps)
       expect(howTitles).not.toContain(step.title);

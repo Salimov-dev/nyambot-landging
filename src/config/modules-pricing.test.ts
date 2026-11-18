@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "fs";
 import { join, resolve } from "path";
 import { describe, expect, it } from "vitest";
+import { ANNUAL_PRICING_PLAN } from "@/config/pricing.config";
 import {
   LICENSE_MODULE,
   LICENSE_MODULES,
@@ -93,24 +94,24 @@ describe("цены модулей — одна константа", () => {
   });
 
   it("на страницах модулей нет цен мимо константы", () => {
-    const allowed = new Set(
-      LICENSE_MODULES.map((licenseModule) =>
+    const allowed = new Set([
+      ...LICENSE_MODULES.map((licenseModule) =>
         formatRubSpaced(moduleMonthlyRub(licenseModule)),
       ),
-    );
+      formatRubSpaced(ANNUAL_PRICING_PLAN.priceRub),
+      formatRubSpaced(ANNUAL_PRICING_PLAN.pricePerMonth),
+    ]);
     const moduleTexts = [
       LANDING_PAGE.RABOTA_S_ZALOM,
       LANDING_PAGE.ELEKTRONNOE_MENYU,
       LANDING_PAGE.BRON_STOLOV,
       LANDING_PAGE.MODULI,
     ].map((key) => JSON.stringify(LANDING_PAGES[key]));
-    const licenseRub = /3 675/u;
     for (const text of moduleTexts) {
       const prices = [...text.matchAll(/(\d[\d ]*) ₽/gu)].map((match) =>
         match[1].trim(),
       );
-      for (const price of prices)
-        if (!licenseRub.test(price)) expect(allowed).toContain(price);
+      for (const price of prices) expect(allowed).toContain(price);
     }
   });
 

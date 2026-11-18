@@ -24,6 +24,16 @@ import type { PricingPlan } from "@/types/landing.types";
  * Состав тарифа (1 ТТ, 1 бот MAX, 1 бот Telegram, до 200 позиций меню) живёт
  * текстом в `pricing.connectItems` локали — там же, где его читает гость.
  */
+export const ANNUAL_PRICING_PLAN = {
+  code: "license-12-months",
+  months: 12,
+  priceRub: 44100,
+  pricePerMonth: 3675,
+  discountPercent: 25,
+  isPopular: false,
+  isBestValue: true,
+} satisfies PricingPlan;
+
 export const PRICING_PLANS: PricingPlan[] = [
   {
     code: "license-1-month",
@@ -52,13 +62,5 @@ export const PRICING_PLANS: PricingPlan[] = [
     isPopular: true,
     isBestValue: false,
   },
-  {
-    code: "license-12-months",
-    months: 12,
-    priceRub: 44100,
-    pricePerMonth: 3675,
-    discountPercent: 25,
-    isPopular: false,
-    isBestValue: true,
-  },
+  ANNUAL_PRICING_PLAN,
 ];
