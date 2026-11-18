@@ -9,6 +9,7 @@ import { Logo } from "@/components/common/logo/logo";
 import { LanguageSwitcher } from "@/components/ui/language-switcher/language-switcher";
 import { useLandingStore } from "@/store/use-landing.store";
 import { LINKS } from "@/config/links.config";
+import { SOLUTION_GROUPS } from "@/config/solutions-navigation.config";
 import { reachGoal } from "@/config/metrika";
 import {
   getSkolkovoLogo,
@@ -28,83 +29,7 @@ const NAV_ITEMS = [
   { labelKey: "nav.faq", href: "#faq" },
 ] as const;
 
-/** Вынесенные страницы: на десктопе раскрываются списком в шапке, на телефоне
- *  пункт «Решения» ведёт якорем на одноимённый блок с теми же карточками —
- *  вложенный список в бургер-меню стоил бы двух тапов. */
-const SOLUTION_LINKS = [
-  {
-    id: "features",
-    labelKey: "solutions.items.features.title",
-    href: LINKS.pages.features,
-  },
-  {
-    id: "hall",
-    labelKey: "solutions.items.hall.title",
-    href: LINKS.pages.hall,
-  },
-  {
-    id: "komanda",
-    labelKey: "solutions.items.komanda.title",
-    href: LINKS.pages.komanda,
-  },
-  {
-    id: "corporateLunches",
-    labelKey: "pricing.modules.items.corporate.name",
-    href: LINKS.pages.corporateLunches,
-  },
-  {
-    id: "loyalty",
-    labelKey: "solutions.items.loyalty.title",
-    href: LINKS.pages.loyalty,
-  },
-  {
-    id: "iiko",
-    labelKey: "solutions.items.iiko.title",
-    href: LINKS.pages.iiko,
-  },
-  {
-    id: "rkeeper",
-    labelKey: "solutions.items.rkeeper.title",
-    href: LINKS.pages.rkeeper,
-  },
-  {
-    id: "integrations",
-    labelKey: "solutions.items.integrations.title",
-    href: LINKS.pages.integrations,
-  },
-  {
-    id: "network",
-    labelKey: "solutions.items.network.title",
-    href: LINKS.pages.network,
-  },
-  {
-    id: "ownChannels",
-    labelKey: "solutions.items.ownChannels.title",
-    href: LINKS.pages.ownChannels,
-  },
-  {
-    id: "qrCode",
-    labelKey: "solutions.items.qrCode.title",
-    href: LINKS.pages.qrCode,
-  },
-  {
-    id: "branding",
-    labelKey: "solutions.items.branding.title",
-    href: LINKS.pages.branding,
-  },
-  {
-    id: "security",
-    labelKey: "solutions.items.security.title",
-    href: LINKS.pages.security,
-  },
-  {
-    id: "faq",
-    labelKey: "solutions.items.faq.title",
-    href: LINKS.pages.faq,
-  },
-] as const;
-
-/** На телефоне «Решения» — якорь на блок карточек внизу страницы */
+/** На телефоне «Решения» — якорь на общий список разделов. */
 const MOBILE_NAV_ITEMS = [
   { labelKey: "nav.features", href: LINKS.pages.features },
   { labelKey: "nav.solutions", href: "#solutions" },
@@ -146,20 +71,27 @@ export function Header() {
               </span>
             </button>
             <div className={styles.navPanel}>
-              {SOLUTION_LINKS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={styles.navPanelLink}
-                  onClick={() =>
-                    reachGoal("click_solution", {
-                      page: item.id,
-                      from: "menu",
-                    })
-                  }
-                >
-                  {t(item.labelKey)}
-                </Link>
+              {SOLUTION_GROUPS.map((group) => (
+                <div className={styles.navPanelGroup} key={group.id}>
+                  <span className={styles.navPanelHeading}>
+                    {t(group.labelKey)}
+                  </span>
+                  {group.links.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={styles.navPanelLink}
+                      onClick={() =>
+                        reachGoal("click_solution", {
+                          page: item.id,
+                          from: "menu",
+                        })
+                      }
+                    >
+                      {t(item.labelKey)}
+                    </Link>
+                  ))}
+                </div>
               ))}
             </div>
           </div>

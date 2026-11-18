@@ -446,6 +446,7 @@
     "note": "Linki və MAX ilə Telegram üçün ümumi QR-kodu CRM-də götürürsən və istədiyin yerə qoyursan: xəritədəki kartaya, sosial şəbəkələrin başlığına, saytın düyməsinə, qablaşdırmaya və çekə"
   },
   "solutions": {
+    "moduleGroup": "Əlavə modullar",
     "label": "Həllər",
     "title": "Daha ətraflı anlamaq istəyirsənsə",
     "subtitle": "Ən çox soruşulan mövzular üzrə ayrıca səhifələr",

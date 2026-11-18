@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Col, Divider, Flex, Row, Typography } from "antd";
 import { Logo } from "@/components/common/logo/logo";
 import { LINKS } from "@/config/links.config";
+import { FOOTER_SOLUTION_LINKS } from "@/config/solutions-navigation.config";
 import { reachGoal } from "@/config/metrika";
 import { BRAND_CONFIG } from "@/config/brand.config";
 import { theme } from "@/config/theme";
@@ -80,62 +81,16 @@ export function Footer() {
             </Flex>
           </Col>
 
-          {/* Отдельная колонка, а не хвост «Продукта»: вместе с CRM,
-              «Командой» и документацией получался список из семи пунктов,
-              который читается дольше, чем весь остальной подвал */}
           <Col xs={12} sm={12} md={6} lg={4}>
             <Flex vertical gap={12}>
               <Text strong className={styles.colTitle}>
                 {t("footer.solutions")}
               </Text>
-              <Link href={LINKS.pages.iiko} className={styles.footerLink}>
-                {t("footer.pageIiko")}
-              </Link>
-              <Link href={LINKS.pages.rkeeper} className={styles.footerLink}>
-                {t("footer.pageRkeeper")}
-              </Link>
-              <Link
-                href={LINKS.pages.integrations}
-                className={styles.footerLink}
-              >
-                {t("solutions.items.integrations.title")}
-              </Link>
-              <Link href={LINKS.pages.messengers} className={styles.footerLink}>
-                {t("footer.pageMessengers")}
-              </Link>
-              <Link href={LINKS.pages.features} className={styles.footerLink}>
-                {t("solutions.items.features.title")}
-              </Link>
-              <Link href={LINKS.pages.hall} className={styles.footerLink}>
-                {t("solutions.items.hall.title")}
-              </Link>
-              <Link href={LINKS.pages.komanda} className={styles.footerLink}>
-                {t("solutions.items.komanda.title")}
-              </Link>
-              <Link href={LINKS.pages.loyalty} className={styles.footerLink}>
-                {t("solutions.items.loyalty.title")}
-              </Link>
-              <Link href={LINKS.pages.network} className={styles.footerLink}>
-                {t("solutions.items.network.title")}
-              </Link>
-              <Link
-                href={LINKS.pages.ownChannels}
-                className={styles.footerLink}
-              >
-                {t("solutions.items.ownChannels.title")}
-              </Link>
-              <Link href={LINKS.pages.qrCode} className={styles.footerLink}>
-                {t("solutions.items.qrCode.title")}
-              </Link>
-              <Link href={LINKS.pages.branding} className={styles.footerLink}>
-                {t("solutions.items.branding.title")}
-              </Link>
-              <Link href={LINKS.pages.security} className={styles.footerLink}>
-                {t("solutions.items.security.title")}
-              </Link>
-              <Link href={LINKS.pages.faq} className={styles.footerLink}>
-                {t("solutions.items.faq.title")}
-              </Link>
+              {FOOTER_SOLUTION_LINKS.map(({ href, labelKey }) => (
+                <Link key={href} href={href} className={styles.footerLink}>
+                  {t(labelKey)}
+                </Link>
+              ))}
             </Flex>
           </Col>
 

@@ -442,6 +442,7 @@
     "note": "You get the link and one QR code for MAX and Telegram in the CRM and place them anywhere: in your map listing, social media header, website button, on packaging and receipts"
   },
   "solutions": {
+    "moduleGroup": "Add-on modules",
     "label": "Solutions",
     "title": "Want to dig deeper?",
     "subtitle": "Separate pages on the topics people ask about most",

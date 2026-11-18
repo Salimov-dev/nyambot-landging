@@ -239,7 +239,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
         title: "У каждого офиса свой график и минимум заказа",
         text: "Для каждого офиса задай часы приёма, время доставки и минимальную сумму личного заказа сотрудника. Заказы принимаются только сегодня на сегодня по часовому поясу торговой точки. Офисы остаются отдельными партиями.",
       },
-      MODULE_BLOCKS[LICENSE_MODULE.CORPORATE],
+      { ...MODULE_BLOCKS[LICENSE_MODULE.CORPORATE], wide: true },
     ],
     guide: {
       href: `${GUIDE}/modules/corporate-lunches`,
@@ -931,6 +931,7 @@ export const LANDING_PAGES: Record<string, ILandingPageContent> = {
         scene: PAGE_SCENE.SETUP,
         title: "Про старт",
         text: "Оставь заявку — бесплатно соберём кабинет, заведём бота в Телеграм и проверим всё за тебя. Счёт — с даты запуска, оплатить — в первые 14 дней.",
+        link: { label: "Безопасность данных", href: LINKS.pages.security },
       },
       {
         icon: BLOCK_ICON.MENU,

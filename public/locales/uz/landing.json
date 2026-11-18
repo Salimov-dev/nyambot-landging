@@ -446,6 +446,7 @@
     "note": "Havolani va MAX hamda Telegram uchun umumiy QR-kodni CRMdan olasan va xohlagan joyga qo'yasan: xaritadagi kartochkaga, ijtimoiy tarmoqlar sarlavhasiga, sayt tugmasiga, qadoqqa va chekka"
   },
   "solutions": {
+    "moduleGroup": "Qoʻshimcha modullar",
     "label": "Yechimlar",
     "title": "Batafsilroq tushunmoqchi bo‘lsang",
     "subtitle": "Eng ko‘p so‘raladigan mavzular bo‘yicha alohida sahifalar",
