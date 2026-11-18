@@ -27,6 +27,7 @@ const assertBuildEnv = (): void => {
 };
 
 const nextConfig: NextConfig = {
+  htmlLimitedBots: /.*/,
   output: "standalone",
 };
 
