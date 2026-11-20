@@ -7,12 +7,10 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = BRAND_CONFIG.siteUrl;
-  const lastModified = new Date();
 
   return [
     {
       url: base,
-      lastModified,
       changeFrequency: "weekly",
       priority: 1,
     },
@@ -20,20 +18,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
        и свой адрес — это отдельные точки входа из выдачи, а не разделы главной. */
     ...Object.values(LANDING_PAGES).map((page) => ({
       url: `${base}${page.path}`,
-      lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
     /* Страница заявки на запуск не в LANDING_PAGES: у неё свой формат — форма */
     {
       url: `${base}${LINKS.pages.zapusk}`,
-      lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
     ...Object.values(LINKS.legal).map((path) => ({
       url: `${base}${path}`,
-      lastModified,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     })),
